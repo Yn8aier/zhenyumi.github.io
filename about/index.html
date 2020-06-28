@@ -51,8 +51,10 @@
 
 
 <head>
-  <!-- Live2D Settings -->
-  <link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>
+  <!-- Live2D Settings 
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -380,6 +382,8 @@
 
 
  <!-- Live2D Settings -->
+ <script src="/live2d-widget/autoload.js"></script>
+
   <div class="waifu">
     <div class="waifu-tips"></div>
     <canvas id="live2d" class="live2d"></canvas>
@@ -394,8 +398,8 @@
     </div>
 </div>
 
-<script src="path/to/waifu-tips.js"></script>
-<script src="path/to/live2d.js"></script>
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
 
 <script type="text/javascript">
     live2d_settings['modelId'] = 1;
@@ -403,7 +407,6 @@
   initModel("https://www.example.com/path/to/waifu-tips.json")
 </script>
 
-<script src="path/to/autoload.js"></script>
 
 </body>
 
