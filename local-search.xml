@@ -4,37 +4,18 @@
   
   
   <entry>
-    <title>Test</title>
-    <link href="/2020/06/29/Test-1/"/>
-    <url>/2020/06/29/Test-1/</url>
+    <title>Hi There, Welcome!</title>
+    <link href="/2020/06/29/hello-world/"/>
+    <url>/2020/06/29/hello-world/</url>
     
-    <content type="html"><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p>hihihi</p><p><font color = "66CCFF">test</font></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="欢迎"><a href="#欢迎" class="headerlink" title="欢迎"></a>欢迎</h1><p>　　欢迎来到这个兴趣使然的博客，里面有黑历史的日记、实验室打工干活时候的记事、日常翻译练习的一些作品、平常上课还有捣鼓各种软件小玩意留下来的笔记等等。大概还会有一些喜欢的图片，音乐什么的。</p><p>　　如果你是陌生人，hope you enjoy。</p><p>　　如果我们不是陌生人，到时候见面不要笑话我就好了，因为其实我是把这个博客当做日记还有笔记本使用的，每个年龄段都有那个时候的抑郁，虽然过几年甚至过几个月再看都会觉得很羞耻，但是也不失为宝贵的经历。</p><p>　　至少我死的时候，不想什么都留不在世界上。</p><p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/welcome1.png" srcset="/img/loading.gif" alt="welcome1"></p>]]></content>
     
     
     <categories>
       
-      <category>Test</category>
+      <category>云下日记</category>
       
     </categories>
-    
-    
-    <tags>
-      
-      <tag>Test</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="/2020/06/28/hello-world/"/>
-    <url>/2020/06/28/hello-world/</url>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="hljs bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="hljs bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="hljs bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
     
     
   </entry>
