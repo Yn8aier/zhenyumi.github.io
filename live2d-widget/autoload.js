@@ -55,11 +55,11 @@ try {
     }});
     live2d_settings['modelId'] = 1;
     live2d_settings['modelTexturesId'] = 87;
-	initModel('https://www.example.com/path/to/waifu-tips.json');
+	initModel('/live2d-widget/waifu-tips.json');
 	
 	live2d_settings['modelId'] = 1;
     live2d_settings['modelTexturesId'] = 87;
-	initModel('https://www.example.com/path/to/waifu-tips.json');
+	initModel('/live2d-widget/waifu-tips.json');
 	
 } catch(err) { console.log("[Error] JQuery is not defined.") }
 // initWidget 第一个参数为 waifu-tips.json 的路径，第二个参数为 API 地址
