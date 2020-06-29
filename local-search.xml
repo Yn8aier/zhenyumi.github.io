@@ -8,7 +8,7 @@
     <link href="/2020/06/29/Test-post/"/>
     <url>/2020/06/29/Test-post/</url>
     
-    <content type="html"><![CDATA[<p>这是一条测试post</p><p>公式测试：</p><ul><li>行内公式：$H_{1}$</li><li>插入公式:</li></ul><p>$$<br>H_{1}<br>$$</p><p>Html测试:</p><center>居中</center><p><font color = "99DDFF">颜色</font></p><p>语法测试：</p><p>这是一条语法测试H<del>1</del></p><p><u>这是一条语法测试</u></p><p><strong>这是一条语法测试</strong></p><p>表格测试:</p><table><thead><tr><th>biaoge</th><th>1</th><th>2</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>1</td></tr><tr><td>1</td><td>1</td><td>1</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<p>这是一条测试post</p><p>公式测试：</p><ul><li>行内公式：$H_{1}$</li><li>插入公式:</li></ul><script type="math/tex; mode=display">H_{1}</script><p>Html测试:</p><center>居中</center><font color = "99DDFF">颜色</font><p>语法测试：</p><p>这是一条语法测试H~1~</p><p><u>这是一条语法测试</u></p><p><strong>这是一条语法测试</strong></p><p>表格测试:</p><div class="table-container"><table><thead><tr><th>biaoge</th><th>1</th><th>2</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>1</td></tr><tr><td>1</td><td>1</td><td>1</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></tbody></table></div>]]></content>
     
     
     
