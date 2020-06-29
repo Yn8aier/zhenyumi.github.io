@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="向海">
   <meta name="keywords" content="">
-  <title>常用命令 - 鹘横海</title>
+  <title>Hexo 博客相关 - 鹘横海</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -183,7 +183,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      84 字
+      662 字
     </span>
   
 
@@ -193,7 +193,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      6
        分钟
     </span>
   
@@ -225,12 +225,15 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 小时前
+                  本文最后更新于：24 分钟前
                 
               </p>
             
             <article class="markdown-body">
-              <h2 id="Hexo-博客常用命令"><a href="#Hexo-博客常用命令" class="headerlink" title="Hexo 博客常用命令"></a>Hexo 博客常用命令</h2><div class="table-container">
+              <h2 id="关于这个博客"><a href="#关于这个博客" class="headerlink" title="关于这个博客"></a>关于这个博客</h2><p> 　　这个网站是依赖Hexo搭建起来的，将网页配置文件都加载到了GitHub Pages上，因为GitHub下行速率比较有限，因此同时还使用了腾讯云的对象存储作为图床。</p>
+<p>　　因为日常使用并没有那么高频，也就没有特意去购买一个专用的云服务器，所以托GitHub总是抽风的福，博客也经常挂掉。</p>
+<p>　　<del>也许以后我有钱之后会购买一个云服务器来建站吧</del></p>
+<h2 id="Hexo-博客常用内容"><a href="#Hexo-博客常用内容" class="headerlink" title="Hexo 博客常用内容"></a>Hexo 博客常用内容</h2><h3 id="1-Git-Bash-端操作"><a href="#1-Git-Bash-端操作" class="headerlink" title="1. Git Bash 端操作"></a>1. Git Bash 端操作</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -252,12 +255,90 @@
 <td>hexo deploy / hexo d</td>
 </tr>
 <tr>
-<td>组合输入</td>
+<td>组合输入同步</td>
 <td>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</td>
 </tr>
 <tr>
 <td>本地搭建 (用于调试，在本地搭建<br />之后可以使用Hexo Admin管理Posts)</td>
 <td>hexo server / hexo s</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>在上传之前，务必先<strong>清除缓存</strong>，以及使用hexo s本地调试一下</li>
+</ol>
+<h3 id="2-添加博文"><a href="#2-添加博文" class="headerlink" title="2. 添加博文"></a>2. 添加博文</h3><p>　　添加博文（post、page、…）的方式大致有两种：</p>
+<ol>
+<li><p>cd至本地Hexo安装文件夹，使用Git Bash的命令行：</p>
+<pre><code class="hljs Git">cd &lt;path&gt;
+hexo new &lt;layout&gt; &quot;name&quot;</code></pre>
+<p>Example:</p>
+<pre><code class="hljs Git">cd E:\My_Hexo
+hexo new post &quot;New_Post&quot;</code></pre>
+<p>之后就在本地Hexo文件夹的source文件夹中，找到通过命令行新建的md文件，进行编辑。</p>
+<p><del>我推荐使用Typora编辑Markdown，Typora天下第一</del></p>
+<p>编辑完成后使用 “hexo clean &amp;&amp; hexo g &amp;&amp; hexo d” 与GitHub Pages进行同步</p>
+</li>
+<li><p>使用Hexo Admin</p>
+<p>　　使用Hexo Admin的好处是可以进行可视化管理，缺点是创建博文时候的自定义模板（scaffold）容易受到影响，自定义的参数较少。</p>
+<p>Hexo Admin使用的时候需要先清理缓存，之后再次生成缓存文件，之后在本地搭建网页：</p>
+<pre><code class="hljs Git">hexo clean
+hexo g
+hexo s</code></pre>
+<p>　　可以在 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 观察生成的静态网页的效果，同时在 <a href="http://localhost:4000/admin/" target="_blank" rel="noopener">http://localhost:4000/admin/</a> 使用Hexo Admin进行可视化管理。</p>
+<hr>
+</li>
+</ol>
+<p>　　因此推荐使用命令行进行新建，通过Hexo Admin进行管理。</p>
+<h3 id="3-博文的常用参数"><a href="#3-博文的常用参数" class="headerlink" title="3. 博文的常用参数"></a>3. 博文的常用参数</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Config</th>
+<th>Description and Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>文章的标题<br />title: ‘Hello World’</td>
+</tr>
+<tr>
+<td>author</td>
+<td>文章的作者<br />author: me</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>文章的标签<br />tags: <br />  - Hexo</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>文章的分类<br />categories:<br />  - Hexo</td>
+</tr>
+<tr>
+<td>excerpt</td>
+<td>文章的摘要<br />excerpt: 这是摘要</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文章的创建时间<br />date: 2020-06-29 19:06:00</td>
+</tr>
+<tr>
+<td>update</td>
+<td>文章的更新时间<br />updated: 2020-06-29 19:06:00</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>是否允许评论<br />comments: true</td>
+</tr>
+<tr>
+<td>top</td>
+<td>是否将post置顶<br />top: true</td>
+</tr>
+<tr>
+<td>index_img</td>
+<td>文章的标题图<br />index_img: [url] <br />或者是<br />index_image: [本地目录]，一般在主题的img文件夹<br />即设置为index_image: /img/welcome.png</td>
 </tr>
 </tbody>
 </table>
@@ -464,7 +545,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "常用命令&nbsp;",
+        "Hexo 博客相关&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
