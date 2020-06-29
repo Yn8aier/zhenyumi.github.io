@@ -5,10 +5,10 @@
   
   <entry>
     <title>常用命令</title>
-    <link href="/2020/06/29/Test-post/"/>
-    <url>/2020/06/29/Test-post/</url>
+    <link href="/2020/06/29/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <url>/2020/06/29/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     
-    <content type="html"><![CDATA[<h2 id="Hexo-博客常用命令"><a href="#Hexo-博客常用命令" class="headerlink" title="Hexo 博客常用命令"></a>Hexo 博客常用命令</h2><div class="table-container"><table><thead><tr><th>名称</th><th>代码</th></tr></thead><tbody><tr><td>清除缓存</td><td>hexo clean</td></tr><tr><td>生成本地网页缓存</td><td>hexo generate / hexo g</td></tr><tr><td>将本地文件同步到 GitHub Page</td><td>hexo deploy / hexo g</td></tr><tr><td>组合输入</td><td>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</td></tr></tbody></table></div>]]></content>
+    <content type="html"><![CDATA[<h2 id="Hexo-博客常用命令"><a href="#Hexo-博客常用命令" class="headerlink" title="Hexo 博客常用命令"></a>Hexo 博客常用命令</h2><div class="table-container"><table><thead><tr><th>名称</th><th>代码</th></tr></thead><tbody><tr><td>清除缓存</td><td>hexo clean</td></tr><tr><td>生成本地网页缓存</td><td>hexo generate / hexo g</td></tr><tr><td>将本地文件同步到 GitHub Page</td><td>hexo deploy / hexo d</td></tr><tr><td>组合输入</td><td>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</td></tr><tr><td>本地搭建 (用于调试，在本地搭建<br />之后可以使用Hexo Admin管理Posts)</td><td>hexo server / hexo s</td></tr></tbody></table></div>]]></content>
     
     
     
