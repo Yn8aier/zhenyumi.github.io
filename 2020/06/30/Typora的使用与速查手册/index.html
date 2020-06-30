@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>Typora的使用与速查手册 - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/typora_banner1.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-06-30 15:17">
+      2020年6月30日 下午
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      29
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2 分钟前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <blockquote>
+<p>Banner and Index Image -&gt; <a href="https://www.pixiv.net/users/20593668" target="_blank" rel="noopener">https://www.pixiv.net/users/20593668</a></p>
+</blockquote>
+<p>写这篇文章的主要契机是为了更好地向周围的人宣传<del>安利</del> Typora 。</p>
+<p>最初的时候我只是想找一个更方便的方式去记笔记，后来偶然接触到了有道云笔记和印象笔记的markdown，但是因为它们的使用方法对我来说并不是非常友好，Typora就很好地满足了我日常高速，大量，多图笔记的需求，极大地简化了我排版以及整理笔记的过程。后来了解了 KaTeX 公式的输入，整个笔记过程就变得更加便捷了。因此我希望将 Typora 推荐给周围的更多人，然而大多数人刚开始的时候就被 markdown 的代码式输入给难倒了，感受到极大地不习惯。然而通过 Typora 来进行 markdown 的编辑甚至有时候比 Office Words 还方便。</p>
+<p>再后来，接触了腾讯云的对象存储作为图床，整个笔记过程大部分就都放在了云端，感觉很有趣。因此这篇文章主要介绍一下常用的 Typora 快捷键以及指令，还有一些较为自由的用法。</p>
+<p>[TOC]</p>
+<h3 id="markdown与typora简介"><a class="markdownIt-Anchor" href="#markdown与typora简介"></a> Markdown与Typora简介</h3>
+<blockquote>
+<p>简介部分参考并引用了少数派上<a href="https://sspai.com/u/qpyp0ht9/updates" target="_blank" rel="noopener">liquid617</a>的文章《Typora 完全使用详解》</p>
+<p>原文链接：<a href="https://sspai.com/post/54912" target="_blank" rel="noopener">https://sspai.com/post/54912</a></p>
+</blockquote>
+<h4 id="1-什么是markdown"><a class="markdownIt-Anchor" href="#1-什么是markdown"></a> 1. 什么是Markdown</h4>
+<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
+<p>Markdown具有一系列衍生版本，用于扩展Markdown的功能（如表格、脚注、内嵌HTML等等），这些功能原初的Markdown尚不具备，它们能让Markdown转换成更多的格式，例如LaTeX，Docbook。Markdown增强版中比较有名的有Markdown Extra、MultiMarkdown、 Maruku等。这些衍生版本要么基于工具，如Pandoc；要么基于网站，如GitHub和Wikipedia，在语法上基本兼容，但在一些语法和渲染效果上有改动<a href="https://baike.baidu.com/item/markdown" target="_blank" rel="noopener">^ 1 </a> 。</p>
+<p>由于目前还没有一个权威机构对 Markdown 的语法进行规范，各应用厂商制作时遵循的 Markdown 语法也是不尽相同的。其中比较受到认可的是 <a href="https://github.github.com/gfm/" target="_blank" rel="noopener">GFM 标准</a>，它是由著名代码托管网站 <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> 所制定的。Typora 主要使用的也是 GFM 标准。同时，你还可以在 <code>文件 - 偏好设置 - Markdown 语法偏好 - 严格模式</code> 中将标准设置为「更严格地遵循 GFM 标准」。具体内容你可以在官方的 <a href="http://support.typora.io/Strict-Mode/" target="_blank" rel="noopener">这篇文档</a> 中查看<a href="https://sspai.com/post/54912" target="_blank" rel="noopener">^ 2 </a>。</p>
+<h4 id="2-什么是typora"><a class="markdownIt-Anchor" href="#2-什么是typora"></a> 2. 什么是Typora</h4>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630153003845.png" srcset="/img/loading.gif" alt="image-20200630153003845" /></p>
+<p>Typora 是一款<strong>支持实时预览的 Markdown 文本编辑器</strong>。它有 OS X、Windows、Linux 三个平台的版本，并且由于仍在测试中，是<strong>完全免费</strong>的。</p>
+<p>是一个 Markdown 文本编辑器，它支持且仅支持 Markdown 语法的文本编辑。在 <a href="https://typora.io/" target="_blank" rel="noopener">Typora 官网</a> 上他们将 Typora 描述为 「A truly <strong>minimal</strong> markdown editor. 」<a href="https://sspai.com/post/54912" target="_blank" rel="noopener">^ 2 </a>。</p>
+<p>Typora最令我惊艳的一点就是它的实时渲染，即输入markdown代码之后就直接显现出效果，习惯之后输入的速度并不逊于 Words。</p>
+<p>可以再 Typora 的官网下载最新版本的软件。</p>
+<h3 id="typora-常用指令与常用快捷键"><a class="markdownIt-Anchor" href="#typora-常用指令与常用快捷键"></a> Typora 常用指令与常用快捷键</h3>
+<blockquote>
+<p>此部分参考并引用了CSDN博主「水木子_」的原创文章</p>
+<p>原文链接：<a href="https://blog.csdn.net/qq_41261251/java/article/details/102817673" target="_blank" rel="noopener">https://blog.csdn.net/qq_41261251/java/article/details/102817673</a></p>
+</blockquote>
+<h4 id="1-常用代码指令与快捷键"><a class="markdownIt-Anchor" href="#1-常用代码指令与快捷键"></a> 1. 常用代码指令与快捷键</h4>
+<h5 id="标题"><a class="markdownIt-Anchor" href="#标题"></a> 标题</h5>
+<p>使用 <code>#</code> 可以表示标题，一级标题对应一个 <code>#</code> ，二级标题对应两个 <code>#</code> 号，最多至六级标题。在Typora中，<code>#</code> 后要紧接着一个空格才能表示标题，否则就是普通字符。</p>
+<pre><code class="hljs markdown"><span class="hljs-section"># 一级标题 H1</span>
+<span class="hljs-section">## 二级标题 H2</span>
+<span class="hljs-section">### 三级标题 H3</span>
+<span class="hljs-section">#### 四级标题 H4</span>
+<span class="hljs-section">##### 五级标题 H5</span>
+<span class="hljs-section">###### 六级标题 H6</span></code></pre>
+<p>在Typora中，也可以使用快捷键Ctrl+1（2，3，4，5，6）表示相对应的标题。Ctrl+0表示段落。标题快捷键信息可在菜单栏中的段落选项下查看。</p>
+<h5 id="字体"><a class="markdownIt-Anchor" href="#字体"></a> 字体</h5>
+<ul>
+<li>
+<p>用一对星号 <code>*</code> 括住的文本表示斜体文本，如：<em>要变斜体的文本</em>，斜体文本 ；</p>
+<ul>
+<li>也可以用一对下划线 <code>_</code> 括住文本来表示斜体文本，如：<em>要变斜体的文本</em>，斜体文本 ；</li>
+<li>也可以使用Typora的快捷键Ctrl+I来表示斜体文本。</li>
+</ul>
+</li>
+<li>
+<p>用一对<code>**</code>括住的文本表示粗体文本，如：<strong>要变粗体的文本</strong>，粗体文本；</p>
+<ul>
+<li>也可以用一对<code>__</code>括住的文本来表示粗体文本，如：<strong>要变粗体的文本</strong>，粗体文本；</li>
+<li>也可以使用Typora的快捷键Ctrl+B来表示粗体文本。</li>
+</ul>
+</li>
+<li>
+<p>用一对<code>***</code>括住的文本表示粗斜体文本，如：<em><strong>要变粗斜体的文本</strong></em>，粗斜体文本；</p>
+<ul>
+<li>也可以用一对 <code>___</code> 括住的文本来表示粗斜体文本，如：<em><strong>要变粗斜体的文本</strong></em>，粗斜体文本；</li>
+</ul>
+</li>
+</ul>
+<h5 id="分割线-下划线-删除线-文本高亮"><a class="markdownIt-Anchor" href="#分割线-下划线-删除线-文本高亮"></a> 分割线、下划线、删除线、文本高亮</h5>
+<ul>
+<li><strong>分割线</strong>，可以使用<strong>三个及以上</strong>的 <code>+</code> 号或 <code>*</code> 号或 <code>-</code> 来表示一条分割线；</li>
+</ul>
+<p><code>***</code> :</p>
+<hr />
+<p><code>---</code> :</p>
+<hr />
+<p><code>+++</code> :</p>
+<p>+++</p>
+<ul>
+<li>删除线，可以使用一对 <code>~~</code> 括住的文本来表示删除文本，如：<s>要加删除线的文本</s>，删除文本；
+<ul>
+<li>在Typora中，也可以使用快捷键<strong>Alt+Shift+5</strong>来加删除线，语法相同，删除线。</li>
+</ul>
+</li>
+<li>下划线，可以使用HTML的标签<code>&lt;u&gt;</code>和<code>&lt;/u&gt;</code>表示增加下划线的文本，如：<u>要增加下划线的文本</u>，下划线；
+<ul>
+<li>在Typora中，也可以使用快捷键<strong>Ctrl+U</strong>来增加下划线，语法也是相同的，下划线。</li>
+</ul>
+</li>
+<li>文本高亮，在Typora中，可以用一对<code>==</code>将要高亮的文本括起来，如：
+<ul>
+<li><mark>高亮</mark></li>
+</ul>
+</li>
+</ul>
+<h5 id="列表"><a class="markdownIt-Anchor" href="#列表"></a> 列表</h5>
+<ul>
+<li>无序列表</li>
+</ul>
+<p>可以使用<code>*</code>，<code>+</code>或<code>-</code>标记符号来表示无序列表项，记住要在标记符号后<strong>添加一个空格</strong>，语法显示如下：</p>
+<pre><code class="hljs markdown"><span class="hljs-bullet">* </span>第一项
+<span class="hljs-bullet">* </span>第二项
+<span class="hljs-bullet">+ </span>第一项
+<span class="hljs-bullet">+ </span>第二项
+<span class="hljs-bullet">- </span>第一项
+<span class="hljs-bullet">- </span>第二项</code></pre>
+<ul>
+<li>有序列表</li>
+</ul>
+<p>有序列表的数字并不重要</p>
+<pre><code class="hljs markdown"><span class="hljs-bullet">1. </span>第一项
+<span class="hljs-bullet">3. </span>第二项
+<span class="hljs-bullet">10. </span>第三项</code></pre>
+<ul>
+<li>嵌套列表</li>
+</ul>
+<pre><code class="hljs angelscript">+ 无序 <span class="hljs-number">1</span>
+	+ 无序 <span class="hljs-number">1.1</span>
+		<span class="hljs-number">1.</span> 无序 <span class="hljs-number">1.1</span><span class="hljs-number">.1</span>
+			<span class="hljs-number">1.</span> 有序 <span class="hljs-number">1</span>
+			<span class="hljs-number">2.</span> 有序 <span class="hljs-number">2</span></code></pre>
+<p>效果：</p>
+<ul>
+<li>无序 1
+<ul>
+<li>无序 1 1.1
+<ol>
+<li>无序 1.1.1
+<ol>
+<li>有序 1</li>
+<li>有序 2</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="引用块block-quote"><a class="markdownIt-Anchor" href="#引用块block-quote"></a> 引用块（Block Quote）</h5>
+<p>当我们想要引用别人的文章内容时，可以将其放在区块内。</p>
+<ul>
+<li>可以使用 <code>&gt;</code> 加空格来表示引用块。</li>
+<li>使用 <code>Enter</code> 退出引用块</li>
+</ul>
+<p>效果：</p>
+<blockquote>
+<p>这是引用</p>
+<blockquote>
+<p>这是第二层引用</p>
+<blockquote>
+<p>这是第三层引用</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h5 id="代码块与代码段"><a class="markdownIt-Anchor" href="#代码块与代码段"></a> 代码块与代码段</h5>
+<p>如果是一行代码，可以使用段内代码块来表示，用一对 <strong>`</strong>（数字1旁边的符号）括住代码。</p>
+<ul>
+<li>比如 <code>printf(&quot;Hello World!&quot;)</code></li>
+</ul>
+<p>如果是代码段，那么可以使用<strong>三个 ` 加Enter/空格+编程语言</strong>来表示。如：</p>
+<ul>
+<li>可以在代码块的右下角选择编程语言。</li>
+</ul>
+<pre><code class="hljs markdown">​<span class="hljs-code">```</span>Python
+print('hello world')
+print('!')
+​</code></pre>
+<pre><code class="hljs stylus">
+效果:
+
+```Python
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'hello world'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'!'</span>)</span></span></code></pre>
+<h5 id="链接"><a class="markdownIt-Anchor" href="#链接"></a> 链接</h5>
+<h6 id="1-访问网页或文件"><a class="markdownIt-Anchor" href="#1-访问网页或文件"></a> (1) 访问网页或文件</h6>
+<p>链接的使用方式有两种语法，如下：</p>
+<pre><code class="hljs markdown">[<span class="hljs-string">链接文字</span>](<span class="hljs-link">链接地址</span>)
+或
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">链接地址</span>&gt;</span></span></code></pre>
+<p>举例：</p>
+<pre><code class="hljs markdown">[<span class="hljs-string">鹘横海</span>](<span class="hljs-link">https://zhenyumi.github.io/</span>)
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">https:</span>//<span class="hljs-attr">zhenyumi.github.io</span>/&gt;</span></span></code></pre>
+<p>效果：</p>
+<p><a href="https://zhenyumi.github.io/">鹘横海</a><br />
+<a href="https://zhenyumi.github.io/">https://zhenyumi.github.io/</a></p>
+<p>当鼠标移到相应的链接文字时，按住<strong>Ctrl+鼠标左键</strong>点击访问。</p>
+<p>链接除了可以打开相应的网页外，还可以<strong>打开本地文件</strong>，使用方式类似，不过链接地址需要使用本地文件的地址，相对地址、绝对地址均可：</p>
+<pre><code class="hljs markdown">[<span class="hljs-string">打开LinkTest.md文档</span>](<span class="hljs-link">./LinkTest.md</span>)
+[<span class="hljs-string">打开LinkTest.png照片</span>](<span class="hljs-link">./img/LinkTest.png</span>)
+[<span class="hljs-string">打开某个网络图片</span>](<span class="hljs-link">url</span>)</code></pre>
+<blockquote>
+<p>一个小圆点<code>.</code>表示当前目录，故<code>./LinkTest.md</code>表示当前目录下的LinkTest.md文件，<code>./img/LinkTest.png</code>表示当前目录下的 img 文件下的LinkTest.png文件。</p>
+<p>两个小圆点 <code>..</code> 表示上一级目录。</p>
+</blockquote>
+<h6 id="2-页内跳转"><a class="markdownIt-Anchor" href="#2-页内跳转"></a> (2) 页内跳转</h6>
+<pre><code class="hljs markdown">[<span class="hljs-string">链接文字</span>](<span class="hljs-link">#标题文字</span>)</code></pre>
+<p>举例：</p>
+<pre><code class="hljs markdown">[<span class="hljs-string">什么是Typora</span>](<span class="hljs-link">#### 什么是Typora</span>)</code></pre>
+<p>[什么是Typora](#2. 什么是Typora)</p>
+<h6 id="2-图片"><a class="markdownIt-Anchor" href="#2-图片"></a> (2) 图片</h6>
+<p>可以在Markdown文档中插入图片，语法如下：</p>
+<ul>
+<li>首先一个感叹号</li>
+<li>然后中括号里面写属性文本</li>
+<li>小括号里面写图片地址，后可接标题</li>
+</ul>
+<pre><code class="hljs marldown">![alt 属性文本](图片地址)
+
+![alt 属性文本](图片地址 &quot;可选标题&quot;)</code></pre>
+<p>举例：</p>
+<pre><code class="hljs markdown">![<span class="hljs-string">本地png图片PictureTest.png</span>](<span class="hljs-link">./img/PictureTest.png</span>)
+
+![<span class="hljs-string">本地jpg图片</span>](<span class="hljs-link">./img/PictureTest.jpg</span>)
+
+![<span class="hljs-string">网络图片</span>](<span class="hljs-link">http://static.runoob.com/images/runoob-logo.png "菜鸟教程"</span>)</code></pre>
+<p>效果：</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/runoob-logo.png" srcset="/img/loading.gif" alt="网络图片" title="菜鸟教程" /></p>
+<p>在Typora中，也可以直接使用<code>Ctrl+C</code>，<code>Ctrl+V</code>来直接进行复制粘贴图片，但是，由于Markdown是需要图片的地址的，所以需要简单设置一下Typora。</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630160629783.png" srcset="/img/loading.gif" alt="image-20200630160629783" /></p>
+<ul>
+<li>表示复制到与该md文件同目录的pics文件夹中</li>
+</ul>
+<h5 id="表格"><a class="markdownIt-Anchor" href="#表格"></a> 表格</h5>
+<p>Markdown 制作表格使用 <code>|</code> 来分隔不同的单元格，使用 <code>-</code> 来分隔表头和其他行。</p>
+<ul>
+<li>也可以使用Ctrl+T快捷键创建表格</li>
+</ul>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630160811535.png" srcset="/img/loading.gif" alt="image-20200630160811535" /></p>
+<p>举例：</p>
+<pre><code class="hljs markdown">|表头|表头|表头|
+|---|---|----|
+|单元格|单元格|单元格|
+|单元格|单元格|单元格|</code></pre>
+<p>效果</p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<p>设置对齐方式：</p>
+<ul>
+<li><code>:-</code>表示左对齐</li>
+<li><code>-:</code>表示右对齐</li>
+<li><code>:-:</code>表示中间对齐</li>
+</ul>
+<p>举例：</p>
+<pre><code class="hljs markdown">|左对齐|右对齐|中间对齐|
+|:---|---:|:----:|
+|单元格|单元格|单元格|
+|单元格|单元格|单元格|</code></pre>
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:right">右对齐</th>
+<th style="text-align:center">中间对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">单元格</td>
+</tr>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">单元格</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-公式"><a class="markdownIt-Anchor" href="#2-公式"></a> 2. 公式</h4>
+<h5 id="公式代码"><a class="markdownIt-Anchor" href="#公式代码"></a> 公式代码</h5>
+<p>Typora 原生支持 LaTeX 语法，你有两种方式输入 LaTeX 风格的数学公式：</p>
+<ol>
+<li>**行内公式（inline）：**用 <code>$...$</code> 括起公式，公式会出现在行内。</li>
+<li>**块间公式（display）：**用 <code>$$...$$</code> 括起公式（注意 <code>$$</code> 后需要换行），公式会默认显示在行中间。
+<ul>
+<li>如果要在行间公式内换行，在换行的位置使用 <code>\\</code></li>
+</ul>
+</li>
+</ol>
+<p>举例：</p>
+<pre><code class="hljs markdown">$ \alpha + \beta = 1 $
+
+$$
+\alpha + \beta = 1 \\
+\gamma + \varepsilon = 2
+$$</code></pre>
+<p>效果：</p>
+<p>$ \alpha + \beta = 1 $</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>=</mo><mn>1</mn><mspace linebreak="newline"></mspace><mi>γ</mi><mo>+</mo><mi>ε</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\alpha + \beta = 1 \\
+\gamma + \varepsilon = 2
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05278em;">β</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05556em;">γ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">ε</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span></span></p>
+<h5 id="上下标"><a class="markdownIt-Anchor" href="#上下标"></a> 上下标</h5>
+<p>在Typora中，可以用一对<code>~</code>将下标括起来，如：<code>H~2~O</code>表示H<sub>2</sub>O</p>
+<p>同样，我们也可以用一对<code>^</code>将上标括起来，如：<code>X^2^</code> 表示X<sup>2</sup></p>
+<p>上下标可在偏好设置 --&gt; Markdown扩展语法中设置。</p>
+<h5 id="公式符号"><a class="markdownIt-Anchor" href="#公式符号"></a> 公式符号</h5>
+<p>Typora支持KaTeX符号，可以在这里在线查阅</p>
+<ol>
+<li><a href="https://katex.org/docs/supported.html" target="_blank" rel="noopener">KaTeX Functions</a></li>
+<li><a href="https://katex.org/docs/support_table.html" target="_blank" rel="noopener">KaTeX Tables</a></li>
+</ol>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/FireShot%20Capture%20019%20-%20Supported%20Functions%20%C2%B7%20KaTeX%20-%20katex.org(1).jpg" srcset="/img/loading.gif" alt="FireShot Capture 019 - Supported Functions · KaTeX - katex.org(1)" /></p>
+<h4 id="3-html"><a class="markdownIt-Anchor" href="#3-html"></a> 3. HTML</h4>
+<h5 id="字体颜色与大小"><a class="markdownIt-Anchor" href="#字体颜色与大小"></a> 字体颜色与大小</h5>
+<p>我们可以使用<code>&lt;font&gt; &lt;/font&gt;</code>标签来改变字体的颜色及大小，如：</p>
+<ul>
+<li>Color 支持 RGB</li>
+</ul>
+<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">3</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"red"</span>&gt;</span></span>字体颜色为红色，大小为3<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span>
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">4</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"blue"</span>&gt;</span></span>字体颜色为蓝色，大小为4<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span>
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">6</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"violet"</span>&gt;</span></span>字体颜色为紫罗兰，大小为6<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span></code></pre>
+<p>效果：</p>
+<p><font size=3 color="red">字体颜色为红色，大小为3</font></p>
+<p><font size=4 color="blue">字体颜色为蓝色，大小为4</font></p>
+<p><font size=6 color="violet">字体颜色为紫罗兰，大小为6</font></p>
+<p>当然也可以单独修改标签：</p>
+<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span> = <span class="hljs-string">6</span>&gt;</span></span>字体大小为6<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span>
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span> = <span class="hljs-string">"66CCFF"</span>&gt;</span></span>字体颜色为天依蓝<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span></code></pre>
+<p>效果：</p>
+<p><font size = 6>字体大小为6</font></p>
+<p><font color = "66CCFF">字体颜色为天依蓝</font></p>
+<h5 id="对齐方式"><a class="markdownIt-Anchor" href="#对齐方式"></a> 对齐方式</h5>
+<p>我们可以改变字体的对齐方式，用标签<code>&lt;p&gt; &lt;/p&gt;</code>加上属性<code>align</code>，如：</p>
+<pre><code class="hljs marldown">&lt;p align&#x3D;&quot;left&quot;&gt;左对齐&lt;&#x2F;p&gt;
+&lt;p align&#x3D;&quot;center&quot;&gt;中间对齐&lt;&#x2F;p&gt;
+&lt;p align&#x3D;&quot;right&quot;&gt;右对齐&lt;&#x2F;p&gt;</code></pre>
+<p>效果：</p>
+<p align="left">左对齐</p>
+<p align="center">中间对齐</p>
+<p align="right">右对齐</p>
+<p>或者是：</p>
+<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">center</span>&gt;</span></span> 中间对齐<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">center</span>&gt;</span></span></code></pre>
+<p>效果：</p>
+<center>中间对齐</center>
+<h5 id="图像"><a class="markdownIt-Anchor" href="#图像"></a> 图像</h5>
+<p>可以通过标签 <code>&lt;img src=url /&gt;</code> 来插入图片</p>
+<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span> /&gt;</span></span>
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"本地相对或绝对路径"</span> /&gt;</span></span></code></pre>
+<p>举例：</p>
+<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://static.runoob.com/images/runoob-logo.png"</span>&gt;</span></span></code></pre>
+<img src="http://static.runoob.com/images/runoob-logo.png" srcset="/img/loading.gif">
+<p>可以改变<code>&lt;img&gt;</code>标签的属性，来改变图片的大小</p>
+<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://static.runoob.com/images/runoob-logo.png"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">300</span> <span class="hljs-attr">height</span>=<span class="hljs-string">200</span>&gt;</span></span></code></pre>
+<img src="http://static.runoob.com/images/runoob-logo.png" srcset="/img/loading.gif" width=300 height=200>
+<p>也可以改变图片的位置，如：</p>
+<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://static.runoob.com/images/runoob-logo.png"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">300</span> <span class="hljs-attr">height</span>=<span class="hljs-string">300</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"float:left"</span>/&gt;</span></span>图片在左边
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://static.runoob.com/images/runoob-logo.png"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">300</span> <span class="hljs-attr">height</span>=<span class="hljs-string">300</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"float:right"</span>/&gt;</span></span>图片在右边</code></pre>
+<p>效果：</p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" srcset="/img/loading.gif" width=300 height=300 style="float:left"/>图片在左边</p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" srcset="/img/loading.gif" width=300 height=300 style="float:right"/>图片在右边</p>
+<h4 id="4-其他用法"><a class="markdownIt-Anchor" href="#4-其他用法"></a> 4. 其他用法</h4>
+<h5 id="emoji"><a class="markdownIt-Anchor" href="#emoji"></a> emoji</h5>
+<p>我们可以使用<code>:emoji:</code>的语法来插入表情，比如：</p>
+<pre><code class="hljs markdown">:happy:</code></pre>
+<p>效果:</p>
+<p>:happy:</p>
+<h5 id="插入目录"><a class="markdownIt-Anchor" href="#插入目录"></a> 插入目录</h5>
+<pre><code class="hljs markdown">[toc]
+或
+[TOC]</code></pre>
+<p>[TOC]</p>
+<h3 id="references"><a class="markdownIt-Anchor" href="#references"></a> References</h3>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Typora/">Typora</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！技术力比较低，多多担待啦！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/06/30/Hexo-Fluid%E4%BD%BF%E7%94%A8utterances%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%EF%BC%8C%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+                        <span class="hidden-mobile">Hexo Fluid使用utterances评论系统，以及相关异常处理</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <script type="text/javascript">
+    function loadUtterances() {
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.defer = false
+      s.setAttribute('repo', 'zhenyumi/comment_hexo');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('theme', 'github-light');
+      s.setAttribute('crossorigin', 'anonymous');
+      var e = document.getElementsByTagName('script')[0];
+      e.parentNode.insertBefore(s, e);
+    }
+    createObserver(loadUtterances, 'comments')
+  </script>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Typora的使用与速查手册&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+ <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+</div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
+</script>
+
+
+</body>
+
+</html>
