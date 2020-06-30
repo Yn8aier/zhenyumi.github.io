@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      692 字
+      815 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
+      8
        分钟
     </span>
   
@@ -226,7 +226,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：21 小时前
+                  本文最后更新于：21 分钟前
                 
               </p>
             
@@ -273,6 +273,7 @@
 </ol>
 <img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A43.jpg" srcset="/img/loading.gif" alt="常用命令3" style="zoom: 20%;" />
 <h3 id="2-添加博文"><a class="markdownIt-Anchor" href="#2-添加博文"></a> 2. 添加博文</h3>
+<h4 id="直接添加post"><a class="markdownIt-Anchor" href="#直接添加post"></a> 直接添加Post</h4>
 <p>添加博文（post、page、…）的方式大致有两种：</p>
 <ol>
 <li>
@@ -298,6 +299,14 @@ hexo s</code></pre>
 </li>
 </ol>
 <p>因此推荐使用命令行进行新建，通过Hexo Admin进行管理。</p>
+<h4 id="从草稿draft添加post"><a class="markdownIt-Anchor" href="#从草稿draft添加post"></a> 从草稿（Draft）添加Post</h4>
+<h5 id="1-添加draft"><a class="markdownIt-Anchor" href="#1-添加draft"></a> (1) 添加Draft</h5>
+<p>Hexo 的一种特殊布局：<code>draft</code>，这种布局在建立时会被保存到 <code>source/_drafts</code> 文件夹。</p>
+<pre><code class="hljs Git">hexo new draft &quot;name&quot;</code></pre>
+<p>之后可以在<code>source/_drafts</code>中找到该文件进行编辑</p>
+<h5 id="2-发布publish草稿"><a class="markdownIt-Anchor" href="#2-发布publish草稿"></a> (2) 发布（Publish）草稿</h5>
+<p>可通过 <code>publish</code> 命令将草稿移动到 <code>source/_posts</code> 文件夹，该命令的使用方式与 <code>new</code> 十分类似，也可在命令中指定 <code>layout</code> 来指定布局。</p>
+<pre><code class="hljs Git">hexo publish [layout] &quot;name&quot;</code></pre>
 <h3 id="3-博文的常用参数"><a class="markdownIt-Anchor" href="#3-博文的常用参数"></a> 3. 博文的常用参数</h3>
 <table>
 <thead>
