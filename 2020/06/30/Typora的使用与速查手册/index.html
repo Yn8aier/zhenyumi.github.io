@@ -183,7 +183,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.1k 字
+      3k 字
     </span>
   
 
@@ -225,7 +225,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：8 分钟前
+                  本文最后更新于：20 分钟前
                 
               </p>
             
@@ -236,7 +236,11 @@
 <p>写这篇文章的主要契机是为了更好地向周围的人宣传<del>安利</del> Typora 。</p>
 <p>最初的时候我只是想找一个更方便的方式去记笔记，后来偶然接触到了有道云笔记和印象笔记的markdown，但是因为它们的使用方法对我来说并不是非常友好，Typora就很好地满足了我日常高速，大量，多图笔记的需求，极大地简化了我排版以及整理笔记的过程。后来了解了 KaTeX 公式的输入，整个笔记过程就变得更加便捷了。因此我希望将 Typora 推荐给周围的更多人，然而大多数人刚开始的时候就被 markdown 的代码式输入给难倒了，感受到极大地不习惯。然而通过 Typora 来进行 markdown 的编辑甚至有时候比 Office Words 还方便。</p>
 <p>再后来，接触了腾讯云的对象存储作为图床，整个笔记过程大部分就都放在了云端，感觉很有趣。因此这篇文章主要介绍一下常用的 Typora 快捷键以及指令，还有一些较为自由的用法。</p>
-<p>[toc]</p>
+<h3 id="快速检索"><a class="markdownIt-Anchor" href="#快速检索"></a> 快速检索</h3>
+<ol>
+<li><a href="https://katex.org/docs/supported.html" target="_blank" rel="noopener">KaTeX Functions</a></li>
+<li><a href="https://katex.org/docs/support_table.html" target="_blank" rel="noopener">KaTeX Tables</a></li>
+</ol>
 <h3 id="markdown与typora简介"><a class="markdownIt-Anchor" href="#markdown与typora简介"></a> Markdown与Typora简介</h3>
 <blockquote>
 <p>简介部分参考并引用了少数派上<a href="https://sspai.com/u/qpyp0ht9/updates" target="_blank" rel="noopener">liquid617</a>的文章《Typora 完全使用详解》</p>
@@ -420,7 +424,6 @@ print('!')
 <pre><code class="hljs markdown">[<span class="hljs-string">链接文字</span>](<span class="hljs-link">#标题文字</span>)</code></pre>
 <p>举例：</p>
 <pre><code class="hljs markdown">[<span class="hljs-string">什么是Typora</span>](<span class="hljs-link">#### 什么是Typora</span>)</code></pre>
-<p>[什么是Typora](#2. 什么是Typora)</p>
 <h6 id="2-图片"><a class="markdownIt-Anchor" href="#2-图片"></a> (2) 图片</h6>
 <p>可以在Markdown文档中插入图片，语法如下：</p>
 <ul>
@@ -436,9 +439,7 @@ print('!')
 
 ![<span class="hljs-string">本地jpg图片</span>](<span class="hljs-link">./img/PictureTest.jpg</span>)
 
-![<span class="hljs-string">网络图片</span>](<span class="hljs-link">http://static.runoob.com/images/runoob-logo.png "菜鸟教程"</span>)</code></pre>
-<p>效果：</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/runoob-logo.png" srcset="/img/loading.gif" alt="网络图片" title="菜鸟教程" /></p>
+![<span class="hljs-string">网络图片</span>](<span class="hljs-link">url</span>)</code></pre>
 <p>在Typora中，也可以直接使用<code>Ctrl+C</code>，<code>Ctrl+V</code>来直接进行复制粘贴图片，但是，由于Markdown是需要图片的地址的，所以需要简单设置一下Typora。</p>
 <p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630160629783.png" srcset="/img/loading.gif" alt="image-20200630160629783" /></p>
 <ul>
@@ -522,14 +523,14 @@ print('!')
 </li>
 </ol>
 <p>举例：</p>
-<pre><code class="hljs markdown">$ \alpha + \beta = 1 $
+<pre><code class="hljs markdown">$\alpha + \beta = 1$
 
 $$
 \alpha + \beta = 1 \\
 \gamma + \varepsilon = 2
 $$</code></pre>
 <p>效果：</p>
-<p>$ \alpha + \beta = 1 $</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\alpha + \beta = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05278em;">β</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></p>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>=</mo><mn>1</mn><mspace linebreak="newline"></mspace><mi>γ</mi><mo>+</mo><mi>ε</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\alpha + \beta = 1 \\
 \gamma + \varepsilon = 2
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05278em;">β</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05556em;">γ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">ε</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span></span></p>
@@ -543,7 +544,6 @@ $$</code></pre>
 <li><a href="https://katex.org/docs/supported.html" target="_blank" rel="noopener">KaTeX Functions</a></li>
 <li><a href="https://katex.org/docs/support_table.html" target="_blank" rel="noopener">KaTeX Tables</a></li>
 </ol>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/FireShot%20Capture%20019%20-%20Supported%20Functions%20%C2%B7%20KaTeX%20-%20katex.org(1).jpg" srcset="/img/loading.gif" alt="FireShot Capture 019 - Supported Functions · KaTeX - katex.org(1)" /></p>
 <h4 id="3-html"><a class="markdownIt-Anchor" href="#3-html"></a> 3. HTML</h4>
 <h5 id="字体颜色与大小"><a class="markdownIt-Anchor" href="#字体颜色与大小"></a> 字体颜色与大小</h5>
 <p>我们可以使用<code>&lt;font&gt; &lt;/font&gt;</code>标签来改变字体的颜色及大小，如：</p>
@@ -585,24 +585,31 @@ $$</code></pre>
 
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"本地相对或绝对路径"</span> /&gt;</span></span></code></pre>
 <p>举例：</p>
-<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://static.runoob.com/images/runoob-logo.png"</span>&gt;</span></span></code></pre>
-<img src="http://static.runoob.com/images/runoob-logo.png" srcset="/img/loading.gif">
+<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span>&gt;</span></span></code></pre>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/typora_index1.png" srcset="/img/loading.gif">
 <p>可以改变<code>&lt;img&gt;</code>标签的属性，来改变图片的大小</p>
-<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://static.runoob.com/images/runoob-logo.png"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">300</span> <span class="hljs-attr">height</span>=<span class="hljs-string">200</span>&gt;</span></span></code></pre>
+<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">300</span> <span class="hljs-attr">height</span>=<span class="hljs-string">200</span>&gt;</span></span></code></pre>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/typora_index1.png" srcset="/img/loading.gif" width=300 height=300>
+<p>缩放图片：</p>
+<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"zoom: 50%;"</span>&gt;</span></span></code></pre>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/typora_index1.png" srcset="/img/loading.gif" style="zoom: 25%;" >
 <p>也可以改变图片的位置，如：</p>
-<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://static.runoob.com/images/runoob-logo.png"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">300</span> <span class="hljs-attr">height</span>=<span class="hljs-string">300</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"float:left"</span>/&gt;</span></span>图片在左边
+<pre><code class="hljs markdown">图片在左边
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">300</span> <span class="hljs-attr">height</span>=<span class="hljs-string">300</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"float:left"</span>/&gt;</span></span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://static.runoob.com/images/runoob-logo.png"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">300</span> <span class="hljs-attr">height</span>=<span class="hljs-string">300</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"float:right"</span>/&gt;</span></span>图片在右边</code></pre>
+图片在右边
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">300</span> <span class="hljs-attr">height</span>=<span class="hljs-string">300</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"float:right"</span>/&gt;</span></span></code></pre>
 <h4 id="4-其他用法"><a class="markdownIt-Anchor" href="#4-其他用法"></a> 4. 其他用法</h4>
 <h5 id="emoji"><a class="markdownIt-Anchor" href="#emoji"></a> emoji</h5>
 <p>我们可以使用<code>:emoji:</code>的语法来插入表情，比如：</p>
 <pre><code class="hljs markdown">:happy:</code></pre>
-<p>效果:</p>
-<p>:happy:</p>
 <h5 id="插入目录"><a class="markdownIt-Anchor" href="#插入目录"></a> 插入目录</h5>
-<pre><code class="hljs markdown">[toc]</code></pre>
-<p>[toc]</p>
+<pre><code class="hljs markdown">[toc] 或 [TOC]</code></pre>
 <h3 id="references"><a class="markdownIt-Anchor" href="#references"></a> References</h3>
+<ol>
+<li><a href="https://baike.baidu.com/item/markdown" target="_blank" rel="noopener">https://baike.baidu.com/item/markdown</a></li>
+<li><a href="https://sspai.com/post/54912" target="_blank" rel="noopener">https://sspai.com/post/54912</a></li>
+</ol>
 
             </article>
             <hr>
