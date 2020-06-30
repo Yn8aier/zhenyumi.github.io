@@ -380,6 +380,29 @@
   
 
   
+    <!-- APlayer 音乐播放器 -->
+    <div id="aplayer"></div>
+    <script defer src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
+<script type="text/javascript">
+  var oldLoadAp = window.onload;
+  window.onload = function () {
+    oldLoadAp && oldLoadAp();
+
+    new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      autoplay: 'false' === 'true',
+      loop: 'all',
+      order: 'random',
+      theme: '#b7daff',
+      preload: 'none',
+      audio: [{"name":"楽園の西","artist":"madetake","url":"http://music.163.com/song/media/outer/url?id=1317410034.mp3","cover":"https://cangku.one/storage/images/editor/20180321/1521635708789788.jpg"},{"name":"ぼくらの性","artist":"waniwave","url":"http://music.163.com/song/media/outer/url?id=1316376017.mp3","cover":"https://cangku.one/storage/images/editor/20180321/1521635708789788.jpg"},{"name":"少女関数","artist":"madetake","url":"http://music.163.com/song/media/outer/url?id=1316563953.mp3","cover":"https://cangku.one/storage/images/editor/20180321/1521635708789788.jpg"},{"name":"響きと痛み","artist":"madetake","url":"http://music.163.com/song/media/outer/url?id=1316562917.mp3","cover":"https://cangku.one/storage/images/editor/20180321/1521635708789788.jpg"}]
+    });
+  }
+</script>
+
+  
 
   
 
@@ -625,8 +648,6 @@
   initModel("/live2d-widget/waifu-tips.json")
 </script>
 
-<!-- 网易云音乐 -->
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=450 src="//music.163.com/outchain/player?type=0&id=110575318&auto=0&height=430"></iframe>
 
 </body>
 

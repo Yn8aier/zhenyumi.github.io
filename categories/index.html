@@ -196,7 +196,7 @@
     <div class="category row">
       <a
         class="category-item collapsed list-group-item category-item-action col-10 col-md-11"
-        id="heading-ckc1uii2x00043svk5p537m92" role="tab" data-toggle="collapse" href="#collapse-ckc1uii2x00043svk5p537m92"
+        id="heading-ckc1vfoaq000478vk5ygd9nbp" role="tab" data-toggle="collapse" href="#collapse-ckc1vfoaq000478vk5ygd9nbp"
         aria-expanded="false"
       >
         云下日记
@@ -209,8 +209,8 @@
       <div class="category-collapse">
         
           
-  <div id="collapse-ckc1uii2x00043svk5p537m92" class="collapse in" role="tabpanel"
-       aria-labelledby="heading-ckc1uii2x00043svk5p537m92">
+  <div id="collapse-ckc1vfoaq000478vk5ygd9nbp" class="collapse in" role="tabpanel"
+       aria-labelledby="heading-ckc1vfoaq000478vk5ygd9nbp">
     
     
     
@@ -301,7 +301,7 @@
     <div class="category row">
       <a
         class="category-item collapsed list-group-item category-item-action col-10 col-md-11"
-        id="heading-ckc1uii3500093svk2jth557f" role="tab" data-toggle="collapse" href="#collapse-ckc1uii3500093svk2jth557f"
+        id="heading-ckc1vfob1000978vkcuekdzyp" role="tab" data-toggle="collapse" href="#collapse-ckc1vfob1000978vkcuekdzyp"
         aria-expanded="false"
       >
         软件使用总结
@@ -314,8 +314,8 @@
       <div class="category-collapse">
         
           
-  <div id="collapse-ckc1uii3500093svk2jth557f" class="collapse in" role="tabpanel"
-       aria-labelledby="heading-ckc1uii3500093svk2jth557f">
+  <div id="collapse-ckc1vfob1000978vkcuekdzyp" class="collapse in" role="tabpanel"
+       aria-labelledby="heading-ckc1vfob1000978vkcuekdzyp">
     
     
     
@@ -385,6 +385,29 @@
   </div>
 </div>
   
+
+  
+    <!-- APlayer 音乐播放器 -->
+    <div id="aplayer"></div>
+    <script defer src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
+<script type="text/javascript">
+  var oldLoadAp = window.onload;
+  window.onload = function () {
+    oldLoadAp && oldLoadAp();
+
+    new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      autoplay: 'false' === 'true',
+      loop: 'all',
+      order: 'random',
+      theme: '#b7daff',
+      preload: 'none',
+      audio: [{"name":"楽園の西","artist":"madetake","url":"http://music.163.com/song/media/outer/url?id=1317410034.mp3","cover":"https://cangku.one/storage/images/editor/20180321/1521635708789788.jpg"},{"name":"ぼくらの性","artist":"waniwave","url":"http://music.163.com/song/media/outer/url?id=1316376017.mp3","cover":"https://cangku.one/storage/images/editor/20180321/1521635708789788.jpg"},{"name":"少女関数","artist":"madetake","url":"http://music.163.com/song/media/outer/url?id=1316563953.mp3","cover":"https://cangku.one/storage/images/editor/20180321/1521635708789788.jpg"},{"name":"響きと痛み","artist":"madetake","url":"http://music.163.com/song/media/outer/url?id=1316562917.mp3","cover":"https://cangku.one/storage/images/editor/20180321/1521635708789788.jpg"}]
+    });
+  }
+</script>
 
   
 
@@ -562,8 +585,6 @@
   initModel("/live2d-widget/waifu-tips.json")
 </script>
 
-<!-- 网易云音乐 -->
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=450 src="//music.163.com/outchain/player?type=0&id=110575318&auto=0&height=430"></iframe>
 
 </body>
 
