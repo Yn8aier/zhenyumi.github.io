@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="向海">
   <meta name="keywords" content="">
-  <title>归档 - 鹘横海</title>
+  <title>鹘横海</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -51,7 +51,7 @@
 </head>
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 100vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -151,7 +151,7 @@
 </nav>
 
     <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/archives/achieve1.png') no-repeat center center;
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Streets_Modified.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -164,6 +164,10 @@
           </div>
 
           
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
         </div>
       </div>
     </div>
@@ -173,27 +177,73 @@
     
       <div class="container nopadding-md">
         <div class="py-5" id="board"
-          >
+          style=margin-top:0>
           
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">共计 51 篇文章</p>
-  <hr>
-  
+
+  <div class="row mx-auto index-card">
     
-      
-      <p class="h5">2019</p>
     
-    <a href="/2019/12/17/%E5%9C%A8%E7%AD%89WPS%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD%E5%A5%BD/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">在等WPS文件加载好...</span>
-      <span style="float: right;">12-17</span>
-    </a>
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/06/17/%E4%B8%8D%E5%AE%8C%E7%BE%8E%E7%9A%84Z/" target="_self">
+          <img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/about.png" srcset="/img/loading.gif" alt="不完美的Z">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a class="index-header" href="/2018/06/17/%E4%B8%8D%E5%AE%8C%E7%BE%8E%E7%9A%84Z/">不完美的Z</a>
+
+      <a href="/2018/06/17/%E4%B8%8D%E5%AE%8C%E7%BE%8E%E7%9A%84Z/" class="index-excerpt">
+        
+        
+          
+        
+        <div>还算是自己发的牢骚吧，也不知道在向谁撒气。</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2018-06-17
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/">云下日记</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%97%A5%E8%AE%B0/">日记</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/5/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+    </span>
+  </nav>
   
-</div>
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
 
 
 
@@ -322,7 +372,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "所有内容的归档页呦o(=•ェ•=)m&nbsp;",
+        "A Personal Writing Space&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
