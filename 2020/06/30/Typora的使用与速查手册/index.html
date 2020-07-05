@@ -13,6 +13,8 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="">
   <meta name="author" content="向海">
@@ -226,7 +228,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 天前
+                  本文最后更新于：4 天前
                 
               </p>
             
@@ -274,12 +276,12 @@
 <h4 id="1-常用代码指令与快捷键"><a class="markdownIt-Anchor" href="#1-常用代码指令与快捷键"></a> 1. 常用代码指令与快捷键</h4>
 <h5 id="标题"><a class="markdownIt-Anchor" href="#标题"></a> 标题</h5>
 <p>使用 <code>#</code> 可以表示标题，一级标题对应一个 <code>#</code> ，二级标题对应两个 <code>#</code> 号，最多至六级标题。在Typora中，<code>#</code> 后要紧接着一个空格才能表示标题，否则就是普通字符。</p>
-<pre><code class="hljs markdown"><span class="hljs-section"># 一级标题 H1</span>
+<div class="hljs"><pre><code class="hljs markdown"><span class="hljs-section"># 一级标题 H1</span>
 <span class="hljs-section">## 二级标题 H2</span>
 <span class="hljs-section">### 三级标题 H3</span>
 <span class="hljs-section">#### 四级标题 H4</span>
 <span class="hljs-section">##### 五级标题 H5</span>
-<span class="hljs-section">###### 六级标题 H6</span></code></pre>
+<span class="hljs-section">###### 六级标题 H6</span></code></pre></div>
 <p>在Typora中，也可以使用快捷键Ctrl+1（2，3，4，5，6）表示相对应的标题。Ctrl+0表示段落。标题快捷键信息可在菜单栏中的段落选项下查看。</p>
 <h5 id="首行缩进"><a class="markdownIt-Anchor" href="#首行缩进"></a> 首行缩进</h5>
 <p>Typora的首行缩进方式相对自由，有很多种方法。</p>
@@ -347,27 +349,27 @@
 <li>无序列表</li>
 </ul>
 <p>可以使用<code>*</code>，<code>+</code>或<code>-</code>标记符号来表示无序列表项，记住要在标记符号后<strong>添加一个空格</strong>，语法显示如下：</p>
-<pre><code class="hljs markdown"><span class="hljs-bullet">* </span>第一项
+<div class="hljs"><pre><code class="hljs markdown"><span class="hljs-bullet">* </span>第一项
 <span class="hljs-bullet">* </span>第二项
 <span class="hljs-bullet">+ </span>第一项
 <span class="hljs-bullet">+ </span>第二项
 <span class="hljs-bullet">- </span>第一项
-<span class="hljs-bullet">- </span>第二项</code></pre>
+<span class="hljs-bullet">- </span>第二项</code></pre></div>
 <ul>
 <li>有序列表</li>
 </ul>
 <p>有序列表的数字并不重要</p>
-<pre><code class="hljs markdown"><span class="hljs-bullet">1. </span>第一项
+<div class="hljs"><pre><code class="hljs markdown"><span class="hljs-bullet">1. </span>第一项
 <span class="hljs-bullet">3. </span>第二项
-<span class="hljs-bullet">10. </span>第三项</code></pre>
+<span class="hljs-bullet">10. </span>第三项</code></pre></div>
 <ul>
 <li>嵌套列表</li>
 </ul>
-<pre><code class="hljs angelscript">+ 无序 <span class="hljs-number">1</span>
+<div class="hljs"><pre><code class="hljs angelscript">+ 无序 <span class="hljs-number">1</span>
 	+ 无序 <span class="hljs-number">1.1</span>
 		<span class="hljs-number">1.</span> 无序 <span class="hljs-number">1.1</span><span class="hljs-number">.1</span>
 			<span class="hljs-number">1.</span> 有序 <span class="hljs-number">1</span>
-			<span class="hljs-number">2.</span> 有序 <span class="hljs-number">2</span></code></pre>
+			<span class="hljs-number">2.</span> 有序 <span class="hljs-number">2</span></code></pre></div>
 <p>效果：</p>
 <ul>
 <li>无序 1
@@ -410,41 +412,41 @@
 <ul>
 <li>可以在代码块的右下角选择编程语言。</li>
 </ul>
-<pre><code class="hljs markdown">​<span class="hljs-code">```</span>Python
+<div class="hljs"><pre><code class="hljs markdown">​<span class="hljs-code">```</span>Python
 print('hello world')
 print('!')
-​</code></pre>
-<pre><code class="hljs stylus">
+​</code></pre></div>
+<div class="hljs"><pre><code class="hljs stylus">
 效果:
 
 ```Python
 <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'hello world'</span>)</span></span>
-<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'!'</span>)</span></span></code></pre>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'!'</span>)</span></span></code></pre></div>
 <h5 id="链接"><a class="markdownIt-Anchor" href="#链接"></a> 链接</h5>
 <h6 id="1-访问网页或文件"><a class="markdownIt-Anchor" href="#1-访问网页或文件"></a> (1) 访问网页或文件</h6>
 <p>链接的使用方式有两种语法，如下：</p>
-<pre><code class="hljs markdown">[<span class="hljs-string">链接文字</span>](<span class="hljs-link">链接地址</span>)
+<div class="hljs"><pre><code class="hljs markdown">[<span class="hljs-string">链接文字</span>](<span class="hljs-link">链接地址</span>)
 或
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">链接地址</span>&gt;</span></span></code></pre>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">链接地址</span>&gt;</span></span></code></pre></div>
 <p>举例：</p>
-<pre><code class="hljs markdown">[<span class="hljs-string">鹘横海</span>](<span class="hljs-link">https://zhenyumi.github.io/</span>)
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">https:</span>//<span class="hljs-attr">zhenyumi.github.io</span>/&gt;</span></span></code></pre>
+<div class="hljs"><pre><code class="hljs markdown">[<span class="hljs-string">鹘横海</span>](<span class="hljs-link">https://zhenyumi.github.io/</span>)
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">https:</span>//<span class="hljs-attr">zhenyumi.github.io</span>/&gt;</span></span></code></pre></div>
 <p>效果：</p>
 <p><a href="https://zhenyumi.github.io/">鹘横海</a><br />
 <a href="https://zhenyumi.github.io/">https://zhenyumi.github.io/</a></p>
 <p>当鼠标移到相应的链接文字时，按住<strong>Ctrl+鼠标左键</strong>点击访问。</p>
 <p>链接除了可以打开相应的网页外，还可以<strong>打开本地文件</strong>，使用方式类似，不过链接地址需要使用本地文件的地址，相对地址、绝对地址均可：</p>
-<pre><code class="hljs markdown">[<span class="hljs-string">打开LinkTest.md文档</span>](<span class="hljs-link">./LinkTest.md</span>)
+<div class="hljs"><pre><code class="hljs markdown">[<span class="hljs-string">打开LinkTest.md文档</span>](<span class="hljs-link">./LinkTest.md</span>)
 [<span class="hljs-string">打开LinkTest.png照片</span>](<span class="hljs-link">./img/LinkTest.png</span>)
-[<span class="hljs-string">打开某个网络图片</span>](<span class="hljs-link">url</span>)</code></pre>
+[<span class="hljs-string">打开某个网络图片</span>](<span class="hljs-link">url</span>)</code></pre></div>
 <blockquote>
 <p>一个小圆点<code>.</code>表示当前目录，故<code>./LinkTest.md</code>表示当前目录下的LinkTest.md文件，<code>./img/LinkTest.png</code>表示当前目录下的 img 文件下的LinkTest.png文件。</p>
 <p>两个小圆点 <code>..</code> 表示上一级目录。</p>
 </blockquote>
 <h6 id="2-页内跳转"><a class="markdownIt-Anchor" href="#2-页内跳转"></a> (2) 页内跳转</h6>
-<pre><code class="hljs markdown">[<span class="hljs-string">链接文字</span>](<span class="hljs-link">#标题文字</span>)</code></pre>
+<div class="hljs"><pre><code class="hljs markdown">[<span class="hljs-string">链接文字</span>](<span class="hljs-link">#标题文字</span>)</code></pre></div>
 <p>举例：</p>
-<pre><code class="hljs markdown">[<span class="hljs-string">什么是Typora</span>](<span class="hljs-link">#### 什么是Typora</span>)</code></pre>
+<div class="hljs"><pre><code class="hljs markdown">[<span class="hljs-string">什么是Typora</span>](<span class="hljs-link">#### 什么是Typora</span>)</code></pre></div>
 <h6 id="2-图片"><a class="markdownIt-Anchor" href="#2-图片"></a> (2) 图片</h6>
 <p>可以在Markdown文档中插入图片，语法如下：</p>
 <ul>
@@ -452,15 +454,15 @@ print('!')
 <li>然后中括号里面写属性文本</li>
 <li>小括号里面写图片地址，后可接标题</li>
 </ul>
-<pre><code class="hljs marldown">![alt 属性文本](图片地址)
+<div class="hljs"><pre><code class="hljs marldown">![alt 属性文本](图片地址)
 
-![alt 属性文本](图片地址 &quot;可选标题&quot;)</code></pre>
+![alt 属性文本](图片地址 &quot;可选标题&quot;)</code></pre></div>
 <p>举例：</p>
-<pre><code class="hljs markdown">![<span class="hljs-string">本地png图片PictureTest.png</span>](<span class="hljs-link">./img/PictureTest.png</span>)
+<div class="hljs"><pre><code class="hljs markdown">![<span class="hljs-string">本地png图片PictureTest.png</span>](<span class="hljs-link">./img/PictureTest.png</span>)
 
 ![<span class="hljs-string">本地jpg图片</span>](<span class="hljs-link">./img/PictureTest.jpg</span>)
 
-![<span class="hljs-string">网络图片</span>](<span class="hljs-link">url</span>)</code></pre>
+![<span class="hljs-string">网络图片</span>](<span class="hljs-link">url</span>)</code></pre></div>
 <p>在Typora中，也可以直接使用<code>Ctrl+C</code>，<code>Ctrl+V</code>来直接进行复制粘贴图片，但是，由于Markdown是需要图片的地址的，所以需要简单设置一下Typora。</p>
 <p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630160629783.png" srcset="/img/loading.gif" alt="image-20200630160629783" /></p>
 <ul>
@@ -473,10 +475,10 @@ print('!')
 </ul>
 <p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630160811535.png" srcset="/img/loading.gif" alt="image-20200630160811535" /></p>
 <p>举例：</p>
-<pre><code class="hljs markdown">|表头|表头|表头|
+<div class="hljs"><pre><code class="hljs markdown">|表头|表头|表头|
 |---|---|----|
 |单元格|单元格|单元格|
-|单元格|单元格|单元格|</code></pre>
+|单元格|单元格|单元格|</code></pre></div>
 <p>效果</p>
 <table>
 <thead>
@@ -506,10 +508,10 @@ print('!')
 <li><code>:-:</code>表示中间对齐</li>
 </ul>
 <p>举例：</p>
-<pre><code class="hljs markdown">|左对齐|右对齐|中间对齐|
+<div class="hljs"><pre><code class="hljs markdown">|左对齐|右对齐|中间对齐|
 |:---|---:|:----:|
 |单元格|单元格|单元格|
-|单元格|单元格|单元格|</code></pre>
+|单元格|单元格|单元格|</code></pre></div>
 <p>效果：</p>
 <table>
 <thead>
@@ -544,12 +546,12 @@ print('!')
 </li>
 </ol>
 <p>举例：</p>
-<pre><code class="hljs markdown">$\alpha + \beta = 1$
+<div class="hljs"><pre><code class="hljs markdown">$\alpha + \beta = 1$
 
 $$
 \alpha + \beta = 1 \\
 \gamma + \varepsilon = 2
-$$</code></pre>
+$$</code></pre></div>
 <p>效果：</p>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\alpha + \beta = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05278em;">β</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></p>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>=</mo><mn>1</mn><mspace linebreak="newline"></mspace><mi>γ</mi><mo>+</mo><mi>ε</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\alpha + \beta = 1 \\
@@ -571,67 +573,67 @@ $$</code></pre>
 <ul>
 <li>Color 支持 RGB</li>
 </ul>
-<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">3</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"red"</span>&gt;</span></span>字体颜色为红色，大小为3<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span>
+<div class="hljs"><pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">3</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"red"</span>&gt;</span></span>字体颜色为红色，大小为3<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span>
 
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">4</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"blue"</span>&gt;</span></span>字体颜色为蓝色，大小为4<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">6</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"violet"</span>&gt;</span></span>字体颜色为紫罗兰，大小为6<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span></code></pre>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">6</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"violet"</span>&gt;</span></span>字体颜色为紫罗兰，大小为6<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span></code></pre></div>
 <p>效果：</p>
 <p><font size=3 color="red">字体颜色为红色，大小为3</font></p>
 <p><font size=4 color="blue">字体颜色为蓝色，大小为4</font></p>
 <p><font size=6 color="violet">字体颜色为紫罗兰，大小为6</font></p>
 <p>当然也可以单独修改标签：</p>
-<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span> = <span class="hljs-string">6</span>&gt;</span></span>字体大小为6<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span>
+<div class="hljs"><pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span> = <span class="hljs-string">6</span>&gt;</span></span>字体大小为6<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span> = <span class="hljs-string">"66CCFF"</span>&gt;</span></span>字体颜色为天依蓝<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span></code></pre>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span> = <span class="hljs-string">"66CCFF"</span>&gt;</span></span>字体颜色为天依蓝<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span></span></code></pre></div>
 <p>效果：</p>
 <p><font size = 6>字体大小为6</font></p>
 <p><font color = "66CCFF">字体颜色为天依蓝</font></p>
 <h5 id="对齐方式"><a class="markdownIt-Anchor" href="#对齐方式"></a> 对齐方式</h5>
 <p>我们可以改变字体的对齐方式，用标签<code>&lt;p&gt; &lt;/p&gt;</code>加上属性<code>align</code>，如：</p>
-<pre><code class="hljs marldown">&lt;p align&#x3D;&quot;left&quot;&gt;左对齐&lt;&#x2F;p&gt;
+<div class="hljs"><pre><code class="hljs marldown">&lt;p align&#x3D;&quot;left&quot;&gt;左对齐&lt;&#x2F;p&gt;
 &lt;p align&#x3D;&quot;center&quot;&gt;中间对齐&lt;&#x2F;p&gt;
-&lt;p align&#x3D;&quot;right&quot;&gt;右对齐&lt;&#x2F;p&gt;</code></pre>
+&lt;p align&#x3D;&quot;right&quot;&gt;右对齐&lt;&#x2F;p&gt;</code></pre></div>
 <p>效果：</p>
 <p align="left">左对齐</p>
 <p align="center">中间对齐</p>
 <p align="right">右对齐</p>
 <p>或者是：</p>
-<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">center</span>&gt;</span></span> 中间对齐<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">center</span>&gt;</span></span></code></pre>
+<div class="hljs"><pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">center</span>&gt;</span></span> 中间对齐<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">center</span>&gt;</span></span></code></pre></div>
 <p>效果：</p>
 <center>中间对齐</center>
 <h5 id="图像"><a class="markdownIt-Anchor" href="#图像"></a> 图像</h5>
 <h6 id="1-插入图片"><a class="markdownIt-Anchor" href="#1-插入图片"></a> (1) 插入图片</h6>
 <p>可以通过标签 <code>&lt;img src=url /&gt;</code> 来插入图片</p>
-<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span> /&gt;</span></span>
+<div class="hljs"><pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span> /&gt;</span></span>
 
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"本地相对或绝对路径"</span> /&gt;</span></span></code></pre>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"本地相对或绝对路径"</span> /&gt;</span></span></code></pre></div>
 <p>举例：</p>
-<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span>&gt;</span></span></code></pre>
+<div class="hljs"><pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span>&gt;</span></span></code></pre></div>
 <img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/typora_index1.png" srcset="/img/loading.gif">
 <h6 id="2-更改图片大小-缩放图片"><a class="markdownIt-Anchor" href="#2-更改图片大小-缩放图片"></a> (2) 更改图片大小、缩放图片</h6>
 <p>可以改变<code>&lt;img&gt;</code>标签的属性，来改变图片的大小</p>
-<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">300</span> <span class="hljs-attr">height</span>=<span class="hljs-string">200</span>&gt;</span></span></code></pre>
+<div class="hljs"><pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">300</span> <span class="hljs-attr">height</span>=<span class="hljs-string">200</span>&gt;</span></span></code></pre></div>
 <img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/typora_index1.png" srcset="/img/loading.gif" width=300 height=300>
 <p>缩放图片的时候可以更改代码，也可以通过鼠标右键点击图片，进行设置：</p>
-<pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"zoom: 50%;"</span>&gt;</span></span></code></pre>
+<div class="hljs"><pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"zoom: 50%;"</span>&gt;</span></span></code></pre></div>
 <img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/typora_index1.png" srcset="/img/loading.gif" style="zoom: 25%;" >
 <p>在Typora当中，图片一般是默认居中显示的，不同的主题图片默认排版可能不同。（因为这个网站使用的是Hexo的Fluid主题，图片是默认靠左显示。）</p>
 <p>可以通过HTML标签改变图片的位置，如：</p>
-<pre><code class="hljs markdown">图片在左边
+<div class="hljs"><pre><code class="hljs markdown">图片在左边
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">300</span> <span class="hljs-attr">height</span>=<span class="hljs-string">300</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"float:left"</span>/&gt;</span></span>
 
 图片在右边
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">300</span> <span class="hljs-attr">height</span>=<span class="hljs-string">300</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"float:right"</span>/&gt;</span></span></code></pre>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">300</span> <span class="hljs-attr">height</span>=<span class="hljs-string">300</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"float:right"</span>/&gt;</span></span></code></pre></div>
 <p>效果：</p>
 <img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/typora_index1.png" srcset="/img/loading.gif" width=100 height=100 style="float:left"/>
 <img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/typora_index1.png" srcset="/img/loading.gif" width=100 height=100 style="float:right"/>
 <h4 id="4-其他用法"><a class="markdownIt-Anchor" href="#4-其他用法"></a> 4. 其他用法</h4>
 <h5 id="emoji"><a class="markdownIt-Anchor" href="#emoji"></a> emoji</h5>
 <p>我们可以使用<code>:emoji:</code>的语法来插入表情，比如：</p>
-<pre><code class="hljs markdown">:happy:</code></pre>
+<div class="hljs"><pre><code class="hljs markdown">:happy:</code></pre></div>
 <h5 id="插入目录"><a class="markdownIt-Anchor" href="#插入目录"></a> 插入目录</h5>
-<pre><code class="hljs markdown">[toc] 或 [TOC]</code></pre>
+<div class="hljs"><pre><code class="hljs markdown">[toc] 或 [TOC]</code></pre></div>
 <h3 id="references"><a class="markdownIt-Anchor" href="#references"></a> References</h3>
 <ol>
 <li><a href="https://baike.baidu.com/item/markdown" target="_blank" rel="noopener">https://baike.baidu.com/item/markdown</a></li>

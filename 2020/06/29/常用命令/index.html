@@ -13,6 +13,8 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="">
   <meta name="author" content="向海">
@@ -226,7 +228,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：3 天前
+                  本文最后更新于：5 天前
                 
               </p>
             
@@ -281,11 +283,11 @@
 <ol>
 <li>
 <p>cd至本地Hexo安装文件夹，使用Git Bash的命令行：</p>
-<pre><code class="hljs Git">cd &lt;path&gt;
-hexo new &lt;layout&gt; &quot;name&quot;</code></pre>
+<div class="hljs"><pre><code class="hljs Git">cd &lt;path&gt;
+hexo new &lt;layout&gt; &quot;name&quot;</code></pre></div>
 <p>Example:</p>
-<pre><code class="hljs Git">cd E:\My_Hexo
-hexo new post &quot;New_Post&quot;</code></pre>
+<div class="hljs"><pre><code class="hljs Git">cd E:\My_Hexo
+hexo new post &quot;New_Post&quot;</code></pre></div>
 <p>之后就在本地Hexo文件夹的source文件夹中，找到通过命令行新建的md文件，进行编辑。</p>
 <p><del>我推荐使用Typora编辑Markdown，Typora天下第一</del></p>
 <p>编辑完成后使用 “hexo clean &amp;&amp; hexo g &amp;&amp; hexo d” 与GitHub Pages进行同步</p>
@@ -294,9 +296,9 @@ hexo new post &quot;New_Post&quot;</code></pre>
 <p>使用Hexo Admin</p>
 <p>使用Hexo Admin的好处是可以进行可视化管理，缺点是创建博文时候的自定义模板（scaffold）容易受到影响，自定义的参数较少。</p>
 <p>Hexo Admin使用的时候需要先清理缓存，之后再次生成缓存文件，之后在本地搭建网页：</p>
-<pre><code class="hljs Git">hexo clean
+<div class="hljs"><pre><code class="hljs Git">hexo clean
 hexo g
-hexo s</code></pre>
+hexo s</code></pre></div>
 <p>可以在 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 观察生成的静态网页的效果，同时在 <a href="http://localhost:4000/admin/" target="_blank" rel="noopener">http://localhost:4000/admin/</a> 使用Hexo Admin进行可视化管理。</p>
 <hr />
 </li>
@@ -305,11 +307,11 @@ hexo s</code></pre>
 <h4 id="从草稿draft添加post"><a class="markdownIt-Anchor" href="#从草稿draft添加post"></a> 从草稿（Draft）添加Post</h4>
 <h5 id="1-添加draft"><a class="markdownIt-Anchor" href="#1-添加draft"></a> (1) 添加Draft</h5>
 <p>Hexo 的一种特殊布局：<code>draft</code>，这种布局在建立时会被保存到 <code>source/_drafts</code> 文件夹。</p>
-<pre><code class="hljs Git">hexo new draft &quot;name&quot;</code></pre>
+<div class="hljs"><pre><code class="hljs Git">hexo new draft &quot;name&quot;</code></pre></div>
 <p>之后可以在<code>source/_drafts</code>中找到该文件进行编辑</p>
 <h5 id="2-发布publish草稿"><a class="markdownIt-Anchor" href="#2-发布publish草稿"></a> (2) 发布（Publish）草稿</h5>
 <p>可通过 <code>publish</code> 命令将草稿移动到 <code>source/_posts</code> 文件夹，该命令的使用方式与 <code>new</code> 十分类似，也可在命令中指定 <code>layout</code> 来指定布局。</p>
-<pre><code class="hljs Git">hexo publish [layout] &quot;name&quot;</code></pre>
+<div class="hljs"><pre><code class="hljs Git">hexo publish [layout] &quot;name&quot;</code></pre></div>
 <h3 id="3-博文的常用参数"><a class="markdownIt-Anchor" href="#3-博文的常用参数"></a> 3. 博文的常用参数</h3>
 <table>
 <thead>
