@@ -19,7 +19,7 @@
   <meta name="description" content="">
   <meta name="author" content="向海">
   <meta name="keywords" content="">
-  <title>重复 - 鹘横海</title>
+  <title>R &lt;- Basic Plots （施工中） - 鹘横海</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -162,7 +162,7 @@
 </nav>
 
     <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Diary/20200709_%E9%9B%A8.png') no-repeat center center;
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -175,8 +175,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-07-09 18:44">
-      2020年7月9日 晚上
+    <time datetime="2020-07-14 20:13">
+      2020年7月14日 晚上
     </time>
   </div>
 
@@ -186,7 +186,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      362 字
+      554 字
     </span>
   
 
@@ -196,7 +196,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3
+      5
        分钟
     </span>
   
@@ -228,18 +228,120 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：5 天前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
             <article class="markdown-body">
               <!-- Post toc 目录 -->
-              
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-条形图-bar-chart"><span class="post-toc-text"> 一、条形图 (Bar Chart)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基本条形图"><span class="post-toc-text"> 基本条形图</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#堆砌条形图与分组条形图"><span class="post-toc-text"> 堆砌条形图与分组条形图</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#均值条形图"><span class="post-toc-text"> 均值条形图</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#棘状图"><span class="post-toc-text"> 棘状图</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#条形图的一些调整参数"><span class="post-toc-text"> 条形图的一些调整参数</span></a></li></ol></li></ol>
 
-              <p>今天一天都无所事事，早上醒来的虽然比平时早得多，但是还是躺在床上玩了一天的手机，大概是惰性作祟吧。</p>
-<p>下午的时候和BOSS以及组内的一堆同学交流了一下关于实验的设计，BOSS似乎非常看重我们这群人，毕竟是个国家级嘛。虽然BOSS问我对于实验有没有什么想法，我支支吾吾答不出来，只好回答说觉得实验太难。BOSS告诉我说，这正是训练我们科学素质的一个过程，并且他也会尽力帮我们的。虽然我回答的不是很好，似乎让BOSS失望了，但是BOSS展现出对我们的重视的时候，还是超级感动。</p>
-<p>刚才发现了一个阅读文献的好工具，叫“知云文献翻译”，虽然它的推荐页面做得很土，有一股椰树牌椰汁的味道，但是试用了一下发现确实很好用，适合我这种读不懂英文文献的学渣。。。</p>
-<p>《宗教与文化》这门课到这一周已经是第三周了，还有一周就结课了，然而布置了4k字差不多3篇小论文的量。这个周末加大力度赶一赶吧。这学期的课程评分制度改成了P/F，本来还期望通过这些小学期的课刷一刷分呢。。。</p>
+              <p>这篇文章摘录了绘制一些基本图表的方法</p>
+<h1 id="一-条形图-bar-chart"><a class="markdownIt-Anchor" href="#一-条形图-bar-chart"></a> 一、条形图 (Bar Chart)</h1>
+<p>在条形图的例子当中使用了随<code>vcd</code>包分发的Arthritis数据框：<code>library(vcd)</code>，可以通过<code>vcd</code>来创建棘状图（spinogram）。</p>
+<h2 id="基本条形图"><a class="markdownIt-Anchor" href="#基本条形图"></a> 基本条形图</h2>
+<p>使用函数<code>barplot()</code>来创建基本条形图，大多数主要参数与其它图像是通用的，其中需要注意的主要参数有：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>height</td>
+<td>height是一个向量或一个矩阵，它是绘图过程中每个bar的值（高度）</td>
+</tr>
+<tr>
+<td>horiz</td>
+<td>默认为FALSE，若<code>horiz=TRUE</code>则会生成水平条形图</td>
+</tr>
+</tbody>
+</table>
+<p>例：</p>
+<p>本例中使用的数据：</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment">#构建数据</span>
+&gt; counts &lt;- table(Arthritis$Improved)
+&gt; counts
+
+  None   Some Marked 
+    <span class="hljs-number">42</span>     <span class="hljs-number">14</span>     <span class="hljs-number">28</span></code></pre></div>
+<p>绘图代码：</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment">#构建数据</span>
+counts &lt;- table(Arthritis$Improved)
+<span class="hljs-comment">#为了方便展示，将两幅图放在同一个绘图区域</span>
+opar &lt;- par()
+par(mfrow=c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>))
+<span class="hljs-comment">#绘图</span>
+<span class="hljs-comment">##生成垂直条形图</span>
+barplot(counts, 
+        main=<span class="hljs-string">"Simple Bar Plot"</span>, 
+        xlab=<span class="hljs-string">"Improvement"</span>, 
+        ylab=<span class="hljs-string">"Frequency"</span>)
+<span class="hljs-comment">##生成水平条形图</span>
+barplot(counts, 
+        main=<span class="hljs-string">"Horizontal Bar Plot"</span>, 
+        xlab=<span class="hljs-string">"Frequency"</span>, 
+        ylab=<span class="hljs-string">"Improvement"</span>,
+        horiz=<span class="hljs-literal">TRUE</span>) 
+<span class="hljs-comment">#恢复全局设置</span>
+par(opar)</code></pre></div>
+<img src="pics/image-20200714203508524.png" srcset="/img/loading.gif" alt="image-20200714203508524" style="zoom:67%;" />
+<h2 id="堆砌条形图与分组条形图"><a class="markdownIt-Anchor" href="#堆砌条形图与分组条形图"></a> 堆砌条形图与分组条形图</h2>
+<p>如果<code>height</code>是一个矩阵而不是一个向量，则绘图结果将是一幅堆砌条形图或分组条形图。</p>
+<p>堆砌条形图与分组条形图中的重要参数为：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>beside</td>
+<td>若beside=FALSE（默认值），则矩阵中的每一列都将生成图中的一个条形，各列中的值将给出 堆砌的“子条”的高度。<br />若beside=TRUE，则矩阵中的每一列都表示一个分组，各列中的值将并列而不是堆砌。</td>
+</tr>
+</tbody>
+</table>
+<p>例：</p>
+<p>本例中使用的数据：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; counts &lt;- table(Arthritis$Improved, Arthritis$Treatment)
+&gt; counts
+        
+         Placebo Treated
+  None        <span class="hljs-number">29</span>      <span class="hljs-number">13</span>
+  Some         <span class="hljs-number">7</span>       <span class="hljs-number">7</span>
+  Marked       <span class="hljs-number">7</span>      <span class="hljs-number">21</span></code></pre></div>
+<p>绘图代码：</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment">#构建数据</span>
+counts &lt;- table(Arthritis$Improved, Arthritis$Treatment)
+<span class="hljs-comment">#为了方便展示，将两幅图放在同一个绘图区域</span>
+opar &lt;- par()
+par(mfrow=c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>))
+<span class="hljs-comment">#绘图</span>
+<span class="hljs-comment">##堆砌条形图</span>
+barplot(counts, 
+        main=<span class="hljs-string">"Stacked Bar Plot"</span>, 
+        xlab=<span class="hljs-string">"Treatment"</span>, 
+        ylab=<span class="hljs-string">"Frequency"</span>, 
+        col=c(<span class="hljs-string">"red"</span>, <span class="hljs-string">"yellow"</span>,<span class="hljs-string">"green"</span>), 
+        legend=rownames(counts)) 
+<span class="hljs-comment">##组合条形图</span>
+barplot(counts, 
+        main=<span class="hljs-string">"Grouped Bar Plot"</span>, 
+        xlab=<span class="hljs-string">"Treatment"</span>, 
+        ylab=<span class="hljs-string">"Frequency"</span>, 
+        col=c(<span class="hljs-string">"red"</span>, <span class="hljs-string">"yellow"</span>, <span class="hljs-string">"green"</span>), 
+        legend=rownames(counts), 
+        beside=<span class="hljs-literal">TRUE</span>)
+<span class="hljs-comment">#恢复全局设置</span>
+par(opar)</code></pre></div>
+<img src="pics/image-20200714204252633.png" srcset="/img/loading.gif" alt="image-20200714204252633" style="zoom: 67%;" />
+<h2 id="均值条形图"><a class="markdownIt-Anchor" href="#均值条形图"></a> 均值条形图</h2>
+<h2 id="棘状图"><a class="markdownIt-Anchor" href="#棘状图"></a> 棘状图</h2>
+<h2 id="条形图的一些调整参数"><a class="markdownIt-Anchor" href="#条形图的一些调整参数"></a> 条形图的一些调整参数</h2>
 
             </article>
             <hr>
@@ -249,7 +351,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/">云下日记</a>
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a>
                     
                   </div>
                 
@@ -257,7 +359,11 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a>
+                      <a class="hover-with-bg" href="/tags/R/">R</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Statistics/">Statistics</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%80%9F%E6%9F%A5/">速查</a>
                     
                   </div>
                 
@@ -270,18 +376,12 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/07/12/R%20Plot%20%E5%9B%BE%E5%83%8F%E5%8F%82%E6%95%B0/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">1. R <- Plot 图像参数</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </div>
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/07/08/L15%20Overview%20of%20Cell%20Communication/">
-                        <span class="hidden-mobile">L15 Overview of Cell Communication</span>
+                      <a href="/2020/07/13/%E5%B8%B8%E7%94%A8%E9%A2%9C%E8%89%B2%E4%BB%A3%E7%A0%81/">
+                        <span class="hidden-mobile">常用颜色代码</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -483,7 +583,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "重复&nbsp;",
+        "R <- Basic Plots （施工中）&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
