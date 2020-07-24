@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L08 Epigenetics - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_Sunlight%281%29.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-24 17:20">
+      2020年7月24日 下午
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      689 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      3
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：21 分钟前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-introduction-to-epigenetics"><span class="post-toc-text"> 一、Introduction to Epigenetics</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#epigenetics-in-plants"><span class="post-toc-text"> Epigenetics in Plants</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#epigenetics-in-animals"><span class="post-toc-text"> Epigenetics in Animals</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-mechanism-of-epigenetics"><span class="post-toc-text"> 二、Mechanism of Epigenetics</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#nucleosomes"><span class="post-toc-text"> Nucleosomes</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#heterochromatin-and-euchromatin"><span class="post-toc-text"> Heterochromatin and Euchromatin</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#epigenetic-modifications"><span class="post-toc-text"> Epigenetic modifications</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-dna-methylation"><span class="post-toc-text"> 1. DNA Methylation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cg-methylation-can-be-propagated-during-dna-replication"><span class="post-toc-text"> CG methylation can be propagated during DNA replication</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#asymmetric-methylation-sites-require-additional-information"><span class="post-toc-text"> Asymmetric methylation sites  require additional information</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#some-sites-are-maintained-by-small-interfering-rnas-sirnas"><span class="post-toc-text"> Some sites are maintained by small  interfering RNAs (siRNAs)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#dna-methyltransferases-in-arabidopsis"><span class="post-toc-text"> DNA methyltransferases in Arabidopsis</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#heterochromatin-dna-is-highly-methylated"><span class="post-toc-text"> Heterochromatin DNA is highly  methylated</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-histone-modification"><span class="post-toc-text"> 2. Histone Modification</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-example-h3-modifications"><span class="post-toc-text"> (1) Example – H3 Modifications</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#histone-modification-affects-the-chromatin-structure"><span class="post-toc-text"> Histone Modification affects the chromatin structure</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#small-rnas"><span class="post-toc-text"> Small RNAs</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#regulators-of-chromatin-change-in-binding-proteins"><span class="post-toc-text"> Regulators of Chromatin – Change in Binding Proteins</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-summary"><span class="post-toc-text"> 3. Summary</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-analysis-of-dna-methylation"><span class="post-toc-text"> 三、Analysis of DNA Methylation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sodium-bisulfite"><span class="post-toc-text"> Sodium Bisulfite</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#chip-seq-chromatin-immunoprecipitation"><span class="post-toc-text"> ChIP-SEQ (Chromatin Immunoprecipitation)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#epigenetic-controls-in-whole-plant-processes"><span class="post-toc-text"> Epigenetic controls in whole-plant processes</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#x-chromosome-inactiation"><span class="post-toc-text"> X-Chromosome Inactiation</span></a></li></ol></li></ol>
+
+              <h1 id="一-introduction-to-epigenetics"><a class="markdownIt-Anchor" href="#一-introduction-to-epigenetics"></a> 一、Introduction to Epigenetics</h1>
+<p><strong>Literally</strong>, epigenetics means  above, or on top of, genetics.</p>
+<p>Usually this means information coded beyond the  DNA sequence, such as in  covalent modifications to the  DNA or modifications to the  chromatin structure.</p>
+<p><strong>Practically</strong>, epigenetics describes phenomena in which genetically identical cells or organisms express their  genomes differently, causing phenotypic differences.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106094737992.png" srcset="/img/loading.gif" alt="image-20191106094737992" style="zoom:67%;" />
+<p>The epigenetics programming in plants helps silence transposons and maintain centromere function, and helps control developmental transitions</p>
+<h2 id="epigenetics-in-plants"><a class="markdownIt-Anchor" href="#epigenetics-in-plants"></a> Epigenetics in Plants</h2>
+<ul>
+<li>
+<p>Epigenetic controls in whole-plant processes</p>
+</li>
+<li>
+<p>Transposon silencing</p>
+</li>
+<li>
+<p>Control of flowering time</p>
+</li>
+<li>
+<p>Control of imprinted genes</p>
+</li>
+<li>
+<p>Gene silencing <em>in trans</em>; paramutation</p>
+</li>
+<li>
+<p>Resetting the epigenome</p>
+</li>
+</ul>
+<h2 id="epigenetics-in-animals"><a class="markdownIt-Anchor" href="#epigenetics-in-animals"></a> Epigenetics in Animals</h2>
+<ul>
+<li>X chromosome inactivation:
+<ul>
+<li>In female mammals, one copy of  the X chromosome in each cell is  epigenetically inactivated.</li>
+<li>Paternal X-chromosome is  preferentially inactivated.  In mammals, this is erased in  the blastocyst, but re-established in later  stages…but it’s random  which X-chromosome is  inactivated.</li>
+</ul>
+</li>
+</ul>
+<h1 id="二-mechanism-of-epigenetics"><a class="markdownIt-Anchor" href="#二-mechanism-of-epigenetics"></a> 二、Mechanism of Epigenetics</h1>
+<h2 id="nucleosomes"><a class="markdownIt-Anchor" href="#nucleosomes"></a> Nucleosomes</h2>
+<p>Approximately 147 base pairs of DNA wrapped  around a histone octamer</p>
+<p>Consists of 8 histones:</p>
+<ul>
+<li>2 each: H2A, H2B, H3, H4</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106095251835.png" srcset="/img/loading.gif" alt="image-20191106095251835" style="zoom:50%;" />
+<h2 id="heterochromatin-and-euchromatin"><a class="markdownIt-Anchor" href="#heterochromatin-and-euchromatin"></a> Heterochromatin and Euchromatin</h2>
+<p>DNA around the  centromere is usually  packaged as  heterochromatin.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106095416394.png" srcset="/img/loading.gif" alt="image-20191106095416394" style="zoom: 67%;" />
+<h2 id="epigenetic-modifications"><a class="markdownIt-Anchor" href="#epigenetic-modifications"></a> Epigenetic modifications</h2>
+<p>Epigenetic modifications include:</p>
+<ul>
+<li>Cytosine methylation of DNA</li>
+<li>Histone modifications</li>
+</ul>
+<p>Collectively, these changes contribute to the distribution of  DNA into silent, heterochromatin and active euchromatin</p>
+<h3 id="1-dna-methylation"><a class="markdownIt-Anchor" href="#1-dna-methylation"></a> 1. DNA Methylation</h3>
+<p>DNA methylation is an epigenetic mark maintained through replication</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106095714274.png" srcset="/img/loading.gif" alt="image-20191106095714274" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106095734430.png" srcset="/img/loading.gif" alt="image-20191106095734430" style="zoom:67%;" />
+<p>DNA can be covalently modified by cytosine methylation.</p>
+<p>The methylation is a <u>negative regulatory role</u></p>
+<p>Different DNA methylases act on  different sites</p>
+<h4 id="cg-methylation-can-be-propagated-during-dna-replication"><a class="markdownIt-Anchor" href="#cg-methylation-can-be-propagated-during-dna-replication"></a> CG methylation can be propagated during DNA replication</h4>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106100831504.png" srcset="/img/loading.gif" alt="image-20191106100831504" style="zoom:67%;" />
+<h4 id="asymmetric-methylation-sites-require-additional-information"><a class="markdownIt-Anchor" href="#asymmetric-methylation-sites-require-additional-information"></a> Asymmetric methylation sites  require additional information</h4>
+<ul>
+<li>Asymmetric methylation sites are maintained (and initiated) by information  on associated histones, and an RNA-based mechanism, RNA-directed DNA  Methylation (RdDM), that directs DNA methylases to these sites.</li>
+<li>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106100740885.png" srcset="/img/loading.gif" alt="image-20191106100740885" style="zoom: 67%;" />
+</li>
+</ul>
+<h4 id="some-sites-are-maintained-by-small-interfering-rnas-sirnas"><a class="markdownIt-Anchor" href="#some-sites-are-maintained-by-small-interfering-rnas-sirnas"></a> Some sites are maintained by small  interfering RNAs (siRNAs)</h4>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106100850052.png" srcset="/img/loading.gif" alt="image-20191106100850052" style="zoom:67%;" />
+<h4 id="dna-methyltransferases-in-arabidopsis"><a class="markdownIt-Anchor" href="#dna-methyltransferases-in-arabidopsis"></a> DNA methyltransferases in Arabidopsis</h4>
+<ol>
+<li>MET1 (METHYLTRANSFERASE1) – 5’-CG-3’ sites</li>
+</ol>
+<ul>
+<li>Silencing of transposons, repetitive elements, some  imprinted gene</li>
+</ul>
+<ol start="2">
+<li>CMT3 (CHROMOMETHYLASE3) – 5’-CHG-3’ sites</li>
+</ol>
+<ul>
+<li>(H= A, C or T)</li>
+<li>Interacts with histone marks/modifications</li>
+</ul>
+<ol start="3">
+<li>DRM 1 &amp; DRM 2 (DOMAINS REARRANGED 1 and 2) - 5’-CHH-3’ sites</li>
+</ol>
+<ul>
+<li>Primarily targets repetitive elements</li>
+<li>Requires the active targeting of siRNAs</li>
+</ul>
+<p>Interference of DNA methyltransferase activity causes phenotypic alternations</p>
+<h4 id="heterochromatin-dna-is-highly-methylated"><a class="markdownIt-Anchor" href="#heterochromatin-dna-is-highly-methylated"></a> Heterochromatin DNA is highly  methylated</h4>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106101534456.png" srcset="/img/loading.gif" alt="image-20191106101534456" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106101554756.png" srcset="/img/loading.gif" alt="image-20191106101554756" style="zoom:67%;" />
+<h3 id="2-histone-modification"><a class="markdownIt-Anchor" href="#2-histone-modification"></a> 2. Histone Modification</h3>
+<p>Histone can be modified to affect chromatin structure</p>
+<p>The amino  terminal regions  of the histone  monomers  extend beyond  the nucleosome  and are  accessible for  modification.</p>
+<p>Different Histone Modifications are Associated with Genes And Transposons</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106101701053.png" srcset="/img/loading.gif" alt="image-20191106101701053" style="zoom:67%;" />
+<p>Histone can be modified by:</p>
+<ul>
+<li>Acetylation (Ac，乙酰化)</li>
+<li>Ubiquitination (Ub，泛素化)</li>
+<li>Methylation (Me)</li>
+<li>Phosphorylation §</li>
+<li>Sumoylation (Su，糖基化)</li>
+</ul>
+<p>Depending on their position, these can contribute to  transcriptional activation or inactivation.</p>
+<h5 id="1-example-h3-modifications"><a class="markdownIt-Anchor" href="#1-example-h3-modifications"></a> (1) Example – H3 Modifications</h5>
+<p>The amino terminus of H3 is often modified at one or more positions,  which can contribute to an activation or inhibition of transcription.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106102207602.png" srcset="/img/loading.gif" alt="image-20191106102207602" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106102238293.png" srcset="/img/loading.gif" alt="image-20191106102238293" style="zoom:67%;" />
+<h4 id="histone-modification-affects-the-chromatin-structure"><a class="markdownIt-Anchor" href="#histone-modification-affects-the-chromatin-structure"></a> Histone Modification affects the chromatin structure</h4>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106102327070.png" srcset="/img/loading.gif" alt="image-20191106102327070" style="zoom:67%;" />
+<h4 id="small-rnas"><a class="markdownIt-Anchor" href="#small-rnas"></a> Small RNAs</h4>
+<p>Small RNAs can direct Histone Modifications to form Heterochromatin</p>
+<p>Repetitive sequences may be targeted for silencing by small RNAs  produced from those repeats.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106102926642.png" srcset="/img/loading.gif" alt="image-20191106102926642" style="zoom:67%;" />
+<h4 id="regulators-of-chromatin-change-in-binding-proteins"><a class="markdownIt-Anchor" href="#regulators-of-chromatin-change-in-binding-proteins"></a> Regulators of Chromatin – Change in Binding Proteins</h4>
+<p>Different types of proteins recognize and bind modified histones, and these  modifications can regulate the availability of the DNA to different activities.</p>
+<h3 id="3-summary"><a class="markdownIt-Anchor" href="#3-summary"></a> 3. Summary</h3>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106103015486.png" srcset="/img/loading.gif" alt="image-20191106103015486" style="zoom:67%;" />
+<h1 id="三-analysis-of-dna-methylation"><a class="markdownIt-Anchor" href="#三-analysis-of-dna-methylation"></a> 三、Analysis of DNA Methylation</h1>
+<p>Compare digestion patterns  using a pair of enzymes that are  sensitive or not to DNA  methylation.</p>
+<ul>
+<li>HpaII doesn’t cut at <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><msup><mi>C</mi><mi>m</mi></msup><mi>G</mi><mi>G</mi></mrow><annotation encoding="application/x-tex">CC^mGG</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">m</span></span></span></span></span></span></span></span><span class="mord mathdefault">G</span><span class="mord mathdefault">G</span></span></span></span>.</li>
+<li>MspI cuts at both <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><msup><mi>C</mi><mi>m</mi></msup><mi>G</mi><mi>G</mi></mrow><annotation encoding="application/x-tex">CC^mGG</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">m</span></span></span></span></span></span></span></span><span class="mord mathdefault">G</span><span class="mord mathdefault">G</span></span></span></span> and  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mi>C</mi><mo>⋅</mo><mi>G</mi><mi>G</mi></mrow><annotation encoding="application/x-tex">CC\cdot  GG</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">G</span><span class="mord mathdefault">G</span></span></span></span></li>
+</ul>
+<h2 id="sodium-bisulfite"><a class="markdownIt-Anchor" href="#sodium-bisulfite"></a> Sodium Bisulfite</h2>
+<p>Sodium Bisulfite treatment to detect methylated DNA</p>
+<p>DNA methylation can be detected by treating DNA with  sodium bisulfite to convert methylated cytosines to uracil,  which becomes thymine after a PCR amplification step.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191106101211364.png" srcset="/img/loading.gif" alt="image-20191106101211364" style="zoom:67%;" />
+<h2 id="chip-seq-chromatin-immunoprecipitation"><a class="markdownIt-Anchor" href="#chip-seq-chromatin-immunoprecipitation"></a> ChIP-SEQ (Chromatin Immunoprecipitation)</h2>
+<p>ChIP-SEQ allows the  identification and analysis  of histones with a wide  variety of specific  modifications, based on  the DNA that they are  associated with.</p>
+<h2 id="epigenetic-controls-in-whole-plant-processes"><a class="markdownIt-Anchor" href="#epigenetic-controls-in-whole-plant-processes"></a> Epigenetic controls in whole-plant processes</h2>
+<ul>
+<li>Transposon silencing</li>
+<li>Control of flowering time</li>
+<li>Control of imprinted genes</li>
+<li>Gene silencing <em>in trans</em>; paramutation</li>
+<li>Resetting the epigenome</li>
+</ul>
+<h2 id="x-chromosome-inactiation"><a class="markdownIt-Anchor" href="#x-chromosome-inactiation"></a> X-Chromosome Inactiation</h2>
+<p>Paternal X-chromosome is preferentially inactivated.</p>
+<p>In mammals, this is erased in the blastocyst, but re-established in later stages…but it’s random which X-chromosome is inactivated.</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191226174212576.png" srcset="/img/loading.gif" alt="image-20191226174212576" /></p>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Molecular-Biology/">Molecular Biology</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。技术力比较低，多多担待啦！<br/ >  If anything wrong, please leave a comment or contact me.<br/> If the utterances comment system does not show up, please refresh or use VPN.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/24/L07%20The%20Small%20RNA%20World/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L07 The Small RNA World</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/24/L09%20Transposons%20And%20Retrotransposons/">
+                        <span class="hidden-mobile">L09 Transposons And Retrotransposons</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <script type="text/javascript">
+    function loadUtterances() {
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.defer = false
+      s.setAttribute('repo', 'zhenyumi/comment_hexo');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('theme', 'github-light');
+      s.setAttribute('crossorigin', 'anonymous');
+      var e = document.getElementsByTagName('script')[0];
+      e.parentNode.insertBefore(s, e);
+    }
+    createObserver(loadUtterances, 'comments')
+  </script>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+
+    
+
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L08 Epigenetics&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+ <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+</div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
+</script>
+
+
+</body>
+
+</html>

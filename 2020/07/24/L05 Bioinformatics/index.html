@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L05 Bioinformatics - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_Sunlight%281%29.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-24 17:20">
+      2020年7月24日 下午
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：21 分钟前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-bioinformatics"><span class="post-toc-text"> 一、Bioinformatics</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sequencing-techniques"><span class="post-toc-text"> Sequencing Techniques</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#definition-of-annotation"><span class="post-toc-text"> Definition of Annotation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-structural-annotation"><span class="post-toc-text"> 1. Structural Annotation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-functional-annotation"><span class="post-toc-text"> 2. Functional Annotation</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#features-that-can-be-annotated-in-dna"><span class="post-toc-text"> Features that can be annotated in DNA</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#gene-finding-programs"><span class="post-toc-text"> Gene-finding Programs</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-types-of-methods"><span class="post-toc-text"> 1. Types of Methods:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-orf"><span class="post-toc-text"> 2. ORF</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#orf-in-cdna"><span class="post-toc-text"> ORF in cDNA</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-steps-to-find-gene"><span class="post-toc-text"> 3. Steps to Find Gene</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#searching-databases"><span class="post-toc-text"> Searching Databases</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-blast-the-king-of-search-tools"><span class="post-toc-text"> 1. BLAST – The king of search tools</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-different-favors-of-blast"><span class="post-toc-text"> 2. Different Favors of BLAST</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-how-to-use-searching-genbank-at-ncbi"><span class="post-toc-text"> 3. How to USE – Searching Genbank At NCBI</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-schematic-of-blastn-results"><span class="post-toc-text"> 4. Schematic of BLASTN results</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-how-to-read-the-blast-result"><span class="post-toc-text"> 5. How to read the BLAST Result</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sequence-alignment-序列比对"><span class="post-toc-text"> Sequence Alignment 序列比对</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-the-characteristic-used-for-bioinformatic"><span class="post-toc-text"> 二、The characteristic used for bioinformatic</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#motifs"><span class="post-toc-text"> Motifs</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#homologous"><span class="post-toc-text"> Homologous</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-tools-for-analyzing-gene-expression"><span class="post-toc-text"> 三、Tools For Analyzing Gene Expression</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#transientstable-expression-arrays"><span class="post-toc-text"> Transient&#x2F;Stable expression arrays</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#reporter-gene-报告基因"><span class="post-toc-text"> Reporter gene 报告基因</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-gfp-and-gfp-like"><span class="post-toc-text"> 1. GFP and GFP-like</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-fluorescence-dye-in-situ-hybridization"><span class="post-toc-text"> 2. Fluorescence Dye (In Situ Hybridization)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#co-translation-assay"><span class="post-toc-text"> Co-translation Assay</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hybridization-probe-杂交探针"><span class="post-toc-text"> Hybridization probe 杂交探针</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#purification-and-detect-protein-tags"><span class="post-toc-text"> Purification and Detect Protein Tags</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#microscopy"><span class="post-toc-text"> Microscopy</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#protein-gel-electrophoresis"><span class="post-toc-text"> Protein Gel Electrophoresis</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#polyclonal-antibody"><span class="post-toc-text"> Polyclonal Antibody</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#analyze-at-rna-level"><span class="post-toc-text"> Analyze at RNA Level</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四-methods-to-analyze-protein-expression"><span class="post-toc-text"> 四、Methods to Analyze Protein Expression</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五-inhabitance-or-interference-to-gene-expression"><span class="post-toc-text"> 五、Inhabitance or Interference to Gene Expression</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#antisense-oligo反义寡核苷酸-mediated-inhibition-of-gene-expression"><span class="post-toc-text"> Antisense-oligo(反义寡核苷酸) Mediated Inhibition of Gene Expression</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#rna-interference"><span class="post-toc-text"> RNA Interference</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#六-methods-for-analyzing-dna-protein-interactions"><span class="post-toc-text"> 六、Methods for analyzing DNA-Protein Interactions</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#七-methods-for-analyzing-protein-protein-interactions"><span class="post-toc-text"> 七、Methods for analyzing Protein-Protein Interactions</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#八-structural-analyze-for-protein-x-ray-crystallography"><span class="post-toc-text"> 八、Structural Analyze for Protein X-ray crystallography</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#九-analysis-of-gene-expression-in-plants"><span class="post-toc-text"> 九、Analysis of Gene Expression In Plants</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#assessing-transcript-abundance-from-extracted-rna评估提取的rna的转录丰度"><span class="post-toc-text"> Assessing Transcript Abundance From Extracted RNA（评估提取的RNA的转录丰度）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#northern-blots"><span class="post-toc-text"> Northern Blots</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#real-time-pcr"><span class="post-toc-text"> Real-Time PCR</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#microarrays"><span class="post-toc-text"> Microarrays</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sequencing-methods"><span class="post-toc-text"> Sequencing Methods</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-ests"><span class="post-toc-text"> 1. ESTs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-sage"><span class="post-toc-text"> 2. SAGE</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-dge-digital-gene-expression"><span class="post-toc-text"> 3. DGE (Digital Gene Expression)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-rna-seq"><span class="post-toc-text"> 4. RNA-SEQ</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-pare"><span class="post-toc-text"> 5. PARE</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#experimental-design"><span class="post-toc-text"> Experimental Design</span></a></li></ol></li></ol>
+
+              <h1 id="一-bioinformatics"><a class="markdownIt-Anchor" href="#一-bioinformatics"></a> 一、Bioinformatics</h1>
+<p>Analysis of DNA or protein sequences using computational tools.</p>
+<h2 id="sequencing-techniques"><a class="markdownIt-Anchor" href="#sequencing-techniques"></a> Sequencing Techniques</h2>
+<ol>
+<li>454 sequencing technology</li>
+<li>SBS (Sequencing-by-synthesis)</li>
+<li>Illumina sequencing</li>
+</ol>
+<h2 id="definition-of-annotation"><a class="markdownIt-Anchor" href="#definition-of-annotation"></a> Definition of Annotation</h2>
+<ul>
+<li><u>Interpreting</u> raw sequence data into useful biological information.</li>
+<li><u>Addition</u> of information to describe a sequence.</li>
+<li><u>Information</u> attached to genomic coordinates with start and end point.</li>
+<li><strong>Identification</strong>, structural description, characterization of putative protein products and other features in primary genomic sequence.</li>
+</ul>
+<h3 id="1-structural-annotation"><a class="markdownIt-Anchor" href="#1-structural-annotation"></a> 1. Structural Annotation</h3>
+<p>Finding genes and other biologically <strong>relevant sites</strong> <u>thus building up a model of genome as objects with specific locations</u></p>
+<h3 id="2-functional-annotation"><a class="markdownIt-Anchor" href="#2-functional-annotation"></a> 2. Functional Annotation</h3>
+<p>Objects are used in database searches (and experiments); the aim is to attribute biologically relevant information <u>to whole sequence and individual objects</u></p>
+<p>Searching Databases is a kind of functional annotation of sequences</p>
+<h2 id="features-that-can-be-annotated-in-dna"><a class="markdownIt-Anchor" href="#features-that-can-be-annotated-in-dna"></a> Features that can be annotated in DNA</h2>
+<ol>
+<li>
+<p>Genes:</p>
+<ol>
+<li>
+<p>Protein Binding Sites</p>
+</li>
+<li>
+<p>Alternative Poly-A sites</p>
+</li>
+<li>
+<p>Alternative Splice sites</p>
+</li>
+<li>
+<p>Poly-A site</p>
+</li>
+<li>
+<p><strong>Enhancers:</strong> DNA上一小段可与蛋白质（反式作用因子；trans-acting factor）结合的区域，与蛋白质结合之后，基因的转录作用将会加强。增强子可能位于基因上游，也可能位于下游。且不一定接近所要作用的基因，甚至不一定与基因位于同一染色体。这是因为染色质的缠绕结构，使序列上相隔很远的位置也有机会相互接触。</p>
+</li>
+<li>
+<p><strong>Promoters</strong>: 启动子（promoter）是指一段能使特定基因进行转录的脱氧核糖核酸（DNA）序列。启动子可以被RNA聚合酶辨认，并开始转录合成RNA。在核糖核酸（RNA）合成中，启动子可以和调控基因转录的转录因子产生相互作用，控制基因表达（转录）的起始时间和表达的程度，包含核心启动子区域和调控区域，就像“开关”，决定基因的活动，继而控制细胞开始生产哪一种蛋白质。<br />
+启动子位于控制基因表达的调控序列中、基因转录起始位点的上游（DNA反义链的5′方向），长约100~1000个碱基对。启动子本身并无编译功能，但它拥有对基因翻译氨基酸的指挥作用，就像一面旗帜，其核心部分是非编码区上游的RNA聚合酶结合位点，指挥聚合酶的合成，这种酶指导RNA的复制合成。因此该段位的启动子发生突变（变异），将对基因的表达有着毁灭性作用。<br />
+完全的启动子称为规范序列。</p>
+</li>
+<li>
+<p><strong>3’UTR</strong>: 3’非翻译区（英语：three prime untranslated region）简称3’-UTR，<u>是信使核糖核酸（mRNA）中，紧接在编码区之后的序列。</u>mRNA上除了可以翻译成蛋白质的序列外，还有一些不被翻译的序列，如5端（5’）的5′端帽与5′非翻译区（5’-UTR），以及3端（3’）的3′非翻译区（3’-UTR）与多聚腺苷酸尾。3’-UTR上含有AAUAAA的序列，可被特定蛋白识别，以启动多腺苷酸化，即切割mRNA，并于切割位点的3端加上约250个单磷酸腺苷，即多聚腺苷酸尾</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Mature_mRNA.png" srcset="/img/loading.gif" alt="img" style="zoom: 33%;" />
+</li>
+<li>
+<p>Exon and Intron</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Non-genic Encoded RNA</p>
+<ol>
+<li>ncRNA（非编码核糖核酸）</li>
+<li>**MicroRNA: ** miRNA通过与目标信使核糖核酸（mRNA）结合，进而抑制转录后的基因表达，在调控基因表达、细胞周期、生物体发育时序等方面起重要作用。</li>
+<li>**Anti-sense RNA: **In genetics, a sense strand, or coding strand, is the segment within double-stranded DNA that runs from 5’ to 3’, and which is complementary to the antisense strand of DNA, or template strand, which runs from 3’ to 5’. <u>The sense strand is the strand of DNA that has the same sequence as the mRNA,</u> which takes the antisense strand as its template during transcription, and eventually undergoes (typically, not always) translation into a protein.</li>
+<li>rRNA</li>
+<li>tRNA</li>
+</ol>
+</li>
+<li>
+<p>Large Genomic Regions</p>
+<ol>
+<li><strong>Microsatellites:</strong> A microsatellite is a tract of repetitive DNA in which certain DNA motifs (ranging in length from one to six or more base pairs) are repeated, typically 5–50 times.（串联重复）</li>
+<li>**Transposons: **A transposable element (TE, transposon, or jumping gene) is a DNA sequence that can change its position within a genome, sometimes creating or reversing mutations and altering the cell’s genetic identity and genome size</li>
+<li><strong>LTRs: (long terminal repeat，长端重复序列)</strong><br />
+Long terminal repeats (LTRs) are identical sequences of DNA that repeat hundreds or thousands of times found <u>at either end of retrotransposons or proviral DNA</u> formed by reverse transcription of retroviral RNA. <u>They are used by viruses to insert their genetic material into the host genomes.</u></li>
+<li>heterochromatic knob repeats</li>
+</ol>
+</li>
+<li>
+<p>Chromosomal Features</p>
+<ol>
+<li>**Telomeres: **端粒（英语：Telomere）是真核生物染色体末端的DNA重复序列，作用是保持染色体的完整性和控制细胞分裂周期。 由于DNA复制的机制，每次染色体复制后，延迟股上的染色体末端必无法被复制。</li>
+<li>Centromere</li>
+<li>Matrix Attachment Regions</li>
+</ol>
+</li>
+<li>
+<p>Comparative Aspects</p>
+<ol>
+<li>Indels</li>
+<li>SNPs</li>
+<li>Rearrangements</li>
+<li>Duplications</li>
+<li>Synonymous VS. Non-synonymous Substitutions</li>
+</ol>
+</li>
+</ol>
+<h2 id="gene-finding-programs"><a class="markdownIt-Anchor" href="#gene-finding-programs"></a> Gene-finding Programs</h2>
+<p>GRAIL, MZEF, FGENES, glimmer, GENSCAN, GeneMark, HMMgene…</p>
+<h3 id="1-types-of-methods"><a class="markdownIt-Anchor" href="#1-types-of-methods"></a> 1. Types of Methods:</h3>
+<ol>
+<li>
+<p>Content-based</p>
+<ul>
+<li>codon usage</li>
+<li>substitutions</li>
+<li>composition</li>
+<li>repeats</li>
+</ul>
+</li>
+<li>
+<p>Site-based</p>
+<ul>
+<li>presence/absence of motif – splice sites</li>
+<li>TF binding sites</li>
+<li>start/stop codons.</li>
+</ul>
+</li>
+<li>
+<p>Comparative</p>
+<ul>
+<li>make determinations based on sequence homology</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-orf"><a class="markdownIt-Anchor" href="#2-orf"></a> 2. ORF</h3>
+<p>In molecular genetics, an <strong>open reading frame</strong> (ORF) is the part of a reading frame that has the ability to be translated.</p>
+<p>An ORF is a continuous stretch of codons that begins with a start codon (usually AUG) and ends at a stop codon (usually UAA, UAG or UGA).</p>
+<p>In molecular genetics, an open reading frame (ORF) is the part of a reading frame that has the potential to code for a protein or peptide. An ORF is a continuous stretch of codons that do not contain a stop codon (usually UAA, UAG or UGA).</p>
+<h4 id="orf-in-cdna"><a class="markdownIt-Anchor" href="#orf-in-cdna"></a> ORF in cDNA</h4>
+<p>A cDNA molecule should have only one ORF, meaning that the protein is encoded  between one ATG and one stop codon. Other ATGs may be found, including some in the 3’ UTR , but there will be very few ORFs (only one?) per mRNA/cDNA.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192109954.png" srcset="/img/loading.gif" alt="image-20191104192109954" style="zoom: 33%;" />
+<h3 id="3-steps-to-find-gene"><a class="markdownIt-Anchor" href="#3-steps-to-find-gene"></a> 3. Steps to Find Gene</h3>
+<p>The first step in gene finding is to <u>identify all of the ORFs</u> (open reading frames).  These start with ATG, ends with in-frame TAA, TGA, or TAG.</p>
+<p>Only a fraction of these will include the entire gene, but many will be exons.</p>
+<p>As a general rule, for a given gene, there is only one ATG that is used as a  translational start. However, there may be internal ATGs that are just normal  methionine codons.</p>
+<h2 id="searching-databases"><a class="markdownIt-Anchor" href="#searching-databases"></a> Searching Databases</h2>
+<p>Functional annotation of sequences: Searching Databases</p>
+<p>实验室内的实验很花时间，因此想要得到某些信息的时候，搜索database很方便快捷，同时也很cheap</p>
+<ol>
+<li>Databases can <u>indicate known function</u> of related sequences (<u>predict function</u> based on similarities in structure)</li>
+<li>Database homology searches can <u>annotate large numbers of unknown sequences</u> (e.g. whole genomes or sets of ESTs).</li>
+</ol>
+<h3 id="1-blast-the-king-of-search-tools"><a class="markdownIt-Anchor" href="#1-blast-the-king-of-search-tools"></a> 1. BLAST – The king of search tools</h3>
+<p><strong>Basic Local Alignment Search Tool – most commonly used</strong>  <strong>program due to large size of databases.</strong></p>
+<p>Heuristic algorithm to accelerate searches; aligns small bits of DNA  and looks for the best overall match between the “query” sequence  and an entry in the database.</p>
+<p>The BLAST programs are very <strong>fast</strong> because they only calculate optimal alignment scores for most closely related sequences.</p>
+<p><strong>BLAST compares short segments (words) of the query and</strong>  <strong>database to find alignments that exceed a particular score.</strong></p>
+<h3 id="2-different-favors-of-blast"><a class="markdownIt-Anchor" href="#2-different-favors-of-blast"></a> 2. Different Favors of BLAST</h3>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192601363.png" srcset="/img/loading.gif" alt="image-20191104192601363" style="zoom: 33%;" />
+<p><strong>All comparisons except BLASTN are carried out as protein/protein comparisons.</strong></p>
+<h3 id="3-how-to-use-searching-genbank-at-ncbi"><a class="markdownIt-Anchor" href="#3-how-to-use-searching-genbank-at-ncbi"></a> 3. How to USE – Searching Genbank At NCBI</h3>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192727667.png" srcset="/img/loading.gif" alt="image-20191104192727667" style="zoom: 33%;" />
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225214547484.png" srcset="/img/loading.gif" alt="image-20191225214547484" /></p>
+<h3 id="4-schematic-of-blastn-results"><a class="markdownIt-Anchor" href="#4-schematic-of-blastn-results"></a> 4. Schematic of BLASTN results</h3>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192918887.png" srcset="/img/loading.gif" alt="image-20191104192918887" style="zoom:33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192943494.png" srcset="/img/loading.gif" alt="image-20191104192943494" style="zoom: 50%;" />
+<h3 id="5-how-to-read-the-blast-result"><a class="markdownIt-Anchor" href="#5-how-to-read-the-blast-result"></a> 5. How to read the BLAST Result</h3>
+<ol>
+<li>
+<p><strong>Bit score</strong> – normalized from the raw score, and comparable  between alignments. The raw score “S” of an alignment is  usually calculated by summing the scores for each letter-to-letter and letter-to-null position in the alignment.</p>
+</li>
+<li>
+<p><strong>P-value</strong>: The number of random local alignment scores equal or  greater than S is described by the Poisson distribution. This P  value is associated with the score S.</p>
+<p>Highly significant scores have P values close to zero.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104193502556.png" srcset="/img/loading.gif" alt="image-20191104193502556" style="zoom: 25%;" />
+</li>
+<li>
+<p><strong>The Expect value (E)</strong> is a parameter describing the number of hits  “expected” by chance when searching a database of a particular  size. Decreases exponentially with the score. The E value  describes the random background noise that exists for matches  between sequences.</p>
+</li>
+</ol>
+<h2 id="sequence-alignment-序列比对"><a class="markdownIt-Anchor" href="#sequence-alignment-序列比对"></a> Sequence Alignment 序列比对</h2>
+<p>DNA and Protein sequence homology can be used to infer <u>evolutionary</u> relations.</p>
+<h1 id="二-the-characteristic-used-for-bioinformatic"><a class="markdownIt-Anchor" href="#二-the-characteristic-used-for-bioinformatic"></a> 二、The characteristic used for bioinformatic</h1>
+<h2 id="motifs"><a class="markdownIt-Anchor" href="#motifs"></a> Motifs</h2>
+<p>Protein motifs are <u>short conserved</u> segments that <u>have a particular function</u>.</p>
+<p>The presence of certain motifs can be used to predict basic characteristics of a protein that otherwise you may know nothing about.</p>
+<p>Similarities in protein sequence motifs indicate related functions</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1570720727362.png" srcset="/img/loading.gif" alt="1570720727362" /></p>
+<h2 id="homologous"><a class="markdownIt-Anchor" href="#homologous"></a> Homologous</h2>
+<p>DNA and protein homology can be used to infer evolutionary relationships</p>
+<p><u>Coding sequences are more highly conserved than non-coding sequences</u></p>
+<p>Natural selection acts on the protein because that is where the function is., but the result of the selection is stored in the DNA. If a protein is advantageous, it is the gene that is conserved.</p>
+<blockquote>
+<p>As shown below, there is little conservation in introns, because there are no or few known functions in introns that selection can act on.</p>
+</blockquote>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225214937183.png" srcset="/img/loading.gif" alt="image-20191225214937183" /></p>
+<p>Homologous proteins resulted from gene duplication, not convergence. Related organisms show sequence homology at the level of DNA and Protein</p>
+<blockquote>
+<p>Mutations occur randomly and at a very low frequency along the gene due to mistakes in replication of DNA during cell division</p>
+</blockquote>
+<p>Proteins with similar sequences will have similar structure and/or function (broadly).</p>
+<ul>
+<li>True biological function needs to be determined experimentally!</li>
+</ul>
+<h1 id="三-tools-for-analyzing-gene-expression"><a class="markdownIt-Anchor" href="#三-tools-for-analyzing-gene-expression"></a> 三、Tools For Analyzing Gene Expression</h1>
+<h2 id="transientstable-expression-arrays"><a class="markdownIt-Anchor" href="#transientstable-expression-arrays"></a> Transient/Stable expression arrays</h2>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225215205049.png" srcset="/img/loading.gif" alt="image-20191225215205049" /></p>
+<h2 id="reporter-gene-报告基因"><a class="markdownIt-Anchor" href="#reporter-gene-报告基因"></a> Reporter gene 报告基因</h2>
+<p>Reporter genes encode proteins or enzymatic functions not typically found in a cell.</p>
+<p>报告基因（英语：reporter gene，又称报导基因）是一个分子生物学概念，它是指一类在细胞、组织/器官或个体<u>处于特定情况下会表达并使得他们产生易于检测、且实验材料原本不会产生的性状的基因</u>。较常用的报告基因有绿色萤光蛋白基因（GFP，<strong>Green Fluorescent Protein</strong>）、β-半乳糖苷酶基因（LacZ等）等。</p>
+<p>Example：</p>
+<ol>
+<li>B-galactosidase (color) Luciferase from fireflies Chloramphenicol  acetyltransferase (CAT)
+<ul>
+<li><u>CAT activity can be measured  by acetylation of  chloramphenicol and  separation by thin layer  chromatography.</u></li>
+</ul>
+</li>
+<li>GFP</li>
+<li>β-glucuronidase (GUS) gene
+<ul>
+<li>Leaf vascular patterning in Arabidopsis shown via expression of the β-glucuronidase (GUS) gene in Arabidopsis leaves</li>
+<li>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225220133449.png" srcset="/img/loading.gif" alt="image-20191225220133449" style="zoom: 80%;" />
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="1-gfp-and-gfp-like"><a class="markdownIt-Anchor" href="#1-gfp-and-gfp-like"></a> 1. GFP and GFP-like</h3>
+<p>GFP is one of the most commonly used reporter genes.</p>
+<p>GFP contains a fluorescent compound  (fluorophore). Different mutations result in  altered spectra of fluorescence. <u>Excitation takes  place at one wavelength and fluorescence at  another.</u></p>
+<p>GFP can be used for GFP expression plasmid or GFP expression protein.</p>
+<p>Some GFP-like proteins can attach to specific RNA, then make the RNA molecular emit light.</p>
+<h3 id="2-fluorescence-dye-in-situ-hybridization"><a class="markdownIt-Anchor" href="#2-fluorescence-dye-in-situ-hybridization"></a> 2. Fluorescence Dye (In Situ Hybridization)</h3>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104195237836.png" srcset="/img/loading.gif" alt="image-20191104195237836" style="zoom:33%;" />
+<p>The fluorescence dye can be used to DNA and RNA</p>
+<h2 id="co-translation-assay"><a class="markdownIt-Anchor" href="#co-translation-assay"></a> Co-translation Assay</h2>
+<p>Tests for the ability of a DNA-binding protein to activate a reporter gene regulated by the  control region of interest.</p>
+<h2 id="hybridization-probe-杂交探针"><a class="markdownIt-Anchor" href="#hybridization-probe-杂交探针"></a> Hybridization probe 杂交探针</h2>
+<p>杂交探针（英语：Hybridization probe）是一小段单链DNA片段（十几到几百个碱基），用于检测与其互补的核酸序列。双链DNA加热变性成为单链，随后用放射性同位素（通常用32P）、荧光染料或者酶（如辣根过氧化物酶）标记成为探针。32P通常被掺入组成DNA的四种核苷酸之一的磷酸基团中，而萤光染料和酶与核酸序列以共价键相连。<br />
+当将探针与样品杂交时，探针和与其互补的核酸（DNA或RNA）序列通过氢键紧密相连，随后，未被杂交的多余探针被洗去。最后，根据探针的种类，可进行放射自显影、荧光显微镜、酶联放大等方法来判断样品中是否含有，或者何位置含有被测序列（即与探针互补的序列）。</p>
+<h2 id="purification-and-detect-protein-tags"><a class="markdownIt-Anchor" href="#purification-and-detect-protein-tags"></a> Purification and Detect Protein Tags</h2>
+<h2 id="microscopy"><a class="markdownIt-Anchor" href="#microscopy"></a> Microscopy</h2>
+<h2 id="protein-gel-electrophoresis"><a class="markdownIt-Anchor" href="#protein-gel-electrophoresis"></a> Protein Gel Electrophoresis</h2>
+<h2 id="polyclonal-antibody"><a class="markdownIt-Anchor" href="#polyclonal-antibody"></a> Polyclonal Antibody</h2>
+<h2 id="analyze-at-rna-level"><a class="markdownIt-Anchor" href="#analyze-at-rna-level"></a> Analyze at RNA Level</h2>
+<ol>
+<li><strong>Northern blots</strong> for size and abundance.</li>
+<li><strong>In situ hybridizations</strong> for cellular localization.</li>
+<li><strong>RNase protection assay</strong> – an RNA probe is hybridized to total RNA, protecting the target from digestion by RNase.</li>
+<li><strong>RT-PCR</strong> for rapid abundance data.</li>
+</ol>
+<h1 id="四-methods-to-analyze-protein-expression"><a class="markdownIt-Anchor" href="#四-methods-to-analyze-protein-expression"></a> 四、Methods to Analyze Protein Expression</h1>
+<ol>
+<li><strong>Western blots</strong>  (immunoblotting) for  size and specificity.</li>
+<li><strong>In situ hybridization</strong> for  localization using  secondary, labeled  antibodies.</li>
+<li><strong>Enzyme-linked immunosorbent assay  (ELISA, 酶联免疫吸附试验)</strong> – a  colorimetric assay for  protein levels.</li>
+</ol>
+<h1 id="五-inhabitance-or-interference-to-gene-expression"><a class="markdownIt-Anchor" href="#五-inhabitance-or-interference-to-gene-expression"></a> 五、Inhabitance or Interference to Gene Expression</h1>
+<h2 id="antisense-oligo反义寡核苷酸-mediated-inhibition-of-gene-expression"><a class="markdownIt-Anchor" href="#antisense-oligo反义寡核苷酸-mediated-inhibition-of-gene-expression"></a> Antisense-oligo(反义寡核苷酸) Mediated Inhibition of Gene Expression</h2>
+<p>Antisense oligos complementary  to mRNAs can <u>target mRNA  for degradation or block  translation</u>.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104202059902.png" srcset="/img/loading.gif" alt="image-20191104202059902" style="zoom:50%;" />
+<h2 id="rna-interference"><a class="markdownIt-Anchor" href="#rna-interference"></a> RNA Interference</h2>
+<p><u>Processing of dsRNA  from viral or exogenous（外源的） sources.</u></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104202221377.png" srcset="/img/loading.gif" alt="image-20191104202221377" style="zoom: 60%;" />
+<p>Artificial microRNA can be used to down-regulate Genes or virus</p>
+<h1 id="六-methods-for-analyzing-dna-protein-interactions"><a class="markdownIt-Anchor" href="#六-methods-for-analyzing-dna-protein-interactions"></a> 六、Methods for analyzing DNA-Protein Interactions</h1>
+<ol>
+<li>Electrophoretic mobility shift assay. DNA is labelled with 32P. If bound by protein, it causes shift in size.</li>
+<li>DNase footprinting. Protein binding “protects” DNA from digestion by Dnase.</li>
+</ol>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225224846784.png" srcset="/img/loading.gif" alt="image-20191225224846784" /></p>
+<h1 id="七-methods-for-analyzing-protein-protein-interactions"><a class="markdownIt-Anchor" href="#七-methods-for-analyzing-protein-protein-interactions"></a> 七、Methods for analyzing Protein-Protein Interactions</h1>
+<ol>
+<li>GST pull-down assay to see which proteins interact with a GST-tagged protein of interest.</li>
+<li>Yeast two-hybrid. Interaction of two proteins activates expression of reporter.</li>
+<li>Co-IP to see if one protein can precipitate another through a direct interaction.</li>
+<li>Fluorescence resonance energy transfer. Energy is only transferred when two tagged proteins are within 10 nm.</li>
+</ol>
+<h1 id="八-structural-analyze-for-protein-x-ray-crystallography"><a class="markdownIt-Anchor" href="#八-structural-analyze-for-protein-x-ray-crystallography"></a> 八、Structural Analyze for Protein X-ray crystallography</h1>
+<ol>
+<li><strong>X-ray crystallography</strong> uses diffraction to determine crystal structures</li>
+<li><strong>AFM</strong> determines the properties of the surface of a material.</li>
+</ol>
+<h1 id="九-analysis-of-gene-expression-in-plants"><a class="markdownIt-Anchor" href="#九-analysis-of-gene-expression-in-plants"></a> 九、Analysis of Gene Expression In Plants</h1>
+<h2 id="assessing-transcript-abundance-from-extracted-rna评估提取的rna的转录丰度"><a class="markdownIt-Anchor" href="#assessing-transcript-abundance-from-extracted-rna评估提取的rna的转录丰度"></a> Assessing Transcript Abundance From Extracted RNA（评估提取的RNA的转录丰度）</h2>
+<p>Poly(A)+RNA can be separated from other RNAs by FRactionation on An Oligo(dT) Column</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225225552479.png" srcset="/img/loading.gif" alt="image-20191225225552479" style="zoom:72%;" />
+<h2 id="northern-blots"><a class="markdownIt-Anchor" href="#northern-blots"></a> Northern Blots</h2>
+<p>北方墨点法（英语：Northern blot）是分子生物学、生物化学中常用的实验方法，通过探测样品中的RNA（或隔离的mRNA）来研究基因表现。</p>
+<p>利用探针侦测由凝胶电泳分离出来的RNA片段，寻找含有特定串行的RNA片段。与南方墨点法相似，RNA样品经过凝胶电泳后会按照大小分离，然后将样品从凝胶转印到膜上，并用与目标串行互补的标记的探针来探测。实验结果可以根据所用探针的不同以多种方式来观察，但大多数都显示的是样品中被探测的RNA条带的相对位置，也就是分子大小；而条带的强度则与样品中目标RNA的含量相关。这一方法可以测量目标RNA在不同样品中的情况，因此已经被普遍用于研究特定基因在生物体中表现的时刻和表现量，也是这类研究中最基本的手段。</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225225659889.png" srcset="/img/loading.gif" alt="image-20191225225659889" /></p>
+<h2 id="real-time-pcr"><a class="markdownIt-Anchor" href="#real-time-pcr"></a> Real-Time PCR</h2>
+<p>PCR used to measure amplification curve of individual genes</p>
+<p>Amplification performed with dye-labeled primers to enable comparisons within a tube</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225225832810.png" srcset="/img/loading.gif" alt="image-20191225225832810" style="zoom:67%;" />
+<h2 id="microarrays"><a class="markdownIt-Anchor" href="#microarrays"></a> Microarrays</h2>
+<p>A microarray is a multiplex lab-on-a-chip. It is a 2D array on a solid substrate (usually a glass slide or silicon thin-film cell) that assays large amounts of biological material using high-throughput screening miniaturized, multiplexed and parallel processing and detection methods.</p>
+<p>Types:</p>
+<ol>
+<li>cDNA microarray</li>
+<li>High-density oligonucleotide microarrays</li>
+</ol>
+<h2 id="sequencing-methods"><a class="markdownIt-Anchor" href="#sequencing-methods"></a> Sequencing Methods</h2>
+<h3 id="1-ests"><a class="markdownIt-Anchor" href="#1-ests"></a> 1. ESTs</h3>
+<p>Sequencing of mRNAs, converted to cDNA</p>
+<p>“Digital” measurements because counting frequency of transcripts instead of “analog” measurements of hybridization intensity</p>
+<p>EST sequences were used as <u>starting material for microarray design</u></p>
+<p>Cloned cDNAs used for EST sequencing were spotted on arrays</p>
+<h3 id="2-sage"><a class="markdownIt-Anchor" href="#2-sage"></a> 2. SAGE</h3>
+<p>The first “digital” transcriptome sequencing method to use specifically captured short “tags” of cDNAs.</p>
+<p>Allowed sequencing of many tags per Sanger sequencing read.</p>
+<p>Tags mapped back to longer ESTs or genomic sequences to measure abundances</p>
+<h3 id="3-dge-digital-gene-expression"><a class="markdownIt-Anchor" href="#3-dge-digital-gene-expression"></a> 3. DGE (Digital Gene Expression)</h3>
+<p>Like SAGE, “digital gene expression” methods capture short tags from specific locations at the 3’ end of end of the transcript.</p>
+<p>Longer tags than most SAGE, and optimal for Illumina sequencing</p>
+<p>These tags are useful for quantification by counting, or for measuring specific types of transcripts.</p>
+<h3 id="4-rna-seq"><a class="markdownIt-Anchor" href="#4-rna-seq"></a> 4. RNA-SEQ</h3>
+<p>The most popular off all methods at the present time 一 fragmented mRNA/cDNA, deeply sequenced by next-gen methods.</p>
+<h3 id="5-pare"><a class="markdownIt-Anchor" href="#5-pare"></a> 5. PARE</h3>
+<p>Data analysis of sequencing data is more “tricky” than microarray data due to the requirement to match reads back to the gene or genome, then add them up and normalize them.</p>
+<h2 id="experimental-design"><a class="markdownIt-Anchor" href="#experimental-design"></a> Experimental Design</h2>
+<p>An important aspect of both array and sequencing experiments</p>
+<p>Considerations:</p>
+<p>Scientific</p>
+<ul>
+<li>
+<p>Aim of the experiment.</p>
+</li>
+<li>
+<p>Specific questions to be answered and how they are prioritized.</p>
+</li>
+<li>
+<p>How will the experiments answer the posed questions?</p>
+</li>
+</ul>
+<p>Practical (logistic)</p>
+<ul>
+<li>
+<p>Types of mRNA samples: reference, control, treatment 1 (T1), and so on.</p>
+</li>
+<li>
+<p>Amount of material available: count the amount of mRNA involved in one</p>
+</li>
+<li>
+<p>channel of one hybridization as one unit.</p>
+</li>
+<li>
+<p>Number of slides available for the experiment.</p>
+</li>
+</ul>
+<p>Other factors</p>
+<ul>
+<li>
+<p>The experimental process before hybridization: sample isolation, mRNA</p>
+</li>
+<li>
+<p>extraction, amplification and labelling.</p>
+</li>
+<li>
+<p>Controls planned: positive, negative, ratio, and so on.</p>
+</li>
+<li>
+<p>Verification method: northern blot, reverse transcriptase (RT)-PCR, in situ hybridization, and so on.</p>
+</li>
+</ul>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Molecular-Biology/">Molecular Biology</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。技术力比较低，多多担待啦！<br/ >  If anything wrong, please leave a comment or contact me.<br/> If the utterances comment system does not show up, please refresh or use VPN.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/24/L03%20RNA%20and%20Protin/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L03 RNA and Protein</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/24/L06%20DNA%20Replication/">
+                        <span class="hidden-mobile">L06 DNA Replication</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <script type="text/javascript">
+    function loadUtterances() {
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.defer = false
+      s.setAttribute('repo', 'zhenyumi/comment_hexo');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('theme', 'github-light');
+      s.setAttribute('crossorigin', 'anonymous');
+      var e = document.getElementsByTagName('script')[0];
+      e.parentNode.insertBefore(s, e);
+    }
+    createObserver(loadUtterances, 'comments')
+  </script>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+
+    
+
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L05 Bioinformatics&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+ <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+</div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
+</script>
+
+
+</body>
+
+</html>
