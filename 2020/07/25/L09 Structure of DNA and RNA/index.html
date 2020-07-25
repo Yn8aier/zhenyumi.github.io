@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L09 Structure of DNA and RNA - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-10_19-16-57.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-25 23:45">
+      2020年7月25日 晚上
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      697 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      3
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：10 分钟前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-nucleotide-and-polynucleotide-chain-structure"><span class="post-toc-text"> 一、Nucleotide And Polynucleotide Chain Structure</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#nucleoside-核苷-and-nucleotide-核苷酸"><span class="post-toc-text"> Nucleoside (核苷) And Nucleotide (核苷酸)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-nucleoside"><span class="post-toc-text"> 1. Nucleoside</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-nucleotide"><span class="post-toc-text"> 2. Nucleotide</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dna-polynucleotide-chain-structure"><span class="post-toc-text"> DNA Polynucleotide Chain Structure</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#the-direction"><span class="post-toc-text"> The Direction</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#backbone"><span class="post-toc-text"> Backbone</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-hydrogen-bonds"><span class="post-toc-text"> 1. Hydrogen-bonds</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-double-helix"><span class="post-toc-text"> 2. Double Helix</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#two-grooves"><span class="post-toc-text"> Two grooves</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#forms-of-double-helix"><span class="post-toc-text"> Forms of Double Helix</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#sugar-pucker"><span class="post-toc-text"> Sugar Pucker</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-chromatin-and-chromosome"><span class="post-toc-text"> 3. Chromatin And Chromosome</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#chromosome"><span class="post-toc-text"> Chromosome</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#enzymatic-digests"><span class="post-toc-text"> Enzymatic digests</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-mnase-digests"><span class="post-toc-text"> (1) MNase digests</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#structure-of-individual-nucleosome"><span class="post-toc-text"> Structure of individual nucleosome</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-the-connection-between-histone-and-dna-molecular"><span class="post-toc-text"> (1) The Connection Between Histone And DNA Molecular</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-nonhistone-proteins"><span class="post-toc-text"> (2) Nonhistone proteins</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#rna-polynucleotide-chain-structure"><span class="post-toc-text"> RNA Polynucleotide Chain Structure</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-secondary-structure"><span class="post-toc-text"> 1. Secondary Structure</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-tertiary-structure"><span class="post-toc-text"> 2. Tertiary Structure</span></a></li></ol></li></ol></li></ol>
+
+              <h1 id="一-nucleotide-and-polynucleotide-chain-structure"><a class="markdownIt-Anchor" href="#一-nucleotide-and-polynucleotide-chain-structure"></a> 一、Nucleotide And Polynucleotide Chain Structure</h1>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110100958998.png" srcset="/img/loading.gif" alt="image-20191110100958998" style="zoom:67%;" />
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110101512181.png" srcset="/img/loading.gif" alt="image-20191110101512181" /></p>
+<h2 id="nucleoside-核苷-and-nucleotide-核苷酸"><a class="markdownIt-Anchor" href="#nucleoside-核苷-and-nucleotide-核苷酸"></a> Nucleoside (核苷) And Nucleotide (核苷酸)</h2>
+<h3 id="1-nucleoside"><a class="markdownIt-Anchor" href="#1-nucleoside"></a> 1. Nucleoside</h3>
+<p>Adenine + ribose = Adenosine</p>
+<p>Adenine + deoxyribose = Deoxyadenosine</p>
+<h3 id="2-nucleotide"><a class="markdownIt-Anchor" href="#2-nucleotide"></a> 2. Nucleotide</h3>
+<p>Base + sugar + phosphate(s) nucleotide</p>
+<ol>
+<li>
+<p>Adenosine monophosphate (AMP) = Nucleoside + <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span></span></span></span></p>
+</li>
+<li>
+<p>Adenosine diphosphate (ADP) = Nucleoside + <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><msub><mi>P</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">PP_{i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
+</li>
+<li>
+<p>Adenosine triphosphate (ATP)</p>
+</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110101441359.png" srcset="/img/loading.gif" alt="image-20191110101441359" style="zoom: 50%;" />
+<h2 id="dna-polynucleotide-chain-structure"><a class="markdownIt-Anchor" href="#dna-polynucleotide-chain-structure"></a> DNA Polynucleotide Chain Structure</h2>
+<p>Nucleotides are covalently linked together by <strong>phosphodiester bonds</strong> (磷酸二脂键)</p>
+<p>A phosphate <u>connects the 5’ carbon of one nucleotide to the 3’ carbon of another</u></p>
+<h4 id="the-direction"><a class="markdownIt-Anchor" href="#the-direction"></a> The Direction</h4>
+<p>The chain has 5’ to 3’ direction because the phosphodiester bonds has its direction</p>
+<h4 id="backbone"><a class="markdownIt-Anchor" href="#backbone"></a> Backbone</h4>
+<p>The phosphates and sugar molecules form the backbone of the nucleic acid strand</p>
+<p>The bases <u>project from (从…伸出)</u> the backbone.</p>
+<h3 id="1-hydrogen-bonds"><a class="markdownIt-Anchor" href="#1-hydrogen-bonds"></a> 1. Hydrogen-bonds</h3>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110102713025.png" srcset="/img/loading.gif" alt="image-20191110102713025" style="zoom:67%;" />
+<h3 id="2-double-helix"><a class="markdownIt-Anchor" href="#2-double-helix"></a> 2. Double Helix</h3>
+<ul>
+<li>Two strands are twisted together around a common axis</li>
+<li>There are <strong>10 bases</strong> and <strong>3.4 nm</strong> per complete turn of helix</li>
+<li>The two strands are <strong>antiparallel</strong></li>
+<li>The helix is right-handed</li>
+<li>Hydrogen-bonding between complementary bases</li>
+</ul>
+<h4 id="two-grooves"><a class="markdownIt-Anchor" href="#two-grooves"></a> Two grooves</h4>
+<p>There are two asymmetrical grooves on the outside of the helix</p>
+<p>Major groove and Minor groove</p>
+<ul>
+<li>Certain proteins binds to these grooves, thus they interacts with a particular sequence of bases</li>
+</ul>
+<h4 id="forms-of-double-helix"><a class="markdownIt-Anchor" href="#forms-of-double-helix"></a> Forms of Double Helix</h4>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110103445321.png" srcset="/img/loading.gif" alt="image-20191110103445321" /></p>
+<h4 id="sugar-pucker"><a class="markdownIt-Anchor" href="#sugar-pucker"></a> Sugar Pucker</h4>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110103642769.png" srcset="/img/loading.gif" alt="image-20191110103642769" /></p>
+<h3 id="3-chromatin-and-chromosome"><a class="markdownIt-Anchor" href="#3-chromatin-and-chromosome"></a> 3. Chromatin And Chromosome</h3>
+<p>Human genome (in diploid cells) = 6 x <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">10^{9}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></span> bp</p>
+<p>6 x <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">10^{9}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></span> bp X 0.34 nm/bp = 2.04 x <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">10^{9}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></span> nm = <strong>2 m/cell</strong>, but diameter of nucleus = 5-10 μm</p>
+<p><strong>So DNA must be packaged</strong> to protect it, but must still be accessible to allow gene expression and cellular response, the solution is cheomosome</p>
+<h4 id="chromosome"><a class="markdownIt-Anchor" href="#chromosome"></a> Chromosome</h4>
+<p>Chromosome is the complex of single DNA molecular and associated proteins</p>
+<ul>
+<li>Evident (明显的) during metaphase of Mitosis and Meiosis</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110105714401.png" srcset="/img/loading.gif" alt="image-20191110105714401" style="zoom: 50%;" />
+<p>The repeating structural unit within eukaryotic chromatin is the nucleosome</p>
+<p>It is composed of a double-stranded segment of DNA wrapped around an octamer of histone proteins</p>
+<ul>
+<li>
+<p>A histone octamer is composed of two copies each of four different histone proteins</p>
+</li>
+<li>
+<p>146 bp of DNA make <u>negative superhelical (左旋)</u> turns around the octamer</p>
+</li>
+<li>
+<p>DNA is <u>1.75 turns per histone</u></p>
+</li>
+</ul>
+<h4 id="enzymatic-digests"><a class="markdownIt-Anchor" href="#enzymatic-digests"></a> Enzymatic digests</h4>
+<p>Particular enzymes can cut double stranded DNA between basepairs</p>
+<p>Most of the enzymes have specific recognition sites</p>
+<h5 id="1-mnase-digests"><a class="markdownIt-Anchor" href="#1-mnase-digests"></a> (1) MNase digests</h5>
+<p>Particular enzymes can cut double stranded DNA between</p>
+<ul>
+<li><strong>Micrococcal nuclease (MNase)</strong> <u>cleaves everything</u> it can (no ⾮限制性 basepairs specific seq.)</li>
+</ul>
+<p>This micrococcal nuclease is a stable enzyme derived from Staphylococcus aureus. Micrococcal nuclease exhibits exo- and  endo-5’-phosphodiesterase activities against DNA and RNA. This enzyme digests double-stranded, single-stranded, circular and linear nucleic acids.</p>
+<ul>
+<li>
+<p>Micrococcal nuclease cuts accessible regions of DNA</p>
+</li>
+<li>
+<p>DNA protected by nucleosome is not cut</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110110351551.png" srcset="/img/loading.gif" alt="image-20191110110351551" style="zoom: 50%;" />
+<h4 id="structure-of-individual-nucleosome"><a class="markdownIt-Anchor" href="#structure-of-individual-nucleosome"></a> Structure of individual nucleosome</h4>
+<p><strong>Nucleosome</strong> is the basic structural subunit of chromatin, consisting of ~200 bp of DNA, an octamer of histones (H2A, H2B, H3 and H4), and H1.</p>
+<p><strong>Core DNA</strong> is the 146 bp of DNA contained on a core particle.</p>
+<p><strong>Linker DNA</strong> is all DNA contained on a nucleosome <u>in excess of the 146 bp core DNA.</u></p>
+<p><strong>Nucleosome core particle (NCP)</strong> is the core including 146 bp DNA and histone octamer (H2A, H2B, H3 and H4)</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110110930676.png" srcset="/img/loading.gif" alt="image-20191110110930676" /></p>
+<p>Repeating structure contains 5 different proteins:</p>
+<ul>
+<li>H1, H2A, H2B, H3, H4
+<ul>
+<li>Core structure formed from: H2A, H2B, H3, H4 <strong>(Core histones)</strong></li>
+<li>H1 is called the <strong>linker histones</strong>
+<ul>
+<li>Binds to DNA in the linker region</li>
+<li>Less tightly bound to DNA than core histones</li>
+<li>May help compact adjacent nucleosomes</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110110807751.png" srcset="/img/loading.gif" alt="image-20191110110807751" style="zoom: 67%;" />
+<h5 id="1-the-connection-between-histone-and-dna-molecular"><a class="markdownIt-Anchor" href="#1-the-connection-between-histone-and-dna-molecular"></a> (1) The Connection Between Histone And DNA Molecular</h5>
+<p>The histone proteins are <u>basic</u></p>
+<ul>
+<li>They contain positively-charged amino acids
+<ul>
+<li>Lysine and Arginine</li>
+<li><u>H2A and H2B are more negatively-charged, Virus can use this site.</u></li>
+</ul>
+</li>
+<li>They <u>binds to the phosphate group (Negatively-charged)</u> on the DNA molecular</li>
+</ul>
+<p>Histone has a globular domain and a flexible, charged amino acid terminus or ‘tail’</p>
+<p>Epigenetic make modifications on the ‘tail’.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110111716842.png" srcset="/img/loading.gif" alt="image-20191110111716842" style="zoom:67%;" />
+<h5 id="2-nonhistone-proteins"><a class="markdownIt-Anchor" href="#2-nonhistone-proteins"></a> (2) Nonhistone proteins</h5>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110111937313.png" srcset="/img/loading.gif" alt="image-20191110111937313" style="zoom:60%;" />
+<h2 id="rna-polynucleotide-chain-structure"><a class="markdownIt-Anchor" href="#rna-polynucleotide-chain-structure"></a> RNA Polynucleotide Chain Structure</h2>
+<p>Although usually single-stranded, RNA molecules can form short double-stranded regions</p>
+<ul>
+<li>This secondary structure is due to complementary base-pairing</li>
+<li>A to U and C to G</li>
+<li>This allows short regions to form a double helix</li>
+</ul>
+<p><u>RNA helices are typically right-handed, 11-12 bases per turn in the A form</u></p>
+<h3 id="1-secondary-structure"><a class="markdownIt-Anchor" href="#1-secondary-structure"></a> 1. Secondary Structure</h3>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110104507295.png" srcset="/img/loading.gif" alt="image-20191110104507295" style="zoom: 67%;" />
+<h3 id="2-tertiary-structure"><a class="markdownIt-Anchor" href="#2-tertiary-structure"></a> 2. Tertiary Structure</h3>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191110104842271.png" srcset="/img/loading.gif" alt="image-20191110104842271" /></p>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Genetics/">Genetics</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。技术力比较低，多多担待啦！<br/ >  If anything wrong, please leave a comment or contact me.<br/> If the utterances comment system does not show up, please refresh or use VPN.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/25/L08%20Genetics%20of%20Bacteria%20and%20Bacteriophages/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L08 Genetics of Bacteria and Bacteriophages</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/25/L10%20Replication%20of%20DNA/">
+                        <span class="hidden-mobile">L10 Replication of DNA</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <script type="text/javascript">
+    function loadUtterances() {
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.defer = false
+      s.setAttribute('repo', 'zhenyumi/comment_hexo');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('theme', 'github-light');
+      s.setAttribute('crossorigin', 'anonymous');
+      var e = document.getElementsByTagName('script')[0];
+      e.parentNode.insertBefore(s, e);
+    }
+    createObserver(loadUtterances, 'comments')
+  </script>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
+</script>
+
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             : 总访客数 ？人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L09 Structure of DNA and RNA&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>

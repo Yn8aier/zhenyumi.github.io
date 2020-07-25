@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L04 Extensions of Mendelian Inheritance - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-10_19-16-57.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-25 23:45">
+      2020年7月25日 晚上
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      9
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：10 分钟前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-inheritance-patterns-of-single-genes"><span class="post-toc-text"> 一、Inheritance patterns of single genes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#wildtype-alleles-vs-mutant-alleles"><span class="post-toc-text"> Wild‐type alleles vs. Mutant alleles</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1wildtype-alleles"><span class="post-toc-text"> （1）wildtype alleles</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2mutant-alleles"><span class="post-toc-text"> （2）mutant alleles</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#dominant-mutant"><span class="post-toc-text"> Dominant Mutant</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#simple-dominance"><span class="post-toc-text"> Simple Dominance</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1possible-explanations"><span class="post-toc-text"> （1）possible explanations</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#incomplete-dominance-不完全显性"><span class="post-toc-text"> Incomplete Dominance 不完全显性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#incomplete-penetrance外显率"><span class="post-toc-text"> Incomplete Penetrance（外显率）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1polydactyly-多趾"><span class="post-toc-text"> （1）Polydactyly (多趾)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2penetrance外显率"><span class="post-toc-text"> （2）penetrance（外显率）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3expressivity外显度"><span class="post-toc-text"> （3）Expressivity（外显度）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4variable-expressivity"><span class="post-toc-text"> （4）Variable Expressivity</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#environment-环境因素的影响"><span class="post-toc-text"> Environment 环境因素的影响</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#overdominance-超显性"><span class="post-toc-text"> Overdominance 超显性</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1disease-resistance"><span class="post-toc-text"> （1）Disease resistance</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2homodimer同型二聚体-formation"><span class="post-toc-text"> （2）Homodimer（同型二聚体） formation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3variation-in-functional-activity"><span class="post-toc-text"> （3）Variation in functional activity</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#codominance共显性"><span class="post-toc-text"> Codominance（共显性）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#multiple-alleles复等位基因"><span class="post-toc-text"> Multiple Alleles（复等位基因）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#example-human-abo-blood-group"><span class="post-toc-text"> Example: Human ABO Blood Group</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#abo血型抗原的形成"><span class="post-toc-text"> ABO血型抗原的形成</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#example-coat-colors-in-rabbits"><span class="post-toc-text"> Example:  Coat Colors in Rabbits</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#x-linked-genes"><span class="post-toc-text"> X-linked Genes</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sexinfluenced-traits"><span class="post-toc-text"> Sex‐influenced Traits</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sexlimited-traits"><span class="post-toc-text"> Sex‐limited Traits</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#lethal-alleles-致死等位基因"><span class="post-toc-text"> Lethal alleles （致死等位基因）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-essential-gene-and-nonessential-gene"><span class="post-toc-text"> 1. Essential Gene and Nonessential Gene</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-lethal-genes"><span class="post-toc-text"> 2. Lethal Genes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#conditional-lethal-alleles"><span class="post-toc-text"> Conditional lethal alleles</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-recessive-lethal-mutation"><span class="post-toc-text"> 3. Recessive Lethal Mutation</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-inheritance-patterns-of-multiple-genes"><span class="post-toc-text"> 二、Inheritance patterns of multiple genes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#epistasis-上位性异位显性"><span class="post-toc-text"> Epistasis 上位性；异位显性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#complementation-互补"><span class="post-toc-text"> Complementation 互补</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-complementation-test-cis-trans-test"><span class="post-toc-text"> 1. Complementation Test&#x2F; Cis-trans test</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#gene-redundancy-基因丰余"><span class="post-toc-text"> Gene Redundancy 基因丰余</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#intergenic-suppressors-基因间抑制"><span class="post-toc-text"> Intergenic suppressors 基因间抑制</span></a></li></ol></li></ol>
+
+              <h1 id="一-inheritance-patterns-of-single-genes"><a class="markdownIt-Anchor" href="#一-inheritance-patterns-of-single-genes"></a> 一、Inheritance patterns of single genes</h1>
+<p>There are many ways in which two alleles of a single gene may govern the outcome of a trait</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116193418165.png" srcset="/img/loading.gif" alt="image-20191116193418165" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569326688336.png" srcset="/img/loading.gif" alt="1569326688336" /></p>
+<p>These patterns are examined with two goals in mind</p>
+<ol>
+<li>
+<p>Understanding the relationship between the molecular expression of a gene and the trait itself</p>
+</li>
+<li>
+<p>The outcome of crosses</p>
+</li>
+</ol>
+<h2 id="wildtype-alleles-vs-mutant-alleles"><a class="markdownIt-Anchor" href="#wildtype-alleles-vs-mutant-alleles"></a> Wild‐type alleles vs. Mutant alleles</h2>
+<h3 id="1wildtype-alleles"><a class="markdownIt-Anchor" href="#1wildtype-alleles"></a> （1）wildtype alleles</h3>
+<p>Prevalent alleles in a population are termed <strong>wildtype alleles</strong></p>
+<p>These typically encode proteins that</p>
+<ul>
+<li>Function normally</li>
+<li>Are made in the proper amounts</li>
+</ul>
+<h3 id="2mutant-alleles"><a class="markdownIt-Anchor" href="#2mutant-alleles"></a> （2）mutant alleles</h3>
+<p>Alleles that have been altered by mutation are termed <strong>mutant alleles</strong></p>
+<ul>
+<li>These tend to be rare in natural populations</li>
+<li>They are likely to cause a <u>reduction</u> in the amount or function of the encoded protein</li>
+<li>Such mutant alleles are often inherited in a recessive fashion</li>
+</ul>
+<h4 id="dominant-mutant"><a class="markdownIt-Anchor" href="#dominant-mutant"></a> Dominant Mutant</h4>
+<p><u>Dominant mutant much less common than recessive mutant</u></p>
+<p>Three explanations for most dominants</p>
+<ul>
+<li>Gain‐of‐function
+<ul>
+<li><strong>Protein encoded by the mutant gene is changed</strong> so it gains a new or abnormal function</li>
+</ul>
+</li>
+<li>Dominant‐negative
+<ul>
+<li>Protein encoded by the mutant gene acts <strong>antagonistically</strong>（对抗性地） to the normal protein</li>
+</ul>
+</li>
+<li><strong>Haploinsufficiency</strong>（单倍剂量不足）
+<ul>
+<li>mutant is loss‐of‐function</li>
+<li>heterozygote does not make enough product to give the wild type phenotype</li>
+</ul>
+</li>
+</ul>
+<h2 id="simple-dominance"><a class="markdownIt-Anchor" href="#simple-dominance"></a> Simple Dominance</h2>
+<p><font color="990000">In a simple dominant/recessive relationship, the recessive allele does not affect the phenotype of the heterozygote</font></p>
+<p>So how can the wild‐type phenotype of the heterozygote be explained？</p>
+<h3 id="1possible-explanations"><a class="markdownIt-Anchor" href="#1possible-explanations"></a> （1）possible explanations</h3>
+<ol>
+<li>一半剂量的蛋白足以实现显性性状：</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569326984701.png" srcset="/img/loading.gif" alt="1569326984701" style="zoom:50%;" />
+<ol start="2">
+<li>显性基因表达量提高：</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569327149059.png" srcset="/img/loading.gif" alt="1569327149059" style="zoom:33%;" />
+<p>The normal gene is <strong>“up‐regulated”</strong> to compensate for the lack of function of the defective allele</p>
+<h2 id="incomplete-dominance-不完全显性"><a class="markdownIt-Anchor" href="#incomplete-dominance-不完全显性"></a> Incomplete Dominance 不完全显性</h2>
+<p>In incomplete dominance the heterozygote <strong>exhibits a phenotype that is</strong> <strong>intermediate between the corresponding homozygotes</strong></p>
+<p>The allele for red color® is <u>incompletely, or partially</u>, dominant over the allele for white color®.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569327294107.png" srcset="/img/loading.gif" alt="1569327294107" style="zoom:55%;" />
+<p>Differences among the phenotypes could be due to differences in the amount of the product specified by the R allele. (i.e. R allele is <u>semidominant</u>.)</p>
+<p><font color="990000">Whether a trait is <strong>dominant or incompletely dominant</strong> may depend on how closely the trait is examined</font></p>
+<p>Take, for example, the characteristic of pea shape</p>
+<ul>
+<li>Mendel visually concluded that
+<ul>
+<li><em>RR</em> <em>and</em> <em>Rr</em> <em>genotypes produced round peas</em></li>
+<li><em>rr</em> <em>genotypes produced wrinkled peas</em></li>
+</ul>
+</li>
+<li>a microscopic examination of round peas reveals that not all round peas are “created equal”</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569327547364.png" srcset="/img/loading.gif" alt="1569327547364" style="zoom:67%;" />
+<h2 id="incomplete-penetrance外显率"><a class="markdownIt-Anchor" href="#incomplete-penetrance外显率"></a> Incomplete Penetrance（外显率）</h2>
+<p>The term indicates that a dominant allele does <u>not always <strong>“penetrate”</strong></u> into the phenotype of the individual</p>
+<p>The measure of penetrance is described at the population level</p>
+<ul>
+<li>If 60% of heterozygotes carrying a dominant allele exhibit the trait, the trait is 60% penetrant</li>
+</ul>
+<h3 id="1polydactyly-多趾"><a class="markdownIt-Anchor" href="#1polydactyly-多趾"></a> （1）Polydactyly (多趾)</h3>
+<p>Autosomal dominant trait</p>
+<ul>
+<li>Affected individuals have <u>additional fingers</u> and/or toes</li>
+<li>A <u>single</u> copy of the polydactyly allele is usually sufficient to cause this condition</li>
+<li>In some cases, however, individuals <u>carry the dominant allele but do not exhibit the trait</u></li>
+</ul>
+<h3 id="2penetrance外显率"><a class="markdownIt-Anchor" href="#2penetrance外显率"></a> <strong>（2）penetrance（外显率）</strong></h3>
+<p>The measure of <strong>penetrance（外显率）</strong> is described at the population level<br />
+• If 60% of heterozygotes carrying a dominant allele exhibit the trait, the trait is 60% penetrant</p>
+<p>从基因型到表现型会受到很多因素的影响，因此外显率不一定是100%</p>
+<h3 id="3expressivity外显度"><a class="markdownIt-Anchor" href="#3expressivity外显度"></a> （3）Expressivity（外显度）</h3>
+<p>显性性状表现的程度（Expressivity is the degree to which a trait is expressed）</p>
+<p><u>In the case of polydactyly</u>, the number of digits can vary</p>
+<ul>
+<li>A person with several extra digits has high expressivity of this trait</li>
+<li>A person with a single extra digit has low expressivity</li>
+</ul>
+<p>The molecular explanation of expressivity and incomplete penetrance may not always be understood</p>
+<p>In most cases, the range of phenotypes is thought to be due to influences of the</p>
+<ol>
+<li>Environment and/or</li>
+<li>Other genes</li>
+</ol>
+<h3 id="4variable-expressivity"><a class="markdownIt-Anchor" href="#4variable-expressivity"></a> （4）Variable Expressivity</h3>
+<p>Variable expressivity: A trait is not manifested uniformly among the individuals.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569328319395.png" srcset="/img/loading.gif" alt="1569328319395" style="zoom:33%;" />
+<h2 id="environment-环境因素的影响"><a class="markdownIt-Anchor" href="#environment-环境因素的影响"></a> Environment 环境因素的影响</h2>
+<p>环境因素对于表现型具有重要的影响作用（Environmental conditions may have a great impact on the  phenotype of the individual）</p>
+<ol>
+<li>Some animals like the arctic fox change coat color: white in winter, grayish brown in summer</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569328428267.png" srcset="/img/loading.gif" alt="1569328428267" style="zoom:67%;" />
+<ol start="2">
+<li>Humans affected by phenylketonuria (PKU) are unable to metabolize phenylalanine</li>
+</ol>
+<ul>
+<li>
+<p>symptoms include mental retardation</p>
+<ul>
+<li>When detected early, individuals can be fed a restricted diet essentially free of phenylalanine and remain symptom free</li>
+</ul>
+</li>
+<li>
+<p>Geneticists often examine a range of conditions when studying the effect of environment on phenotype</p>
+</li>
+<li>
+<p>This allows them to see the <strong>norm of reaction</strong> of the environmental influence on phenotypic range</p>
+</li>
+<li>
+<p>The norm of reaction for eye facet number in <u>genetically identical</u> flies decreased at increasing temperature</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569328540031.png" srcset="/img/loading.gif" alt="1569328540031" style="zoom: 50%;" />
+<h2 id="overdominance-超显性"><a class="markdownIt-Anchor" href="#overdominance-超显性"></a> Overdominance 超显性</h2>
+<p><strong>Overdominance</strong>, or called <strong>heterozygote advantage（杂合子优势）</strong> is the phenomenon in which a heterozygote is more vigorous than both of the corresponding homozygotes</p>
+<ul>
+<li>Larger</li>
+<li>Disease‐resistant</li>
+<li>Better able to withstand harsh environment conditions</li>
+</ul>
+<p>At the molecular level, overdominance is due to two alleles that produce <strong>slightly different proteins</strong></p>
+<p>But how can these two protein variants produce a favorable phenotype in the heterozygote</p>
+<p>There are three possible explanations for overdominance at the molecular/cellular level</p>
+<h3 id="1disease-resistance"><a class="markdownIt-Anchor" href="#1disease-resistance"></a> （1）Disease resistance</h3>
+<p>Example: <strong>Sickle‐cell anemia</strong></p>
+<p>Heterozygous Hb<sup>A</sup>Hb<sup>S</sup> more resistant to malaria（疟疾）</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569496554777.png" srcset="/img/loading.gif" alt="1569496554777" style="zoom: 33%;" />
+<h3 id="2homodimer同型二聚体-formation"><a class="markdownIt-Anchor" href="#2homodimer同型二聚体-formation"></a> （2）Homodimer（同型二聚体） formation</h3>
+<p>Some proteins function as homodimers: <u>It is composed of two different subunits, which is encoded by two alleles of the same gene</u></p>
+<ul>
+<li>A1A1 homozygotes<br />
+– Make only A1A1 homodimers</li>
+<li>A2A2 homozygotes<br />
+– Make only A2A2 homodimers</li>
+<li>A1A2 heterozygotes<br />
+– Make A1A1 and A2A2 homodimers and A1A2 homodimers</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569496711841.png" srcset="/img/loading.gif" alt="1569496711841" style="zoom: 50%;" />
+<p>– For some proteins, <strong>the A1A2 homodimer may have better functional activity</strong> (– Giving the heterozygote superior characteristics)</p>
+<h3 id="3variation-in-functional-activity"><a class="markdownIt-Anchor" href="#3variation-in-functional-activity"></a> （3）Variation in functional activity</h3>
+<p>A gene, E, encodes a metabolic enzyme</p>
+<p>Allele E1 encodes an enzyme that functions better at lower temperatures</p>
+<p>Allele E2 encodes an enzyme that functions better at higher temperatures</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569496859433.png" srcset="/img/loading.gif" alt="1569496859433" style="zoom:50%;" />
+<p>E1E2 heterozygotes produce both enzymes<br />
+they have an advantage in which they function over a wider temperature range than either E1E1 or E2E2 homozygotes</p>
+<h2 id="codominance共显性"><a class="markdownIt-Anchor" href="#codominance共显性"></a> Codominance（共显性）</h2>
+<p>Neither allele is dominant.</p>
+<p>Two alleles appear to contribute independently to the phenotype of the heterozygotes</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497101791.png" srcset="/img/loading.gif" alt="1569497101791" style="zoom:60%;" />
+<h2 id="multiple-alleles复等位基因"><a class="markdownIt-Anchor" href="#multiple-alleles复等位基因"></a> Multiple Alleles（复等位基因）</h2>
+<p>Many genes have multiple alleles</p>
+<ul>
+<li>Three or more different alleles</li>
+<li>Multiple alleles are found within natural populations</li>
+</ul>
+<h4 id="example-human-abo-blood-group"><a class="markdownIt-Anchor" href="#example-human-abo-blood-group"></a> Example: Human ABO Blood Group</h4>
+<p>It is determined by the type of antigen present on the surface of red blood cells</p>
+<p>Antigens are substances that are recognized by antibodies produced by the immune system</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497212703.png" srcset="/img/loading.gif" alt="1569497212703" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497262251.png" srcset="/img/loading.gif" alt="1569497262251" style="zoom:33%;" />
+<h4 id="abo血型抗原的形成"><a class="markdownIt-Anchor" href="#abo血型抗原的形成"></a> ABO血型抗原的形成</h4>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497560460.png" srcset="/img/loading.gif" alt="1569497560460" /></p>
+<h4 id="example-coat-colors-in-rabbits"><a class="markdownIt-Anchor" href="#example-coat-colors-in-rabbits"></a> Example:  Coat Colors in Rabbits</h4>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116200050134.png" srcset="/img/loading.gif" alt="image-20191116200050134" style="zoom:50%;" />
+<p>The different phenotypes are caused by four different alleles of the c gene.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116200525795.png" srcset="/img/loading.gif" alt="image-20191116200525795" style="zoom: 50%;" />
+<h2 id="x-linked-genes"><a class="markdownIt-Anchor" href="#x-linked-genes"></a> X-linked Genes</h2>
+<p>Many species have males and females that differ in their sex chromosome composition</p>
+<ul>
+<li>
+<p>Certain traits are g<u>overned by genes on the sex chromosomes</u></p>
+</li>
+<li>
+<p>A pedigree (家谱;系谱) for an X‐linked disease shows that it is mostly males that are affected with their mothers as carriers</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116200702275.png" srcset="/img/loading.gif" alt="image-20191116200702275" style="zoom:50%;" />
+<ul>
+<li>
+<p>An affected male and unaffected female have no affected offspring, but females are carriers</p>
+</li>
+<li>
+<p>An affected female and unaffected male have all male offspring affected and females all carriers</p>
+</li>
+</ul>
+<p>X-linked dominant disorders are uncommon relative to other types of mendelian diseases and show an excess of affected females in a family, since women have two X chromosomes.</p>
+<p>X-linked dominant disorders do not show father to son transmission, and affected males (hemizygous for the mutant allele) are usually more severely affected than female heterozygotes.</p>
+<h2 id="sexinfluenced-traits"><a class="markdownIt-Anchor" href="#sexinfluenced-traits"></a> Sex‐influenced Traits</h2>
+<p><strong>Sex‐influenced does not mean sex‐linked</strong></p>
+<ul>
+<li>Most sex‐influence traits are autosomal</li>
+<li>Traits where an allele is dominant in one sex but recessive in the opposite sex <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rarr</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> sex influence is a phenomenon of heterozygotes</li>
+</ul>
+<p><strong>Example: Pattern baldness in humans</strong><br />
+– Caused by an autosomal gene</p>
+<ul>
+<li>Allele B is dominant in males, but recessive in females</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569500728780.png" srcset="/img/loading.gif" alt="1569500728780" /></p>
+<p>Pattern baldness appears to be related to the production of the male sex hormone testosterone （睾酮）</p>
+<ul>
+<li>Pattern baldness results from overexpression of a gene that converts testosterone to 5‐<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span></span></span></span>‐dihydrotestosterone (DHT) which binds to cellular receptors and alters expression of many genes</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569500753969.png" srcset="/img/loading.gif" alt="1569500753969" style="zoom: 70%;" />
+<h2 id="sexlimited-traits"><a class="markdownIt-Anchor" href="#sexlimited-traits"></a> Sex‐limited Traits</h2>
+<p>Traits that occur in only one of the two sexes</p>
+<ul>
+<li>For example in humans<br />
+– Breast development（乳房发育） is normally limited to females<br />
+– Beard growth（胡须生长） is normally limited to males</li>
+</ul>
+<h2 id="lethal-alleles-致死等位基因"><a class="markdownIt-Anchor" href="#lethal-alleles-致死等位基因"></a> Lethal alleles （致死等位基因）</h2>
+<h3 id="1-essential-gene-and-nonessential-gene"><a class="markdownIt-Anchor" href="#1-essential-gene-and-nonessential-gene"></a> 1. Essential Gene and Nonessential Gene</h3>
+<p><strong>Essential genes</strong> are those that are <u>absolutely required for survival</u></p>
+<ul>
+<li>The absence of their protein product leads to a lethal phenotype</li>
+<li>It is estimated that about 1/3 of all genes are essential for survival</li>
+</ul>
+<p><strong>Nonessential genes</strong> are those <u>not absolutely required for survival</u></p>
+<h3 id="2-lethal-genes"><a class="markdownIt-Anchor" href="#2-lethal-genes"></a> 2. Lethal Genes</h3>
+<p>A lethal allele is one that has the potential to cause the death of an organism</p>
+<ul>
+<li>These alleles are typically the result of mutations in essential genes</li>
+<li>They are usually inherited in a recessive manner</li>
+</ul>
+<p>Many lethal alleles <u>prevent cell division</u>: These will kill an organism at an early age</p>
+<p>Some lethal alleles exert their effect later in life</p>
+<ul>
+<li>Example: Huntington disease
+<ul>
+<li>Characterized by progressive degeneration of the nervous system, dementia and early death</li>
+<li>The age of onset for the disease is usually between 30 to 50</li>
+</ul>
+</li>
+</ul>
+<h4 id="conditional-lethal-alleles"><a class="markdownIt-Anchor" href="#conditional-lethal-alleles"></a> Conditional lethal alleles</h4>
+<p>Conditional lethal alleles may kill an organism only when certain environmental conditions prevail</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201421401.png" srcset="/img/loading.gif" alt="image-20191116201421401" style="zoom: 33%;" />
+<h3 id="3-recessive-lethal-mutation"><a class="markdownIt-Anchor" href="#3-recessive-lethal-mutation"></a> 3. Recessive Lethal Mutation</h3>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201654435.png" srcset="/img/loading.gif" alt="image-20191116201654435" /></p>
+<h1 id="二-inheritance-patterns-of-multiple-genes"><a class="markdownIt-Anchor" href="#二-inheritance-patterns-of-multiple-genes"></a> 二、Inheritance patterns of multiple genes</h1>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201731192.png" srcset="/img/loading.gif" alt="haha" /></p>
+<h2 id="epistasis-上位性异位显性"><a class="markdownIt-Anchor" href="#epistasis-上位性异位显性"></a> Epistasis 上位性；异位显性</h2>
+<p>An allele of one gene overrides the effect of other genes on the phenotype.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201904993.png" srcset="/img/loading.gif" alt="image-20191116201904993" style="zoom:67%;" />
+<h2 id="complementation-互补"><a class="markdownIt-Anchor" href="#complementation-互补"></a> Complementation 互补</h2>
+<p>A phenomenon in which two different parents that express the same or similar recessive phenotypes produce offspring with a wild‐type phenotype</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201945041.png" srcset="/img/loading.gif" alt="image-20191116201945041" style="zoom:67%;" />
+<h3 id="1-complementation-test-cis-trans-test"><a class="markdownIt-Anchor" href="#1-complementation-test-cis-trans-test"></a> 1. Complementation Test/ Cis-trans test</h3>
+<p>A phenomenon in which two different parents that express the same or similar recessive phenotypes produce offspring with a wild‐type phenotype</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116202136619.png" srcset="/img/loading.gif" alt="image-20191116202136619" /></p>
+<h2 id="gene-redundancy-基因丰余"><a class="markdownIt-Anchor" href="#gene-redundancy-基因丰余"></a> Gene Redundancy 基因丰余</h2>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116202209875.png" srcset="/img/loading.gif" alt="image-20191116202209875" /></p>
+<p>Gene redundancy is the existence of multiple genes in the genome of an organism that perform the same function. This is the case for many sets of paralogous genes. When an individual gene in such a set is disrupted by mutation or targeted knockout, there can be little effect on phenotype as a result of gene redundancy, whereas the effect is large for the knockout of a gene with only one copy.</p>
+<p>因所编码的RNA或蛋白质用量很大，故基因的份数很多，只有在隐性基因或隐性突变达到一定数目之后，才会影响到性状</p>
+<h2 id="intergenic-suppressors-基因间抑制"><a class="markdownIt-Anchor" href="#intergenic-suppressors-基因间抑制"></a> Intergenic suppressors 基因间抑制</h2>
+<p>A <strong>suppressor mutation</strong> is a mutation that nullify (使无效) the effect of an earlier mutation there by reversing it’s effect.</p>
+<p>An <strong>intragenic suppressor</strong> is a mutation which is a suppressor mutation that occurs in the same gene where the first mutation had occurred.</p>
+<p>In <strong>intergenic suppressor</strong> mutations, the suppressor mutation happens in a location somewhere else in the DNA, which is not in the same gene where the original mutation had happened.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116202540235.png" srcset="/img/loading.gif" alt="image-20191116202540235" style="zoom: 67%;" />
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Genetics/">Genetics</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。技术力比较低，多多担待啦！<br/ >  If anything wrong, please leave a comment or contact me.<br/> If the utterances comment system does not show up, please refresh or use VPN.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/25/L03%20Principles%20of%20Inheritance/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L03 Principles of Inheritance</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/25/L05%20Non%E2%80%90Mendelian%20Inheritance/">
+                        <span class="hidden-mobile">L05 Non‐Mendelian Inheritance</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <script type="text/javascript">
+    function loadUtterances() {
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.defer = false
+      s.setAttribute('repo', 'zhenyumi/comment_hexo');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('theme', 'github-light');
+      s.setAttribute('crossorigin', 'anonymous');
+      var e = document.getElementsByTagName('script')[0];
+      e.parentNode.insertBefore(s, e);
+    }
+    createObserver(loadUtterances, 'comments')
+  </script>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
+</script>
+
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             : 总访客数 ？人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L04 Extensions of Mendelian Inheritance&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>

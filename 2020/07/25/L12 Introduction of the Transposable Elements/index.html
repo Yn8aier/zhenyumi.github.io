@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L12 Introduction of the Transposable Elements - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-10_19-16-57.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-25 23:45">
+      2020年7月25日 晚上
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      583 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      3
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：10 分钟前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#transposition-an-overview"><span class="post-toc-text"> Transposition: An Overview</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#transposition-pathways"><span class="post-toc-text"> Transposition Pathways</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-simple-transposition"><span class="post-toc-text"> 一、Simple Transposition</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#insertion-sequence"><span class="post-toc-text"> Insertion Sequence</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#composite-transposon"><span class="post-toc-text"> Composite Transposon</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#transposase"><span class="post-toc-text"> Transposase</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#increase-copy-number"><span class="post-toc-text"> Increase Copy Number</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-replicative-transposition"><span class="post-toc-text"> 二、Replicative Transposition</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#replicative-transposition-requires-both-transposase-and-resolvase"><span class="post-toc-text"> Replicative Transposition: Requires Both Transposase and Resolvase</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-retrotransposition-rna-transposon"><span class="post-toc-text"> 三、Retrotransposition (RNA Transposon)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ltr-retrotranspson"><span class="post-toc-text"> LTR Retrotranspson</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#non-ltr-retrotranspson"><span class="post-toc-text"> Non-LTR Retrotranspson</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#retroelements-use-reverse-transcriptase-and-integrase"><span class="post-toc-text"> Retroelements Use Reverse Transcriptase and Integrase</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#increase-copy-number-2"><span class="post-toc-text"> Increase Copy Number</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#targetsite-primed-reverse-transcription"><span class="post-toc-text"> Target‐Site primed Reverse Transcription</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#summary"><span class="post-toc-text"> Summary</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四-influences-of-transposons"><span class="post-toc-text"> 四、Influences of Transposons</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#transposable-elements-influences-on-mutation-and-evolution"><span class="post-toc-text"> Transposable Elements Influences on Mutation and Evolution</span></a>
+
+              <h3 id="transposition-an-overview"><a class="markdownIt-Anchor" href="#transposition-an-overview"></a> Transposition: An Overview</h3>
+<p><strong>Transposition</strong> involves the integration of small segments of DNA into the chromosome</p>
+<ul>
+<li>This can occur at many different locations within the genome</li>
+</ul>
+<p>These small, mobile DNA segments are termed <strong>transposable elements (TEs)</strong></p>
+<ul>
+<li>Sometimes referred to as “jumping genes”</li>
+</ul>
+<p>TEs were first identified by Barbara McClintock in the early 1950s from her classical studies in corn</p>
+<ul>
+<li>Since then, many different types of TEs have been found in species as diverse as bacteria, fungi, plants and animals</li>
+</ul>
+<h3 id="transposition-pathways"><a class="markdownIt-Anchor" href="#transposition-pathways"></a> Transposition Pathways</h3>
+<p>Many transposable elements have been found in bacteria, fungi, plant and animal cells</p>
+<p>Three general types of transposition pathways have been identified</p>
+<ol>
+<li>
+<p>Simple or conservative transposition (cut-and-paste transposition)</p>
+</li>
+<li>
+<p>Replicative transposition</p>
+</li>
+<li>
+<p>Retrotransposition</p>
+</li>
+</ol>
+<h1 id="一-simple-transposition"><a class="markdownIt-Anchor" href="#一-simple-transposition"></a> 一、Simple Transposition</h1>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191210183213994.png" srcset="/img/loading.gif" alt="image-20191210183213994" style="zoom: 50%;" />
+<p>This mechanism is also called &quot;cut-and-paste”</p>
+<p>It is widely found in bacteria and eukaryotes</p>
+<h2 id="insertion-sequence"><a class="markdownIt-Anchor" href="#insertion-sequence"></a> Insertion Sequence</h2>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191210183243479.png" srcset="/img/loading.gif" alt="image-20191210183243479" style="zoom: 50%;" />
+<p><strong>Inverted repeats (IR)</strong> are DNA sequences that are identical (or very similar) but run in opposite directions, such as</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191210183332585.png" srcset="/img/loading.gif" alt="image-20191210183332585" /></p>
+<h2 id="composite-transposon"><a class="markdownIt-Anchor" href="#composite-transposon"></a> Composite Transposon</h2>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191210183431007.png" srcset="/img/loading.gif" alt="image-20191210183431007" style="zoom: 50%;" />
+<p>Contain additional genes that are not necessary for transposition per se</p>
+<p>Only the two inverted repeats at the end of the transposon are involved in the transposition event</p>
+<h2 id="transposase"><a class="markdownIt-Anchor" href="#transposase"></a> Transposase</h2>
+<p>The enzyme <strong>transposase</strong> catalyzes the <u>removal</u> of a TE and the its <u>reinsertion</u> at another location</p>
+<p>Transposase recognizes the inverted repeats at the ends of a TE and brings them close together</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191210183648205.png" srcset="/img/loading.gif" alt="image-20191210183648205" /></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191210183730502.png" srcset="/img/loading.gif" alt="image-20191210183730502" style="zoom: 67%;" />
+<p><u>形成了新的directed repeat</u></p>
+<h2 id="increase-copy-number"><a class="markdownIt-Anchor" href="#increase-copy-number"></a> Increase Copy Number</h2>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191210183910471.png" srcset="/img/loading.gif" alt="image-20191210183910471" /></p>
+<h1 id="二-replicative-transposition"><a class="markdownIt-Anchor" href="#二-replicative-transposition"></a> 二、Replicative Transposition</h1>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191210184240199.png" srcset="/img/loading.gif" alt="image-20191210184240199" style="zoom: 50%;" />
+<p>This mechanism involves reolicntion of the TE and insertion of the codv into another chromosomal location</p>
+<p>It is relatively uncommon and only found in bacteria</p>
+<h2 id="replicative-transposition-requires-both-transposase-and-resolvase"><a class="markdownIt-Anchor" href="#replicative-transposition-requires-both-transposase-and-resolvase"></a> Replicative Transposition: Requires Both Transposase and Resolvase</h2>
+<p>Replicative transposition has been studied in several bacterial transposons and in phage</p>
+<p>The net result of replicative transposition is that a TE occurs at a new site and the TE remains in its original location</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191210184418321.png" srcset="/img/loading.gif" alt="image-20191210184418321" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191210185131717.png" srcset="/img/loading.gif" alt="image-20191210185131717" style="zoom: 45%;" />
+<p>Transposase makes cuts at the arrows and the strands are exchanged and ligated together.</p>
+<p>The gaps are filled in by DNA polymerase and sealed by DNA ligase to produce a cointegrant.</p>
+<p>Resolvase catalyzes recombination between the 2 elements. This resolves the cointegrant into 2 separate structures, each with a copy of the transposable element.</p>
+<ul>
+<li>Replicative transposition has been studied in several bacterial transposons and in phage</li>
+<li>The net result of replicative transposition is that a TE occurs at a new site and the TE remains in its original location</li>
+</ul>
+<h1 id="三-retrotransposition-rna-transposon"><a class="markdownIt-Anchor" href="#三-retrotransposition-rna-transposon"></a> 三、Retrotransposition (RNA Transposon)</h1>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211192405042.png" srcset="/img/loading.gif" alt="image-20191211192405042" style="zoom:50%;" />
+<p>Transcription → Retrotranscription → Integration</p>
+<p>This mechanism is very common but <u>only found in eukaryotes</u></p>
+<p>TE moves via an RNA intermediate.</p>
+<p>These types of elements are termed <strong>retroelements</strong>, <strong>retrotransposons</strong>, or <strong>retroposons</strong></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211193115136.png" srcset="/img/loading.gif" alt="image-20191211193115136" style="zoom:50%;" />
+<p>The organization of retroelements can be quite variable</p>
+<p>They are categorized based on their evolutionary relationship to retroviral sequences</p>
+<ul>
+<li>Retroviruses are RNA viruses that make a DNA copy that integrates into the host’s genome</li>
+</ul>
+<h2 id="ltr-retrotranspson"><a class="markdownIt-Anchor" href="#ltr-retrotranspson"></a> LTR Retrotranspson</h2>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211193140126.png" srcset="/img/loading.gif" alt="image-20191211193140126" style="zoom:50%;" />
+<p><strong>Long terminal repeats (LTR)</strong> are typically a few hundred nucleotides long</p>
+<p>Evolutionarily related to known retroviruses</p>
+<p>Like their viral counterparts, they encode virally related proteins that are needed for the transposition process</p>
+<h2 id="non-ltr-retrotranspson"><a class="markdownIt-Anchor" href="#non-ltr-retrotranspson"></a> Non-LTR Retrotranspson</h2>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211193428382.png" srcset="/img/loading.gif" alt="image-20191211193428382" style="zoom: 67%;" />
+<p>Appear less like retroviruses</p>
+<ul>
+<li>May contain a gene encoding a protein with both reverse transcriptase and endonuclease function</li>
+<li>Some are evolutionarily derived from normal eukaryotic genes</li>
+</ul>
+<h2 id="retroelements-use-reverse-transcriptase-and-integrase"><a class="markdownIt-Anchor" href="#retroelements-use-reverse-transcriptase-and-integrase"></a> Retroelements Use Reverse Transcriptase and Integrase</h2>
+<p>Retroelements use an RNA intermediate in their transposition mechanism</p>
+<p>The movement of retroelements also requires two key</p>
+<p>enzymes:</p>
+<ul>
+<li>Reverse transcriptase</li>
+<li>Integrase</li>
+</ul>
+<h2 id="increase-copy-number-2"><a class="markdownIt-Anchor" href="#increase-copy-number-2"></a> Increase Copy Number</h2>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211194221894.png" srcset="/img/loading.gif" alt="image-20191211194221894" style="zoom: 67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211194245672.png" srcset="/img/loading.gif" alt="image-20191211194245672" style="zoom:60%;" />
+<h2 id="targetsite-primed-reverse-transcription"><a class="markdownIt-Anchor" href="#targetsite-primed-reverse-transcription"></a> Target‐Site primed Reverse Transcription</h2>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211195159900.png" srcset="/img/loading.gif" alt="image-20191211195159900" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211195211210.png" srcset="/img/loading.gif" alt="image-20191211195211210" /></p>
+<h2 id="summary"><a class="markdownIt-Anchor" href="#summary"></a> Summary</h2>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211195617454.png" srcset="/img/loading.gif" alt="image-20191211195617454" /></p>
+<h1 id="四-influences-of-transposons"><a class="markdownIt-Anchor" href="#四-influences-of-transposons"></a> 四、Influences of Transposons</h1>
+<h2 id="transposable-elements-influences-on-mutation-and-evolution"><a class="markdownIt-Anchor" href="#transposable-elements-influences-on-mutation-and-evolution"></a> Transposable Elements Influences on Mutation and Evolution</h2>
+<p>Over the past few decades, researchers have found that transposable elements probably occur in the genomes of all species</p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211195958393.png" srcset="/img/loading.gif" alt="image-20191211195958393" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211200004592.png" srcset="/img/loading.gif" alt="image-20191211200004592" /></p>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Genetics/">Genetics</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。技术力比较低，多多担待啦！<br/ >  If anything wrong, please leave a comment or contact me.<br/> If the utterances comment system does not show up, please refresh or use VPN.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/25/L11%20Mutation%20and%20DNA%20repair/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L11 Mutation and DNA repair</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/25/L13%20The%20Techniques%20of%20Molecular%20Genetics/">
+                        <span class="hidden-mobile">L13 The Techniques of Molecular Genetics</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <script type="text/javascript">
+    function loadUtterances() {
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.defer = false
+      s.setAttribute('repo', 'zhenyumi/comment_hexo');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('theme', 'github-light');
+      s.setAttribute('crossorigin', 'anonymous');
+      var e = document.getElementsByTagName('script')[0];
+      e.parentNode.insertBefore(s, e);
+    }
+    createObserver(loadUtterances, 'comments')
+  </script>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
+</script>
+
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             : 总访客数 ？人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L12 Introduction of the Transposable Elements&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>

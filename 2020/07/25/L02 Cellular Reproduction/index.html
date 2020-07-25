@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L02 Cellular Reproduction - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-10_19-16-57.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-25 23:45">
+      2020年7月25日 晚上
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：10 分钟前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#general-features-of-chromosomes"><span class="post-toc-text"> General Features of Chromosomes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#structure-of-chromosomes"><span class="post-toc-text"> Structure of Chromosomes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-composition"><span class="post-toc-text"> 1. Composition</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-telomere"><span class="post-toc-text"> 2. Telomere</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-histone-核小体"><span class="post-toc-text"> 3. Histone 核小体</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#chromatid染色单体-vs-chromosome染色体"><span class="post-toc-text"> Chromatid（染色单体） vs Chromosome（染色体）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#prokaryotic-and-eukaryotic-cells-chromosomes"><span class="post-toc-text"> Prokaryotic and Eukaryotic Cell‘s Chromosomes</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#plasmids-and-vectors"><span class="post-toc-text"> Plasmids And Vectors</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#chromosome-number"><span class="post-toc-text"> Chromosome Number</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#homologous-chromosomes"><span class="post-toc-text"> Homologous Chromosomes</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#par拟常染色体区-in-sex-chromosomes"><span class="post-toc-text"> PAR（拟常染色体区） in sex chromosomes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-par1"><span class="post-toc-text"> 1. PAR1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-par2"><span class="post-toc-text"> 2. PAR2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-sex-determining-region-of-the-ysry"><span class="post-toc-text"> 3. Sex-determining region of the Y（SRY）</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#cell-divition"><span class="post-toc-text"> Cell Divition</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#prokaryotesbinary-fission-二分裂"><span class="post-toc-text"> Prokaryotes——Binary Fission 二分裂</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cell-divition-in-eukaryotes"><span class="post-toc-text"> Cell Divition in Eukaryotes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-introduction"><span class="post-toc-text"> 1. Introduction</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-cell-cycle"><span class="post-toc-text"> 2. Cell-cycle</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mitosis"><span class="post-toc-text"> Mitosis</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-prophase"><span class="post-toc-text"> 1. Prophase</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#spindle-formation"><span class="post-toc-text"> Spindle Formation</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#disappearance-of-nucleolus-and-nuclear-membrane"><span class="post-toc-text"> Disappearance of Nucleolus And Nuclear Membrane</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#microtubules-attach-to-the-kinetochores"><span class="post-toc-text"> Microtubules Attach to The Kinetochores</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-metaphase"><span class="post-toc-text"> 2. Metaphase</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#chromosomes-move-to-metaphase-plate"><span class="post-toc-text"> Chromosomes Move to Metaphase Plate</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-anaphase"><span class="post-toc-text"> 3. Anaphase</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#chromatids-saparated-and-move-to-the-two-pores"><span class="post-toc-text"> Chromatids Saparated And Move to The Two Pores</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-telophase-and-cytokinesis"><span class="post-toc-text"> 4. Telophase And Cytokinesis</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#nuclear-membrane-and-decondensation-of-chromosomes"><span class="post-toc-text"> Nuclear Membrane And Decondensation of Chromosomes</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sex-reproduction"><span class="post-toc-text"> Sex Reproduction</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#gametogenesis-配子发生"><span class="post-toc-text"> Gametogenesis 配子发生</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#isogamous-同型配子生殖"><span class="post-toc-text"> isogamous (同型配子生殖)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#heterogamous-异形配子生殖"><span class="post-toc-text"> heterogamous (异形配子生殖)</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#meiosis"><span class="post-toc-text"> Meiosis</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-prophase-i"><span class="post-toc-text"> 1. Prophase I</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#prophase-i-leptonema细线期"><span class="post-toc-text"> Prophase I: Leptonema（细线期）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#prophase-i-zygonema偶线期"><span class="post-toc-text"> Prophase I: Zygonema（偶线期）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-synaptonemal-complex-联会丝复合体"><span class="post-toc-text"> (1) Synaptonemal complex 联会丝复合体</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#prophase-i-pachynema粗线期"><span class="post-toc-text"> Prophase I: Pachynema（粗线期）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#prophase-i-diplonema双线期"><span class="post-toc-text"> Prophase I: Diplonema（双线期）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-chiasmata"><span class="post-toc-text"> (1) Chiasmata</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#prophase-i-diakinesis终变期浓缩期"><span class="post-toc-text"> Prophase I: Diakinesis（终变期&#x2F;浓缩期）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-kinetochores"><span class="post-toc-text"> (1) kinetochores</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#summery-of-prophase-i"><span class="post-toc-text"> Summery of Prophase I</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-metaphase-i"><span class="post-toc-text"> 2. Metaphase I</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-anaphase-i"><span class="post-toc-text"> 3. Anaphase I</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-telophase-i"><span class="post-toc-text"> 4. Telophase I</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-prophase-ii"><span class="post-toc-text"> 5. Prophase II</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-metaphase-ii"><span class="post-toc-text"> 6. Metaphase II</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-anaphase-ii"><span class="post-toc-text"> 7. Anaphase II</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-telophase-ii"><span class="post-toc-text"> 8. Telophase II</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-cytokinesis"><span class="post-toc-text"> 9. Cytokinesis</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-sex-determination"><span class="post-toc-text"> 三、Sex Determination</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sex-determination-in-human"><span class="post-toc-text"> Sex Determination in Human</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-sry"><span class="post-toc-text"> 1. SRY</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#other-sex-determination-mechanisms"><span class="post-toc-text"> Other Sex Determination Mechanisms</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-the-zw-system"><span class="post-toc-text"> 1. The ZW system</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-the-x0-system"><span class="post-toc-text"> 2. The X0 system</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-xa-ratio-sex-determination-in-drosophila-果蝇"><span class="post-toc-text"> 3. X:A Ratio (Sex Determination in Drosophila 果蝇)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-the-haplo-diplo-system"><span class="post-toc-text"> 4. The Haplo-Diplo system</span></a></li></ol></li></ol></li></ol>
+
+              <h1 id="general-features-of-chromosomes"><a class="markdownIt-Anchor" href="#general-features-of-chromosomes"></a> General Features of Chromosomes</h1>
+<h2 id="structure-of-chromosomes"><a class="markdownIt-Anchor" href="#structure-of-chromosomes"></a> Structure of Chromosomes</h2>
+<h3 id="1-composition"><a class="markdownIt-Anchor" href="#1-composition"></a> 1. Composition</h3>
+<p>chromosomes are structures within living cells that contain the genetic material.</p>
+<ul>
+<li>They contain the genes</li>
+</ul>
+<p>Biochemically, <strong>chromosomes</strong> are composed of</p>
+<ul>
+<li><strong>DNA</strong>, which is the <u>genetic material</u></li>
+<li><strong>Proteins</strong>, which provide an <u>organized structure</u></li>
+<li>In eukaryotes the DNA‐protein complex is called <strong>chromatin (染色质)</strong></li>
+</ul>
+<p>染色质 = 染色体，因此一些细菌中的环形DNA分子也可以称之为染色体</p>
+<p><strong>p = short arm</strong> (petit in French)</p>
+<p><strong>q = long arm</strong> (chosen as next letter in alphabet after p)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116123932373.png" srcset="/img/loading.gif" alt="image-20191116123932373" style="zoom:33%;" />
+<h3 id="2-telomere"><a class="markdownIt-Anchor" href="#2-telomere"></a> 2. Telomere</h3>
+<p><strong>端粒:</strong>（英语：Telomere）是真核生物染色体末端的DNA重复序列，作用是保持染色体的完整性和控制细胞分裂周期。</p>
+<p>由于DNA复制的机制，每次染色体复制后，延迟股上的染色体末端必无法被复制。[1]因此，真核生物在染色体末端演化出端粒以作为可被重复遗弃的片段。[2]一旦端粒消耗殆尽，细胞将会立即启动凋亡机制。</p>
+<h3 id="3-histone-核小体"><a class="markdownIt-Anchor" href="#3-histone-核小体"></a> 3. Histone 核小体</h3>
+<p>核小体是染色体结构的最基本单位。核小体的核心是由4对组织蛋白（H2A、H2B、H3和H4）各两个分子构成的扁球状8聚体。</p>
+<p>DNA分子缠绕在核小体上，组成的条带总共进行四次螺旋化处理（螺旋后的条带再次进行螺旋，形成超螺旋的结构），使得DNA分子的长度大大被压缩。脱氧核糖核酸分子一共被压缩了7×6×40×5=8400倍。例如，人的染色体中脱氧核糖核酸分子伸展开来的长度平均约为几个厘米，而染色体被压缩到只有几个微米长。</p>
+<h2 id="chromatid染色单体-vs-chromosome染色体"><a class="markdownIt-Anchor" href="#chromatid染色单体-vs-chromosome染色体"></a> Chromatid（染色单体） vs Chromosome（染色体）</h2>
+<p>A <strong>chromatid</strong> is one of two identical halves of a replicated chromosome.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116124204549.png" srcset="/img/loading.gif" alt="image-20191116124204549" style="zoom: 33%;" />
+<h2 id="prokaryotic-and-eukaryotic-cells-chromosomes"><a class="markdownIt-Anchor" href="#prokaryotic-and-eukaryotic-cells-chromosomes"></a> Prokaryotic and Eukaryotic Cell‘s Chromosomes</h2>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568116056554.png" srcset="/img/loading.gif" alt="1568116056554" style="zoom:33%;" />
+<p><strong>Prokaryotic cell</strong>:</p>
+<ul>
+<li>Circular</li>
+<li>Contain a single type of circular chromosome</li>
+</ul>
+<p><strong>Eukaryotic cell</strong>:</p>
+<ul>
+<li>Linear</li>
+<li>Contain several chromosome</li>
+</ul>
+<h2 id="plasmids-and-vectors"><a class="markdownIt-Anchor" href="#plasmids-and-vectors"></a> Plasmids And Vectors</h2>
+<p>The relationship between <u>microbes and plasmid DNA is <strong>not parasitic</strong>.</u></p>
+<ul>
+<li>plasmids provide a mechanism for <u>horizontal genetransfer</u> within a population of microbes and typically provide a <u>selective advantage</u> under a given environmental state.</li>
+<li>Plasmids may carry genes that <u>provide <strong>resistance to</strong> naturally occurring <strong>antibiotics</strong></u> in a competitive environment</li>
+</ul>
+<p><strong>Vectors: Artificial plasmids</strong> widely used in molecular cloning</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116124611458.png" srcset="/img/loading.gif" alt="image-20191116124611458" style="zoom:50%;" />
+<h2 id="chromosome-number"><a class="markdownIt-Anchor" href="#chromosome-number"></a> Chromosome Number</h2>
+<p><strong>Somatic cell（体细胞）</strong>:  two copies of each chromosomes (Diploid, 2n)</p>
+<p><strong>Gametes（配子）</strong> : one copy of each chromosomes (Haploid, n)</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>n = basic chromosome number </mtext></mrow><annotation encoding="application/x-tex">\text{n = basic chromosome number }
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">n = basic chromosome number </span></span></span></span></span></span></p>
+<ul>
+<li>Triploid (3n)</li>
+<li>Tetraploid (4n)</li>
+<li>Hexaploid (6n)</li>
+<li>Octoploid (8n)</li>
+</ul>
+<h2 id="homologous-chromosomes"><a class="markdownIt-Anchor" href="#homologous-chromosomes"></a> Homologous Chromosomes</h2>
+<p>Homologous chromosomes are chromosome pairs:</p>
+<ul>
+<li>one from each parent</li>
+<li>similar in length, centromere location and gene position.</li>
+</ul>
+<p>However, the genes may contain different alleles.</p>
+<p>The <u>DNA sequences on homologous chromosomes are also very similar</u></p>
+<ul>
+<li>There is usually less than 1% difference between homologs</li>
+</ul>
+<p>Nevertheless, these slight differences in DNA sequence provide the allelic differences in genes</p>
+<ul>
+<li>Eye color gene, e.g. Blue allele vs. brown allele</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116125104361.png" srcset="/img/loading.gif" alt="image-20191116125104361" /></p>
+<h2 id="par拟常染色体区-in-sex-chromosomes"><a class="markdownIt-Anchor" href="#par拟常染色体区-in-sex-chromosomes"></a> PAR（拟常染色体区） in sex chromosomes</h2>
+<p>The X and Y chromosomes have two regions of homology on the tips of chromosomes.</p>
+<p>Pseudoautosomal genes in this region are not inherited in a strictly sex‐linked fashion.</p>
+<p>(该区域的假常染色体基因并不是严格的性别连锁遗传。)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568117740977.png" srcset="/img/loading.gif" alt="1568117740977"  />
+<h3 id="1-par1"><a class="markdownIt-Anchor" href="#1-par1"></a> 1. PAR1</h3>
+<p>PAR1 is located at the terminal region of the short arms, contains 24 genes.</p>
+<h3 id="2-par2"><a class="markdownIt-Anchor" href="#2-par2"></a> 2. PAR2</h3>
+<p>PAR2 at the tips of the long arms of these chromosomes, contains only 4 genes.</p>
+<h3 id="3-sex-determining-region-of-the-ysry"><a class="markdownIt-Anchor" href="#3-sex-determining-region-of-the-ysry"></a> 3. Sex-determining region of the Y（SRY）</h3>
+<p>SRY基因（sex-determining region of Y-chromosome，全称：Y染色体性别决定区），又名睾丸决定因子，（英语：Testis-determining factor，简称TDF）是人体Y染色体上的一段基因片段，该基因是决定男性睾丸发育的主要基因。存在于Y染色体的短臂末端上。<br />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568117893833.png" srcset="/img/loading.gif" alt="1568117893833" style="zoom:67%;" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116130502966.png" srcset="/img/loading.gif" alt="image-20191116130502966" /></p>
+<h1 id="cell-divition"><a class="markdownIt-Anchor" href="#cell-divition"></a> Cell Divition</h1>
+<h2 id="prokaryotesbinary-fission-二分裂"><a class="markdownIt-Anchor" href="#prokaryotesbinary-fission-二分裂"></a> Prokaryotes——Binary Fission 二分裂</h2>
+<p>A mother cell divides to produce two daughter cells.</p>
+<p>The mother cell’s chromosome is duplicated prior to fission.</p>
+<p>Each daughter cell receives one copy of the chromosome.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568118358478.png" srcset="/img/loading.gif" alt="1568118358478" style="zoom:50%;" />
+<h2 id="cell-divition-in-eukaryotes"><a class="markdownIt-Anchor" href="#cell-divition-in-eukaryotes"></a> Cell Divition in Eukaryotes</h2>
+<h3 id="1-introduction"><a class="markdownIt-Anchor" href="#1-introduction"></a> 1. Introduction</h3>
+<p>Cell division in eukaryotes requires a replication and sorting process that is more complicated than simple binary fission</p>
+<p>Eukaryotic cells that are destined to divide progress through a series of stages known as the <strong>cell cycle</strong></p>
+<p>The <strong>cell cycle, or cell-division</strong> <strong>cycle</strong>, is <u>the series of events</u> that take place in a cell leading to duplication of its DNA (DNA replication) and division of cytoplasm and organelles to produce two daughter cells.</p>
+<p><u>The length of cell cycle varies among different types of cells</u></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568118830677.png" srcset="/img/loading.gif" alt="1568118830677" style="zoom: 67%;" />
+<h3 id="2-cell-cycle"><a class="markdownIt-Anchor" href="#2-cell-cycle"></a> 2. Cell-cycle</h3>
+<ul>
+<li>
+<p>During the G2 phase, the cell <u>accumulates the materials</u> that are necessary for nuclear and cell division</p>
+</li>
+<li>
+<p>It then progresses into the <u>M phase of the cycle where mitosis occurs</u></p>
+</li>
+</ul>
+<p>The primary purpose of mitosis is to distribute the replicated chromosomes to the two daughter cells</p>
+<ul>
+<li>In humans for example,
+<ul>
+<li>The 46 pairs of sister chromatids are separated and sorted</li>
+<li>Each daughter cell receives the same complement of chromosomes</li>
+</ul>
+</li>
+</ul>
+<h2 id="mitosis"><a class="markdownIt-Anchor" href="#mitosis"></a> Mitosis</h2>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116131401395.png" srcset="/img/loading.gif" alt="image-20191116131401395" style="zoom: 50%;" />
+<p><strong>Clone：</strong> to create a population of cells</p>
+<p><strong>Fission：</strong> The subdivision of a cell or multi-cellular body into one or more parts and the regeneration of each part into a complete individual</p>
+<p>**Colony：**a mass of cells</p>
+<h3 id="1-prophase"><a class="markdownIt-Anchor" href="#1-prophase"></a> 1. Prophase</h3>
+<h4 id="spindle-formation"><a class="markdownIt-Anchor" href="#spindle-formation"></a> Spindle Formation</h4>
+<p>The initiation of spindle formation and the condensation of duplicated chromosomes from the diffuse network of chromatin are hallmarks of the first stage of mitosis,  called <strong>prophase</strong></p>
+<ul>
+<li>Formation of the spindle is accompanied by fragmentation of many <strong>intracellular organelles</strong>—for instance, <u>the endoplasmic reticulum and the Golgi complex.</u></li>
+</ul>
+<h4 id="disappearance-of-nucleolus-and-nuclear-membrane"><a class="markdownIt-Anchor" href="#disappearance-of-nucleolus-and-nuclear-membrane"></a> Disappearance of Nucleolus And Nuclear Membrane</h4>
+<p>The <strong>nucleolus</strong>, a dense body involved in RNA synthesis within the nucleus,  also disappears; however, other types of organelles such as mitochondria and chloroplasts remain intact.</p>
+<p><u>Concomitant with the fragmentation of the endoplasmic reticulum,</u> the <strong>nuclear membrane</strong> (also known as the nuclear envelope) breaks up into many small vesicles, and microtubules formed within the cytoplasm invade the nuclear space.</p>
+<h4 id="microtubules-attach-to-the-kinetochores"><a class="markdownIt-Anchor" href="#microtubules-attach-to-the-kinetochores"></a> Microtubules Attach to The Kinetochores</h4>
+<p>Some of these microtubules attach to the <strong>kinetochores（着丝点）,</strong> which are <u>protein structures</u> associated with the centromeres of the duplicated chromosomes. <u>Attachment of spindle microtubules to the kinetochores indicates that the cell is entering the <strong>metaphase</strong> of mitosis.</u></p>
+<h3 id="2-metaphase"><a class="markdownIt-Anchor" href="#2-metaphase"></a> 2. Metaphase</h3>
+<h4 id="chromosomes-move-to-metaphase-plate"><a class="markdownIt-Anchor" href="#chromosomes-move-to-metaphase-plate"></a> Chromosomes Move to Metaphase Plate</h4>
+<p>During metaphase the duplicated chromosomes move to positions midway between the spindle poles.</p>
+<ul>
+<li>
+<p>This movement is leveraged by changes in the <u>length of the spindle microtubules and by the action of force-generating motor proteins that work near the kinetochores.</u></p>
+</li>
+<li>
+<p>The spindle apparatus also contains microtubules that are not attached to kinetochores. These additional  microtubules appear to <u>stabilize the spindle apparatus.</u></p>
+</li>
+</ul>
+<p>Through the operation of the spindle apparatus, the duplicated chromosomes come to lie in a single plane in the middle of the cell. This equatorial plane is called the <strong>metaphase plate.</strong></p>
+<p><u>At this stage, each sister chromatid of a duplicated chromosome is connected to a different pole via microtubules attached to its kinetochore.</u> (在这个阶段，每个复制染色体的姐妹染色单体通过连接在着丝点上的微管连接到不同的极点) This polar alignment of the sister chromatids is crucial for the equal and exact distribution of genetic material to the daughter cells.</p>
+<h3 id="3-anaphase"><a class="markdownIt-Anchor" href="#3-anaphase"></a> 3. Anaphase</h3>
+<h4 id="chromatids-saparated-and-move-to-the-two-pores"><a class="markdownIt-Anchor" href="#chromatids-saparated-and-move-to-the-two-pores"></a> Chromatids Saparated And Move to The Two Pores</h4>
+<p>The sister chromatids of duplicated chromosomes are separated from each other during the <strong>anaphase</strong> of mitosis.</p>
+<p>This separation is accomplished by (1) shortening the microtubules attached to the kinetochores and by (2) degrading materials that hold the sister chromatids together.</p>
+<p>As the microtubules shorten, the sister chromatids are pulled to opposite poles of the cell. The separated sister chromatids are now referred to as chromosomes.</p>
+<p>While the chromosomes are moving toward the poles, the poles themselves also begin to move apart. This double movement cleanly separates the two sets of chromosomes into distinct spaces within the dividing cell.</p>
+<h3 id="4-telophase-and-cytokinesis"><a class="markdownIt-Anchor" href="#4-telophase-and-cytokinesis"></a> 4. Telophase And Cytokinesis</h3>
+<h4 id="nuclear-membrane-and-decondensation-of-chromosomes"><a class="markdownIt-Anchor" href="#nuclear-membrane-and-decondensation-of-chromosomes"></a> Nuclear Membrane And Decondensation of Chromosomes</h4>
+<p>Once this separation has been achieved, the chromosomes decondense into a network of chromatin fibers, and the organelles that were lost at the onset of mitosis re-form.</p>
+<p>Each set of chromosomes becomes enclosed by a nuclear membrane. The decondensation of the chromosomes and the restoration of the internal organelles are characteristic of the <strong>telophase</strong> of mitosis.</p>
+<p>When mitosis is complete, the two daughter cells are separated by the formation of membranes between them. In plants, a wall is also laid down between the daughter cells.</p>
+<p>This physical separation of the daughter cells is called <strong>cytokinesis（胞质分裂）</strong></p>
+<h2 id="sex-reproduction"><a class="markdownIt-Anchor" href="#sex-reproduction"></a> Sex Reproduction</h2>
+<p>Sexual reproduction is the most common way for eukaryotic organisms to produce offspring</p>
+<ul>
+<li>Parents <u>make gametes with half the amount of genetic material</u> <strong>(gametogenesis, 配子发生)</strong></li>
+<li>These <u>gametes fuse with each other</u> during <strong>fertilization (受精作用)</strong> to begin the life of a new organism</li>
+</ul>
+<p>Gametes are typically <strong>haploid</strong></p>
+<ul>
+<li>They contain a single set of chromosomes</li>
+<li>A <strong>diploid</strong> human cell contains 46 chromosomes</li>
+<li>A human gamete contains only 23 chromosomes</li>
+</ul>
+<p>During **meiosis **(<strong>减数分裂)</strong>, haploid cells are produced from diploid cells</p>
+<p>Thus, the chromosomes must be correctly sorted and distributed to reduce the chromosome number to half its original value</p>
+<ul>
+<li>In humans, for example, a gamete must receive one chromosome from each of the 23 pairs</li>
+</ul>
+<h3 id="gametogenesis-配子发生"><a class="markdownIt-Anchor" href="#gametogenesis-配子发生"></a> Gametogenesis 配子发生</h3>
+<h4 id="isogamous-同型配子生殖"><a class="markdownIt-Anchor" href="#isogamous-同型配子生殖"></a> isogamous (同型配子生殖)</h4>
+<p>They <u>produce gametes that are morphologically similar</u></p>
+<ul>
+<li>Example: Many species of fungi and algae</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116131918855.png" srcset="/img/loading.gif" alt="image-20191116131918855" style="zoom:50%;" />
+<h4 id="heterogamous-异形配子生殖"><a class="markdownIt-Anchor" href="#heterogamous-异形配子生殖"></a> heterogamous (异形配子生殖)</h4>
+<p>These produce gametes that are <u>morphologically different</u></p>
+<ul>
+<li>
+<p>Sperm cells (male gametes)</p>
+<ul>
+<li>Relatively small and mobile</li>
+</ul>
+</li>
+<li>
+<p>Egg cell (female gametes)</p>
+<ul>
+<li>Usually large and nonmobile</li>
+<li>Stores a large amount of nutrients (animal species)</li>
+</ul>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116131939900.png" srcset="/img/loading.gif" alt="image-20191116131939900" style="zoom:50%;" />
+<h2 id="meiosis"><a class="markdownIt-Anchor" href="#meiosis"></a> Meiosis</h2>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568119692391.png" srcset="/img/loading.gif" alt="1568119692391" /></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116140305653.png" srcset="/img/loading.gif" alt="image-20191116140305653" style="zoom: 50%;" />
+<h3 id="1-prophase-i"><a class="markdownIt-Anchor" href="#1-prophase-i"></a> 1. Prophase I</h3>
+<h4 id="prophase-i-leptonema细线期"><a class="markdownIt-Anchor" href="#prophase-i-leptonema细线期"></a> Prophase I: Leptonema（细线期）</h4>
+<p>The term <em>leptonema</em> derives from Greek words meaning “thin threads”.</p>
+<ul>
+<li>
+<p>Chromosomes condense</p>
+</li>
+<li>
+<p>Each chromosome has two sister chromatids</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116140353490.png" srcset="/img/loading.gif" alt="image-20191116140353490" style="zoom: 40%;" />
+<h4 id="prophase-i-zygonema偶线期"><a class="markdownIt-Anchor" href="#prophase-i-zygonema偶线期"></a> Prophase I: Zygonema（偶线期）</h4>
+<p>The term <em>zygonema</em> derives from Greek words meaning “paired threads&quot;.</p>
+<ul>
+<li>
+<p>Pairing of homologous chromosomes (Synapsis，联会)</p>
+</li>
+<li>
+<p>Synaptonemal complex</p>
+</li>
+<li>
+<p>But the precise role is not clear</p>
+</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116140820901.png" srcset="/img/loading.gif" alt="image-20191116140820901" /></p>
+<h5 id="1-synaptonemal-complex-联会丝复合体"><a class="markdownIt-Anchor" href="#1-synaptonemal-complex-联会丝复合体"></a> (1) Synaptonemal complex 联会丝复合体</h5>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116140926707.png" srcset="/img/loading.gif" alt="image-20191116140926707" style="zoom: 50%;" />
+<h4 id="prophase-i-pachynema粗线期"><a class="markdownIt-Anchor" href="#prophase-i-pachynema粗线期"></a> Prophase I: Pachynema（粗线期）</h4>
+<p>The term <em>pachynema</em> derives from Greek words meaning “thick threads”.</p>
+<p>Chromosomes condense further (<u>can easily been seen with a light microscope</u>)</p>
+<ul>
+<li>Paired chromosomes may exchange materials <u>(Crossing over occurs)</u></li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116141028295.png" srcset="/img/loading.gif" alt="image-20191116141028295" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116141034064.png" srcset="/img/loading.gif" alt="image-20191116141034064" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116141055472.png" srcset="/img/loading.gif" alt="image-20191116141055472" style="zoom:70%;" />
+<h4 id="prophase-i-diplonema双线期"><a class="markdownIt-Anchor" href="#prophase-i-diplonema双线期"></a> Prophase I: Diplonema（双线期）</h4>
+<p>The term <em>diplonema</em> derives from Greek words meaning “two threads&quot;.</p>
+<p>The <u>synaptonemal complex degrades</u> and paired chromosomes separate slightly but are <u>in contact as chiasmata(染色体交叉).</u></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116141411920.png" srcset="/img/loading.gif" alt="image-20191116141411920" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116141423036.png" srcset="/img/loading.gif" alt="image-20191116141423036" style="zoom:50%;" />
+<h5 id="1-chiasmata"><a class="markdownIt-Anchor" href="#1-chiasmata"></a> (1) Chiasmata</h5>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116141446652.png" srcset="/img/loading.gif" alt="image-20191116141446652" style="zoom:50%;" />
+<h4 id="prophase-i-diakinesis终变期浓缩期"><a class="markdownIt-Anchor" href="#prophase-i-diakinesis终变期浓缩期"></a> Prophase I: Diakinesis（终变期/浓缩期）</h4>
+<p>The term <em>diakinesis</em> derives from Greek words meaning “move through&quot;.</p>
+<ul>
+<li>Nuclear envelope fragements</li>
+<li>Spindle fibers attach to kinetochores (动粒/动点)</li>
+<li>Chromosomes (Tetrad; 四分体) move to central plane in pairs</li>
+</ul>
+<h5 id="1-kinetochores"><a class="markdownIt-Anchor" href="#1-kinetochores"></a> (1) kinetochores</h5>
+<p>Kinetochores：a complex of proteins associated with the centromere of a chromosome during cell division, to which the microtubules of the spindle attach.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116141613897.png" srcset="/img/loading.gif" alt="image-20191116141613897" style="zoom:50%;" />
+<h4 id="summery-of-prophase-i"><a class="markdownIt-Anchor" href="#summery-of-prophase-i"></a> Summery of Prophase I</h4>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116141751607.png" srcset="/img/loading.gif" alt="image-20191116141751607" /></p>
+<h3 id="2-metaphase-i"><a class="markdownIt-Anchor" href="#2-metaphase-i"></a> 2. Metaphase I</h3>
+<p>Paired chromosomes are oriented toward opposite poles</p>
+<h3 id="3-anaphase-i"><a class="markdownIt-Anchor" href="#3-anaphase-i"></a> 3. Anaphase I</h3>
+<ul>
+<li>
+<p>Resolve chiasmata</p>
+</li>
+<li>
+<p>Chromosome disjunction (separation of paired chromosomes)</p>
+</li>
+<li>
+<p>Separated homologues move toward opposite poles</p>
+</li>
+</ul>
+<h3 id="4-telophase-i"><a class="markdownIt-Anchor" href="#4-telophase-i"></a> 4. Telophase I</h3>
+<ul>
+<li>Chromosomes reach the poles; nuclei forms</li>
+<li>Spindle apparatus is disassembled (解开)</li>
+<li>Daughter cells separated by membranes</li>
+<li>Chromosomes decondense</li>
+<li><u>Each chromosome still has two sister chromatids</u></li>
+</ul>
+<h3 id="5-prophase-ii"><a class="markdownIt-Anchor" href="#5-prophase-ii"></a> 5. Prophase II</h3>
+<ul>
+<li>
+<p>Meiosis II, mechanistically similar to mitosis</p>
+</li>
+<li>
+<p>Chromosomes condense</p>
+</li>
+<li>
+<p>Chromosomes attach to a new spindle apparatus</p>
+</li>
+<li>
+<p>Sister chromatids are attached to spindle fibers from opposite poles</p>
+</li>
+</ul>
+<h3 id="6-metaphase-ii"><a class="markdownIt-Anchor" href="#6-metaphase-ii"></a> 6. Metaphase II</h3>
+<p>Chromosomes align at equatorial plane</p>
+<h3 id="7-anaphase-ii"><a class="markdownIt-Anchor" href="#7-anaphase-ii"></a> 7. Anaphase II</h3>
+<ul>
+<li>Centromeres split</li>
+<li>Chromatid disjunction</li>
+<li>Sister chromatids become daughter chromosomes and move toward opposite poles</li>
+</ul>
+<h3 id="8-telophase-ii"><a class="markdownIt-Anchor" href="#8-telophase-ii"></a> 8. Telophase II</h3>
+<ul>
+<li>
+<p>Chromosomes gather at poles; daughter nuclei form</p>
+</li>
+<li>
+<p>Each daughter nucleus contains a haploid set of chromosomes</p>
+</li>
+</ul>
+<h3 id="9-cytokinesis"><a class="markdownIt-Anchor" href="#9-cytokinesis"></a> 9. Cytokinesis</h3>
+<p>Daughter cells are NOT genetically Identical.</p>
+<ol>
+<li>Homologous chromosomes synapse and exchange material by crossing over, then disjoin.</li>
+<li>Different pairs of homologous chromosomes disjoin independently.</li>
+</ol>
+<h1 id="三-sex-determination"><a class="markdownIt-Anchor" href="#三-sex-determination"></a> 三、Sex Determination</h1>
+<h2 id="sex-determination-in-human"><a class="markdownIt-Anchor" href="#sex-determination-in-human"></a> Sex Determination in Human</h2>
+<ul>
+<li>Females are XX</li>
+<li>Males are XY</li>
+<li>During meiosis in males, the X and Y chromosomes pair</li>
+</ul>
+<h3 id="1-sry"><a class="markdownIt-Anchor" href="#1-sry"></a> 1. SRY</h3>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116143446951.png" srcset="/img/loading.gif" alt="image-20191116143446951" /></p>
+<p>SRY Protein</p>
+<p>SRY protein bond to DNA minor group</p>
+<p>Identification of <strong>SRY</strong> sequence, which is not present in the maternal genome, can be performed using PCR (Polymerase chain reaction).</p>
+<h2 id="other-sex-determination-mechanisms"><a class="markdownIt-Anchor" href="#other-sex-determination-mechanisms"></a> Other Sex Determination Mechanisms</h2>
+<h3 id="1-the-zw-system"><a class="markdownIt-Anchor" href="#1-the-zw-system"></a> 1. The ZW system</h3>
+<ul>
+<li>
+<p>Male: ZZ</p>
+</li>
+<li>
+<p>Female: ZW</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116143557016.png" srcset="/img/loading.gif" alt="image-20191116143557016" style="zoom:67%;" />
+<h3 id="2-the-x0-system"><a class="markdownIt-Anchor" href="#2-the-x0-system"></a> 2. The X0 system</h3>
+<p>Inheritance of sex chromosomes in animals with XX females and X0 males.</p>
+<p>grasshoppers, crickets, cockroaches, and some other insects.</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116143647591.png" srcset="/img/loading.gif" alt="image-20191116143647591" style="zoom:67%;" />
+<h3 id="3-xa-ratio-sex-determination-in-drosophila-果蝇"><a class="markdownIt-Anchor" href="#3-xa-ratio-sex-determination-in-drosophila-果蝇"></a> 3. X:A Ratio (Sex Determination in Drosophila 果蝇)</h3>
+<p><u>X:A Ratio is : The Ratio of X Chromosomes to Autosomes</u></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116143916560.png" srcset="/img/loading.gif" alt="image-20191116143916560" /></p>
+<h3 id="4-the-haplo-diplo-system"><a class="markdownIt-Anchor" href="#4-the-haplo-diplo-system"></a> 4. The Haplo-Diplo system</h3>
+<p>Honeybee use this system</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116143947051.png" srcset="/img/loading.gif" alt="image-20191116143947051" style="zoom:67%;" />
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116144017475.png" srcset="/img/loading.gif" alt="image-20191116144017475" /></p>
+<p>Genetic relatedness: if a queen bee mates with only one drone, any two of her daughters will share, on average, 75% of their genes.</p>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Genetics/">Genetics</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。技术力比较低，多多担待啦！<br/ >  If anything wrong, please leave a comment or contact me.<br/> If the utterances comment system does not show up, please refresh or use VPN.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/25/L01%20The%20Science%20of%20Genetics/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L01 The Science of Genetics</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/25/L03%20Principles%20of%20Inheritance/">
+                        <span class="hidden-mobile">L03 Principles of Inheritance</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <script type="text/javascript">
+    function loadUtterances() {
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.defer = false
+      s.setAttribute('repo', 'zhenyumi/comment_hexo');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('theme', 'github-light');
+      s.setAttribute('crossorigin', 'anonymous');
+      var e = document.getElementsByTagName('script')[0];
+      e.parentNode.insertBefore(s, e);
+    }
+    createObserver(loadUtterances, 'comments')
+  </script>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
+</script>
+
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             : 总访客数 ？人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L02 Cellular Reproduction&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>
