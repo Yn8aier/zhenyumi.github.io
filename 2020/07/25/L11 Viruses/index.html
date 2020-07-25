@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L11 Viruses - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Microbiology/20200725_%E7%A9%BA%E3%81%AE%E6%97%85%281%29.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-25 23:16">
+      2020年7月25日 晚上
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      990 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      4
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：23 分钟前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-virus-taxonomy-and-phylogeny"><span class="post-toc-text"> 一、Virus Taxonomy and Phylogeny</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#virus-classification"><span class="post-toc-text"> Virus Classification</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#alternative-classification-scheme"><span class="post-toc-text"> Alternative Classification Scheme</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-different-virus-types"><span class="post-toc-text"> 二、Different Virus Types</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#double-stranded-dna-viruses"><span class="post-toc-text"> Double-stranded DNA Viruses</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-bacteriophage-t4-a-virulent-bacteriophage"><span class="post-toc-text"> 1. Bacteriophage T4: A Virulent Bacteriophage</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#lifecycle-of-t4"><span class="post-toc-text"> Lifecycle of T4</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#the-t4-genome"><span class="post-toc-text"> The T4 Genome</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#t4-dna"><span class="post-toc-text"> T4 DNA</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#release-of-phage-particles"><span class="post-toc-text"> Release of Phage Particles</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-bacteriophage-lambda-a-temperate-bacteriophage"><span class="post-toc-text"> 2. Bacteriophage Lambda: A Temperate Bacteriophage</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#lambda-phage"><span class="post-toc-text"> Lambda Phage</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#regulatory-proteins-determine-lysogeny-or-the-lytic-cycle"><span class="post-toc-text"> Regulatory Proteins Determine Lysogeny or the Lytic Cycle</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-the-decision-making-process"><span class="post-toc-text"> (1) The Decision Making Process</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#how-does-induction-reverse-lysogeny"><span class="post-toc-text"> How Does Induction Reverse Lysogeny?</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-other-temperate-phages"><span class="post-toc-text"> 3. Other Temperate Phages</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-archaeal-viruses"><span class="post-toc-text"> 4. Archaeal Viruses</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-herpesviruses-孢疹病毒"><span class="post-toc-text"> 5. Herpesviruses 孢疹病毒</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#herpesvirus-virons"><span class="post-toc-text"> Herpesvirus Virons</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#the-life-cycle-of-hsv-1"><span class="post-toc-text"> The Life Cycle of HSV-1</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#single-stranded-dna-viruses"><span class="post-toc-text"> Single-Stranded DNA Viruses</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-bacteriophage-φx174"><span class="post-toc-text"> 1. Bacteriophage φX174</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#double-stranded-rna-viruses"><span class="post-toc-text"> Double-Stranded RNA Viruses</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-reproduction-of-rna-phages"><span class="post-toc-text"> 1. Reproduction of RNA Phages</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-rotavirus-轮状病毒"><span class="post-toc-text"> 2. Rotavirus 轮状病毒</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#life-cycle-of-rotavirus"><span class="post-toc-text"> Life-cycle of Rotavirus</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#plus-strand-rna-viruses"><span class="post-toc-text"> Plus-Strand RNA Viruses</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-poliovirus-脊髓灰质炎病毒小儿麻痹病毒"><span class="post-toc-text"> 1. Poliovirus 脊髓灰质炎病毒；小儿麻痹病毒</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#poliovirus-life-cycle"><span class="post-toc-text"> Poliovirus Life Cycle</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-tobacco-mosaic-virus-tmv"><span class="post-toc-text"> 2. Tobacco Mosaic Virus  (TMV)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#minus-sense-rna-viruses"><span class="post-toc-text"> Minus-Sense RNA Viruses</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-negative-strand-viruses"><span class="post-toc-text"> 1. Negative-Strand Viruses</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-influenza-virus"><span class="post-toc-text"> 2. Influenza Virus</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#reverse-transcribing-dna-viruses"><span class="post-toc-text"> Reverse Transcribing DNA Viruses</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-hepatitis-b-virus"><span class="post-toc-text"> 1. Hepatitis B Virus</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#retroviruses"><span class="post-toc-text"> Retroviruses</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-hiv-1-life-cycle"><span class="post-toc-text"> 1. HIV-1 life cycle</span></a></li></ol></li></ol></li></ol>
+
+              <h1 id="一-virus-taxonomy-and-phylogeny"><a class="markdownIt-Anchor" href="#一-virus-taxonomy-and-phylogeny"></a> 一、Virus Taxonomy and Phylogeny</h1>
+<p>Lack of information on origin and evolutionary history makes viral classification difficult</p>
+<p>A uniform classification system developed in 1971 by the <strong>International Committee for Taxonomy of Viruses (ICTV)</strong></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191122153358476.png" srcset="/img/loading.gif" alt="image-20191122153358476" /></p>
+<h2 id="virus-classification"><a class="markdownIt-Anchor" href="#virus-classification"></a> Virus Classification</h2>
+<p>Classification based on numerous characteristics</p>
+<ol>
+<li>
+<p>nucleic acid type</p>
+</li>
+<li>
+<p>presence or absence of envelope</p>
+</li>
+<li>
+<p>capsid symmetry</p>
+</li>
+<li>
+<p>dimensions of virion and capsid（病毒粒子和衣壳的尺寸）</p>
+</li>
+</ol>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191122153445493.png" srcset="/img/loading.gif" alt="image-20191122153445493" style="zoom: 67%;" />
+<h2 id="alternative-classification-scheme"><a class="markdownIt-Anchor" href="#alternative-classification-scheme"></a> Alternative Classification Scheme</h2>
+<p><strong>David Baltimore</strong></p>
+<ul>
+<li>focuses on viral genome and process used to synthesize viral mRNA</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Double-stranded (ds) DNA viruses</td>
+<td>Genome replication: dsDNA -&gt; dsDNA <br />mRNA synthesis: dsDNA -&gt; mRNA</td>
+</tr>
+<tr>
+<td>Single-stranded (ss) DNA viruses</td>
+<td>Genome replication: ssDNA -&gt; dsDNA -&gt; ssDNA <br />mRNA synthesis: ssDNA -&gt; dsDNA -&gt; mRNA</td>
+</tr>
+<tr>
+<td>Double-stranded RNA viruses</td>
+<td>Genome replication: dsRNA -&gt; ssRNA -&gt; dsRNA <br />mRNA synthesis: dsRNA -&gt; mRNA</td>
+</tr>
+<tr>
+<td>Plus-strand RNA (+RNA) viruses</td>
+<td>Genome replication: +RNA -&gt; –RNA -&gt; +RNA <br />mRNA synthesis: +RNA = mRNA -&gt; –RNA -&gt; mRNA</td>
+</tr>
+<tr>
+<td>Negative-strand RNA (–RNA) viruses</td>
+<td>Genome replication: –RNA -&gt; +RNA -&gt; –RNA <br />mRNA synthesis: –RNA -&gt; mRNA</td>
+</tr>
+<tr>
+<td>Retroviruses</td>
+<td>Genome replication: ssRNA -&gt; dsDNA -&gt; ssRNA <br />mRNA synthesis: ssRNA -&gt; dsDNA -&gt; mRNA</td>
+</tr>
+<tr>
+<td>Reverse transcribing DNA viruses</td>
+<td>Genome replication: dsDNA -&gt; ssRNA -&gt; dsDNA <br />mRNA synthesis: dsDNA -&gt; mRNA</td>
+</tr>
+</tbody>
+</table>
+<h1 id="二-different-virus-types"><a class="markdownIt-Anchor" href="#二-different-virus-types"></a> 二、Different Virus Types</h1>
+<h2 id="double-stranded-dna-viruses"><a class="markdownIt-Anchor" href="#double-stranded-dna-viruses"></a> Double-stranded DNA Viruses</h2>
+<p>Largest group of known viruses</p>
+<ul>
+<li>most bacteriophages (噬菌体), herpesviruses（疱疹病毒）, poxviruses（痘病毒）, insect viruses</li>
+</ul>
+<p>Some rely on host’s DNA/RNA polymerases</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191122160516020.png" srcset="/img/loading.gif" alt="image-20191122160516020" style="zoom:50%;" />
+<h3 id="1-bacteriophage-t4-a-virulent-bacteriophage"><a class="markdownIt-Anchor" href="#1-bacteriophage-t4-a-virulent-bacteriophage"></a> 1. Bacteriophage T4: A Virulent Bacteriophage</h3>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191122160638443.png" srcset="/img/loading.gif" alt="image-20191122160638443" /></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191122160644451.png" srcset="/img/loading.gif" alt="image-20191122160644451" style="zoom:67%;" />
+<h4 id="lifecycle-of-t4"><a class="markdownIt-Anchor" href="#lifecycle-of-t4"></a> Lifecycle of T4</h4>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191122160711087.png" srcset="/img/loading.gif" alt="image-20191122160711087" /></p>
+<h4 id="the-t4-genome"><a class="markdownIt-Anchor" href="#the-t4-genome"></a> The T4 Genome</h4>
+<p>Codes for replication-related products including</p>
+<ul>
+<li>
+<p>protein subunits of its replisome</p>
+</li>
+<li>
+<p>enzymes needed for DNA synthesis</p>
+</li>
+</ul>
+<p>synthesis of <strong>hydroxymethylcytosine</strong> (HMC), a modified nucleotide replacing cytosine in T4 DNA</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191122161206418.png" srcset="/img/loading.gif" alt="image-20191122161206418" style="zoom:67%;" />
+<h4 id="t4-dna"><a class="markdownIt-Anchor" href="#t4-dna"></a> T4 DNA</h4>
+<p>HMC is then chemically modified by glucosylation</p>
+<ul>
+<li>
+<p>protects T4 phage DNA from <em>E. coli</em> restriction enzymes</p>
+</li>
+<li>
+<p>restriction is a bacterial defense mechanism used against bacteriophage infection</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191122161509285.png" srcset="/img/loading.gif" alt="image-20191122161509285" style="zoom: 50%;" />
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123135153252.png" srcset="/img/loading.gif" alt="image-20191123135153252" /></p>
+<h4 id="release-of-phage-particles"><a class="markdownIt-Anchor" href="#release-of-phage-particles"></a> Release of Phage Particles</h4>
+<p>In T4 - <em>E. coli</em> system, ~150 viral particles are released</p>
+<p>two proteins are involved in process</p>
+<ul>
+<li>
+<p><strong>T4 lysozyme</strong> attacks the <em>E. coli</em> cell wall</p>
+</li>
+<li>
+<p><strong>Holin</strong> creates holes in the <em>E. coli</em> plasma membrane</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123135251485.png" srcset="/img/loading.gif" alt="image-20191123135251485" style="zoom: 50%;" />
+<h3 id="2-bacteriophage-lambda-a-temperate-bacteriophage"><a class="markdownIt-Anchor" href="#2-bacteriophage-lambda-a-temperate-bacteriophage"></a> 2. Bacteriophage Lambda: A Temperate Bacteriophage</h3>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123135326562.png" srcset="/img/loading.gif" alt="image-20191123135326562" style="zoom:50%;" />
+<p>Phage lambda (λ) can enter either the lytic or lysogenic cycle upon infection of <em>E. coli</em></p>
+<h4 id="lambda-phage"><a class="markdownIt-Anchor" href="#lambda-phage"></a> Lambda Phage</h4>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123135351052.png" srcset="/img/loading.gif" alt="image-20191123135351052" style="zoom:50%;" />
+<p>Linear ds DNA genome with cohesive ends</p>
+<ul>
+<li>
+<p>circularizes upon injection into host cytoplasm</p>
+</li>
+<li>
+<p>40 genes, genes clustered together by function</p>
+</li>
+<li>
+<p>transcription from different promoters determine if lytic cycle or lysogeny occurs</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123135835061.png" srcset="/img/loading.gif" alt="image-20191123135835061" style="zoom: 33%;" />
+<h4 id="regulatory-proteins-determine-lysogeny-or-the-lytic-cycle"><a class="markdownIt-Anchor" href="#regulatory-proteins-determine-lysogeny-or-the-lytic-cycle"></a> Regulatory Proteins Determine Lysogeny or the Lytic Cycle</h4>
+<p>Function as repressors, activators, or both</p>
+<ul>
+<li><strong>cII</strong> activator
+<ul>
+<li>cII levels high early in infection – lysogeny</li>
+<li>cII levels not high early in infection – lytic cycle</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123135959074.png" srcset="/img/loading.gif" alt="image-20191123135959074" /></p>
+<h5 id="1-the-decision-making-process"><a class="markdownIt-Anchor" href="#1-the-decision-making-process"></a> (1) The Decision Making Process</h5>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123140022619.png" srcset="/img/loading.gif" alt="image-20191123140022619" /></p>
+<p>cI gene is the λ repressor.</p>
+<h4 id="how-does-induction-reverse-lysogeny"><a class="markdownIt-Anchor" href="#how-does-induction-reverse-lysogeny"></a> How Does Induction Reverse Lysogeny?</h4>
+<p>Triggered by drop in λ repressor levels</p>
+<ul>
+<li>due to UV light, mutagenic chemicals
+<ul>
+<li>DNA damage alters host cell RecA protein interacting with λ repressor, causing repressor to cleave itself</li>
+</ul>
+</li>
+</ul>
+<p>Transcription increases</p>
+<ul>
+<li>
+<p><em>xis</em> gene, excisionase increases and binds integrase</p>
+<ul>
+<li>reverse integration</li>
+</ul>
+</li>
+<li>
+<p>Cro protein levels increase</p>
+<ul>
+<li>synthesis of λ repressor blocked</li>
+<li>protein Q increases, lytic cycle proceeds</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-other-temperate-phages"><a class="markdownIt-Anchor" href="#3-other-temperate-phages"></a> 3. Other Temperate Phages</h3>
+<p>Bacteriophage Mu</p>
+<p><em>E. coli</em> phage P1</p>
+<ul>
+<li>lysogenic cycle occurs in absence of integration; P1 and <em>E. coli</em> replicate together</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123140503895.png" srcset="/img/loading.gif" alt="image-20191123140503895" style="zoom: 67%;" />
+<h3 id="4-archaeal-viruses"><a class="markdownIt-Anchor" href="#4-archaeal-viruses"></a> 4. Archaeal Viruses</h3>
+<p>All known archaeal viruses have dsDNA genomes (1 exception with ssDNA genome)</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123140552233.png" srcset="/img/loading.gif" alt="image-20191123140552233" style="zoom:67%;" />
+<h3 id="5-herpesviruses-孢疹病毒"><a class="markdownIt-Anchor" href="#5-herpesviruses-孢疹病毒"></a> 5. Herpesviruses 孢疹病毒</h3>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123140759637.png" srcset="/img/loading.gif" alt="image-20191123140759637" /></p>
+<h4 id="herpesvirus-virons"><a class="markdownIt-Anchor" href="#herpesvirus-virons"></a> <strong>Herpesvirus Virons</strong></h4>
+<p>Icosahedral（二十面的）, 120–200 nm,  enveloped, surface spikes</p>
+<p>Linear dsDNA genomes, 50–100 genes</p>
+<p>50,000–200,000 virions produced/cell</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123140854102.png" srcset="/img/loading.gif" alt="image-20191123140854102" style="zoom:33%;" />
+<h4 id="the-life-cycle-of-hsv-1"><a class="markdownIt-Anchor" href="#the-life-cycle-of-hsv-1"></a> The Life Cycle of HSV-1</h4>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123141326686.png" srcset="/img/loading.gif" alt="image-20191123141326686" /></p>
+<h2 id="single-stranded-dna-viruses"><a class="markdownIt-Anchor" href="#single-stranded-dna-viruses"></a> Single-Stranded DNA Viruses</h2>
+<h3 id="1-bacteriophage-φx174"><a class="markdownIt-Anchor" href="#1-bacteriophage-φx174"></a> 1. Bacteriophage φX174</h3>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123141457630.png" srcset="/img/loading.gif" alt="image-20191123141457630" style="zoom:50%;" />
+<h2 id="double-stranded-rna-viruses"><a class="markdownIt-Anchor" href="#double-stranded-rna-viruses"></a> Double-Stranded RNA Viruses</h2>
+<h3 id="1-reproduction-of-rna-phages"><a class="markdownIt-Anchor" href="#1-reproduction-of-rna-phages"></a> 1. Reproduction of RNA Phages</h3>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123141550195.png" srcset="/img/loading.gif" alt="image-20191123141550195" /></p>
+<p>RNA-dependent RNA polymerase completes life cycles</p>
+<ul>
+<li>replicase and transcriptase activities</li>
+</ul>
+<h3 id="2-rotavirus-轮状病毒"><a class="markdownIt-Anchor" href="#2-rotavirus-轮状病毒"></a> 2. Rotavirus 轮状病毒</h3>
+<p>轮状病毒是一种致婴儿或新生畜胃肠炎的病毒</p>
+<p>Human rotavirus kills &gt;600,000 children worldwide each year</p>
+<ul>
+<li>transmitted by fecal material</li>
+</ul>
+<p>Virion</p>
+<p>wheel-like appearance, non-enveloped, segmented genome, dsRNA</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123141707291.png" srcset="/img/loading.gif" alt="image-20191123141707291" style="zoom:67%;" />
+<h4 id="life-cycle-of-rotavirus"><a class="markdownIt-Anchor" href="#life-cycle-of-rotavirus"></a> Life-cycle of Rotavirus</h4>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123142105994.png" srcset="/img/loading.gif" alt="image-20191123142105994" /></p>
+<h2 id="plus-strand-rna-viruses"><a class="markdownIt-Anchor" href="#plus-strand-rna-viruses"></a> Plus-Strand RNA Viruses</h2>
+<p>Replicate in cytoplasm and synthesize RNA dependent RNA polymerase</p>
+<ul>
+<li>synthesizes negative strand RNA</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123142220860.png" srcset="/img/loading.gif" alt="image-20191123142220860" /></p>
+<h3 id="1-poliovirus-脊髓灰质炎病毒小儿麻痹病毒"><a class="markdownIt-Anchor" href="#1-poliovirus-脊髓灰质炎病毒小儿麻痹病毒"></a> 1. Poliovirus 脊髓灰质炎病毒；小儿麻痹病毒</h3>
+<p>Causative agent of <strong>poliomyelitis (脊髓灰质炎,小儿麻痹症)</strong></p>
+<ul>
+<li>
+<p>transmitted by ingestion</p>
+</li>
+<li>
+<p>may cripple and paralyze</p>
+</li>
+<li>
+<p>vaccine is eradicating the disease</p>
+</li>
+</ul>
+<p>Virion</p>
+<ul>
+<li>nonenveloped</li>
+</ul>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123142435491.png" srcset="/img/loading.gif" alt="image-20191123142435491" /></p>
+<h4 id="poliovirus-life-cycle"><a class="markdownIt-Anchor" href="#poliovirus-life-cycle"></a> Poliovirus Life Cycle</h4>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123142511664.png" srcset="/img/loading.gif" alt="image-20191123142511664" style="zoom:67%;" />
+<h3 id="2-tobacco-mosaic-virus-tmv"><a class="markdownIt-Anchor" href="#2-tobacco-mosaic-virus-tmv"></a> 2. Tobacco Mosaic Virus  (TMV)</h3>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123142543384.png" srcset="/img/loading.gif" alt="image-20191123142543384" style="zoom: 50%;" />
+<p>Most plant viruses are plus stranded RNA</p>
+<p>TMV</p>
+<ul>
+<li>
+<p>filamentous, helical virion</p>
+</li>
+<li>
+<p>TMV genome translated into 2 proteins, one with replicase and transcriptase activities</p>
+</li>
+<li>
+<p>coat protein</p>
+</li>
+</ul>
+<h2 id="minus-sense-rna-viruses"><a class="markdownIt-Anchor" href="#minus-sense-rna-viruses"></a> Minus-Sense RNA Viruses</h2>
+<p>Enveloped virions, pleomorphic shape</p>
+<p>Segmented and nonsegmented genomes</p>
+<ol>
+<li>Rhabdoviridae 弹状病毒科 – rabies virus (狂犬病;恐水症)</li>
+<li>Filoviridae 丝状病毒科 – Ebola (埃博拉病毒) and Marburg (青猴病；马尔堡病) viruses</li>
+<li>Paramyxoviridae 副粘病毒科 – measles (麻疹；风疹) virus</li>
+<li>Bunyaviridae 本雅病毒科 – segmented (种族隔离的) , hantaviruses (汉坦病毒)</li>
+<li>Orthomyxoviridae 正粘病毒科 – segmented, influenza (流行性感冒) virus</li>
+</ol>
+<h3 id="1-negative-strand-viruses"><a class="markdownIt-Anchor" href="#1-negative-strand-viruses"></a> 1. Negative-Strand Viruses</h3>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123143257832.png" srcset="/img/loading.gif" alt="image-20191123143257832" style="zoom: 67%;" />
+<p>Cannot serve as mRNA to form viral proteins</p>
+<p>RNA-dependent RNA polymerase</p>
+<h3 id="2-influenza-virus"><a class="markdownIt-Anchor" href="#2-influenza-virus"></a> 2. Influenza Virus</h3>
+<p>Causative (成为原因的) agent of the flu</p>
+<ul>
+<li>transmitted by inhalation or ingestion</li>
+</ul>
+<p>Three types of viruses – A, B, and C</p>
+<p>Seven to eight segments of linear RNA</p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123143334781.png" srcset="/img/loading.gif" alt="image-20191123143334781" style="zoom:33%;" />
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123143354214.png" srcset="/img/loading.gif" alt="image-20191123143354214" /></p>
+<h2 id="reverse-transcribing-dna-viruses"><a class="markdownIt-Anchor" href="#reverse-transcribing-dna-viruses"></a> Reverse Transcribing DNA Viruses</h2>
+<h3 id="1-hepatitis-b-virus"><a class="markdownIt-Anchor" href="#1-hepatitis-b-virus"></a> 1. Hepatitis B Virus</h3>
+<p>Circular, dsDNA genome (3.2 kb, 4 genes)</p>
+<ul>
+<li>
+<p>one complete, nicked strand</p>
+</li>
+<li>
+<p>complementary strand has large gap (incomplete)</p>
+</li>
+</ul>
+<p>Viral infection</p>
+<ul>
+<li>
+<p>gapped DNA released into the nucleus</p>
+</li>
+<li>
+<p>host repair enzymes repair gap</p>
+</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123143451586.png" srcset="/img/loading.gif" alt="image-20191123143451586" style="zoom:50%;" />
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123143504100.png" srcset="/img/loading.gif" alt="image-20191123143504100" /></p>
+<p><strong>rcDNA</strong>: relaxed circular DNA</p>
+<p><strong>cccDNA</strong>: covalently closed circular DNA</p>
+<h2 id="retroviruses"><a class="markdownIt-Anchor" href="#retroviruses"></a> Retroviruses</h2>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123143619418.png" srcset="/img/loading.gif" alt="image-20191123143619418" /></p>
+<p>Convert ssRNA into dsDNA using reverse transcriptase</p>
+<p>dsDNA integrates into host cell genome and serves as template for mRNA synthesis and genome synthesis</p>
+<h3 id="1-hiv-1-life-cycle"><a class="markdownIt-Anchor" href="#1-hiv-1-life-cycle"></a> 1. HIV-1 life cycle</h3>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123143648095.png" srcset="/img/loading.gif" alt="image-20191123143648095" /></p>
+<p>Reverse transcriptase</p>
+<ul>
+<li>RNA dependent DNA polymerase</li>
+<li>ribonuclease RNase H</li>
+<li>DNA dependent DNA polymerase</li>
+<li>error prone (容易出错), has no proofreading capability</li>
+</ul>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191123144837046.png" srcset="/img/loading.gif" alt="image-20191123144837046" style="zoom:50%;" />
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Microbiology/">Microbiology</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。技术力比较低，多多担待啦！<br/ >  If anything wrong, please leave a comment or contact me.<br/> If the utterances comment system does not show up, please refresh or use VPN.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/25/L10%20Claffications%20And%20Introduction%20of%20Some%20Bacterias/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L10 Claffications And Introduction of Some Bacterias</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/25/L12%20Innate%20Host%20%20Resistance/">
+                        <span class="hidden-mobile">L12 Innate Host Resistance</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <script type="text/javascript">
+    function loadUtterances() {
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.defer = false
+      s.setAttribute('repo', 'zhenyumi/comment_hexo');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('theme', 'github-light');
+      s.setAttribute('crossorigin', 'anonymous');
+      var e = document.getElementsByTagName('script')[0];
+      e.parentNode.insertBefore(s, e);
+    }
+    createObserver(loadUtterances, 'comments')
+  </script>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
+</script>
+
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             : 总访客数 ？人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L11 Viruses&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>
