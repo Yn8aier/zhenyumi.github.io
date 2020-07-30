@@ -19,7 +19,7 @@
   <meta name="description" content="">
   <meta name="author" content="向海">
   <meta name="keywords" content="">
-  <title>03. R &lt;- 基本统计分析（施工中） - 鹘横海</title>
+  <title>03. R &lt;- 基本统计分析Ⅰ - 简要分析、频数表和列联表 - 鹘横海</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -166,7 +166,7 @@
 </nav>
 
     <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center;
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200730_photo_2020-07-13_21-53-55.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.7k 字
+      5.6k 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9
+      21
        分钟
     </span>
   
@@ -240,19 +240,19 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：4 天前
+                  本文最后更新于：7 分钟前
                 
               </p>
             
             <article class="markdown-body">
               <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-描述性统计分析"><span class="post-toc-text"> 一、描述性统计分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总体计算样本描述性统计量"><span class="post-toc-text"> 总体计算样本描述性统计量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-summary-fivenum-一步获得常见统计量"><span class="post-toc-text"> 1. summary &amp; fivenum 一步获得常见统计量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-sapply-apply-通过自定义函数进行分析"><span class="post-toc-text"> 2. sapply &amp; apply 通过（自定义）函数进行分析</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-第三方包提供的其他方法"><span class="post-toc-text"> 3. 第三方包提供的其他方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#hmisc"><span class="post-toc-text"> Hmisc</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pastecs"><span class="post-toc-text"> pastecs</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#psych"><span class="post-toc-text"> psych</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分组计算描述性统计量"><span class="post-toc-text"> 分组计算描述性统计量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-整合aggregate和重塑reshape数据"><span class="post-toc-text"> 1. 整合(Aggregate)和重塑(reshape)数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#transposition-转置"><span class="post-toc-text"> Transposition 转置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#aggregate-整合"><span class="post-toc-text"> Aggregate 整合</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#packagereshape2"><span class="post-toc-text"> Package：reshape2</span></a></li></ol></li></ol></li></ol></li></ol>
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-描述性统计分析"><span class="post-toc-text"> 一、描述性统计分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总体计算样本描述性统计量"><span class="post-toc-text"> 总体计算样本描述性统计量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-summary-fivenum-一步获得常见统计量"><span class="post-toc-text"> 1. summary &amp; fivenum 一步获得常见统计量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-sapply-apply-通过自定义函数进行分析"><span class="post-toc-text"> 2. sapply &amp; apply 通过（自定义）函数进行分析</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-第三方包提供的其他方法"><span class="post-toc-text"> 3. 第三方包提供的其他方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#hmisc"><span class="post-toc-text"> Hmisc</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pastecs"><span class="post-toc-text"> pastecs</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#psych"><span class="post-toc-text"> psych</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分组计算描述性统计量"><span class="post-toc-text"> 分组计算描述性统计量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-整合aggregate和重塑reshape数据"><span class="post-toc-text"> 1. 整合(Aggregate)和重塑(reshape)数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#transposition-转置"><span class="post-toc-text"> Transposition 转置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用-aggregate-by-整合"><span class="post-toc-text"> 使用 aggregate &amp; by 整合</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#aggregate"><span class="post-toc-text"> aggregate</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#by"><span class="post-toc-text"> by</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#packagereshape2"><span class="post-toc-text"> Package：reshape2</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-频数表和列联表"><span class="post-toc-text"> 2. 频数表和列联表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#生成频数表"><span class="post-toc-text"> 生成频数表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-一维列联表"><span class="post-toc-text"> (1) 一维列联表</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-二维列联表"><span class="post-toc-text"> (2) 二维列联表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#函数table"><span class="post-toc-text"> 函数table()</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#packagegmodels"><span class="post-toc-text"> Package：gmodels</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-多维列联表"><span class="post-toc-text"> (3) 多维列联表</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
 
               <p>这篇文章主要讲解如何对一些数据进行基本的统计学分析</p>
 <h1 id="一-描述性统计分析"><a class="markdownIt-Anchor" href="#一-描述性统计分析"></a> 一、描述性统计分析</h1>
 <p>针对连续型数据，一般在分析的初始阶段需要获得它的中心趋势、变化性和分布形状。</p>
 <p>在这个部分，使用的示例数据为 <code>mtcars</code></p>
-<img src="pics/image-20200725175446590.png" srcset="/img/loading.gif" alt="image-20200725175446590" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200725175446590.png" srcset="/img/loading.gif" alt="image-20200725175446590" style="zoom:67%;" />
 <h2 id="总体计算样本描述性统计量"><a class="markdownIt-Anchor" href="#总体计算样本描述性统计量"></a> 总体计算样本描述性统计量</h2>
 <h3 id="1-summary-fivenum-一步获得常见统计量"><a class="markdownIt-Anchor" href="#1-summary-fivenum-一步获得常见统计量"></a> 1. summary &amp; fivenum 一步获得常见统计量</h3>
 <p>对于一个数据集，可以使用 <code>summary()</code> 来计算常用的描述性统计量：</p>
@@ -331,7 +331,7 @@ kurtosis -<span class="hljs-number">0.372766</span>  -<span class="hljs-number">
 myvars &lt;- c(<span class="hljs-string">"mpg"</span>, <span class="hljs-string">"hp"</span>, <span class="hljs-string">"wt"</span>)
 describe(mtcars[myvars])</code></pre></div>
 <p>结果：</p>
-<p><img src="pics/image-20200725182442001.png" srcset="/img/loading.gif" alt="image-20200725182442001" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200725182442001.png" srcset="/img/loading.gif" alt="image-20200725182442001" /></p>
 <h4 id="pastecs"><a class="markdownIt-Anchor" href="#pastecs"></a> pastecs</h4>
 <p><code>pastecs</code>包中有一个名为<code>stat.desc()</code>的函数，它可以计算种类繁多的描述性统计量。使用格式为：</p>
 <p><code>stat.desc(x, basic=TRUE, desc=TRUE, norm=FALSE, p=0.95)</code></p>
@@ -425,7 +425,8 @@ Hornet Sportabout <span class="hljs-number">18.7</span>   <span class="hljs-numb
     Mazda RX4 Mazda RX4 Wag Datsun <span class="hljs-number">710</span> Hornet <span class="hljs-number">4</span> Drive Hornet Sportabout
 mpg        <span class="hljs-number">21</span>            <span class="hljs-number">21</span>       <span class="hljs-number">22.8</span>           <span class="hljs-number">21.4</span>              <span class="hljs-number">18.7</span>
 cyl         <span class="hljs-number">6</span>             <span class="hljs-number">6</span>        <span class="hljs-number">4.0</span>            <span class="hljs-number">6.0</span>               <span class="hljs-number">8.0</span></code></pre></div>
-<h4 id="aggregate-整合"><a class="markdownIt-Anchor" href="#aggregate-整合"></a> Aggregate 整合</h4>
+<h4 id="使用-aggregate-by-整合"><a class="markdownIt-Anchor" href="#使用-aggregate-by-整合"></a> 使用 aggregate &amp; by 整合</h4>
+<h5 id="aggregate"><a class="markdownIt-Anchor" href="#aggregate"></a> aggregate</h5>
 <p><code>aggregate</code> 函数是用来对数据进行分组（折叠）的函数。</p>
 <p>在R中使用一个或多个by变量和一个预先定义好的函数来折叠（collapse）数据是比较容易的。调用格式为：</p>
 <p><code>aggregate(x, by, FUN)</code></p>
@@ -484,6 +485,65 @@ cyl         <span class="hljs-number">6</span>             <span class="hljs-num
 <span class="hljs-number">3</span>        <span class="hljs-number">16</span>            <span class="hljs-literal">F</span>    e  <span class="hljs-number">16</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">160</span>
 <span class="hljs-number">4</span>        <span class="hljs-number">16</span>            M    b  <span class="hljs-number">16</span>      M    <span class="hljs-number">170</span>
 <span class="hljs-number">5</span>        <span class="hljs-number">18</span>            M    a  <span class="hljs-number">18</span>      M    <span class="hljs-number">180</span></code></pre></div>
+<h5 id="by"><a class="markdownIt-Anchor" href="#by"></a> by</h5>
+<p><code>aggregate()</code>仅允许在每次调用中使用平均数、标准差这样的单返回值函数。它无法一次返回若干个统计量。要完成这项任务，可以使用<code>by()</code>函数。格式为：</p>
+<p><code>by(data, INDICES, FUN)</code></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>是一个数据框或矩阵</td>
+</tr>
+<tr>
+<td>INDICES</td>
+<td>一个因子或因子组成的列表，定义了分组</td>
+</tr>
+<tr>
+<td>FUN</td>
+<td>任意函数</td>
+</tr>
+</tbody>
+</table>
+<p>例：</p>
+<p>构建示例用数据集：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; name &lt;- c(<span class="hljs-string">'a'</span>,<span class="hljs-string">'h'</span>,<span class="hljs-string">'b'</span>,<span class="hljs-string">'c'</span>,<span class="hljs-string">'d'</span>,<span class="hljs-string">'e'</span>)
+&gt; age &lt;- c(<span class="hljs-number">18</span>,<span class="hljs-number">16</span>,<span class="hljs-number">12</span>,<span class="hljs-number">14</span>,<span class="hljs-number">16</span>,<span class="hljs-number">14</span>)
+&gt; gender &lt;- c(<span class="hljs-string">'M'</span>,<span class="hljs-string">'M'</span>,<span class="hljs-string">"F"</span>,<span class="hljs-string">'F'</span>,<span class="hljs-string">"F"</span>,<span class="hljs-string">'F'</span>)
+&gt; height &lt;- c(<span class="hljs-number">180</span>,<span class="hljs-number">170</span>,<span class="hljs-number">120</span>,<span class="hljs-number">140</span>,<span class="hljs-number">160</span>,<span class="hljs-number">150</span>)
+&gt; frame1 &lt;- data.frame(name=name,age=age,gender=gender,height=height)
+&gt; frame1
+  name age gender height
+<span class="hljs-number">1</span>    a  <span class="hljs-number">18</span>      M    <span class="hljs-number">180</span>
+<span class="hljs-number">2</span>    b  <span class="hljs-number">16</span>      M    <span class="hljs-number">170</span>
+<span class="hljs-number">3</span>    c  <span class="hljs-number">12</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">120</span>
+<span class="hljs-number">4</span>    d  <span class="hljs-number">14</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">140</span>
+<span class="hljs-number">5</span>    e  <span class="hljs-number">16</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">160</span>
+<span class="hljs-number">6</span>    f  <span class="hljs-number">14</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">150</span></code></pre></div>
+<p>分组，并且使用预设的<code>summar</code>函数进行初步分析：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; by(frame1, frame1$gender, summary)
+frame1$gender: <span class="hljs-literal">F</span>
+     name                age          gender              height     
+ Length:<span class="hljs-number">4</span>           Min.   :<span class="hljs-number">12.0</span>   Length:<span class="hljs-number">4</span>           Min.   :<span class="hljs-number">120.0</span>  
+ Class :character   1st Qu.:<span class="hljs-number">13.5</span>   Class :character   1st Qu.:<span class="hljs-number">135.0</span>  
+ Mode  :character   Median :<span class="hljs-number">14.0</span>   Mode  :character   Median :<span class="hljs-number">145.0</span>  
+                    Mean   :<span class="hljs-number">14.0</span>                      Mean   :<span class="hljs-number">142.5</span>  
+                    3rd Qu.:<span class="hljs-number">14.5</span>                      3rd Qu.:<span class="hljs-number">152.5</span>  
+                    Max.   :<span class="hljs-number">16.0</span>                      Max.   :<span class="hljs-number">160.0</span>  
+--------------------------------------------------------------------------------- 
+frame1$gender: M
+     name                age          gender              height     
+ Length:<span class="hljs-number">2</span>           Min.   :<span class="hljs-number">16.0</span>   Length:<span class="hljs-number">2</span>           Min.   :<span class="hljs-number">170.0</span>  
+ Class :character   1st Qu.:<span class="hljs-number">16.5</span>   Class :character   1st Qu.:<span class="hljs-number">172.5</span>  
+ Mode  :character   Median :<span class="hljs-number">17.0</span>   Mode  :character   Median :<span class="hljs-number">175.0</span>  
+                    Mean   :<span class="hljs-number">17.0</span>                      Mean   :<span class="hljs-number">175.0</span>  
+                    3rd Qu.:<span class="hljs-number">17.5</span>                      3rd Qu.:<span class="hljs-number">177.5</span>  
+                    Max.   :<span class="hljs-number">18.0</span>                      Max.   :<span class="hljs-number">180.0</span></code></pre></div>
 <h4 id="packagereshape2"><a class="markdownIt-Anchor" href="#packagereshape2"></a> Package：reshape2</h4>
 <p><code>reshape2</code>包是一套重构和整合数据集的绝妙的万能工具。</p>
 <p>大致说来，你需要首先将数据融合（melt），以使每一行都是唯一的标识符变量组合。然后将数据重铸（cast）为你想要的任何形状。在重铸过程中，你可以使用任何函数对数据进行整合。</p>
@@ -540,7 +600,423 @@ cyl         <span class="hljs-number">6</span>             <span class="hljs-num
 </tr>
 </tbody>
 </table>
-<img src="pics/image-20200728195014696.png" srcset="/img/loading.gif" alt="image-20200728195014696" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200728195014696.png" srcset="/img/loading.gif" alt="image-20200728195014696" style="zoom:67%;" />
+<h3 id="2-频数表和列联表"><a class="markdownIt-Anchor" href="#2-频数表和列联表"></a> 2. 频数表和列联表</h3>
+<p>本节中的数据来自<code>vcd</code>包中的<code>Arthritis</code>数据集。这份数据来自<strong>Kock &amp; Edward （1988）</strong>，表示了一项风湿性关节炎新疗法的双盲临床实验的结果。前几个观测是这样的：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(vcd)
+载入需要的程辑包：grid
+&gt; head(Arthritis)
+  ID Treatment  Sex Age Improved
+<span class="hljs-number">1</span> <span class="hljs-number">57</span>   Treated Male  <span class="hljs-number">27</span>     Some
+<span class="hljs-number">2</span> <span class="hljs-number">46</span>   Treated Male  <span class="hljs-number">29</span>     None
+<span class="hljs-number">3</span> <span class="hljs-number">77</span>   Treated Male  <span class="hljs-number">30</span>     None
+<span class="hljs-number">4</span> <span class="hljs-number">17</span>   Treated Male  <span class="hljs-number">32</span>   Marked
+<span class="hljs-number">5</span> <span class="hljs-number">36</span>   Treated Male  <span class="hljs-number">46</span>   Marked
+<span class="hljs-number">6</span> <span class="hljs-number">23</span>   Treated Male  <span class="hljs-number">58</span>   Marked</code></pre></div>
+<ul>
+<li>其中的治疗情况（安慰剂治疗、用药治疗）、性别（男性、女性）和改善情况（无改善、一定程度的改善、显著改善）均为类别型因子</li>
+</ul>
+<h4 id="生成频数表"><a class="markdownIt-Anchor" href="#生成频数表"></a> 生成频数表</h4>
+<p>R中提供了用于创建频数表和列联表的若干种方法：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>table(var1, var2, ..., varN)</code></td>
+<td>使用 <em>N</em> 个类别型变量（因子）创建一个 <em>N</em> 维列联表</td>
+</tr>
+<tr>
+<td><code>xtabs(formula, data)</code></td>
+<td>根据一个公式和一个矩阵或数据框创建一个 <em>N</em> 维列联表</td>
+</tr>
+<tr>
+<td><code>prop.table(table, margins)</code></td>
+<td>依 <em>margins</em> 定义的边际列表将表中条目表示为分数形式<br /><code>margin</code> is a vector giving the margins to compute sums<br />for a matrix <code>1</code> indicates rows, <code>2</code> indicates columns, <code>c(1, 2)</code> indicates rows and columns.<br />下同</td>
+</tr>
+<tr>
+<td><code>margin.table(table, margins)</code></td>
+<td>依 <em>margins</em> 定义的边际列表计算表中条目的和</td>
+</tr>
+<tr>
+<td><code>addmargins(table, margins)</code></td>
+<td>将概述边 <em>margins</em>（默认是求和结果）放入表中</td>
+</tr>
+<tr>
+<td><code>ftable(table)</code></td>
+<td>创建一个紧凑的“平铺”式列联表</td>
+</tr>
+</tbody>
+</table>
+<h5 id="1-一维列联表"><a class="markdownIt-Anchor" href="#1-一维列联表"></a> (1) 一维列联表</h5>
+<p>可以使用<code>table()</code>函数生成简单的频数统计表。示例如下:</p>
+<div class="hljs"><pre><code class="hljs R">&gt; data1 &lt;- table(Arthritis$Improved)
+&gt; data1
+
+  None   Some Marked 
+    <span class="hljs-number">42</span>     <span class="hljs-number">14</span>     <span class="hljs-number">28</span></code></pre></div>
+<p>可以用<code>prop.table()</code>将这些频数转化为比例值：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; prop.table(data1)
+
+     None      Some    Marked 
+<span class="hljs-number">0.5000000</span> <span class="hljs-number">0.1666667</span> <span class="hljs-number">0.3333333</span></code></pre></div>
+<p>或使用<code>prop.table()*100</code>转化为百分比：</p>
+<div class="hljs"><pre><code class="hljs r">&gt; prop.table(data1)*<span class="hljs-number">100</span>
+
+    None     Some   Marked 
+<span class="hljs-number">50.00000</span> <span class="hljs-number">16.66667</span> <span class="hljs-number">33.33333</span></code></pre></div>
+<h5 id="2-二维列联表"><a class="markdownIt-Anchor" href="#2-二维列联表"></a> (2) 二维列联表</h5>
+<h6 id="函数table"><a class="markdownIt-Anchor" href="#函数table"></a> 函数<code>table()</code></h6>
+<p>对于二维列联表，<code>table()</code>函数的使用格式为：</p>
+<p><code>mytable &lt;- table(A, B)</code></p>
+<ul>
+<li>其中的<em>A</em>是行变量，<em>B</em>是列变量。</li>
+</ul>
+<p>例：</p>
+<p>构建数据集：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; name &lt;- c(<span class="hljs-string">'a'</span>,<span class="hljs-string">'h'</span>,<span class="hljs-string">'b'</span>,<span class="hljs-string">'c'</span>,<span class="hljs-string">'d'</span>,<span class="hljs-string">'e'</span>)
+&gt; age &lt;- c(<span class="hljs-number">18</span>,<span class="hljs-number">16</span>,<span class="hljs-number">12</span>,<span class="hljs-number">14</span>,<span class="hljs-number">16</span>,<span class="hljs-number">14</span>)
+&gt; gender &lt;- c(<span class="hljs-string">'M'</span>,<span class="hljs-string">'M'</span>,<span class="hljs-string">"F"</span>,<span class="hljs-string">'F'</span>,<span class="hljs-string">"F"</span>,<span class="hljs-string">'F'</span>)
+&gt; height &lt;- c(<span class="hljs-number">180</span>,<span class="hljs-number">170</span>,<span class="hljs-number">120</span>,<span class="hljs-number">140</span>,<span class="hljs-number">160</span>,<span class="hljs-number">150</span>)
+&gt; frame1 &lt;- data.frame(name=name,age=age,gender=gender,height=height)
+&gt; frame1
+  name age gender height
+<span class="hljs-number">1</span>    a  <span class="hljs-number">18</span>      M    <span class="hljs-number">180</span>
+<span class="hljs-number">2</span>    b  <span class="hljs-number">16</span>      M    <span class="hljs-number">170</span>
+<span class="hljs-number">3</span>    c  <span class="hljs-number">12</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">120</span>
+<span class="hljs-number">4</span>    d  <span class="hljs-number">14</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">140</span>
+<span class="hljs-number">5</span>    e  <span class="hljs-number">16</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">160</span>
+<span class="hljs-number">6</span>    f  <span class="hljs-number">14</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">150</span></code></pre></div>
+<p>制表：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; table(frame1$name,frame1$age)
+   
+    <span class="hljs-number">12</span> <span class="hljs-number">14</span> <span class="hljs-number">16</span> <span class="hljs-number">18</span>
+  a  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>
+  b  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>
+  c  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>
+  d  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>
+  e  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>
+  h  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>
+&gt; table(frame1$name,frame1$gender)
+   
+    <span class="hljs-literal">F</span> M
+  a <span class="hljs-number">0</span> <span class="hljs-number">1</span>
+  b <span class="hljs-number">1</span> <span class="hljs-number">0</span>
+  c <span class="hljs-number">1</span> <span class="hljs-number">0</span>
+  d <span class="hljs-number">1</span> <span class="hljs-number">0</span>
+  e <span class="hljs-number">1</span> <span class="hljs-number">0</span>
+  h <span class="hljs-number">0</span> <span class="hljs-number">1</span></code></pre></div>
+<p>除此之外，<code>xtabs()</code>函数还可使用公式风格的输入创建列联表，格式为：</p>
+<p><code>mytable &lt;- xtabs(~ A + B, data=mydata)</code></p>
+<ul>
+<li>其中的<code>mydata</code>是一个矩阵或数据框。总的来说，要进行交叉分类的变量应出现在公式的右侧（即<code>~</code>符号的右方），以<code>+</code>作为**<font color="DD0000">分隔符</font>**。若某个变量写在公式的左侧，则其为一个频数向量（在数据已经被表格化时很有用）。</li>
+</ul>
+<p>例, 对于<code>Arthritis</code>数据，有：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(vcd)
+载入需要的程辑包：grid
+&gt; head(Arthritis)
+  ID Treatment  Sex Age Improved
+<span class="hljs-number">1</span> <span class="hljs-number">57</span>   Treated Male  <span class="hljs-number">27</span>     Some
+<span class="hljs-number">2</span> <span class="hljs-number">46</span>   Treated Male  <span class="hljs-number">29</span>     None
+<span class="hljs-number">3</span> <span class="hljs-number">77</span>   Treated Male  <span class="hljs-number">30</span>     None
+<span class="hljs-number">4</span> <span class="hljs-number">17</span>   Treated Male  <span class="hljs-number">32</span>   Marked
+<span class="hljs-number">5</span> <span class="hljs-number">36</span>   Treated Male  <span class="hljs-number">46</span>   Marked
+<span class="hljs-number">6</span> <span class="hljs-number">23</span>   Treated Male  <span class="hljs-number">58</span>   Marked</code></pre></div>
+<div class="hljs"><pre><code class="hljs R">&gt; mytable1 &lt;- xtabs(~ Treatment+Improved, data=Arthritis)
+&gt; mytable1
+         Improved
+Treatment None Some Marked
+  Placebo   <span class="hljs-number">29</span>    <span class="hljs-number">7</span>      <span class="hljs-number">7</span>
+  Treated   <span class="hljs-number">13</span>    <span class="hljs-number">7</span>     <span class="hljs-number">21</span></code></pre></div>
+<div class="hljs"><pre><code class="hljs R">&gt; mytable2 &lt;- xtabs(~ Sex+Improved, data=Arthritis)
+&gt; mytable2
+        Improved
+Sex      None Some Marked
+  Female   <span class="hljs-number">25</span>   <span class="hljs-number">12</span>     <span class="hljs-number">22</span>
+  Male     <span class="hljs-number">17</span>    <span class="hljs-number">2</span>      <span class="hljs-number">6</span></code></pre></div>
+<p>可以使用<code>margin.table()</code>和<code>prop.table()</code>函数分别生成边际频数和比例。行和与行比例可以这样计算：</p>
+<ul>
+<li><code>prop.table(table, margins)</code> &amp; <code>margin.table(table, margins)</code></li>
+<li><code>margin</code> is a vector giving the margins to compute sums for a matrix <code>1</code> indicates rows, <code>2</code> indicates columns, <code>c(1, 2)</code> indicates rows and columns.</li>
+<li><code>margin</code>除了可以使某个数字之外，也可以直接是某个维度的名称，如：<code>margin.table(mytable1, &quot;Treatment&quot;)</code></li>
+</ul>
+<div class="hljs"><pre><code class="hljs R">&gt; mytable1
+         Improved
+Treatment None Some Marked
+  Placebo   <span class="hljs-number">29</span>    <span class="hljs-number">7</span>      <span class="hljs-number">7</span>
+  Treated   <span class="hljs-number">13</span>    <span class="hljs-number">7</span>     <span class="hljs-number">21</span>
+
+<span class="hljs-comment"># 按照每一行（第1维度）计算比例，即第1维度的比例和为1</span>
+&gt; prop.table(mytable1, <span class="hljs-number">1</span>)
+         Improved
+Treatment      None      Some    Marked
+  Placebo <span class="hljs-number">0.6744186</span> <span class="hljs-number">0.1627907</span> <span class="hljs-number">0.1627907</span>
+  Treated <span class="hljs-number">0.3170732</span> <span class="hljs-number">0.1707317</span> <span class="hljs-number">0.5121951</span>
+
+<span class="hljs-comment"># 按照每一列（第2维度）计算比例，即第2维度的比例和为1</span>
+&gt; prop.table(mytable1, <span class="hljs-number">2</span>)
+         Improved
+Treatment      None      Some    Marked
+  Placebo <span class="hljs-number">0.6904762</span> <span class="hljs-number">0.5000000</span> <span class="hljs-number">0.2500000</span>
+  Treated <span class="hljs-number">0.3095238</span> <span class="hljs-number">0.5000000</span> <span class="hljs-number">0.7500000</span>
+
+<span class="hljs-comment"># 按照第1，2维度计算，对于多维列联表时适用</span>
+&gt; prop.table(mytable1, c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>))
+         Improved
+Treatment None Some Marked
+  Placebo    <span class="hljs-number">1</span>    <span class="hljs-number">1</span>      <span class="hljs-number">1</span>
+  Treated    <span class="hljs-number">1</span>    <span class="hljs-number">1</span>      <span class="hljs-number">1</span></code></pre></div>
+<div class="hljs"><pre><code class="hljs R">&gt; mytable1
+         Improved
+Treatment None Some Marked
+  Placebo   <span class="hljs-number">29</span>    <span class="hljs-number">7</span>      <span class="hljs-number">7</span>
+  Treated   <span class="hljs-number">13</span>    <span class="hljs-number">7</span>     <span class="hljs-number">21</span>
+
+<span class="hljs-comment"># 按照每一行（第1维度）求频数和，即每一项都代表原表在第1维度上的频数和</span>
+&gt; margin.table(mytable1, <span class="hljs-number">1</span>)
+Treatment
+Placebo Treated 
+     <span class="hljs-number">43</span>      <span class="hljs-number">41</span> 
+
+<span class="hljs-comment"># 按照每一列（第2维度）求频数和，即每一项都代表原表在第2维度上的频数和</span>
+&gt; margin.table(mytable1, <span class="hljs-number">2</span>)
+Improved
+  None   Some Marked 
+    <span class="hljs-number">42</span>     <span class="hljs-number">14</span>     <span class="hljs-number">28</span> 
+
+<span class="hljs-comment"># 按照第1，2维度计算，对于多维列联表时适用</span>
+&gt; margin.table(mytable1, c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>))
+         Improved
+Treatment None Some Marked
+  Placebo   <span class="hljs-number">29</span>    <span class="hljs-number">7</span>      <span class="hljs-number">7</span>
+  Treated   <span class="hljs-number">13</span>    <span class="hljs-number">7</span>     <span class="hljs-number">21</span></code></pre></div>
+<p>可以使用<code>addmargins()</code>函数为表格添加边际和（即求每一行每一列的和，并表示在原表的边界上）。</p>
+<p>例如，以下代码添加了各行的和与各列的和：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; mytable1
+         Improved
+Treatment None Some Marked
+  Placebo   <span class="hljs-number">29</span>    <span class="hljs-number">7</span>      <span class="hljs-number">7</span>
+  Treated   <span class="hljs-number">13</span>    <span class="hljs-number">7</span>     <span class="hljs-number">21</span>
+
+&gt; addmargins(mytable1)
+         Improved
+Treatment None Some Marked Sum
+  Placebo   <span class="hljs-number">29</span>    <span class="hljs-number">7</span>      <span class="hljs-number">7</span>  <span class="hljs-number">43</span>
+  Treated   <span class="hljs-number">13</span>    <span class="hljs-number">7</span>     <span class="hljs-number">21</span>  <span class="hljs-number">41</span>
+  Sum       <span class="hljs-number">42</span>   <span class="hljs-number">14</span>     <span class="hljs-number">28</span>  <span class="hljs-number">84</span></code></pre></div>
+<p>在使用<code>addmargins()</code>时，默认行为是为表中所有的变量创建边际和。可以通过设置参数进行对所有行或者所有列进行求和：</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 对每一列进行求和</span>
+&gt; addmargins(mytable1, <span class="hljs-number">1</span>)
+         Improved
+Treatment None Some Marked
+  Placebo   <span class="hljs-number">29</span>    <span class="hljs-number">7</span>      <span class="hljs-number">7</span>
+  Treated   <span class="hljs-number">13</span>    <span class="hljs-number">7</span>     <span class="hljs-number">21</span>
+  Sum       <span class="hljs-number">42</span>   <span class="hljs-number">14</span>     <span class="hljs-number">28</span>
+
+<span class="hljs-comment"># 对每一行进行求和</span>
+&gt; addmargins(mytable1, <span class="hljs-number">2</span>)
+         Improved
+Treatment None Some Marked Sum
+  Placebo   <span class="hljs-number">29</span>    <span class="hljs-number">7</span>      <span class="hljs-number">7</span>  <span class="hljs-number">43</span>
+  Treated   <span class="hljs-number">13</span>    <span class="hljs-number">7</span>     <span class="hljs-number">21</span>  <span class="hljs-number">41</span></code></pre></div>
+<h6 id="packagegmodels"><a class="markdownIt-Anchor" href="#packagegmodels"></a> Package：gmodels</h6>
+<p>使用<code>gmodels</code>包中的<code>CrossTable()</code>函数也是创建二维列联表的方法。</p>
+<ul>
+<li><code>CrossTable()</code>函数仿照<code>SAS</code>中<code>PROC FREQ</code>或<code>SPSS</code>中<code>CROSSTABS</code>的形式生成二维列联表。</li>
+</ul>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(gmodels)
+Warning message:
+程辑包‘gmodels’是用R版本<span class="hljs-number">4.0</span><span class="hljs-number">.2</span> 来建造的 
+&gt; CrossTable(Arthritis$Treatment, Arthritis$Improved)
+
+ 
+   Cell Contents
+|-------------------------|
+|                       N |
+| Chi-square contribution |
+|           N / Row Total |
+|           N / Col Total |
+|         N / Table Total |
+|-------------------------|
+
+ 
+Total Observations <span class="hljs-keyword">in</span> Table:  <span class="hljs-number">84</span> 
+
+ 
+                    | Arthritis$Improved 
+Arthritis$Treatment |      None |      Some |    Marked | Row Total | 
+--------------------|-----------|-----------|-----------|-----------|
+            Placebo |        <span class="hljs-number">29</span> |         <span class="hljs-number">7</span> |         <span class="hljs-number">7</span> |        <span class="hljs-number">43</span> | 
+                    |     <span class="hljs-number">2.616</span> |     <span class="hljs-number">0.004</span> |     <span class="hljs-number">3.752</span> |           | 
+                    |     <span class="hljs-number">0.674</span> |     <span class="hljs-number">0.163</span> |     <span class="hljs-number">0.163</span> |     <span class="hljs-number">0.512</span> | 
+                    |     <span class="hljs-number">0.690</span> |     <span class="hljs-number">0.500</span> |     <span class="hljs-number">0.250</span> |           | 
+                    |     <span class="hljs-number">0.345</span> |     <span class="hljs-number">0.083</span> |     <span class="hljs-number">0.083</span> |           | 
+--------------------|-----------|-----------|-----------|-----------|
+            Treated |        <span class="hljs-number">13</span> |         <span class="hljs-number">7</span> |        <span class="hljs-number">21</span> |        <span class="hljs-number">41</span> | 
+                    |     <span class="hljs-number">2.744</span> |     <span class="hljs-number">0.004</span> |     <span class="hljs-number">3.935</span> |           | 
+                    |     <span class="hljs-number">0.317</span> |     <span class="hljs-number">0.171</span> |     <span class="hljs-number">0.512</span> |     <span class="hljs-number">0.488</span> | 
+                    |     <span class="hljs-number">0.310</span> |     <span class="hljs-number">0.500</span> |     <span class="hljs-number">0.750</span> |           | 
+                    |     <span class="hljs-number">0.155</span> |     <span class="hljs-number">0.083</span> |     <span class="hljs-number">0.250</span> |           | 
+--------------------|-----------|-----------|-----------|-----------|
+       Column Total |        <span class="hljs-number">42</span> |        <span class="hljs-number">14</span> |        <span class="hljs-number">28</span> |        <span class="hljs-number">84</span> | 
+                    |     <span class="hljs-number">0.500</span> |     <span class="hljs-number">0.167</span> |     <span class="hljs-number">0.333</span> |           | 
+--------------------|-----------|-----------|-----------|-----------|</code></pre></div>
+<p><code>CrossTable()</code>函数有很多选项，可以做许多事情：计算（行、列、单元格）的百分比；指定小数位数；进行卡方、Fisher和McNemar独立性检验；计算期望和（皮尔逊、标准化、调整的标准化）残差；将缺失值作为一种有效值；进行行和列标题的标注；生成SAS或SPSS风格的输出。</p>
+<p>这里不赘述，因为不常用，具体可参阅<code>help(CrossTable)</code></p>
+<h5 id="3-多维列联表"><a class="markdownIt-Anchor" href="#3-多维列联表"></a> (3) 多维列联表</h5>
+<p>如果有两个以上的类别型变量，那么就是在处理多维列联表。之前提到的<code>table()</code>和<code>xtabs()</code>函数同样可以用来生成多维列联表，只需要改变公式即可：</p>
+<p>使用<code>table()</code>创建时，不同的维度需要通过<code>,</code>隔开：<code>table(var1, var2, var3,...)</code></p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">attach</span>(Arthritis)
+
+<span class="hljs-comment"># 这里的输入变量的顺序决定了输出表格的不同维度：</span>
+<span class="hljs-comment"># 第一维度：Treatment；第二维度：Sex，...</span>
+&gt; table(Treatment,Sex,Improved)
+, , Improved = None
+
+         Sex
+Treatment Female Male
+  Placebo     <span class="hljs-number">19</span>   <span class="hljs-number">10</span>
+  Treated      <span class="hljs-number">6</span>    <span class="hljs-number">7</span>
+
+, , Improved = Some
+
+         Sex
+Treatment Female Male
+  Placebo      <span class="hljs-number">7</span>    <span class="hljs-number">0</span>
+  Treated      <span class="hljs-number">5</span>    <span class="hljs-number">2</span>
+
+, , Improved = Marked
+
+         Sex
+Treatment Female Male
+  Placebo      <span class="hljs-number">6</span>    <span class="hljs-number">1</span>
+  Treated     <span class="hljs-number">16</span>    <span class="hljs-number">5</span>
+
+&gt; <span class="hljs-keyword">detach</span>(Arthritis)</code></pre></div>
+<p>通过<code>xtab()</code>创建时，不同的变量需要通过<code>+</code>隔开：</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 这里的输入变量的顺序决定了输出表格的不同维度：</span>
+<span class="hljs-comment"># 第一维度：Treatment；第二维度：Sex，...</span>
+&gt; xtabs(~ Treatment+Sex+Improved, data=Arthritis)
+, , Improved = None
+
+         Sex
+Treatment Female Male
+  Placebo     <span class="hljs-number">19</span>   <span class="hljs-number">10</span>
+  Treated      <span class="hljs-number">6</span>    <span class="hljs-number">7</span>
+
+, , Improved = Some
+
+         Sex
+Treatment Female Male
+  Placebo      <span class="hljs-number">7</span>    <span class="hljs-number">0</span>
+  Treated      <span class="hljs-number">5</span>    <span class="hljs-number">2</span>
+
+, , Improved = Marked
+
+         Sex
+Treatment Female Male
+  Placebo      <span class="hljs-number">6</span>    <span class="hljs-number">1</span>
+  Treated     <span class="hljs-number">16</span>    <span class="hljs-number">5</span></code></pre></div>
+<p>此时，<code>ftable()</code>函数可以以一种紧凑而吸引人的方式输出多维列联表。</p>
+<div class="hljs"><pre><code class="hljs R">&gt; table1 &lt;- xtabs(~ Treatment+Sex+Improved, data=Arthritis)
+&gt; ftable(table1)
+                 Improved None Some Marked
+Treatment Sex                             
+Placebo   Female            <span class="hljs-number">19</span>    <span class="hljs-number">7</span>      <span class="hljs-number">6</span>
+          Male              <span class="hljs-number">10</span>    <span class="hljs-number">0</span>      <span class="hljs-number">1</span>
+Treated   Female             <span class="hljs-number">6</span>    <span class="hljs-number">5</span>     <span class="hljs-number">16</span>
+          Male               <span class="hljs-number">7</span>    <span class="hljs-number">2</span>      <span class="hljs-number">5</span></code></pre></div>
+<p>在多维列联表的状态下，边界求和函数<code>addmargins()</code>，<code>margin.table()</code>，<code>prop.table()</code>等仍然适用：</p>
+<ul>
+<li>在多维列联表的情况下，<code>margin</code>的使用更加自由:
+<ul>
+<li>当<code>margin</code>为某个数字的时候，指的是对某个维度进行求和</li>
+<li>当<code>margin</code>为某个向量的时候，可以是通过数字指定某个维度，如``</li>
+</ul>
+</li>
+</ul>
+<p><code>margin.table()</code></p>
+<div class="hljs"><pre><code class="hljs R">&gt; table1 &lt;- xtabs(~ Treatment+Sex+Improved, data=Arthritis)
+<span class="hljs-comment"># 对第一维度（本例中为Treatment）求和</span>
+&gt; margin.table(table1, <span class="hljs-number">1</span>)
+Treatment
+Placebo Treated 
+     <span class="hljs-number">43</span>      <span class="hljs-number">41</span> 
+
+&gt; margin.table(table1, <span class="hljs-string">"Treatment"</span>)
+Treatment
+Placebo Treated 
+     <span class="hljs-number">43</span>      <span class="hljs-number">41</span>
+
+<span class="hljs-comment"># 对第二维度（本例中为Sex）求和</span>
+&gt; margin.table(table1, <span class="hljs-number">2</span>)
+Sex
+Female   Male 
+    <span class="hljs-number">59</span>     <span class="hljs-number">25</span> 
+
+<span class="hljs-comment"># 对第三维度（本例中为Improved）求和</span>
+&gt; margin.table(table1, <span class="hljs-number">3</span>)
+Improved
+  None   Some Marked 
+    <span class="hljs-number">42</span>     <span class="hljs-number">14</span>     <span class="hljs-number">28</span> 
+
+<span class="hljs-comment"># 对1，2维度求和，即重新构建次级表格</span>
+&gt; margin.table(table1, c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>))
+         Sex
+Treatment Female Male
+  Placebo     <span class="hljs-number">32</span>   <span class="hljs-number">11</span>
+  Treated     <span class="hljs-number">27</span>   <span class="hljs-number">14</span>
+
+<span class="hljs-comment"># 对2，3维度求和，不同的顺序可以改变输出表格的行列</span>
+&gt; margin.table(table1, c(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>))
+        Improved
+Sex      None Some Marked
+  Female   <span class="hljs-number">25</span>   <span class="hljs-number">12</span>     <span class="hljs-number">22</span>
+  Male     <span class="hljs-number">17</span>    <span class="hljs-number">2</span>      <span class="hljs-number">6</span>
+
+&gt; margin.table(table1, c(<span class="hljs-number">3</span>,<span class="hljs-number">2</span>))
+        Sex
+Improved Female Male
+  None       <span class="hljs-number">25</span>   <span class="hljs-number">17</span>
+  Some       <span class="hljs-number">12</span>    <span class="hljs-number">2</span>
+  Marked     <span class="hljs-number">22</span>    <span class="hljs-number">6</span></code></pre></div>
+<p><code>prob.table()</code>: 为了方便展示，这里使用了<code>ftable()</code></p>
+<ul>
+<li><code>margin</code>使用的方法同<code>margin.table</code></li>
+</ul>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 按照第一维度进行求概率</span>
+&gt; ftable(prop.table(table1, <span class="hljs-number">1</span>))
+                 Improved       None       Some     Marked
+Treatment Sex                                             
+Placebo   Female          <span class="hljs-number">0.44186047</span> <span class="hljs-number">0.16279070</span> <span class="hljs-number">0.13953488</span>
+          Male            <span class="hljs-number">0.23255814</span> <span class="hljs-number">0.00000000</span> <span class="hljs-number">0.02325581</span>
+Treated   Female          <span class="hljs-number">0.14634146</span> <span class="hljs-number">0.12195122</span> <span class="hljs-number">0.39024390</span>
+          Male            <span class="hljs-number">0.17073171</span> <span class="hljs-number">0.04878049</span> <span class="hljs-number">0.12195122</span></code></pre></div>
+<p><code>addmargins()</code>:</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 计算原表1，2维度上各项的概率，同时计算各个项在第3维度的概率和</span>
+&gt; ftable(addmargins(prop.table(table1, c(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)), <span class="hljs-number">3</span>))
+                 Improved       None       Some     Marked        Sum
+Treatment Sex                                                        
+Placebo   Female          <span class="hljs-number">0.59375000</span> <span class="hljs-number">0.21875000</span> <span class="hljs-number">0.18750000</span> <span class="hljs-number">1.00000000</span>
+          Male            <span class="hljs-number">0.90909091</span> <span class="hljs-number">0.00000000</span> <span class="hljs-number">0.09090909</span> <span class="hljs-number">1.00000000</span>
+Treated   Female          <span class="hljs-number">0.22222222</span> <span class="hljs-number">0.18518519</span> <span class="hljs-number">0.59259259</span> <span class="hljs-number">1.00000000</span>
+          Male            <span class="hljs-number">0.50000000</span> <span class="hljs-number">0.14285714</span> <span class="hljs-number">0.35714286</span> <span class="hljs-number">1.00000000</span>
+
+<span class="hljs-comment"># 计算原表1，2维度上各项的概率，同时计算各个项在第2维度的概率和</span>
+&gt; ftable(addmargins(prop.table(table1, c(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)), <span class="hljs-number">2</span>))
+                 Improved       None       Some     Marked
+Treatment Sex                                             
+Placebo   Female          <span class="hljs-number">0.59375000</span> <span class="hljs-number">0.21875000</span> <span class="hljs-number">0.18750000</span>
+          Male            <span class="hljs-number">0.90909091</span> <span class="hljs-number">0.00000000</span> <span class="hljs-number">0.09090909</span>
+          Sum             <span class="hljs-number">1.50284091</span> <span class="hljs-number">0.21875000</span> <span class="hljs-number">0.27840909</span>
+Treated   Female          <span class="hljs-number">0.22222222</span> <span class="hljs-number">0.18518519</span> <span class="hljs-number">0.59259259</span>
+          Male            <span class="hljs-number">0.50000000</span> <span class="hljs-number">0.14285714</span> <span class="hljs-number">0.35714286</span>
+          Sum             <span class="hljs-number">0.72222222</span> <span class="hljs-number">0.32804233</span> <span class="hljs-number">0.94973545</span></code></pre></div>
+
             </article>
             <hr>
             <div>
@@ -819,7 +1295,7 @@ cyl         <span class="hljs-number">6</span>             <span class="hljs-num
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "03. R <- 基本统计分析（施工中）&nbsp;",
+        "03. R <- 基本统计分析Ⅰ - 简要分析、频数表和列联表&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 50,
