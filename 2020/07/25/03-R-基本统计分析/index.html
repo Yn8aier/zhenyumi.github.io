@@ -19,7 +19,7 @@
   <meta name="description" content="">
   <meta name="author" content="向海">
   <meta name="keywords" content="">
-  <title>03. R &lt;- 基本统计分析Ⅰ - 简要分析、频数表和列联表 - 鹘横海</title>
+  <title>03. R &lt;- 基本统计分析Ⅰ - 简要分析、频数表和列联表、基本数学和统计函数 - 鹘横海</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      5.6k 字
+      6.1k 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      21
+      23
        分钟
     </span>
   
@@ -240,16 +240,16 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：17 小时前
+                  本文最后更新于：4 分钟前
                 
               </p>
             
             <article class="markdown-body">
               <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-描述性统计分析"><span class="post-toc-text"> 一、描述性统计分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总体计算样本描述性统计量"><span class="post-toc-text"> 总体计算样本描述性统计量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-summary-fivenum-一步获得常见统计量"><span class="post-toc-text"> 1. summary &amp; fivenum 一步获得常见统计量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-sapply-apply-通过自定义函数进行分析"><span class="post-toc-text"> 2. sapply &amp; apply 通过（自定义）函数进行分析</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-第三方包提供的其他方法"><span class="post-toc-text"> 3. 第三方包提供的其他方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#hmisc"><span class="post-toc-text"> Hmisc</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pastecs"><span class="post-toc-text"> pastecs</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#psych"><span class="post-toc-text"> psych</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分组计算描述性统计量"><span class="post-toc-text"> 分组计算描述性统计量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-整合aggregate和重塑reshape数据"><span class="post-toc-text"> 1. 整合(Aggregate)和重塑(reshape)数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#transposition-转置"><span class="post-toc-text"> Transposition 转置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用-aggregate-by-整合"><span class="post-toc-text"> 使用 aggregate &amp; by 整合</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#aggregate"><span class="post-toc-text"> aggregate</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#by"><span class="post-toc-text"> by</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#packagereshape2"><span class="post-toc-text"> Package：reshape2</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-频数表和列联表"><span class="post-toc-text"> 2. 频数表和列联表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#生成频数表"><span class="post-toc-text"> 生成频数表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-一维列联表"><span class="post-toc-text"> (1) 一维列联表</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-二维列联表"><span class="post-toc-text"> (2) 二维列联表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#函数table"><span class="post-toc-text"> 函数table()</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#packagegmodels"><span class="post-toc-text"> Package：gmodels</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-多维列联表"><span class="post-toc-text"> (3) 多维列联表</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-一键式描述性统计分析"><span class="post-toc-text"> 一、一键式描述性统计分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总体计算样本描述性统计量"><span class="post-toc-text"> 总体计算样本描述性统计量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-summary-fivenum-一步获得常见统计量"><span class="post-toc-text"> 1. summary &amp; fivenum 一步获得常见统计量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-sapply-apply-通过自定义函数进行分析"><span class="post-toc-text"> 2. sapply &amp; apply 通过（自定义）函数进行分析</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-第三方包提供的其他方法"><span class="post-toc-text"> 3. 第三方包提供的其他方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#hmisc"><span class="post-toc-text"> Hmisc</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pastecs"><span class="post-toc-text"> pastecs</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#psych"><span class="post-toc-text"> psych</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分组计算描述性统计量"><span class="post-toc-text"> 分组计算描述性统计量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-整合aggregate和重塑reshape数据"><span class="post-toc-text"> 1. 整合(Aggregate)和重塑(reshape)数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#transposition-转置"><span class="post-toc-text"> Transposition 转置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用-aggregate-by-整合"><span class="post-toc-text"> 使用 aggregate &amp; by 整合</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#aggregate"><span class="post-toc-text"> aggregate</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#by"><span class="post-toc-text"> by</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#packagereshape2"><span class="post-toc-text"> Package：reshape2</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-频数表和列联表"><span class="post-toc-text"> 2. 频数表和列联表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#生成频数表"><span class="post-toc-text"> 生成频数表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-一维列联表"><span class="post-toc-text"> (1) 一维列联表</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-二维列联表"><span class="post-toc-text"> (2) 二维列联表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#函数table"><span class="post-toc-text"> 函数table()</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#packagegmodels"><span class="post-toc-text"> Package：gmodels</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-多维列联表"><span class="post-toc-text"> (3) 多维列联表</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-单项描述性统计分析"><span class="post-toc-text"> 二、单项描述性统计分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数学函数"><span class="post-toc-text"> 数学函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#统计函数"><span class="post-toc-text"> 统计函数</span></a></li></ol></li></ol>
 
               <p>这篇文章主要讲解如何对一些数据进行基本的统计学分析</p>
-<h1 id="一-描述性统计分析"><a class="markdownIt-Anchor" href="#一-描述性统计分析"></a> 一、描述性统计分析</h1>
+<h1 id="一-一键式描述性统计分析"><a class="markdownIt-Anchor" href="#一-一键式描述性统计分析"></a> 一、一键式描述性统计分析</h1>
 <p>针对连续型数据，一般在分析的初始阶段需要获得它的中心趋势、变化性和分布形状。</p>
 <p>在这个部分，使用的示例数据为 <code>mtcars</code></p>
 <img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200725175446590.png" srcset="/img/loading.gif" alt="image-20200725175446590" style="zoom:67%;" />
@@ -1016,6 +1016,129 @@ Placebo   Female          <span class="hljs-number">0.59375000</span> <span clas
 Treated   Female          <span class="hljs-number">0.22222222</span> <span class="hljs-number">0.18518519</span> <span class="hljs-number">0.59259259</span>
           Male            <span class="hljs-number">0.50000000</span> <span class="hljs-number">0.14285714</span> <span class="hljs-number">0.35714286</span>
           Sum             <span class="hljs-number">0.72222222</span> <span class="hljs-number">0.32804233</span> <span class="hljs-number">0.94973545</span></code></pre></div>
+<h1 id="二-单项描述性统计分析"><a class="markdownIt-Anchor" href="#二-单项描述性统计分析"></a> 二、单项描述性统计分析</h1>
+<h2 id="数学函数"><a class="markdownIt-Anchor" href="#数学函数"></a> 数学函数</h2>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>abs(x)</code></td>
+<td>绝对值</td>
+</tr>
+<tr>
+<td><code>sqrt()</code></td>
+<td>平方根</td>
+</tr>
+<tr>
+<td><code>ceiling(x)</code></td>
+<td>不小于 <em>x</em> 的最小整数, <code>ceiling(3.475)</code>返回值为 4</td>
+</tr>
+<tr>
+<td><code>floor(x)</code></td>
+<td>不大于 <em>x</em> 的最大整数, <code>floor(3.475)</code>返回值为 3</td>
+</tr>
+<tr>
+<td><code>trunc(x)</code></td>
+<td>向 0 的方向截取的 <em>x</em> 中的整数部分, <code>trunc(5.99)</code>返回值为 5</td>
+</tr>
+<tr>
+<td><code>round(x, digits=n)</code></td>
+<td>将 <em>x</em> 舍入为指定位的小数, <code>round(3.475, digits=2)</code>返回值为 3.48</td>
+</tr>
+<tr>
+<td><code>signif(x, digits=n)</code></td>
+<td>将 x 舍入为指定的有效数字位数, <code>signif(3.475, digits=2)</code>返回值为 3.5</td>
+</tr>
+<tr>
+<td><code>cos(x)、sin(x)、tan(x)</code></td>
+<td>余弦、正弦和正切</td>
+</tr>
+<tr>
+<td><code>acos(x)、asin(x)、atan(x)</code></td>
+<td>反余弦、反正弦和反正切</td>
+</tr>
+<tr>
+<td><code>cosh(x)、sinh(x)、tanh(x)</code></td>
+<td>双曲余弦、双曲正弦和双曲正切</td>
+</tr>
+<tr>
+<td><code>acosh(x)、asinh(x)、atanh(x)</code></td>
+<td>反双曲余弦、反双曲正弦和反双曲正切</td>
+</tr>
+<tr>
+<td><code>log(x,base=n)</code>  <br /><code>log(x)</code> <br /><code>log10(x)</code></td>
+<td>对 <em>x</em> 取以 <em>n</em> 为底的对数<br />为了方便起见： <br /><code>log(x)</code>为自然对数 <br /><code>log10(x)</code>为常用对数 <br /><code>log(10)</code>返回值为 2.3026  <br /><code>log10(10)</code>返回值为 1</td>
+</tr>
+<tr>
+<td><code>exp(x)</code></td>
+<td>指数函数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="统计函数"><a class="markdownIt-Anchor" href="#统计函数"></a> 统计函数</h2>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mean(x)</code></td>
+<td>平均数，<code>x</code>为数值向量</td>
+</tr>
+<tr>
+<td><code>median(x)</code></td>
+<td>中位数</td>
+</tr>
+<tr>
+<td><code>sd(x)</code></td>
+<td>样本标准差<br />这里的Standard Deviation是<font color="EE0000">对样本的标准差</font>，即<font color="EE0000">Sample Standard Deviation</font>，下面说的Variance也是一样</td>
+</tr>
+<tr>
+<td><code>var(x)</code></td>
+<td>样本方差</td>
+</tr>
+<tr>
+<td><code>mad(x)</code></td>
+<td>绝对中位差（median absolute deviation）</td>
+</tr>
+<tr>
+<td><code>quantile(x,probs)</code></td>
+<td>求分位数。其中 <code>x</code> 为待求分位数的数值型向量，<code>probs</code> 为一个由<code>[0,1]</code>之间的概率值组成 的数值向量 <br />求 <code>x</code> 的 30%和 84%分位点:<br /> <code>y &lt;- quantile(x, c(.3,.84))</code></td>
+</tr>
+<tr>
+<td><code>range(x)</code></td>
+<td>求值域</td>
+</tr>
+<tr>
+<td><code>sum(x)</code></td>
+<td>求和</td>
+</tr>
+<tr>
+<td><code>diff(x, lag=n)</code></td>
+<td>滞后差分，<code>lag</code> 用以指定滞后几项。默认的 <code>lag</code> 值为 1<br /><code>x &lt;- c(1, 5, 23, 29)</code>  <br /><code>diff(x)</code>返回值为 <code>c(4, 18, 6)</code></td>
+</tr>
+<tr>
+<td><code>min(x)</code></td>
+<td>求最小值</td>
+</tr>
+<tr>
+<td><code>max(x)</code></td>
+<td>求最大值</td>
+</tr>
+<tr>
+<td><code>scale(x,center=TRUE, scale=TRUE)</code></td>
+<td>为数据对象 <code>x</code> 按列进行中心化<code>(center=TRUE)</code>或标准化<code>(center=TRUE,scale=TRUE)</code></td>
+</tr>
+</tbody>
+</table>
 
             </article>
             <hr>
@@ -1295,7 +1418,7 @@ Treated   Female          <span class="hljs-number">0.22222222</span> <span clas
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "03. R <- 基本统计分析Ⅰ - 简要分析、频数表和列联表&nbsp;",
+        "03. R <- 基本统计分析Ⅰ - 简要分析、频数表和列联表、基本数学和统计函数&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 50,
