@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>06. R &lt;- 基本绘图Ⅱ（施工中） - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-08-05 21:14">
+      2020年8月5日 晚上
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：1 分钟前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-散点图"><span class="post-toc-text"> 一、散点图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#散点图矩阵"><span class="post-toc-text"> 散点图矩阵</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#高密度散点图"><span class="post-toc-text"> 高密度散点图</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三维散点图"><span class="post-toc-text"> 三维散点图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-静态"><span class="post-toc-text"> 1. 静态</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-旋转可交互式三维散点图"><span class="post-toc-text"> 2. 旋转可交互式三维散点图</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#气泡图"><span class="post-toc-text"> 气泡图</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-折线图"><span class="post-toc-text"> 二、折线图</span></a></li></ol>
+
+              <h1 id="一-散点图"><a class="markdownIt-Anchor" href="#一-散点图"></a> 一、散点图</h1>
+<p>R中创建散点图的基础函数是plot(x, y)，其中，x和y是数值型向量，代表着图形中的(x, y)点。</p>
+<p>在这个例子当中，使用 <code>mtcars</code> 预设数据集来进行演示：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; head(mtcars)
+                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4         <span class="hljs-number">21.0</span>   <span class="hljs-number">6</span>  <span class="hljs-number">160</span> <span class="hljs-number">110</span> <span class="hljs-number">3.90</span> <span class="hljs-number">2.620</span> <span class="hljs-number">16.46</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>    <span class="hljs-number">4</span>    <span class="hljs-number">4</span>
+Mazda RX4 Wag     <span class="hljs-number">21.0</span>   <span class="hljs-number">6</span>  <span class="hljs-number">160</span> <span class="hljs-number">110</span> <span class="hljs-number">3.90</span> <span class="hljs-number">2.875</span> <span class="hljs-number">17.02</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>    <span class="hljs-number">4</span>    <span class="hljs-number">4</span>
+Datsun <span class="hljs-number">710</span>        <span class="hljs-number">22.8</span>   <span class="hljs-number">4</span>  <span class="hljs-number">108</span>  <span class="hljs-number">93</span> <span class="hljs-number">3.85</span> <span class="hljs-number">2.320</span> <span class="hljs-number">18.61</span>  <span class="hljs-number">1</span>  <span class="hljs-number">1</span>    <span class="hljs-number">4</span>    <span class="hljs-number">1</span>
+Hornet <span class="hljs-number">4</span> Drive    <span class="hljs-number">21.4</span>   <span class="hljs-number">6</span>  <span class="hljs-number">258</span> <span class="hljs-number">110</span> <span class="hljs-number">3.08</span> <span class="hljs-number">3.215</span> <span class="hljs-number">19.44</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>    <span class="hljs-number">3</span>    <span class="hljs-number">1</span>
+Hornet Sportabout <span class="hljs-number">18.7</span>   <span class="hljs-number">8</span>  <span class="hljs-number">360</span> <span class="hljs-number">175</span> <span class="hljs-number">3.15</span> <span class="hljs-number">3.440</span> <span class="hljs-number">17.02</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>    <span class="hljs-number">3</span>    <span class="hljs-number">2</span>
+Valiant           <span class="hljs-number">18.1</span>   <span class="hljs-number">6</span>  <span class="hljs-number">225</span> <span class="hljs-number">105</span> <span class="hljs-number">2.76</span> <span class="hljs-number">3.460</span> <span class="hljs-number">20.22</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>    <span class="hljs-number">3</span>    <span class="hljs-number">1</span></code></pre></div>
+<h2 id="散点图矩阵"><a class="markdownIt-Anchor" href="#散点图矩阵"></a> 散点图矩阵</h2>
+<p>R中有很多创建散点图矩阵的实用函数。<code>pairs()</code>函数可以创建基础的散点图矩阵。下面的代码生成了一个散点图矩阵，包含<code>mpg</code>、<code>disp</code>、<code>drat</code>和<code>wt</code>四个变量，在这个图中，可以看到分别以其中两个变量作为<code>x</code>, <code>y</code>值的散点图：</p>
+<p>S3 method for class ‘formula’:</p>
+<p><code>pairs(formula,</code><br />
+<code>data = NULL, ..., subset,</code><br />
+<code>na.action = stats::na.pass)</code></p>
+<p>Default S3 method:</p>
+<p><code>pairs(x, labels, panel = points, ..., horInd = 1:nc, verInd = 1:nc, lower.panel = panel, upper.panel = panel, diag.panel = NULL, text.panel = textPanel, label.pos = 0.5 + has.diag/3, line.main = 3, cex.labels = NULL, font.labels = 1, row1attop = TRUE, gap = 1, log = &quot;&quot;, horOdd = !row1attop, verOdd = !row1attop)</code></p>
+<div class="hljs"><pre><code class="hljs R">pairs(~mpg+disp+drat+wt, 
+      data=mtcars, 
+      main=<span class="hljs-string">"Basic Scatter Plot Matrix"</span>)</code></pre></div>
+<img src="pics/image-20200807185540098.png" srcset="/img/loading.gif" alt="image-20200807185540098" style="zoom: 80%;" />
+<p>可以控制参数，调整只显示上方三角或下方三角的图：</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 只显示下方</span>
+pairs(~mpg+disp+drat+wt, 
+      data=mtcars, 
+      main=<span class="hljs-string">"Basic Scatter Plot Matrix"</span>,
+      upper.panel = <span class="hljs-literal">NULL</span>)
+
+<span class="hljs-comment"># 只显示上方</span>
+pairs(~mpg+disp+drat+wt, 
+      data=mtcars, 
+      main=<span class="hljs-string">"Basic Scatter Plot Matrix"</span>,
+      lower.panel = <span class="hljs-literal">NULL</span>)</code></pre></div>
+<p><code>car</code>包中的<code>scatterplotMatrix()</code>函数也可以生成散点图矩阵，它增强了散点图的许多功能，它可以很方便地绘制散点图，并能添加拟合曲线、边界箱线图和置信椭圆，还可以按子集绘图和交互式地识别点。</p>
+<p>有以下可选操作：</p>
+<ul>
+<li>以某个因子为条件绘制散点图矩阵；</li>
+<li>包含线性和平滑拟合曲线；</li>
+<li>在主对角线放置箱线图、密度图或者直方图；</li>
+<li>在各单元格的边界添加轴须图。</li>
+</ul>
+<p>例：线性和平滑（loess）拟合曲线被默认添加，主对角线处添加了核密度曲线和轴须图。<code>spread = FALSE</code>选项表示不添加展示分散度和对称信息的直线，<code>smoother.args=list(lty=2)</code>设定平滑（loess）拟合曲线使用虚线而不是实线。</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-keyword">library</span>(car) 
+scatterplotMatrix(~ mpg + disp + drat + wt, 
+                  data=mtcars, 
+                  spread=<span class="hljs-literal">FALSE</span>, 
+                  smoother.args=list(lty=<span class="hljs-number">2</span>), 
+                  main=<span class="hljs-string">"Scatter Plot Matrix via car Package"</span>)</code></pre></div>
+<img src="pics/image-20200807190937479.png" srcset="/img/loading.gif" alt="image-20200807190937479" style="zoom:80%;" />
+<p>R提供了许多其他的方式来创建散点图矩阵。你可能想探索<code>glus</code>包中的<code>cpars()</code>函数，<code>TeachingDemos</code>包中的<code>pairs2()</code>函数，<code>HH</code>包中的<code>xysplom()</code>函数，<code>ResourceSelection</code>包中的<code>kepairs()</code>函数和<code>SMPracticals</code>包中的<code>pairs.mod()</code>函数。每个包都加入了自己独特的曲线。</p>
+<h2 id="高密度散点图"><a class="markdownIt-Anchor" href="#高密度散点图"></a> 高密度散点图</h2>
+<p>当数据点重叠很严重时，用散点图来观察变量关系就显得“力不从心”了。下面是一个人为设计的例子，其中10000个观测点分布在两个重叠的数据群中：</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 以seed=1234按照正态分布产生10000个伪随机数</span>
+&gt; set.seed(<span class="hljs-number">1234</span>) 
+&gt; n &lt;- <span class="hljs-number">10000</span> 
+&gt; c1 &lt;- matrix(rnorm(n, mean=<span class="hljs-number">0</span>, sd=<span class="hljs-number">.5</span>), ncol=<span class="hljs-number">2</span>) 
+&gt; c2 &lt;- matrix(rnorm(n, mean=<span class="hljs-number">3</span>, sd=<span class="hljs-number">2</span>), ncol=<span class="hljs-number">2</span>) 
+
+<span class="hljs-comment"># 将数据整合为list</span>
+<span class="hljs-comment">## 先整合为二维向量</span>
+&gt; mydata &lt;- rbind(c1, c2)
+&gt; head(mydata)
+           [,<span class="hljs-number">1</span>]       [,<span class="hljs-number">2</span>]
+[<span class="hljs-number">1</span>,] -<span class="hljs-number">0.6035329</span> -<span class="hljs-number">0.4125721</span>
+[<span class="hljs-number">2</span>,]  <span class="hljs-number">0.1387146</span>  <span class="hljs-number">0.1735841</span>
+[<span class="hljs-number">3</span>,]  <span class="hljs-number">0.5422206</span> -<span class="hljs-number">0.4600465</span>
+[<span class="hljs-number">4</span>,] -<span class="hljs-number">1.1728489</span> -<span class="hljs-number">0.1436682</span>
+[<span class="hljs-number">5</span>,]  <span class="hljs-number">0.2145623</span> -<span class="hljs-number">0.2755651</span>
+[<span class="hljs-number">6</span>,]  <span class="hljs-number">0.2530279</span>  <span class="hljs-number">0.4243228</span>
+&gt; typeof(mydata)
+[<span class="hljs-number">1</span>] <span class="hljs-string">"double"</span>
+
+<span class="hljs-comment">## 之后整合为list</span>
+&gt; mydata &lt;- as.data.frame(mydata) 
+&gt; head(mydata)
+          V1         V2
+<span class="hljs-number">1</span> -<span class="hljs-number">0.6035329</span> -<span class="hljs-number">0.4125721</span>
+<span class="hljs-number">2</span>  <span class="hljs-number">0.1387146</span>  <span class="hljs-number">0.1735841</span>
+<span class="hljs-number">3</span>  <span class="hljs-number">0.5422206</span> -<span class="hljs-number">0.4600465</span>
+<span class="hljs-number">4</span> -<span class="hljs-number">1.1728489</span> -<span class="hljs-number">0.1436682</span>
+<span class="hljs-number">5</span>  <span class="hljs-number">0.2145623</span> -<span class="hljs-number">0.2755651</span>
+<span class="hljs-number">6</span>  <span class="hljs-number">0.2530279</span>  <span class="hljs-number">0.4243228</span>
+&gt; typeof(mydata)
+[<span class="hljs-number">1</span>] <span class="hljs-string">"list"</span>
+
+<span class="hljs-comment">## 规定mydata的两列标题</span>
+&gt; names(mydata) &lt;- c(<span class="hljs-string">"x"</span>, <span class="hljs-string">"y"</span>)
+&gt; typeof(mydata)
+[<span class="hljs-number">1</span>] <span class="hljs-string">"list"</span>
+&gt; head(mydata)
+           x          y
+<span class="hljs-number">1</span> -<span class="hljs-number">0.6035329</span> -<span class="hljs-number">0.4125721</span>
+<span class="hljs-number">2</span>  <span class="hljs-number">0.1387146</span>  <span class="hljs-number">0.1735841</span>
+<span class="hljs-number">3</span>  <span class="hljs-number">0.5422206</span> -<span class="hljs-number">0.4600465</span>
+<span class="hljs-number">4</span> -<span class="hljs-number">1.1728489</span> -<span class="hljs-number">0.1436682</span>
+<span class="hljs-number">5</span>  <span class="hljs-number">0.2145623</span> -<span class="hljs-number">0.2755651</span>
+<span class="hljs-number">6</span>  <span class="hljs-number">0.2530279</span>  <span class="hljs-number">0.4243228</span></code></pre></div>
+<p>生成散点图：</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-keyword">attach</span>(mydata)
+plot(x, y, pch=<span class="hljs-number">19</span>, main=<span class="hljs-string">"Scatter Plot with 10,000 Observations"</span>)
+<span class="hljs-keyword">detach</span>(mydata)</code></pre></div>
+<p><code>smoothScatter()</code>函数可利用核密度估计生成用颜色密度来表示点分布的散点图。</p>
+<p><code>smoothScatter(x, y = NULL, nbin = 128, bandwidth, colramp = colorRampPalette(c(&quot;white&quot;, blues9)), nrpoints = 100, ret.selection = FALSE, pch = &quot;.&quot;, cex = 1, col = &quot;black&quot;, transformation = function(x) x^.25, postPlotHook = box, xlab = NULL, ylab = NULL, xlim, ylim, xaxs = par(&quot;xaxs&quot;), yaxs = par(&quot;yaxs&quot;), ...)</code></p>
+<p>代码如下：</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-keyword">attach</span>(mydata)
+smoothScatter(x, y, main=<span class="hljs-string">"Scatter Plot Colored by Smoothed Densities"</span>)
+<span class="hljs-keyword">detach</span>(mydata)</code></pre></div>
+<p><img src="pics/image-20200807200618128.png" srcset="/img/loading.gif" alt="image-20200807200618128" /></p>
+<p><code>hexbin</code>包中的<code>hexbin()</code>函数将二元变量的封箱放到六边形单元格中（图形比名称更直观）。</p>
+<p><code>hexbin(x, y, xbins = 30, shape = 1, xbnds = range(x), ybnds = range(y), xlab = NULL, ylab = NULL, IDs = FALSE)</code></p>
+<p>示例如下：</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-keyword">library</span>(hexbin) 
+with(mydata, &#123; 
+    bin &lt;- hexbin(x, y, xbins=<span class="hljs-number">50</span>) 
+    plot(bin, main=<span class="hljs-string">"Hexagonal Binning with 10,000 Observations"</span>) 
+ &#125;)</code></pre></div>
+<img src="pics/image-20200807200813952.png" srcset="/img/loading.gif" alt="image-20200807200813952" style="zoom: 80%;" />
+<h2 id="三维散点图"><a class="markdownIt-Anchor" href="#三维散点图"></a> 三维散点图</h2>
+<h3 id="1-静态"><a class="markdownIt-Anchor" href="#1-静态"></a> 1. 静态</h3>
+<p>可用<code>scatterplot3d</code>包中的<code>scatterplot3d()</code>函数来绘制三维散点图</p>
+<p>S3 method for class ‘formula’:<br />
+<code>scatter3d(formula, data, subset, radius, xlab, ylab, zlab, id=FALSE, ...)</code></p>
+<p>Default S3 method:</p>
+<p><code>scatter3d(x, y, z, 	 xlab=deparse(substitute(x)), ylab=deparse(substitute(y)), 	 zlab=deparse(substitute(z)), axis.scales=TRUE, axis.ticks=FALSE, 	 revolutions=0, 	 bg.col=c(&quot;white&quot;, &quot;black&quot;), 	 axis.col=if (bg.col == &quot;white&quot;) c(&quot;darkmagenta&quot;, &quot;black&quot;, &quot;darkcyan&quot;) 		 else c(&quot;darkmagenta&quot;, &quot;white&quot;, &quot;darkcyan&quot;), 	 surface.col=carPalette()[-1], surface.alpha=0.5, 	 neg.res.col=&quot;magenta&quot;, pos.res.col=&quot;cyan&quot;, 	 square.col=if (bg.col == &quot;white&quot;) &quot;black&quot; else &quot;gray&quot;, 	 point.col=&quot;yellow&quot;, text.col=axis.col, 	 grid.col=if (bg.col == &quot;white&quot;) &quot;black&quot; else &quot;gray&quot;, 	 fogtype=c(&quot;exp2&quot;, &quot;linear&quot;, &quot;exp&quot;, &quot;none&quot;), 	 residuals=(length(fit) == 1), 	 surface=TRUE, fill=TRUE, 	 grid=TRUE, grid.lines=26, df.smooth=NULL, df.additive=NULL, 	 sphere.size=1, radius=1, threshold=0.01, speed=1, fov=60, 	 fit=&quot;linear&quot;, groups=NULL, parallel=TRUE, 	 ellipsoid=FALSE, level=0.5, ellipsoid.alpha=0.1, id=FALSE, 	 model.summary=FALSE, ...)</code></p>
+<p><code>Identify3d(x, y, z, axis.scales=TRUE, groups = NULL, labels = 1:length(x), 	col = c(&quot;blue&quot;, &quot;green&quot;, &quot;orange&quot;, &quot;magenta&quot;, &quot;cyan&quot;, &quot;red&quot;, &quot;yellow&quot;, &quot;gray&quot;), 	offset = ((100/length(x))^(1/3)) * 0.02)</code></p>
+<p><code>satterplot3d()</code>函数提供了许多选项，包括设置图形符号、轴、颜色、线条、网格线、突出显示和角度等功能。</p>
+<p>示例如下：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(scatterplot3d)
+&gt; scatterplot3d(x,y,z)
+&gt; <span class="hljs-keyword">library</span>(scatterplot3d) 
+&gt; <span class="hljs-keyword">attach</span>(mtcars) 
+&gt; scatterplot3d(wt, disp, mpg, 
+               main=<span class="hljs-string">"Basic 3D Scatter Plot"</span>)
+&gt; <span class="hljs-keyword">detach</span>(mtcars)</code></pre></div>
+<img src="pics/image-20200807201430874.png" srcset="/img/loading.gif" alt="image-20200807201430874" style="zoom: 67%;" />
+<p>突出显示例：</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-keyword">library</span>(scatterplot3d) 
+<span class="hljs-keyword">attach</span>(mtcars) 
+scatterplot3d(wt, disp, mpg, 
+              pch=<span class="hljs-number">16</span>, 
+              highlight.3d=<span class="hljs-literal">TRUE</span>, 
+              type=<span class="hljs-string">"h"</span>, 
+              main=<span class="hljs-string">"3D Scatter Plot with Vertical Lines"</span>)
+<span class="hljs-keyword">detach</span>(mtcars)</code></pre></div>
+<img src="pics/image-20200807201854214.png" srcset="/img/loading.gif" alt="image-20200807201854214" style="zoom:67%;" />
+<p>添加回归面：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">attach</span>(mtcars)
+&gt; s3d &lt;-scatterplot3d(wt, disp, mpg, 
+                   pch=<span class="hljs-number">16</span>, 
+                   highlight.3d=<span class="hljs-literal">TRUE</span>, 
+                   type=<span class="hljs-string">"h"</span>, 
+                   main=<span class="hljs-string">"3D Scatter Plot with Vertical Lines and Regression Plane"</span>) 
+&gt; fit &lt;- lm(mpg ~ wt+disp) 
+&gt; s3d$plane3d(fit)
+&gt; <span class="hljs-keyword">detach</span>(mtcars)</code></pre></div>
+<img src="pics/image-20200807202119770.png" srcset="/img/loading.gif" alt="image-20200807202119770" style="zoom:80%;" />
+<h3 id="2-旋转可交互式三维散点图"><a class="markdownIt-Anchor" href="#2-旋转可交互式三维散点图"></a> 2. 旋转可交互式三维散点图</h3>
+<p>如果能对三维散点图进行交互式操作，那么图形将会更好解释。R提供了一些旋转图形的功能，让你可以从多个角度观测绘制的数据点。</p>
+<p>可用rgl包中的plot3d()函数创建可交互的三维散点图。你能通过鼠标对图形进行旋转。函数格式为：</p>
+<p>Default S3 method:<br />
+<code>plot3d(x, y, z, 	xlab, ylab, zlab, type = &quot;p&quot;, col, 	size, lwd, radius, 	add = FALSE, aspect = !add, 	xlim = NULL, ylim = NULL, zlim = NULL, 	forceClipregion = FALSE, ...)</code></p>
+<p>S3 method for class ‘mesh3d’:<br />
+<code>plot3d(x, xlab = &quot;x&quot;, ylab = &quot;y&quot;, zlab = &quot;z&quot;, type = c(&quot;shade&quot;, &quot;wire&quot;, &quot;dots&quot;), 	add = FALSE, aspect = !add, ...)</code><br />
+<code>decorate3d(xlim, ylim, zlim, 	xlab = &quot;x&quot;, ylab = &quot;y&quot;, zlab = &quot;z&quot;, 	box = TRUE, axes = TRUE, main = NULL, sub = NULL, 	top = TRUE, aspect = FALSE, expand = 1.03, 	...)</code></p>
+<p>例：</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-keyword">library</span>(rgl) 
+<span class="hljs-keyword">attach</span>(mtcars) 
+plot3d(wt, disp, mpg, col=<span class="hljs-string">"red"</span>, size=<span class="hljs-number">5</span>)
+<span class="hljs-keyword">detach</span>(mtcars)</code></pre></div>
+<p>之后会出现这样的一个可交互的界面，可以通过鼠标来对模型进行旋转操作：</p>
+<img src="pics/image-20200807203539287.png" srcset="/img/loading.gif" alt="image-20200807203539287" style="zoom:50%;" />
+<p>用<code>car</code>包中类似的函数<code>scatter3d()</code>也可以实现交互效果：</p>
+<p>S3 method for class ‘formula’:<br />
+<code>scatter3d(formula, data, subset, radius, xlab, ylab, zlab, id=FALSE, ...)</code></p>
+<p>Default S3 method:<br />
+<code>scatter3d(x, y, z, 	 xlab=deparse(substitute(x)), ylab=deparse(substitute(y)), 	 zlab=deparse(substitute(z)), axis.scales=TRUE, axis.ticks=FALSE, 	 revolutions=0, 	 bg.col=c(&quot;white&quot;, &quot;black&quot;), 	 axis.col=if (bg.col == &quot;white&quot;) c(&quot;darkmagenta&quot;, &quot;black&quot;, &quot;darkcyan&quot;) 		 else c(&quot;darkmagenta&quot;, &quot;white&quot;, &quot;darkcyan&quot;), 	 surface.col=carPalette()[-1], surface.alpha=0.5, 	 neg.res.col=&quot;magenta&quot;, pos.res.col=&quot;cyan&quot;, 	 square.col=if (bg.col == &quot;white&quot;) &quot;black&quot; else &quot;gray&quot;, 	 point.col=&quot;yellow&quot;, text.col=axis.col, 	 grid.col=if (bg.col == &quot;white&quot;) &quot;black&quot; else &quot;gray&quot;, 	 fogtype=c(&quot;exp2&quot;, &quot;linear&quot;, &quot;exp&quot;, &quot;none&quot;), 	 residuals=(length(fit) == 1), 	 surface=TRUE, fill=TRUE, 	 grid=TRUE, grid.lines=26, df.smooth=NULL, df.additive=NULL, 	 sphere.size=1, radius=1, threshold=0.01, speed=1, fov=60, 	 fit=&quot;linear&quot;, groups=NULL, parallel=TRUE, 	 ellipsoid=FALSE, level=0.5, ellipsoid.alpha=0.1, id=FALSE, 	 model.summary=FALSE, ...)</code></p>
+<p><code>Identify3d(x, y, z, axis.scales=TRUE, groups = NULL, labels = 1:length(x), 	col = c(&quot;blue&quot;, &quot;green&quot;, &quot;orange&quot;, &quot;magenta&quot;, &quot;cyan&quot;, &quot;red&quot;, &quot;yellow&quot;, &quot;gray&quot;), 	offset = ((100/length(x))^(1/3)) * 0.02)</code></p>
+<p>例：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(car) 
+&gt; with(mtcars, 
+      scatter3d(wt, disp, mpg))</code></pre></div>
+<p>效果如下：</p>
+<img src="pics/image-20200807203829535.png" srcset="/img/loading.gif" alt="image-20200807203829535" style="zoom:67%;" />
+<h2 id="气泡图"><a class="markdownIt-Anchor" href="#气泡图"></a> 气泡图</h2>
+<p>气泡图（bubble plot）即先创建一个二维散点图，然后用点的大小来代表第三个变量的值。</p>
+<p>可用<code>symbols()</code>函数来创建气泡图。该函数可以在指定的(<em>x</em>, <em>y</em>)坐标上绘制圆圈图、方形图、星形图、温度计图和箱线图。</p>
+<p><code>symbols(x, y = NULL, circles, squares, rectangles, stars, thermometers, boxplots, inches = TRUE, add = FALSE, fg = par(&quot;col&quot;), bg = NA, xlab = NULL, ylab = NULL, main = NULL, xlim = NULL, ylim = NULL, ...)</code></p>
+<p>以绘制圆圈图为例：</p>
+<p><code>symbols(x, y, circle=radius)</code>, 其中<code>x</code>、<code>y</code>和<code>radius</code>是需要设定的向量，分别表示x、y坐标和圆圈半径。</p>
+<p>如果想用面积而不是半径来表示第三个变量，那么按照圆圈半径的公式（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mo>=</mo><msqrt><mfrac><mi>A</mi><mi>π</mi></mfrac></msqrt></mrow><annotation encoding="application/x-tex">r = \sqrt{\frac{A}{\pi}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.84em;vertical-align:-0.5913344999999999em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2486655000000002em;"><span class="svg-align" style="top:-3.8em;"><span class="pstrut" style="height:3.8em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">π</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.2086655em;"><span class="pstrut" style="height:3.8em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.8800000000000001em;"><svg width='400em' height='1.8800000000000001em' viewBox='0 0 400000 1944' preserveAspectRatio='xMinYMin slice'><path d='M1001,80H400000v40H1013.1s-83.4,268,-264.1,840c-180.7,
+572,-277,876.3,-289,913c-4.7,4.7,-12.7,7,-24,7s-12,0,-12,0c-1.3,-3.3,-3.7,-11.7,
+-7,-25c-35.3,-125.3,-106.7,-373.3,-214,-744c-10,12,-21,25,-33,39s-32,39,-32,39
+c-6,-5.3,-15,-14,-27,-26s25,-30,25,-30c26.7,-32.7,52,-63,76,-91s52,-60,52,-60
+s208,722,208,722c56,-175.3,126.3,-397.3,211,-666c84.7,-268.7,153.8,-488.2,207.5,
+-658.5c53.7,-170.3,84.5,-266.8,92.5,-289.5c4,-6.7,10,-10,18,-10z
+M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5913344999999999em;"><span></span></span></span></span></span></span></span></span> ）变换即可：<code>symbols(x, y, circle=sqrt(z/pi))</code></p>
+<div class="hljs"><pre><code class="hljs R">&gt; r &lt;- sqrt(disp/pi) 
+&gt; symbols(wt, mpg, circle=r, inches=<span class="hljs-number">0.30</span>, 
+         fg=<span class="hljs-string">"white"</span>, bg=<span class="hljs-string">"lightblue"</span>, 
+         main=<span class="hljs-string">"Bubble Plot with point size proportional to displacement"</span>, 
+         ylab=<span class="hljs-string">"Miles Per Gallon"</span>, 
+         xlab=<span class="hljs-string">"Weight of Car (lbs/1000)"</span>) 
+<span class="hljs-comment"># inches是比例因子，控制着圆圈大小（默认最大圆圈为1英寸）</span>
+&gt; text(wt, mpg, rownames(mtcars), cex=<span class="hljs-number">0.6</span>) 
+&gt; <span class="hljs-keyword">detach</span>(mtcars)</code></pre></div>
+<p>效果：</p>
+<p><img src="pics/image-20200807204318549.png" srcset="/img/loading.gif" alt="image-20200807204318549" /></p>
+<h1 id="二-折线图"><a class="markdownIt-Anchor" href="#二-折线图"></a> 二、折线图</h1>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Undefined/">Undefined</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Undefined/">Undefined</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。技术力比较低，多多担待啦！<br/ >  If anything wrong, please leave a comment or contact me.<br/> If the utterances comment system does not show up, please refresh or use VPN.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/08/05/L25%20Cells%20to%20tissues%20cell%20adhesion%20to%20extracellular%20matrix%20%20(ECM)/">
+                        <span class="hidden-mobile">L25 Cells to tissues cell adhesion to extracellular matrix (ECM)</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <script type="text/javascript">
+    function loadUtterances() {
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.defer = false
+      s.setAttribute('repo', 'zhenyumi/comment_hexo');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('theme', 'github-light');
+      s.setAttribute('crossorigin', 'anonymous');
+      var e = document.getElementsByTagName('script')[0];
+      e.parentNode.insertBefore(s, e);
+    }
+    createObserver(loadUtterances, 'comments')
+  </script>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
+</script>
+
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             : 总访客数 ？人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "06. R <- 基本绘图Ⅱ（施工中）&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>
