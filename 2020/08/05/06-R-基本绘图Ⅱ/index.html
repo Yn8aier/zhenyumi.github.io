@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.4k 字
+      2.3k 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10
+      9
        分钟
     </span>
   
@@ -240,7 +240,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 分钟前
+                  本文最后更新于：5 分钟前
                 
               </p>
             
@@ -261,12 +261,19 @@ Hornet Sportabout <span class="hljs-number">18.7</span>   <span class="hljs-numb
 Valiant           <span class="hljs-number">18.1</span>   <span class="hljs-number">6</span>  <span class="hljs-number">225</span> <span class="hljs-number">105</span> <span class="hljs-number">2.76</span> <span class="hljs-number">3.460</span> <span class="hljs-number">20.22</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>    <span class="hljs-number">3</span>    <span class="hljs-number">1</span></code></pre></div>
 <h2 id="散点图矩阵"><a class="markdownIt-Anchor" href="#散点图矩阵"></a> 散点图矩阵</h2>
 <p>R中有很多创建散点图矩阵的实用函数。<code>pairs()</code>函数可以创建基础的散点图矩阵。下面的代码生成了一个散点图矩阵，包含<code>mpg</code>、<code>disp</code>、<code>drat</code>和<code>wt</code>四个变量，在这个图中，可以看到分别以其中两个变量作为<code>x</code>, <code>y</code>值的散点图：</p>
-<p>S3 method for class ‘formula’:</p>
-<p><code>pairs(formula,</code><br />
-<code>data = NULL, ..., subset,</code><br />
-<code>na.action = stats::na.pass)</code></p>
-<p>Default S3 method:</p>
-<p><code>pairs(x, labels, panel = points, ..., horInd = 1:nc, verInd = 1:nc, lower.panel = panel, upper.panel = panel, diag.panel = NULL, text.panel = textPanel, label.pos = 0.5 + has.diag/3, line.main = 3, cex.labels = NULL, font.labels = 1, row1attop = TRUE, gap = 1, log = &quot;&quot;, horOdd = !row1attop, verOdd = !row1attop)</code></p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># S3 method for class 'formula': </span>
+pairs(formula,
+data = <span class="hljs-literal">NULL</span>, <span class="hljs-keyword">...</span>, subset,
+na.action = stats::na.pass)</code></pre></div>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span>
+pairs(x, labels, panel = points, <span class="hljs-keyword">...</span>,
+      horInd = <span class="hljs-number">1</span>:nc, verInd = <span class="hljs-number">1</span>:nc,
+      lower.panel = panel, upper.panel = panel,
+      diag.panel = <span class="hljs-literal">NULL</span>, text.panel = textPanel,
+      label.pos = <span class="hljs-number">0.5</span> + has.diag/<span class="hljs-number">3</span>, line.main = <span class="hljs-number">3</span>,
+      cex.labels = <span class="hljs-literal">NULL</span>, font.labels = <span class="hljs-number">1</span>,
+      row1attop = <span class="hljs-literal">TRUE</span>, gap = <span class="hljs-number">1</span>, log = <span class="hljs-string">""</span>,
+      horOdd = !row1attop, verOdd = !row1attop)</code></pre></div>
 <div class="hljs"><pre><code class="hljs R">pairs(~mpg+disp+drat+wt, 
       data=mtcars, 
       main=<span class="hljs-string">"Basic Scatter Plot Matrix"</span>)</code></pre></div>
@@ -352,14 +359,23 @@ scatterplotMatrix(~ mpg + disp + drat + wt,
 plot(x, y, pch=<span class="hljs-number">19</span>, main=<span class="hljs-string">"Scatter Plot with 10,000 Observations"</span>)
 <span class="hljs-keyword">detach</span>(mydata)</code></pre></div>
 <p><code>smoothScatter()</code>函数可利用核密度估计生成用颜色密度来表示点分布的散点图。</p>
-<p><code>smoothScatter(x, y = NULL, nbin = 128, bandwidth, colramp = colorRampPalette(c(&quot;white&quot;, blues9)), nrpoints = 100, ret.selection = FALSE, pch = &quot;.&quot;, cex = 1, col = &quot;black&quot;, transformation = function(x) x^.25, postPlotHook = box, xlab = NULL, ylab = NULL, xlim, ylim, xaxs = par(&quot;xaxs&quot;), yaxs = par(&quot;yaxs&quot;), ...)</code></p>
+<div class="hljs"><pre><code class="hljs R">smoothScatter(x, y = <span class="hljs-literal">NULL</span>, nbin = <span class="hljs-number">128</span>, bandwidth,
+              colramp = colorRampPalette(c(<span class="hljs-string">"white"</span>, blues9)),
+              nrpoints = <span class="hljs-number">100</span>, ret.selection = <span class="hljs-literal">FALSE</span>,
+              pch = <span class="hljs-string">"."</span>, cex = <span class="hljs-number">1</span>, col = <span class="hljs-string">"black"</span>,
+              transformation = <span class="hljs-keyword">function</span>(x) x^<span class="hljs-number">.25</span>,
+              postPlotHook = box,
+              xlab = <span class="hljs-literal">NULL</span>, ylab = <span class="hljs-literal">NULL</span>, xlim, ylim,
+              xaxs = par(<span class="hljs-string">"xaxs"</span>), yaxs = par(<span class="hljs-string">"yaxs"</span>), <span class="hljs-keyword">...</span>)</code></pre></div>
 <p>代码如下：</p>
 <div class="hljs"><pre><code class="hljs R"><span class="hljs-keyword">attach</span>(mydata)
 smoothScatter(x, y, main=<span class="hljs-string">"Scatter Plot Colored by Smoothed Densities"</span>)
 <span class="hljs-keyword">detach</span>(mydata)</code></pre></div>
 <p><img src="pics/image-20200807200618128.png" srcset="/img/loading.gif" alt="image-20200807200618128" /></p>
 <p><code>hexbin</code>包中的<code>hexbin()</code>函数将二元变量的封箱放到六边形单元格中（图形比名称更直观）。</p>
-<p><code>hexbin(x, y, xbins = 30, shape = 1, xbnds = range(x), ybnds = range(y), xlab = NULL, ylab = NULL, IDs = FALSE)</code></p>
+<div class="hljs"><pre><code class="hljs R">hexbin(x, y, xbins = <span class="hljs-number">30</span>, shape = <span class="hljs-number">1</span>,
+       xbnds = range(x), ybnds = range(y),
+       xlab = <span class="hljs-literal">NULL</span>, ylab = <span class="hljs-literal">NULL</span>, IDs = <span class="hljs-literal">FALSE</span>)</code></pre></div>
 <p>示例如下：</p>
 <div class="hljs"><pre><code class="hljs R"><span class="hljs-keyword">library</span>(hexbin) 
 with(mydata, &#123; 
@@ -370,11 +386,33 @@ with(mydata, &#123;
 <h2 id="三维散点图"><a class="markdownIt-Anchor" href="#三维散点图"></a> 三维散点图</h2>
 <h3 id="1-静态"><a class="markdownIt-Anchor" href="#1-静态"></a> 1. 静态</h3>
 <p>可用<code>scatterplot3d</code>包中的<code>scatterplot3d()</code>函数来绘制三维散点图</p>
-<p>S3 method for class ‘formula’:<br />
-<code>scatter3d(formula, data, subset, radius, xlab, ylab, zlab, id=FALSE, ...)</code></p>
-<p>Default S3 method:</p>
-<p><code>scatter3d(x, y, z, 	 xlab=deparse(substitute(x)), ylab=deparse(substitute(y)), 	 zlab=deparse(substitute(z)), axis.scales=TRUE, axis.ticks=FALSE, 	 revolutions=0, 	 bg.col=c(&quot;white&quot;, &quot;black&quot;), 	 axis.col=if (bg.col == &quot;white&quot;) c(&quot;darkmagenta&quot;, &quot;black&quot;, &quot;darkcyan&quot;) 		 else c(&quot;darkmagenta&quot;, &quot;white&quot;, &quot;darkcyan&quot;), 	 surface.col=carPalette()[-1], surface.alpha=0.5, 	 neg.res.col=&quot;magenta&quot;, pos.res.col=&quot;cyan&quot;, 	 square.col=if (bg.col == &quot;white&quot;) &quot;black&quot; else &quot;gray&quot;, 	 point.col=&quot;yellow&quot;, text.col=axis.col, 	 grid.col=if (bg.col == &quot;white&quot;) &quot;black&quot; else &quot;gray&quot;, 	 fogtype=c(&quot;exp2&quot;, &quot;linear&quot;, &quot;exp&quot;, &quot;none&quot;), 	 residuals=(length(fit) == 1), 	 surface=TRUE, fill=TRUE, 	 grid=TRUE, grid.lines=26, df.smooth=NULL, df.additive=NULL, 	 sphere.size=1, radius=1, threshold=0.01, speed=1, fov=60, 	 fit=&quot;linear&quot;, groups=NULL, parallel=TRUE, 	 ellipsoid=FALSE, level=0.5, ellipsoid.alpha=0.1, id=FALSE, 	 model.summary=FALSE, ...)</code></p>
-<p><code>Identify3d(x, y, z, axis.scales=TRUE, groups = NULL, labels = 1:length(x), 	col = c(&quot;blue&quot;, &quot;green&quot;, &quot;orange&quot;, &quot;magenta&quot;, &quot;cyan&quot;, &quot;red&quot;, &quot;yellow&quot;, &quot;gray&quot;), 	offset = ((100/length(x))^(1/3)) * 0.02)</code></p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># S3 method for class 'formula': </span>
+scatter3d(formula, data, subset, radius, xlab, ylab, zlab, id=<span class="hljs-literal">FALSE</span>, <span class="hljs-keyword">...</span>)</code></pre></div>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span>
+scatter3d(x, y, z,
+	  xlab=deparse(substitute(x)), ylab=deparse(substitute(y)),
+	  zlab=deparse(substitute(z)), axis.scales=<span class="hljs-literal">TRUE</span>, axis.ticks=<span class="hljs-literal">FALSE</span>,
+	  revolutions=<span class="hljs-number">0</span>,
+	  bg.col=c(<span class="hljs-string">"white"</span>, <span class="hljs-string">"black"</span>),
+	  axis.col=<span class="hljs-keyword">if</span> (bg.col == <span class="hljs-string">"white"</span>) c(<span class="hljs-string">"darkmagenta"</span>, <span class="hljs-string">"black"</span>, <span class="hljs-string">"darkcyan"</span>)
+		            <span class="hljs-keyword">else</span> c(<span class="hljs-string">"darkmagenta"</span>, <span class="hljs-string">"white"</span>, <span class="hljs-string">"darkcyan"</span>),
+	  surface.col=carPalette()[-<span class="hljs-number">1</span>], surface.alpha=<span class="hljs-number">0.5</span>,
+	  neg.res.col=<span class="hljs-string">"magenta"</span>, pos.res.col=<span class="hljs-string">"cyan"</span>,
+	  square.col=<span class="hljs-keyword">if</span> (bg.col == <span class="hljs-string">"white"</span>) <span class="hljs-string">"black"</span> <span class="hljs-keyword">else</span> <span class="hljs-string">"gray"</span>,
+	  point.col=<span class="hljs-string">"yellow"</span>, text.col=axis.col,
+	  grid.col=<span class="hljs-keyword">if</span> (bg.col == <span class="hljs-string">"white"</span>) <span class="hljs-string">"black"</span> <span class="hljs-keyword">else</span> <span class="hljs-string">"gray"</span>,
+	  fogtype=c(<span class="hljs-string">"exp2"</span>, <span class="hljs-string">"linear"</span>, <span class="hljs-string">"exp"</span>, <span class="hljs-string">"none"</span>),
+	  residuals=(length(fit) == <span class="hljs-number">1</span>),
+	  surface=<span class="hljs-literal">TRUE</span>, fill=<span class="hljs-literal">TRUE</span>,
+	  grid=<span class="hljs-literal">TRUE</span>, grid.lines=<span class="hljs-number">26</span>, df.smooth=<span class="hljs-literal">NULL</span>, df.additive=<span class="hljs-literal">NULL</span>,
+	  sphere.size=<span class="hljs-number">1</span>, radius=<span class="hljs-number">1</span>, threshold=<span class="hljs-number">0.01</span>, speed=<span class="hljs-number">1</span>, fov=<span class="hljs-number">60</span>,
+	  fit=<span class="hljs-string">"linear"</span>, groups=<span class="hljs-literal">NULL</span>, parallel=<span class="hljs-literal">TRUE</span>,
+	  ellipsoid=<span class="hljs-literal">FALSE</span>, level=<span class="hljs-number">0.5</span>, ellipsoid.alpha=<span class="hljs-number">0.1</span>, id=<span class="hljs-literal">FALSE</span>,
+	  model.summary=<span class="hljs-literal">FALSE</span>, <span class="hljs-keyword">...</span>)
+
+Identify3d(x, y, z, axis.scales=<span class="hljs-literal">TRUE</span>, groups = <span class="hljs-literal">NULL</span>, labels = <span class="hljs-number">1</span>:length(x),
+	col = c(<span class="hljs-string">"blue"</span>, <span class="hljs-string">"green"</span>, <span class="hljs-string">"orange"</span>, <span class="hljs-string">"magenta"</span>, <span class="hljs-string">"cyan"</span>, <span class="hljs-string">"red"</span>, <span class="hljs-string">"yellow"</span>, <span class="hljs-string">"gray"</span>),
+	offset = ((<span class="hljs-number">100</span>/length(x))^(<span class="hljs-number">1</span>/<span class="hljs-number">3</span>)) * <span class="hljs-number">0.02</span>)</code></pre></div>
 <p><code>satterplot3d()</code>函数提供了许多选项，包括设置图形符号、轴、颜色、线条、网格线、突出显示和角度等功能。</p>
 <p>示例如下：</p>
 <div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(scatterplot3d)
@@ -409,11 +447,21 @@ scatterplot3d(wt, disp, mpg,
 <h3 id="2-旋转可交互式三维散点图"><a class="markdownIt-Anchor" href="#2-旋转可交互式三维散点图"></a> 2. 旋转可交互式三维散点图</h3>
 <p>如果能对三维散点图进行交互式操作，那么图形将会更好解释。R提供了一些旋转图形的功能，让你可以从多个角度观测绘制的数据点。</p>
 <p>可用rgl包中的plot3d()函数创建可交互的三维散点图。你能通过鼠标对图形进行旋转。函数格式为：</p>
-<p>Default S3 method:<br />
-<code>plot3d(x, y, z, 	xlab, ylab, zlab, type = &quot;p&quot;, col, 	size, lwd, radius, 	add = FALSE, aspect = !add, 	xlim = NULL, ylim = NULL, zlim = NULL, 	forceClipregion = FALSE, ...)</code></p>
-<p>S3 method for class ‘mesh3d’:<br />
-<code>plot3d(x, xlab = &quot;x&quot;, ylab = &quot;y&quot;, zlab = &quot;z&quot;, type = c(&quot;shade&quot;, &quot;wire&quot;, &quot;dots&quot;), 	add = FALSE, aspect = !add, ...)</code><br />
-<code>decorate3d(xlim, ylim, zlim, 	xlab = &quot;x&quot;, ylab = &quot;y&quot;, zlab = &quot;z&quot;, 	box = TRUE, axes = TRUE, main = NULL, sub = NULL, 	top = TRUE, aspect = FALSE, expand = 1.03, 	...)</code></p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span>
+plot3d(x, y, z,  
+	xlab, ylab, zlab, type = <span class="hljs-string">"p"</span>, col,  
+	size, lwd, radius,
+	add = <span class="hljs-literal">FALSE</span>, aspect = !add, 
+	xlim = <span class="hljs-literal">NULL</span>, ylim = <span class="hljs-literal">NULL</span>, zlim = <span class="hljs-literal">NULL</span>, 
+	forceClipregion = <span class="hljs-literal">FALSE</span>, <span class="hljs-keyword">...</span>)</code></pre></div>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># S3 method for class 'mesh3d':</span>
+plot3d(x, xlab = <span class="hljs-string">"x"</span>, ylab = <span class="hljs-string">"y"</span>, zlab = <span class="hljs-string">"z"</span>, type = c(<span class="hljs-string">"shade"</span>, <span class="hljs-string">"wire"</span>, <span class="hljs-string">"dots"</span>),
+	add = <span class="hljs-literal">FALSE</span>, aspect = !add, <span class="hljs-keyword">...</span>)
+decorate3d(xlim, ylim, zlim, 
+	xlab = <span class="hljs-string">"x"</span>, ylab = <span class="hljs-string">"y"</span>, zlab = <span class="hljs-string">"z"</span>, 
+	box = <span class="hljs-literal">TRUE</span>, axes = <span class="hljs-literal">TRUE</span>, main = <span class="hljs-literal">NULL</span>, sub = <span class="hljs-literal">NULL</span>,
+	top = <span class="hljs-literal">TRUE</span>, aspect = <span class="hljs-literal">FALSE</span>, expand = <span class="hljs-number">1.03</span>, 
+	<span class="hljs-keyword">...</span>)</code></pre></div>
 <p>例：</p>
 <div class="hljs"><pre><code class="hljs R"><span class="hljs-keyword">library</span>(rgl) 
 <span class="hljs-keyword">attach</span>(mtcars) 
@@ -422,11 +470,33 @@ plot3d(wt, disp, mpg, col=<span class="hljs-string">"red"</span>, size=<span cla
 <p>之后会出现这样的一个可交互的界面，可以通过鼠标来对模型进行旋转操作：</p>
 <img src="pics/image-20200807203539287.png" srcset="/img/loading.gif" alt="image-20200807203539287" style="zoom:50%;" />
 <p>用<code>car</code>包中类似的函数<code>scatter3d()</code>也可以实现交互效果：</p>
-<p>S3 method for class ‘formula’:<br />
-<code>scatter3d(formula, data, subset, radius, xlab, ylab, zlab, id=FALSE, ...)</code></p>
-<p>Default S3 method:<br />
-<code>scatter3d(x, y, z, 	 xlab=deparse(substitute(x)), ylab=deparse(substitute(y)), 	 zlab=deparse(substitute(z)), axis.scales=TRUE, axis.ticks=FALSE, 	 revolutions=0, 	 bg.col=c(&quot;white&quot;, &quot;black&quot;), 	 axis.col=if (bg.col == &quot;white&quot;) c(&quot;darkmagenta&quot;, &quot;black&quot;, &quot;darkcyan&quot;) 		 else c(&quot;darkmagenta&quot;, &quot;white&quot;, &quot;darkcyan&quot;), 	 surface.col=carPalette()[-1], surface.alpha=0.5, 	 neg.res.col=&quot;magenta&quot;, pos.res.col=&quot;cyan&quot;, 	 square.col=if (bg.col == &quot;white&quot;) &quot;black&quot; else &quot;gray&quot;, 	 point.col=&quot;yellow&quot;, text.col=axis.col, 	 grid.col=if (bg.col == &quot;white&quot;) &quot;black&quot; else &quot;gray&quot;, 	 fogtype=c(&quot;exp2&quot;, &quot;linear&quot;, &quot;exp&quot;, &quot;none&quot;), 	 residuals=(length(fit) == 1), 	 surface=TRUE, fill=TRUE, 	 grid=TRUE, grid.lines=26, df.smooth=NULL, df.additive=NULL, 	 sphere.size=1, radius=1, threshold=0.01, speed=1, fov=60, 	 fit=&quot;linear&quot;, groups=NULL, parallel=TRUE, 	 ellipsoid=FALSE, level=0.5, ellipsoid.alpha=0.1, id=FALSE, 	 model.summary=FALSE, ...)</code></p>
-<p><code>Identify3d(x, y, z, axis.scales=TRUE, groups = NULL, labels = 1:length(x), 	col = c(&quot;blue&quot;, &quot;green&quot;, &quot;orange&quot;, &quot;magenta&quot;, &quot;cyan&quot;, &quot;red&quot;, &quot;yellow&quot;, &quot;gray&quot;), 	offset = ((100/length(x))^(1/3)) * 0.02)</code></p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># S3 method for class 'formula': </span>
+scatter3d(formula, data, subset, radius, xlab, ylab, zlab, id=<span class="hljs-literal">FALSE</span>, <span class="hljs-keyword">...</span>)</code></pre></div>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span>
+scatter3d(x, y, z,
+	  xlab=deparse(substitute(x)), ylab=deparse(substitute(y)),
+	  zlab=deparse(substitute(z)), axis.scales=<span class="hljs-literal">TRUE</span>, axis.ticks=<span class="hljs-literal">FALSE</span>,
+	  revolutions=<span class="hljs-number">0</span>,
+	  bg.col=c(<span class="hljs-string">"white"</span>, <span class="hljs-string">"black"</span>),
+	  axis.col=<span class="hljs-keyword">if</span> (bg.col == <span class="hljs-string">"white"</span>) c(<span class="hljs-string">"darkmagenta"</span>, <span class="hljs-string">"black"</span>, <span class="hljs-string">"darkcyan"</span>)
+		            <span class="hljs-keyword">else</span> c(<span class="hljs-string">"darkmagenta"</span>, <span class="hljs-string">"white"</span>, <span class="hljs-string">"darkcyan"</span>),
+	  surface.col=carPalette()[-<span class="hljs-number">1</span>], surface.alpha=<span class="hljs-number">0.5</span>,
+	  neg.res.col=<span class="hljs-string">"magenta"</span>, pos.res.col=<span class="hljs-string">"cyan"</span>,
+	  square.col=<span class="hljs-keyword">if</span> (bg.col == <span class="hljs-string">"white"</span>) <span class="hljs-string">"black"</span> <span class="hljs-keyword">else</span> <span class="hljs-string">"gray"</span>,
+	  point.col=<span class="hljs-string">"yellow"</span>, text.col=axis.col,
+	  grid.col=<span class="hljs-keyword">if</span> (bg.col == <span class="hljs-string">"white"</span>) <span class="hljs-string">"black"</span> <span class="hljs-keyword">else</span> <span class="hljs-string">"gray"</span>,
+	  fogtype=c(<span class="hljs-string">"exp2"</span>, <span class="hljs-string">"linear"</span>, <span class="hljs-string">"exp"</span>, <span class="hljs-string">"none"</span>),
+	  residuals=(length(fit) == <span class="hljs-number">1</span>),
+	  surface=<span class="hljs-literal">TRUE</span>, fill=<span class="hljs-literal">TRUE</span>,
+	  grid=<span class="hljs-literal">TRUE</span>, grid.lines=<span class="hljs-number">26</span>, df.smooth=<span class="hljs-literal">NULL</span>, df.additive=<span class="hljs-literal">NULL</span>,
+	  sphere.size=<span class="hljs-number">1</span>, radius=<span class="hljs-number">1</span>, threshold=<span class="hljs-number">0.01</span>, speed=<span class="hljs-number">1</span>, fov=<span class="hljs-number">60</span>,
+	  fit=<span class="hljs-string">"linear"</span>, groups=<span class="hljs-literal">NULL</span>, parallel=<span class="hljs-literal">TRUE</span>,
+	  ellipsoid=<span class="hljs-literal">FALSE</span>, level=<span class="hljs-number">0.5</span>, ellipsoid.alpha=<span class="hljs-number">0.1</span>, id=<span class="hljs-literal">FALSE</span>,
+	  model.summary=<span class="hljs-literal">FALSE</span>, <span class="hljs-keyword">...</span>)
+
+Identify3d(x, y, z, axis.scales=<span class="hljs-literal">TRUE</span>, groups = <span class="hljs-literal">NULL</span>, labels = <span class="hljs-number">1</span>:length(x),
+	col = c(<span class="hljs-string">"blue"</span>, <span class="hljs-string">"green"</span>, <span class="hljs-string">"orange"</span>, <span class="hljs-string">"magenta"</span>, <span class="hljs-string">"cyan"</span>, <span class="hljs-string">"red"</span>, <span class="hljs-string">"yellow"</span>, <span class="hljs-string">"gray"</span>),
+	offset = ((<span class="hljs-number">100</span>/length(x))^(<span class="hljs-number">1</span>/<span class="hljs-number">3</span>)) * <span class="hljs-number">0.02</span>)</code></pre></div>
 <p>例：</p>
 <div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(car) 
 &gt; with(mtcars, 
@@ -436,7 +506,11 @@ plot3d(wt, disp, mpg, col=<span class="hljs-string">"red"</span>, size=<span cla
 <h2 id="气泡图"><a class="markdownIt-Anchor" href="#气泡图"></a> 气泡图</h2>
 <p>气泡图（bubble plot）即先创建一个二维散点图，然后用点的大小来代表第三个变量的值。</p>
 <p>可用<code>symbols()</code>函数来创建气泡图。该函数可以在指定的(<em>x</em>, <em>y</em>)坐标上绘制圆圈图、方形图、星形图、温度计图和箱线图。</p>
-<p><code>symbols(x, y = NULL, circles, squares, rectangles, stars, thermometers, boxplots, inches = TRUE, add = FALSE, fg = par(&quot;col&quot;), bg = NA, xlab = NULL, ylab = NULL, main = NULL, xlim = NULL, ylim = NULL, ...)</code></p>
+<div class="hljs"><pre><code class="hljs R">symbols(x, y = <span class="hljs-literal">NULL</span>, circles, squares, rectangles, stars,
+        thermometers, boxplots, inches = <span class="hljs-literal">TRUE</span>, add = <span class="hljs-literal">FALSE</span>,
+        fg = par(<span class="hljs-string">"col"</span>), bg = <span class="hljs-literal">NA</span>,
+        xlab = <span class="hljs-literal">NULL</span>, ylab = <span class="hljs-literal">NULL</span>, main = <span class="hljs-literal">NULL</span>,
+        xlim = <span class="hljs-literal">NULL</span>, ylim = <span class="hljs-literal">NULL</span>, <span class="hljs-keyword">...</span>)</code></pre></div>
 <p>以绘制圆圈图为例：</p>
 <p><code>symbols(x, y, circle=radius)</code>, 其中<code>x</code>、<code>y</code>和<code>radius</code>是需要设定的向量，分别表示x、y坐标和圆圈半径。</p>
 <p>如果想用面积而不是半径来表示第三个变量，那么按照圆圈半径的公式（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mo>=</mo><msqrt><mfrac><mi>A</mi><mi>π</mi></mfrac></msqrt></mrow><annotation encoding="application/x-tex">r = \sqrt{\frac{A}{\pi}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.84em;vertical-align:-0.5913344999999999em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2486655000000002em;"><span class="svg-align" style="top:-3.8em;"><span class="pstrut" style="height:3.8em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">π</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.2086655em;"><span class="pstrut" style="height:3.8em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.8800000000000001em;"><svg width='400em' height='1.8800000000000001em' viewBox='0 0 400000 1944' preserveAspectRatio='xMinYMin slice'><path d='M1001,80H400000v40H1013.1s-83.4,268,-264.1,840c-180.7,
