@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.6k 字
+      3.5k 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9
+      13
        分钟
     </span>
   
@@ -246,7 +246,7 @@
             
             <article class="markdown-body">
               <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-ggplot2语法介绍"><span class="post-toc-text"> 一、ggplot2语法介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用几何函数指定图的类型"><span class="post-toc-text"> 用几何函数指定图的类型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据分组"><span class="post-toc-text"> 数据分组</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#刻面"><span class="post-toc-text"> 刻面</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#添加光滑曲线"><span class="post-toc-text"> 添加光滑曲线</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-对于图片的操作"><span class="post-toc-text"> 二、对于图片的操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#坐标轴"><span class="post-toc-text"> 坐标轴</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#图例"><span class="post-toc-text"> 图例</span></a></li></ol></li></ol>
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-ggplot2语法介绍"><span class="post-toc-text"> 一、ggplot2语法介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用几何函数指定图的类型"><span class="post-toc-text"> 用几何函数指定图的类型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据分组"><span class="post-toc-text"> 数据分组</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#刻面"><span class="post-toc-text"> 刻面</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#添加光滑曲线"><span class="post-toc-text"> 添加光滑曲线</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-对于图片的操作"><span class="post-toc-text"> 二、对于图片的操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#刻度线及刻度线标签"><span class="post-toc-text"> 刻度线及刻度线标签</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#图例"><span class="post-toc-text"> 图例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#标尺"><span class="post-toc-text"> 标尺</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-标尺添加"><span class="post-toc-text"> 1. 标尺添加</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-将标尺与更多因素关联"><span class="post-toc-text"> 2. 将标尺与更多因素关联</span></a></li></ol></li></ol></li></ol>
 
               <p><code>ggplot2</code>包基于一种全面的图形“语法”，提供了一种全新的图形创建方法。</p>
 <p><code>ggplot2</code>包实现了一个在R中基于全面一致的语法创建图形时的系统。这提供了在R中画图时经常缺乏的图形创造的一致性并允许我们创建具有创新性和新颖性的图表类型。</p>
@@ -621,7 +621,7 @@ facet_grid(
 <h1 id="二-对于图片的操作"><a class="markdownIt-Anchor" href="#二-对于图片的操作"></a> 二、对于图片的操作</h1>
 <p>这部分主要涉及修改图片的外观</p>
 <p>在R的<code>base</code>绘图函数当中，可以通过<code>par()</code>来修改外观，对于<code>ggplot2</code>并不通用。</p>
-<h2 id="坐标轴"><a class="markdownIt-Anchor" href="#坐标轴"></a> 坐标轴</h2>
+<h2 id="刻度线及刻度线标签"><a class="markdownIt-Anchor" href="#刻度线及刻度线标签"></a> 刻度线及刻度线标签</h2>
 <p><code>ggplot2</code>包会在创建图时自动创建刻度线、刻度标记标签和坐标轴标签。它们往往看起来不错，但是有时我们需要在更大程度上控制它们的外观。</p>
 <p>控制坐标轴和刻度线外观的函数:</p>
 <table>
@@ -668,6 +668,143 @@ facet_grid(
 		labs(title=<span class="hljs-string">"Faculty Salary by Rank and Sex"</span>, x=<span class="hljs-string">""</span>, y=<span class="hljs-string">""</span>)</code></pre></div>
 <p><img src="pics/image-20200809195727203.png" srcset="/img/loading.gif" alt="image-20200809195727203" /></p>
 <h2 id="图例"><a class="markdownIt-Anchor" href="#图例"></a> 图例</h2>
+<p>图例是指出如何用颜色、形状、尺寸等视觉特性表示数据特征的指南。<code>ggplot2</code>包能自动生成图例，而且在很多时候能够满足我们的需求；但是在其他时候，我们可能要对其进行自定义。图例的<strong>标题</strong>和<strong>位置</strong>是最常用的定制特征。</p>
+<p>当更改图例的标题时，必须考虑图例是否基于颜色、填充、尺寸、形状或它们的组合。</p>
+<ul>
+<li>图例标题的位置由<code>theme()</code>函数中的<code>legend.position</code>选项控制。可能的值包括<code>&quot;left&quot;</code>、<code>&quot;top&quot;</code>、<code>&quot;right&quot;</code>（默认值）和<code>&quot;bottom&quot;</code>。
+<ul>
+<li>如果想删除图例，可以使用<code>legend.position=&quot;none&quot;</code></li>
+</ul>
+</li>
+</ul>
+<p>这部分使用<code>car</code>包的<code>Salaries</code>数据集进行演示：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(car)
+载入需要的程辑包：carData
+&gt; head(Salaries)
+       rank discipline yrs.since.phd yrs.service  sex salary
+<span class="hljs-number">1</span>      Prof          B            <span class="hljs-number">19</span>          <span class="hljs-number">18</span> Male <span class="hljs-number">139750</span>
+<span class="hljs-number">2</span>      Prof          B            <span class="hljs-number">20</span>          <span class="hljs-number">16</span> Male <span class="hljs-number">173200</span>
+<span class="hljs-number">3</span>  AsstProf          B             <span class="hljs-number">4</span>           <span class="hljs-number">3</span> Male  <span class="hljs-number">79750</span>
+<span class="hljs-number">4</span>      Prof          B            <span class="hljs-number">45</span>          <span class="hljs-number">39</span> Male <span class="hljs-number">115000</span>
+<span class="hljs-number">5</span>      Prof          B            <span class="hljs-number">40</span>          <span class="hljs-number">41</span> Male <span class="hljs-number">141500</span>
+<span class="hljs-number">6</span> AssocProf          B             <span class="hljs-number">6</span>           <span class="hljs-number">6</span> Male  <span class="hljs-number">97000</span></code></pre></div>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(ggplot2)
+&gt; ggplot(data=Salaries, aes(x=rank, y=salary, fill=sex)) + 
+		geom_boxplot() + 
+		scale_x_discrete(breaks=c(<span class="hljs-string">"AsstProf"</span>, <span class="hljs-string">"AssocProf"</span>, <span class="hljs-string">"Prof"</span>),
+                         labels=c(<span class="hljs-string">"Assistant\nProfessor"</span>,<span class="hljs-string">"Associate\nProfessor"</span>, 
+                                  <span class="hljs-string">"Full\nProfessor"</span>)) + 
+		scale_y_continuous(breaks=c(<span class="hljs-number">50000</span>, <span class="hljs-number">100000</span>, <span class="hljs-number">150000</span>, <span class="hljs-number">200000</span>), 
+                           labels=c(<span class="hljs-string">"$50K"</span>, <span class="hljs-string">"$100K"</span>, <span class="hljs-string">"$150K"</span>, <span class="hljs-string">"$200K"</span>)) + 
+		labs(title=<span class="hljs-string">"Faculty Salary by Rank and Gender"</span>, 
+             x=<span class="hljs-string">""</span>, y=<span class="hljs-string">""</span>, fill=<span class="hljs-string">"Gender"</span>) + 
+		<span class="hljs-comment"># 图例的左上角是距离左侧边缘10%和底部边缘80%的部分</span>
+		theme(legend.position=c(<span class="hljs-number">.1</span>,<span class="hljs-number">.8</span>))</code></pre></div>
+<p><img src="pics/image-20200809213743609.png" srcset="/img/loading.gif" alt="image-20200809213743609" /></p>
+<h2 id="标尺"><a class="markdownIt-Anchor" href="#标尺"></a> 标尺</h2>
+<h3 id="1-标尺添加"><a class="markdownIt-Anchor" href="#1-标尺添加"></a> 1. 标尺添加</h3>
+<p><code>ggplot2</code>包使用标尺把数据空间的观察值映射到可视化的空间中。标尺既可以应用到连续的变量，也可以应用到离散的变量</p>
+<p>例1，使用内置的<code>mtcars</code>数据集进行演示：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; head(mtcars)
+                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4         <span class="hljs-number">21.0</span>   <span class="hljs-number">6</span>  <span class="hljs-number">160</span> <span class="hljs-number">110</span> <span class="hljs-number">3.90</span> <span class="hljs-number">2.620</span> <span class="hljs-number">16.46</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>    <span class="hljs-number">4</span>    <span class="hljs-number">4</span>
+Mazda RX4 Wag     <span class="hljs-number">21.0</span>   <span class="hljs-number">6</span>  <span class="hljs-number">160</span> <span class="hljs-number">110</span> <span class="hljs-number">3.90</span> <span class="hljs-number">2.875</span> <span class="hljs-number">17.02</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>    <span class="hljs-number">4</span>    <span class="hljs-number">4</span>
+Datsun <span class="hljs-number">710</span>        <span class="hljs-number">22.8</span>   <span class="hljs-number">4</span>  <span class="hljs-number">108</span>  <span class="hljs-number">93</span> <span class="hljs-number">3.85</span> <span class="hljs-number">2.320</span> <span class="hljs-number">18.61</span>  <span class="hljs-number">1</span>  <span class="hljs-number">1</span>    <span class="hljs-number">4</span>    <span class="hljs-number">1</span>
+Hornet <span class="hljs-number">4</span> Drive    <span class="hljs-number">21.4</span>   <span class="hljs-number">6</span>  <span class="hljs-number">258</span> <span class="hljs-number">110</span> <span class="hljs-number">3.08</span> <span class="hljs-number">3.215</span> <span class="hljs-number">19.44</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>    <span class="hljs-number">3</span>    <span class="hljs-number">1</span>
+Hornet Sportabout <span class="hljs-number">18.7</span>   <span class="hljs-number">8</span>  <span class="hljs-number">360</span> <span class="hljs-number">175</span> <span class="hljs-number">3.15</span> <span class="hljs-number">3.440</span> <span class="hljs-number">17.02</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>    <span class="hljs-number">3</span>    <span class="hljs-number">2</span>
+Valiant           <span class="hljs-number">18.1</span>   <span class="hljs-number">6</span>  <span class="hljs-number">225</span> <span class="hljs-number">105</span> <span class="hljs-number">2.76</span> <span class="hljs-number">3.460</span> <span class="hljs-number">20.22</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>    <span class="hljs-number">3</span>    <span class="hljs-number">1</span></code></pre></div>
+<div class="hljs"><pre><code class="hljs R">&gt; ggplot(mtcars, aes(x=wt, y=mpg, size=disp)) + 
+		geom_point(shape=<span class="hljs-number">21</span>, color=<span class="hljs-string">"black"</span>, fill=<span class="hljs-string">"cornsilk"</span>) + 
+		labs(x=<span class="hljs-string">"Weight"</span>, y=<span class="hljs-string">"Miles Per Gallon"</span>, 
+             title=<span class="hljs-string">"Bubble Chart"</span>, size=<span class="hljs-string">"Engine\nDisplacement"</span>)</code></pre></div>
+<p><img src="pics/image-20200809214120500.png" srcset="/img/loading.gif" alt="image-20200809214120500" /></p>
+<ul>
+<li><code>aes()</code>函数的参数<code>size=disp</code>生成连续型变量<code>disp</code>（发动机排量）的标尺，并使用它来控制点的尺寸</li>
+</ul>
+<h3 id="2-将标尺与更多因素关联"><a class="markdownIt-Anchor" href="#2-将标尺与更多因素关联"></a> 2. 将标尺与更多因素关联</h3>
+<p>例2，使用标尺将带有因子水平的视觉线索（如颜色、形状、线条类型、尺寸和透明度）关联起来，使用<code>car</code>包的<code>Salaries</code>数据集进行演示：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(car)
+载入需要的程辑包：carData
+&gt; head(Salaries)
+       rank discipline yrs.since.phd yrs.service  sex salary
+<span class="hljs-number">1</span>      Prof          B            <span class="hljs-number">19</span>          <span class="hljs-number">18</span> Male <span class="hljs-number">139750</span>
+<span class="hljs-number">2</span>      Prof          B            <span class="hljs-number">20</span>          <span class="hljs-number">16</span> Male <span class="hljs-number">173200</span>
+<span class="hljs-number">3</span>  AsstProf          B             <span class="hljs-number">4</span>           <span class="hljs-number">3</span> Male  <span class="hljs-number">79750</span>
+<span class="hljs-number">4</span>      Prof          B            <span class="hljs-number">45</span>          <span class="hljs-number">39</span> Male <span class="hljs-number">115000</span>
+<span class="hljs-number">5</span>      Prof          B            <span class="hljs-number">40</span>          <span class="hljs-number">41</span> Male <span class="hljs-number">141500</span>
+<span class="hljs-number">6</span> AssocProf          B             <span class="hljs-number">6</span>           <span class="hljs-number">6</span> Male  <span class="hljs-number">97000</span></code></pre></div>
+<div class="hljs"><pre><code class="hljs R">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary, color=rank)) + 
+		scale_color_manual(values=c(<span class="hljs-string">"orange"</span>, <span class="hljs-string">"olivedrab"</span>, <span class="hljs-string">"navy"</span>)) + 
+		geom_point(size=<span class="hljs-number">2</span>)</code></pre></div>
+<p><img src="pics/image-20200809214351844.png" srcset="/img/loading.gif" alt="image-20200809214351844" /></p>
+<p>有一些预设好的颜色集，通用与各种场合：</p>
+<p>可以通过<code>scale_color_brewer()</code>和<code>scale_fill_brewer()</code>函数来预先指定分得清的颜色集。</p>
+<div class="hljs"><pre><code class="hljs R">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary, color=rank)) + 
+		scale_color_brewer(palette=<span class="hljs-string">"Set1"</span>) + geom_point(size=<span class="hljs-number">2</span>)</code></pre></div>
+<p>其它的颜色集可以通过<code>RColorBrewer</code>包进行可视化选择：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(RColorBrewer) 
+&gt; display.brewer.all()</code></pre></div>
+<p><img src="pics/image-20200809214910619.png" srcset="/img/loading.gif" alt="image-20200809214910619" /></p>
+<p>关于颜色相关的函数使用方法如下，通过指定<code>palette</code>来选取预设颜色集：</p>
+<div class="hljs"><pre><code class="hljs R">scale_colour_brewer(
+  <span class="hljs-keyword">...</span>,
+  type = <span class="hljs-string">"seq"</span>,
+  palette = <span class="hljs-number">1</span>,
+  direction = <span class="hljs-number">1</span>,
+  aesthetics = <span class="hljs-string">"colour"</span>
+)
+
+scale_fill_brewer(
+  <span class="hljs-keyword">...</span>,
+  type = <span class="hljs-string">"seq"</span>,
+  palette = <span class="hljs-number">1</span>,
+  direction = <span class="hljs-number">1</span>,
+  aesthetics = <span class="hljs-string">"fill"</span>
+)
+
+scale_colour_distiller(
+  <span class="hljs-keyword">...</span>,
+  type = <span class="hljs-string">"seq"</span>,
+  palette = <span class="hljs-number">1</span>,
+  direction = -<span class="hljs-number">1</span>,
+  values = <span class="hljs-literal">NULL</span>,
+  space = <span class="hljs-string">"Lab"</span>,
+  na.value = <span class="hljs-string">"grey50"</span>,
+  guide = <span class="hljs-string">"colourbar"</span>,
+  aesthetics = <span class="hljs-string">"colour"</span>
+)
+
+scale_fill_distiller(
+  <span class="hljs-keyword">...</span>,
+  type = <span class="hljs-string">"seq"</span>,
+  palette = <span class="hljs-number">1</span>,
+  direction = -<span class="hljs-number">1</span>,
+  values = <span class="hljs-literal">NULL</span>,
+  space = <span class="hljs-string">"Lab"</span>,
+  na.value = <span class="hljs-string">"grey50"</span>,
+  guide = <span class="hljs-string">"colourbar"</span>,
+  aesthetics = <span class="hljs-string">"fill"</span>
+)
+
+scale_colour_fermenter(
+  <span class="hljs-keyword">...</span>,
+  type = <span class="hljs-string">"seq"</span>,
+  palette = <span class="hljs-number">1</span>,
+  direction = -<span class="hljs-number">1</span>,
+  na.value = <span class="hljs-string">"grey50"</span>,
+  guide = <span class="hljs-string">"coloursteps"</span>,
+  aesthetics = <span class="hljs-string">"colour"</span>
+)
+
+scale_fill_fermenter(
+  <span class="hljs-keyword">...</span>,
+  type = <span class="hljs-string">"seq"</span>,
+  palette = <span class="hljs-number">1</span>,
+  direction = -<span class="hljs-number">1</span>,
+  na.value = <span class="hljs-string">"grey50"</span>,
+  guide = <span class="hljs-string">"coloursteps"</span>,
+  aesthetics = <span class="hljs-string">"fill"</span>
+)</code></pre></div>
 
             </article>
             <hr>
