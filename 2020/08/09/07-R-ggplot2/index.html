@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>07. R &lt;- ggplot2语法概述及基本图片操作（施工中） - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-08-09 17:47">
+      2020年8月9日 下午
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      9
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：4 小时前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-ggplot2语法介绍"><span class="post-toc-text"> 一、ggplot2语法介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用几何函数指定图的类型"><span class="post-toc-text"> 用几何函数指定图的类型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据分组"><span class="post-toc-text"> 数据分组</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#刻面"><span class="post-toc-text"> 刻面</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#添加光滑曲线"><span class="post-toc-text"> 添加光滑曲线</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-对于图片的操作"><span class="post-toc-text"> 二、对于图片的操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#坐标轴"><span class="post-toc-text"> 坐标轴</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#图例"><span class="post-toc-text"> 图例</span></a></li></ol></li></ol>
+
+              <p><code>ggplot2</code>包基于一种全面的图形“语法”，提供了一种全新的图形创建方法。</p>
+<p><code>ggplot2</code>包实现了一个在R中基于全面一致的语法创建图形时的系统。这提供了在R中画图时经常缺乏的图形创造的一致性并允许我们创建具有创新性和新颖性的图表类型。</p>
+<h1 id="一-ggplot2语法介绍"><a class="markdownIt-Anchor" href="#一-ggplot2语法介绍"></a> 一、ggplot2语法介绍</h1>
+<p>在<code>ggplot2</code>中，图是采用（<code>+</code>号）串联起来并创建的。每个函数修改属于自己的部分。</p>
+<p>例：</p>
+<div class="hljs"><pre><code class="hljs R">ggplot(data=mtcars, aes(x=wt, y=mpg)) + 
+	geom_point() + 
+	labs(title=<span class="hljs-string">"Automobile Data"</span>, x=<span class="hljs-string">"Weight"</span>, y=<span class="hljs-string">"Miles Per Gallon"</span>)</code></pre></div>
+<img src="pics/image-20200809183055924.png" srcset="/img/loading.gif" alt="image-20200809183055924" style="zoom:67%;" />
+<p>在这个例子当中：</p>
+<ul>
+<li><code>ggplot()</code>初始化图形并且指顶要用到的数据来源（<code>mtcars</code>）和变量（<code>wt</code>、<code>mpg</code>）</li>
+<li><code>aes()</code>函数的功能是指定每个变量扮演的角色（<code>aes</code>代表aesthetics，即如何用视觉形式呈现信息）。在这里，变量<code>wt</code>的值映射到沿<em>x</em>轴的距离，变量<code>mpg</code>的值映射到沿<em>y</em>轴的距离</li>
+<li><code>geom</code>向图形中添加了几何对象</li>
+<li><code>lab()</code>函数是可选的，添加了注释（轴标签和标题）。</li>
+</ul>
+<h2 id="用几何函数指定图的类型"><a class="markdownIt-Anchor" href="#用几何函数指定图的类型"></a> 用几何函数指定图的类型</h2>
+<p><code>ggplot()</code>函数设置图形但没有自己的视觉输出。使用一个或多个几何函数向图中添加了几何对象（简写为<code>geom</code>），包括点、线、条、箱线图和阴影区域:</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>添加</th>
+<th>选项（参数）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>geom_bar()</td>
+<td>条形图</td>
+<td>color、fill、alpha</td>
+</tr>
+<tr>
+<td>geom_boxplot()</td>
+<td>箱线图</td>
+<td>color、fill、alpha、notch、width</td>
+</tr>
+<tr>
+<td>geom_density()</td>
+<td>密度图</td>
+<td>color、fill、alpha、linetype</td>
+</tr>
+<tr>
+<td>geom_histogram()</td>
+<td>直方图</td>
+<td>color、fill、alpha、linetype、binwidth</td>
+</tr>
+<tr>
+<td>geom_hline()</td>
+<td>水平线</td>
+<td>color、alpha、linetype、size</td>
+</tr>
+<tr>
+<td>geom_jitter()</td>
+<td>抖动点</td>
+<td>color、size、alpha、shape</td>
+</tr>
+<tr>
+<td>geom_line()</td>
+<td>线图</td>
+<td>colorvalpha、linetype、size</td>
+</tr>
+<tr>
+<td>geom_point()</td>
+<td>散点图</td>
+<td>color、alpha、shape、size</td>
+</tr>
+<tr>
+<td>geom_rug()</td>
+<td>地毯图</td>
+<td>color、side</td>
+</tr>
+<tr>
+<td>geom_smooth()</td>
+<td>拟合曲线</td>
+<td>method、formula、color、fill、linetype、size</td>
+</tr>
+<tr>
+<td>geom_text()</td>
+<td>文字注解</td>
+<td>很多</td>
+</tr>
+<tr>
+<td>geom_violin()</td>
+<td>小提琴图</td>
+<td>color、fill、alpha、linetype</td>
+</tr>
+<tr>
+<td>geom_vline()</td>
+<td>垂线</td>
+<td>color、alpha、linetype、size</td>
+</tr>
+</tbody>
+</table>
+<p>常见参数：</p>
+<table>
+<thead>
+<tr>
+<th>选项（参数）</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>对点、线和填充区域的边界进行着色</td>
+</tr>
+<tr>
+<td>fill</td>
+<td>对填充区域着色，如条形和密度区域</td>
+</tr>
+<tr>
+<td>alpha</td>
+<td>颜色的透明度，从0（完全透明）到1（不透明）。</td>
+</tr>
+<tr>
+<td>linetype</td>
+<td>图案的线条（1=实线，2=虚线，3=点，4=点破折号，5=长破折号，6=双破折号）</td>
+</tr>
+<tr>
+<td>size</td>
+<td>点的尺寸和线的宽度</td>
+</tr>
+<tr>
+<td>shape</td>
+<td>点的形状（和pch一样，0=开放的方形，1=开放的圆形，2=开放的三角形，等等）</td>
+</tr>
+<tr>
+<td>position</td>
+<td>绘制诸如条形图和点等对象的位置。<br />对条形图来说，<code>&quot;dodge&quot;</code>将分组条形图并排，<code>&quot;stacked&quot;</code>堆叠分组条形图，<code>&quot;fill&quot;</code>垂直地堆叠分组条形图并规范其高度相等。<br />对于点来说，<code>&quot;jitter&quot;</code>减少点重叠</td>
+</tr>
+<tr>
+<td>binwidth</td>
+<td>直方图的宽度</td>
+</tr>
+<tr>
+<td>notch</td>
+<td>表示方块图是否应为缺口（TRUE/FALSE）</td>
+</tr>
+<tr>
+<td>sides</td>
+<td>地毯图的安置（<code>&quot;b&quot;</code>=底部，<code>&quot;l&quot;</code>=左部，<code>&quot;t&quot;</code>=顶部，<code>&quot;r&quot;</code>=右部，<code>&quot;bl&quot;</code>=左下部，等等）</td>
+</tr>
+<tr>
+<td>width</td>
+<td>箱线图的宽度</td>
+</tr>
+</tbody>
+</table>
+<p>例，以<code>car</code>包中的<code>Salaries</code>数据集作为示例数据集：</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 展示数据集Salaries</span>
+&gt; <span class="hljs-keyword">library</span>(car)
+载入需要的程辑包：carData
+&gt; head(Salaries)
+       rank discipline yrs.since.phd yrs.service  sex salary
+<span class="hljs-number">1</span>      Prof          B            <span class="hljs-number">19</span>          <span class="hljs-number">18</span> Male <span class="hljs-number">139750</span>
+<span class="hljs-number">2</span>      Prof          B            <span class="hljs-number">20</span>          <span class="hljs-number">16</span> Male <span class="hljs-number">173200</span>
+<span class="hljs-number">3</span>  AsstProf          B             <span class="hljs-number">4</span>           <span class="hljs-number">3</span> Male  <span class="hljs-number">79750</span>
+<span class="hljs-number">4</span>      Prof          B            <span class="hljs-number">45</span>          <span class="hljs-number">39</span> Male <span class="hljs-number">115000</span>
+<span class="hljs-number">5</span>      Prof          B            <span class="hljs-number">40</span>          <span class="hljs-number">41</span> Male <span class="hljs-number">141500</span>
+<span class="hljs-number">6</span> AssocProf          B             <span class="hljs-number">6</span>           <span class="hljs-number">6</span> Male  <span class="hljs-number">97000</span>
+
+<span class="hljs-comment"># 绘图</span>
+&gt; <span class="hljs-keyword">library</span>(ggplot2) 
+&gt; ggplot(Salaries, aes(x=rank, y=salary)) + 
+     geom_boxplot(fill=<span class="hljs-string">"cornflowerblue"</span>, 
+                  color=<span class="hljs-string">"black"</span>, notch=<span class="hljs-literal">TRUE</span>) + 
+     geom_point(position=<span class="hljs-string">"jitter"</span>, color=<span class="hljs-string">"blue"</span>, alpha=<span class="hljs-number">.5</span>) + 
+     geom_rug(side=<span class="hljs-string">"l"</span>, color=<span class="hljs-string">"black"</span>)</code></pre></div>
+<p><img src="pics/image-20200809184749532.png" srcset="/img/loading.gif" alt="image-20200809184749532" /></p>
+<h2 id="数据分组"><a class="markdownIt-Anchor" href="#数据分组"></a> 数据分组</h2>
+<p>为了理解数据，在一个图中画出两个或更多组的观察值通常是很有帮助的。在R中，组通常用分类变量的水平（因子）来定义。</p>
+<p>分组是通过<code>ggplot2</code>图将一个或多个带有诸如形状、颜色、填充、尺寸和线类型的视觉特征的分组变量来完成的。<code>ggplot()</code>声明中的<code>aes()</code>函数负责分配变量（图形的视觉特征）。</p>
+<p>根据不同的图像类型，分组的方式不尽相同，分组的方式可能并不会非常明显地定义出来。</p>
+<p>这部分仍然使用<code>car</code>包中的<code>Salaries</code>来进行演示。</p>
+<p>例1，根据<code>Salaries$Rank</code>进行分组：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(car)
+&gt; head(Salaries)
+       rank discipline yrs.since.phd yrs.service  sex salary
+<span class="hljs-number">1</span>      Prof          B            <span class="hljs-number">19</span>          <span class="hljs-number">18</span> Male <span class="hljs-number">139750</span>
+<span class="hljs-number">2</span>      Prof          B            <span class="hljs-number">20</span>          <span class="hljs-number">16</span> Male <span class="hljs-number">173200</span>
+<span class="hljs-number">3</span>  AsstProf          B             <span class="hljs-number">4</span>           <span class="hljs-number">3</span> Male  <span class="hljs-number">79750</span>
+<span class="hljs-number">4</span>      Prof          B            <span class="hljs-number">45</span>          <span class="hljs-number">39</span> Male <span class="hljs-number">115000</span>
+<span class="hljs-number">5</span>      Prof          B            <span class="hljs-number">40</span>          <span class="hljs-number">41</span> Male <span class="hljs-number">141500</span>
+<span class="hljs-number">6</span> AssocProf          B             <span class="hljs-number">6</span>           <span class="hljs-number">6</span> Male  <span class="hljs-number">97000</span>
+&gt; ggplot(data=Salaries, aes(x=salary, fill=rank)) + 
+	geom_density(alpha=<span class="hljs-number">.3</span>)</code></pre></div>
+<p><img src="pics/image-20200809190706605.png" srcset="/img/loading.gif" alt="image-20200809190706605" /></p>
+<p>这其中的分组并不是非常明显地定义出来，而是以填充颜色的方式（<code>fill=rank</code>）进行表示的。即按照<code>Salaries$rank</code>的类型进行颜色填充，因为原数据集中<code>rank</code>有三种类型（AsstProf，AssoProf，Prof），因此需要填充三种颜色，从而<code>ggplot</code>自然地将数据分为了三组，因为要填充三种颜色。</p>
+<p>例2，散点图：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; head(Salaries)
+       rank discipline yrs.since.phd yrs.service  sex salary
+<span class="hljs-number">1</span>      Prof          B            <span class="hljs-number">19</span>          <span class="hljs-number">18</span> Male <span class="hljs-number">139750</span>
+<span class="hljs-number">2</span>      Prof          B            <span class="hljs-number">20</span>          <span class="hljs-number">16</span> Male <span class="hljs-number">173200</span>
+<span class="hljs-number">3</span>  AsstProf          B             <span class="hljs-number">4</span>           <span class="hljs-number">3</span> Male  <span class="hljs-number">79750</span>
+<span class="hljs-number">4</span>      Prof          B            <span class="hljs-number">45</span>          <span class="hljs-number">39</span> Male <span class="hljs-number">115000</span>
+<span class="hljs-number">5</span>      Prof          B            <span class="hljs-number">40</span>          <span class="hljs-number">41</span> Male <span class="hljs-number">141500</span>
+<span class="hljs-number">6</span> AssocProf          B             <span class="hljs-number">6</span>           <span class="hljs-number">6</span> Male  <span class="hljs-number">97000</span>
+&gt; ggplot(Salaries, aes(x=yrs.since.phd, y=salary, 
+                       color=rank, shape=sex)) + 
+		geom_point()</code></pre></div>
+<p><img src="pics/image-20200809191119409.png" srcset="/img/loading.gif" alt="image-20200809191119409" /></p>
+<p>这个例子当中按照color和shape对原数据分了两次组：原数据集中<code>rank</code>有三种类型（AsstProf，AssoProf，Prof），<code>sex</code>有两种类型（Female, Male），因此自动划分了各组的color和shape。</p>
+<p>例3，条形图：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; head(Salaries)
+       rank discipline yrs.since.phd yrs.service  sex salary
+<span class="hljs-number">1</span>      Prof          B            <span class="hljs-number">19</span>          <span class="hljs-number">18</span> Male <span class="hljs-number">139750</span>
+<span class="hljs-number">2</span>      Prof          B            <span class="hljs-number">20</span>          <span class="hljs-number">16</span> Male <span class="hljs-number">173200</span>
+<span class="hljs-number">3</span>  AsstProf          B             <span class="hljs-number">4</span>           <span class="hljs-number">3</span> Male  <span class="hljs-number">79750</span>
+<span class="hljs-number">4</span>      Prof          B            <span class="hljs-number">45</span>          <span class="hljs-number">39</span> Male <span class="hljs-number">115000</span>
+<span class="hljs-number">5</span>      Prof          B            <span class="hljs-number">40</span>          <span class="hljs-number">41</span> Male <span class="hljs-number">141500</span>
+<span class="hljs-number">6</span> AssocProf          B             <span class="hljs-number">6</span>           <span class="hljs-number">6</span> Male  <span class="hljs-number">97000</span>
+&gt; ggplot(Salaries, aes(x=rank, fill=sex)) + 
+	geom_bar(position=<span class="hljs-string">"stack"</span>) + labs(title=<span class="hljs-string">'position="stack"'</span>) 
+
+&gt; ggplot(Salaries, aes(x=rank, fill=sex)) + 
+	geom_bar(position=<span class="hljs-string">"dodge"</span>) + labs(title=<span class="hljs-string">'position="dodge"'</span>) 
+
+&gt; ggplot(Salaries, aes(x=rank, fill=sex)) + 
+	geom_bar(position=<span class="hljs-string">"fill"</span>) + labs(title=<span class="hljs-string">'position="fill"'</span>)</code></pre></div>
+<p><img src="pics/image-20200809191951950.png" srcset="/img/loading.gif" alt="image-20200809191951950" /></p>
+<center><font color="708090" size="2">直接用了课本上的图....</font></center>
+<h2 id="刻面"><a class="markdownIt-Anchor" href="#刻面"></a> 刻面</h2>
+<p>如果组在图中并排出现而不是重叠为单一的图形，关系就是清晰的。我们可以使用<code>facet_wrap()</code>函数和<code>facet_grid()</code>函数创建网格图形（在<code>ggplot2</code>中也称刻面图）。</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 使用格式</span>
+facet_wrap(
+  facets,
+  nrow = <span class="hljs-literal">NULL</span>,
+  ncol = <span class="hljs-literal">NULL</span>,
+  scales = <span class="hljs-string">"fixed"</span>,
+  shrink = <span class="hljs-literal">TRUE</span>,
+  labeller = <span class="hljs-string">"label_value"</span>,
+  as.table = <span class="hljs-literal">TRUE</span>,
+  <span class="hljs-keyword">switch</span> = <span class="hljs-literal">NULL</span>,
+  drop = <span class="hljs-literal">TRUE</span>,
+  dir = <span class="hljs-string">"h"</span>,
+  strip.position = <span class="hljs-string">"top"</span>
+)
+
+facet_grid(
+  rows = <span class="hljs-literal">NULL</span>,
+  cols = <span class="hljs-literal">NULL</span>,
+  scales = <span class="hljs-string">"fixed"</span>,
+  space = <span class="hljs-string">"fixed"</span>,
+  shrink = <span class="hljs-literal">TRUE</span>,
+  labeller = <span class="hljs-string">"label_value"</span>,
+  as.table = <span class="hljs-literal">TRUE</span>,
+  <span class="hljs-keyword">switch</span> = <span class="hljs-literal">NULL</span>,
+  drop = <span class="hljs-literal">TRUE</span>,
+  margins = <span class="hljs-literal">FALSE</span>,
+  facets = <span class="hljs-literal">NULL</span>
+)</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>facet_wrap(~var, ncol=n)</td>
+<td>将每个<code>var</code>水平排列成<em>n</em>列的独立图</td>
+</tr>
+<tr>
+<td>facet_wrap(~var, nrow=n)</td>
+<td>将每个<code>var</code>水平排列成<em>n</em>行的独立图</td>
+</tr>
+<tr>
+<td>facet_grid(rowvar~colvar)</td>
+<td><code>rowvar</code>和<code>colvar</code>组合的独立图，其中<code>rowvar</code>表示行，<code>colvar</code>表示列</td>
+</tr>
+<tr>
+<td>facet_grid(rowvar~.)</td>
+<td>每个<code>rowvar</code>水平的独立图，配置成一个单列</td>
+</tr>
+<tr>
+<td>facet_grid(.~colvar)</td>
+<td>每个<code>colvar</code>水平的独立图，配置成一个单行</td>
+</tr>
+</tbody>
+</table>
+<p>这部分的演示使用<code>lattice</code>包中的<code>singer</code>数据集和<code>car</code>包中的<code>Salaries</code>来进行：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(lattice)
+&gt; head(singer)
+  height voice.part
+<span class="hljs-number">1</span>     <span class="hljs-number">64</span>  Soprano <span class="hljs-number">1</span>
+<span class="hljs-number">2</span>     <span class="hljs-number">62</span>  Soprano <span class="hljs-number">1</span>
+<span class="hljs-number">3</span>     <span class="hljs-number">66</span>  Soprano <span class="hljs-number">1</span>
+<span class="hljs-number">4</span>     <span class="hljs-number">65</span>  Soprano <span class="hljs-number">1</span>
+<span class="hljs-number">5</span>     <span class="hljs-number">60</span>  Soprano <span class="hljs-number">1</span>
+<span class="hljs-number">6</span>     <span class="hljs-number">61</span>  Soprano <span class="hljs-number">1</span>
+&gt; <span class="hljs-keyword">library</span>(car)
+&gt; head(Salaries)
+       rank discipline yrs.since.phd yrs.service  sex salary
+<span class="hljs-number">1</span>      Prof          B            <span class="hljs-number">19</span>          <span class="hljs-number">18</span> Male <span class="hljs-number">139750</span>
+<span class="hljs-number">2</span>      Prof          B            <span class="hljs-number">20</span>          <span class="hljs-number">16</span> Male <span class="hljs-number">173200</span>
+<span class="hljs-number">3</span>  AsstProf          B             <span class="hljs-number">4</span>           <span class="hljs-number">3</span> Male  <span class="hljs-number">79750</span>
+<span class="hljs-number">4</span>      Prof          B            <span class="hljs-number">45</span>          <span class="hljs-number">39</span> Male <span class="hljs-number">115000</span>
+<span class="hljs-number">5</span>      Prof          B            <span class="hljs-number">40</span>          <span class="hljs-number">41</span> Male <span class="hljs-number">141500</span>
+<span class="hljs-number">6</span> AssocProf          B             <span class="hljs-number">6</span>           <span class="hljs-number">6</span> Male  <span class="hljs-number">97000</span></code></pre></div>
+<p>例1，按照不同类型进行刻面：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(ggplot2) 
+&gt; ggplot(data=singer, aes(x=height)) + 
+     geom_histogram() + 
+     facet_wrap(~voice.part, nrow=<span class="hljs-number">4</span>)
+<span class="hljs-comment"># `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</span></code></pre></div>
+<p><img src="pics/image-20200809192859742.png" srcset="/img/loading.gif" alt="image-20200809192859742" /></p>
+<p>得到的图展示了各声部歌手身高的分布。<u>把八个分布分为并排的小图可以方便比较</u>。</p>
+<p>例2，刻面+分组：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; ggplot(Salaries, aes(x=yrs.since.phd, y=salary, color=rank, 
+                      shape=rank)) + geom_point() + 
+		facet_grid(.~sex)</code></pre></div>
+<p><img src="pics/image-20200809193252739.png" srcset="/img/loading.gif" alt="image-20200809193252739" /></p>
+<h2 id="添加光滑曲线"><a class="markdownIt-Anchor" href="#添加光滑曲线"></a> 添加光滑曲线</h2>
+<p><code>ggplot2</code>包包含了一系列计算统计的函数来加到图形中。这些包括分级数据和计算密度、轮廓和分位数功能等。</p>
+<p>我们可以使用<code>geom_smooth()</code>函数来添加一系列的平滑曲线和和置信区域。相关参数如下：</p>
+<table>
+<thead>
+<tr>
+<th>选项（参数）</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>method=</td>
+<td>使用的平滑函数。允许的值包括<code>lm</code>、<code>glm</code>、<code>smooth</code>、<code>rlm</code>和<code>gam</code>，分别对应线性、广义线性、loess 健壮线性和广义相加模型。<code>smooth</code>是默认值</td>
+</tr>
+<tr>
+<td>formula=</td>
+<td>在光滑函数中使用的公式。例子包括<code>y~x</code>（默认），<code>y~log(x)</code>, <code>y~poly(x,n)</code>表示n次多项式拟合<code>y~ns(x,n)</code>表示一个具有n个自由度的样条拟合</td>
+</tr>
+<tr>
+<td>se</td>
+<td>绘制置信区间（TRUE/FALSE）。默认为TRUE</td>
+</tr>
+<tr>
+<td>level</td>
+<td>使用的置信区间水平（默认为95%）</td>
+</tr>
+<tr>
+<td>fullrange</td>
+<td>指定拟合应涵盖全图（TRUE）或仅仅是数据（FALSE）。 默认为FALSE</td>
+</tr>
+</tbody>
+</table>
+<p>这部分的演示使用<code>car</code>包中的<code>Salaries</code>来进行演示。</p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(car)
+&gt; head(Salaries)
+       rank discipline yrs.since.phd yrs.service  sex salary
+<span class="hljs-number">1</span>      Prof          B            <span class="hljs-number">19</span>          <span class="hljs-number">18</span> Male <span class="hljs-number">139750</span>
+<span class="hljs-number">2</span>      Prof          B            <span class="hljs-number">20</span>          <span class="hljs-number">16</span> Male <span class="hljs-number">173200</span>
+<span class="hljs-number">3</span>  AsstProf          B             <span class="hljs-number">4</span>           <span class="hljs-number">3</span> Male  <span class="hljs-number">79750</span>
+<span class="hljs-number">4</span>      Prof          B            <span class="hljs-number">45</span>          <span class="hljs-number">39</span> Male <span class="hljs-number">115000</span>
+<span class="hljs-number">5</span>      Prof          B            <span class="hljs-number">40</span>          <span class="hljs-number">41</span> Male <span class="hljs-number">141500</span>
+<span class="hljs-number">6</span> AssocProf          B             <span class="hljs-number">6</span>           <span class="hljs-number">6</span> Male  <span class="hljs-number">97000</span></code></pre></div>
+<p>例1，使用带有95%置信区间的非参数光滑曲线（loess）。</p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(ggplot2) 
+&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary)) + 
+		geom_smooth() + 
+		geom_point()</code></pre></div>
+<p><img src="pics/image-20200809194744777.png" srcset="/img/loading.gif" alt="image-20200809194744777" /></p>
+<p>例2，二次多项式回归：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary, 
+                           linetype=sex, shape=sex, color=sex)) + 
+		geom_smooth(method=lm, formula=y~poly(x,<span class="hljs-number">2</span>), 
+                    se=<span class="hljs-literal">FALSE</span>, size=<span class="hljs-number">1</span>) + 
+		geom_point(size=<span class="hljs-number">2</span>)</code></pre></div>
+<p><img src="pics/image-20200809195048205.png" srcset="/img/loading.gif" alt="image-20200809195048205" /></p>
+<h1 id="二-对于图片的操作"><a class="markdownIt-Anchor" href="#二-对于图片的操作"></a> 二、对于图片的操作</h1>
+<p>这部分主要涉及修改图片的外观</p>
+<p>在R的<code>base</code>绘图函数当中，可以通过<code>par()</code>来修改外观，对于<code>ggplot2</code>并不通用。</p>
+<h2 id="坐标轴"><a class="markdownIt-Anchor" href="#坐标轴"></a> 坐标轴</h2>
+<p><code>ggplot2</code>包会在创建图时自动创建刻度线、刻度标记标签和坐标轴标签。它们往往看起来不错，但是有时我们需要在更大程度上控制它们的外观。</p>
+<p>控制坐标轴和刻度线外观的函数:</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>选项（参数）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scale_x_continuous()</code>和<code>scale_y_continuous()</code></td>
+<td>breaks=指定刻度标记，labels=指定刻度标记标签，limits=控制要展示的值的范围</td>
+</tr>
+<tr>
+<td><code>scale_x_discrete()</code>和<code>scale_y_discrete()</code></td>
+<td>breaks=对因子的水平进行放置和排序，labels=指定这些水平的标签，limits=表示哪些水平应该展示</td>
+</tr>
+<tr>
+<td><code>coord_flip()</code></td>
+<td>颠倒<em>x</em>轴和<em>y</em>轴</td>
+</tr>
+</tbody>
+</table>
+<p>使用<code>car</code>包中的<code>Salaries</code>来进行演示:</p>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(car)
+&gt; head(Salaries)
+       rank discipline yrs.since.phd yrs.service  sex salary
+<span class="hljs-number">1</span>      Prof          B            <span class="hljs-number">19</span>          <span class="hljs-number">18</span> Male <span class="hljs-number">139750</span>
+<span class="hljs-number">2</span>      Prof          B            <span class="hljs-number">20</span>          <span class="hljs-number">16</span> Male <span class="hljs-number">173200</span>
+<span class="hljs-number">3</span>  AsstProf          B             <span class="hljs-number">4</span>           <span class="hljs-number">3</span> Male  <span class="hljs-number">79750</span>
+<span class="hljs-number">4</span>      Prof          B            <span class="hljs-number">45</span>          <span class="hljs-number">39</span> Male <span class="hljs-number">115000</span>
+<span class="hljs-number">5</span>      Prof          B            <span class="hljs-number">40</span>          <span class="hljs-number">41</span> Male <span class="hljs-number">141500</span>
+<span class="hljs-number">6</span> AssocProf          B             <span class="hljs-number">6</span>           <span class="hljs-number">6</span> Male  <span class="hljs-number">97000</span></code></pre></div>
+<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(ggplot2) 
+&gt; ggplot(data=Salaries, aes(x=rank, y=salary, fill=sex)) + 
+		geom_boxplot() + 
+		scale_x_discrete(breaks=c(<span class="hljs-string">"AsstProf"</span>, <span class="hljs-string">"AssocProf"</span>, <span class="hljs-string">"Prof"</span>), 
+                         labels=c(<span class="hljs-string">"Assistant\nProfessor"</span>, 
+                                  <span class="hljs-string">"Associate\nProfessor"</span>, 
+                                  <span class="hljs-string">"Full\nProfessor"</span>)) + 
+		scale_y_continuous(breaks=c(<span class="hljs-number">50000</span>, <span class="hljs-number">100000</span>, <span class="hljs-number">150000</span>, <span class="hljs-number">200000</span>), 
+                        labels=c(<span class="hljs-string">"$50K"</span>, <span class="hljs-string">"$100K"</span>, <span class="hljs-string">"$150K"</span>, <span class="hljs-string">"$200K"</span>)) + 
+		labs(title=<span class="hljs-string">"Faculty Salary by Rank and Sex"</span>, x=<span class="hljs-string">""</span>, y=<span class="hljs-string">""</span>)</code></pre></div>
+<p><img src="pics/image-20200809195727203.png" srcset="/img/loading.gif" alt="image-20200809195727203" /></p>
+<h2 id="图例"><a class="markdownIt-Anchor" href="#图例"></a> 图例</h2>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Undefined/">Undefined</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Undefined/">Undefined</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。技术力比较低，多多担待啦！<br/ >  If anything wrong, please leave a comment or contact me.<br/> If the utterances comment system does not show up, please refresh or use VPN.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/08/09/%E5%91%8A%E4%B8%80%E6%AE%B5%E8%90%BD/">
+                        <span class="hidden-mobile">告一段落</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <script type="text/javascript">
+    function loadUtterances() {
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.defer = false
+      s.setAttribute('repo', 'zhenyumi/comment_hexo');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('theme', 'github-light');
+      s.setAttribute('crossorigin', 'anonymous');
+      var e = document.getElementsByTagName('script')[0];
+      e.parentNode.insertBefore(s, e);
+    }
+    createObserver(loadUtterances, 'comments')
+  </script>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
+</script>
+
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             : 总访客数 ？人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "07. R <- ggplot2语法概述及基本图片操作（施工中）&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>
