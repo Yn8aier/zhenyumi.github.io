@@ -19,7 +19,7 @@
   <meta name="description" content="">
   <meta name="author" content="向海">
   <meta name="keywords" content="">
-  <title>06. R &lt;- 基本绘图Ⅱ（施工中） - 鹘横海</title>
+  <title>06. R &lt;- 基本绘图Ⅱ - 鹘横海</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -166,7 +166,7 @@
 </nav>
 
     <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center;
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200809-photo_2020-07-16_23-09-13.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3k 字
+      4.1k 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      15
        分钟
     </span>
   
@@ -240,13 +240,13 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：18 小时前
+                  本文最后更新于：1 小时前
                 
               </p>
             
             <article class="markdown-body">
               <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-散点图"><span class="post-toc-text"> 一、散点图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#散点图矩阵"><span class="post-toc-text"> 散点图矩阵</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#高密度散点图"><span class="post-toc-text"> 高密度散点图</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三维散点图"><span class="post-toc-text"> 三维散点图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-静态"><span class="post-toc-text"> 1. 静态</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-旋转可交互式三维散点图"><span class="post-toc-text"> 2. 旋转可交互式三维散点图</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#气泡图"><span class="post-toc-text"> 气泡图</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-折线图"><span class="post-toc-text"> 二、折线图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关函数及参数"><span class="post-toc-text"> 相关函数及参数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-点类型"><span class="post-toc-text"> 1. 点类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-线条类型"><span class="post-toc-text"> 2. 线条类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-参数type"><span class="post-toc-text"> 3. 参数：type</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-示例"><span class="post-toc-text"> 4. 示例</span></a></li></ol></li></ol></li></ol>
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-散点图"><span class="post-toc-text"> 一、散点图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#散点图矩阵"><span class="post-toc-text"> 散点图矩阵</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#高密度散点图"><span class="post-toc-text"> 高密度散点图</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三维散点图"><span class="post-toc-text"> 三维散点图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-静态"><span class="post-toc-text"> 1. 静态</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-旋转可交互式三维散点图"><span class="post-toc-text"> 2. 旋转可交互式三维散点图</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#气泡图"><span class="post-toc-text"> 气泡图</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-折线图"><span class="post-toc-text"> 二、折线图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关函数及参数"><span class="post-toc-text"> 相关函数及参数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-点类型"><span class="post-toc-text"> 1. 点类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-线条类型"><span class="post-toc-text"> 2. 线条类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-参数type"><span class="post-toc-text"> 3. 参数：type</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-示例"><span class="post-toc-text"> 4. 示例</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-相关图"><span class="post-toc-text"> 三、相关图</span></a></li></ol>
 
               <h1 id="一-散点图"><a class="markdownIt-Anchor" href="#一-散点图"></a> 一、散点图</h1>
 <p>R中创建散点图的基础函数是plot(x, y)，其中，x和y是数值型向量，代表着图形中的(x, y)点。</p>
@@ -277,7 +277,7 @@ pairs(x, labels, panel = points, <span class="hljs-keyword">...</span>,
 <div class="hljs"><pre><code class="hljs R">pairs(~mpg+disp+drat+wt, 
       data=mtcars, 
       main=<span class="hljs-string">"Basic Scatter Plot Matrix"</span>)</code></pre></div>
-<img src="pics/image-20200807185540098.png" srcset="/img/loading.gif" alt="image-20200807185540098" style="zoom: 80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807185540098.png" srcset="/img/loading.gif" alt="image-20200807185540098" style="zoom: 80%;" />
 <p>可以控制参数，调整只显示上方三角或下方三角的图：</p>
 <div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 只显示下方</span>
 pairs(~mpg+disp+drat+wt, 
@@ -305,7 +305,7 @@ scatterplotMatrix(~ mpg + disp + drat + wt,
                   spread=<span class="hljs-literal">FALSE</span>, 
                   smoother.args=list(lty=<span class="hljs-number">2</span>), 
                   main=<span class="hljs-string">"Scatter Plot Matrix via car Package"</span>)</code></pre></div>
-<img src="pics/image-20200807190937479.png" srcset="/img/loading.gif" alt="image-20200807190937479" style="zoom:80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807190937479.png" srcset="/img/loading.gif" alt="image-20200807190937479" style="zoom:80%;" />
 <p>R提供了许多其他的方式来创建散点图矩阵。你可能想探索<code>glus</code>包中的<code>cpars()</code>函数，<code>TeachingDemos</code>包中的<code>pairs2()</code>函数，<code>HH</code>包中的<code>xysplom()</code>函数，<code>ResourceSelection</code>包中的<code>kepairs()</code>函数和<code>SMPracticals</code>包中的<code>pairs.mod()</code>函数。每个包都加入了自己独特的曲线。</p>
 <h2 id="高密度散点图"><a class="markdownIt-Anchor" href="#高密度散点图"></a> 高密度散点图</h2>
 <p>当数据点重叠很严重时，用散点图来观察变量关系就显得“力不从心”了。下面是一个人为设计的例子，其中10000个观测点分布在两个重叠的数据群中：</p>
@@ -371,7 +371,7 @@ plot(x, y, pch=<span class="hljs-number">19</span>, main=<span class="hljs-strin
 <div class="hljs"><pre><code class="hljs R"><span class="hljs-keyword">attach</span>(mydata)
 smoothScatter(x, y, main=<span class="hljs-string">"Scatter Plot Colored by Smoothed Densities"</span>)
 <span class="hljs-keyword">detach</span>(mydata)</code></pre></div>
-<p><img src="pics/image-20200807200618128.png" srcset="/img/loading.gif" alt="image-20200807200618128" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807200618128.png" srcset="/img/loading.gif" alt="image-20200807200618128" /></p>
 <p><code>hexbin</code>包中的<code>hexbin()</code>函数将二元变量的封箱放到六边形单元格中（图形比名称更直观）。</p>
 <div class="hljs"><pre><code class="hljs R">hexbin(x, y, xbins = <span class="hljs-number">30</span>, shape = <span class="hljs-number">1</span>,
        xbnds = range(x), ybnds = range(y),
@@ -382,7 +382,7 @@ with(mydata, &#123;
     bin &lt;- hexbin(x, y, xbins=<span class="hljs-number">50</span>) 
     plot(bin, main=<span class="hljs-string">"Hexagonal Binning with 10,000 Observations"</span>) 
  &#125;)</code></pre></div>
-<img src="pics/image-20200807200813952.png" srcset="/img/loading.gif" alt="image-20200807200813952" style="zoom: 80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807200813952.png" srcset="/img/loading.gif" alt="image-20200807200813952" style="zoom: 80%;" />
 <h2 id="三维散点图"><a class="markdownIt-Anchor" href="#三维散点图"></a> 三维散点图</h2>
 <h3 id="1-静态"><a class="markdownIt-Anchor" href="#1-静态"></a> 1. 静态</h3>
 <p>可用<code>scatterplot3d</code>包中的<code>scatterplot3d()</code>函数来绘制三维散点图</p>
@@ -422,7 +422,7 @@ Identify3d(x, y, z, axis.scales=<span class="hljs-literal">TRUE</span>, groups =
 &gt; scatterplot3d(wt, disp, mpg, 
                main=<span class="hljs-string">"Basic 3D Scatter Plot"</span>)
 &gt; <span class="hljs-keyword">detach</span>(mtcars)</code></pre></div>
-<img src="pics/image-20200807201430874.png" srcset="/img/loading.gif" alt="image-20200807201430874" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807201430874.png" srcset="/img/loading.gif" alt="image-20200807201430874" style="zoom: 67%;" />
 <p>突出显示例：</p>
 <div class="hljs"><pre><code class="hljs R"><span class="hljs-keyword">library</span>(scatterplot3d) 
 <span class="hljs-keyword">attach</span>(mtcars) 
@@ -432,7 +432,7 @@ scatterplot3d(wt, disp, mpg,
               type=<span class="hljs-string">"h"</span>, 
               main=<span class="hljs-string">"3D Scatter Plot with Vertical Lines"</span>)
 <span class="hljs-keyword">detach</span>(mtcars)</code></pre></div>
-<img src="pics/image-20200807201854214.png" srcset="/img/loading.gif" alt="image-20200807201854214" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807201854214.png" srcset="/img/loading.gif" alt="image-20200807201854214" style="zoom:67%;" />
 <p>添加回归面：</p>
 <div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">attach</span>(mtcars)
 &gt; s3d &lt;-scatterplot3d(wt, disp, mpg, 
@@ -443,7 +443,7 @@ scatterplot3d(wt, disp, mpg,
 &gt; fit &lt;- lm(mpg ~ wt+disp) 
 &gt; s3d$plane3d(fit)
 &gt; <span class="hljs-keyword">detach</span>(mtcars)</code></pre></div>
-<img src="pics/image-20200807202119770.png" srcset="/img/loading.gif" alt="image-20200807202119770" style="zoom:80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807202119770.png" srcset="/img/loading.gif" alt="image-20200807202119770" style="zoom:80%;" />
 <h3 id="2-旋转可交互式三维散点图"><a class="markdownIt-Anchor" href="#2-旋转可交互式三维散点图"></a> 2. 旋转可交互式三维散点图</h3>
 <p>如果能对三维散点图进行交互式操作，那么图形将会更好解释。R提供了一些旋转图形的功能，让你可以从多个角度观测绘制的数据点。</p>
 <p>可用rgl包中的plot3d()函数创建可交互的三维散点图。你能通过鼠标对图形进行旋转。函数格式为：</p>
@@ -468,7 +468,7 @@ decorate3d(xlim, ylim, zlim,
 plot3d(wt, disp, mpg, col=<span class="hljs-string">"red"</span>, size=<span class="hljs-number">5</span>)
 <span class="hljs-keyword">detach</span>(mtcars)</code></pre></div>
 <p>之后会出现这样的一个可交互的界面，可以通过鼠标来对模型进行旋转操作：</p>
-<img src="pics/image-20200807203539287.png" srcset="/img/loading.gif" alt="image-20200807203539287" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807203539287.png" srcset="/img/loading.gif" alt="image-20200807203539287" style="zoom:50%;" />
 <p>用<code>car</code>包中类似的函数<code>scatter3d()</code>也可以实现交互效果：</p>
 <div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># S3 method for class 'formula': </span>
 scatter3d(formula, data, subset, radius, xlab, ylab, zlab, id=<span class="hljs-literal">FALSE</span>, <span class="hljs-keyword">...</span>)</code></pre></div>
@@ -502,7 +502,7 @@ Identify3d(x, y, z, axis.scales=<span class="hljs-literal">TRUE</span>, groups =
 &gt; with(mtcars, 
       scatter3d(wt, disp, mpg))</code></pre></div>
 <p>效果如下：</p>
-<img src="pics/image-20200807203829535.png" srcset="/img/loading.gif" alt="image-20200807203829535" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807203829535.png" srcset="/img/loading.gif" alt="image-20200807203829535" style="zoom:67%;" />
 <h2 id="气泡图"><a class="markdownIt-Anchor" href="#气泡图"></a> 气泡图</h2>
 <p>气泡图（bubble plot）即先创建一个二维散点图，然后用点的大小来代表第三个变量的值。</p>
 <p>可用<code>symbols()</code>函数来创建气泡图。该函数可以在指定的(<em>x</em>, <em>y</em>)坐标上绘制圆圈图、方形图、星形图、温度计图和箱线图。</p>
@@ -530,7 +530,7 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
 &gt; text(wt, mpg, rownames(mtcars), cex=<span class="hljs-number">0.6</span>) 
 &gt; <span class="hljs-keyword">detach</span>(mtcars)</code></pre></div>
 <p>效果：</p>
-<p><img src="pics/image-20200807204318549.png" srcset="/img/loading.gif" alt="image-20200807204318549" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807204318549.png" srcset="/img/loading.gif" alt="image-20200807204318549" /></p>
 <h1 id="二-折线图"><a class="markdownIt-Anchor" href="#二-折线图"></a> 二、折线图</h1>
 <p>这部分以R内置的<code>Orange</code>数据集为例：</p>
 <div class="hljs"><pre><code class="hljs R">&gt; head(Orange)
@@ -626,7 +626,7 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
 </tr>
 </tbody>
 </table>
-<p><img src="pics/image-20200808214925804.png" srcset="/img/loading.gif" alt="image-20200808214925804" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808214925804.png" srcset="/img/loading.gif" alt="image-20200808214925804" /></p>
 <h3 id="4-示例"><a class="markdownIt-Anchor" href="#4-示例"></a> 4. 示例</h3>
 <p>在绘制单一数据集的折线图的时候，在<code>plot</code>, <code>line</code>函数中直接调用数据集：</p>
 <div class="hljs"><pre><code class="hljs R">&gt; opar &lt;- par(no.readonly = <span class="hljs-literal">TRUE</span>)
@@ -642,7 +642,7 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
       main=<span class="hljs-string">"Orange Tree 1 Growth"</span>, 
       type=<span class="hljs-string">"b"</span>)
 &gt; par(opar)</code></pre></div>
-<img src="pics/image-20200808214108345.png" srcset="/img/loading.gif" alt="image-20200808214108345" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808214108345.png" srcset="/img/loading.gif" alt="image-20200808214108345" style="zoom:67%;" />
 <p>在绘制多个数据集的时候，即将多个折线放在同一张图里时，则先使用<code>plot</code>函数绘制出一个只有坐标轴的空的区域，之后再向上添加折线：</p>
 <div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 为方便起见，将因子转化为数值型</span>
 &gt; Orange$Tree &lt;- as.numeric(Orange$Tree) 
@@ -692,7 +692,184 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
         lty=linetype, 
         title=<span class="hljs-string">"Tree"</span>
  )</code></pre></div>
-<img src="pics/image-20200808215508583.png" srcset="/img/loading.gif" alt="image-20200808215508583" style="zoom:80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808215508583.png" srcset="/img/loading.gif" alt="image-20200808215508583" style="zoom:80%;" />
+<h1 id="三-相关图"><a class="markdownIt-Anchor" href="#三-相关图"></a> 三、相关图</h1>
+<p>相关系数矩阵是多元统计分析的一个基本方面。哪些被考察的变量与其他变量相关性很强，而哪些并不强？相关变量是否以某种特定的方式聚集在一起？随着变量数的增加，这类问题将变得更难回答。相关图作为一种相对现代的方法，可以通过对相关系数矩阵的可视化来回答这些问题。</p>
+<p>可以使用<code>cor()</code>函数获得变量之间的相关关系：</p>
+<p>Correlation, Variance and Covariance (Matrices):</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># Usage</span>
+var(x, y = <span class="hljs-literal">NULL</span>, na.rm = <span class="hljs-literal">FALSE</span>, use)
+
+cov(x, y = <span class="hljs-literal">NULL</span>, use = <span class="hljs-string">"everything"</span>,
+    method = c(<span class="hljs-string">"pearson"</span>, <span class="hljs-string">"kendall"</span>, <span class="hljs-string">"spearman"</span>))
+
+cor(x, y = <span class="hljs-literal">NULL</span>, use = <span class="hljs-string">"everything"</span>,
+    method = c(<span class="hljs-string">"pearson"</span>, <span class="hljs-string">"kendall"</span>, <span class="hljs-string">"spearman"</span>))
+
+cov2cor(V)</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>a numeric vector, matrix or data frame.</td>
+</tr>
+<tr>
+<td>y</td>
+<td>NULL (default) or a vector, matrix or data frame with compatible dimensions to x. The default is equivalent to y = x (but more efficient).</td>
+</tr>
+<tr>
+<td>na.rm</td>
+<td>logical. Should missing values be removed?</td>
+</tr>
+<tr>
+<td>use</td>
+<td>an optional character string giving a method for computing covariances in the presence of missing values. This must be (an abbreviation of) one of the strings <code>&quot;everything&quot;</code>, <code>&quot;all.obs&quot;</code>, <code>&quot;complete.obs&quot;</code>, <code>&quot;na.or.complete&quot;</code>, or <code>&quot;pairwise.complete.obs&quot;</code>.</td>
+</tr>
+<tr>
+<td>method</td>
+<td>a character string indicating which correlation coefficient (or covariance) is to be computed. One of <code>&quot;pearson&quot;</code> (default), <code>&quot;kendall&quot;</code>, or <code>&quot;spearman&quot;</code>: can be abbreviated.</td>
+</tr>
+<tr>
+<td>V</td>
+<td>symmetric numeric matrix, usually positive definite such as a covariance matrix.</td>
+</tr>
+</tbody>
+</table>
+<p>在绘制相关图的时候，利用<code>corrgram</code>包中的<code>corrgram()</code>函数，你可以用图形的方式展示该相关系数矩阵。</p>
+<p>常用格式：<code>corrgram(x, order=, panel=, text.panel=, diag.panel=)</code></p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># Usage</span>
+corrgram(x, type = <span class="hljs-literal">NULL</span>, order = <span class="hljs-literal">FALSE</span>, labels, 
+         panel = panel.shade, lower.panel = panel, 
+         upper.panel = panel, diag.panel = <span class="hljs-literal">NULL</span>,
+         text.panel = textPanel, label.pos = c(<span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>), 
+         label.srt = <span class="hljs-number">0</span>,cex.labels = <span class="hljs-literal">NULL</span>, font.labels = <span class="hljs-number">1</span>, 
+         row1attop = <span class="hljs-literal">TRUE</span>, dir = <span class="hljs-string">""</span>,
+         gap = <span class="hljs-number">0</span>, abs = <span class="hljs-literal">FALSE</span>, 
+         col.regions = colorRampPalette(c(<span class="hljs-string">"red"</span>, <span class="hljs-string">"salmon"</span>,<span class="hljs-string">"white"</span>, <span class="hljs-string">"royalblue"</span>, <span class="hljs-string">"navy"</span>)), 
+         cor.method = <span class="hljs-string">"pearson"</span>,outer.labels = <span class="hljs-literal">NULL</span>, <span class="hljs-keyword">...</span>)</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>一行一个观测的数据框</td>
+</tr>
+<tr>
+<td>order</td>
+<td>当<code>order=TRUE</code>时，相关矩阵将使用主成分分析法对变量重排序</td>
+</tr>
+<tr>
+<td>lower.panel，upper.panel</td>
+<td>设置主对角线下方和上方的元素类型</td>
+</tr>
+<tr>
+<td>text.panel，diag.panel</td>
+<td>主对角线元素类型</td>
+</tr>
+</tbody>
+</table>
+<p><code>panel</code>相关的参数如下：</p>
+<table>
+<thead>
+<tr>
+<th>位置</th>
+<th>面板选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>非对角线</td>
+<td>panel.pie</td>
+<td>用饼图的填充比例来表示相关性大小</td>
+</tr>
+<tr>
+<td></td>
+<td>panel.shade</td>
+<td>用阴影的深度来表示相关性大小</td>
+</tr>
+<tr>
+<td></td>
+<td>panel.ellipse</td>
+<td>画一个置信椭圆和平滑曲线</td>
+</tr>
+<tr>
+<td></td>
+<td>panel.pts</td>
+<td>画一个散点图</td>
+</tr>
+<tr>
+<td></td>
+<td>panel.conf</td>
+<td>画出相关性及置信区间</td>
+</tr>
+<tr>
+<td>主对角线</td>
+<td>panel.txt</td>
+<td>输出变量名</td>
+</tr>
+<tr>
+<td></td>
+<td>panel.minmax</td>
+<td>输出变量的最大最小值和变量名</td>
+</tr>
+<tr>
+<td></td>
+<td>panel.ednsity</td>
+<td>输出核密度曲线和变量名</td>
+</tr>
+</tbody>
+</table>
+<p>这部分以预设数据集<code>mtcars</code>为例，进行制图示例。</p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 获得相关系数</span>
+&gt; cor(mtcars)</code></pre></div>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809162242215.png" srcset="/img/loading.gif" alt="image-20200809162242215" /></p>
+<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 绘制相关图</span>
+&gt; <span class="hljs-keyword">library</span>(corrgram)
+&gt; corrgram(mtcars, order=<span class="hljs-literal">TRUE</span>, lower.panel=panel.shade, 
+          upper.panel=panel.pie, text.panel=panel.txt, 
+          main=<span class="hljs-string">"Corrgram of mtcars intercorrelations"</span>)</code></pre></div>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809162355711.png" srcset="/img/loading.gif" alt="image-20200809162355711" /></p>
+<p>对于图像的解释（本图为了将有相似相关模式的变量聚集在一起，对矩阵的行和列都重新进行了排序（使用主成分法））：</p>
+<ol>
+<li>蓝色和从左下指向右上的斜杠表示单元格中的两个变量呈正相关。反过来，红色和从左上指向右下的斜杠表示变量呈负相关。</li>
+<li>色彩越深，饱和度越高，说明变量相关性越大。相关性接近于0的单元格基本无色。
+<ul>
+<li>从图中含阴影的单元格中可以看到，<code>gear</code>、<code>am</code>、<code>drat</code>和<code>mpg</code>相互间呈正相关。<code>wt</code>、<code>disp</code>、<code>hp</code>和<code>carb</code>相互间也呈正相关。但第一组变量与第二组变量呈负相关。</li>
+<li><code>carb</code>和<code>am</code>、<code>vs</code>和<code>gear</code>、<code>vs</code>和<code>am</code>以及<code>drat</code>和<code>qsec</code>四组变量间的相关性很弱。</li>
+</ul>
+</li>
+<li>上三角单元格用饼图展示了相同的信息。颜色的功能同上，但相关性大小由被填充的饼图块的大小来展示。正相关性将从12点钟处开始顺时针填充饼图，而负相关性则逆时针方向填充饼图。</li>
+</ol>
+<p>其它示例：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; corrgram(mtcars, order=<span class="hljs-literal">TRUE</span>, lower.panel=panel.ellipse, 
++          upper.panel=panel.pts, text.panel=panel.txt, 
++          main=<span class="hljs-string">"low:panel.ellipse, up:panel.pts"</span>)</code></pre></div>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809163800392.png" srcset="/img/loading.gif" alt="image-20200809163800392" style="zoom: 67%;" />
+<div class="hljs"><pre><code class="hljs R">&gt; corrgram(mtcars, order=<span class="hljs-literal">TRUE</span>, lower.panel=panel.ellipse, 
++          upper.panel=panel.conf, text.panel=panel.txt, 
++          main=<span class="hljs-string">"low:panel.ellipse, up:panel.conf"</span>)</code></pre></div>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809163906795.png" srcset="/img/loading.gif" alt="image-20200809163906795" style="zoom:67%;" />
+<p>可以使用<code>col.corrgram</code>或在<code>corrgram()</code>函数中使用<code>col.regions</code>参数更改颜色：</p>
+<div class="hljs"><pre><code class="hljs R">&gt; cols &lt;- colorRampPalette(c(<span class="hljs-string">"darkgoldenrod4"</span>, <span class="hljs-string">"burlywood1"</span>, 
++                            <span class="hljs-string">"darkkhaki"</span>, <span class="hljs-string">"darkgreen"</span>)) 
+&gt; corrgram(mtcars, order=<span class="hljs-literal">TRUE</span>, col.regions=cols, 
++          lower.panel=panel.shade, 
++          upper.panel=panel.conf, text.panel=panel.txt, 
++          main=<span class="hljs-string">"A Corrgram (or Horse) of a Different Color"</span>)</code></pre></div>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809164118661.png" srcset="/img/loading.gif" alt="image-20200809164118661" /></p>
+
             </article>
             <hr>
             <div>
@@ -701,7 +878,7 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Undefined/">Undefined</a>
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a>
                     
                   </div>
                 
@@ -709,7 +886,11 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Undefined/">Undefined</a>
+                      <a class="hover-with-bg" href="/tags/R/">R</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Statistics/">Statistics</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%80%9F%E6%9F%A5/">速查</a>
                     
                   </div>
                 
@@ -967,7 +1148,7 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "06. R <- 基本绘图Ⅱ（施工中）&nbsp;",
+        "06. R <- 基本绘图Ⅱ&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 50,
