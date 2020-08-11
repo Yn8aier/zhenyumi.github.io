@@ -19,7 +19,7 @@
   <meta name="description" content="">
   <meta name="author" content="向海">
   <meta name="keywords" content="">
-  <title>分类 - Undefined - 鹘横海</title>
+  <title>标签 - 速查 - 鹘横海</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -57,7 +57,7 @@
 </head>
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 80vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -157,7 +157,7 @@
 </nav>
 
     <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/category.jpg') no-repeat center center;
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/tag/tags_%E9%81%A0%E3%81%8F%E3%81%AE%E8%A1%97.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -187,19 +187,31 @@
                 
 
 <div class="list-group">
-  <p class="h4">共计 1 篇文章</p>
+  <p class="h4">共计 11 篇文章</p>
   <hr>
   
     
       
       <p class="h5">2020</p>
     
-    <a href="/2020/08/01/05-R-%E7%8B%AC%E7%AB%8B%E6%80%A7%E3%80%81%E7%9B%B8%E5%85%B3%E6%80%A7%E3%80%81%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">05. R &lt;- 独立性、相关性、假设检验以及相关统计量（施工中）</span>
-      <span style="float: right;">08-01</span>
+    <a href="/2020/07/11/00-R-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">00. R &lt;- 数据类型</span>
+      <span style="float: right;">07-11</span>
     </a>
   
 </div>
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/tags/%E9%80%9F%E6%9F%A5/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/tags/%E9%80%9F%E6%9F%A5/">1</a><span class="page-number current">2</span>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
 
 
 
@@ -351,7 +363,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "分类 - Undefined&nbsp;",
+        "标签 - 速查&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 50,
