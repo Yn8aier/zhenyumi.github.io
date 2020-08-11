@@ -1232,6 +1232,15 @@ drugE - drugD == <span class="hljs-number">0</span>      <span class="hljs-numbe
             </div>
 
             
+              <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+              <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
+                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa'
+                })
+                </script>
               <!-- Utterances Comments -->
               <!--<div class="comments" id="comments">
                 
@@ -1250,7 +1259,7 @@ drugE - drugD == <span class="hljs-number">0</span>      <span class="hljs-numbe
           meta: ["nick","mail","link"],
           pageSize: "10",
           lang: "zh-CN",
-          highlight: false,
+          highlight: true,
           recordIP: false,
           serverURLs: "https://kwskt0vn.lc-cn-n1-shared.com",
         });
