@@ -745,8 +745,8 @@
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/07/25/L01%20The%20Science%20of%20Genetics/">
-                        <span class="hidden-mobile">L01 The Science of Genetics</span>
+                      <a href="/2020/07/25/L01%20The%20Scope%20of%20Biochemistry/">
+                        <span class="hidden-mobile">L01 The Scope of Biochemistry</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -757,9 +757,23 @@
             </div>
 
             
-              <!-- Valine Comments -->
+              <!-- Valine Comments 国内版-->
               
               <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                requiredFields: ['nick'],
+                })
+                </script>
+
+              <!-- Valine Comments 国内版-->
+              
+              <!-- <div id="vcomments"></div>
               <script>
               new Valine({
                 el: '#vcomments',
@@ -770,7 +784,7 @@
                 serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
                 requiredFields: ['nick'],
                 })
-                </script> 
+                </script> -->
 
               <!-- Utterances Comments -->
               <!--<div class="comments" id="comments">
@@ -782,8 +796,8 @@
       addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
         new Valine({
           el: "#vcomments",
-          app_id: "KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz",
-          app_key: "f8Y1U4Jnywm3hcDTW7fVCvYa",
+          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
+          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
           placeholder: "说点什么",
           path: window.location.pathname,
           avatar: "retro",
@@ -792,7 +806,7 @@
           lang: "zh-CN",
           highlight: true,
           recordIP: false,
-          serverURLs: "https://kwskt0vn.lc-cn-n1-shared.com",
+          serverURLs: "",
         });
       });
     }
