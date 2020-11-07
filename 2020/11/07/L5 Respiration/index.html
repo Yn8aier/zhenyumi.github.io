@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L5 Respiration - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+ 
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-11-07 15:22">
+      2020年11月7日 下午
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      8
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <!-- 鼠标烟花特效 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/fireworks.js"></script>
+
+    <!--浏览器搞笑标题-->
+    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+
+    <!--动态线条背景-->
+    <!--<script type="text/javascript"
+    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>-->
+
+
+    
+      
+<head>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2 分钟前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-fundamental-concepts-of-external-respiration"><span class="post-toc-text"> 一、Fundamental concepts of External Respiration</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ventilation"><span class="post-toc-text"> Ventilation</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#summary"><span class="post-toc-text"> Summary</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-principles-of-gas-exchange-by-active-ventilation-internal-respiration"><span class="post-toc-text"> 二、Principles of gas exchange by active ventilation – internal respiration</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#active-ventilation"><span class="post-toc-text"> Active ventilation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-unidirectional-ventilation"><span class="post-toc-text"> 1. Unidirectional Ventilation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#co2-partial-pressure-changes-are-dependent-on-whether-air-or-water-is-breathed"><span class="post-toc-text"> CO2 partial pressure changes are dependent on whether air or water is breathed</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-introduction-to-vertebrate-breathing"><span class="post-toc-text"> 三、Introduction to vertebrate breathing</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四-breathing-by-mammals"><span class="post-toc-text"> 四、Breathing by mammals</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dynamic-lung-volumes"><span class="post-toc-text"> Dynamic lung volumes</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#the-power-for-ventilation"><span class="post-toc-text"> The power for ventilation</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#control-of-active-ventilation"><span class="post-toc-text"> Control of active ventilation</span></a></li></ol></li></ol>
+
+              <h1 id="一-fundamental-concepts-of-external-respiration"><a class="markdownIt-Anchor" href="#一-fundamental-concepts-of-external-respiration"></a> 一、Fundamental concepts of External Respiration</h1>
+<p><strong>Ventilation</strong> , or <strong>convection</strong> – bulk flow of air or water to and from the gas-exchange membrane during breathing.</p>
+<p>The respiration system and important factors:</p>
+<ol>
+<li><strong>Lung, Gill (</strong> <strong>肺）</strong></li>
+<li><strong>Respiration</strong> <strong>（呼吸）</strong></li>
+<li><strong>Brain stem</strong> <strong>（脑干）</strong></li>
+<li><strong>Medulla</strong> <strong>（髓质）</strong></li>
+<li><strong>Rhythm</strong> <strong>（节奏）</strong></li>
+<li><strong>Alveolus (Alveoli) hollow cavity</strong> <strong>（肺泡）</strong></li>
+</ol>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014200843267.png" srcset="/img/loading.gif" alt="image-20201014200843267" /></p>
+<ul>
+<li><strong>External respiration</strong>: 呼吸器官的通气和换气活动合称为外呼吸</li>
+<li><strong>Internal respiration</strong>: 组织换气活动称为内呼吸</li>
+</ul>
+<p><strong>Fundamental concepts of External Respiration</strong>:</p>
+<ul>
+<li>Oxygen always crosses the gas-exchange membrane by diffusion</li>
+<li>Oxygen partial pressure must be lower inside than that on the outside</li>
+<li>The rate of diffusion is in proportion to the area of the membrane</li>
+<li>CO<sub>2</sub> , in humans, diffusion is the exclusive mechanism by which it crosses the gas-exchange membrane</li>
+<li>In freshwater animals, CO<sub>2</sub> is through active transport as HCO<sub>3</sub><sup>-</sup></li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014201235126.png" srcset="/img/loading.gif" alt="image-20201014201235126" style="zoom: 33%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014202425767.png" srcset="/img/loading.gif" alt="image-20201014202425767" style="zoom:50%;" />
+<ul>
+<li><strong>Lungs</strong> are invaginated into the body and contain the environmental medium</li>
+<li><strong>External gills（外鳃）</strong> are evaginated from the body and project directly into the environmental medium</li>
+<li><strong>Internal gills（内鳃）</strong> are evaginated from the body and project into a superficial body cavity, through which the environmental medium is pumped</li>
+</ul>
+<h2 id="ventilation"><a class="markdownIt-Anchor" href="#ventilation"></a> Ventilation</h2>
+<p>Active ventilation (animal creates the ventilatory currents)</p>
+<ul>
+<li><strong>unidirectional</strong> (one way flow of air or water to the gas-exchange Membrane)</li>
+<li><strong>tidal (bidirectional)</strong> [air or water alternately flows to and from the gas-exchange membrane]
+<ul>
+<li>[mammalian lungs]</li>
+</ul>
+</li>
+<li><strong>nondirectional</strong> (no direction, such as external gills)</li>
+</ul>
+<p>Passive ventilation (<u>environmental forces</u> directly or indirectly induce current or air or water to and from the gas-exchange membrane)</p>
+<h2 id="summary"><a class="markdownIt-Anchor" href="#summary"></a> Summary</h2>
+<ol>
+<li>Oxygen always cross the gas-exchange membrane by diffusion</li>
+<li>High O<sub>2</sub> partial pressure moves towards low O<sub>2</sub> pressure</li>
+<li>Breathing organs are gills and lungs</li>
+<li>Ventilation is the forced flow of environmental medium to and from the gas-exchange membrane</li>
+</ol>
+<h1 id="二-principles-of-gas-exchange-by-active-ventilation-internal-respiration"><a class="markdownIt-Anchor" href="#二-principles-of-gas-exchange-by-active-ventilation-internal-respiration"></a> 二、Principles of gas exchange by active ventilation – internal respiration</h1>
+<h2 id="active-ventilation"><a class="markdownIt-Anchor" href="#active-ventilation"></a> Active ventilation</h2>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>Rate of </mtext><msub><mi>O</mi><mn>2</mn></msub><mtext> intale (ml </mtext><msub><mi>O</mi><mn>2</mn></msub><mtext>/minute)</mtext><mo>=</mo><msub><mi>V</mi><mtext>medium</mtext></msub><mo stretchy="false">(</mo><msub><mi>C</mi><mi>I</mi></msub><mo>−</mo><msub><mi>C</mi><mi>E</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\text{Rate of }O_{2} \text{ intale (ml }O_{2} \text{/minute)} = V_{\text{medium}}(C_{I} - C_{E})
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Rate of </span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord text"><span class="mord"> intale (ml </span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord text"><span class="mord">/minute)</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">medium</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.07847em;">I</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05764em;">E</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>V</mi><mtext>medium</mtext></msub><mo>=</mo><mtext>rate of flow (L/min) of air or water</mtext></mrow><annotation encoding="application/x-tex">V_{\text{medium}} = \text{rate of flow (L/min) of air or water}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">medium</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">rate of flow (L/min) of air or water</span></span></span></span></span></span></p>
+<ul>
+<li>C<sub>I</sub> is the inhaled medium (mL O<sub>2</sub>/L medium) O<sub>2</sub> concentration</li>
+<li>C<sub>E</sub> is the exhaled medium (mL O<sub>2</sub>/L medium) O<sub>2</sub> concentration</li>
+</ul>
+<p>Percent of oxygen removed from the inhaled medium is called Oxygen extraction coefficient = 100(C<sub>I</sub>-C<sub>E</sub> )/C<sub>I</sub></p>
+<ul>
+<li>Example: water entering the mouth of a fish with 6 mL O2/L and exiting the gills Contains 4 mL O2/L and the rate of ventilation is 0.5 L/min, what is: the rate of O2 uptake?</li>
+<li>The O2 extraction coefficiency?</li>
+</ul>
+<h3 id="1-unidirectional-ventilation"><a class="markdownIt-Anchor" href="#1-unidirectional-ventilation"></a> 1. Unidirectional Ventilation</h3>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014204446103.png" srcset="/img/loading.gif" alt="image-20201014204446103" style="zoom: 67%;" />
+<ul>
+<li><strong>Cocurrent gas exchange</strong>: As blood and medium flow in the same direction, they gradually approach equilibrium with each other</li>
+<li><strong>Countercurrent gas exchange</strong>: As blood flows in the direction opposite to the medium and picks up O<sub>2</sub>, it steadily encounters medium of higher O<sub>2</sub> partial pressure, so that a partial-pressure gradient favoring O<sub>2</sub>, diffusion into the blood is maintained</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014204531329.png" srcset="/img/loading.gif" alt="image-20201014204531329" style="zoom:50%;" />
+<ul>
+<li>Cocurrent gas exchange</li>
+<li>Countercurrent gas exchange</li>
+<li>Cross-current gas exchanges</li>
+</ul>
+<p>Tidal Gas Exchange</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014204557015.png" srcset="/img/loading.gif" alt="image-20201014204557015" style="zoom: 50%;" />
+<ol>
+<li>Fresh medium mixes with stale medium in the lung, so the O2 partial pressure of the medium at the ex change surface with the blood is below that in the environ mental medium</li>
+<li>O2, diffuses into the blood flowing along the exchange surface The O2 partial pressure in the blood rises therefore, toward that in the lung, but the O2 partial pressure in blood leaving the lung remains lower than that in the exhaled medium</li>
+</ol>
+<p>Mode of exchange ranking of the efficiency of creating high O2 partial pressure in the blood</p>
+<ul>
+<li><u><strong>Countercurrent exchange</strong> is superior to <strong>cross current exchange</strong></u></li>
+<li><u><strong>Cross-current exchange</strong> is superior to <strong>cocurrent or tidal exchange</strong></u></li>
+</ul>
+<p>The solubility of different gases are different in waters</p>
+<ul>
+<li>CO<sub>2</sub> has a far higher solubility than O<sub>2</sub> or N<sub>2</sub></li>
+<li>The absorption coefficients of CO<sub>2</sub>, O<sub>2</sub> and N<sub>2</sub> in cold distilled water are 77, 2.2 and 1.1 mmol/L</li>
+</ul>
+<h4 id="co2-partial-pressure-changes-are-dependent-on-whether-air-or-water-is-breathed"><a class="markdownIt-Anchor" href="#co2-partial-pressure-changes-are-dependent-on-whether-air-or-water-is-breathed"></a> CO<sub>2</sub> partial pressure changes are dependent on whether air or water is breathed</h4>
+<p><strong>In water breathers</strong>: CO2 partial pressure in the blood <u>leaving the breathing organs is always similar to the CO<sub>2</sub> partial pressure in the ambient water</u>, regardless whether The gas-exchange is tidal, cocurrent, countercurrent or cross-current.</p>
+<ul>
+<li>For example, if the ambient water is well aerated with near zero CO<sub>2</sub> , the blood is always near zero! Fish in a aerated water, the partial pressure of CO2In blood leaving the gills is typically about 0.3 kPa (2 mm Hg).</li>
+</ul>
+<p><strong>In air breathers</strong>: the partial pressure of CO2 in blood leaving the lung is more than 10 times the corresponding value in fish (5.3 kPa, 40 mm Hg).</p>
+<ul>
+<li>The property of air and water is <strong>Capacitance coefficient (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05278em;">β</span></span></span></span>)</strong> – the change in total gas concentration per unit of change In gas partial pressure.
+<ul>
+<li>In air: both O<sub>2</sub> and CO<sub>2</sub> have the same capacitance coefficient (Universal gas law)</li>
+<li>In water: capacitance coefficient for CO<sub>2</sub> is 23 times that for O<sub>2</sub> (partly because of the solubility)</li>
+</ul>
+</li>
+</ul>
+<h1 id="三-introduction-to-vertebrate-breathing"><a class="markdownIt-Anchor" href="#三-introduction-to-vertebrate-breathing"></a> 三、Introduction to vertebrate breathing</h1>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014205428728.png" srcset="/img/loading.gif" alt="image-20201014205428728" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014205433788.png" srcset="/img/loading.gif" alt="image-20201014205433788" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014205442775.png" srcset="/img/loading.gif" alt="image-20201014205442775" style="zoom: 67%;" />
+<ul>
+<li>Skin as a gas-exchange membrane</li>
+<li>25% of the gas exchange – some fish, Snakes and reptiles;</li>
+<li>100% of gas exchange across the skin in lungless salamanders</li>
+<li>For terrestrial vertebrates which developed mechanisms against water loss through their skin is poorly permeable to O<sub>2</sub> and CO<sub>2</sub>.</li>
+</ul>
+<h1 id="四-breathing-by-mammals"><a class="markdownIt-Anchor" href="#四-breathing-by-mammals"></a> 四、Breathing by mammals</h1>
+<p>The airways in human lungs:</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014210046470.png" srcset="/img/loading.gif" alt="image-20201014210046470" /></p>
+<p><strong>Conducting airways</strong>: Trachea, bronchi and most of the bronchioles - for air transport.</p>
+<ul>
+<li>The anatomically dead space</li>
+</ul>
+<p><strong>Respiratory airways</strong>: respiratory bronchioles,</p>
+<ul>
+<li>Alveolar ducts and alveolar sacs – gas exchange Between blood and gas occurs.</li>
+</ul>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014210125369.png" srcset="/img/loading.gif" alt="image-20201014210125369" /></p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014210140862.png" srcset="/img/loading.gif" alt="image-20201014210140862" style="zoom:50%;" />
+<ul>
+<li>The trachea divides here to give rise o two major airways, the primary bronchi, that enter the two lungs</li>
+</ul>
+<p>Trachea – 23 levels of branching – primary bronchus (two bronchi) enters the two lungs dendritically branching into bronchioles bronchioles end blindly in alveolar ducts and alveolar sacs</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014210213012.png" srcset="/img/loading.gif" alt="image-20201014210213012" style="zoom:50%;" />
+<ul>
+<li>Alveoli – 300 million alveoli in the lungs of a human adult</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014210225246.png" srcset="/img/loading.gif" alt="image-20201014210225246" style="zoom: 67%;" />
+<ul>
+<li>The terminal bronchioles, with diameters of 0.5 mm or less in humans are the final branches of the conducting (nonrespiratory) airway system.</li>
+<li>Alveoli first appear along the respiratory bronchioles and form a continuous lining along the alveolar ducts and sacs</li>
+<li>The walls of the alveoli are richly invested with blood capillaries</li>
+</ul>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014223129922.png" srcset="/img/loading.gif" alt="image-20201014223129922" style="zoom: 33%;" />
+<ul>
+<li>The gases in the alveolar sacs and alveoli are motionless!
+<ul>
+<li>Alveolar sacs are never fully Empted!</li>
+</ul>
+</li>
+<li>O<sub>2</sub> and CO<sub>2</sub> transport through <u>diffusion</u>.</li>
+<li>Alveoli is 0.25 mm in diameter, diffusion is fast (as long as it is filled With air! Not water).</li>
+<li>At the end of a resting exhalation the lung contains 2400 mL of <strong>stale air</strong> (170 mL is in the anatomical dead space, ie the conducting airways)</li>
+</ul>
+<h2 id="dynamic-lung-volumes"><a class="markdownIt-Anchor" href="#dynamic-lung-volumes"></a> Dynamic lung volumes</h2>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014223253505.png" srcset="/img/loading.gif" alt="image-20201014223253505" style="zoom:10%;" />
+<ul>
+<li>肺活量（VC） Vital capacity</li>
+<li>潮气量（TV）</li>
+<li>补呼气量（ERV）</li>
+<li>补吸气量（IRV）</li>
+<li>残气量（RV）</li>
+<li>肺总容量（TLC）</li>
+</ul>
+<p><strong>Tidal volume</strong> - the volume of air inhaled and exhaled per breath (2900 mL which is the volume of lung – 2400 mL which is at the End of exhalation = 500 mL)</p>
+<ul>
+<li>平静呼吸的时候每次吸入或者呼出的气量</li>
+</ul>
+<p><strong>Resting Expiratory reserve volume</strong> - the maximal volume of air one can expel beyond the resting expiratory level. (2400 mL left in the lung – 1200 mL which can be exhaled by efforts = 1200 mL residual volume which can not be exhaled)</p>
+<ul>
+<li>补呼气量是平静呼气后所能呼出的最大气量</li>
+</ul>
+<p><strong>Resting Inspiratory reserve volume</strong> – the maximal volume of air can be inhaled beyond the resting inspiratory level. (3100 mL , so the maximal lung volume is about 6000 mL (3100 + 2900)</p>
+<ul>
+<li>在平静吸气后再作最大吸气动作所能增加的吸气量称为补吸气量</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>VC = TV + ERV + IRV</mtext></mrow><annotation encoding="application/x-tex">\text{VC = TV + ERV + IRV}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord text"><span class="mord">VC = TV + ERV + IRV</span></span></span></span></span></span></p>
+<h2 id="the-power-for-ventilation"><a class="markdownIt-Anchor" href="#the-power-for-ventilation"></a> The power for ventilation</h2>
+<p>The power for ventilation is developed by the diaphragm and the intercostal and abdominal muscles</p>
+<p><strong>Relaxation volume – in adult male the volume of gas is about 2400 mL</strong></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014223627871.png" srcset="/img/loading.gif" alt="image-20201014223627871" /></p>
+<p>胸膜腔内只有少量的浆液，没有气体：</p>
+<ul>
+<li>润滑作用，<u>减小摩擦力</u>，两层胸膜可互相滑动。</li>
+<li>使两层胸膜<u>贴附在一起，不易分开</u>，所以肺就可随着胸廓的运动而运动。</li>
+</ul>
+<p>胸膜腔的密闭性和两层胸膜间浆液分子的内聚力有重要生理意义，如果密闭性被破坏，在临床上产生气胸 （pneumothorax）</p>
+<h2 id="control-of-active-ventilation"><a class="markdownIt-Anchor" href="#control-of-active-ventilation"></a> Control of active ventilation</h2>
+<ul>
+<li>The <strong>cerebellum</strong> deals with sensory perception and motor output.</li>
+<li>The <strong>medulla</strong> controls involuntary impulses such as breathing, swallowing and coughing.</li>
+</ul>
+<p>Hypothesis of Central Control - central pattern generator: <strong>Rhythmogenesis</strong> - Neural generation of rhythmic behavior</p>
+<ul>
+<li>A set of motor neurons in the brainstem – medulla initiates rhythmic outputs of nerve impulses (action potentials), that underlies a behavior pattern without requiring sensory feedback to trigger the next movement.</li>
+<li>Skeletal muscles requires stimulation by motor neurons for each and every contraction they undergo.</li>
+</ul>
+<p><strong>Continuous breathing -</strong> Humans and most other mammals - each breath is followed promptly by another breath in a regular uninterrupted rhythm.</p>
+<p><strong>Intermittent breathing</strong> (periodic breathing) – lizards, snakes, turtles, amphibians – breath or a set of breath are regularly interrupted by extended periods of <strong>apnea</strong> (a period of no breathing)</p>
+<p>[each period of apnea is followed by inspiration, the lungs are therefore inflated during apnea!]</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014224547859.png" srcset="/img/loading.gif" alt="image-20201014224547859" style="zoom: 33%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014224604687.png" srcset="/img/loading.gif" alt="image-20201014224604687" style="zoom: 50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201014224614084.png" srcset="/img/loading.gif" alt="image-20201014224614084" style="zoom:50%;" />
+<ul>
+<li>When the preparation was severed into two parts, the cut was made here (equivalent to a high neck fracture)</li>
+<li>In the intact preparation, rhythmic motor impulses were detected in all the nerves studied</li>
+<li>However, after the preparation was severed into two parts, the nerves posterior to the cut went silent</li>
+</ul>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Animal-Physiology/">Animal Physiology</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/07/Latex%E9%A1%B5%E9%9D%A2%E8%AE%BE%E7%BD%AE/">
+                        <span class="hidden-mobile">Latex页面设置</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Valine Comments 国内版-->
+              
+              <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                requiredFields: ['nick'],
+                })
+                </script>
+
+              <!-- Valine Comments 国内版-->
+              
+              <!-- <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
+                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
+                requiredFields: ['nick'],
+                })
+                </script> -->
+
+              <!-- Utterances Comments -->
+              <!--<div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
+          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
+</script>
+
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L5 Respiration&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>
