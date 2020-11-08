@@ -1,271 +1,259 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="No such things">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L03 RNA and Protein">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/07/24/L03%20RNA%20and%20Protin/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="No such things">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224044456575.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224044522078.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568774699838.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568774935650.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568775736133.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568775804438.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568775914563.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568776576477.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224045344725.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224045446729.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568777728385.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104105927483.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104110143039.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104110446544.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224045826715.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104111405043.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104111108581.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112056523.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112223630.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112403040.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112631203.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112719238.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112932509.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104113014975.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224052020466.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224052241065.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104113144370.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104113400674.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104113433199.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053120155.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104114235330.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104125016812.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053514911.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053535723.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104125603966.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053707750.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053738937.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053801069.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104131545405.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054209780.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054503393.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054627626.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054828416.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054851472.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054910377.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054925423.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104133342492.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055017136.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104133541123.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055133829.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055338638.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055511608.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055538047.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055623413.png">
+<meta property="article:published_time" content="2020-07-24T09:20:09.000Z">
+<meta property="article:modified_time" content="2020-07-24T09:20:09.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Molecular Biology">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224044456575.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/07/24/L03%20RNA%20and%20Protin/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>L03 RNA and Protein | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>L03 RNA and Protein - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_Sunlight%281%29.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-07-24 17:20">
-      2020年7月24日 下午
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">兴趣使然的记事网站</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      3.1k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      14
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/24/L03%20RNA%20and%20Protin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          L03 RNA and Protein
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-24 17:20:09" itemprop="dateCreated datePublished" datetime="2020-07-24T17:20:09+08:00">2020-07-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：3 个月前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-rna"><span class="post-toc-text"> 一、RNA</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#classes-of-rna-molecules"><span class="post-toc-text"> Classes of RNA Molecules</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#rna-production"><span class="post-toc-text"> RNA Production</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#components-of-rna"><span class="post-toc-text"> Components of RNA</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#rna-structures"><span class="post-toc-text"> RNA Structures</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-rna-secondary-structure"><span class="post-toc-text"> 1. RNA Secondary Structure</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-base-pairing-in-double-strand-rna"><span class="post-toc-text"> 2. Base Pairing in Double Strand RNA</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-base-pairing-in-triple-strand-rna"><span class="post-toc-text"> 3. Base Pairing in Triple Strand RNA</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-secondary-and-tertiary-trna-structures"><span class="post-toc-text"> 4. Secondary And Tertiary tRNA Structures</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-modified-bases"><span class="post-toc-text"> 5. Modified Bases</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-rna-pseudoknots"><span class="post-toc-text"> 6. RNA Pseudoknots</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-structural-motif-结构模体"><span class="post-toc-text"> 7. structural motif 结构模体</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#a-minor-motif"><span class="post-toc-text"> A-minor motif</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tetraloop-motif"><span class="post-toc-text"> Tetraloop motif</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-protein-mediated-rna-folding"><span class="post-toc-text"> 8. Protein-Mediated RNA Folding</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-rna-structure-can-be-assayed-by-cleavage-of-the-backbone"><span class="post-toc-text"> 9. RNA Structure can be assayed by Cleavage of The Backbone</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#the-rna-world"><span class="post-toc-text"> The RNA World</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-major-classes-of-rnas-during-gene-expression"><span class="post-toc-text"> 5 Major Classes of RNAs During Gene Expression</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ribozyme-核酶"><span class="post-toc-text"> Ribozyme 核酶</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-self-splicing"><span class="post-toc-text"> 1. Self-Splicing</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-ribozyme-can-catalyze-reactions-like-proteins"><span class="post-toc-text"> 2. Ribozyme can catalyze reactions - like proteins</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#hammerhead-ribozymes-a-frequent-catalytic-motif-of-plant-viroids"><span class="post-toc-text"> Hammerhead ribozymes – A frequent catalytic motif of plant viroids</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-structural-similarities-between-rna-ribozyme-and-protein-polymerase"><span class="post-toc-text"> 3. Structural similarities between RNA ribozyme and protein Polymerase</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-post-transcriptional-events"><span class="post-toc-text"> 二、Post-transcriptional Events</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#splicing"><span class="post-toc-text"> Splicing</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-alternative-splicing"><span class="post-toc-text"> 1. Alternative Splicing</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mrna-maturation"><span class="post-toc-text"> mRNA Maturation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-5-cap-and-a-3-poly-a-tail"><span class="post-toc-text"> 1. 5’ cap and a 3’ poly-A tail</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-mrna-gap"><span class="post-toc-text"> 5’ mRNA Gap</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-mrna-poly-tail"><span class="post-toc-text"> 3’ mRNA poly tail</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-mrna-can-be-changes-by-a-type-of-editing-after-production"><span class="post-toc-text"> 2. mRNA can be changes by a type of editing after production</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-check-the-quality-of-translation"><span class="post-toc-text"> 3. Check the quality of translation</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-gene-to-proteins"><span class="post-toc-text"> 三、Gene to proteins</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-open-reading-frame"><span class="post-toc-text"> 1. Open Reading Frame</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-the-three-bases-code"><span class="post-toc-text"> 2. The Three-bases Code</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#amino-acids"><span class="post-toc-text"> Amino Acids</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-acid-base-properties-of-amino-acid"><span class="post-toc-text"> 1. Acid-base properties of amino acid</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-peptide-bond-formation"><span class="post-toc-text"> 2. Peptide bond formation</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#protein"><span class="post-toc-text"> Protein</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-disulfide-bond"><span class="post-toc-text"> 1. Disulfide Bond</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-quaternary-structure"><span class="post-toc-text"> 2. Quaternary structure</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-enzymes"><span class="post-toc-text"> 3. Enzymes</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-regulation-of-protein-activity"><span class="post-toc-text"> 4. Regulation of Protein Activity</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#allosteric-regulation"><span class="post-toc-text"> Allosteric Regulation</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#phosphorylationdephosphorylation"><span class="post-toc-text"> Phosphorylation&#x2F;Dephosphorylation</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cyclin-dependent-kinases-cdks周期蛋白依赖性激酶"><span class="post-toc-text"> Cyclin-dependent kinases (CDKs,周期蛋白依赖性激酶)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-regulation-of-protein-folding"><span class="post-toc-text"> 5. Regulation of Protein Folding</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-ubiquitin泛素-mediated-protein-denaturation"><span class="post-toc-text"> 6. Ubiquitin（泛素）-mediated Protein Denaturation</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四-work-with-proteins"><span class="post-toc-text"> 四、Work with Proteins</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#protein-separation"><span class="post-toc-text"> Protein Separation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-centrifugation"><span class="post-toc-text"> 1. Centrifugation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#separation-of-cellular-components"><span class="post-toc-text"> Separation of Cellular Components</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-gel-electrophoresis"><span class="post-toc-text"> 2. Gel Electrophoresis</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-d-gel-electrophoresis"><span class="post-toc-text"> 2-D Gel Electrophoresis</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#separation-of-cellular-components-2"><span class="post-toc-text"> Separation of Cellular Components</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#translation"><span class="post-toc-text"> Translation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-the-nucleolus-is-the-site-of-ribosomal-production-from-high-copy-gene-clusters"><span class="post-toc-text"> 1. The Nucleolus is the site of ribosomal production from high copy gene clusters</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-ribosome-composition"><span class="post-toc-text"> 2. Ribosome Composition</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-ribosome-production"><span class="post-toc-text"> 3. Ribosome Production</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-polyribosomes"><span class="post-toc-text"> 4. Polyribosomes</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#trna"><span class="post-toc-text"> tRNA</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-charge-trna"><span class="post-toc-text"> 1. ‘Charge’ tRNA</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-working-trna"><span class="post-toc-text"> 2. Working tRNA</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-translation-initiation-start-codon"><span class="post-toc-text"> 3. Translation Initiation – Start Codon</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#translating-an-mrna-molecule"><span class="post-toc-text"> Translating an mRNA Molecule</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-formation-of-the-peptide-bond"><span class="post-toc-text"> 4. Formation of The Peptide Bond</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-termination-of-translation"><span class="post-toc-text"> 5. Termination of Translation</span></a></li></ol></li></ol></li></ol>
-
-              <h1 id="一-rna"><a class="markdownIt-Anchor" href="#一-rna"></a> 一、RNA</h1>
+        <h1 id="一-rna"><a class="markdownIt-Anchor" href="#一-rna"></a> 一、RNA</h1>
 <h2 id="classes-of-rna-molecules"><a class="markdownIt-Anchor" href="#classes-of-rna-molecules"></a> Classes of RNA Molecules</h2>
 <p>Major classes, all involved in protein synthesis, and all of which undergo RNA processing after transcription (“post-transcriptional modifications”).</p>
 <ol>
@@ -292,7 +280,7 @@
 <h2 id="rna-production"><a class="markdownIt-Anchor" href="#rna-production"></a> RNA Production</h2>
 <p>RNA is produced from DNA via Transcription</p>
 <p>RNA is synthesized by using one strand of DNA as a template for complementary base pairing.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224044456575.png" srcset="/img/loading.gif" alt="image-20191224044456575" style="zoom: 80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224044456575.png" alt="image-20191224044456575" style="zoom: 80%;" />
 <p>The gene may be longer than the sequence coding for protein.</p>
 <ul>
 <li>
@@ -302,9 +290,9 @@
 <p>In contrast, transcription and translation take place in the same compartment in bacteria.</p>
 </li>
 </ul>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224044522078.png" srcset="/img/loading.gif" alt="image-20191224044522078" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224044522078.png" alt="image-20191224044522078" /></p>
 <h2 id="components-of-rna"><a class="markdownIt-Anchor" href="#components-of-rna"></a> Components of RNA</h2>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568774699838.png" srcset="/img/loading.gif" alt="1568774699838" style="zoom: 25%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568774699838.png" alt="1568774699838" style="zoom: 25%;" />
 <ol>
 <li>Uracil instead of thymine</li>
 <li>Alternating phosphates and ribose sugars</li>
@@ -312,7 +300,7 @@
 </ol>
 <h2 id="rna-structures"><a class="markdownIt-Anchor" href="#rna-structures"></a> RNA Structures</h2>
 <h3 id="1-rna-secondary-structure"><a class="markdownIt-Anchor" href="#1-rna-secondary-structure"></a> 1. RNA Secondary Structure</h3>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568774935650.png" srcset="/img/loading.gif" alt="1568774935650" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568774935650.png" alt="1568774935650" style="zoom: 50%;" />
 <p>Typical structures  formed by folded RNA include non-canonical base pairs (“wobble”)</p>
 <ul>
 <li>
@@ -332,31 +320,31 @@
 <h3 id="2-base-pairing-in-double-strand-rna"><a class="markdownIt-Anchor" href="#2-base-pairing-in-double-strand-rna"></a> 2. Base Pairing in Double Strand RNA</h3>
 <p>R—R <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span></span></span></span>R—D&gt;D—D</p>
 <p>In addition to “normal” (Watson-Crick pairing), there are four noncanonical pairs that can form by hydrogen bonding.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568775736133.png" srcset="/img/loading.gif" alt="1568775736133" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568775736133.png" alt="1568775736133" style="zoom:67%;" />
 <h3 id="3-base-pairing-in-triple-strand-rna"><a class="markdownIt-Anchor" href="#3-base-pairing-in-triple-strand-rna"></a> 3. Base Pairing in Triple Strand RNA</h3>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568775804438.png" srcset="/img/loading.gif" alt="1568775804438" style="zoom: 67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568775804438.png" alt="1568775804438" style="zoom: 67%;" />
 <p><u>Hydrogen bonding</u> stabilizes a triplex of three nucleotides.</p>
 <h3 id="4-secondary-and-tertiary-trna-structures"><a class="markdownIt-Anchor" href="#4-secondary-and-tertiary-trna-structures"></a> 4. Secondary And Tertiary tRNA Structures</h3>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568775914563.png" srcset="/img/loading.gif" alt="1568775914563" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568775914563.png" alt="1568775914563" style="zoom:80%;" />
 <p>Typical “cloverleaf” drawing versus a more realistic 3-D tRNA  structure. The “anticodon” is the functionally important bit, and it sticks out to remain accessible.</p>
 <h3 id="5-modified-bases"><a class="markdownIt-Anchor" href="#5-modified-bases"></a> 5. Modified Bases</h3>
 <p>More than 50 modified bases are found in RNA</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568776576477.png" srcset="/img/loading.gif" alt="1568776576477" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568776576477.png" alt="1568776576477" /></p>
 <h3 id="6-rna-pseudoknots"><a class="markdownIt-Anchor" href="#6-rna-pseudoknots"></a> 6. RNA Pseudoknots</h3>
 <p>RNA pseudoknots <u>comprise functional domains within ribozymes, self-splicing introns, ribonucleoprotein（核蛋白，RNP） complexes, viral genomes, and other biological systems.</u></p>
 <p>An important piece of RNA architecture for the globular structure capable of performing important biological functions.</p>
 <p><strong>First found in plant viruses</strong></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224045344725.png" srcset="/img/loading.gif" alt="image-20191224045344725" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224045344725.png" alt="image-20191224045344725" style="zoom:67%;" />
 <p>假结结构最初于1982年在芜青花叶病毒中发现 <u>(First found in plants)</u>。假结结构折叠成类似于绳结的三维结构，但却并不是真正的拓扑学的结。</p>
 <h3 id="7-structural-motif-结构模体"><a class="markdownIt-Anchor" href="#7-structural-motif-结构模体"></a> 7. structural motif 结构模体</h3>
 <p>结构模体（英语：structural motif，亦称为结构基序）是链状生物分子（如蛋白质或核酸）中的一种超二级结构，也存在于其它分子之中。结构模体使得我们无法预测蛋白的生物学功能：存在于蛋白质与酶中的模体可能功能迥异。</p>
 <h4 id="a-minor-motif"><a class="markdownIt-Anchor" href="#a-minor-motif"></a> A-minor motif</h4>
 <p>A common “long range” interaction among different parts of the RNA molecule. <u>Good fit between adenosine（腺苷） and the minor groove of a RNA double helix.</u></p>
 <p>(RNA分子的不同部分之间的一种常见的长期相互作用。在腺甘酸和RNA双螺旋的minor groove之间有很好的匹配。)</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224045446729.png" srcset="/img/loading.gif" alt="image-20191224045446729" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224045446729.png" alt="image-20191224045446729" style="zoom:67%;" />
 <h4 id="tetraloop-motif"><a class="markdownIt-Anchor" href="#tetraloop-motif"></a> Tetraloop motif</h4>
 <p>In tetraloop motif, <u>base breaking interactions stabilize the structure</u></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568777728385.png" srcset="/img/loading.gif" alt="1568777728385" style="zoom: 67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568777728385.png" alt="1568777728385" style="zoom: 67%;" />
 <center>A stem-loop that is particularly stable due to base stacking.</center>
 Additional structures described in Allison text include the ribose  zipper motif and the kink-turn motif, both of which combine with  other structures to define a broad range of RNA structures.
 <p>在Allison的文章中描述的其他结构包括<u>ribose zipper motif</u>和<u>kink-turn motif</u>，两者都与其他结构结合，定义了广泛的RNA结构。</p>
@@ -364,15 +352,15 @@ Additional structures described in Allison text include the ribose  zipper motif
 <p>Unfolded RNA can become  misfolded, or can directly fold  into the proper structure.</p>
 <p>Binding proteins (blue) can stabilize the structure.</p>
 <p>RNA “chaperones（分子伴侣）” can  prevent misfolding.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104105927483.png" srcset="/img/loading.gif" alt="image-20191104105927483" style="zoom:38%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104105927483.png" alt="image-20191104105927483" style="zoom:38%;" />
 <h3 id="9-rna-structure-can-be-assayed-by-cleavage-of-the-backbone"><a class="markdownIt-Anchor" href="#9-rna-structure-can-be-assayed-by-cleavage-of-the-backbone"></a> 9. RNA Structure can be assayed by Cleavage of The Backbone</h3>
 <p>RNA结构可通过主链的裂解来测定</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104110143039.png" srcset="/img/loading.gif" alt="image-20191104110143039" style="zoom: 67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104110143039.png" alt="image-20191104110143039" style="zoom: 67%;" />
 <p>Hydroxyl radicals cleave at unprotected nucleotides. In a folded  structure, specific nucleotides are protected from cleavage.</p>
 <h2 id="the-rna-world"><a class="markdownIt-Anchor" href="#the-rna-world"></a> The RNA World</h2>
 <p>This theory indicates the <u>evolution starts at RNA</u></p>
 <p>RNA can perform many of the functions needed by a cell, including  encoding information, performing functions as catalysts (“ribozymes”),  regulating gene expression, binding proteins, etc.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104110446544.png" srcset="/img/loading.gif" alt="image-20191104110446544" style="zoom: 67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104110446544.png" alt="image-20191104110446544" style="zoom: 67%;" />
 <h2 id="5-major-classes-of-rnas-during-gene-expression"><a class="markdownIt-Anchor" href="#5-major-classes-of-rnas-during-gene-expression"></a> 5 Major Classes of RNAs During Gene Expression</h2>
 <ol>
 <li>snoRNA</li>
@@ -381,7 +369,7 @@ Additional structures described in Allison text include the ribose  zipper motif
 <li>mRNA</li>
 <li>rRNA</li>
 </ol>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224045826715.png" srcset="/img/loading.gif" alt="image-20191224045826715" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224045826715.png" alt="image-20191224045826715" /></p>
 <h2 id="ribozyme-核酶"><a class="markdownIt-Anchor" href="#ribozyme-核酶"></a> Ribozyme 核酶</h2>
 <h3 id="1-self-splicing"><a class="markdownIt-Anchor" href="#1-self-splicing"></a> 1. Self-Splicing</h3>
 <p>Thomas Cech demonstrated splicing of the  “R loop” (or intervening sequence, IVS – an  “intron”) in the absence of protein.</p>
@@ -395,10 +383,10 @@ Additional structures described in Allison text include the ribose  zipper motif
 <p>Long RNAs are self-cleaved into monomers.</p>
 <p>Small ribozymes of 40 to 154 nt</p>
 <p>May date from the “RNA world”</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104111405043.png" srcset="/img/loading.gif" alt="image-20191104111405043" style="zoom:40%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104111405043.png" alt="image-20191104111405043" style="zoom:40%;" />
 <h3 id="3-structural-similarities-between-rna-ribozyme-and-protein-polymerase"><a class="markdownIt-Anchor" href="#3-structural-similarities-between-rna-ribozyme-and-protein-polymerase"></a> 3. Structural similarities between RNA ribozyme and protein Polymerase</h3>
 <p>Both a self-splicing  intron and  bacteriophage T7 DNA polymerase  contain two metal  ions that coordinate  the substrate position</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104111108581.png" srcset="/img/loading.gif" alt="image-20191104111108581" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104111108581.png" alt="image-20191104111108581" style="zoom:50%;" />
 <h1 id="二-post-transcriptional-events"><a class="markdownIt-Anchor" href="#二-post-transcriptional-events"></a> 二、Post-transcriptional Events</h1>
 <p>Mature mRNA is shorter than the gene that encode it</p>
 <ul>
@@ -418,43 +406,43 @@ Additional structures described in Allison text include the ribose  zipper motif
 <p>Transesterification: 转酯（作用），酯基转移（作用），酯交换（作用）</p>
 <p>Lariat: 套索</p>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112056523.png" srcset="/img/loading.gif" alt="image-20191104112056523" style="zoom: 60%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112056523.png" alt="image-20191104112056523" style="zoom: 60%;" />
 <h3 id="1-alternative-splicing"><a class="markdownIt-Anchor" href="#1-alternative-splicing"></a> 1. Alternative Splicing</h3>
 <p>One gene can produce a  huge number of mRNA  variants. This impacts  protein diversity, localization,  stability as well as mRNA turnover.</p>
 <p>Alternative splicing is a tremendous source of variation in protein sequences</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112223630.png" srcset="/img/loading.gif" alt="image-20191104112223630" style="zoom:33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112223630.png" alt="image-20191104112223630" style="zoom:33%;" />
 <h2 id="mrna-maturation"><a class="markdownIt-Anchor" href="#mrna-maturation"></a> mRNA Maturation</h2>
 <p>The mRNA Maturation process involves <u>many modification steps</u></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112403040.png" srcset="/img/loading.gif" alt="image-20191104112403040" style="zoom: 80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112403040.png" alt="image-20191104112403040" style="zoom: 80%;" />
 <h3 id="1-5-cap-and-a-3-poly-a-tail"><a class="markdownIt-Anchor" href="#1-5-cap-and-a-3-poly-a-tail"></a> 1. 5’ cap and a 3’ poly-A tail</h3>
 <p>In addition to splicing and removal of introns, a <strong>5’ cap and a 3’ poly-A tail</strong>  are added to protect the mRNA from degradation.</p>
 <h4 id="5-mrna-gap"><a class="markdownIt-Anchor" href="#5-mrna-gap"></a> 5’ mRNA Gap</h4>
 <p>The gap contains an unusual 5’-5’ bond</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112631203.png" srcset="/img/loading.gif" alt="image-20191104112631203" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112631203.png" alt="image-20191104112631203" style="zoom:50%;" />
 <p>A 7-methylguanosine  nucleotide is  attached via a 5’-5’  linkage to the 5’ end  of the mRNA,  protecting it from  degradation from  exonucleases.</p>
 <h4 id="3-mrna-poly-tail"><a class="markdownIt-Anchor" href="#3-mrna-poly-tail"></a> 3’ mRNA poly tail</h4>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112719238.png" srcset="/img/loading.gif" alt="image-20191104112719238" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112719238.png" alt="image-20191104112719238" style="zoom:50%;" />
 <p>The cleavage and polyadenylation specificity factor (CPSF) binds to the polyadenylation signal AAUAAA at the 3’ end  of the mRNA.</p>
 <p>The Poly(A) binding protein PABPN1 binds the growing poly(A) tail.</p>
 <p>These proteins recruit and increase processivity of the poly(A) polymerase</p>
 <h3 id="2-mrna-can-be-changes-by-a-type-of-editing-after-production"><a class="markdownIt-Anchor" href="#2-mrna-can-be-changes-by-a-type-of-editing-after-production"></a> 2. mRNA can be changes by a type of editing after production</h3>
 <p>This is evident by  comparison of a  cDNA product to the  DNA of the gene that  encodes it.</p>
 <p>Rather than splice variants, <u>sometimes small numbers of nucleotides have  been added or removed.</u></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112932509.png" srcset="/img/loading.gif" alt="image-20191104112932509" style="zoom:33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104112932509.png" alt="image-20191104112932509" style="zoom:33%;" />
 <p><u><strong>This happens most commonly in the mitochondria</strong></u></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104113014975.png" srcset="/img/loading.gif" alt="image-20191104113014975" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104113014975.png" alt="image-20191104113014975" style="zoom: 50%;" />
 <h3 id="3-check-the-quality-of-translation"><a class="markdownIt-Anchor" href="#3-check-the-quality-of-translation"></a> 3. Check the quality of translation</h3>
 <ol>
 <li>Some ribonucleo proteins (RNPs) are stored in the cytoplasm in an inactive state.</li>
 <li>Normal translation –ribosomes displace exon-exon junction complexes (EJCs) from mRNAs. General mRNA decay pathways.</li>
 <li>Nonsense-mediated decay results when EJCs are not removed</li>
 </ol>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224052020466.png" srcset="/img/loading.gif" alt="image-20191224052020466" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224052020466.png" alt="image-20191224052020466" /></p>
 <h1 id="三-gene-to-proteins"><a class="markdownIt-Anchor" href="#三-gene-to-proteins"></a> 三、Gene to proteins</h1>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224052241065.png" srcset="/img/loading.gif" alt="image-20191224052241065" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224052241065.png" alt="image-20191224052241065" /></p>
 <center>Central Dogma</center>
 ## The genetic code
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104113144370.png" srcset="/img/loading.gif" alt="image-20191104113144370" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104113144370.png" alt="image-20191104113144370" style="zoom:50%;" />
 <h3 id="1-open-reading-frame"><a class="markdownIt-Anchor" href="#1-open-reading-frame"></a> 1. Open Reading Frame</h3>
 <p>In molecular genetics, an open reading frame (ORF) is the part of a reading frame that has the potential to code for a protein or peptide. An ORF is a continuous stretch of codons that do not contain a stop codon (usually UAA, UAG or UGA).</p>
 <blockquote>
@@ -465,9 +453,9 @@ Additional structures described in Allison text include the ribose  zipper motif
 <p>Proflavin induced single base changes caused <strong>“frameshift” mutations.</strong></p>
 <p><u>Frameshift mutations cause protein “garble” downstream of first base  insertion or deletion. After 2nd insertion/deletion, still garbled…but third insertion restores the correct protein.</u></p>
 <p>Thus, three nucleotides = one amino acid</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104113400674.png" srcset="/img/loading.gif" alt="image-20191104113400674" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104113400674.png" alt="image-20191104113400674" style="zoom: 33%;" />
 <p><strong>20 amino acids plus stop codons</strong> encoded by three-nucleotide sets. The genetic code  is “universal” which is to say that it is used in all organisms (with a few exceptions).</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104113433199.png" srcset="/img/loading.gif" alt="image-20191104113433199" style="zoom:33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104113433199.png" alt="image-20191104113433199" style="zoom:33%;" />
 <p>The code is also non-overlapping – each codon has only one use in an organism.</p>
 <p><strong>Experiments to show this: Nirenberg/Khorana/Holley experiments (1968 Nobel prize)</strong></p>
 <ol>
@@ -481,7 +469,7 @@ Additional structures described in Allison text include the ribose  zipper motif
 <p>Holley et al. in 1964 isolated tRNA and showed how a codon read and  converted to an amino acid</p>
 </li>
 </ol>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053120155.png" srcset="/img/loading.gif" alt="image-20191224053120155" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053120155.png" alt="image-20191224053120155" /></p>
 <p>DNA is turned into RNA (‘transcription&quot;), and then the RNA is read during the process of translation (in the 5’ to 3’ direction). Translation uses sets of three bases and converts the information into one amino acid. Thus, 64 possible triplets form 20 amino acids.</p>
 <p>The code is “<strong>degenerate</strong>” or “redundant”.</p>
 <blockquote>
@@ -499,17 +487,17 @@ Additional structures described in Allison text include the ribose  zipper motif
 <h3 id="2-peptide-bond-formation"><a class="markdownIt-Anchor" href="#2-peptide-bond-formation"></a> 2. Peptide bond formation</h3>
 <p>Condensation reaction to produce polypeptide with a common  backbone and variable side chains.</p>
 <p>The peptide bond acts as a partial double bond, imparting rigidity.（肽键起部分双键的作用）</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104114235330.png" srcset="/img/loading.gif" alt="image-20191104114235330" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104114235330.png" alt="image-20191104114235330" style="zoom: 33%;" />
 <h2 id="protein"><a class="markdownIt-Anchor" href="#protein"></a> Protein</h2>
 <p>Proteins are also polymers, but have a higher level of complexity than DNA 一 there is no universal structure, although each species of protein has a unique 3-D structure.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104125016812.png" srcset="/img/loading.gif" alt="image-20191104125016812" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104125016812.png" alt="image-20191104125016812" style="zoom: 50%;" />
 <h3 id="1-disulfide-bond"><a class="markdownIt-Anchor" href="#1-disulfide-bond"></a> 1. Disulfide Bond</h3>
 <p>Disulfide bonds lock in the  secondary structure of a protein  via covalent linkages.</p>
 <p>Chymotypsin (胰凝乳蛋白酶) contains five  disulfide bonds.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053514911.png" srcset="/img/loading.gif" alt="image-20191224053514911" style="zoom: 80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053514911.png" alt="image-20191224053514911" style="zoom: 80%;" />
 <h3 id="2-quaternary-structure"><a class="markdownIt-Anchor" href="#2-quaternary-structure"></a> 2. Quaternary structure</h3>
 <p>Quaternary structure defines the number and relative  positions of the subunits in a  multimeric protein complex.  Each protein has a defined  role, and the complex may  not function without one part.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053535723.png" srcset="/img/loading.gif" alt="image-20191224053535723" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053535723.png" alt="image-20191224053535723" style="zoom: 33%;" />
 <p>Proteins are highly adaptable molecules and  vary greatly in size,  shape and function.</p>
 <p>20% of cellular weight is  protein.</p>
 <h3 id="3-enzymes"><a class="markdownIt-Anchor" href="#3-enzymes"></a> 3. Enzymes</h3>
@@ -520,18 +508,18 @@ Additional structures described in Allison text include the ribose  zipper motif
 <p>The <strong>allosteric regulation</strong> is involved in the regulation of protein activity.</p>
 <h4 id="phosphorylationdephosphorylation"><a class="markdownIt-Anchor" href="#phosphorylationdephosphorylation"></a> Phosphorylation/Dephosphorylation</h4>
 <p>A common cellular  mechanism for the  regulation of protein  activity. Phosphorylation  can activate or  deactivate proteins.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104125603966.png" srcset="/img/loading.gif" alt="image-20191104125603966" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104125603966.png" alt="image-20191104125603966" style="zoom: 50%;" />
 <h4 id="cyclin-dependent-kinases-cdks周期蛋白依赖性激酶"><a class="markdownIt-Anchor" href="#cyclin-dependent-kinases-cdks周期蛋白依赖性激酶"></a> Cyclin-dependent kinases (CDKs,周期蛋白依赖性激酶)</h4>
 <p>是一个蛋白质激酶家族，因其在细胞周期中的调控作用而首次被发现，该蛋白家族也涉及转录调控、mRNA加工和神经细胞的分化。这类酶存在于已知所有真核生物中。</p>
 <p>The activation of CDKs is caused by <u>cyclin bonding and phosphorylation.</u></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053707750.png" srcset="/img/loading.gif" alt="image-20191224053707750" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053707750.png" alt="image-20191224053707750" style="zoom:67%;" />
 <h3 id="5-regulation-of-protein-folding"><a class="markdownIt-Anchor" href="#5-regulation-of-protein-folding"></a> 5. Regulation of Protein Folding</h3>
 <p>Molecular chaperones Hsp70 and Hsp40  assist folding of newly synthesized proteins</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053738937.png" srcset="/img/loading.gif" alt="image-20191224053738937" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053738937.png" alt="image-20191224053738937" /></p>
 <h3 id="6-ubiquitin泛素-mediated-protein-denaturation"><a class="markdownIt-Anchor" href="#6-ubiquitin泛素-mediated-protein-denaturation"></a> 6. Ubiquitin（泛素）-mediated Protein Denaturation</h3>
 <p>Proteins may be “tagged”  for selective destruction  in <strong>proteolytic complexes（蛋白水解复合物）</strong>  called <em><strong>proteasomes（蛋白酶体）</strong></em></p>
 <p>This tagging occurs by <u>covalent attachment of <em>ubiquitin</em></u>, a <u>small</u>, <u>compact and highly  conserved protein.</u></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053801069.png" srcset="/img/loading.gif" alt="image-20191224053801069" style="zoom:60%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224053801069.png" alt="image-20191224053801069" style="zoom:60%;" />
 <h1 id="四-work-with-proteins"><a class="markdownIt-Anchor" href="#四-work-with-proteins"></a> 四、Work with Proteins</h1>
 <p>The key to working with proteins are techniques that allow the biochemist to:</p>
 <ol>
@@ -552,18 +540,18 @@ Additional structures described in Allison text include the ribose  zipper motif
 <h2 id="protein-separation"><a class="markdownIt-Anchor" href="#protein-separation"></a> Protein Separation</h2>
 <h3 id="1-centrifugation"><a class="markdownIt-Anchor" href="#1-centrifugation"></a> 1. Centrifugation</h3>
 <p>Centrifugation is a very important method that allows you to separates molecules of <u>different sizes.</u></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104131545405.png" srcset="/img/loading.gif" alt="image-20191104131545405" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104131545405.png" alt="image-20191104131545405" style="zoom:50%;" />
 <h4 id="separation-of-cellular-components"><a class="markdownIt-Anchor" href="#separation-of-cellular-components"></a> Separation of Cellular Components</h4>
 <p>Proteins can be isolated from different cell fractions, such as the plasma membrane, the cytoplasm, the nucleus, etc. These fractions are obtained by centrifugation. Different speeds separate components of different molecular weights.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054209780.png" srcset="/img/loading.gif" alt="image-20191224054209780" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054209780.png" alt="image-20191224054209780" /></p>
 <h3 id="2-gel-electrophoresis"><a class="markdownIt-Anchor" href="#2-gel-electrophoresis"></a> 2. Gel Electrophoresis</h3>
 <p>Protein are separated on poly-acrylamide gels（聚丙烯酰胺凝胶）.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054503393.png" srcset="/img/loading.gif" alt="image-20191224054503393" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054503393.png" alt="image-20191224054503393" /></p>
 <h4 id="2-d-gel-electrophoresis"><a class="markdownIt-Anchor" href="#2-d-gel-electrophoresis"></a> 2-D Gel Electrophoresis</h4>
 <p>Because of the different amino acid side chains that are exposed on the surface of the  protein, proteins have different charges.</p>
 <p>These charges can be used to separate proteins by isoelectric focusing in a pH gradient.</p>
 <p>The combination of isoelectric focusing and SDS gel electrophoresis can separate proteins in two dimensions, hence the “2-D gel”.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054627626.png" srcset="/img/loading.gif" alt="image-20191224054627626" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054627626.png" alt="image-20191224054627626" style="zoom:50%;" />
 <h2 id="separation-of-cellular-components-2"><a class="markdownIt-Anchor" href="#separation-of-cellular-components-2"></a> Separation of Cellular Components</h2>
 <p>Proteins can be isolated from different cell fractions, such as the plasma membrane, the  cytoplasm, the nucleus, etc. These fractions are  obtained by centrifugation.</p>
 <p><u>Different speeds separate components of different molecular  weights.</u></p>
@@ -575,18 +563,18 @@ Additional structures described in Allison text include the ribose  zipper motif
 <p>Tandem sets of thousands of rRNA genes are required for the production of the many ribosomes used in protein production.</p>
 <p>This ribosome production takes place in the nucleoleus, a visible cellular compartment.</p>
 <p>rRNAs are transcribed by RNA pol I, with the exception of the 5S rRNA, transcribed  by RNA pol III.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054828416.png" srcset="/img/loading.gif" alt="image-20191224054828416" style="zoom: 67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054828416.png" alt="image-20191224054828416" style="zoom: 67%;" />
 <h3 id="2-ribosome-composition"><a class="markdownIt-Anchor" href="#2-ribosome-composition"></a> 2. Ribosome Composition</h3>
 <p>Eukaryotic example: Two subunits (40S and 60S), with  variation in sizes across  organisms. The 40S contains an  18S rRNA, while the 60S contains  a 5S, 5.8S and 28S rRNA.</p>
 <p>The 5S rRNA is synthesized in the nucleus, and the other rRNAs  in the nucleolus.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054851472.png" srcset="/img/loading.gif" alt="image-20191224054851472" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054851472.png" alt="image-20191224054851472" style="zoom:80%;" />
 <h3 id="3-ribosome-production"><a class="markdownIt-Anchor" href="#3-ribosome-production"></a> 3. Ribosome Production</h3>
 <p>Subunits are produced in the nucleolus, matured in the nucleus, and exported to the cytoplasm where they are used in protein production</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054910377.png" srcset="/img/loading.gif" alt="image-20191224054910377" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054910377.png" alt="image-20191224054910377" /></p>
 <h3 id="4-polyribosomes"><a class="markdownIt-Anchor" href="#4-polyribosomes"></a> 4. Polyribosomes</h3>
 <p>Prokaryotes can simultaneously transcribe  and translate genes;</p>
 <p>Eukaryotes can simultaneously produce  multiple proteins with multiple ribosomes  (polysomes), but  transcription is separate because the mRNA is processed.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054925423.png" srcset="/img/loading.gif" alt="image-20191224054925423" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224054925423.png" alt="image-20191224054925423" style="zoom:67%;" />
 <h2 id="trna"><a class="markdownIt-Anchor" href="#trna"></a> tRNA</h2>
 <p>tRNAs provide the connection from a codon of three bases to a single amino acid</p>
 <ul>
@@ -601,19 +589,19 @@ Additional structures described in Allison text include the ribose  zipper motif
 </ul>
 </li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104133342492.png" srcset="/img/loading.gif" alt="image-20191104133342492" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104133342492.png" alt="image-20191104133342492" style="zoom: 33%;" />
 <h3 id="1-charge-trna"><a class="markdownIt-Anchor" href="#1-charge-trna"></a> 1. ‘Charge’ tRNA</h3>
 <p>tRNAs are “charged” when the correct amino acid is added to the RNA component.</p>
 <p>This requires ATP and an important enzyme, an aminoacyl-tRNA synthetase.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055017136.png" srcset="/img/loading.gif" alt="image-20191224055017136" style="zoom: 67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055017136.png" alt="image-20191224055017136" style="zoom: 67%;" />
 <h3 id="2-working-trna"><a class="markdownIt-Anchor" href="#2-working-trna"></a> 2. Working tRNA</h3>
 <p>RNA-binding sites in the ribosome include mRNA and 3 binding sites for tRNA (A-, P-, and E-sites, short for aminoacyl-tRNA, peptidyl-tRNA, and exit).</p>
 <p>All 3 tRNA sites are shown occupied below, but during protein synthesis only  two of these sites contain tRNA molecules at any one time</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104133541123.png" srcset="/img/loading.gif" alt="image-20191104133541123" style="zoom: 67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104133541123.png" alt="image-20191104133541123" style="zoom: 67%;" />
 <h3 id="3-translation-initiation-start-codon"><a class="markdownIt-Anchor" href="#3-translation-initiation-start-codon"></a> 3. Translation Initiation – Start Codon</h3>
 <p>The first amino acid is different – there is nothing to attach it to (no growing chain of amino acids). Therefore this is handled different than the rest. Initiation factors are required.</p>
 <p>The secondary structure of the 5’ cap is unwound to facilitate translation. The proteins that attach to this cap promote translation.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055133829.png" srcset="/img/loading.gif" alt="image-20191224055133829" style="zoom: 80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055133829.png" alt="image-20191224055133829" style="zoom: 80%;" />
 <h4 id="translating-an-mrna-molecule"><a class="markdownIt-Anchor" href="#translating-an-mrna-molecule"></a> Translating an mRNA Molecule</h4>
 <p>3-step cycle repeated during protein synthesis.</p>
 <ol>
@@ -627,398 +615,189 @@ Additional structures described in Allison text include the ribose  zipper motif
 <p>The small subunit moves a distance of three nucleotides along the mRNA chain in <strong>step 3</strong>, ejecting the spent tRNA molecule and “resetting” the ribosome</p>
 </li>
 </ol>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055338638.png" srcset="/img/loading.gif" alt="image-20191224055338638" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055338638.png" alt="image-20191224055338638" /></p>
 <p>In the Allison textbook version:</p>
 <p>An aminoacyl-tRNA (氨酰tRNA) molecule binds to the A-site on the ribosome, forms a new peptide bond, then the small subunit moves three nucleotides along the mRNA, “resetting” the ribosome.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055511608.png" srcset="/img/loading.gif" alt="image-20191224055511608" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055511608.png" alt="image-20191224055511608" style="zoom:67%;" />
 <h3 id="4-formation-of-the-peptide-bond"><a class="markdownIt-Anchor" href="#4-formation-of-the-peptide-bond"></a> 4. Formation of The Peptide Bond</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055538047.png" srcset="/img/loading.gif" alt="image-20191224055538047" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055538047.png" alt="image-20191224055538047" /></p>
 <h3 id="5-termination-of-translation"><a class="markdownIt-Anchor" href="#5-termination-of-translation"></a> 5. Termination of Translation</h3>
 <p>Translation ends when the stop codon is reached; no additional peptide bonds can be formed.</p>
 <p>The last step is the hydrolysis of the peptide chain from the tRNA.</p>
 <p>Ribosomal parts can then be recycled or can restart the process of translation.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055623413.png" srcset="/img/loading.gif" alt="image-20191224055623413" style="zoom:67%;" />
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/Molecular-Biology/">Molecular Biology</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/07/24/L02%20The%20Structure%20of%20DNA%20&amp;%20Chromosome/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">L02 The Structure of DNA & Chromosome</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/07/24/L04%20Recombinat%20DNA/">
-                        <span class="hidden-mobile">L04 Recombinat DNA</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224055623413.png" alt="image-20191224055623413" style="zoom:67%;" />
+    </div>
 
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
+    
+    
+    
 
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
-
-
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Molecular-Biology/" rel="tag"># Molecular Biology</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/24/L04%20Recombinat%20DNA/" rel="prev" title="L04 Recombinat DNA">
+      <i class="fa fa-chevron-left"></i> L04 Recombinat DNA
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/24/L02%20The%20Structure%20of%20DNA%20&%20Chromosome/" rel="next" title="L02 The Structure of DNA & Chromosome">
+      L02 The Structure of DNA & Chromosome <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一-rna"><span class="nav-number">1.</span> <span class="nav-text"> 一、RNA</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#classes-of-rna-molecules"><span class="nav-number">1.1.</span> <span class="nav-text"> Classes of RNA Molecules</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rna-production"><span class="nav-number">1.2.</span> <span class="nav-text"> RNA Production</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#components-of-rna"><span class="nav-number">1.3.</span> <span class="nav-text"> Components of RNA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rna-structures"><span class="nav-number">1.4.</span> <span class="nav-text"> RNA Structures</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-rna-secondary-structure"><span class="nav-number">1.4.1.</span> <span class="nav-text"> 1. RNA Secondary Structure</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-base-pairing-in-double-strand-rna"><span class="nav-number">1.4.2.</span> <span class="nav-text"> 2. Base Pairing in Double Strand RNA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-base-pairing-in-triple-strand-rna"><span class="nav-number">1.4.3.</span> <span class="nav-text"> 3. Base Pairing in Triple Strand RNA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-secondary-and-tertiary-trna-structures"><span class="nav-number">1.4.4.</span> <span class="nav-text"> 4. Secondary And Tertiary tRNA Structures</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-modified-bases"><span class="nav-number">1.4.5.</span> <span class="nav-text"> 5. Modified Bases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-rna-pseudoknots"><span class="nav-number">1.4.6.</span> <span class="nav-text"> 6. RNA Pseudoknots</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-structural-motif-结构模体"><span class="nav-number">1.4.7.</span> <span class="nav-text"> 7. structural motif 结构模体</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#a-minor-motif"><span class="nav-number">1.4.7.1.</span> <span class="nav-text"> A-minor motif</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tetraloop-motif"><span class="nav-number">1.4.7.2.</span> <span class="nav-text"> Tetraloop motif</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-protein-mediated-rna-folding"><span class="nav-number">1.4.8.</span> <span class="nav-text"> 8. Protein-Mediated RNA Folding</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-rna-structure-can-be-assayed-by-cleavage-of-the-backbone"><span class="nav-number">1.4.9.</span> <span class="nav-text"> 9. RNA Structure can be assayed by Cleavage of The Backbone</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-rna-world"><span class="nav-number">1.5.</span> <span class="nav-text"> The RNA World</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-major-classes-of-rnas-during-gene-expression"><span class="nav-number">1.6.</span> <span class="nav-text"> 5 Major Classes of RNAs During Gene Expression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ribozyme-核酶"><span class="nav-number">1.7.</span> <span class="nav-text"> Ribozyme 核酶</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-self-splicing"><span class="nav-number">1.7.1.</span> <span class="nav-text"> 1. Self-Splicing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-ribozyme-can-catalyze-reactions-like-proteins"><span class="nav-number">1.7.2.</span> <span class="nav-text"> 2. Ribozyme can catalyze reactions - like proteins</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hammerhead-ribozymes-a-frequent-catalytic-motif-of-plant-viroids"><span class="nav-number">1.7.2.1.</span> <span class="nav-text"> Hammerhead ribozymes – A frequent catalytic motif of plant viroids</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-structural-similarities-between-rna-ribozyme-and-protein-polymerase"><span class="nav-number">1.7.3.</span> <span class="nav-text"> 3. Structural similarities between RNA ribozyme and protein Polymerase</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-post-transcriptional-events"><span class="nav-number">2.</span> <span class="nav-text"> 二、Post-transcriptional Events</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#splicing"><span class="nav-number">2.1.</span> <span class="nav-text"> Splicing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-alternative-splicing"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 1. Alternative Splicing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mrna-maturation"><span class="nav-number">2.2.</span> <span class="nav-text"> mRNA Maturation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-cap-and-a-3-poly-a-tail"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 1. 5’ cap and a 3’ poly-A tail</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-mrna-gap"><span class="nav-number">2.2.1.1.</span> <span class="nav-text"> 5’ mRNA Gap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-mrna-poly-tail"><span class="nav-number">2.2.1.2.</span> <span class="nav-text"> 3’ mRNA poly tail</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-mrna-can-be-changes-by-a-type-of-editing-after-production"><span class="nav-number">2.2.2.</span> <span class="nav-text"> 2. mRNA can be changes by a type of editing after production</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-check-the-quality-of-translation"><span class="nav-number">2.2.3.</span> <span class="nav-text"> 3. Check the quality of translation</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三-gene-to-proteins"><span class="nav-number">3.</span> <span class="nav-text"> 三、Gene to proteins</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-open-reading-frame"><span class="nav-number">3.0.1.</span> <span class="nav-text"> 1. Open Reading Frame</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-the-three-bases-code"><span class="nav-number">3.0.2.</span> <span class="nav-text"> 2. The Three-bases Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#amino-acids"><span class="nav-number">3.1.</span> <span class="nav-text"> Amino Acids</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-acid-base-properties-of-amino-acid"><span class="nav-number">3.1.1.</span> <span class="nav-text"> 1. Acid-base properties of amino acid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-peptide-bond-formation"><span class="nav-number">3.1.2.</span> <span class="nav-text"> 2. Peptide bond formation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#protein"><span class="nav-number">3.2.</span> <span class="nav-text"> Protein</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-disulfide-bond"><span class="nav-number">3.2.1.</span> <span class="nav-text"> 1. Disulfide Bond</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-quaternary-structure"><span class="nav-number">3.2.2.</span> <span class="nav-text"> 2. Quaternary structure</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-enzymes"><span class="nav-number">3.2.3.</span> <span class="nav-text"> 3. Enzymes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-regulation-of-protein-activity"><span class="nav-number">3.2.4.</span> <span class="nav-text"> 4. Regulation of Protein Activity</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#allosteric-regulation"><span class="nav-number">3.2.4.1.</span> <span class="nav-text"> Allosteric Regulation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#phosphorylationdephosphorylation"><span class="nav-number">3.2.4.2.</span> <span class="nav-text"> Phosphorylation&#x2F;Dephosphorylation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cyclin-dependent-kinases-cdks周期蛋白依赖性激酶"><span class="nav-number">3.2.4.3.</span> <span class="nav-text"> Cyclin-dependent kinases (CDKs,周期蛋白依赖性激酶)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-regulation-of-protein-folding"><span class="nav-number">3.2.5.</span> <span class="nav-text"> 5. Regulation of Protein Folding</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-ubiquitin泛素-mediated-protein-denaturation"><span class="nav-number">3.2.6.</span> <span class="nav-text"> 6. Ubiquitin（泛素）-mediated Protein Denaturation</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四-work-with-proteins"><span class="nav-number">4.</span> <span class="nav-text"> 四、Work with Proteins</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#protein-separation"><span class="nav-number">4.1.</span> <span class="nav-text"> Protein Separation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-centrifugation"><span class="nav-number">4.1.1.</span> <span class="nav-text"> 1. Centrifugation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#separation-of-cellular-components"><span class="nav-number">4.1.1.1.</span> <span class="nav-text"> Separation of Cellular Components</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-gel-electrophoresis"><span class="nav-number">4.1.2.</span> <span class="nav-text"> 2. Gel Electrophoresis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-d-gel-electrophoresis"><span class="nav-number">4.1.2.1.</span> <span class="nav-text"> 2-D Gel Electrophoresis</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#separation-of-cellular-components-2"><span class="nav-number">4.2.</span> <span class="nav-text"> Separation of Cellular Components</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#translation"><span class="nav-number">4.3.</span> <span class="nav-text"> Translation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-the-nucleolus-is-the-site-of-ribosomal-production-from-high-copy-gene-clusters"><span class="nav-number">4.3.1.</span> <span class="nav-text"> 1. The Nucleolus is the site of ribosomal production from high copy gene clusters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-ribosome-composition"><span class="nav-number">4.3.2.</span> <span class="nav-text"> 2. Ribosome Composition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-ribosome-production"><span class="nav-number">4.3.3.</span> <span class="nav-text"> 3. Ribosome Production</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-polyribosomes"><span class="nav-number">4.3.4.</span> <span class="nav-text"> 4. Polyribosomes</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#trna"><span class="nav-number">4.4.</span> <span class="nav-text"> tRNA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-charge-trna"><span class="nav-number">4.4.1.</span> <span class="nav-text"> 1. ‘Charge’ tRNA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-working-trna"><span class="nav-number">4.4.2.</span> <span class="nav-text"> 2. Working tRNA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-translation-initiation-start-codon"><span class="nav-number">4.4.3.</span> <span class="nav-text"> 3. Translation Initiation – Start Codon</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#translating-an-mrna-molecule"><span class="nav-number">4.4.3.1.</span> <span class="nav-text"> Translating an mRNA Molecule</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-formation-of-the-peptide-bond"><span class="nav-number">4.4.4.</span> <span class="nav-text"> 4. Formation of The Peptide Bond</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-termination-of-translation"><span class="nav-number">4.4.5.</span> <span class="nav-text"> 5. Termination of Translation</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">187</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
+        
 
-    
 
-    
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
-  
-</footer>
-
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
-
-<!-- Plugins -->
-
 
   
-    <script  src="/js/lazyload.js" ></script>
-  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
+<script src="/js/schemes/muse.js"></script>
 
 
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
-      }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "L03 RNA and Protein&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
+<script src="/js/next-boot.js"></script>
 
 
 
 
-
-  
-
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
   
 
 
@@ -1030,20 +809,14 @@ Additional structures described in Allison text include the ribose  zipper motif
 
 
 
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
 
 
 
 
 
+  
 
+  
 
 </body>
-
-
 </html>

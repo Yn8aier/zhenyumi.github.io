@@ -1,271 +1,214 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="平常使用LaTeX以及学习过程中的一些操作总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LaTeX基本操作 - 文档格式、基本输入与排版操作">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/07/02/%E5%85%B3%E4%BA%8ELaTeX%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="平常使用LaTeX以及学习过程中的一些操作总结">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20200705123619058.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20200705125424301.png">
+<meta property="article:published_time" content="2020-07-02T03:52:59.000Z">
+<meta property="article:modified_time" content="2020-11-07T04:04:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="LaTeX">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20200705123619058.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/07/02/%E5%85%B3%E4%BA%8ELaTeX%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>LaTeX基本操作 - 文档格式、基本输入与排版操作 | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>LaTeX基本操作 - 文档格式、基本输入与排版操作 - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/photo_2020-07-07_22-27-15.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-07-02 11:52">
-      2020年7月2日 中午
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">兴趣使然的记事网站</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      2.7k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      9
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/02/%E5%85%B3%E4%BA%8ELaTeX%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LaTeX基本操作 - 文档格式、基本输入与排版操作
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-02 11:52:59" itemprop="dateCreated datePublished" datetime="2020-07-02T11:52:59+08:00">2020-07-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-07 12:04:00" itemprop="dateModified" datetime="2020-11-07T12:04:00+08:00">2020-11-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">软件使用总结</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：3 小时前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-文档的设置"><span class="post-toc-text"> 一、文档的设置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#中文支持-ctex宏包的安装和使用"><span class="post-toc-text"> 中文支持 - ctex宏包的安装和使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#document-classes"><span class="post-toc-text"> Document Classes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-文档类的相关设定"><span class="post-toc-text"> 1. 文档类的相关设定</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-文档类的选项参数"><span class="post-toc-text"> 2. 文档类的选项参数</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#宏包相关的设定"><span class="post-toc-text"> 宏包相关的设定</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-ctex宏包的一些特殊设定"><span class="post-toc-text"> 1. ctex宏包的一些特殊设定</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文章的导言区"><span class="post-toc-text"> 文章的导言区</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-文档的排版与输入"><span class="post-toc-text"> 二、文档的排版与输入</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#摘要"><span class="post-toc-text"> 摘要</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#章节-段落与章"><span class="post-toc-text"> 章节、段落与章</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-默认格式"><span class="post-toc-text"> 1. 默认格式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-自定义格式调整"><span class="post-toc-text"> 2. 自定义格式调整</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#换行与首行缩进"><span class="post-toc-text"> 换行与首行缩进</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#列表"><span class="post-toc-text"> 列表</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分割线"><span class="post-toc-text"> 分割线</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文本对齐"><span class="post-toc-text"> 文本对齐</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-一行对齐"><span class="post-toc-text"> 1. 一行对齐</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-多行对齐"><span class="post-toc-text"> 2. 多行对齐</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#字体-格式及大小"><span class="post-toc-text"> 字体、格式及大小</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-文本大小"><span class="post-toc-text"> 1. 文本大小</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-文本格式"><span class="post-toc-text"> 2. 文本格式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#字体颜色"><span class="post-toc-text"> 字体颜色</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文字格式"><span class="post-toc-text"> 文字格式</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#上下标与引用文献"><span class="post-toc-text"> 上下标与引用文献</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-正常地引用文献的方法"><span class="post-toc-text"> 1. 正常地引用文献的方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-结合endnote使用文献的方法"><span class="post-toc-text"> 2. 结合endnote使用文献的方法</span></a></li></ol></li></ol></li></ol>
-
-              <p>之前安装了Texlive，怎么用怎么不顺手，CJK没有预装，搜索了半天也不知道怎么安装CJK，结果选择卸载texlive换成另外一个发行版MiKTeX，结果安装过程中出现各种错误。</p>
+        <p>之前安装了Texlive，怎么用怎么不顺手，CJK没有预装，搜索了半天也不知道怎么安装CJK，结果选择卸载texlive换成另外一个发行版MiKTeX，结果安装过程中出现各种错误。</p>
 <p>我服了，LaTeX这个东西真是折磨人。</p>
 <p>因此我在这里记录一下 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.89883em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.68333em;"><span style="top:-2.904999em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord text"><span class="mord textrm sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.46782999999999997em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord text"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span> 常用的代码以及排版手段</p>
 <h1 id="一-文档的设置"><a class="markdownIt-Anchor" href="#一-文档的设置"></a> 一、文档的设置</h1>
@@ -274,16 +217,13 @@
 <p>MiKTeX 和 TeXStudio直接去官网下载就好，安装耗时大概1h。</p>
 <p>关于ctex的安装我就不重复造轮子了，可以参考百度经验：<a href="https://jingyan.baidu.com/article/ff411625e229d512e482379c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/ff411625e229d512e482379c.html</a></p>
 <p>载入ctex宏包的方式，可以选择两种方式：</p>
-<div class="hljs"><pre><code class="hljs latex">\documentclass[&lt;参数&gt;]&#123;article&#125;
-\usepackage&#123;ctex&#125;
-或者
-\documentclass[&lt;参数&gt;]&#123;ctexart&#125; % &lt;- 这是官方文档推荐的方式</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[&lt;参数&gt;]&#123;article&#125;</span><br><span class="line">\usepackage&#123;ctex&#125;</span><br><span class="line">或者</span><br><span class="line">\documentclass[&lt;参数&gt;]&#123;ctexart&#125; % &lt;- 这是官方文档推荐的方式</span><br></pre></td></tr></table></figure>
 <p>相关的较为细节的ctex使用方式请参考安装目录的pdf文件，下文只摘录常用的一些操作。</p>
 <h2 id="document-classes"><a class="markdownIt-Anchor" href="#document-classes"></a> Document Classes</h2>
 <p>代码格式：</p>
-<div class="hljs"><pre><code class="hljs latex">\documentclass[&lt;args&gt;]&#123;DocumentClass&#125;</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[&lt;args&gt;]&#123;DocumentClass&#125;</span><br></pre></td></tr></table></figure>
 <p>举例：</p>
-<div class="hljs"><pre><code class="hljs latex">\documentclass[a4paper, 12pt, portrait, oneside,UTF8]&#123;article&#125;</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[a4paper, 12pt, portrait, oneside,UTF8]&#123;article&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="1-文档类的相关设定"><a class="markdownIt-Anchor" href="#1-文档类的相关设定"></a> 1. 文档类的相关设定</h3>
 <ol>
 <li>article 排版科技期刊、短报告、程序文档、邀请函等。</li>
@@ -305,110 +245,40 @@
 </ol>
 <h2 id="宏包相关的设定"><a class="markdownIt-Anchor" href="#宏包相关的设定"></a> 宏包相关的设定</h2>
 <p>使用宏包的时候，默认的形式是</p>
-<div class="hljs"><pre><code class="hljs latex">\usepackage[&lt;参数&gt;]&#123;package_name&#125;</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usepackage[&lt;参数&gt;]&#123;package_name&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="1-ctex宏包的一些特殊设定"><a class="markdownIt-Anchor" href="#1-ctex宏包的一些特殊设定"></a> 1. ctex宏包的一些特殊设定</h3>
 <p>ctex包对中文文档有一些适应性支持，具体方式是通过<code>\ctexset</code>，例：</p>
-<div class="hljs"><pre><code class="hljs latex">\ctexset&#123;
-	abstractname &#x3D; &#123;本文概要&#125;,
-	bibname &#x3D; &#123;文\quad 献&#125; 
-&#125;</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\ctexset&#123;</span><br><span class="line">	abstractname &#x3D; &#123;本文概要&#125;,</span><br><span class="line">	bibname &#x3D; &#123;文\quad 献&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="文章的导言区"><a class="markdownIt-Anchor" href="#文章的导言区"></a> 文章的导言区</h2>
 <p>在文章的导言区需要设置的一些基本信息包括：title，author，date等等，但是这些如果要显示在文档正文页面的话，需要在文档的主环境里调用<code>\maketitle</code>函数生成标题，标题的内容格式为<code>content contain \title \author \date</code></p>
 <p>举例：</p>
-<div class="hljs"><pre><code class="hljs latex">\title&#123;这是标题&#125;
-\author&#123;这是作者&#125;
-\date&#123;2020&#x2F;07&#x2F;05&#125;
-
-\begin&#123;document&#125;
-\maketitle %生成标题 
-\end&#123;document&#125;</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\title&#123;这是标题&#125;</span><br><span class="line">\author&#123;这是作者&#125;</span><br><span class="line">\date&#123;2020&#x2F;07&#x2F;05&#125;</span><br><span class="line"></span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">\maketitle %生成标题 </span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="二-文档的排版与输入"><a class="markdownIt-Anchor" href="#二-文档的排版与输入"></a> 二、文档的排版与输入</h1>
 <blockquote>
 <p>此部分参考了JINGWHALE的文章：<a href="https://www.cnblogs.com/jingwhale/p/4250296.html" target="_blank" rel="noopener">https://www.cnblogs.com/jingwhale/p/4250296.html</a></p>
 </blockquote>
 <h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要</h2>
 <p>摘要的加入需要新建一个环境，典型使用方法为：</p>
-<div class="hljs"><pre><code class="hljs latex">\begin&#123;doocument&#125;
-
-\maketitle %生成标题 
-\tableofcontents %插入目录
-\begin&#123;abstract&#125;
-	这是摘要
-\end&#123;abstract&#125;
-
-\end&#123;document&#125;</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;doocument&#125;</span><br><span class="line"></span><br><span class="line">\maketitle %生成标题 </span><br><span class="line">\tableofcontents %插入目录</span><br><span class="line">\begin&#123;abstract&#125;</span><br><span class="line">	这是摘要</span><br><span class="line">\end&#123;abstract&#125;</span><br><span class="line"></span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
 <p>注意由于ctex宏包的一些特殊设定，对中文文档做了一些适配，因此Abstract显示为“本文概要”。需要更改的话，就在<code>\ctexset</code>里面更改</p>
 <hr />
 <p>因此我们得到了一个中文文档的最简单模板，即：</p>
-<div class="hljs"><pre><code class="hljs latex">\documentclass[]&#123;article&#125;
-\usepackage&#123;ctex&#125;
-
-\ctexset&#123;
-	abstractname &#x3D; &#123;本文概要&#125;,
-	bibname &#x3D; &#123;文\quad 献&#125; 
-&#125;
-
-\title&#123;这是标题&#125;
-\author&#123;这是作者&#125;
-\date&#123;2020&#x2F;07&#x2F;05&#125;
-
-\begin&#123;document&#125;
-
-\maketitle 
-\tableofcontents 
-\begin&#123;abstract&#125;
-	这是摘要
-\end&#123;abstract&#125;
-
-\end&#123;document&#125;</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[]&#123;article&#125;</span><br><span class="line">\usepackage&#123;ctex&#125;</span><br><span class="line"></span><br><span class="line">\ctexset&#123;</span><br><span class="line">	abstractname &#x3D; &#123;本文概要&#125;,</span><br><span class="line">	bibname &#x3D; &#123;文\quad 献&#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">\title&#123;这是标题&#125;</span><br><span class="line">\author&#123;这是作者&#125;</span><br><span class="line">\date&#123;2020&#x2F;07&#x2F;05&#125;</span><br><span class="line"></span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line"></span><br><span class="line">\maketitle </span><br><span class="line">\tableofcontents </span><br><span class="line">\begin&#123;abstract&#125;</span><br><span class="line">	这是摘要</span><br><span class="line">\end&#123;abstract&#125;</span><br><span class="line"></span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
 <p>如果需要更自由地进行标题的编辑，则可以不生成标题 (不进行<code>\maketitle</code>)，在document的环境内使用文本对齐来自行进行设计：</p>
-<div class="hljs"><pre><code class="hljs latex">\documentclass[a4paper, 12pt, portrait, oneside,UTF8]&#123;article&#125; % 中文文档
-\usepackage&#123;ctex&#125;
-\ctexset&#123;
-	bibname &#x3D; &#123;文\quad 献&#125; 
-&#125;
-%\title&#123;title&#125;
-%\author&#123;&#125;
-%\date&#123;&#125;
-
-\begin&#123;document&#125;
-
-\rule&#123;\textwidth&#125;&#123;0.35mm&#125;%分割线
-\begin&#123;center&#125;
-	姓名：aaa \par
-	学号：12345678 \par
-	课程：bbb\par
-	时间：2020&#x2F;07&#x2F;13\par
-\end&#123;center&#125;
-\rule&#123;\textwidth&#125;&#123;0.35mm&#125;%分割线
-
-\end&#123;document&#125;</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[a4paper, 12pt, portrait, oneside,UTF8]&#123;article&#125; % 中文文档</span><br><span class="line">\usepackage&#123;ctex&#125;</span><br><span class="line">\ctexset&#123;</span><br><span class="line">	bibname &#x3D; &#123;文\quad 献&#125; </span><br><span class="line">&#125;</span><br><span class="line">%\title&#123;title&#125;</span><br><span class="line">%\author&#123;&#125;</span><br><span class="line">%\date&#123;&#125;</span><br><span class="line"></span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line"></span><br><span class="line">\rule&#123;\textwidth&#125;&#123;0.35mm&#125;%分割线</span><br><span class="line">\begin&#123;center&#125;</span><br><span class="line">	姓名：aaa \par</span><br><span class="line">	学号：12345678 \par</span><br><span class="line">	课程：bbb\par</span><br><span class="line">	时间：2020&#x2F;07&#x2F;13\par</span><br><span class="line">\end&#123;center&#125;</span><br><span class="line">\rule&#123;\textwidth&#125;&#123;0.35mm&#125;%分割线</span><br><span class="line"></span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="章节-段落与章"><a class="markdownIt-Anchor" href="#章节-段落与章"></a> 章节、段落与章</h2>
 <h3 id="1-默认格式"><a class="markdownIt-Anchor" href="#1-默认格式"></a> 1. 默认格式</h3>
 <p>默认文档可以插入三级章节</p>
-<div class="hljs"><pre><code class="hljs latex">%插入章节
-\section&#123;这是一级章节&#125;
-
-\subsection&#123;这是二级章节&#125;
-
-\subsubsection&#123;这是三级章节&#125;</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">%插入章节</span><br><span class="line">\section&#123;这是一级章节&#125;</span><br><span class="line"></span><br><span class="line">\subsection&#123;这是二级章节&#125;</span><br><span class="line"></span><br><span class="line">\subsubsection&#123;这是三级章节&#125;</span><br></pre></td></tr></table></figure>
 <p>默认文档可以插入二级段落</p>
-<div class="hljs"><pre><code class="hljs tex"><span class="hljs-tag">\<span class="hljs-name">paragraph</span><span class="hljs-string">&#123;这是一个段落&#125;</span></span>  
-这是一个段落的内容
-
-<span class="hljs-tag">\<span class="hljs-name">subparagraph</span><span class="hljs-string">&#123;这是一个次级段落&#125;</span></span> 
-这是一个次级段落的内容</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\paragraph&#123;这是一个段落&#125;  </span><br><span class="line">这是一个段落的内容</span><br><span class="line"></span><br><span class="line">\subparagraph&#123;这是一个次级段落&#125; </span><br><span class="line">这是一个次级段落的内容</span><br></pre></td></tr></table></figure>
 <p>效果：</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20200705123619058.png" srcset="/img/loading.gif" alt="image-20200705123619058" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20200705123619058.png" alt="image-20200705123619058" /></p>
 <p>如果文档的类型是book，则提供了插入章节的方法</p>
-<div class="hljs"><pre><code class="hljs latex">\chapter&#123;Chapter 1&#125;</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\chapter&#123;Chapter 1&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="2-自定义格式调整"><a class="markdownIt-Anchor" href="#2-自定义格式调整"></a> 2. 自定义格式调整</h3>
 <p>要调整章节标题在目录页中的格式，可以用<code>titletoc</code>宏包。该宏包的基本命令参数如下:</p>
-<div class="hljs"><pre><code class="hljs latex">\usepackage&#123;titletoc&#125;
-
-···
-
-\titlecontents&#123;标题层次&#125;[左间距]&#123;整体格式&#125;&#123;标题序号&#125;&#123;标题内容&#125;&#123;指引线和页码&#125;[下间距]</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;titletoc&#125;</span><br><span class="line"></span><br><span class="line">···</span><br><span class="line"></span><br><span class="line">\titlecontents&#123;标题层次&#125;[左间距]&#123;整体格式&#125;&#123;标题序号&#125;&#123;标题内容&#125;&#123;指引线和页码&#125;[下间距]</span><br></pre></td></tr></table></figure>
 <h2 id="换行与首行缩进"><a class="markdownIt-Anchor" href="#换行与首行缩进"></a> 换行与首行缩进</h2>
 <p>latex中文的ctex默认了有两个中文字符的首行缩进。</p>
 <p>换行的时候可以通过一个空行或者<code>\par</code>来实现换行，这种情况下会有默认的首行缩进。</p>
@@ -416,61 +286,28 @@
 <ul>
 <li><code>\\</code> 和 <code>\newline</code> 不能直接使用，需要放在文本的末尾，如：</li>
 </ul>
-<div class="hljs"><pre><code class="hljs latex">文本文本文本。\newline
-文本文本文本。\\</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">文本文本文本。\newline</span><br><span class="line">文本文本文本。\\</span><br></pre></td></tr></table></figure>
 <p>在第一行的首行缩进可能有些特殊，下面是如何在第一行使用首行缩进以及在文本中如何自由缩进：</p>
-<div class="hljs"><pre><code class="hljs latex">\setlength&#123;\parindent&#125;&#123;2em&#125; %首行全部缩进2字符。但是在第一行使用没有效果。 
-\indent %首行缩进
-\hspace&#123;1.7em&#125;	%第一段第一行的缩进只能用\hspace&#123;1.7em&#125;来控制空格的多少</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\setlength&#123;\parindent&#125;&#123;2em&#125; %首行全部缩进2字符。但是在第一行使用没有效果。 </span><br><span class="line">\indent %首行缩进</span><br><span class="line">\hspace&#123;1.7em&#125;	%第一段第一行的缩进只能用\hspace&#123;1.7em&#125;来控制空格的多少</span><br></pre></td></tr></table></figure>
 <p>例：</p>
-<div class="hljs"><pre><code class="hljs latex">\hspace&#123;1.7em&#125;文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本
-\indent 文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本
-\setlength&#123;\parindent&#125;&#123;2em&#125;文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\hspace&#123;1.7em&#125;文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本</span><br><span class="line">\indent 文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本</span><br><span class="line">\setlength&#123;\parindent&#125;&#123;2em&#125;文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本</span><br></pre></td></tr></table></figure>
 <h2 id="列表"><a class="markdownIt-Anchor" href="#列表"></a> 列表</h2>
 <p>列表环境有三种：无序列表（itemize）、有序列表（enumerate）和描述列表（description）。</p>
 <ul>
 <li>使用Description类型的时候，适用于生成代码。</li>
 </ul>
 <p>代码例:</p>
-<div class="hljs"><pre><code class="hljs latex">\begin&#123;document&#125;
-
-%无序列表
-\begin&#123;itemize&#125;
-	\item cell
-	\item organ
-	\item body
-\end&#123;itemize&#125;
-%有序列表
-\begin&#123;enumerate&#125;
-  \item cell
-  \item organ
-  \item body
-\end&#123;enumerate&#125;
-%描述列表
-\begin&#123;description&#125;
-  \item[python] print(&#39;hello world&#39;)
-  \item[java] println(&#39;hello world&#39;)
-  \item[r] vector &lt;- c(data.xlsx)
-\end&#123;description&#125;
-
-\end&#123;document&#125;</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;document&#125;</span><br><span class="line"></span><br><span class="line">%无序列表</span><br><span class="line">\begin&#123;itemize&#125;</span><br><span class="line">	\item cell</span><br><span class="line">	\item organ</span><br><span class="line">	\item body</span><br><span class="line">\end&#123;itemize&#125;</span><br><span class="line">%有序列表</span><br><span class="line">\begin&#123;enumerate&#125;</span><br><span class="line">  \item cell</span><br><span class="line">  \item organ</span><br><span class="line">  \item body</span><br><span class="line">\end&#123;enumerate&#125;</span><br><span class="line">%描述列表</span><br><span class="line">\begin&#123;description&#125;</span><br><span class="line">  \item[python] print(&#39;hello world&#39;)</span><br><span class="line">  \item[java] println(&#39;hello world&#39;)</span><br><span class="line">  \item[r] vector &lt;- c(data.xlsx)</span><br><span class="line">\end&#123;description&#125;</span><br><span class="line"></span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
 <p>效果：</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20200705125424301.png" srcset="/img/loading.gif" alt="image-20200705125424301" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20200705125424301.png" alt="image-20200705125424301" /></p>
 <h2 id="分割线"><a class="markdownIt-Anchor" href="#分割线"></a> 分割线</h2>
 <p>画一条横着的分割线需要用到<code>\rule</code>命令：</p>
-<div class="hljs"><pre><code class="hljs latex">\rule[水平高度]&#123;长度&#125;&#123;粗细&#125;
-%例：
-\rule[-10pt]&#123;14.3cm&#125;&#123;0.05em&#125;
-\rule&#123;\textwidth&#125;&#123;0.35mm&#125; %\textwidth就是和文本一样长</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\rule[水平高度]&#123;长度&#125;&#123;粗细&#125;</span><br><span class="line">%例：</span><br><span class="line">\rule[-10pt]&#123;14.3cm&#125;&#123;0.05em&#125;</span><br><span class="line">\rule&#123;\textwidth&#125;&#123;0.35mm&#125; %\textwidth就是和文本一样长</span><br></pre></td></tr></table></figure>
 <h2 id="文本对齐"><a class="markdownIt-Anchor" href="#文本对齐"></a> 文本对齐</h2>
 <h3 id="1-一行对齐"><a class="markdownIt-Anchor" href="#1-一行对齐"></a> 1. 一行对齐</h3>
-<div class="hljs"><pre><code class="hljs latex">\leftline&#123;左对齐&#125;
-\centerline&#123;居中&#125;
-\rightline&#123;右对齐&#125;</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\leftline&#123;左对齐&#125;</span><br><span class="line">\centerline&#123;居中&#125;</span><br><span class="line">\rightline&#123;右对齐&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="2-多行对齐"><a class="markdownIt-Anchor" href="#2-多行对齐"></a> 2. 多行对齐</h3>
-<div class="hljs"><pre><code class="hljs latex">\begin&#123;flushleft&#125;...\end&#123;flushleft&#125; %左对齐 
-\begin&#123;center&#125;...\end&#123;center&#125; %居中 
-\begin&#123;flushright&#125;...\end&#123;flushright&#125; %右对齐</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;flushleft&#125;...\end&#123;flushleft&#125; %左对齐 </span><br><span class="line">\begin&#123;center&#125;...\end&#123;center&#125; %居中 </span><br><span class="line">\begin&#123;flushright&#125;...\end&#123;flushright&#125; %右对齐</span><br></pre></td></tr></table></figure>
 <h2 id="字体-格式及大小"><a class="markdownIt-Anchor" href="#字体-格式及大小"></a> 字体、格式及大小</h2>
 <h3 id="1-文本大小"><a class="markdownIt-Anchor" href="#1-文本大小"></a> 1. 文本大小</h3>
 <table>
@@ -535,49 +372,16 @@
 </tbody>
 </table>
 <p>使用举例：</p>
-<div class="hljs"><pre><code class="hljs latex">\Large 文本文本文本 %选定大小
-\normalsize %还原默认大小</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\Large 文本文本文本 %选定大小</span><br><span class="line">\normalsize %还原默认大小</span><br></pre></td></tr></table></figure>
 <h3 id="2-文本格式"><a class="markdownIt-Anchor" href="#2-文本格式"></a> 2. 文本格式</h3>
 <h4 id="字体颜色"><a class="markdownIt-Anchor" href="#字体颜色"></a> 字体颜色</h4>
-<div class="hljs"><pre><code class="hljs latex">\usepackage&#123;color&#125; %使用xcolor包
-
-\textcolor&#123;color&#125;&#123;text&#125; %使用预定义的颜色
-\textcolor[rgb]&#123;r,g,b&#125;&#123;text&#125; %使用rgb颜色，其中r,g,b的取值范围是[0,1]
-\textcolor[RGB]&#123;R,G,B&#125;&#123;text&#125; %使用RGB颜色，其中R,G,B的取值范围是[0,255]
-\color&#123;color&#125;&#123;&#125; %指定后续的颜色
-----------------
-%一些预定义的颜色：
-\textcolor&#123;red&#x2F;blue&#x2F;green&#x2F;black&#x2F;white&#x2F;cyan&#x2F;magenta&#x2F;yellow&#125;&#123;text&#125;
-%自定义颜色
-\definecolor&#123;ColorName&#125;&#123;rgb&#125;&#123;r,g,b&#125; %这时r&#x2F;g&#x2F;b的定义域就在[0-1]。
-\definecolor&#123;ColorName&#125;&#123;RGB&#125;&#123;R,G,B&#125; %这时R&#x2F;G&#x2F;B的定义域就在[0-255]。</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;color&#125; %使用xcolor包</span><br><span class="line"></span><br><span class="line">\textcolor&#123;color&#125;&#123;text&#125; %使用预定义的颜色</span><br><span class="line">\textcolor[rgb]&#123;r,g,b&#125;&#123;text&#125; %使用rgb颜色，其中r,g,b的取值范围是[0,1]</span><br><span class="line">\textcolor[RGB]&#123;R,G,B&#125;&#123;text&#125; %使用RGB颜色，其中R,G,B的取值范围是[0,255]</span><br><span class="line">\color&#123;color&#125;&#123;&#125; %指定后续的颜色</span><br><span class="line">----------------</span><br><span class="line">%一些预定义的颜色：</span><br><span class="line">\textcolor&#123;red&#x2F;blue&#x2F;green&#x2F;black&#x2F;white&#x2F;cyan&#x2F;magenta&#x2F;yellow&#125;&#123;text&#125;</span><br><span class="line">%自定义颜色</span><br><span class="line">\definecolor&#123;ColorName&#125;&#123;rgb&#125;&#123;r,g,b&#125; %这时r&#x2F;g&#x2F;b的定义域就在[0-1]。</span><br><span class="line">\definecolor&#123;ColorName&#125;&#123;RGB&#125;&#123;R,G,B&#125; %这时R&#x2F;G&#x2F;B的定义域就在[0-255]。</span><br></pre></td></tr></table></figure>
 <p>使用举例：</p>
-<div class="hljs"><pre><code class="hljs latex">\usepackage&#123;xcolor&#125;
-···
-\textcolor&#123;blue&#125;&#123;Hello World&#125;
-\textcolor[RGB]&#123;255,0,255&#125;&#123;Hello World&#125;</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;xcolor&#125;</span><br><span class="line">···</span><br><span class="line">\textcolor&#123;blue&#125;&#123;Hello World&#125;</span><br><span class="line">\textcolor[RGB]&#123;255,0,255&#125;&#123;Hello World&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="文字格式"><a class="markdownIt-Anchor" href="#文字格式"></a> 文字格式</h4>
-<div class="hljs"><pre><code class="hljs latex">%对于英文文本：
-显示直立文本： \textup&#123;文本&#125;
-意大利斜体： \textit&#123;文本&#125;
-slanted斜体： \textsl&#123;文本&#125;
-显示小体大写文本： 　\textsc&#123;文本&#125;
-中等权重： \textmd&#123;文本&#125;
-加粗命令： \textbf&#123;文本&#125;
-默认值： \textnormal&#123;文本&#125;
-下划线： \underline&#123;文本&#125;
-----------------------------
-%对于中文文本，加粗下划线命令可以正常使用，并没有针对中文的斜体字体
-%对于中文文本的斜体：
-（未解决）</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">%对于英文文本：</span><br><span class="line">显示直立文本： \textup&#123;文本&#125;</span><br><span class="line">意大利斜体： \textit&#123;文本&#125;</span><br><span class="line">slanted斜体： \textsl&#123;文本&#125;</span><br><span class="line">显示小体大写文本： 　\textsc&#123;文本&#125;</span><br><span class="line">中等权重： \textmd&#123;文本&#125;</span><br><span class="line">加粗命令： \textbf&#123;文本&#125;</span><br><span class="line">默认值： \textnormal&#123;文本&#125;</span><br><span class="line">下划线： \underline&#123;文本&#125;</span><br><span class="line">----------------------------</span><br><span class="line">%对于中文文本，加粗下划线命令可以正常使用，并没有针对中文的斜体字体</span><br><span class="line">%对于中文文本的斜体：</span><br><span class="line">（未解决）</span><br></pre></td></tr></table></figure>
 <p>利用宏包<code>ulem</code>可以实现其他的标记：</p>
-<div class="hljs"><pre><code class="hljs latex">\usepackage&#123;ulem&#125;
-
-\uline&#123;text&#125;  %下划线
-\uuline&#123;text&#125;  %双下划线
-\uwave&#123;text&#125; %波浪线
-\sout&#123;text&#125; %删除线
-\xout&#123;text&#125; %斜删除线</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;ulem&#125;</span><br><span class="line"></span><br><span class="line">\uline&#123;text&#125;  %下划线</span><br><span class="line">\uuline&#123;text&#125;  %双下划线</span><br><span class="line">\uwave&#123;text&#125; %波浪线</span><br><span class="line">\sout&#123;text&#125; %删除线</span><br><span class="line">\xout&#123;text&#125; %斜删除线</span><br></pre></td></tr></table></figure>
 <h2 id="上下标与引用文献"><a class="markdownIt-Anchor" href="#上下标与引用文献"></a> 上下标与引用文献</h2>
 <h3 id="1-正常地引用文献的方法"><a class="markdownIt-Anchor" href="#1-正常地引用文献的方法"></a> 1. 正常地引用文献的方法</h3>
 <p>使用bibtex</p>
@@ -585,392 +389,183 @@ slanted斜体： \textsl&#123;文本&#125;
 <p>我不太喜欢latex管理文献的方式，而且平常使用endnote管理文献，文献一多的话，latex就显得力不从心了。</p>
 <p>因此我喜欢直接在word里面打草稿，并且直接使用endnote引用文献，最后copy到texstudio里面排版。</p>
 <p>文献的上下标，可以直接使用公式格式：</p>
-<div class="hljs"><pre><code class="hljs latex">文本文本$^&#123;[1]&#125;$</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">文本文本$^&#123;[1]&#125;$</span><br></pre></td></tr></table></figure>
 <p>在文章的末尾直接使用：</p>
-<div class="hljs"><pre><code class="hljs latex">\setlength&#123;\parindent&#125;&#123;0em&#125;\textbf&#123;\Large \leftline&#123;参考文献&#125;&#125; \newline</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\setlength&#123;\parindent&#125;&#123;0em&#125;\textbf&#123;\Large \leftline&#123;参考文献&#125;&#125; \newline</span><br></pre></td></tr></table></figure>
 <p>来标注参考文献</p>
 
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/LaTeX/">LaTeX</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/07/02/L1%20Introduction%20to%20Cell%20Biology/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">L1 Introduction to Cell Biology</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/07/01/%E6%9C%80%E8%BF%91%E5%9C%A8%E5%81%9A%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B%E6%83%85/">
-                        <span class="hidden-mobile">最近在做的一些事情</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
+    </div>
 
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
+    
+    
+    
 
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
-
-
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/LaTeX/" rel="tag"># LaTeX</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/01/%E6%9C%80%E8%BF%91%E5%9C%A8%E5%81%9A%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B%E6%83%85/" rel="prev" title="最近在做的一些事情">
+      <i class="fa fa-chevron-left"></i> 最近在做的一些事情
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/02/L1%20Introduction%20to%20Cell%20Biology/" rel="next" title="L1 Introduction to Cell Biology">
+      L1 Introduction to Cell Biology <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一-文档的设置"><span class="nav-number">1.</span> <span class="nav-text"> 一、文档的设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#中文支持-ctex宏包的安装和使用"><span class="nav-number">1.1.</span> <span class="nav-text"> 中文支持 - ctex宏包的安装和使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#document-classes"><span class="nav-number">1.2.</span> <span class="nav-text"> Document Classes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-文档类的相关设定"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 1. 文档类的相关设定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-文档类的选项参数"><span class="nav-number">1.2.2.</span> <span class="nav-text"> 2. 文档类的选项参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#宏包相关的设定"><span class="nav-number">1.3.</span> <span class="nav-text"> 宏包相关的设定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-ctex宏包的一些特殊设定"><span class="nav-number">1.3.1.</span> <span class="nav-text"> 1. ctex宏包的一些特殊设定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章的导言区"><span class="nav-number">1.4.</span> <span class="nav-text"> 文章的导言区</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-文档的排版与输入"><span class="nav-number">2.</span> <span class="nav-text"> 二、文档的排版与输入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#摘要"><span class="nav-number">2.1.</span> <span class="nav-text"> 摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#章节-段落与章"><span class="nav-number">2.2.</span> <span class="nav-text"> 章节、段落与章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-默认格式"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 1. 默认格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-自定义格式调整"><span class="nav-number">2.2.2.</span> <span class="nav-text"> 2. 自定义格式调整</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#换行与首行缩进"><span class="nav-number">2.3.</span> <span class="nav-text"> 换行与首行缩进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表"><span class="nav-number">2.4.</span> <span class="nav-text"> 列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分割线"><span class="nav-number">2.5.</span> <span class="nav-text"> 分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本对齐"><span class="nav-number">2.6.</span> <span class="nav-text"> 文本对齐</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-一行对齐"><span class="nav-number">2.6.1.</span> <span class="nav-text"> 1. 一行对齐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-多行对齐"><span class="nav-number">2.6.2.</span> <span class="nav-text"> 2. 多行对齐</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字体-格式及大小"><span class="nav-number">2.7.</span> <span class="nav-text"> 字体、格式及大小</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-文本大小"><span class="nav-number">2.7.1.</span> <span class="nav-text"> 1. 文本大小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-文本格式"><span class="nav-number">2.7.2.</span> <span class="nav-text"> 2. 文本格式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字体颜色"><span class="nav-number">2.7.2.1.</span> <span class="nav-text"> 字体颜色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文字格式"><span class="nav-number">2.7.2.2.</span> <span class="nav-text"> 文字格式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上下标与引用文献"><span class="nav-number">2.8.</span> <span class="nav-text"> 上下标与引用文献</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-正常地引用文献的方法"><span class="nav-number">2.8.1.</span> <span class="nav-text"> 1. 正常地引用文献的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-结合endnote使用文献的方法"><span class="nav-number">2.8.2.</span> <span class="nav-text"> 2. 结合endnote使用文献的方法</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">187</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
+        
 
-    
 
-    
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
-  
-</footer>
-
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
-
-<!-- Plugins -->
-
 
   
-    <script  src="/js/lazyload.js" ></script>
-  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
+<script src="/js/schemes/muse.js"></script>
 
 
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
-      }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "LaTeX基本操作 - 文档格式、基本输入与排版操作&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
+<script src="/js/next-boot.js"></script>
 
 
 
 
-
-  
-
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
   
 
 
@@ -982,20 +577,14 @@ slanted斜体： \textsl&#123;文本&#125;
 
 
 
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
 
 
 
 
 
+  
 
+  
 
 </body>
-
-
 </html>

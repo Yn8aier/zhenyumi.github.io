@@ -1,271 +1,256 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="后面几章越来越难懂了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L23 Cellular motility">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/08/03/L23%20Cellular%20motility/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="后面几章越来越难懂了">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529162602483.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529162644332.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529163500820.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529163630885.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529163649797.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529163707423.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164052787.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164204506.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164423334.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164604013.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164616777.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164629436.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164737246.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529165645475.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529165707620.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529165747640.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529165827020.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170006087.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170122834.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170138343.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170342984.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170417126.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200728154956414.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170625373.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170949145.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170646045.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529171016208.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172022555.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172045115.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172238163.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172419417.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172436985.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172625989.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172912331.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529173104962.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529173132425.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529173358242.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174028741.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174142138.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174215539.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174352915.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174438968.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174632249.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174647094.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174830592.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174850440.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174953289.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175015219.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175207469.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175212658.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175318820.png">
+<meta property="article:published_time" content="2020-08-03T11:59:00.000Z">
+<meta property="article:modified_time" content="2020-08-03T11:59:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Cell Biology">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529162602483.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/08/03/L23%20Cellular%20motility/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>L23 Cellular motility | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>L23 Cellular motility - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_02.png') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-08-03 19:59">
-      2020年8月3日 晚上
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">兴趣使然的记事网站</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      5.7k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      29
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/03/L23%20Cellular%20motility/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          L23 Cellular motility
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-03 19:59:00" itemprop="dateCreated datePublished" datetime="2020-08-03T19:59:00+08:00">2020-08-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：3 个月前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-muscle-contraction"><span class="post-toc-text"> 一、Muscle contraction</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#myosins-actin-based-motor-proteins"><span class="post-toc-text"> Myosins: actin-based motor proteins</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#muscle-contraction"><span class="post-toc-text"> Muscle contraction</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-structure-of-myosin-ii-muscle-myosin"><span class="post-toc-text"> 1. Structure of myosin II: muscle myosin</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-myosin-ii-are-arranged-in-a-bipolar-manner-in-skeletal-muscle"><span class="post-toc-text"> 2. Myosin II are arranged in a bipolar manner in skeletal muscle</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-myosin-head-drives-actin-movement"><span class="post-toc-text"> 3. Myosin head drives actin movement</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#how-a-protein-can-walk-in-one-direction"><span class="post-toc-text"> How a protein can walk in one direction?</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#atp-hydrolysis-couples-myosin-conformation-change-to-cause-movement-along-actin-filaments"><span class="post-toc-text"> ATP hydrolysis couples myosin conformation change to cause movement along actin filaments</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#forces-generation-by-myosin-head-measured-by-optical-trap"><span class="post-toc-text"> Forces generation by myosin head measured by optical trap</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#muscle-cells"><span class="post-toc-text"> Muscle cells</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-sarcomeres"><span class="post-toc-text"> 1. Sarcomeres</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-organization-of-accessory-proteins-in-a-sarcomere"><span class="post-toc-text"> 2. Organization of accessory proteins in a sarcomere</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#titin-provides-muscle-with-its-elasticity"><span class="post-toc-text"> Titin provides muscle with its elasticity</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#t-tubules"><span class="post-toc-text"> T Tubules</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#calcium"><span class="post-toc-text"> Calcium</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#troponin-and-tropomyosin"><span class="post-toc-text"> troponin and tropomyosin</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#muscle-contraction-is-additionally-regulated-by-myosin-ii-phosphorylation-eg-smooth-muscle-contraction"><span class="post-toc-text"> Muscle contraction is additionally regulated by myosin II phosphorylation (e.g. smooth muscle contraction)</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#heart-muscle-contraction"><span class="post-toc-text"> Heart muscle contraction</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-actin-and-myosin-in-non-muscle-cells"><span class="post-toc-text"> 1. Actin and myosin in non-muscle cells</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-whole-cell-movement-cell-crawling"><span class="post-toc-text"> 二、Whole-cell movement: cell crawling</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cell-migration-crawling"><span class="post-toc-text"> Cell migration (crawling)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-protrusion-and-cell-substratum-adhesion-at-the-leading-edge"><span class="post-toc-text"> 1. Protrusion and cell-substratum adhesion at the leading edge</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#membrane-blebbing"><span class="post-toc-text"> Membrane blebbing</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-migratory-fish-epithelial-keratocytes"><span class="post-toc-text"> 1. Migratory fish epithelial keratocytes</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-actin-filament-nucleation-and-web-formation-in-lamellipodia"><span class="post-toc-text"> 2. Actin filament nucleation and web formation in lamellipodia</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#formation-of-lamellipodia"><span class="post-toc-text"> Formation of lamellipodia</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#rho-family-small-gtpases-regulate-cell-polarity-and-migration"><span class="post-toc-text"> Rho family small GTPases regulate cell polarity and migration</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#neutrophil-in-chemotaxis-趋化作用趋化现象趋药性"><span class="post-toc-text"> Neutrophil in chemotaxis (趋化作用,趋化现象,趋药性)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-coordinates-whole-cell-polarization-and-locomotion-through-communication-among-cytoskeletal-elements"><span class="post-toc-text"> 1. Coordinates whole-cell polarization and locomotion through communication among cytoskeletal elements</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-microtubule-motor-proteins"><span class="post-toc-text"> 三、Microtubule motor proteins</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#studying-microtubule"><span class="post-toc-text"> Studying microtubule</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#microtubule-motor-proteins"><span class="post-toc-text"> Microtubule motor proteins</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-kinesins"><span class="post-toc-text"> 1. Kinesins</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#mechanistic-understanding-of-kinesin-function"><span class="post-toc-text"> Mechanistic understanding of kinesin function</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-dynein"><span class="post-toc-text"> 2. Dynein</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#mechanistic-understanding-of-dynein-function"><span class="post-toc-text"> Mechanistic understanding of dynein function</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#dynein-and-dynactin"><span class="post-toc-text"> Dynein and dynactin</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#microtubules-and-motors-move-organelles-and-vesicles"><span class="post-toc-text"> Microtubules and Motors Move Organelles and Vesicles</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四-flagella-and-cilia"><span class="post-toc-text"> 四、Flagella and cilia</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#basal-bodies-microtubule-assembly-sites-for-cilia-and-flagella"><span class="post-toc-text"> Basal bodies: microtubule assembly sites for cilia and flagella</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ciliary-dynein"><span class="post-toc-text"> Ciliary dynein</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cilia-and-flagella-similar-components-different-action"><span class="post-toc-text"> Cilia and flagella: similar components, different action</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#flagella-bending"><span class="post-toc-text"> Flagella bending</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#primary-cilia"><span class="post-toc-text"> Primary cilia</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#genetic-defects-in-dynein-and-kinesin-linked-to-severe-diseases"><span class="post-toc-text"> Genetic defects in dynein and kinesin linked to severe diseases</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五-vesicleorganelle-transport"><span class="post-toc-text"> 五、Vesicle&#x2F;organelle transport</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#non-muscle-myosin-eg-myosin-v-powered-vesicleorganelle-transport"><span class="post-toc-text"> Non-muscle myosin (e.g. myosin V) powered vesicle&#x2F;organelle transport</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#regulated-melanosome-movements-in-fish-pigment-cells"><span class="post-toc-text"> Regulated melanosome movements in fish pigment cells</span></a></li></ol></li></ol>
-
-              <h1 id="一-muscle-contraction"><a class="markdownIt-Anchor" href="#一-muscle-contraction"></a> 一、Muscle contraction</h1>
+        <h1 id="一-muscle-contraction"><a class="markdownIt-Anchor" href="#一-muscle-contraction"></a> 一、Muscle contraction</h1>
 <h2 id="myosins-actin-based-motor-proteins"><a class="markdownIt-Anchor" href="#myosins-actin-based-motor-proteins"></a> Myosins: actin-based motor proteins</h2>
 <blockquote>
 <p>Actin-Based Motor Proteins Are Members of the Myosin Superfamily</p>
@@ -275,10 +260,10 @@
 <li>Each myosin head binds and hydrolyzes <strong>ATP</strong>, using the energy of ATP hydrolysis to walk toward the plus end of an actin filament</li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529162602483.png" srcset="/img/loading.gif" alt="image-20200529162602483" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529162602483.png" alt="image-20200529162602483" /></p>
 <p>A large family of motor proteins that can move along actin filaments, with ATP hydrolysis activity, &gt; 40 members.</p>
 <p>Myosins generate changes in cell shape and transport vesicles and organelles</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529162644332.png" srcset="/img/loading.gif" alt="image-20200529162644332" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529162644332.png" alt="image-20200529162644332" style="zoom: 33%;" />
 <h2 id="muscle-contraction"><a class="markdownIt-Anchor" href="#muscle-contraction"></a> Muscle contraction</h2>
 <h3 id="1-structure-of-myosin-ii-muscle-myosin"><a class="markdownIt-Anchor" href="#1-structure-of-myosin-ii-muscle-myosin"></a> 1. Structure of myosin II: muscle myosin</h3>
 <p>Two subfamilies of ATP-binding motor proteins</p>
@@ -286,7 +271,7 @@
 <li><strong>Myosin-I</strong> have one head and one tail</li>
 <li><strong>myosin-II</strong> (in muscle cells) are two-headed</li>
 </ul>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529163500820.png" srcset="/img/loading.gif" alt="image-20200529163500820" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529163500820.png" alt="image-20200529163500820" /></p>
 <ul>
 <li>2 heavy chains (abt. 2000 amino acids long)</li>
 <li>2 essential light chains</li>
@@ -296,24 +281,24 @@
 <li>Tail: intertwining of two tail helices</li>
 </ul>
 <h3 id="2-myosin-ii-are-arranged-in-a-bipolar-manner-in-skeletal-muscle"><a class="markdownIt-Anchor" href="#2-myosin-ii-are-arranged-in-a-bipolar-manner-in-skeletal-muscle"></a> 2. Myosin II are arranged in a bipolar manner in skeletal muscle</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529163630885.png" srcset="/img/loading.gif" alt="image-20200529163630885" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529163630885.png" alt="image-20200529163630885" /></p>
 <p>The <strong>myosin II</strong> bipolar thick filament in muscles.</p>
 <ul>
 <li>(A) Electron micrograph of a <strong>myosin II</strong> thick filament isolated from frog muscle. Note: the central bare zone, which is free of head domains.</li>
 <li>(B) Schematic diagram, not drawn to scale. The myosin II molecules aggregate by means of their tail regions, with their heads projecting to the outside of the filament. The bare zone in the center of the filament consists entirely of myosin II tails.</li>
 </ul>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529163649797.png" srcset="/img/loading.gif" alt="image-20200529163649797" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529163649797.png" alt="image-20200529163649797" /></p>
 <h3 id="3-myosin-head-drives-actin-movement"><a class="markdownIt-Anchor" href="#3-myosin-head-drives-actin-movement"></a> 3. Myosin head drives actin movement</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529163707423.png" srcset="/img/loading.gif" alt="image-20200529163707423" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529163707423.png" alt="image-20200529163707423" /></p>
 <p>In vitro motility assay</p>
 <ul>
 <li>purified myosin heads were attached to a glass slide.</li>
 <li><u>Phalloidin-labeled</u>（鬼笔环肽标记） actin filaments were added and allowed to bind to the myosin heads.</li>
 <li>When ATP is added, the actin filaments began to glide along the surface, owing to the many individual steps taken by each of the dozens of myosin heads bound to each filament.</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164052787.png" srcset="/img/loading.gif" alt="image-20200529164052787" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164052787.png" alt="image-20200529164052787" style="zoom:50%;" />
 <h4 id="how-a-protein-can-walk-in-one-direction"><a class="markdownIt-Anchor" href="#how-a-protein-can-walk-in-one-direction"></a> How a protein can walk in one direction?</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164204506.png" srcset="/img/loading.gif" alt="image-20200529164204506" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164204506.png" alt="image-20200529164204506" /></p>
 <p>An <strong>allosteric motor protein</strong> binds to ATP and changes different conformations includes a step driven by ATP hydrolysis of a bound ATP molecule, creating a “unidirectional ratchet” that makes the entire cycle essentially irreversible.</p>
 <p>By repeated cycles, the protein therefore moves continuously to the right along uni-direction.</p>
 <h4 id="atp-hydrolysis-couples-myosin-conformation-change-to-cause-movement-along-actin-filaments"><a class="markdownIt-Anchor" href="#atp-hydrolysis-couples-myosin-conformation-change-to-cause-movement-along-actin-filaments"></a> ATP hydrolysis couples myosin conformation change to cause movement along actin filaments</h4>
@@ -326,7 +311,7 @@
 </ul>
 <p>The full mechanochemical cycle of <strong>nucleotide binding</strong>, <strong>nucleotide hydrolysis</strong>, and <strong>phosphate release</strong> (which causes the “<strong>power stroke</strong>”) produces a single step of movement</p>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164423334.png" srcset="/img/loading.gif" alt="image-20200529164423334" style="zoom: 35%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164423334.png" alt="image-20200529164423334" style="zoom: 35%;" />
 <blockquote>
 <p>Sliding of Myosin II Along Actin Filaments Causes Muscles to Contract</p>
 <p>In vertebrates, running, walking, swimming, and flying all depend on the rapid contraction of skeletal muscle on its scaffolding of bone, while involuntary movements such as <strong>heart pumping</strong> and <strong>gut peristalsis（蠕动）</strong> depend on the contraction of <strong>cardiac muscle</strong> and <strong>smooth muscle</strong>, respectively</p>
@@ -363,7 +348,7 @@
 <blockquote>
 <p>At low ATP concentrations, the interval between the force-producing step and the binding of the next ATP is long enough that single steps can be observed</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164604013.png" srcset="/img/loading.gif" alt="image-20200529164604013" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164604013.png" alt="image-20200529164604013" /></p>
 <h2 id="muscle-cells"><a class="markdownIt-Anchor" href="#muscle-cells"></a> Muscle cells</h2>
 <blockquote>
 <p>The large muscle cell retains the many nuclei of the contributing cells. These nuclei lie just beneath the plasma membrane</p>
@@ -375,8 +360,8 @@
 <li>It consists of a long, repeated chain of tiny contractile units— called <strong>sarcomeres</strong>, each about <strong>2.2 μm long</strong>—which give the vertebrate myofibril its striated（有沟痕的,有线条的,有条纹的） appearance</li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164616777.png" srcset="/img/loading.gif" alt="" /></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164629436.png" srcset="/img/loading.gif" alt="image-20200529164629436" style="zoom:50%;" />
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164616777.png" alt="" /></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164629436.png" alt="image-20200529164629436" style="zoom:50%;" />
 <p>Myofibrils (1-2 µm in diameter) consist of sarcomeres (about 2 µm long), sarcomeres consist of actin and myosin II (contractile unit)</p>
 <p>Myosin filaments start to pull actin filaments; this results in muscle contraction</p>
 <p>These huge multinucleated cells form by the fusion of many muscle cell precursors, called myoblasts.</p>
@@ -392,13 +377,13 @@
 <p>Sarcomere shortening is caused by the <strong>myosin filaments</strong> sliding past the <strong>actin thin filaments</strong>, with no change in the length of either type of filament</p>
 <p>The rapid synchronized shortening of the thousands of sarcomeres lying end-to-end in each myofibril enables skeletal muscle to contract rapidly enough for running and flying, or for playing the piano.</p>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164737246.png" srcset="/img/loading.gif" alt="image-20200529164737246" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529164737246.png" alt="image-20200529164737246" style="zoom:50%;" />
 <ul>
 <li>The <strong>Z discs</strong>, at each end of the sarcomere, are attachment sites for the plus ends of actin filaments (thin filaments).</li>
 <li>The <strong>M line,</strong> or <strong>midline</strong>, is the location of proteins that link adjacent myosin II filaments (thick filaments) to one another</li>
 </ul>
 <p>Contraction: <u>actin and myosin filaments slide against each other without shortening</u></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529165645475.png" srcset="/img/loading.gif" alt="image-20200529165645475" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529165645475.png" alt="image-20200529165645475" style="zoom:67%;" />
 <h3 id="2-organization-of-accessory-proteins-in-a-sarcomere"><a class="markdownIt-Anchor" href="#2-organization-of-accessory-proteins-in-a-sarcomere"></a> 2. Organization of accessory proteins in a sarcomere</h3>
 <blockquote>
 <p>Accessory proteins produce the remarkable uniformity in filament organization, length, and spacing in the sarcomere</p>
@@ -412,7 +397,7 @@
 </ul>
 <p>Although there is some slow exchange of actin subunits at both ends of the muscle thin filament, such that the components of the thin filament turn over with a half-life of several days, the actin filaments in <strong>sarcomeres</strong> are remarkably <u>stable</u> compared with those found in most other cell types, whose dynamic actin filaments turn over with half-lives of a few minutes or less</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529165707620.png" srcset="/img/loading.gif" alt="image-20200529165707620" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529165707620.png" alt="image-20200529165707620" /></p>
 <ul>
 <li><strong><font color="EE0000">Nebulin</font></strong>: provide scaffold and structural support, molecular ruler</li>
 <li><strong><font color="EE0000">Titin</font></strong>: a molecular spring</li>
@@ -427,10 +412,10 @@
 <li>In C. elegans, whose sarcomeres are longer than those in vertebrates, <strong>titin</strong> is longer as well, suggesting that it serves  also as a <strong>molecular ruler</strong>, determining in this case the overall length of each sarcomere.</li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529165747640.png" srcset="/img/loading.gif" alt="image-20200529165747640" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529165747640.png" alt="image-20200529165747640" /></p>
 <h4 id="t-tubules"><a class="markdownIt-Anchor" href="#t-tubules"></a> T Tubules</h4>
 <p>T tubules (invagination from plasma membrane) <u>relay the action potential</u> (signal to contract) to the <strong>sarcoplasmic reticulum (SR),</strong> to all <u>myofibrils of the cell</u> (Lecture 8)</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529165827020.png" srcset="/img/loading.gif" alt="image-20200529165827020" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529165827020.png" alt="image-20200529165827020" /></p>
 <p>T tubules are extensions of the cell membrane that penetrate into the center of skeletal and cardiac muscle cells.</p>
 <ol>
 <li>The signal from the nerve triggers an action potential in the muscle cell plasma membrane, and spreads swiftly into T tubules.</li>
@@ -447,7 +432,7 @@
 <p>Thus, muscle contraction depends on two processes that consume enormous amounts of ATP: filament sliding, driven by the ATPase of the myosin motor domain, and Ca2+ pumping, driven by the Ca2+ pump.</p>
 </blockquote>
 <p>Calcium triggers contraction of actin and myosin filaments</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170006087.png" srcset="/img/loading.gif" alt="image-20200529170006087" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170006087.png" alt="image-20200529170006087" /></p>
 <p>A sudden rise in cytosolic Ca2+ concentration initiates<br />
 muscle contraction</p>
 <ul>
@@ -465,7 +450,7 @@ muscle contraction</p>
 </ul>
 <p><strong>Troponin C</strong> is closely related to the ubiquitous Ca2±binding protein <strong><font color="EE0000">calmodulin</font></strong> （钙调蛋白）</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170122834.png" srcset="/img/loading.gif" alt="image-20200529170122834" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170122834.png" alt="image-20200529170122834" /></p>
 <ul>
 <li>Troponin complex: T, I, and C
 <ul>
@@ -473,7 +458,7 @@ muscle contraction</p>
 </ul>
 </li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170138343.png" srcset="/img/loading.gif" alt="image-20200529170138343" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170138343.png" alt="image-20200529170138343" style="zoom: 33%;" />
 <p>Resting muscle (-Ca2+):</p>
 <ul>
 <li>The troponin I–T complex pulls the tropomyosin out of its normal binding groove to block binding of myosin heads (no force generating action)</li>
@@ -498,7 +483,7 @@ muscle contraction</p>
 </ul>
 <p>Rapid activation of contraction is not important in smooth muscle: its <strong>myosin II</strong> hydrolyzes ATP about 10 times more slowly than skeletal muscle myosin, producing <u>a slow cycle of myosin conformational changes</u> that results in slow contraction</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170342984.png" srcset="/img/loading.gif" alt="image-20200529170342984" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170342984.png" alt="image-20200529170342984" /></p>
 <ul>
 <li>Upon muscle stimulation by activation of cell-surface receptors, Ca2+ released into the cytoplasm from the <strong>sarcoplasmic reticulum (SR)</strong> binds to calmodulin.</li>
 <li><strong>Ca2±bound calmodulin</strong> then binds <strong>myosin light-chain kinase (MLCK)</strong>, which phosphorylates myosin light chain, stimulating myosin activity.</li>
@@ -508,7 +493,7 @@ muscle contraction</p>
 <p>Heart Muscle Is a Precisely Engineered Machine</p>
 <p>Heart cells express several specific isoforms of <strong>cardiac muscle myosin</strong> and <strong>cardiac muscle actin</strong>.</p>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170417126.png" srcset="/img/loading.gif" alt="image-20200529170417126" style="zoom:33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170417126.png" alt="image-20200529170417126" style="zoom:33%;" />
 <ul>
 <li>Heart cells express several specific isoforms of cardiac muscle myosin and cardiac muscle actin.</li>
 <li>Even subtle changes in these cardiac-specific contractile proteins—changes that would not cause any noticeable consequences in other tissues—can cause serious heart disease: familial hypertrophic cardiomyopathy（家族性肥厚性心肌病）, dilated cardiomyopathy（扩张型心肌病）</li>
@@ -523,13 +508,13 @@ muscle contraction</p>
 </ul>
 <p>All of the myosins except one move toward the plus end of an actin filament, although they do so <u>at different speeds</u>. The exception is <strong><font color="EE0000">myosin VI</font></strong>, which moves toward the <strong>minus end</strong></p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200728154956414.png" srcset="/img/loading.gif" alt="image-20200728154956414" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200728154956414.png" alt="image-20200728154956414" /></p>
 <blockquote>
 <p><strong><font color="EE0000">myosin V</font></strong> moves continuously, or <em>processively</em>, along actin filaments without letting go</p>
 <p><strong>Myosin V</strong> motors carry a wide range of cargoes— including <strong>mRNA</strong>, <strong>endoplasmic reticulum</strong>, and <strong>secretory vesicles</strong>—along the actin cables and into the bud.</p>
 <p>In addition, <strong>myosin V</strong> mediates the <u>correct partitioning</u> of organelles such as <strong>peroxisomes</strong> and <strong>mitochondria</strong> between mother and daughter cells</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170625373.png" srcset="/img/loading.gif" alt="image-20200529170625373" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170625373.png" alt="image-20200529170625373" /></p>
 <p>2 cytoskeletal isoforms in all non-muscle cells: β-, γ- actin</p>
 <p>Non-muscle contractile bundles are regulated by myosin phosphorylation rather than the troponin mechanism.</p>
 <p>These contractile bundles function to provide mechanical support to cells (Lecture 24, 25)</p>
@@ -544,7 +529,7 @@ muscle contraction</p>
 <li><strong>traction（牵引；牵引力）</strong>, in which the bulk of the trailing cytoplasm is drawn forward</li>
 </ol>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170949145.png" srcset="/img/loading.gif" alt="image-20200529170949145" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170949145.png" alt="image-20200529170949145" style="zoom:50%;" />
 <p>Focal adhesions, attachment</p>
 <ul>
 <li>Extension (Lamellipodium, Filopodia)</li>
@@ -558,7 +543,7 @@ muscle contraction</p>
 <p>Actin Polymerization Drives Plasma Membrane Protrusion</p>
 <p>Different cell types generate different types of <strong>protrusive structures</strong>, including <strong>filopodia（丝状伪足）</strong> (also known as <strong>microspikes（微刺）</strong>) and <strong>lamellipodia（板状伪足）</strong>. These are filled with <u>dense cores of filamentous actin</u></p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170646045.png" srcset="/img/loading.gif" alt="image-20200529170646045" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529170646045.png" alt="image-20200529170646045" /></p>
 <ul>
 <li>Actin polymerization at the cell front</li>
 <li>Actin retrograde flow in the absence of cell-substratum adhesion</li>
@@ -571,7 +556,7 @@ muscle contraction</p>
 <p>Bleb formation also depends on <strong>hydrostatic pressure（静水压力）</strong> within the cell, which is generated by the contraction of actin and myosin assemblies. Once blebs have extended, actin filaments reassemble on the bleb membrane to form a new actin cortex</p>
 <p>Recruitment of <strong>myosin II</strong> and contraction of actin and myosin can then power retraction of membrane blebs. Alternatively, extension of new blebs  from old ones can drive cell migration.</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529171016208.png" srcset="/img/loading.gif" alt="image-20200529171016208" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529171016208.png" alt="image-20200529171016208" /></p>
 <p>Membrane blebbing</p>
 <ul>
 <li>the plasma membrane detaches locally from the underlying actin cortex</li>
@@ -580,7 +565,7 @@ muscle contraction</p>
 <li>Once blebs have extended, actin filaments reassemble on the bleb membrane to form a new actin cortex.</li>
 </ul>
 <h3 id="1-migratory-fish-epithelial-keratocytes"><a class="markdownIt-Anchor" href="#1-migratory-fish-epithelial-keratocytes"></a> 1. Migratory fish epithelial keratocytes</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172022555.png" srcset="/img/loading.gif" alt="image-20200529172022555" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172022555.png" alt="image-20200529172022555" /></p>
 <p>Simple reproducible cell shapes and cytoskeletal structures enable integrated experimental and theoretical approaches</p>
 <p>Comprehensive whole-cell models incorporating details of molecular interaction with large-scale force balance and protein distribution and transport</p>
 <h3 id="2-actin-filament-nucleation-and-web-formation-in-lamellipodia"><a class="markdownIt-Anchor" href="#2-actin-filament-nucleation-and-web-formation-in-lamellipodia"></a> 2. Actin filament nucleation and web formation in lamellipodia</h3>
@@ -592,7 +577,7 @@ muscle contraction</p>
 <li><strong>Invadopodia</strong> contain many of the <u>same actin-regulatory components</u> as <strong>filopodia</strong> and <strong>lamellipodia</strong>, and they also <u>degrade the extracellular matrix</u>, which requires the delivery of vesicles containing <strong>matrix-degrading proteases</strong>.</li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172045115.png" srcset="/img/loading.gif" alt="image-20200529172045115" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172045115.png" alt="image-20200529172045115" /></p>
 <blockquote>
 <p>Lamellipodia Contain All of the Machinery Required for Cell Motility</p>
 <p>The actin filaments in the meshwork are mostly oriented with their <strong>plus ends</strong> facing <strong>forward</strong>. The <strong>minus ends</strong> are <u>frequently attached</u>  to the sides of <u>other actin filaments</u> by <strong><font color="EE0000">Arp 2/3 complexes</font></strong></p>
@@ -608,7 +593,7 @@ muscle contraction</p>
 <li>When these interactions are <u>disengaged</u>, polymerization pressure at the leading edge and <strong>myosin-dependent contraction</strong> cause the actin network to <strong>slip back</strong>, resulting in a phenomenon known as <strong>retrograde flow</strong></li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172238163.png" srcset="/img/loading.gif" alt="image-20200529172238163" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172238163.png" alt="image-20200529172238163" /></p>
 <p>Web of growing actin filament will push the leading edge of pseudopodium forward</p>
 <p><strong><font color="EE0000">Arps</font></strong> are starting points of new filaments, <strong><font color="EE0000">formins</font></strong> promote filament growing</p>
 <p>Delayed ATP hydrolysis provides mechanisms of efficient and unidirectional treadmilling process in lamellipodia</p>
@@ -640,10 +625,10 @@ muscle contraction</p>
 <li>At the same time, <strong>Rho-GTP</strong> activates a protein kinase that indirectly <u>inhibits the activity of <strong><font color="EE0000">cofilin</font></strong></u>, leading to actin filament stabilization.</li>
 </ul>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172419417.png" srcset="/img/loading.gif" alt="image-20200529172419417" style="zoom: 30%;" />
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172436985.png" srcset="/img/loading.gif" alt="image-20200529172436985" /></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172419417.png" alt="image-20200529172419417" style="zoom: 30%;" />
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172436985.png" alt="image-20200529172436985" /></p>
 <h2 id="neutrophil-in-chemotaxis-趋化作用趋化现象趋药性"><a class="markdownIt-Anchor" href="#neutrophil-in-chemotaxis-趋化作用趋化现象趋药性"></a> Neutrophil in chemotaxis (趋化作用,趋化现象,趋药性)</h2>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172625989.png" srcset="/img/loading.gif" alt="image-20200529172625989" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172625989.png" alt="image-20200529172625989" /></p>
 <p>TWO distinct signaling pathways contribute to the cell’s polarization.</p>
 <ul>
 <li>Binding of bacterial molecules to <strong>G-protein-coupled receptors</strong> on the neutrophil stimulates directed motility.</li>
@@ -663,7 +648,7 @@ muscle contraction</p>
 <p>Several effector proteins downstream of <strong>Rac</strong> and <strong>Rho</strong> modulate microtubule dynamics directly.</p>
 <p>Microtubule influence actin rearrangement and cell adhesion.</p>
 <h1 id="三-microtubule-motor-proteins"><a class="markdownIt-Anchor" href="#三-microtubule-motor-proteins"></a> 三、Microtubule motor proteins</h1>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172912331.png" srcset="/img/loading.gif" alt="image-20200529172912331" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529172912331.png" alt="image-20200529172912331" style="zoom:50%;" />
 <ul>
 <li>Both axons and dendrites are filled with <strong>microtubule bundles</strong> that are critical to both their structure and their function.</li>
 <li>In axons, all the microtubules are long and oriented in the <u>same direction</u>, with their minus end pointing back toward the cell body and their plus end pointing toward the axon terminals.</li>
@@ -692,7 +677,7 @@ muscle contraction</p>
 </li>
 </ul>
 <h2 id="microtubule-motor-proteins"><a class="markdownIt-Anchor" href="#microtubule-motor-proteins"></a> Microtubule motor proteins</h2>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529173104962.png" srcset="/img/loading.gif" alt="image-20200529173104962" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529173104962.png" alt="image-20200529173104962" /></p>
 <ul>
 <li><strong><font color="EE0000">Kinesins</font></strong> (anterograde/forward) and dyneins (retrograde/backward) are dimers that hydrolyze ATP and move They can move molecules and even whole organelles</li>
 </ul>
@@ -706,7 +691,7 @@ muscle contraction</p>
 </ul>
 <p>Some <strong>kinesin heavy chains</strong> are homodimers, and others are heterodimers.</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529173132425.png" srcset="/img/loading.gif" alt="image-20200529173132425" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529173132425.png" alt="image-20200529173132425" /></p>
 <ul>
 <li>Kinesins family proteins for anterograde movement (toward plus end)</li>
 </ul>
@@ -719,7 +704,7 @@ muscle contraction</p>
 <li>microtubule depolymerization</li>
 </ul>
 <h4 id="mechanistic-understanding-of-kinesin-function"><a class="markdownIt-Anchor" href="#mechanistic-understanding-of-kinesin-function"></a> Mechanistic understanding of kinesin function</h4>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529173358242.png" srcset="/img/loading.gif" alt="image-20200529173358242" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529173358242.png" alt="image-20200529173358242" style="zoom:50%;" />
 <ul>
 <li>Always associate with microtubules</li>
 <li>“ hand-over-hand” motion</li>
@@ -749,18 +734,18 @@ muscle contraction</p>
 </ol>
 <p>Dyneins are the <u>largest</u> of the known molecular motors, and they are also among the <u>fastest</u></p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174028741.png" srcset="/img/loading.gif" alt="image-20200529174028741" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174028741.png" alt="image-20200529174028741" /></p>
 <p>Dynein family proteins for retrograde movement (toward minus end)</p>
 <p>It is a very large multi-subunit protein.</p>
 <p>They are composed of one, two, or three heavy chains (that include the motor domain) and a large and variable number of associated intermediate, light-intermediate, and light chains.</p>
 <p>Two categories&gt;: cytoplasmic dynein and axonemal dynein (e.g. ciliary dynein)</p>
 <h4 id="mechanistic-understanding-of-dynein-function"><a class="markdownIt-Anchor" href="#mechanistic-understanding-of-dynein-function"></a> Mechanistic understanding of dynein function</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174142138.png" srcset="/img/loading.gif" alt="image-20200529174142138" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174142138.png" alt="image-20200529174142138" /></p>
 <ul>
 <li>Each power stroke generates a step of about ~ 8 nm towards its minus end.</li>
 </ul>
 <h4 id="dynein-and-dynactin"><a class="markdownIt-Anchor" href="#dynein-and-dynactin"></a> Dynein and dynactin</h4>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174215539.png" srcset="/img/loading.gif" alt="image-20200529174215539" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174215539.png" alt="image-20200529174215539" style="zoom:50%;" />
 <p>It itself can’t transport cargo directly, and needs dynactin to link to cargo to be transported</p>
 <h2 id="microtubules-and-motors-move-organelles-and-vesicles"><a class="markdownIt-Anchor" href="#microtubules-and-motors-move-organelles-and-vesicles"></a> Microtubules and Motors Move Organelles and Vesicles</h2>
 <blockquote>
@@ -778,7 +763,7 @@ muscle contraction</p>
 <p><strong>Dynein</strong> is required continuously for <strong>neuronal function</strong>, as mutations in a dynactin subunit or in the  tail region of cytoplasmic dynein lead to neuronal degeneration in humans and  mice.</p>
 </blockquote>
 <h1 id="四-flagella-and-cilia"><a class="markdownIt-Anchor" href="#四-flagella-and-cilia"></a> 四、Flagella and cilia</h1>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174352915.png" srcset="/img/loading.gif" alt="image-20200529174352915" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174352915.png" alt="image-20200529174352915" /></p>
 <p>Hair-like structures growing from cytoplasmic basal bodies</p>
 <p>Contain 9X2 + 2 microtubules connected by dynein arms They are natural oars</p>
 <p>9 doublet microtubules (1 of the 2 is complete) are arranged around a pair (two) of single microtubules (9+2 configuration)</p>
@@ -810,16 +795,16 @@ muscle contraction</p>
 <p>Molecules of <strong>axonemal dynein</strong> form bridges between the neighboring doublet  microtubules around the circumference of the axoneme</p>
 <p>However, the presence of other links between the microtubule doublets prevents this sliding, and the <strong>dynein force</strong> is instead converted into a <strong>bending motion</strong></p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174438968.png" srcset="/img/loading.gif" alt="image-20200529174438968" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174438968.png" alt="image-20200529174438968" /></p>
 <ul>
 <li>Firmly root eukaryotic cilia and flagella at the cell surface.</li>
 <li>Similar to centrioles</li>
 </ul>
 <p>EM of a section through 3 basal bodies:</p>
 <p>9 groups of fused triplet microtubules in a cartwheel configuration. 1 of the 3 fused microtubules is complete, that is the A microtubule</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174632249.png" srcset="/img/loading.gif" alt="image-20200529174632249" style="zoom:33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174632249.png" alt="image-20200529174632249" style="zoom:33%;" />
 <h2 id="ciliary-dynein"><a class="markdownIt-Anchor" href="#ciliary-dynein"></a> Ciliary dynein</h2>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174647094.png" srcset="/img/loading.gif" alt="image-20200529174647094" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174647094.png" alt="image-20200529174647094" /></p>
 <ul>
 <li>Cilia dynein is a large protein assembly (nearly 2 million daltons) composed of 9–12 polypeptide chains, the largest of which is the heavy chain of more than 500,000 daltons.</li>
 <li>The heavy chains form the major portion of the globular head and stem domains, and many of the smaller chains are clustered around the base of the stem.</li>
@@ -836,12 +821,12 @@ muscle contraction</p>
 <p>Both motile and nonmotile cilia are  generated during interphase at plasma-membrane-associated structures called  basal bodies that firmly root them at the cell surfaces</p>
 <p>Because  no protein translation occurs in cilia, construction of the axoneme requires <strong>intraflagellar transport (IFT)</strong>,</p>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174830592.png" srcset="/img/loading.gif" alt="image-20200529174830592" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174830592.png" alt="image-20200529174830592" style="zoom:67%;" />
 <ul>
 <li>Cilia and flagella are both built from microtubules and dynein but have totally different modes of motion</li>
 </ul>
 <h2 id="flagella-bending"><a class="markdownIt-Anchor" href="#flagella-bending"></a> Flagella bending</h2>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174850440.png" srcset="/img/loading.gif" alt="image-20200529174850440" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174850440.png" alt="image-20200529174850440" style="zoom: 33%;" />
 <ul>
 <li>The bending of axoneme due to fixed links between microtubule doublets</li>
 <li>The tail of dynein binds tightly to an A microtubule, while the large globular heads have an ATP-dependent binding site for a B microtubule.</li>
@@ -851,10 +836,10 @@ muscle contraction</p>
 <blockquote>
 <p>Primary cilia are found on the surface of almost all cell types, where they sense  and respond to the exterior environment, functions best understood in the context of <strong>smell</strong> and <strong>sight</strong></p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174953289.png" srcset="/img/loading.gif" alt="image-20200529174953289" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529174953289.png" alt="image-20200529174953289" /></p>
 <p>Many cells possess a shorter, nonmotile counterpart of cilia and flagella called the primary cilium</p>
 <p>Primary cilia can be viewed as specialized cellular compartments or organelles that perform a wide range of cellular functions, but share many structural features with motile cilia.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175015219.png" srcset="/img/loading.gif" alt="image-20200529175015219" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175015219.png" alt="image-20200529175015219" style="zoom:50%;" />
 <h2 id="genetic-defects-in-dynein-and-kinesin-linked-to-severe-diseases"><a class="markdownIt-Anchor" href="#genetic-defects-in-dynein-and-kinesin-linked-to-severe-diseases"></a> Genetic defects in dynein and kinesin linked to severe diseases</h2>
 <p>Kartagener’s syndrome (genetic defect in dynein)</p>
 <ul>
@@ -876,398 +861,189 @@ muscle contraction</p>
 </ul>
 <h1 id="五-vesicleorganelle-transport"><a class="markdownIt-Anchor" href="#五-vesicleorganelle-transport"></a> 五、Vesicle/organelle transport</h1>
 <h2 id="non-muscle-myosin-eg-myosin-v-powered-vesicleorganelle-transport"><a class="markdownIt-Anchor" href="#non-muscle-myosin-eg-myosin-v-powered-vesicleorganelle-transport"></a> Non-muscle myosin (e.g. myosin V) powered vesicle/organelle transport</h2>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175207469.png" srcset="/img/loading.gif" alt="image-20200529175207469" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175207469.png" alt="image-20200529175207469" /></p>
 <p>Actin and myosin perform a lot of functions in non-muscle cells, usually towards the “+” end, only myosin VI moves to the “-” end</p>
 <p>Myosin V motors carry a wide range of cargoes including mRNA, ER, and secretory vesicles along the actin cables.</p>
 <p>Myosin V mediates the partitioning of organelles such as peroxisomes and mitochondria between mother and daughter cells</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175212658.png" srcset="/img/loading.gif" alt="image-20200529175212658" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175212658.png" alt="image-20200529175212658" style="zoom: 50%;" />
 <h2 id="regulated-melanosome-movements-in-fish-pigment-cells"><a class="markdownIt-Anchor" href="#regulated-melanosome-movements-in-fish-pigment-cells"></a> Regulated melanosome movements in fish pigment cells</h2>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175318820.png" srcset="/img/loading.gif" alt="image-20200529175318820" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175318820.png" alt="image-20200529175318820" style="zoom: 33%;" />
 <ul>
 <li>It itself can’t transport cargo directly, and needs dynactin to link to cargo to be transported.</li>
 </ul>
 
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/Cell-Biology/">Cell Biology</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">L24 Cells to tissues cell-cell adhesion</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/08/01/05-R-%E7%8B%AC%E7%AB%8B%E6%80%A7%E3%80%81%E7%9B%B8%E5%85%B3%E6%80%A7%E3%80%81%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/">
-                        <span class="hidden-mobile">05. R <- 独立性、相关性、假设检验以及相关统计量</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
+    </div>
 
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
+    
+    
+    
 
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
-
-
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Cell-Biology/" rel="tag"># Cell Biology</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/01/05-R-%E7%8B%AC%E7%AB%8B%E6%80%A7%E3%80%81%E7%9B%B8%E5%85%B3%E6%80%A7%E3%80%81%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/" rel="prev" title="05. R <- 独立性、相关性、假设检验以及相关统计量">
+      <i class="fa fa-chevron-left"></i> 05. R <- 独立性、相关性、假设检验以及相关统计量
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/" rel="next" title="L24 Cells to tissues cell-cell adhesion">
+      L24 Cells to tissues cell-cell adhesion <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一-muscle-contraction"><span class="nav-number">1.</span> <span class="nav-text"> 一、Muscle contraction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#myosins-actin-based-motor-proteins"><span class="nav-number">1.1.</span> <span class="nav-text"> Myosins: actin-based motor proteins</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#muscle-contraction"><span class="nav-number">1.2.</span> <span class="nav-text"> Muscle contraction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-structure-of-myosin-ii-muscle-myosin"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 1. Structure of myosin II: muscle myosin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-myosin-ii-are-arranged-in-a-bipolar-manner-in-skeletal-muscle"><span class="nav-number">1.2.2.</span> <span class="nav-text"> 2. Myosin II are arranged in a bipolar manner in skeletal muscle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-myosin-head-drives-actin-movement"><span class="nav-number">1.2.3.</span> <span class="nav-text"> 3. Myosin head drives actin movement</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#how-a-protein-can-walk-in-one-direction"><span class="nav-number">1.2.3.1.</span> <span class="nav-text"> How a protein can walk in one direction?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#atp-hydrolysis-couples-myosin-conformation-change-to-cause-movement-along-actin-filaments"><span class="nav-number">1.2.3.2.</span> <span class="nav-text"> ATP hydrolysis couples myosin conformation change to cause movement along actin filaments</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#forces-generation-by-myosin-head-measured-by-optical-trap"><span class="nav-number">1.2.3.3.</span> <span class="nav-text"> Forces generation by myosin head measured by optical trap</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#muscle-cells"><span class="nav-number">1.3.</span> <span class="nav-text"> Muscle cells</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-sarcomeres"><span class="nav-number">1.3.1.</span> <span class="nav-text"> 1. Sarcomeres</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-organization-of-accessory-proteins-in-a-sarcomere"><span class="nav-number">1.3.2.</span> <span class="nav-text"> 2. Organization of accessory proteins in a sarcomere</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#titin-provides-muscle-with-its-elasticity"><span class="nav-number">1.3.2.1.</span> <span class="nav-text"> Titin provides muscle with its elasticity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#t-tubules"><span class="nav-number">1.3.2.2.</span> <span class="nav-text"> T Tubules</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#calcium"><span class="nav-number">1.3.2.3.</span> <span class="nav-text"> Calcium</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#troponin-and-tropomyosin"><span class="nav-number">1.3.2.4.</span> <span class="nav-text"> troponin and tropomyosin</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#muscle-contraction-is-additionally-regulated-by-myosin-ii-phosphorylation-eg-smooth-muscle-contraction"><span class="nav-number">1.3.2.5.</span> <span class="nav-text"> Muscle contraction is additionally regulated by myosin II phosphorylation (e.g. smooth muscle contraction)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#heart-muscle-contraction"><span class="nav-number">1.4.</span> <span class="nav-text"> Heart muscle contraction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-actin-and-myosin-in-non-muscle-cells"><span class="nav-number">1.4.1.</span> <span class="nav-text"> 1. Actin and myosin in non-muscle cells</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-whole-cell-movement-cell-crawling"><span class="nav-number">2.</span> <span class="nav-text"> 二、Whole-cell movement: cell crawling</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#cell-migration-crawling"><span class="nav-number">2.1.</span> <span class="nav-text"> Cell migration (crawling)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-protrusion-and-cell-substratum-adhesion-at-the-leading-edge"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 1. Protrusion and cell-substratum adhesion at the leading edge</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#membrane-blebbing"><span class="nav-number">2.2.</span> <span class="nav-text"> Membrane blebbing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-migratory-fish-epithelial-keratocytes"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 1. Migratory fish epithelial keratocytes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-actin-filament-nucleation-and-web-formation-in-lamellipodia"><span class="nav-number">2.2.2.</span> <span class="nav-text"> 2. Actin filament nucleation and web formation in lamellipodia</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#formation-of-lamellipodia"><span class="nav-number">2.3.</span> <span class="nav-text"> Formation of lamellipodia</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rho-family-small-gtpases-regulate-cell-polarity-and-migration"><span class="nav-number">2.4.</span> <span class="nav-text"> Rho family small GTPases regulate cell polarity and migration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#neutrophil-in-chemotaxis-趋化作用趋化现象趋药性"><span class="nav-number">2.5.</span> <span class="nav-text"> Neutrophil in chemotaxis (趋化作用,趋化现象,趋药性)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-coordinates-whole-cell-polarization-and-locomotion-through-communication-among-cytoskeletal-elements"><span class="nav-number">2.5.1.</span> <span class="nav-text"> 1. Coordinates whole-cell polarization and locomotion through communication among cytoskeletal elements</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三-microtubule-motor-proteins"><span class="nav-number">3.</span> <span class="nav-text"> 三、Microtubule motor proteins</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#studying-microtubule"><span class="nav-number">3.1.</span> <span class="nav-text"> Studying microtubule</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#microtubule-motor-proteins"><span class="nav-number">3.2.</span> <span class="nav-text"> Microtubule motor proteins</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-kinesins"><span class="nav-number">3.2.1.</span> <span class="nav-text"> 1. Kinesins</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mechanistic-understanding-of-kinesin-function"><span class="nav-number">3.2.1.1.</span> <span class="nav-text"> Mechanistic understanding of kinesin function</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-dynein"><span class="nav-number">3.2.2.</span> <span class="nav-text"> 2. Dynein</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mechanistic-understanding-of-dynein-function"><span class="nav-number">3.2.2.1.</span> <span class="nav-text"> Mechanistic understanding of dynein function</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dynein-and-dynactin"><span class="nav-number">3.2.2.2.</span> <span class="nav-text"> Dynein and dynactin</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#microtubules-and-motors-move-organelles-and-vesicles"><span class="nav-number">3.3.</span> <span class="nav-text"> Microtubules and Motors Move Organelles and Vesicles</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四-flagella-and-cilia"><span class="nav-number">4.</span> <span class="nav-text"> 四、Flagella and cilia</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#basal-bodies-microtubule-assembly-sites-for-cilia-and-flagella"><span class="nav-number">4.1.</span> <span class="nav-text"> Basal bodies: microtubule assembly sites for cilia and flagella</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ciliary-dynein"><span class="nav-number">4.2.</span> <span class="nav-text"> Ciliary dynein</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cilia-and-flagella-similar-components-different-action"><span class="nav-number">4.3.</span> <span class="nav-text"> Cilia and flagella: similar components, different action</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flagella-bending"><span class="nav-number">4.4.</span> <span class="nav-text"> Flagella bending</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#primary-cilia"><span class="nav-number">4.5.</span> <span class="nav-text"> Primary cilia</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#genetic-defects-in-dynein-and-kinesin-linked-to-severe-diseases"><span class="nav-number">4.6.</span> <span class="nav-text"> Genetic defects in dynein and kinesin linked to severe diseases</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五-vesicleorganelle-transport"><span class="nav-number">5.</span> <span class="nav-text"> 五、Vesicle&#x2F;organelle transport</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#non-muscle-myosin-eg-myosin-v-powered-vesicleorganelle-transport"><span class="nav-number">5.1.</span> <span class="nav-text"> Non-muscle myosin (e.g. myosin V) powered vesicle&#x2F;organelle transport</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#regulated-melanosome-movements-in-fish-pigment-cells"><span class="nav-number">5.2.</span> <span class="nav-text"> Regulated melanosome movements in fish pigment cells</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">187</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
+        
 
-    
 
-    
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
-  
-</footer>
-
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
-
-<!-- Plugins -->
-
 
   
-    <script  src="/js/lazyload.js" ></script>
-  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
+<script src="/js/schemes/muse.js"></script>
 
 
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
-      }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "L23 Cellular motility&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
+<script src="/js/next-boot.js"></script>
 
 
 
 
-
-  
-
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
   
 
 
@@ -1279,20 +1055,14 @@ muscle contraction</p>
 
 
 
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
 
 
 
 
 
+  
 
+  
 
 </body>
-
-
 </html>

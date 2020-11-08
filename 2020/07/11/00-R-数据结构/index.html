@@ -1,272 +1,216 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="基本数据类型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="00. R &lt;- 数据类型">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/07/11/00-R-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="基本数据类型">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810205317091.png">
+<meta property="article:published_time" content="2020-07-11T12:52:33.000Z">
+<meta property="article:modified_time" content="2020-08-10T12:52:33.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="R">
+<meta property="article:tag" content="Statistics">
+<meta property="article:tag" content="速查">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810205317091.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/07/11/00-R-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>00. R <- 数据类型 | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>00. R &lt;- 数据类型 - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200810-photo_2020-07-19_20-25-51.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-07-11 20:52">
-      2020年7月11日 晚上
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">兴趣使然的记事网站</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      3.3k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      13
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/11/00-R-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          00. R <- 数据类型
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-11 20:52:33" itemprop="dateCreated datePublished" datetime="2020-07-11T20:52:33+08:00">2020-07-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-10 20:52:33" itemprop="dateModified" datetime="2020-08-10T20:52:33+08:00">2020-08-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">软件使用总结</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：3 个月前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-向量"><span class="post-toc-text"> 一、向量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建"><span class="post-toc-text"> 创建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#索引"><span class="post-toc-text"> 索引</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-矩阵"><span class="post-toc-text"> 二、矩阵</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建-2"><span class="post-toc-text"> 创建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#索引-2"><span class="post-toc-text"> 索引</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-数组"><span class="post-toc-text"> 三、数组</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建-3"><span class="post-toc-text"> 创建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#索引-3"><span class="post-toc-text"> 索引</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四-数据框"><span class="post-toc-text"> 四、数据框</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建-4"><span class="post-toc-text"> 创建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#索引-4"><span class="post-toc-text"> 索引</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五-因子"><span class="post-toc-text"> 五、因子</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建-5"><span class="post-toc-text"> 创建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#因子影响数据分析"><span class="post-toc-text"> 因子影响数据分析</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#六-列表"><span class="post-toc-text"> 六、列表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建-6"><span class="post-toc-text"> 创建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#索引-5"><span class="post-toc-text"> 索引</span></a></li></ol></li></ol>
-
-              <p>R拥有许多用于存储数据的对象类型，包括标量、向量、矩阵、数组、数据框和列表。它们在存储数据的类型、创建方式、结构复杂度，以及用于定位和访问其中个别元素的标记等方面均有所不同。下图给出了这些数据结构的一个示意图。</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810205317091.png" srcset="/img/loading.gif" alt="image-20200810205317091" /></p>
+        <p>R拥有许多用于存储数据的对象类型，包括标量、向量、矩阵、数组、数据框和列表。它们在存储数据的类型、创建方式、结构复杂度，以及用于定位和访问其中个别元素的标记等方面均有所不同。下图给出了这些数据结构的一个示意图。</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810205317091.png" alt="image-20200810205317091" /></p>
 <p>在R中，<strong>对象</strong>（object）是指可以赋值给变量的任何事物，包括常量、数据结构、函数，甚至图形。对象都拥有某种<strong>模式</strong>，描述了此对象是如何存储的，以及某个<strong>类</strong>，像print这样的泛型函数表明如何处理此对象。</p>
 <p>与其他标准统计软件（如SAS、SPSS和Stata）中的数据集类似，<strong>数据框</strong>（data frame）是R中用于存储数据的一种结构：列表示变量，行表示观测。在同一个数据框中可以存储不同类型（如数值型、字符型）的变量。数据框将是你用来存储数据集的主要数据结构。</p>
 <p><strong>因子</strong>（factor）是名义型变量或有序型变量。</p>
@@ -274,39 +218,16 @@
 <p>向量是用于存储数值型、字符型或逻辑型数据的一维数组。执行组合功能的函数<code>c()</code>可用来创建向量。</p>
 <h2 id="创建"><a class="markdownIt-Anchor" href="#创建"></a> 创建</h2>
 <p>例：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; a &lt;- c(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">6</span>, -<span class="hljs-number">2</span>, <span class="hljs-number">4</span>) 
-&gt; b &lt;- c(<span class="hljs-string">"one"</span>, <span class="hljs-string">"two"</span>, <span class="hljs-string">"three"</span>) 
-&gt; c &lt;- c(<span class="hljs-literal">TRUE</span>, <span class="hljs-literal">TRUE</span>, <span class="hljs-literal">TRUE</span>, <span class="hljs-literal">FALSE</span>, <span class="hljs-literal">TRUE</span>, <span class="hljs-literal">FALSE</span>)
-&gt; a
-[<span class="hljs-number">1</span>]  <span class="hljs-number">1</span>  <span class="hljs-number">2</span>  <span class="hljs-number">5</span>  <span class="hljs-number">3</span>  <span class="hljs-number">6</span> -<span class="hljs-number">2</span>  <span class="hljs-number">4</span>
-&gt; b
-[<span class="hljs-number">1</span>] <span class="hljs-string">"one"</span>   <span class="hljs-string">"two"</span>   <span class="hljs-string">"three"</span>
-&gt; c
-[<span class="hljs-number">1</span>]  <span class="hljs-literal">TRUE</span>  <span class="hljs-literal">TRUE</span>  <span class="hljs-literal">TRUE</span> <span class="hljs-literal">FALSE</span>  <span class="hljs-literal">TRUE</span> <span class="hljs-literal">FALSE</span></code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; a &lt;- c(<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">6</span>, -<span class="number">2</span>, <span class="number">4</span>) </span><br><span class="line">&gt; b &lt;- c(<span class="string">"one"</span>, <span class="string">"two"</span>, <span class="string">"three"</span>) </span><br><span class="line">&gt; c &lt;- c(<span class="literal">TRUE</span>, <span class="literal">TRUE</span>, <span class="literal">TRUE</span>, <span class="literal">FALSE</span>, <span class="literal">TRUE</span>, <span class="literal">FALSE</span>)</span><br><span class="line">&gt; a</span><br><span class="line">[<span class="number">1</span>]  <span class="number">1</span>  <span class="number">2</span>  <span class="number">5</span>  <span class="number">3</span>  <span class="number">6</span> -<span class="number">2</span>  <span class="number">4</span></span><br><span class="line">&gt; b</span><br><span class="line">[<span class="number">1</span>] <span class="string">"one"</span>   <span class="string">"two"</span>   <span class="string">"three"</span></span><br><span class="line">&gt; c</span><br><span class="line">[<span class="number">1</span>]  <span class="literal">TRUE</span>  <span class="literal">TRUE</span>  <span class="literal">TRUE</span> <span class="literal">FALSE</span>  <span class="literal">TRUE</span> <span class="literal">FALSE</span></span><br></pre></td></tr></table></figure>
 <h2 id="索引"><a class="markdownIt-Anchor" href="#索引"></a> 索引</h2>
 <p>通过在方括号中给定元素所处位置的数值，我们可以访问向量中的元素。例如，<code>a[c(2, 4)]</code>用于访问向量<code>a</code>中的第二个和第四个元素。</p>
-<div class="hljs"><pre><code class="hljs R">&gt; a &lt;- c(<span class="hljs-string">"k"</span>, <span class="hljs-string">"j"</span>, <span class="hljs-string">"h"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"m"</span>) 
-&gt; a[<span class="hljs-number">3</span>] 
-[<span class="hljs-number">1</span>] <span class="hljs-string">"h"</span> 
-&gt; a[c(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>)] 
-[<span class="hljs-number">1</span>] <span class="hljs-string">"k"</span> <span class="hljs-string">"h"</span> <span class="hljs-string">"c"</span> 
-&gt; a[<span class="hljs-number">2</span>:<span class="hljs-number">6</span>] 
-[<span class="hljs-number">1</span>] <span class="hljs-string">"j"</span> <span class="hljs-string">"h"</span> <span class="hljs-string">"a"</span> <span class="hljs-string">"c"</span> <span class="hljs-string">"m"</span></code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; a &lt;- c(<span class="string">"k"</span>, <span class="string">"j"</span>, <span class="string">"h"</span>, <span class="string">"a"</span>, <span class="string">"c"</span>, <span class="string">"m"</span>) </span><br><span class="line">&gt; a[<span class="number">3</span>] </span><br><span class="line">[<span class="number">1</span>] <span class="string">"h"</span> </span><br><span class="line">&gt; a[c(<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>)] </span><br><span class="line">[<span class="number">1</span>] <span class="string">"k"</span> <span class="string">"h"</span> <span class="string">"c"</span> </span><br><span class="line">&gt; a[<span class="number">2</span>:<span class="number">6</span>] </span><br><span class="line">[<span class="number">1</span>] <span class="string">"j"</span> <span class="string">"h"</span> <span class="string">"a"</span> <span class="string">"c"</span> <span class="string">"m"</span></span><br></pre></td></tr></table></figure>
 <h1 id="二-矩阵"><a class="markdownIt-Anchor" href="#二-矩阵"></a> 二、矩阵</h1>
 <h2 id="创建-2"><a class="markdownIt-Anchor" href="#创建-2"></a> 创建</h2>
 <p>矩阵是一个二维数组，只是每个元素都拥有相同的模式（数值型、字符型或逻辑型）。可通过函数<code>matrix()</code>创建矩阵。一般使用格式为：</p>
-<div class="hljs"><pre><code class="hljs R">Object &lt;- matrix(vector, nrow=number_of_rows, ncol=number_of_columns, 
-                 byrow=logical_value, 
-                 dimnames=list(char_vector_rownames, char_vector_colnames))</code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Object &lt;- matrix(vector, nrow=number_of_rows, ncol=number_of_columns, </span><br><span class="line">                 byrow=logical_value, </span><br><span class="line">                 dimnames=list(char_vector_rownames, char_vector_colnames))</span><br></pre></td></tr></table></figure>
 <p>Usage:</p>
-<div class="hljs"><pre><code class="hljs R">matrix(data = <span class="hljs-literal">NA</span>, nrow = <span class="hljs-number">1</span>, ncol = <span class="hljs-number">1</span>, byrow = <span class="hljs-literal">FALSE</span>,
-       dimnames = <span class="hljs-literal">NULL</span>)
-
-as.matrix(x, <span class="hljs-keyword">...</span>)
-<span class="hljs-comment">## S3 method for class 'data.frame'</span>
-as.matrix(x, rownames.force = <span class="hljs-literal">NA</span>, <span class="hljs-keyword">...</span>)
-
-is.matrix(x)</code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">matrix(data = <span class="literal">NA</span>, nrow = <span class="number">1</span>, ncol = <span class="number">1</span>, byrow = <span class="literal">FALSE</span>,</span><br><span class="line">       dimnames = <span class="literal">NULL</span>)</span><br><span class="line"></span><br><span class="line">as.matrix(x, <span class="keyword">...</span>)</span><br><span class="line"><span class="comment">## S3 method for class 'data.frame'</span></span><br><span class="line">as.matrix(x, rownames.force = <span class="literal">NA</span>, <span class="keyword">...</span>)</span><br><span class="line"></span><br><span class="line">is.matrix(x)</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -342,58 +263,20 @@ is.matrix(x)</code></pre></div>
 </tbody>
 </table>
 <p>例1，创建一个5×4的矩阵：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; y &lt;- matrix(<span class="hljs-number">1</span>:<span class="hljs-number">20</span>, nrow=<span class="hljs-number">5</span>, ncol=<span class="hljs-number">4</span>)
-&gt; y
-     [,<span class="hljs-number">1</span>] [,<span class="hljs-number">2</span>] [,<span class="hljs-number">3</span>] [,<span class="hljs-number">4</span>]
-[<span class="hljs-number">1</span>,]    <span class="hljs-number">1</span>    <span class="hljs-number">6</span>   <span class="hljs-number">11</span>   <span class="hljs-number">16</span>
-[<span class="hljs-number">2</span>,]    <span class="hljs-number">2</span>    <span class="hljs-number">7</span>   <span class="hljs-number">12</span>   <span class="hljs-number">17</span>
-[<span class="hljs-number">3</span>,]    <span class="hljs-number">3</span>    <span class="hljs-number">8</span>   <span class="hljs-number">13</span>   <span class="hljs-number">18</span>
-[<span class="hljs-number">4</span>,]    <span class="hljs-number">4</span>    <span class="hljs-number">9</span>   <span class="hljs-number">14</span>   <span class="hljs-number">19</span>
-[<span class="hljs-number">5</span>,]    <span class="hljs-number">5</span>   <span class="hljs-number">10</span>   <span class="hljs-number">15</span>   <span class="hljs-number">20</span></code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; y &lt;- matrix(<span class="number">1</span>:<span class="number">20</span>, nrow=<span class="number">5</span>, ncol=<span class="number">4</span>)</span><br><span class="line">&gt; y</span><br><span class="line">     [,<span class="number">1</span>] [,<span class="number">2</span>] [,<span class="number">3</span>] [,<span class="number">4</span>]</span><br><span class="line">[<span class="number">1</span>,]    <span class="number">1</span>    <span class="number">6</span>   <span class="number">11</span>   <span class="number">16</span></span><br><span class="line">[<span class="number">2</span>,]    <span class="number">2</span>    <span class="number">7</span>   <span class="number">12</span>   <span class="number">17</span></span><br><span class="line">[<span class="number">3</span>,]    <span class="number">3</span>    <span class="number">8</span>   <span class="number">13</span>   <span class="number">18</span></span><br><span class="line">[<span class="number">4</span>,]    <span class="number">4</span>    <span class="number">9</span>   <span class="number">14</span>   <span class="number">19</span></span><br><span class="line">[<span class="number">5</span>,]    <span class="number">5</span>   <span class="number">10</span>   <span class="number">15</span>   <span class="number">20</span></span><br></pre></td></tr></table></figure>
 <p>例2，创建一个按行/列填充的2×2矩阵：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; cells &lt;- c(<span class="hljs-number">1</span>,<span class="hljs-number">26</span>,<span class="hljs-number">24</span>,<span class="hljs-number">68</span>) 
-&gt; rnames &lt;- c(<span class="hljs-string">"R1"</span>, <span class="hljs-string">"R2"</span>) 
-&gt; cnames &lt;- c(<span class="hljs-string">"C1"</span>, <span class="hljs-string">"C2"</span>) 
-
-<span class="hljs-comment"># 按行填充</span>
-&gt; mymatrix &lt;- matrix(cells, nrow=<span class="hljs-number">2</span>, ncol=<span class="hljs-number">2</span>, byrow=<span class="hljs-literal">TRUE</span>,
-                     dimnames=list(rnames, cnames))
-&gt; mymatrix
-   C1 C2
-R1  <span class="hljs-number">1</span> <span class="hljs-number">26</span>
-R2 <span class="hljs-number">24</span> <span class="hljs-number">68</span>
-
-<span class="hljs-comment"># 按列填充</span>
-&gt; mymatrix &lt;- matrix(cells, nrow=<span class="hljs-number">2</span>, ncol=<span class="hljs-number">2</span>, byrow=<span class="hljs-literal">FALSE</span>,
-                     dimnames=list(rnames, cnames))
-&gt; mymatrix
-   C1 C2
-R1  <span class="hljs-number">1</span> <span class="hljs-number">24</span>
-R2 <span class="hljs-number">26</span> <span class="hljs-number">68</span></code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&gt; cells &lt;- c(<span class="number">1</span>,<span class="number">26</span>,<span class="number">24</span>,<span class="number">68</span>) </span><br><span class="line">&gt; rnames &lt;- c(<span class="string">"R1"</span>, <span class="string">"R2"</span>) </span><br><span class="line">&gt; cnames &lt;- c(<span class="string">"C1"</span>, <span class="string">"C2"</span>) </span><br><span class="line"></span><br><span class="line"><span class="comment"># 按行填充</span></span><br><span class="line">&gt; mymatrix &lt;- matrix(cells, nrow=<span class="number">2</span>, ncol=<span class="number">2</span>, byrow=<span class="literal">TRUE</span>,</span><br><span class="line">                     dimnames=list(rnames, cnames))</span><br><span class="line">&gt; mymatrix</span><br><span class="line">   C1 C2</span><br><span class="line">R1  <span class="number">1</span> <span class="number">26</span></span><br><span class="line">R2 <span class="number">24</span> <span class="number">68</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 按列填充</span></span><br><span class="line">&gt; mymatrix &lt;- matrix(cells, nrow=<span class="number">2</span>, ncol=<span class="number">2</span>, byrow=<span class="literal">FALSE</span>,</span><br><span class="line">                     dimnames=list(rnames, cnames))</span><br><span class="line">&gt; mymatrix</span><br><span class="line">   C1 C2</span><br><span class="line">R1  <span class="number">1</span> <span class="number">24</span></span><br><span class="line">R2 <span class="number">26</span> <span class="number">68</span></span><br></pre></td></tr></table></figure>
 <h2 id="索引-2"><a class="markdownIt-Anchor" href="#索引-2"></a> 索引</h2>
 <p>可以使用下标和方括号来选择矩阵中的行、列或元素。<code>X[i,]</code>指矩阵X中的第<code>i</code>行，<code>X[,j]</code>指第<code>j</code>列，<code>X[i, j]</code>指第<em>i</em>行第<em>j</em> 个元素。选择多行或多列时，下标<code>i</code>和<code>j</code>可为数值型向量</p>
 <p>例：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; x &lt;- matrix(<span class="hljs-number">1</span>:<span class="hljs-number">10</span>, nrow=<span class="hljs-number">2</span>)
-&gt; x
-     [,<span class="hljs-number">1</span>] [,<span class="hljs-number">2</span>] [,<span class="hljs-number">3</span>] [,<span class="hljs-number">4</span>] [,<span class="hljs-number">5</span>]
-[<span class="hljs-number">1</span>,]    <span class="hljs-number">1</span>    <span class="hljs-number">3</span>    <span class="hljs-number">5</span>    <span class="hljs-number">7</span>    <span class="hljs-number">9</span>
-[<span class="hljs-number">2</span>,]    <span class="hljs-number">2</span>    <span class="hljs-number">4</span>    <span class="hljs-number">6</span>    <span class="hljs-number">8</span>   <span class="hljs-number">10</span>
-
-&gt; x[,<span class="hljs-number">2</span>]
-[<span class="hljs-number">1</span>] <span class="hljs-number">3</span> <span class="hljs-number">4</span>
-&gt; x[<span class="hljs-number">2</span>,]
-[<span class="hljs-number">1</span>]  <span class="hljs-number">2</span>  <span class="hljs-number">4</span>  <span class="hljs-number">6</span>  <span class="hljs-number">8</span> <span class="hljs-number">10</span>
-&gt; x[<span class="hljs-number">1</span>, c(<span class="hljs-number">2</span>,<span class="hljs-number">4</span>)]
-[<span class="hljs-number">1</span>] <span class="hljs-number">3</span> <span class="hljs-number">7</span></code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt; x &lt;- matrix(<span class="number">1</span>:<span class="number">10</span>, nrow=<span class="number">2</span>)</span><br><span class="line">&gt; x</span><br><span class="line">     [,<span class="number">1</span>] [,<span class="number">2</span>] [,<span class="number">3</span>] [,<span class="number">4</span>] [,<span class="number">5</span>]</span><br><span class="line">[<span class="number">1</span>,]    <span class="number">1</span>    <span class="number">3</span>    <span class="number">5</span>    <span class="number">7</span>    <span class="number">9</span></span><br><span class="line">[<span class="number">2</span>,]    <span class="number">2</span>    <span class="number">4</span>    <span class="number">6</span>    <span class="number">8</span>   <span class="number">10</span></span><br><span class="line"></span><br><span class="line">&gt; x[,<span class="number">2</span>]</span><br><span class="line">[<span class="number">1</span>] <span class="number">3</span> <span class="number">4</span></span><br><span class="line">&gt; x[<span class="number">2</span>,]</span><br><span class="line">[<span class="number">1</span>]  <span class="number">2</span>  <span class="number">4</span>  <span class="number">6</span>  <span class="number">8</span> <span class="number">10</span></span><br><span class="line">&gt; x[<span class="number">1</span>, c(<span class="number">2</span>,<span class="number">4</span>)]</span><br><span class="line">[<span class="number">1</span>] <span class="number">3</span> <span class="number">7</span></span><br></pre></td></tr></table></figure>
 <p>矩阵都是二维的，和向量类似，矩阵中也仅能包含一种数据类型。当维度超过2时，不妨使用数组</p>
 <h1 id="三-数组"><a class="markdownIt-Anchor" href="#三-数组"></a> 三、数组</h1>
 <h2 id="创建-3"><a class="markdownIt-Anchor" href="#创建-3"></a> 创建</h2>
 <p>数组（array）与矩阵类似，但是维度可以大于2。数组可通过<code>array()</code>函数创建，形式如下：</p>
-<div class="hljs"><pre><code class="hljs R">Object &lt;- array(vector, dimensions, dimnames)</code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object &lt;- array(vector, dimensions, dimnames)</span><br></pre></td></tr></table></figure>
 <p>Usage:</p>
-<div class="hljs"><pre><code class="hljs R">array(data = <span class="hljs-literal">NA</span>, dim = length(data), dimnames = <span class="hljs-literal">NULL</span>)
-as.array(x, <span class="hljs-keyword">...</span>)
-is.array(x)</code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array(data = <span class="literal">NA</span>, dim = length(data), dimnames = <span class="literal">NULL</span>)</span><br><span class="line">as.array(x, <span class="keyword">...</span>)</span><br><span class="line">is.array(x)</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -421,49 +304,16 @@ is.array(x)</code></pre></div>
 </tbody>
 </table>
 <p>例1，创建一个数组：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; dim1 &lt;- c(<span class="hljs-string">"A1"</span>, <span class="hljs-string">"A2"</span>)
-&gt; dim2 &lt;- c(<span class="hljs-string">"B1"</span>, <span class="hljs-string">"B2"</span>, <span class="hljs-string">"B3"</span>)
-&gt; dim3 &lt;- c(<span class="hljs-string">"C1"</span>, <span class="hljs-string">"C2"</span>, <span class="hljs-string">"C3"</span>, <span class="hljs-string">"C4"</span>)
-&gt; z &lt;- array(<span class="hljs-number">1</span>:<span class="hljs-number">24</span>, c(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>), dimnames=list(dim1, dim2, dim3))
-&gt; z
-, , C1
-
-   B1 B2 B3
-A1  <span class="hljs-number">1</span>  <span class="hljs-number">3</span>  <span class="hljs-number">5</span>
-A2  <span class="hljs-number">2</span>  <span class="hljs-number">4</span>  <span class="hljs-number">6</span>
-
-, , C2
-
-   B1 B2 B3
-A1  <span class="hljs-number">7</span>  <span class="hljs-number">9</span> <span class="hljs-number">11</span>
-A2  <span class="hljs-number">8</span> <span class="hljs-number">10</span> <span class="hljs-number">12</span>
-
-, , C3
-
-   B1 B2 B3
-A1 <span class="hljs-number">13</span> <span class="hljs-number">15</span> <span class="hljs-number">17</span>
-A2 <span class="hljs-number">14</span> <span class="hljs-number">16</span> <span class="hljs-number">18</span>
-
-, , C4
-
-   B1 B2 B3
-A1 <span class="hljs-number">19</span> <span class="hljs-number">21</span> <span class="hljs-number">23</span>
-A2 <span class="hljs-number">20</span> <span class="hljs-number">22</span> <span class="hljs-number">24</span></code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&gt; dim1 &lt;- c(<span class="string">"A1"</span>, <span class="string">"A2"</span>)</span><br><span class="line">&gt; dim2 &lt;- c(<span class="string">"B1"</span>, <span class="string">"B2"</span>, <span class="string">"B3"</span>)</span><br><span class="line">&gt; dim3 &lt;- c(<span class="string">"C1"</span>, <span class="string">"C2"</span>, <span class="string">"C3"</span>, <span class="string">"C4"</span>)</span><br><span class="line">&gt; z &lt;- array(<span class="number">1</span>:<span class="number">24</span>, c(<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>), dimnames=list(dim1, dim2, dim3))</span><br><span class="line">&gt; z</span><br><span class="line">, , C1</span><br><span class="line"></span><br><span class="line">   B1 B2 B3</span><br><span class="line">A1  <span class="number">1</span>  <span class="number">3</span>  <span class="number">5</span></span><br><span class="line">A2  <span class="number">2</span>  <span class="number">4</span>  <span class="number">6</span></span><br><span class="line"></span><br><span class="line">, , C2</span><br><span class="line"></span><br><span class="line">   B1 B2 B3</span><br><span class="line">A1  <span class="number">7</span>  <span class="number">9</span> <span class="number">11</span></span><br><span class="line">A2  <span class="number">8</span> <span class="number">10</span> <span class="number">12</span></span><br><span class="line"></span><br><span class="line">, , C3</span><br><span class="line"></span><br><span class="line">   B1 B2 B3</span><br><span class="line">A1 <span class="number">13</span> <span class="number">15</span> <span class="number">17</span></span><br><span class="line">A2 <span class="number">14</span> <span class="number">16</span> <span class="number">18</span></span><br><span class="line"></span><br><span class="line">, , C4</span><br><span class="line"></span><br><span class="line">   B1 B2 B3</span><br><span class="line">A1 <span class="number">19</span> <span class="number">21</span> <span class="number">23</span></span><br><span class="line">A2 <span class="number">20</span> <span class="number">22</span> <span class="number">24</span></span><br></pre></td></tr></table></figure>
 <h2 id="索引-3"><a class="markdownIt-Anchor" href="#索引-3"></a> 索引</h2>
 <p>数组的索引与矩阵类似，只不过扩展到了更高的维度，以此类推即可。</p>
 <h1 id="四-数据框"><a class="markdownIt-Anchor" href="#四-数据框"></a> 四、数据框</h1>
 <h2 id="创建-4"><a class="markdownIt-Anchor" href="#创建-4"></a> 创建</h2>
 <p>由于不同的列可以包含不同模式（数值型、字符型等）的数据，数据框的概念较矩阵来说更为一般。</p>
 <p>数据框可通过函数<code>data.frame()</code>创建：</p>
-<div class="hljs"><pre><code class="hljs R">Object &lt;- data.frame(col1, col2, col3,<span class="hljs-keyword">...</span>)</code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object &lt;- data.frame(col1, col2, col3,<span class="keyword">...</span>)</span><br></pre></td></tr></table></figure>
 <p>Usage:</p>
-<div class="hljs"><pre><code class="hljs R">data.frame(<span class="hljs-keyword">...</span>, row.names = <span class="hljs-literal">NULL</span>, 
-           check.rows = <span class="hljs-literal">FALSE</span>,
-           check.names = <span class="hljs-literal">TRUE</span>, 
-           fix.empty.names = <span class="hljs-literal">TRUE</span>,
-           stringsAsFactors = default.stringsAsFactors())
-
-default.stringsAsFactors() <span class="hljs-comment"># &lt;&lt; this is deprecated !</span></code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">data.frame(<span class="keyword">...</span>, row.names = <span class="literal">NULL</span>, </span><br><span class="line">           check.rows = <span class="literal">FALSE</span>,</span><br><span class="line">           check.names = <span class="literal">TRUE</span>, </span><br><span class="line">           fix.empty.names = <span class="literal">TRUE</span>,</span><br><span class="line">           stringsAsFactors = default.stringsAsFactors())</span><br><span class="line"></span><br><span class="line">default.stringsAsFactors() <span class="comment"># &lt;&lt; this is deprecated !</span></span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -500,48 +350,10 @@ default.stringsAsFactors() <span class="hljs-comment"># &lt;&lt; this is depreca
 </table>
 <p>每一列的名称可由函数<code>names()</code>指定</p>
 <p>例，创建一个数据框，并将第一列重命名：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; patientID &lt;- c(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
-&gt; age &lt;- c(<span class="hljs-number">25</span>, <span class="hljs-number">34</span>, <span class="hljs-number">28</span>, <span class="hljs-number">52</span>)
-&gt; diabetes &lt;- c(<span class="hljs-string">"Type1"</span>, <span class="hljs-string">"Type2"</span>, <span class="hljs-string">"Type1"</span>, <span class="hljs-string">"Type1"</span>)
-&gt; status &lt;- c(<span class="hljs-string">"Poor"</span>, <span class="hljs-string">"Improved"</span>, <span class="hljs-string">"Excellent"</span>, <span class="hljs-string">"Poor"</span>)
-
-<span class="hljs-comment"># 创建数据框</span>
-&gt; patientdata &lt;- data.frame(patientID, age, diabetes, status)
-&gt; patientdata
-  patientID age diabetes    status
-<span class="hljs-number">1</span>         <span class="hljs-number">1</span>  <span class="hljs-number">25</span>    Type1      Poor
-<span class="hljs-number">2</span>         <span class="hljs-number">2</span>  <span class="hljs-number">34</span>    Type2  Improved
-<span class="hljs-number">3</span>         <span class="hljs-number">3</span>  <span class="hljs-number">28</span>    Type1 Excellent
-<span class="hljs-number">4</span>         <span class="hljs-number">4</span>  <span class="hljs-number">52</span>    Type1      Poor
-
-<span class="hljs-comment"># 修改第一列名称</span>
-&gt; names(patientdata)[<span class="hljs-number">1</span>] &lt;- <span class="hljs-string">"Patients ID Number"</span>
-&gt; patientdata
-  Patients ID Number age diabetes    status
-<span class="hljs-number">1</span>                  <span class="hljs-number">1</span>  <span class="hljs-number">25</span>    Type1      Poor
-<span class="hljs-number">2</span>                  <span class="hljs-number">2</span>  <span class="hljs-number">34</span>    Type2  Improved
-<span class="hljs-number">3</span>                  <span class="hljs-number">3</span>  <span class="hljs-number">28</span>    Type1 Excellent
-<span class="hljs-number">4</span>                  <span class="hljs-number">4</span>  <span class="hljs-number">52</span>    Type1      Poor</code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&gt; patientID &lt;- c(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">&gt; age &lt;- c(<span class="number">25</span>, <span class="number">34</span>, <span class="number">28</span>, <span class="number">52</span>)</span><br><span class="line">&gt; diabetes &lt;- c(<span class="string">"Type1"</span>, <span class="string">"Type2"</span>, <span class="string">"Type1"</span>, <span class="string">"Type1"</span>)</span><br><span class="line">&gt; status &lt;- c(<span class="string">"Poor"</span>, <span class="string">"Improved"</span>, <span class="string">"Excellent"</span>, <span class="string">"Poor"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建数据框</span></span><br><span class="line">&gt; patientdata &lt;- data.frame(patientID, age, diabetes, status)</span><br><span class="line">&gt; patientdata</span><br><span class="line">  patientID age diabetes    status</span><br><span class="line"><span class="number">1</span>         <span class="number">1</span>  <span class="number">25</span>    Type1      Poor</span><br><span class="line"><span class="number">2</span>         <span class="number">2</span>  <span class="number">34</span>    Type2  Improved</span><br><span class="line"><span class="number">3</span>         <span class="number">3</span>  <span class="number">28</span>    Type1 Excellent</span><br><span class="line"><span class="number">4</span>         <span class="number">4</span>  <span class="number">52</span>    Type1      Poor</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改第一列名称</span></span><br><span class="line">&gt; names(patientdata)[<span class="number">1</span>] &lt;- <span class="string">"Patients ID Number"</span></span><br><span class="line">&gt; patientdata</span><br><span class="line">  Patients ID Number age diabetes    status</span><br><span class="line"><span class="number">1</span>                  <span class="number">1</span>  <span class="number">25</span>    Type1      Poor</span><br><span class="line"><span class="number">2</span>                  <span class="number">2</span>  <span class="number">34</span>    Type2  Improved</span><br><span class="line"><span class="number">3</span>                  <span class="number">3</span>  <span class="number">28</span>    Type1 Excellent</span><br><span class="line"><span class="number">4</span>                  <span class="number">4</span>  <span class="number">52</span>    Type1      Poor</span><br></pre></td></tr></table></figure>
 <h2 id="索引-4"><a class="markdownIt-Anchor" href="#索引-4"></a> 索引</h2>
 <p>选取数据框中元素的方式有若干种。你可以使用前述（如矩阵中的）下标记号，亦可直接指定列名。</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 直接使用下标记号</span>
-&gt; patientdata[<span class="hljs-number">1</span>:<span class="hljs-number">2</span>]
-  patientID age
-<span class="hljs-number">1</span>         <span class="hljs-number">1</span>  <span class="hljs-number">25</span>
-<span class="hljs-number">2</span>         <span class="hljs-number">2</span>  <span class="hljs-number">34</span>
-<span class="hljs-number">3</span>         <span class="hljs-number">3</span>  <span class="hljs-number">28</span>
-<span class="hljs-number">4</span>         <span class="hljs-number">4</span>  <span class="hljs-number">52</span>
-
-<span class="hljs-comment"># 使用名称</span>
-&gt; patientdata[c(<span class="hljs-string">"diabetes"</span>, <span class="hljs-string">"status"</span>)]
-  diabetes    status
-<span class="hljs-number">1</span>    Type1      Poor
-<span class="hljs-number">2</span>    Type2  Improved
-<span class="hljs-number">3</span>    Type1 Excellent
-<span class="hljs-number">4</span>    Type1      Poor
-
-&gt; patientdata$age
-[<span class="hljs-number">1</span>] <span class="hljs-number">25</span> <span class="hljs-number">34</span> <span class="hljs-number">28</span> <span class="hljs-number">52</span></code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 直接使用下标记号</span></span><br><span class="line">&gt; patientdata[<span class="number">1</span>:<span class="number">2</span>]</span><br><span class="line">  patientID age</span><br><span class="line"><span class="number">1</span>         <span class="number">1</span>  <span class="number">25</span></span><br><span class="line"><span class="number">2</span>         <span class="number">2</span>  <span class="number">34</span></span><br><span class="line"><span class="number">3</span>         <span class="number">3</span>  <span class="number">28</span></span><br><span class="line"><span class="number">4</span>         <span class="number">4</span>  <span class="number">52</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用名称</span></span><br><span class="line">&gt; patientdata[c(<span class="string">"diabetes"</span>, <span class="string">"status"</span>)]</span><br><span class="line">  diabetes    status</span><br><span class="line"><span class="number">1</span>    Type1      Poor</span><br><span class="line"><span class="number">2</span>    Type2  Improved</span><br><span class="line"><span class="number">3</span>    Type1 Excellent</span><br><span class="line"><span class="number">4</span>    Type1      Poor</span><br><span class="line"></span><br><span class="line">&gt; patientdata$age</span><br><span class="line">[<span class="number">1</span>] <span class="number">25</span> <span class="number">34</span> <span class="number">28</span> <span class="number">52</span></span><br></pre></td></tr></table></figure>
 <h1 id="五-因子"><a class="markdownIt-Anchor" href="#五-因子"></a> 五、因子</h1>
 <h2 id="创建-5"><a class="markdownIt-Anchor" href="#创建-5"></a> 创建</h2>
 <p>名义型变量是没有顺序之分的类别变量。糖尿病类型Diabetes（Type1、Type2）是名义型变量的一例。即使在数据中Type1编码为1而Type2编码为2，这也并不意味着二者是有序的。</p>
@@ -549,101 +361,28 @@ default.stringsAsFactors() <span class="hljs-comment"># &lt;&lt; this is depreca
 <p>类别（名义型）变量和有序类别（有序型）变量在R中称为因子（factor）。因子在R中非常重要，因为它决定了数据的分析方式以及如何进行视觉呈现。</p>
 <p>函数<code>factor()</code>以一个整数向量的形式存储类别值，整数的取值范围是<code>[1...k]</code>（其中<code>k</code>是名义型变量中唯一值的个数），同时一个由字符串（原始值）组成的内部向量将映射到这些整数上。</p>
 <p>举例来说，假设有向量：</p>
-<div class="hljs"><pre><code class="hljs R">diabetes &lt;- c(<span class="hljs-string">"Type1"</span>, <span class="hljs-string">"Type2"</span>, <span class="hljs-string">"Type1"</span>, <span class="hljs-string">"Type1"</span>)</code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diabetes &lt;- c(<span class="string">"Type1"</span>, <span class="string">"Type2"</span>, <span class="string">"Type1"</span>, <span class="string">"Type1"</span>)</span><br></pre></td></tr></table></figure>
 <p>语句<code>diabetes &lt;- factor(diabetes)</code>将此向量存储为<code>(1, 2, 1, 1)</code>，并在内部将其关联为<code>1=Type1</code>和<code>2=Type2</code>（具体赋值根据字母顺序而定）:</p>
-<div class="hljs"><pre><code class="hljs R">&gt; diabetes &lt;- factor(diabetes)
-&gt; diabetes
-[<span class="hljs-number">1</span>] Type1 Type2 Type1 Type1
-Levels: Type1 Type2</code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; diabetes &lt;- factor(diabetes)</span><br><span class="line">&gt; diabetes</span><br><span class="line">[<span class="number">1</span>] Type1 Type2 Type1 Type1</span><br><span class="line">Levels: Type1 Type2</span><br></pre></td></tr></table></figure>
 <p>要表示有序型变量，需要为函数<code>factor()</code>指定参数<code>ordered=TRUE</code>。给定向量：</p>
-<div class="hljs"><pre><code class="hljs R">status &lt;- c(<span class="hljs-string">"Poor"</span>, <span class="hljs-string">"Improved"</span>, <span class="hljs-string">"Excellent"</span>, <span class="hljs-string">"Poor"</span>)</code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">status &lt;- c(<span class="string">"Poor"</span>, <span class="string">"Improved"</span>, <span class="string">"Excellent"</span>, <span class="string">"Poor"</span>)</span><br></pre></td></tr></table></figure>
 <p>语句<code>status &lt;- factor(status, ordered=TRUE)</code>会将向量编码为<code>(3, 2, 1, 3)</code>，并在内部将这些值关联为<code>1=Excellent</code>、<code>2=Improved</code>以及<code>3=Poor</code> :</p>
-<div class="hljs"><pre><code class="hljs R">&gt; status &lt;- factor(status, ordered=<span class="hljs-literal">TRUE</span>)
-&gt; status
-[<span class="hljs-number">1</span>] Poor      Improved  Excellent Poor     
-Levels: Excellent &lt; Improved &lt; Poor</code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; status &lt;- factor(status, ordered=<span class="literal">TRUE</span>)</span><br><span class="line">&gt; status</span><br><span class="line">[<span class="number">1</span>] Poor      Improved  Excellent Poor     </span><br><span class="line">Levels: Excellent &lt; Improved &lt; Poor</span><br></pre></td></tr></table></figure>
 <p>可以通过指定levels选项来覆盖默认排序，此时各水平的赋值将为<code>1=Poor</code>、<code>2=Improved</code>、<code>3=Excellent</code>:</p>
-<div class="hljs"><pre><code class="hljs R">&gt; status &lt;- factor(status, order=<span class="hljs-literal">TRUE</span>, 
-                   levels=c(<span class="hljs-string">"Poor"</span>, <span class="hljs-string">"Improved"</span>, <span class="hljs-string">"Excellent"</span>))
-&gt; status
-[<span class="hljs-number">1</span>] Poor      Improved  Excellent Poor     
-Levels: Poor &lt; Improved &lt; Excellent</code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; status &lt;- factor(status, order=<span class="literal">TRUE</span>, </span><br><span class="line">                   levels=c(<span class="string">"Poor"</span>, <span class="string">"Improved"</span>, <span class="string">"Excellent"</span>))</span><br><span class="line">&gt; status</span><br><span class="line">[<span class="number">1</span>] Poor      Improved  Excellent Poor     </span><br><span class="line">Levels: Poor &lt; Improved &lt; Excellent</span><br></pre></td></tr></table></figure>
 <h2 id="因子影响数据分析"><a class="markdownIt-Anchor" href="#因子影响数据分析"></a> 因子影响数据分析</h2>
 <p>因子在数据分析过程当中很常用，常用来计算频数值。</p>
 <p>不加入因子的情况，无法显示出频数值：</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 以向量形式输入数据</span>
-&gt; patientID &lt;- c(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
-&gt; age &lt;- c(<span class="hljs-number">25</span>, <span class="hljs-number">34</span>, <span class="hljs-number">28</span>, <span class="hljs-number">52</span>)
-&gt; diabetes &lt;- c(<span class="hljs-string">"Type1"</span>, <span class="hljs-string">"Type2"</span>, <span class="hljs-string">"Type1"</span>, <span class="hljs-string">"Type1"</span>)
-&gt; status &lt;- c(<span class="hljs-string">"Poor"</span>, <span class="hljs-string">"Improved"</span>, <span class="hljs-string">"Excellent"</span>, <span class="hljs-string">"Poor"</span>)
-&gt; patientdata &lt;- data.frame(patientID, age, diabetes, status)
-
-<span class="hljs-comment"># 显示对象的结构</span>
-&gt; str(patientdata)                               
-<span class="hljs-string">'data.frame'</span>:	<span class="hljs-number">4</span> obs. of  <span class="hljs-number">4</span> variables:
- $ patientID: num  <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span>
- $ age      : num  <span class="hljs-number">25</span> <span class="hljs-number">34</span> <span class="hljs-number">28</span> <span class="hljs-number">52</span>
- $ diabetes : chr  <span class="hljs-string">"Type1"</span> <span class="hljs-string">"Type2"</span> <span class="hljs-string">"Type1"</span> <span class="hljs-string">"Type1"</span>
- $ status   : chr  <span class="hljs-string">"Poor"</span> <span class="hljs-string">"Improved"</span> <span class="hljs-string">"Excellent"</span> <span class="hljs-string">"Poor"</span>
-
-<span class="hljs-comment"># 显示对象的统计概要</span>
-&gt; summary(patientdata)
-   patientID         age          diabetes            status         
- Min.   :<span class="hljs-number">1.00</span>   Min.   :<span class="hljs-number">25.00</span>   Length:<span class="hljs-number">4</span>           Length:<span class="hljs-number">4</span>          
- 1st Qu.:<span class="hljs-number">1.75</span>   1st Qu.:<span class="hljs-number">27.25</span>   Class :character   Class :character  
- Median :<span class="hljs-number">2.50</span>   Median :<span class="hljs-number">31.00</span>   Mode  :character   Mode  :character  
- Mean   :<span class="hljs-number">2.50</span>   Mean   :<span class="hljs-number">34.75</span>                                        
- 3rd Qu.:<span class="hljs-number">3.25</span>   3rd Qu.:<span class="hljs-number">38.50</span>                                        
- Max.   :<span class="hljs-number">4.00</span>   Max.   :<span class="hljs-number">52.00</span></code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 以向量形式输入数据</span></span><br><span class="line">&gt; patientID &lt;- c(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">&gt; age &lt;- c(<span class="number">25</span>, <span class="number">34</span>, <span class="number">28</span>, <span class="number">52</span>)</span><br><span class="line">&gt; diabetes &lt;- c(<span class="string">"Type1"</span>, <span class="string">"Type2"</span>, <span class="string">"Type1"</span>, <span class="string">"Type1"</span>)</span><br><span class="line">&gt; status &lt;- c(<span class="string">"Poor"</span>, <span class="string">"Improved"</span>, <span class="string">"Excellent"</span>, <span class="string">"Poor"</span>)</span><br><span class="line">&gt; patientdata &lt;- data.frame(patientID, age, diabetes, status)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示对象的结构</span></span><br><span class="line">&gt; str(patientdata)                               </span><br><span class="line"><span class="string">'data.frame'</span>:	<span class="number">4</span> obs. of  <span class="number">4</span> variables:</span><br><span class="line"> $ patientID: num  <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br><span class="line"> $ age      : num  <span class="number">25</span> <span class="number">34</span> <span class="number">28</span> <span class="number">52</span></span><br><span class="line"> $ diabetes : chr  <span class="string">"Type1"</span> <span class="string">"Type2"</span> <span class="string">"Type1"</span> <span class="string">"Type1"</span></span><br><span class="line"> $ status   : chr  <span class="string">"Poor"</span> <span class="string">"Improved"</span> <span class="string">"Excellent"</span> <span class="string">"Poor"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示对象的统计概要</span></span><br><span class="line">&gt; summary(patientdata)</span><br><span class="line">   patientID         age          diabetes            status         </span><br><span class="line"> Min.   :<span class="number">1.00</span>   Min.   :<span class="number">25.00</span>   Length:<span class="number">4</span>           Length:<span class="number">4</span>          </span><br><span class="line"> 1st Qu.:<span class="number">1.75</span>   1st Qu.:<span class="number">27.25</span>   Class :character   Class :character  </span><br><span class="line"> Median :<span class="number">2.50</span>   Median :<span class="number">31.00</span>   Mode  :character   Mode  :character  </span><br><span class="line"> Mean   :<span class="number">2.50</span>   Mean   :<span class="number">34.75</span>                                        </span><br><span class="line"> 3rd Qu.:<span class="number">3.25</span>   3rd Qu.:<span class="number">38.50</span>                                        </span><br><span class="line"> Max.   :<span class="number">4.00</span>   Max.   :<span class="number">52.00</span></span><br></pre></td></tr></table></figure>
 <p>加入因子分析的情况：</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 以向量形式输入数据</span>
-&gt; patientID &lt;- c(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
-&gt; age &lt;- c(<span class="hljs-number">25</span>, <span class="hljs-number">34</span>, <span class="hljs-number">28</span>, <span class="hljs-number">52</span>)
-&gt; diabetes &lt;- c(<span class="hljs-string">"Type1"</span>, <span class="hljs-string">"Type2"</span>, <span class="hljs-string">"Type1"</span>, <span class="hljs-string">"Type1"</span>)
-&gt; status &lt;- c(<span class="hljs-string">"Poor"</span>, <span class="hljs-string">"Improved"</span>, <span class="hljs-string">"Excellent"</span>, <span class="hljs-string">"Poor"</span>)
-&gt; diabetes &lt;- factor(diabetes)
-&gt; status &lt;- factor(status, order=<span class="hljs-literal">TRUE</span>)
-&gt; patientdata &lt;- data.frame(patientID, age, diabetes, status)
-
-<span class="hljs-comment"># 显示对象的结构</span>
-&gt; str(patientdata)                               
-<span class="hljs-string">'data.frame'</span>:	<span class="hljs-number">4</span> obs. of  <span class="hljs-number">4</span> variables:
- $ patientID: num  <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span>
- $ age      : num  <span class="hljs-number">25</span> <span class="hljs-number">34</span> <span class="hljs-number">28</span> <span class="hljs-number">52</span>
- $ diabetes : Factor w/ <span class="hljs-number">2</span> levels <span class="hljs-string">"Type1"</span>,<span class="hljs-string">"Type2"</span>: <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>
- $ status   : Ord.factor w/ <span class="hljs-number">3</span> levels <span class="hljs-string">"Excellent"</span>&lt;<span class="hljs-string">"Improved"</span>&lt;..: <span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span> <span class="hljs-number">3</span>
-
-<span class="hljs-comment"># 显示对象的统计概要</span>
-&gt; summary(patientdata)
-   patientID         age         diabetes       status 
- Min.   :<span class="hljs-number">1.00</span>   Min.   :<span class="hljs-number">25.00</span>   Type1:<span class="hljs-number">3</span>   Excellent:<span class="hljs-number">1</span>  
- 1st Qu.:<span class="hljs-number">1.75</span>   1st Qu.:<span class="hljs-number">27.25</span>   Type2:<span class="hljs-number">1</span>   Improved :<span class="hljs-number">1</span>  
- Median :<span class="hljs-number">2.50</span>   Median :<span class="hljs-number">31.00</span>             Poor     :<span class="hljs-number">2</span>  
- Mean   :<span class="hljs-number">2.50</span>   Mean   :<span class="hljs-number">34.75</span>                          
- 3rd Qu.:<span class="hljs-number">3.25</span>   3rd Qu.:<span class="hljs-number">38.50</span>                          
- Max.   :<span class="hljs-number">4.00</span>   Max.   :<span class="hljs-number">52.00</span></code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 以向量形式输入数据</span></span><br><span class="line">&gt; patientID &lt;- c(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">&gt; age &lt;- c(<span class="number">25</span>, <span class="number">34</span>, <span class="number">28</span>, <span class="number">52</span>)</span><br><span class="line">&gt; diabetes &lt;- c(<span class="string">"Type1"</span>, <span class="string">"Type2"</span>, <span class="string">"Type1"</span>, <span class="string">"Type1"</span>)</span><br><span class="line">&gt; status &lt;- c(<span class="string">"Poor"</span>, <span class="string">"Improved"</span>, <span class="string">"Excellent"</span>, <span class="string">"Poor"</span>)</span><br><span class="line">&gt; diabetes &lt;- factor(diabetes)</span><br><span class="line">&gt; status &lt;- factor(status, order=<span class="literal">TRUE</span>)</span><br><span class="line">&gt; patientdata &lt;- data.frame(patientID, age, diabetes, status)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示对象的结构</span></span><br><span class="line">&gt; str(patientdata)                               </span><br><span class="line"><span class="string">'data.frame'</span>:	<span class="number">4</span> obs. of  <span class="number">4</span> variables:</span><br><span class="line"> $ patientID: num  <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br><span class="line"> $ age      : num  <span class="number">25</span> <span class="number">34</span> <span class="number">28</span> <span class="number">52</span></span><br><span class="line"> $ diabetes : Factor w/ <span class="number">2</span> levels <span class="string">"Type1"</span>,<span class="string">"Type2"</span>: <span class="number">1</span> <span class="number">2</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"> $ status   : Ord.factor w/ <span class="number">3</span> levels <span class="string">"Excellent"</span>&lt;<span class="string">"Improved"</span>&lt;..: <span class="number">3</span> <span class="number">2</span> <span class="number">1</span> <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示对象的统计概要</span></span><br><span class="line">&gt; summary(patientdata)</span><br><span class="line">   patientID         age         diabetes       status </span><br><span class="line"> Min.   :<span class="number">1.00</span>   Min.   :<span class="number">25.00</span>   Type1:<span class="number">3</span>   Excellent:<span class="number">1</span>  </span><br><span class="line"> 1st Qu.:<span class="number">1.75</span>   1st Qu.:<span class="number">27.25</span>   Type2:<span class="number">1</span>   Improved :<span class="number">1</span>  </span><br><span class="line"> Median :<span class="number">2.50</span>   Median :<span class="number">31.00</span>             Poor     :<span class="number">2</span>  </span><br><span class="line"> Mean   :<span class="number">2.50</span>   Mean   :<span class="number">34.75</span>                          </span><br><span class="line"> 3rd Qu.:<span class="number">3.25</span>   3rd Qu.:<span class="number">38.50</span>                          </span><br><span class="line"> Max.   :<span class="number">4.00</span>   Max.   :<span class="number">52.00</span></span><br></pre></td></tr></table></figure>
 <h1 id="六-列表"><a class="markdownIt-Anchor" href="#六-列表"></a> 六、列表</h1>
 <h2 id="创建-6"><a class="markdownIt-Anchor" href="#创建-6"></a> 创建</h2>
 <p>列表（list）是R的数据类型中最为复杂的一种。一般来说，列表就是一些对象（或成分，component）的有序集合。列表允许你整合若干（可能无关的）对象到单个对象名下。</p>
 <p>某个列表中可能是若干向量、矩阵、数据框，甚至其他列表的组合。可以使用函数<code>list()</code>创建列表：</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 使用默认名称</span>
-mylist &lt;- list(object1, object2, <span class="hljs-keyword">...</span>)
-
-<span class="hljs-comment"># 自定义命名</span>
-mylist &lt;- list(name1=object1, name2=object2, <span class="hljs-keyword">...</span>)</code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用默认名称</span></span><br><span class="line">mylist &lt;- list(object1, object2, <span class="keyword">...</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 自定义命名</span></span><br><span class="line">mylist &lt;- list(name1=object1, name2=object2, <span class="keyword">...</span>)</span><br></pre></td></tr></table></figure>
 <p>Usage:</p>
-<div class="hljs"><pre><code class="hljs R">list(<span class="hljs-keyword">...</span>)
-pairlist(<span class="hljs-keyword">...</span>)
-
-as.list(x, <span class="hljs-keyword">...</span>)
-<span class="hljs-comment">## S3 method for class 'environment'</span>
-as.list(x, all.names = <span class="hljs-literal">FALSE</span>, sorted = <span class="hljs-literal">FALSE</span>, <span class="hljs-keyword">...</span>)
-as.pairlist(x)
-
-is.list(x)
-is.pairlist(x)
-
-alist(<span class="hljs-keyword">...</span>)</code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">list(<span class="keyword">...</span>)</span><br><span class="line">pairlist(<span class="keyword">...</span>)</span><br><span class="line"></span><br><span class="line">as.list(x, <span class="keyword">...</span>)</span><br><span class="line"><span class="comment">## S3 method for class 'environment'</span></span><br><span class="line">as.list(x, all.names = <span class="literal">FALSE</span>, sorted = <span class="literal">FALSE</span>, <span class="keyword">...</span>)</span><br><span class="line">as.pairlist(x)</span><br><span class="line"></span><br><span class="line">is.list(x)</span><br><span class="line">is.pairlist(x)</span><br><span class="line"></span><br><span class="line">alist(<span class="keyword">...</span>)</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -671,447 +410,186 @@ alist(<span class="hljs-keyword">...</span>)</code></pre></div>
 </tbody>
 </table>
 <p>例1，创建一个列表：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; g &lt;- <span class="hljs-string">"My First List"</span>
-&gt; h &lt;- c(<span class="hljs-number">25</span>, <span class="hljs-number">26</span>, <span class="hljs-number">18</span>, <span class="hljs-number">39</span>)
-&gt; j &lt;- matrix(<span class="hljs-number">1</span>:<span class="hljs-number">10</span>, nrow=<span class="hljs-number">5</span>)
-&gt; k &lt;- c(<span class="hljs-string">"one"</span>, <span class="hljs-string">"two"</span>, <span class="hljs-string">"three"</span>)
-&gt; mylist &lt;- list(title=g, ages=h, j, k)
-&gt; mylist
-$title
-[<span class="hljs-number">1</span>] <span class="hljs-string">"My First List"</span>
-
-$ages
-[<span class="hljs-number">1</span>] <span class="hljs-number">25</span> <span class="hljs-number">26</span> <span class="hljs-number">18</span> <span class="hljs-number">39</span>
-
-[[<span class="hljs-number">3</span>]]
-     [,<span class="hljs-number">1</span>] [,<span class="hljs-number">2</span>]
-[<span class="hljs-number">1</span>,]    <span class="hljs-number">1</span>    <span class="hljs-number">6</span>
-[<span class="hljs-number">2</span>,]    <span class="hljs-number">2</span>    <span class="hljs-number">7</span>
-[<span class="hljs-number">3</span>,]    <span class="hljs-number">3</span>    <span class="hljs-number">8</span>
-[<span class="hljs-number">4</span>,]    <span class="hljs-number">4</span>    <span class="hljs-number">9</span>
-[<span class="hljs-number">5</span>,]    <span class="hljs-number">5</span>   <span class="hljs-number">10</span>
-
-[[<span class="hljs-number">4</span>]]
-[<span class="hljs-number">1</span>] <span class="hljs-string">"one"</span>   <span class="hljs-string">"two"</span>   <span class="hljs-string">"three"</span></code></pre></div>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&gt; g &lt;- <span class="string">"My First List"</span></span><br><span class="line">&gt; h &lt;- c(<span class="number">25</span>, <span class="number">26</span>, <span class="number">18</span>, <span class="number">39</span>)</span><br><span class="line">&gt; j &lt;- matrix(<span class="number">1</span>:<span class="number">10</span>, nrow=<span class="number">5</span>)</span><br><span class="line">&gt; k &lt;- c(<span class="string">"one"</span>, <span class="string">"two"</span>, <span class="string">"three"</span>)</span><br><span class="line">&gt; mylist &lt;- list(title=g, ages=h, j, k)</span><br><span class="line">&gt; mylist</span><br><span class="line">$title</span><br><span class="line">[<span class="number">1</span>] <span class="string">"My First List"</span></span><br><span class="line"></span><br><span class="line">$ages</span><br><span class="line">[<span class="number">1</span>] <span class="number">25</span> <span class="number">26</span> <span class="number">18</span> <span class="number">39</span></span><br><span class="line"></span><br><span class="line">[[<span class="number">3</span>]]</span><br><span class="line">     [,<span class="number">1</span>] [,<span class="number">2</span>]</span><br><span class="line">[<span class="number">1</span>,]    <span class="number">1</span>    <span class="number">6</span></span><br><span class="line">[<span class="number">2</span>,]    <span class="number">2</span>    <span class="number">7</span></span><br><span class="line">[<span class="number">3</span>,]    <span class="number">3</span>    <span class="number">8</span></span><br><span class="line">[<span class="number">4</span>,]    <span class="number">4</span>    <span class="number">9</span></span><br><span class="line">[<span class="number">5</span>,]    <span class="number">5</span>   <span class="number">10</span></span><br><span class="line"></span><br><span class="line">[[<span class="number">4</span>]]</span><br><span class="line">[<span class="number">1</span>] <span class="string">"one"</span>   <span class="string">"two"</span>   <span class="string">"three"</span></span><br></pre></td></tr></table></figure>
 <h2 id="索引-5"><a class="markdownIt-Anchor" href="#索引-5"></a> 索引</h2>
 <p>可以通过在双重方括号中指明代表某个成分的数字或名称来访问列表中的元素。</p>
 <p>例：</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 构建数据集</span>
-&gt; g &lt;- <span class="hljs-string">"My First List"</span>
-&gt; h &lt;- c(<span class="hljs-number">25</span>, <span class="hljs-number">26</span>, <span class="hljs-number">18</span>, <span class="hljs-number">39</span>)
-&gt; j &lt;- matrix(<span class="hljs-number">1</span>:<span class="hljs-number">10</span>, nrow=<span class="hljs-number">5</span>)
-&gt; k &lt;- c(<span class="hljs-string">"one"</span>, <span class="hljs-string">"two"</span>, <span class="hljs-string">"three"</span>)
-&gt; mylist &lt;- list(title=g, ages=h, j, k)
-&gt; mylist
-$title
-[<span class="hljs-number">1</span>] <span class="hljs-string">"My First List"</span>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建数据集</span></span><br><span class="line">&gt; g &lt;- <span class="string">"My First List"</span></span><br><span class="line">&gt; h &lt;- c(<span class="number">25</span>, <span class="number">26</span>, <span class="number">18</span>, <span class="number">39</span>)</span><br><span class="line">&gt; j &lt;- matrix(<span class="number">1</span>:<span class="number">10</span>, nrow=<span class="number">5</span>)</span><br><span class="line">&gt; k &lt;- c(<span class="string">"one"</span>, <span class="string">"two"</span>, <span class="string">"three"</span>)</span><br><span class="line">&gt; mylist &lt;- list(title=g, ages=h, j, k)</span><br><span class="line">&gt; mylist</span><br><span class="line">$title</span><br><span class="line">[<span class="number">1</span>] <span class="string">"My First List"</span></span><br><span class="line"></span><br><span class="line">$ages</span><br><span class="line">[<span class="number">1</span>] <span class="number">25</span> <span class="number">26</span> <span class="number">18</span> <span class="number">39</span></span><br><span class="line"></span><br><span class="line">[[<span class="number">3</span>]]</span><br><span class="line">     [,<span class="number">1</span>] [,<span class="number">2</span>]</span><br><span class="line">[<span class="number">1</span>,]    <span class="number">1</span>    <span class="number">6</span></span><br><span class="line">[<span class="number">2</span>,]    <span class="number">2</span>    <span class="number">7</span></span><br><span class="line">[<span class="number">3</span>,]    <span class="number">3</span>    <span class="number">8</span></span><br><span class="line">[<span class="number">4</span>,]    <span class="number">4</span>    <span class="number">9</span></span><br><span class="line">[<span class="number">5</span>,]    <span class="number">5</span>   <span class="number">10</span></span><br><span class="line"></span><br><span class="line">[[<span class="number">4</span>]]</span><br><span class="line">[<span class="number">1</span>] <span class="string">"one"</span>   <span class="string">"two"</span>   <span class="string">"three"</span></span><br><span class="line"></span><br><span class="line">&gt; mylist[[<span class="number">4</span>]]</span><br><span class="line">[<span class="number">1</span>] <span class="string">"one"</span>   <span class="string">"two"</span>   <span class="string">"three"</span></span><br><span class="line">&gt; mylist$title</span><br><span class="line">[<span class="number">1</span>] <span class="string">"My First List"</span></span><br><span class="line">&gt; mylist[[<span class="string">"ages"</span>]]</span><br><span class="line">[<span class="number">1</span>] <span class="number">25</span> <span class="number">26</span> <span class="number">18</span> <span class="number">39</span></span><br></pre></td></tr></table></figure>
 
-$ages
-[<span class="hljs-number">1</span>] <span class="hljs-number">25</span> <span class="hljs-number">26</span> <span class="hljs-number">18</span> <span class="hljs-number">39</span>
+    </div>
 
-[[<span class="hljs-number">3</span>]]
-     [,<span class="hljs-number">1</span>] [,<span class="hljs-number">2</span>]
-[<span class="hljs-number">1</span>,]    <span class="hljs-number">1</span>    <span class="hljs-number">6</span>
-[<span class="hljs-number">2</span>,]    <span class="hljs-number">2</span>    <span class="hljs-number">7</span>
-[<span class="hljs-number">3</span>,]    <span class="hljs-number">3</span>    <span class="hljs-number">8</span>
-[<span class="hljs-number">4</span>,]    <span class="hljs-number">4</span>    <span class="hljs-number">9</span>
-[<span class="hljs-number">5</span>,]    <span class="hljs-number">5</span>   <span class="hljs-number">10</span>
+    
+    
+    
 
-[[<span class="hljs-number">4</span>]]
-[<span class="hljs-number">1</span>] <span class="hljs-string">"one"</span>   <span class="hljs-string">"two"</span>   <span class="hljs-string">"three"</span>
-
-&gt; mylist[[<span class="hljs-number">4</span>]]
-[<span class="hljs-number">1</span>] <span class="hljs-string">"one"</span>   <span class="hljs-string">"two"</span>   <span class="hljs-string">"three"</span>
-&gt; mylist$title
-[<span class="hljs-number">1</span>] <span class="hljs-string">"My First List"</span>
-&gt; mylist[[<span class="hljs-string">"ages"</span>]]
-[<span class="hljs-number">1</span>] <span class="hljs-number">25</span> <span class="hljs-number">26</span> <span class="hljs-number">18</span> <span class="hljs-number">39</span></code></pre></div>
-
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/R/">R</a>
-                    
-                      <a class="hover-with-bg" href="/tags/Statistics/">Statistics</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E9%80%9F%E6%9F%A5/">速查</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/07/12/01.%20R%20Plot%20%E5%9B%BE%E5%83%8F%E5%8F%82%E6%95%B0/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">01. R <- Plot 图像参数</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/07/09/%E9%87%8D%E5%A4%8D/">
-                        <span class="hidden-mobile">重复</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
-
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
-
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
-
-
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/R/" rel="tag"># R</a>
+              <a href="/tags/Statistics/" rel="tag"># Statistics</a>
+              <a href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag"># 速查</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/09/%E9%87%8D%E5%A4%8D/" rel="prev" title="重复">
+      <i class="fa fa-chevron-left"></i> 重复
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/12/01.%20R%20Plot%20%E5%9B%BE%E5%83%8F%E5%8F%82%E6%95%B0/" rel="next" title="01. R <- Plot 图像参数">
+      01. R <- Plot 图像参数 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一-向量"><span class="nav-number">1.</span> <span class="nav-text"> 一、向量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建"><span class="nav-number">1.1.</span> <span class="nav-text"> 创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引"><span class="nav-number">1.2.</span> <span class="nav-text"> 索引</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-矩阵"><span class="nav-number">2.</span> <span class="nav-text"> 二、矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建-2"><span class="nav-number">2.1.</span> <span class="nav-text"> 创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引-2"><span class="nav-number">2.2.</span> <span class="nav-text"> 索引</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三-数组"><span class="nav-number">3.</span> <span class="nav-text"> 三、数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建-3"><span class="nav-number">3.1.</span> <span class="nav-text"> 创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引-3"><span class="nav-number">3.2.</span> <span class="nav-text"> 索引</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四-数据框"><span class="nav-number">4.</span> <span class="nav-text"> 四、数据框</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建-4"><span class="nav-number">4.1.</span> <span class="nav-text"> 创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引-4"><span class="nav-number">4.2.</span> <span class="nav-text"> 索引</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五-因子"><span class="nav-number">5.</span> <span class="nav-text"> 五、因子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建-5"><span class="nav-number">5.1.</span> <span class="nav-text"> 创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#因子影响数据分析"><span class="nav-number">5.2.</span> <span class="nav-text"> 因子影响数据分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六-列表"><span class="nav-number">6.</span> <span class="nav-text"> 六、列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建-6"><span class="nav-number">6.1.</span> <span class="nav-text"> 创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引-5"><span class="nav-number">6.2.</span> <span class="nav-text"> 索引</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">187</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
+        
 
-    
 
-    
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
-  
-</footer>
-
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
-
-<!-- Plugins -->
-
 
   
-    <script  src="/js/lazyload.js" ></script>
-  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
+<script src="/js/schemes/muse.js"></script>
 
 
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
-      }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "00. R <- 数据类型&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
+<script src="/js/next-boot.js"></script>
 
 
 
 
-
-  
-
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
   
 
 
@@ -1123,20 +601,14 @@ $ages
 
 
 
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
 
 
 
 
 
+  
 
+  
 
 </body>
-
-
 </html>

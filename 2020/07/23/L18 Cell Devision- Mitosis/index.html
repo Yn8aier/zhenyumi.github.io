@@ -1,278 +1,281 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="这一章给我带来了极大的心理冲击">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L18 Cell Division- Mitosis">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/07/23/L18%20Cell%20Devision-%20Mitosis/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="这一章给我带来了极大的心理冲击">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165113859.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165411017.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165511818.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165749284.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165804356.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170250858.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170505401.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170542081.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170629130.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165911348.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171122230.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171203530.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171220799.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171257827.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171323575.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172606041.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170342469.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172807964.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172702020.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172926470.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172926470.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504173203711.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504173218623.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174029501.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174051057.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174224856.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174415289.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174617569.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174637932.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174809024.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174852212.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175101871.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175120378.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175135255.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175151561.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175208356.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175218738.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175407485.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175502940.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175814163.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504181702742.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504181900087.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504181934289.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504181953990.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180259773.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180337655.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180445802.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180531950.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180648831.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180700750.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180918336.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180933061.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182510730.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182533924.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182610536.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182713011.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182020436.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182047447.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182210657.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182241932.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182330107.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182843682.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182752197.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182917049.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183017490.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183104789.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183132491.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183242331.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183321566.png">
+<meta property="article:published_time" content="2020-07-23T09:47:00.000Z">
+<meta property="article:modified_time" content="2020-07-23T09:47:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Cell Biology">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165113859.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/07/23/L18%20Cell%20Devision-%20Mitosis/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>L18 Cell Division- Mitosis | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>L18 Cell Division- Mitosis - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_02.png') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-07-23 17:47">
-      2020年7月23日 下午
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">兴趣使然的记事网站</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      11k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      57
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/23/L18%20Cell%20Devision-%20Mitosis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          L18 Cell Division- Mitosis
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-23 17:47:00" itemprop="dateCreated datePublished" datetime="2020-07-23T17:47:00+08:00">2020-07-23</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：3 个月前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-overview-of-the-cell-division"><span class="post-toc-text"> 一、Overview of the cell division</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#the-major-events-in-cell-cycle"><span class="post-toc-text"> The major events in cell cycle</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-identification-and-quantification-of-cells-in-s-phase-brdu-or-edu-incorporation"><span class="post-toc-text"> 1. Identification and quantification of cells in S-phase: BrdU or EdU incorporation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-cell-cycle-distribution-analysis"><span class="post-toc-text"> 3. Cell cycle-distribution analysis</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#flow-cytometry"><span class="post-toc-text"> Flow Cytometry</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#light-microscopy"><span class="post-toc-text"> Light Microscopy</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-cell-cycle-control-system"><span class="post-toc-text"> 二、Cell-Cycle Control System</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#model-organisms-to-study-cell-cycle"><span class="post-toc-text"> Model organisms to study cell cycle</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-model-systems-to-study-the-cell-cycle-xenopus-oocytes"><span class="post-toc-text"> 1. Model systems to study the cell cycle: Xenopus oocytes</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-model-organisms-to-study-the-cell-cycle-yeast"><span class="post-toc-text"> 2. Model organisms to study the cell cycle: Yeast</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cell-cycle-related-regulatory-molecules"><span class="post-toc-text"> Cell Cycle Related Regulatory Molecules</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-cdks"><span class="post-toc-text"> 1. Cdks</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-cyclins"><span class="post-toc-text"> 2. Cyclins</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cyclin-cdk-complex"><span class="post-toc-text"> Cyclin-Cdk Complex</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#waves-of-cyclin-expression-and-degradation"><span class="post-toc-text"> Waves of cyclin expression and degradation</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cdk-activation"><span class="post-toc-text"> Cdk Activation</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-mitosis-promoting-factor-mpf"><span class="post-toc-text"> 3. Mitosis Promoting Factor (MPF)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#major-cyclins-and-cdks-of-vertebrates-and-budding-yeast"><span class="post-toc-text"> Major cyclins and Cdks of vertebrates and budding yeast</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-cki"><span class="post-toc-text"> 4. CKI</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-apcc"><span class="post-toc-text"> 5. APC&#x2F;C</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-scf"><span class="post-toc-text"> 6. SCF</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#summary-cell-cycle-control-system"><span class="post-toc-text"> Summary: cell cycle control system</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-cell-cycle-control-also-depends-on-transcriptional-regulation"><span class="post-toc-text"> 1. Cell-Cycle Control Also Depends on Transcriptional Regulation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-the-cell-cycle-control-system-functions-as-a-network-of-biochemical-switches"><span class="post-toc-text"> 2. The Cell-Cycle Control System Functions as a Network of  Biochemical Switches</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#major-cell-cycle-regulatory-proteins"><span class="post-toc-text"> Major cell cycle regulatory proteins</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-the-cell-cycle-states"><span class="post-toc-text"> 三、The Cell Cycle States</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#s-phase"><span class="post-toc-text"> S-phase</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-cyclin-cdk-complexes-trigger-major-events-in-dna-replication"><span class="post-toc-text"> 1. Cyclin CDK complexes trigger major events in DNA replication</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1st-initiation-formation-of-the-pre-rc-liscening"><span class="post-toc-text"> 1st initiation: formation of the pre-RC: liscening</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2nd-formation-of-the-pre-initiation-complex"><span class="post-toc-text"> 2nd: formation of the pre-initiation complex</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#summary"><span class="post-toc-text"> Summary</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-cohesins-tether-sister-chromatids"><span class="post-toc-text"> 2. Cohesins Tether Sister Chromatids</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-centriole-replication"><span class="post-toc-text"> 3. Centriole Replication</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mitosis"><span class="post-toc-text"> Mitosis</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-entry-into-mitosis"><span class="post-toc-text"> 1. Entry into Mitosis</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-activation-of-m-cdk-complex-mitosis-onset"><span class="post-toc-text"> 2. Activation of M-Cdk Complex - Mitosis Onset</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-the-stages-of-m-phase"><span class="post-toc-text"> 3. The Stages of M-Phase</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#prophase"><span class="post-toc-text"> Prophase</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#prometaphase"><span class="post-toc-text"> Prometaphase</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#metaphase"><span class="post-toc-text"> Metaphase</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#anaphase"><span class="post-toc-text"> Anaphase</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#telophase"><span class="post-toc-text"> Telophase</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cytokinesis"><span class="post-toc-text"> Cytokinesis</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-some-details-of-these-m-phase-states"><span class="post-toc-text"> 4. Some Details of these M-Phase States</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#sister-chromatin-condensation"><span class="post-toc-text"> Sister Chromatin Condensation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-condensin"><span class="post-toc-text"> (1) Condensin</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#disassembly-of-the-nuclear-envelope"><span class="post-toc-text"> Disassembly of the nuclear envelope</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#chromosome-separation"><span class="post-toc-text"> Chromosome Separation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-microtubules"><span class="post-toc-text"> (1) Microtubules</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#microtubule-instability-in-mitosis"><span class="post-toc-text"> Microtubule instability in mitosis</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#multiple-forces"><span class="post-toc-text"> Multiple Forces</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-centrosomes"><span class="post-toc-text"> (2) Centrosomes</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-kinesins-and-dynein"><span class="post-toc-text"> (3) Kinesins and Dynein</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-bipolar-spindle-assembly"><span class="post-toc-text"> (4)  bipolar spindle assembly</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#ran"><span class="post-toc-text"> Ran</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#acentrosomal-spindle-assembly"><span class="post-toc-text"> Acentrosomal spindle assembly</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#5-kinetochore"><span class="post-toc-text"> (5) Kinetochore</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#6-anaphase-a-and-anaphase-b"><span class="post-toc-text"> (6) Anaphase A and Anaphase B</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#7-eliminate-errors"><span class="post-toc-text"> (7) Eliminate Errors</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#triggers-into-anaphase"><span class="post-toc-text"> Triggers into Anaphase</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-chromosome-attachment"><span class="post-toc-text"> (1) Chromosome Attachment</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-activation-of-apcc"><span class="post-toc-text"> (2) Activation of APC&#x2F;C</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-telophase"><span class="post-toc-text"> 5. Telophase</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cytokinesis-2"><span class="post-toc-text"> Cytokinesis</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-actin-myosin-filament-rings-assemble"><span class="post-toc-text"> 1. Actin-myosin filament rings Assemble</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#rhoa"><span class="post-toc-text"> RhoA</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#spindles-determine-the-position-of-the-cleavage-furrow"><span class="post-toc-text"> Spindles determine the position of the cleavage furrow</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#localization-of-cytokinesis-regulators-at-the-central-spindle"><span class="post-toc-text"> Localization of cytokinesis regulators at the central spindle</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#the-phragmoplast-guides-cytokinesis-in-higher-plants"><span class="post-toc-text"> The Phragmoplast Guides Cytokinesis in Higher Plants</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-stages-of-cytokinesis"><span class="post-toc-text"> 2. Stages of Cytokinesis</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-organelle-division-distribution"><span class="post-toc-text"> 3. Organelle division &#x2F; distribution</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-symmetrical-and-asymmetrical-division"><span class="post-toc-text"> 4. Symmetrical and asymmetrical division</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-mitosis-without-cytokinesis"><span class="post-toc-text"> 5. Mitosis without cytokinesis</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-the-g1-phase-is-a-stable-state-of-cdk-inactivity"><span class="post-toc-text"> 6. The G1 Phase Is a Stable State of Cdk Inactivity</span></a></li></ol></li></ol></li></ol>
-
-              <h1 id="一-overview-of-the-cell-division"><a class="markdownIt-Anchor" href="#一-overview-of-the-cell-division"></a> 一、Overview of the cell division</h1>
+        <h1 id="一-overview-of-the-cell-division"><a class="markdownIt-Anchor" href="#一-overview-of-the-cell-division"></a> 一、Overview of the cell division</h1>
 <p>Cells reproduce by duplicating their contents and dividing in two.</p>
 <blockquote>
 <p>This cycle of duplication and division, known as the <strong>cell cycle</strong>, is the essential mechanism by which all living things reproduce.</p>
 <p>The details of the cell cycle vary from organism to organism and at different times in an organism’s life.</p>
 <p><strong>cell-cycle control system</strong>, a complex network of <strong>regulatory proteins</strong> that triggers the different events of the cycle.</p>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165113859.png" srcset="/img/loading.gif" alt="image-20200504165113859" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165113859.png" alt="image-20200504165113859" style="zoom: 33%;" />
 <p>When does a cell decide to divide? (Lecture 19)</p>
 <p>How does the cell cycle progress?</p>
 <ul>
@@ -303,7 +306,7 @@
 <li>Separating 2 cells.</li>
 <li>Pinching and closing plasma membrane.</li>
 </ol>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165411017.png" srcset="/img/loading.gif" alt="image-20200504165411017" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165411017.png" alt="image-20200504165411017" /></p>
 <blockquote>
 <p><strong>Chromosome duplication</strong> occurs during <strong>S phase</strong> (S for DNA <u>synthesis</u>), which requires <u>10–12 hours</u> and occupies about half of the cell-cycle time in a typical mammalian cell.</p>
 <p>After S phase, chromosome segregation and cell division occur in <strong>M phase</strong> (M  for mitosis), which requires much less time (less than an hour in a mammalian cell). M phase comprises two major events: nuclear division, or mitosis, during which the copied chromosomes are distributed into a pair of daughter nuclei;  and cytoplasmic division, or <strong>cytokinesis</strong>, when the cell itself divides in two</p>
@@ -350,7 +353,7 @@
 </li>
 </ul>
 <h3 id="1-identification-and-quantification-of-cells-in-s-phase-brdu-or-edu-incorporation"><a class="markdownIt-Anchor" href="#1-identification-and-quantification-of-cells-in-s-phase-brdu-or-edu-incorporation"></a> 1. Identification and quantification of cells in S-phase: BrdU or EdU incorporation</h3>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165511818.png" srcset="/img/loading.gif" alt="image-20200504165511818" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165511818.png" alt="image-20200504165511818" style="zoom: 33%;" />
 <ul>
 <li>BrdU-labeled epithelial cells of the zebrafish gut. The fish was exposed to BrdU, after which the tissue was fixed and prepared for labeling with fluorescent anti-BrdU antibodies (green). All the cells are stained with a red fluorescent dye.</li>
 </ul>
@@ -366,12 +369,12 @@
 <h3 id="3-cell-cycle-distribution-analysis"><a class="markdownIt-Anchor" href="#3-cell-cycle-distribution-analysis"></a> 3. Cell cycle-distribution analysis</h3>
 <h4 id="flow-cytometry"><a class="markdownIt-Anchor" href="#flow-cytometry"></a> Flow Cytometry</h4>
 <p>Cell cycle-distribution analysis using flow cytometry to detect cell cycle phases within a cell population</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165749284.png" srcset="/img/loading.gif" alt="image-20200504165749284" style="zoom:23%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165749284.png" alt="image-20200504165749284" style="zoom:23%;" />
 <p>Labeling of the DNA in the cells: Incubation of cells with fluorescent DNA-binding dyes (Propidium Iodide (PI) (Ex = 535 nm Em = 617 nm, Red fluorescence)</p>
 <p>Detection of the labeled DNA by flow cytometry using an “Cell Analyzer”</p>
 <p>Amount of DNA corresponds to specific stages in the cell cycle</p>
 <h4 id="light-microscopy"><a class="markdownIt-Anchor" href="#light-microscopy"></a> Light Microscopy</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165804356.png" srcset="/img/loading.gif" alt="image-20200504165804356" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165804356.png" alt="image-20200504165804356" /></p>
 <p>Labeling of the DNA in the cells: Incubation of cells with fluorescent DAPI/Hochest (Ex = UV Em = 461 nm, Blue fluorescence) (fixed or live cell)</p>
 <p>Calculation of mitotic index (MI): ratio of mitotic cell numbers to total cell numbers</p>
 <p>Morphological changes, durations of each mitotic stage</p>
@@ -403,7 +406,7 @@
 </ul>
 <h3 id="1-model-systems-to-study-the-cell-cycle-xenopus-oocytes"><a class="markdownIt-Anchor" href="#1-model-systems-to-study-the-cell-cycle-xenopus-oocytes"></a> 1. Model systems to study the cell cycle: Xenopus oocytes</h3>
 <p>Fertilized eggs are exceptionally large and divide rapidly (S and M phases, with very short or no G1 or G2 phases)</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170250858.png" srcset="/img/loading.gif" alt="image-20200504170250858" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170250858.png" alt="image-20200504170250858" /></p>
 <p>No new gene transcription in the fertilized egg:</p>
 <ul>
 <li>all of the required mRNAs and proteins are already packed into the very large egg</li>
@@ -414,14 +417,14 @@
 <li>→ Xenopus oocytes have rich source of cell division proteins</li>
 </ul>
 <h3 id="2-model-organisms-to-study-the-cell-cycle-yeast"><a class="markdownIt-Anchor" href="#2-model-organisms-to-study-the-cell-cycle-yeast"></a> 2. Model organisms to study the cell cycle: Yeast</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170505401.png" srcset="/img/loading.gif" alt="image-20200504170505401" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170505401.png" alt="image-20200504170505401" /></p>
 <ul>
 <li>Fission yeasts are rod, septum divides into two daughter cells.</li>
 </ul>
 <p>Conditional mutation in yeast cells for cell cycle studies:</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170542081.png" srcset="/img/loading.gif" alt="image-20200504170542081" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170542081.png" alt="image-20200504170542081" /></p>
 <p>Temperature-sensitive mutations in cell cycle control genes cause all cells to arrest at a specific stage.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170629130.png" srcset="/img/loading.gif" alt="image-20200504170629130" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170629130.png" alt="image-20200504170629130" /></p>
 <h2 id="cell-cycle-related-regulatory-molecules"><a class="markdownIt-Anchor" href="#cell-cycle-related-regulatory-molecules"></a> Cell Cycle Related Regulatory Molecules</h2>
 <blockquote>
 <p>The Cell-Cycle Control System Triggers the Major Events of the Cell Cycle</p>
@@ -448,7 +451,7 @@
 </ol>
 <p>The control system blocks progression through each of these transitions if it <u>detects problems inside or outside the cell</u>. If the control system senses problems in the completion of DNA replication, for example, it will hold the cell at the G2/M transition <u>until those problems are  solved</u>. Similarly, if extracellular conditions are not appropriate for cell proliferation, the control system blocks progression through Start, thereby <u>preventing cell division until conditions become favorable</u></p>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165911348.png" srcset="/img/loading.gif" alt="image-20200504165911348" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504165911348.png" alt="image-20200504165911348" style="zoom: 33%;" />
 <ul>
 <li>The three check points</li>
 <li>The driving force of cell cycle progression is evolutionarily conserved.</li>
@@ -513,7 +516,7 @@
 </blockquote>
 <h4 id="waves-of-cyclin-expression-and-degradation"><a class="markdownIt-Anchor" href="#waves-of-cyclin-expression-and-degradation"></a> Waves of cyclin expression and degradation</h4>
 <p>Waves of cyclin expression and degradation mediate ordered progression of cell cycle</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171122230.png" srcset="/img/loading.gif" alt="image-20200504171122230" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171122230.png" alt="image-20200504171122230" /></p>
 <ul>
 <li>G1/S-cyclins activate Cdks in late G1 trigger progression through the Start transition.
 <ul>
@@ -526,11 +529,11 @@
 </ul>
 <h4 id="cdk-activation"><a class="markdownIt-Anchor" href="#cdk-activation"></a> Cdk Activation</h4>
 <p>Association with cyclin opens ATP-binding pocket of CDKs.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171203530.png" srcset="/img/loading.gif" alt="image-20200504171203530" style="zoom:33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171203530.png" alt="image-20200504171203530" style="zoom:33%;" />
 <p>CDK-activating kinases phosphorylate CDKs to open substrate binding site.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171220799.png" srcset="/img/loading.gif" alt="image-20200504171220799" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171220799.png" alt="image-20200504171220799" /></p>
 <p>Inhibitory phosphate inactivates cyclin-CDK complexes site</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171257827.png" srcset="/img/loading.gif" alt="image-20200504171257827" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171257827.png" alt="image-20200504171257827" /></p>
 <ul>
 <li>This regulatory mechanism is particularly important in the control of M-Cdk activity at the onset of mitosis</li>
 </ul>
@@ -545,16 +548,16 @@
 </ul>
 </blockquote>
 <p>Positive feedback loops increase the amount of active cyclin-CDK</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171323575.png" srcset="/img/loading.gif" alt="image-20200504171323575" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504171323575.png" alt="image-20200504171323575" /></p>
 <p>The Switch-like activation of CDKs ensures rapid and irreversible initiation of cell cycle events.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172606041.png" srcset="/img/loading.gif" alt="image-20200504172606041" style="zoom:80%;" width = 1400 />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172606041.png" alt="image-20200504172606041" style="zoom:80%;" width = 1400 />
 <h3 id="3-mitosis-promoting-factor-mpf"><a class="markdownIt-Anchor" href="#3-mitosis-promoting-factor-mpf"></a> 3. Mitosis Promoting Factor (MPF)</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170342469.png" srcset="/img/loading.gif" alt="image-20200504170342469" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504170342469.png" alt="image-20200504170342469" /></p>
 <ul>
 <li>Biochemical experiments had previously identified “Mitosis Promoting Factor” = MPF</li>
 </ul>
 <h4 id="major-cyclins-and-cdks-of-vertebrates-and-budding-yeast"><a class="markdownIt-Anchor" href="#major-cyclins-and-cdks-of-vertebrates-and-budding-yeast"></a> Major cyclins and Cdks of vertebrates and budding yeast</h4>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172807964.png" srcset="/img/loading.gif" alt="image-20200504172807964" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172807964.png" alt="image-20200504172807964" style="zoom: 50%;" />
 <ul>
 <li>A fourth class of cyclin, cyclin G1, helps to govern the activities of the G1/S cyclins.</li>
 </ul>
@@ -571,7 +574,7 @@
 <p>The three-dimensional structure of a cyclin–Cdk–CKI complex reveals that <strong>CKI</strong> binding stimulates a <u>large rearrangement</u> in the structure of the <strong>Cdk active site</strong>,  rendering it inactive (Figure 17–14). Cells use CKIs primarily to help govern the activities of <strong>G1/Sand S-Cdks</strong> early in the cell cycle.</p>
 </blockquote>
 <p>Inhibition of a cyclin-Cdk complex by CKI</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172702020.png" srcset="/img/loading.gif" alt="image-20200504172702020" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172702020.png" alt="image-20200504172702020" style="zoom: 33%;" />
 <p>Cdk inhibitor proteins (CKIs, e.g. p27) inactivates cyclin–Cdk complexes.</p>
 <p>Cells use CKIs primarily to help govern the activities of G1 /S- and S-Cdks early in the cell cycle.</p>
 <h3 id="5-apcc"><a class="markdownIt-Anchor" href="#5-apcc"></a> 5. APC/C</h3>
@@ -604,7 +607,7 @@
 <li>These subunits help the APC/C recognize its target proteins</li>
 </ul>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172926470.png" srcset="/img/loading.gif" alt="image-20200504172926470" style="zoom:50%;" height=1300  width = 1150/>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172926470.png" alt="image-20200504172926470" style="zoom:50%;" height=1300  width = 1150/>
 <p>Ubiquitinated proteins are degraded by the <strong>26S proteasome</strong> (in the cytosol) (Lecture 12)</p>
 <p>Major substrates of APC/C</p>
 <ul>
@@ -620,12 +623,12 @@
 <p>Compared to APC/C, SCF activity is <strong>constant</strong> during the cell cycle. Ubiquitylation by SCF is controlled instead by changes in the <strong>phosphorylation state</strong> of its <strong>target proteins</strong>, as <strong>F-box subunits</strong> recognize only <u>specifically phosphorylated proteins</u></p>
 </blockquote>
 <p>(The proteolytic control during the cell cycle: SCF)</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172926470.png" srcset="/img/loading.gif" alt="image-20200504172926470" style="zoom:50%;" width=1200 height=1400/>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504172926470.png" alt="image-20200504172926470" style="zoom:50%;" width=1200 height=1400/>
 <p>Degradation of Cdk inhibitor proteins (CKIs) results the activation of cyclin-Cdk complexes</p>
 <p>SCF is a multi-protein <strong>E3 ubiquitin ligase complex</strong>, which marks CKIs for proteasomal degradation late G1, hereby helping to control the activation of S-Cdks and DNA replication.</p>
 <p>SCF is also responsible for the destruction of <strong>G1/S-cyclins</strong> in early S phase</p>
 <h2 id="summary-cell-cycle-control-system"><a class="markdownIt-Anchor" href="#summary-cell-cycle-control-system"></a> Summary: cell cycle control system</h2>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504173203711.png" srcset="/img/loading.gif" alt="image-20200504173203711" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504173203711.png" alt="image-20200504173203711" /></p>
 <h3 id="1-cell-cycle-control-also-depends-on-transcriptional-regulation"><a class="markdownIt-Anchor" href="#1-cell-cycle-control-also-depends-on-transcriptional-regulation"></a> 1. Cell-Cycle Control Also Depends on Transcriptional Regulation</h3>
 <blockquote>
 <p>Cell-cycle control depends <u>exclusively</u> on <strong>post-transcriptional mechanisms</strong> that involve the <strong>regulation of Cdks</strong> and <strong>ubiquitin ligases</strong> and their <strong>target proteins</strong>.</p>
@@ -640,7 +643,7 @@
 <p>Finally, the <strong>APC/C</strong>, together with its activator <strong><font color="EE0000">Cdc20</font></strong>, triggers the <u>destruction of <strong>securin</strong> and <strong>cyclins</strong></u>, thereby <u>unleashing sister-chromatid separation and segregation and the completion of mitosis.</u> When mitosis is complete, multiple mechanisms collaborate to <u>suppress <strong>Cdk</strong> activity</u>,  resulting in a <strong>stable G1 period.</strong></p>
 </blockquote>
 <h4 id="major-cell-cycle-regulatory-proteins"><a class="markdownIt-Anchor" href="#major-cell-cycle-regulatory-proteins"></a> Major cell cycle regulatory proteins</h4>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504173218623.png" srcset="/img/loading.gif" alt="image-20200504173218623" style="zoom:67%;" height = 700/>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504173218623.png" alt="image-20200504173218623" style="zoom:67%;" height = 700/>
 <table>
     <caption> 
         Summary of the major cell cycle regulatory proteins
@@ -740,7 +743,7 @@
 <li>Initiation in late M-phase but start in the S-phase</li>
 </ul>
 <h3 id="1-cyclin-cdk-complexes-trigger-major-events-in-dna-replication"><a class="markdownIt-Anchor" href="#1-cyclin-cdk-complexes-trigger-major-events-in-dna-replication"></a> 1. Cyclin CDK complexes trigger major events in DNA replication</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174029501.png" srcset="/img/loading.gif" alt="image-20200504174029501" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174029501.png" alt="image-20200504174029501" /></p>
 <p>ORC: Origin recognition complex (ORC) binds to replication origin</p>
 <p>ORC recruits <strong><font color="EE0000">Cdc6</font></strong> and <strong><font color="EE0000">Cdt1</font></strong> to form <strong>pre-replicative complex (pre-RC)</strong>.</p>
 <blockquote>
@@ -759,7 +762,7 @@
 <h4 id="1st-initiation-formation-of-the-pre-rc-liscening"><a class="markdownIt-Anchor" href="#1st-initiation-formation-of-the-pre-rc-liscening"></a> 1st initiation: formation of the pre-RC: liscening</h4>
 <p>pre-RC formation is promoted by APC/C but inhibited by Cdks activity</p>
 <p>Late M/early G1: low Cdk activity but high APC/C activity: → pre-RC is formed.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174051057.png" srcset="/img/loading.gif" alt="image-20200504174051057" style="zoom:33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174051057.png" alt="image-20200504174051057" style="zoom:33%;" />
 <blockquote>
 <p>In late mitosis and early G1, the <strong>APC/C</strong> triggers the destruction  of a <strong>Cdt1</strong> <strong>inhibitor</strong> called <strong><font color="EE0000">geminin</font></strong>, thereby allowing <strong>Cdt1</strong> to be active. When the APC/C is turned off in late G1, geminin <u>accumulates</u> and inhibits the <strong>Cdt1</strong> that is not associated with DNA.</p>
 <p>In these various ways, <strong>preRC formation</strong> is prevented from <u>S phase to mitosis</u>, thereby ensuring that each origin is fired only once per cell cycle.</p>
@@ -774,7 +777,7 @@
 <li>Thirdly, pre-RC is formed: <strong>MCM/cdc6/cdt1/ORC</strong></li>
 </ol>
 <h4 id="2nd-formation-of-the-pre-initiation-complex"><a class="markdownIt-Anchor" href="#2nd-formation-of-the-pre-initiation-complex"></a> 2nd: formation of the pre-initiation complex</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174224856.png" srcset="/img/loading.gif" alt="image-20200504174224856" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174224856.png" alt="image-20200504174224856" /></p>
 <ol>
 <li>
 <p>Firstly: <strong>S-Cdk</strong> triggers phosphorylation and degradation of <strong>Cdc6</strong></p>
@@ -818,7 +821,7 @@
 </ul>
 <p>Cohesin forms giant <u>ringlike structures</u>, and it has been proposed that these surround the two sister chromatids</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174415289.png" srcset="/img/loading.gif" alt="image-20200504174415289" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174415289.png" alt="image-20200504174415289" /></p>
 <ul>
 <li>Cohesins:
 <ul>
@@ -833,7 +836,7 @@
 <p>DNA catenation is intertwining of sister DNA molecules which can be resolved by DNA topoisomerase II</p>
 <h3 id="3-centriole-replication"><a class="markdownIt-Anchor" href="#3-centriole-replication"></a> 3. Centriole Replication</h3>
 <p>centriole replication also happens during S phase</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174617569.png" srcset="/img/loading.gif" alt="image-20200504174617569" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174617569.png" alt="image-20200504174617569" style="zoom: 33%;" />
 <p>In G<sub>1</sub>, the two centrioles of centrosome separate by a few micrometers.</p>
 <p>During S phase, a daughter centriole begins to grow near the base of each mother centriole and at a right angle to it.</p>
 <p>The elongation of the daughter centriole is usually completed in G<sub>2</sub>.</p>
@@ -857,7 +860,7 @@
 </blockquote>
 <h3 id="1-entry-into-mitosis"><a class="markdownIt-Anchor" href="#1-entry-into-mitosis"></a> 1. Entry into Mitosis</h3>
 <p>Early events in Mitosis: M-Cdk drives entry into mitosis</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174637932.png" srcset="/img/loading.gif" alt="image-20200504174637932" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174637932.png" alt="image-20200504174637932" /></p>
 <p>M-Cdk (complex of <strong><font color="EE0000">Cdk1</font></strong> and <strong>M-cyclin</strong>) and its effectors:</p>
 <ul>
 <li>Induce assembly of mitotic spindle and its attachment to the sister chromatids pairs</li>
@@ -903,7 +906,7 @@
 </ul>
 <p>The ability of M-Cdk to activate its own activator (<strong>Cdc25</strong>) and inhibit its own inhibitor (<strong>Wee1</strong>) suggests that M-Cdk activation in mitosis involves <u>positive feedback loops</u></p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174809024.png" srcset="/img/loading.gif" alt="image-20200504174809024" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174809024.png" alt="image-20200504174809024" /></p>
 <p>Assembly of the complex from Cdk1 and M-cyclin (inactive!)</p>
 <p>Phosphorylation of inhibitory &amp; activating sites by Wee1 &amp; CAK (complex remains inactive!)</p>
 <p>Activation of the phosphatase Cdc25</p>
@@ -911,20 +914,20 @@
 <li>Active Cdc25 activates M-Cdk by removing the inhibitory phosphate (positive feedback)</li>
 <li>Simultaneous inhibition of the Cdk-inhibitory kinase Wee1 (positive feedback)</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174852212.png" srcset="/img/loading.gif" alt="image-20200504174852212" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504174852212.png" alt="image-20200504174852212" style="zoom:50%;" />
 <h3 id="3-the-stages-of-m-phase"><a class="markdownIt-Anchor" href="#3-the-stages-of-m-phase"></a> 3. The Stages of M-Phase</h3>
 <h4 id="prophase"><a class="markdownIt-Anchor" href="#prophase"></a> Prophase</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175101871.png" srcset="/img/loading.gif" alt="image-20200504175101871" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175101871.png" alt="image-20200504175101871" /></p>
 <h4 id="prometaphase"><a class="markdownIt-Anchor" href="#prometaphase"></a> Prometaphase</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175120378.png" srcset="/img/loading.gif" alt="image-20200504175120378" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175120378.png" alt="image-20200504175120378" /></p>
 <h4 id="metaphase"><a class="markdownIt-Anchor" href="#metaphase"></a> Metaphase</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175135255.png" srcset="/img/loading.gif" alt="image-20200504175135255" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175135255.png" alt="image-20200504175135255" /></p>
 <h4 id="anaphase"><a class="markdownIt-Anchor" href="#anaphase"></a> Anaphase</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175151561.png" srcset="/img/loading.gif" alt="image-20200504175151561" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175151561.png" alt="image-20200504175151561" /></p>
 <h4 id="telophase"><a class="markdownIt-Anchor" href="#telophase"></a> Telophase</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175208356.png" srcset="/img/loading.gif" alt="image-20200504175208356" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175208356.png" alt="image-20200504175208356" /></p>
 <h4 id="cytokinesis"><a class="markdownIt-Anchor" href="#cytokinesis"></a> Cytokinesis</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175218738.png" srcset="/img/loading.gif" alt="image-20200504175218738" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175218738.png" alt="image-20200504175218738" /></p>
 <h3 id="4-some-details-of-these-m-phase-states"><a class="markdownIt-Anchor" href="#4-some-details-of-these-m-phase-states"></a> 4. Some Details of these M-Phase States</h3>
 <h4 id="sister-chromatin-condensation"><a class="markdownIt-Anchor" href="#sister-chromatin-condensation"></a> Sister Chromatin Condensation</h4>
 <p>The mitotic chromosome:</p>
@@ -952,13 +955,13 @@
 </blockquote>
 <p>Condensin might form a ring-like structure and ATP hydrolysis to drive condensation</p>
 <p>Condensins are phosphorylated and activated by M-Cdk</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175407485.png" srcset="/img/loading.gif" alt="image-20200504175407485" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175407485.png" alt="image-20200504175407485" /></p>
 <p>Possible roles of condensin in chromosome condensation:</p>
 <ul>
 <li>It is not clear how condensing restructures and compacts the chromosome DNA.</li>
 <li>It may form a ring structure that encircles loops of DNA within each sister chromatid….</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175502940.png" srcset="/img/loading.gif" alt="image-20200504175502940" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175502940.png" alt="image-20200504175502940" style="zoom:50%;" />
 <h4 id="disassembly-of-the-nuclear-envelope"><a class="markdownIt-Anchor" href="#disassembly-of-the-nuclear-envelope"></a> Disassembly of the nuclear envelope</h4>
 <p>M-Cdk and other mitotic protein kinases phosphorylate components of the nuclear pore complex and <strong>laminin</strong>.</p>
 <p>This promotes the disassembly of the nuclear envelope and of the <strong>nuclear lamina</strong> (the structural compound of the envelope).</p>
@@ -1000,7 +1003,7 @@
 <li>kinetochore microtubules</li>
 <li>interpolar microtubules</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175814163.png" srcset="/img/loading.gif" alt="image-20200504175814163" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504175814163.png" alt="image-20200504175814163" style="zoom:67%;" />
 <ul>
 <li>Two different mechanisms ensure bipolarity of spindles:</li>
 <li>Centrosome-dependent spindle formation
@@ -1022,7 +1025,7 @@
 <p><strong>Microtubule dynamics</strong> are controlled in the cell by a variety of regulatory proteins, including <strong>microtubule-associated proteins (MAPs)</strong> that <strong>promote stability and</strong> <strong>catastrophe factors</strong> that destabilize microtubule plus ends</p>
 <p>Many of these changes result from phosphorylation of specific proteins by <strong>M-Cdk</strong> and other <strong>mitotic protein kinases</strong></p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504181702742.png" srcset="/img/loading.gif" alt="image-20200504181702742" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504181702742.png" alt="image-20200504181702742" /></p>
 <p>Two mechanisms regulate microtubules dynamics:</p>
 <ul>
 <li>MAPs (Microtubule-associated proteins) <strong>stabilize</strong> arrays most of these factors are also regulated by phosphorylation (e.g., M-Cdk and other mitotic protein kinase)</li>
@@ -1079,11 +1082,11 @@
 <li><strong>Polar ejection force</strong> produced by <strong>plus-end kinesin</strong> (kinesin-4 and -10 motor). This is particularly important for aligning the chromosome at the metaphase plate.</li>
 </ol>
 <p>Kinetochore complex captures microtubules and harnesses force of depolymerization:</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504181900087.png" srcset="/img/loading.gif" alt="image-20200504181900087" style="zoom:25%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504181900087.png" alt="image-20200504181900087" style="zoom:25%;" />
 <p>Microtubule flux in the metaphase spindle:</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504181934289.png" srcset="/img/loading.gif" alt="image-20200504181934289" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504181934289.png" alt="image-20200504181934289" /></p>
 <p>forces may drive chromosome to the metaphase plate:</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504181953990.png" srcset="/img/loading.gif" alt="image-20200504181953990" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504181953990.png" alt="image-20200504181953990" style="zoom:50%;" />
 <h5 id="2-centrosomes"><a class="markdownIt-Anchor" href="#2-centrosomes"></a> (2) Centrosomes</h5>
 <blockquote>
 <p>In most somatic animal cells, each spindle pole is focused at a protein organelle called the <strong>centrosome</strong></p>
@@ -1107,7 +1110,7 @@
 </ul>
 <p>Although the resulting acentrosomal spindle can segregate chromosomes normally, it <u>lacks astral microtubules</u>, which are responsible for positioning the spindle in animal cells; as a result, the spindle is often mispositioned in the cell.</p>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180259773.png" srcset="/img/loading.gif" alt="image-20200504180259773" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180259773.png" alt="image-20200504180259773" style="zoom:50%;" />
 <p>M-Cdk promotes centrosome maturation: amount of <strong>γ-tubulin ring complex</strong> (<strong><font color="EE0000">γ-YuRC</font></strong> ) increases</p>
 <ul>
 <li>→ more nucleating microtubules.</li>
@@ -1136,7 +1139,7 @@
 </ul>
 </blockquote>
 <p>Kinesins and dynein help assemble and position the spindle</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180337655.png" srcset="/img/loading.gif" alt="image-20200504180337655" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180337655.png" alt="image-20200504180337655" /></p>
 <p>Molecular motor proteins, kinesins and dynein, push and pull the centrosomes to position them.</p>
 <ul>
 <li>kinesin-5: pushes centrosomes away from each other</li>
@@ -1148,7 +1151,7 @@
 <p>Mitotic Chromosomes Promote Bipolar Spindle Assembly</p>
 <p>By creating a local environment that favors both microtubule nucleation and microtubule stabilization, they play an active part in spindle formation.</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180445802.png" srcset="/img/loading.gif" alt="image-20200504180445802" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180445802.png" alt="image-20200504180445802" /></p>
 <ol>
 <li>Move one chromosome away from its position</li>
 <li>New microtubules around the new position form</li>
@@ -1156,18 +1159,18 @@
 </ol>
 <h6 id="ran"><a class="markdownIt-Anchor" href="#ran"></a> Ran</h6>
 <p>Mitotic chromosome-promoted bipolar spindle assembly via <strong>Ran GTPase</strong></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180531950.png" srcset="/img/loading.gif" alt="image-20200504180531950" style="zoom:70%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180531950.png" alt="image-20200504180531950" style="zoom:70%;" />
 <p>Chromosome-bound GEF activates Ran-GTP:</p>
 <ul>
 <li>Ran-GTP releases microtubule-stabilizing proteins</li>
 <li>Ran-GTP stimulates local nucleation and stabilizes microtubules around chromosomes</li>
 </ul>
 <h6 id="acentrosomal-spindle-assembly"><a class="markdownIt-Anchor" href="#acentrosomal-spindle-assembly"></a> Acentrosomal spindle assembly</h6>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180648831.png" srcset="/img/loading.gif" alt="image-20200504180648831" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180648831.png" alt="image-20200504180648831" /></p>
 <p>Kinesin-5 cross-links microtubules and pushes minus ends towards the spindle poles (in opposite directions)</p>
 <p>Kinesins-4 and -10 push the minus ends away from the chromosomes</p>
 <p>Dynein and Kinesin-14 cross-link and focus minus ends to form two spindle poles</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180700750.png" srcset="/img/loading.gif" alt="image-20200504180700750" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180700750.png" alt="image-20200504180700750" style="zoom:50%;" />
 <p>The acentrosomal spindle assembly:</p>
 <ul>
 <li>Exists in higher plants</li>
@@ -1184,9 +1187,9 @@
 </blockquote>
 <p>Kinetochore attach sister chromatids to the spindle</p>
 <p>Kinetochore: a multilayer protein structure that is built on the heterochromatin in the centromere</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180918336.png" srcset="/img/loading.gif" alt="image-20200504180918336" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180918336.png" alt="image-20200504180918336" /></p>
 <p>The capture of centrosome microtubules by kinetochores (trial &amp; error)</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180933061.png" srcset="/img/loading.gif" alt="image-20200504180933061" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504180933061.png" alt="image-20200504180933061" /></p>
 <p>Three steps to success:</p>
 <ol>
 <li>Firstly, short microtubules close to chromosomes interact with kinetochores</li>
@@ -1208,14 +1211,14 @@
 <li>The relative importance of these two forces during anaphase varies in different cell types: <u>in <strong>embryonic cells</strong>, chromosome movement depends mainly on <strong>microtubule flux</strong>,</u> for example, whereas movement <u>in yeast and vertebrate somatic cells results primarily from forces generated at the kinetochore.</u></li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182510730.png" srcset="/img/loading.gif" alt="image-20200504182510730" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182510730.png" alt="image-20200504182510730" /></p>
 <p>Unattached or incorrectly attached chromosomes results in mitotic arrest</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182533924.png" srcset="/img/loading.gif" alt="image-20200504182533924" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182533924.png" alt="image-20200504182533924" /></p>
 <h5 id="7-eliminate-errors"><a class="markdownIt-Anchor" href="#7-eliminate-errors"></a> (7) Eliminate Errors</h5>
 <ol>
 <li>eliminate errors in kinetochore attachment in the sister chromatids</li>
 </ol>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182610536.png" srcset="/img/loading.gif" alt="image-20200504182610536" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182610536.png" alt="image-20200504182610536" /></p>
 <blockquote>
 <p>Incorrect attachments are corrected by a system of trial and error</p>
 <ul>
@@ -1242,16 +1245,16 @@
 <ol start="2">
 <li>Unattached chromosomes prevent activation of anaphase promoting complex</li>
 </ol>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182713011.png" srcset="/img/loading.gif" alt="image-20200504182713011" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182713011.png" alt="image-20200504182713011" /></p>
 <h4 id="triggers-into-anaphase"><a class="markdownIt-Anchor" href="#triggers-into-anaphase"></a> Triggers into Anaphase</h4>
 <h5 id="1-chromosome-attachment"><a class="markdownIt-Anchor" href="#1-chromosome-attachment"></a> (1) Chromosome Attachment</h5>
 <p>Chromosome attachment to microtubules from both centrosomes triggers anaphase</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182020436.png" srcset="/img/loading.gif" alt="image-20200504182020436" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182020436.png" alt="image-20200504182020436" style="zoom: 33%;" />
 <p>All these activities reach a balance that determines the final length of spindles.</p>
 <ul>
 <li>→mechano-sensing? (Aurora B kinase or undiscovered lands?)</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182047447.png" srcset="/img/loading.gif" alt="image-20200504182047447" style="zoom:93%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182047447.png" alt="image-20200504182047447" style="zoom:93%;" />
 <h5 id="2-activation-of-apcc"><a class="markdownIt-Anchor" href="#2-activation-of-apcc"></a> (2) Activation of APC/C</h5>
 <blockquote>
 <p>The APC/C Triggers Sister-Chromatid Separation and the Completion of Mitosis</p>
@@ -1280,14 +1283,14 @@
 <p>The ability of <strong>M-Cdk</strong> to promote <strong>Cdc20–APC/C</strong> activity creates a <strong>negative feedback</strong> loop: M-Cdk sets in motion a regulatory process that leads to cyclin destruction and thus its own inactivation.</p>
 </blockquote>
 <p>Activation of APC/C triggers entry into anaphase and separation of chromosomes</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182210657.png" srcset="/img/loading.gif" alt="image-20200504182210657" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182210657.png" alt="image-20200504182210657" /></p>
 <p>Anaphase promoting complex is an E3 ubiquitin ligase that targets mitotic proteins for degradation</p>
 <ul>
 <li>APC/C is an <strong>E3 ubiquitin ligase</strong> that marks the S/M-cyclins for degradation by the <strong>26S proteasome</strong></li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182241932.png" srcset="/img/loading.gif" alt="image-20200504182241932" style="zoom:40%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182241932.png" alt="image-20200504182241932" style="zoom:40%;" />
 <p>APC/C degrades securing which triggers degradation of <strong>cohesins</strong> to allow chromosomes to separate</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182330107.png" srcset="/img/loading.gif" alt="image-20200504182330107" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182330107.png" alt="image-20200504182330107" style="zoom:80%;" />
 <ul>
 <li>APC/C activates the separase by poly-ubiquitin-mediated proteasomal degradation of <strong>securin</strong> (release of separase).</li>
 <li>Separase cleaves cohesins on sister chromatids.</li>
@@ -1328,7 +1331,7 @@
 <li>The structure underlying this process is the <strong>contractile ring</strong>—a dynamic assembly composed of <strong>actin filaments</strong>, <strong><font color="EE0000">myosin II</font></strong> filaments, and many structural and regulatory proteins</li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182843682.png" srcset="/img/loading.gif" alt="image-20200504182843682" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182843682.png" alt="image-20200504182843682" /></p>
 <p>Actin-myosin filament rings assemble at the midpoint of a dividing cell</p>
 <blockquote>
 <p>Actin and Myosin II in the Contractile Ring Generate the Force for Cytokinesis</p>
@@ -1347,7 +1350,7 @@
 <li>The midbody persists as a tether between the two daughter cells and contains the remains of the <strong>central spindle</strong>, a large protein structure derived from the antiparallel interpolar microtubules of the spindle midzone, packed tightly together within a dense matrix material</li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182752197.png" srcset="/img/loading.gif" alt="image-20200504182752197" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182752197.png" alt="image-20200504182752197" /></p>
 <p>Force of myosin filaments constricts cell at midpoint</p>
 <h4 id="rhoa"><a class="markdownIt-Anchor" href="#rhoa"></a> RhoA</h4>
 <blockquote>
@@ -1360,7 +1363,7 @@
 <p><strong>RhoA</strong> is thought to be activated by a guanine nucleotide exchange factor (Rho-GEF), which is found at the cell cortex at the future division site and stimulates the release of GDP and binding of GTP to RhoA</p>
 </blockquote>
 <p>Small GTPase RhoA regulate formation of the contractile ring</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182917049.png" srcset="/img/loading.gif" alt="image-20200504182917049" style="zoom:33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504182917049.png" alt="image-20200504182917049" style="zoom:33%;" />
 <p>Actin filament formation and myosin II assembly and ring contraction is promoted by the Ras GTPase RhoA</p>
 <ul>
 <li>RhoA is activated by a GEF at the cell cortex</li>
@@ -1388,7 +1391,7 @@
 </ol>
 </blockquote>
 <p>Three models have been proposed, but no agreement yet…</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183017490.png" srcset="/img/loading.gif" alt="image-20200504183017490" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183017490.png" alt="image-20200504183017490" /></p>
 <blockquote>
 <p>In some cell types, the site of ring assembly is chosen <u>before mitosis</u>. In budding yeasts, for example, a ring of proteins called <strong><font color="EE0000">septins</font></strong> assembles in late G<sub>1</sub> at  the future division site.</p>
 <ul>
@@ -1397,12 +1400,12 @@
 </ul>
 </blockquote>
 <h4 id="localization-of-cytokinesis-regulators-at-the-central-spindle"><a class="markdownIt-Anchor" href="#localization-of-cytokinesis-regulators-at-the-central-spindle"></a> Localization of cytokinesis regulators at the central spindle</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183104789.png" srcset="/img/loading.gif" alt="image-20200504183104789" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183104789.png" alt="image-20200504183104789" /></p>
 <ul>
 <li><strong>Cyk4</strong> and <strong>RhoA</strong></li>
 </ul>
 <p>Influence of aster microtubule on the cleavage plane</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183132491.png" srcset="/img/loading.gif" alt="image-20200504183132491" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183132491.png" alt="image-20200504183132491" /></p>
 <h4 id="the-phragmoplast-guides-cytokinesis-in-higher-plants"><a class="markdownIt-Anchor" href="#the-phragmoplast-guides-cytokinesis-in-higher-plants"></a> The Phragmoplast Guides Cytokinesis in Higher Plants</h4>
 <blockquote>
 <p>In most animal cells, the inward movement of the cleavage furrow depends on an <strong>increase in the surface area</strong> of the <strong>plasma membrane</strong>.</p>
@@ -1454,7 +1457,7 @@
 </blockquote>
 <p>Most divisions are symmetrical</p>
 <p>During development, asymmetrical division is typically associated with different fate in cell development, the spindle positioning is important and nicely controlled</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183242331.png" srcset="/img/loading.gif" alt="image-20200504183242331" style="zoom:60%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183242331.png" alt="image-20200504183242331" style="zoom:60%;" />
 <h3 id="5-mitosis-without-cytokinesis"><a class="markdownIt-Anchor" href="#5-mitosis-without-cytokinesis"></a> 5. Mitosis without cytokinesis</h3>
 <blockquote>
 <p>A cell in which multiple nuclei share the same cytoplasm is called a <strong>syncytium (多核体;含胞体)</strong>. This arrangement greatly speeds up <strong>early development</strong>,</p>
@@ -1469,7 +1472,7 @@
 </ol>
 <p>Mitosis without cytokinesis: Drosophila embryo</p>
 <p><strong>Syncytium and cellularization for Drosophila embryo</strong></p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183321566.png" srcset="/img/loading.gif" alt="image-20200504183321566" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200504183321566.png" alt="image-20200504183321566" /></p>
 <h3 id="6-the-g1-phase-is-a-stable-state-of-cdk-inactivity"><a class="markdownIt-Anchor" href="#6-the-g1-phase-is-a-stable-state-of-cdk-inactivity"></a> 6. The G1 Phase Is a Stable State of Cdk Inactivity</h3>
 <blockquote>
 <p>A key regulatory event in late M phase is the inactivation of Cdks, which is driven primarily by APC/C-dependent cyclin destruction. As described earlier, the inactivation of Cdks in late M phase has many functions: it triggers the events of late mitosis, <u>promotes cytokinesis</u>, and enables the synthesis of prereplicative complexes at DNA replication origins.</p>
@@ -1480,387 +1483,178 @@
 <p>Cdh1–APC/C activation, CKI accumulation, and decreased cyclin gene expression act together to ensure that the early G1 phase is a time when essentially all Cdk activity is suppressed.</p>
 </blockquote>
 
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/Cell-Biology/">Cell Biology</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/07/24/L19%20Control%20of%20cell%20division%20and%20cell%20growth/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">L19 Control of cell division and cell growth</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/07/18/L17%20Cell%20communication%20via%20enzyme-coupled%20receptors/">
-                        <span class="hidden-mobile">L17 Cell communication via enzyme-coupled receptors</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
+    </div>
 
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
+    
+    
+    
 
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
-
-
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Cell-Biology/" rel="tag"># Cell Biology</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/18/L17%20Cell%20communication%20via%20enzyme-coupled%20receptors/" rel="prev" title="L17 Cell communication via enzyme-coupled receptors">
+      <i class="fa fa-chevron-left"></i> L17 Cell communication via enzyme-coupled receptors
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/24/L19%20Control%20of%20cell%20division%20and%20cell%20growth/" rel="next" title="L19 Control of cell division and cell growth">
+      L19 Control of cell division and cell growth <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一-overview-of-the-cell-division"><span class="nav-number">1.</span> <span class="nav-text"> 一、Overview of the cell division</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#the-major-events-in-cell-cycle"><span class="nav-number">1.1.</span> <span class="nav-text"> The major events in cell cycle</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-identification-and-quantification-of-cells-in-s-phase-brdu-or-edu-incorporation"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 1. Identification and quantification of cells in S-phase: BrdU or EdU incorporation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-cell-cycle-distribution-analysis"><span class="nav-number">1.1.2.</span> <span class="nav-text"> 3. Cell cycle-distribution analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#flow-cytometry"><span class="nav-number">1.1.2.1.</span> <span class="nav-text"> Flow Cytometry</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#light-microscopy"><span class="nav-number">1.1.2.2.</span> <span class="nav-text"> Light Microscopy</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-cell-cycle-control-system"><span class="nav-number">2.</span> <span class="nav-text"> 二、Cell-Cycle Control System</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#model-organisms-to-study-cell-cycle"><span class="nav-number">2.1.</span> <span class="nav-text"> Model organisms to study cell cycle</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-model-systems-to-study-the-cell-cycle-xenopus-oocytes"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 1. Model systems to study the cell cycle: Xenopus oocytes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-model-organisms-to-study-the-cell-cycle-yeast"><span class="nav-number">2.1.2.</span> <span class="nav-text"> 2. Model organisms to study the cell cycle: Yeast</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cell-cycle-related-regulatory-molecules"><span class="nav-number">2.2.</span> <span class="nav-text"> Cell Cycle Related Regulatory Molecules</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-cdks"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 1. Cdks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-cyclins"><span class="nav-number">2.2.2.</span> <span class="nav-text"> 2. Cyclins</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cyclin-cdk-complex"><span class="nav-number">2.2.2.1.</span> <span class="nav-text"> Cyclin-Cdk Complex</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#waves-of-cyclin-expression-and-degradation"><span class="nav-number">2.2.2.2.</span> <span class="nav-text"> Waves of cyclin expression and degradation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cdk-activation"><span class="nav-number">2.2.2.3.</span> <span class="nav-text"> Cdk Activation</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-mitosis-promoting-factor-mpf"><span class="nav-number">2.2.3.</span> <span class="nav-text"> 3. Mitosis Promoting Factor (MPF)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#major-cyclins-and-cdks-of-vertebrates-and-budding-yeast"><span class="nav-number">2.2.3.1.</span> <span class="nav-text"> Major cyclins and Cdks of vertebrates and budding yeast</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-cki"><span class="nav-number">2.2.4.</span> <span class="nav-text"> 4. CKI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-apcc"><span class="nav-number">2.2.5.</span> <span class="nav-text"> 5. APC&#x2F;C</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-scf"><span class="nav-number">2.2.6.</span> <span class="nav-text"> 6. SCF</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#summary-cell-cycle-control-system"><span class="nav-number">2.3.</span> <span class="nav-text"> Summary: cell cycle control system</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-cell-cycle-control-also-depends-on-transcriptional-regulation"><span class="nav-number">2.3.1.</span> <span class="nav-text"> 1. Cell-Cycle Control Also Depends on Transcriptional Regulation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-the-cell-cycle-control-system-functions-as-a-network-of-biochemical-switches"><span class="nav-number">2.3.2.</span> <span class="nav-text"> 2. The Cell-Cycle Control System Functions as a Network of  Biochemical Switches</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#major-cell-cycle-regulatory-proteins"><span class="nav-number">2.3.2.1.</span> <span class="nav-text"> Major cell cycle regulatory proteins</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三-the-cell-cycle-states"><span class="nav-number">3.</span> <span class="nav-text"> 三、The Cell Cycle States</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#s-phase"><span class="nav-number">3.1.</span> <span class="nav-text"> S-phase</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-cyclin-cdk-complexes-trigger-major-events-in-dna-replication"><span class="nav-number">3.1.1.</span> <span class="nav-text"> 1. Cyclin CDK complexes trigger major events in DNA replication</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1st-initiation-formation-of-the-pre-rc-liscening"><span class="nav-number">3.1.1.1.</span> <span class="nav-text"> 1st initiation: formation of the pre-RC: liscening</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2nd-formation-of-the-pre-initiation-complex"><span class="nav-number">3.1.1.2.</span> <span class="nav-text"> 2nd: formation of the pre-initiation complex</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#summary"><span class="nav-number">3.1.1.3.</span> <span class="nav-text"> Summary</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-cohesins-tether-sister-chromatids"><span class="nav-number">3.1.2.</span> <span class="nav-text"> 2. Cohesins Tether Sister Chromatids</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-centriole-replication"><span class="nav-number">3.1.3.</span> <span class="nav-text"> 3. Centriole Replication</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mitosis"><span class="nav-number">3.2.</span> <span class="nav-text"> Mitosis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-entry-into-mitosis"><span class="nav-number">3.2.1.</span> <span class="nav-text"> 1. Entry into Mitosis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-activation-of-m-cdk-complex-mitosis-onset"><span class="nav-number">3.2.2.</span> <span class="nav-text"> 2. Activation of M-Cdk Complex - Mitosis Onset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-the-stages-of-m-phase"><span class="nav-number">3.2.3.</span> <span class="nav-text"> 3. The Stages of M-Phase</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#prophase"><span class="nav-number">3.2.3.1.</span> <span class="nav-text"> Prophase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#prometaphase"><span class="nav-number">3.2.3.2.</span> <span class="nav-text"> Prometaphase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#metaphase"><span class="nav-number">3.2.3.3.</span> <span class="nav-text"> Metaphase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#anaphase"><span class="nav-number">3.2.3.4.</span> <span class="nav-text"> Anaphase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#telophase"><span class="nav-number">3.2.3.5.</span> <span class="nav-text"> Telophase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cytokinesis"><span class="nav-number">3.2.3.6.</span> <span class="nav-text"> Cytokinesis</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-some-details-of-these-m-phase-states"><span class="nav-number">3.2.4.</span> <span class="nav-text"> 4. Some Details of these M-Phase States</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sister-chromatin-condensation"><span class="nav-number">3.2.4.1.</span> <span class="nav-text"> Sister Chromatin Condensation</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-condensin"><span class="nav-number">3.2.4.1.1.</span> <span class="nav-text"> (1) Condensin</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#disassembly-of-the-nuclear-envelope"><span class="nav-number">3.2.4.2.</span> <span class="nav-text"> Disassembly of the nuclear envelope</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chromosome-separation"><span class="nav-number">3.2.4.3.</span> <span class="nav-text"> Chromosome Separation</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-microtubules"><span class="nav-number">3.2.4.3.1.</span> <span class="nav-text"> (1) Microtubules</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#microtubule-instability-in-mitosis"><span class="nav-number">3.2.4.3.1.1.</span> <span class="nav-text"> Microtubule instability in mitosis</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#multiple-forces"><span class="nav-number">3.2.4.3.1.2.</span> <span class="nav-text"> Multiple Forces</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-centrosomes"><span class="nav-number">3.2.4.3.2.</span> <span class="nav-text"> (2) Centrosomes</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-kinesins-and-dynein"><span class="nav-number">3.2.4.3.3.</span> <span class="nav-text"> (3) Kinesins and Dynein</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-bipolar-spindle-assembly"><span class="nav-number">3.2.4.3.4.</span> <span class="nav-text"> (4)  bipolar spindle assembly</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#ran"><span class="nav-number">3.2.4.3.4.1.</span> <span class="nav-text"> Ran</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#acentrosomal-spindle-assembly"><span class="nav-number">3.2.4.3.4.2.</span> <span class="nav-text"> Acentrosomal spindle assembly</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-kinetochore"><span class="nav-number">3.2.4.3.5.</span> <span class="nav-text"> (5) Kinetochore</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-anaphase-a-and-anaphase-b"><span class="nav-number">3.2.4.3.6.</span> <span class="nav-text"> (6) Anaphase A and Anaphase B</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-eliminate-errors"><span class="nav-number">3.2.4.3.7.</span> <span class="nav-text"> (7) Eliminate Errors</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#triggers-into-anaphase"><span class="nav-number">3.2.4.4.</span> <span class="nav-text"> Triggers into Anaphase</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-chromosome-attachment"><span class="nav-number">3.2.4.4.1.</span> <span class="nav-text"> (1) Chromosome Attachment</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-activation-of-apcc"><span class="nav-number">3.2.4.4.2.</span> <span class="nav-text"> (2) Activation of APC&#x2F;C</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-telophase"><span class="nav-number">3.2.5.</span> <span class="nav-text"> 5. Telophase</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cytokinesis-2"><span class="nav-number">3.3.</span> <span class="nav-text"> Cytokinesis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-actin-myosin-filament-rings-assemble"><span class="nav-number">3.3.1.</span> <span class="nav-text"> 1. Actin-myosin filament rings Assemble</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#rhoa"><span class="nav-number">3.3.1.1.</span> <span class="nav-text"> RhoA</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#spindles-determine-the-position-of-the-cleavage-furrow"><span class="nav-number">3.3.1.2.</span> <span class="nav-text"> Spindles determine the position of the cleavage furrow</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#localization-of-cytokinesis-regulators-at-the-central-spindle"><span class="nav-number">3.3.1.3.</span> <span class="nav-text"> Localization of cytokinesis regulators at the central spindle</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#the-phragmoplast-guides-cytokinesis-in-higher-plants"><span class="nav-number">3.3.1.4.</span> <span class="nav-text"> The Phragmoplast Guides Cytokinesis in Higher Plants</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-stages-of-cytokinesis"><span class="nav-number">3.3.2.</span> <span class="nav-text"> 2. Stages of Cytokinesis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-organelle-division-distribution"><span class="nav-number">3.3.3.</span> <span class="nav-text"> 3. Organelle division &#x2F; distribution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-symmetrical-and-asymmetrical-division"><span class="nav-number">3.3.4.</span> <span class="nav-text"> 4. Symmetrical and asymmetrical division</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-mitosis-without-cytokinesis"><span class="nav-number">3.3.5.</span> <span class="nav-text"> 5. Mitosis without cytokinesis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-the-g1-phase-is-a-stable-state-of-cdk-inactivity"><span class="nav-number">3.3.6.</span> <span class="nav-text"> 6. The G1 Phase Is a Stable State of Cdk Inactivity</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">187</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
+        
 
-    
 
-    
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
-  
-</footer>
-
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
-
-<!-- Plugins -->
-
 
   
-    <script  src="/js/lazyload.js" ></script>
-  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
+<script src="/js/schemes/muse.js"></script>
 
 
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
-      }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "L18 Cell Division- Mitosis&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
+<script src="/js/next-boot.js"></script>
 
 
 
 
-
-  
-
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
   
 
 
@@ -1872,20 +1666,14 @@
 
 
 
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
 
 
 
 
 
+  
 
+  
 
 </body>
-
-
 </html>
