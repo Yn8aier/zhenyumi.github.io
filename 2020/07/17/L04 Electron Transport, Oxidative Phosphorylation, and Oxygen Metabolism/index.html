@@ -1,257 +1,271 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
+
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L04 Electron Transport, Oxidative Phosphorylation, and Oxygen Metabolism - 鹘横海</title>
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="一、The Mitochondrion: Scene of the Action The average adult human synthesizes ATP at a rate of nearly 1021 molecules per second, equivalent to producing his or her own weight in ATP every day. Glycoly">
-<meta property="og:type" content="article">
-<meta property="og:title" content="L04 Electron Transport, Oxidative Phosphorylation, and Oxygen Metabolism">
-<meta property="og:url" content="https://zhenyumi.github.io/2020/07/17/L04%20Electron%20Transport,%20Oxidative%20Phosphorylation,%20and%20Oxygen%20Metabolism/index.html">
-<meta property="og:site_name" content="鹘横海">
-<meta property="og:description" content="一、The Mitochondrion: Scene of the Action The average adult human synthesizes ATP at a rate of nearly 1021 molecules per second, equivalent to producing his or her own weight in ATP every day. Glycoly">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307202658016.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307202826416.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203034720.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203347830.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203532541.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203725923.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203953172.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307204702133.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307204843382.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205103837.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205416390.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205439462.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205541402.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205901970.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205941693.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307210034151.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308115927001.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120005836.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120056115.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120148651.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120403273.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120707510.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120809907.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120901051.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120942963.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121111866.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121144923.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121237141.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121658513.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121717995.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121816132.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121907344.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122057492.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122204773.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200318103156346.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122218981.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200320200842416.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122307261.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122421515.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122519109.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122624044.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122630420.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122931587.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122939424.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123041236.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123216309.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123324021.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123345159.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123709531.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123835907.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308124000483.png">
-<meta property="article:published_time" content="2020-07-17T13:57:33.000Z">
-<meta property="article:modified_time" content="2020-07-17T13:57:36.000Z">
-<meta property="article:author" content="向海">
-<meta property="article:tag" content="Biochemistry II (Metabolism)">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307202658016.png">
-
-<link rel="canonical" href="https://zhenyumi.github.io/2020/07/17/L04%20Electron%20Transport,%20Oxidative%20Phosphorylation,%20and%20Oxygen%20Metabolism/">
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
-  <title>L04 Electron Transport, Oxidative Phosphorylation, and Oxygen Metabolism | 鹘横海</title>
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
   
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+<link  rel="stylesheet" href="/css/main.css" />
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<!-- 自定义样式保持在最底部 -->
 
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+ 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">鹘横海</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">兴趣使然的记事网站</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
 </nav>
 
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20II%20%28Metabolism%29/Ghost%20of%20Tsushima.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
 
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-17 21:57">
+      2020年7月17日 晚上
+    </time>
   </div>
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
+<div class="mt-1">
   
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4.5k 字
+    </span>
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/17/L04%20Electron%20Transport,%20Oxidative%20Phosphorylation,%20and%20Oxygen%20Metabolism/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="向海">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="鹘横海">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          L04 Electron Transport, Oxidative Phosphorylation, and Oxygen Metabolism
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-07-17 21:57:33 / 修改时间：21:57:36" itemprop="dateCreated datePublished" datetime="2020-07-17T21:57:33+08:00">2020-07-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
+  
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
       
-        <h1 id="一-the-mitochondrion-scene-of-the-action"><a class="markdownIt-Anchor" href="#一-the-mitochondrion-scene-of-the-action"></a> 一、The Mitochondrion: Scene of the Action</h1>
+      
+      22
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <!-- 鼠标烟花特效 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/fireworks.js"></script>
+
+    <!--浏览器搞笑标题-->
+    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+
+    <!--动态线条背景-->
+    <!--<script type="text/javascript"
+    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>-->
+
+
+    
+      
+<head>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：4 个月前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-the-mitochondrion-scene-of-the-action"><span class="post-toc-text"> 一、The Mitochondrion: Scene of the Action</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#localization-of-respiratory-processes-in-the-mitochondrion"><span class="post-toc-text"> Localization of respiratory processes in the mitochondrion</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-electron-transport"><span class="post-toc-text"> 二、Electron Transport</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#respiratory-electron-carriers-in-the-mitochondrion"><span class="post-toc-text"> Respiratory electron carriers in the mitochondrion</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#electron-carriers-in-the-respiratory-chain"><span class="post-toc-text"> Electron Carriers in the Respiratory Chain</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-structures-of-ironsulfur-clusters"><span class="post-toc-text"> 1. Structures of iron–sulfur clusters</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-coenzyme-q"><span class="post-toc-text"> 2. Coenzyme Q</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-cytochromes"><span class="post-toc-text"> 3. Cytochromes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#absorption-spectra-of-cytochromes"><span class="post-toc-text"> Absorption spectra of cytochromes</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#the-uhemesu-found-uin-cytochromesu"><span class="post-toc-text"> The hemes found in cytochromes</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#determining-the-sequence-of-respiratory-electron-carriers"><span class="post-toc-text"> Determining the sequence of respiratory electron carriers</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#difference-spectra-差分光谱-of-mitochondria"><span class="post-toc-text"> Difference spectra (差分光谱) of mitochondria</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#sites-of-action-of-some-respiratory-inhibitors-and-artificial-electron-acceptors"><span class="post-toc-text"> Sites of action of some respiratory inhibitors and artificial electron acceptors</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#multiprotein-complexes-in-the-mitochondrial-respiratory-assembly"><span class="post-toc-text"> Multiprotein complexes in the mitochondrial respiratory assembly</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-complex-i"><span class="post-toc-text"> 1. Complex Ⅰ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#structure-and-function-of-complex-i-nadhcoenzyme-q-reductase"><span class="post-toc-text"> Structure and function of complex I (NADH–coenzyme Q reductase)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-complex-ii"><span class="post-toc-text"> 2. Complex Ⅱ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#structure-of-complex-ii-succinate-dehydrogenase"><span class="post-toc-text"> Structure of complex II (succinate dehydrogenase)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-complex-iii"><span class="post-toc-text"> 3. Complex Ⅲ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#structure-of-complex-iii-coenzyme-qcytochrome-c-oxidoreductase氧化还原酶"><span class="post-toc-text"> Structure of Complex III (coenzyme Q:cytochrome c oxidoreductase（氧化还原酶）)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-complex-iv"><span class="post-toc-text"> 4. Complex Ⅳ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#structure-of-cytochrome-c-oxidase-complex-iv"><span class="post-toc-text"> Structure of cytochrome c oxidase (complex IV)</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-oxidative-phosphorylation"><span class="post-toc-text"> 三、Oxidative Phosphorylation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#uchemiosmotic-化学渗透的-coupling-of-electron-transport-andu-atp-synthesis"><span class="post-toc-text"> Chemiosmotic (化学渗透的) coupling of electron transport and ATP synthesis</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-uncouplers-act-by-dissipating-the-proton-gradient"><span class="post-toc-text"> 1. Uncouplers Act by Dissipating the Proton Gradient</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-structure-of-the-f0f1-complex-complex-v"><span class="post-toc-text"> 2. Structure of the F0F1 complex (Complex Ⅴ)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-structure-of-the-mitochondrial-atp-synthase-complex"><span class="post-toc-text"> 3. Structure of the mitochondrial ATP synthase complex</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#binding-change-model-for-atp-synthase"><span class="post-toc-text"> Binding change model for ATP synthase</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#the-uexperimental-systemu-that-permits-observation-of-rotation-in-the-f1-component-of-f1f0-atp-synthase"><span class="post-toc-text"> The experimental system that permits observation of rotation in the F1 component of F1F0 ATP synthase</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-proton-driven-rotation-of-the-c-ring-of-the-component-of-atp-synthase"><span class="post-toc-text"> 4. Proton-driven rotation of the c-ring of the component of ATP synthase</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#experimental-demonstration-of-respiratory-control"><span class="post-toc-text"> Experimental demonstration of respiratory control</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#respiratory-control"><span class="post-toc-text"> Respiratory Control</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#reversibility-of-f1f0-atp-synthase"><span class="post-toc-text"> Reversibility of F1F0 ATP synthase</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#major-inner-membrane-transport-systems-for-respiratory-substrates-and-products"><span class="post-toc-text"> Major inner membrane transport systems for respiratory substrates and products</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四-mitochondrial-transport-systems"><span class="post-toc-text"> 四、Mitochondrial Transport Systems</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五-energy-yields-from-oxidative-metabolism"><span class="post-toc-text"> 五、Energy Yields from Oxidative Metabolism</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#六-the-mitochondrial-genome-and-disease"><span class="post-toc-text"> 六、The Mitochondrial Genome and Disease</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#七-oxygen-as-a-substrate-for-other-metabolic-reactions"><span class="post-toc-text"> 七、Oxygen as a Substrate for Other Metabolic Reactions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cytochrome-p450"><span class="post-toc-text"> Cytochrome P450</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#八-reactive-oxygen-species-antioxidant-defenses-and-human-disease"><span class="post-toc-text"> 八、Reactive Oxygen Species, Antioxidant Defenses, and Human Disease</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#reactive-oxygen-species-ros-活性氧簇"><span class="post-toc-text"> Reactive oxygen species (ROS, 活性氧簇)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-hydroxyl-radical"><span class="post-toc-text"> 1. Hydroxyl Radical</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-superoxide"><span class="post-toc-text"> 2. Superoxide</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#disease"><span class="post-toc-text"> Disease</span></a></li></ol></li></ol>
+
+              <h1 id="一-the-mitochondrion-scene-of-the-action"><a class="markdownIt-Anchor" href="#一-the-mitochondrion-scene-of-the-action"></a> 一、The Mitochondrion: Scene of the Action</h1>
 <p>The average adult human synthesizes ATP at a rate of nearly <u>10<sup>21</sup> molecules per second</u>, equivalent to producing his or her <u>own weight in ATP every day</u>.</p>
 <p>Glycolysis and the citric acid cycle by themselves generate relatively little ATP directly.</p>
 <p>However, <u>under aerobic conditions, six dehydrogenation steps</u>:</p>
@@ -263,7 +277,7 @@
 <p>Collectively reduce <u>10 moles</u> of NAD+ to <u>NADH</u> and <u>2 moles</u> of FAD to FADH2 per mole of glucose.</p>
 <p><u>Reoxidation of these reduced electron carriers in the process termed cellular respiration generates most of the energy needed for ATP synthesis.</u></p>
 <p>Oxidation of <u>1 mole of NADH (FADH2)</u> by the respiratory chain provides sufficient energy for synthesis of <u>~2.5 (~ 1.5)</u> moles of ATP from ADP.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307202658016.png" alt="image-20200307202658016" style="zoom: 20%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307202658016.png" srcset="/img/loading.gif" alt="image-20200307202658016" style="zoom: 20%;" />
 <p>In eukaryotic cells <u>NADH and FADH2 are reoxidized by electron transport proteins</u> bound to the <u>inner mitochondrial membrane.</u></p>
 <p>A series of linked <u>oxidation and reduction</u> reactions occurs, with <u>electrons</u> being passed along <u>a series of electron carriers</u>—<strong>the electron transport chain</strong>.</p>
 <p>The final step is reduction of <u>O<sub>2</sub> to water</u>.</p>
@@ -282,7 +296,7 @@
 <p>Overview of oxidative phosphorylation:</p>
 <p><u>Reduced electron carriers</u>, produced by cytosolic dehydrogenases and mitochondrial oxidative pathways, become reoxidized by enzyme complexes bound in the inner membrane.</p>
 <p>These complexes actively <u>pump protons outward</u>, creating an energy gradient whose discharge through <u>complex V</u> drives ATP synthesis.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307202826416.png" alt="image-20200307202826416" style="zoom: 25%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307202826416.png" srcset="/img/loading.gif" alt="image-20200307202826416" style="zoom: 25%;" />
 <h1 id="二-electron-transport"><a class="markdownIt-Anchor" href="#二-electron-transport"></a> 二、Electron Transport</h1>
 <p>Embedded within the <u>inner membrane</u> are the protein carriers that constitute the respiratory chain.</p>
 <ol>
@@ -301,7 +315,7 @@
 <li>Protons then re-enter the matrix through a specific channel in <strong>complex V</strong>.</li>
 </ol>
 <p>The energy released by this exergonic process drives the endergonic synthesis of <strong>ATP</strong> from ADP and inorganic phosphate.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203034720.png" alt="image-20200307203034720" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203034720.png" srcset="/img/loading.gif" alt="image-20200307203034720" style="zoom: 33%;" />
 <h2 id="respiratory-electron-carriers-in-the-mitochondrion"><a class="markdownIt-Anchor" href="#respiratory-electron-carriers-in-the-mitochondrion"></a> Respiratory electron carriers in the mitochondrion</h2>
 <ul>
 <li><u>The sequence of electron carriers</u> that oxidize succinate and NAD-linked substrates in the inner membrane.</li>
@@ -339,9 +353,9 @@
 </ol>
 <h3 id="1-structures-of-ironsulfur-clusters"><a class="markdownIt-Anchor" href="#1-structures-of-ironsulfur-clusters"></a> 1. Structures of iron–sulfur clusters</h3>
 <p>The top panel illustrates the covalent attachment of a pair of clusters in a subunit of complex I from <em>Thermus thermophilus (嗜热菌)</em></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203347830.png" alt="image-20200307203347830" style="zoom:25%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203347830.png" srcset="/img/loading.gif" alt="image-20200307203347830" style="zoom:25%;" />
 <h3 id="2-coenzyme-q"><a class="markdownIt-Anchor" href="#2-coenzyme-q"></a> 2. Coenzyme Q</h3>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203532541.png" alt="image-20200307203532541" style="zoom:33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203532541.png" srcset="/img/loading.gif" alt="image-20200307203532541" style="zoom:33%;" />
 <p>The <u>cytochrome Q</u> carrier was found to be a benzoquinone (苯醌) linked to a number of isoprene units, usually <strong><u>10</u></strong> in mammalian cells and <strong><u>6</u></strong> in bacteria.</p>
 <p>Because the substance is <strong>ubiquitous (泛醌)</strong> in living cells, one group of researchers named it ubiquinone, while another called it <u>coenzyme Q, or Q.</u></p>
 <ol>
@@ -353,7 +367,7 @@
 <h3 id="3-cytochromes"><a class="markdownIt-Anchor" href="#3-cytochromes"></a> 3. Cytochromes</h3>
 <h4 id="absorption-spectra-of-cytochromes"><a class="markdownIt-Anchor" href="#absorption-spectra-of-cytochromes"></a> Absorption spectra of cytochromes</h4>
 <p>The plots show the absorption spectra of cytochromes <u>b, c, and a</u> in their <u>oxidized (red) and reduced (blue) states.</u></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203725923.png" alt="image-20200307203725923" style="zoom:20%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203725923.png" srcset="/img/loading.gif" alt="image-20200307203725923" style="zoom:20%;" />
 <ol>
 <li>Cytochrome b from Neurospora (脉孢霉)</li>
 <li>Cytochrome c from horse heart</li>
@@ -378,14 +392,14 @@
 <p>Four-helix bundle structure of cytochrome b562 from E. coli</p>
 </li>
 </ol>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203953172.png" alt="image-20200307203953172" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307203953172.png" srcset="/img/loading.gif" alt="image-20200307203953172" /></p>
 <h2 id="determining-the-sequence-of-respiratory-electron-carriers"><a class="markdownIt-Anchor" href="#determining-the-sequence-of-respiratory-electron-carriers"></a> Determining the sequence of respiratory electron carriers</h2>
 <p><strong>Standard reduction potentials (标准还原电位)</strong> of the major respiratory electron carriers:</p>
 <p>Three reactions in the respiratory chain have <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi><msup><mi>G</mi><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">\Delta G ^{\circ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathdefault">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.674115em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∘</span></span></span></span></span></span></span></span></span></span></span></span> values greater than <strong>-30.5 kJ/mol</strong> （课本P629）, the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi><msup><mi>G</mi><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">\Delta G ^{\circ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathdefault">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.674115em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∘</span></span></span></span></span></span></span></span></span></span></span></span> for ATP hydrolysis:</p>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mi>M</mi><mi>N</mi><mo>→</mo><mi>Q</mi><mo separator="true">;</mo><mtext> </mtext><mi>c</mi><mi>y</mi><mi>t</mi><mtext> </mtext><mi>b</mi><mo>→</mo><mi>c</mi><mi>y</mi><mi>t</mi><mtext> </mtext><msub><mi>c</mi><mn>1</mn></msub><mo separator="true">;</mo><mi>a</mi><mi>n</mi><mi>d</mi><mtext> </mtext><mi>c</mi><mi>y</mi><mi>t</mi><mtext> </mtext><mi>a</mi><mo>→</mo><msub><mi>O</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">FMN \rarr Q; \ cyt\ b \rarr cyt\ c_{1}; and \ cyt\ a \rarr O_{2}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">Q</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace"> </span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord mathdefault">t</span><span class="mspace"> </span><span class="mord mathdefault">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord mathdefault">t</span><span class="mspace"> </span><span class="mord"><span class="mord mathdefault">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mspace"> </span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord mathdefault">t</span><span class="mspace"> </span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
 <p>Reduction potential 的排列：</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307204702133.png" alt="image-20200307204702133" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307204702133.png" srcset="/img/loading.gif" alt="image-20200307204702133" /></p>
 <p><strong><u>Electrons are transferred from low-potential to high-potential carriers</u></strong></p>
 <h2 id="difference-spectra-差分光谱-of-mitochondria"><a class="markdownIt-Anchor" href="#difference-spectra-差分光谱-of-mitochondria"></a> Difference spectra (差分光谱) of mitochondria</h2>
 <p>These difference spectra of rat liver mitochondria were recorded in a double-beam spectrophotometer (双光束分光光度计).</p>
@@ -394,11 +408,11 @@
 <p>The peaks and shoulders refer to NADH, flavin, and the α and γ absorption bands, as indicated, for cytochromes a, a3, b, and c.</p>
 <p><u>The red line shows the effect of adding a respiratory inhibitor, <strong>antimycin A</strong>, which blocks electron flow from cytochrome b to c1.</u></p>
 <p>The inhibitor causes all of the carriers beyond cytochrome b to become fully oxidized, while NADH, flavin, and cytochrome b are in the reduced state. Note the expanded absorbance scale beyond 500 nm.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307204843382.png" alt="image-20200307204843382" style="zoom:40%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307204843382.png" srcset="/img/loading.gif" alt="image-20200307204843382" style="zoom:40%;" />
 <h4 id="sites-of-action-of-some-respiratory-inhibitors-and-artificial-electron-acceptors"><a class="markdownIt-Anchor" href="#sites-of-action-of-some-respiratory-inhibitors-and-artificial-electron-acceptors"></a> Sites of action of some respiratory inhibitors and artificial electron acceptors</h4>
 <p>This schematic of the respiratory chain from <u>NADH to O2</u> shows the sites of action of some useful <u>inhibitors (red)</u> and some <u>artificial electron acceptors (blue).</u></p>
 <p>Each acceptor is positioned according to its value (in parentheses), identifying the most likely site at which an <u>acceptor will withdraw electrons</u> from the respiratory chain when added to mitochondria.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205103837.png" alt="image-20200307205103837" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205103837.png" srcset="/img/loading.gif" alt="image-20200307205103837" /></p>
 <p>All of the carriers upstream of the inhibition site become reduced;</p>
 <p>All of the carriers downstream of the inhibition site become oxidized</p>
 <p><strong><u>The order of action of electron carriers in the respiratory chain was elucidated by:</u></strong></p>
@@ -413,18 +427,18 @@
 <p>The subscripts for the b cytochromes denote their spectral maxima.</p>
 <p>The two b hemes in complex III, identified as cyt b562 and cyt b566, are bound to the same polypeptide chain.</p>
 <p>The yellow arrows denote the energy released by the actions of complexes I, II, and IV used to drive the synthesis of ATP by complex V (ATP synthase).</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205416390.png" alt="image-20200307205416390" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205416390.png" srcset="/img/loading.gif" alt="image-20200307205416390" style="zoom:50%;" />
 <h3 id="1-complex-i"><a class="markdownIt-Anchor" href="#1-complex-i"></a> 1. Complex Ⅰ</h3>
 <p>The overall reaction catalyzed by the <u><strong>NADH dehydrogenase complex (complex I )</strong></u> is shown below.</p>
 <p>Because the electrons are subsequently used to reduce coenzyme Q, a more descriptive name for this complex is <u>NADH–coenzyme Q reductase.</u></p>
 <p>Electron transport through <strong>complex I</strong> is <u>coupled to the pumping of protons</u> from the matrix to the intermembrane space.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205439462.png" alt="image-20200307205439462" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205439462.png" srcset="/img/loading.gif" alt="image-20200307205439462" /></p>
 <h4 id="structure-and-function-of-complex-i-nadhcoenzyme-q-reductase"><a class="markdownIt-Anchor" href="#structure-and-function-of-complex-i-nadhcoenzyme-q-reductase"></a> Structure and function of complex I (NADH–coenzyme Q reductase)</h4>
 <p>Model of complex I from the yeast <em>Yarrowia lipolytica</em> (解脂耶氏酵母)</p>
 <p>X-ray structure of the entire complex I from the archaea <em>Thermus thermophilus</em> (嗜热菌).</p>
 <p>Proposed model of proton translocation by complex I. NADH binds near FMN.</p>
 <p>Proposed model for coupling of electron transport to proton pumping by complex I.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205541402.png" alt="image-20200307205541402" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205541402.png" srcset="/img/loading.gif" alt="image-20200307205541402" style="zoom: 33%;" />
 <ul>
 <li>NADH dehydrogenase</li>
 </ul>
@@ -438,11 +452,11 @@
 <p>The enzyme is composed of two hydrophilic subunits extending into the matrix, the FAD-binding subunit (blue) and the iron–sulfur subunit (yellow), and two <u>transmembrane</u> subunits (pink and gold).</p>
 <p>The path of electron transport from <u>FAD</u> through the three iron–sulfur clusters to coenzyme Q (UQ) is shown on the right.</p>
 <p>Succinate binds near <u>FAD i</u>n the blue subunit.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205901970.png" alt="image-20200307205901970" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205901970.png" srcset="/img/loading.gif" alt="image-20200307205901970" style="zoom: 33%;" />
 <p>On inner mitochondrial membrane (IMM), not in the matrix like all other citric acid cycle enzymes;</p>
 <p>Complex II does not pump protons</p>
 <p>Succinate + Q ⟶ fumarate + QH2</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205941693.png" alt="image-20200307205941693" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307205941693.png" srcset="/img/loading.gif" alt="image-20200307205941693" /></p>
 <p>CoQ is lipid-soluble, moving fast in the lipid bilayer membrane;</p>
 <p>CoQ draws electrons from (CoQ可以接收多个渠道的电子)：</p>
 <ol>
@@ -466,7 +480,7 @@
 </ul>
 </li>
 </ol>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307210034151.png" alt="image-20200307210034151" style="zoom: 67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200307210034151.png" srcset="/img/loading.gif" alt="image-20200307210034151" style="zoom: 67%;" />
 <p>Cyt c, a <u>peripheral</u> protein electron carrier, mobile within the intermembrane space (IMS).</p>
 <p>Transfer electrons from QH2 to cyt c (between complexes III and IV)</p>
 <p>Dimer each monomer: 10-11 proteins</p>
@@ -480,24 +494,24 @@
 <h4 id="structure-of-cytochrome-c-oxidase-complex-iv"><a class="markdownIt-Anchor" href="#structure-of-cytochrome-c-oxidase-complex-iv"></a> Structure of cytochrome c oxidase (complex IV)</h4>
 <p>Four electrons are donated, one at a time, by reduced cyt c, to the CuA center, through heme a, and on to the catalytic site (binuclear a3–CuB site) where one molecule of O2 is reduced, yielding two molecules of H2O.</p>
 <p>Protons are pumped from the matrix side to the intermembrane space (<strong>IMS</strong>) side of the membrane.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308115927001.png" alt="image-20200308115927001" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308115927001.png" srcset="/img/loading.gif" alt="image-20200308115927001" /></p>
 <p>The final stage of electron transport</p>
 <p>Large homodimeric complex</p>
 <p>Transfer electrons from reduced cyt c, through a, a3, to O2</p>
 <p>For electron transferred, complex IV pumps one   proton from matrix to IMS</p>
 <p><strong>Model of proposed supercomplex of complexes I, III, and IV:</strong></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120005836.png" alt="image-20200308120005836" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120005836.png" srcset="/img/loading.gif" alt="image-20200308120005836" style="zoom: 33%;" />
 <h1 id="三-oxidative-phosphorylation"><a class="markdownIt-Anchor" href="#三-oxidative-phosphorylation"></a> 三、Oxidative Phosphorylation</h1>
 <p>Experimental identification of “<u>coupling sites</u>.”</p>
 <p>Electron transport is restricted to particular parts of the chain by use of <u>selected electron donors, electron acceptors, and respiratory inhibitors, as indicated.</u></p>
 <p>For each segment of the chain that is thus isolated, <u>P/O ratios</u> are determined, allowing identification of coupling sites.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120056115.png" alt="image-20200308120056115" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120056115.png" srcset="/img/loading.gif" alt="image-20200308120056115" /></p>
 <p><u>ATP synthesis is quantified by phosphorylation (Pi used); electron pairs are measured as oxygen uptake</u></p>
 <h2 id="uchemiosmotic-化学渗透的-coupling-of-electron-transport-andu-atp-synthesis"><a class="markdownIt-Anchor" href="#uchemiosmotic-化学渗透的-coupling-of-electron-transport-andu-atp-synthesis"></a> <u>Chemiosmotic (化学渗透的) coupling of electron transport and</u> ATP synthesis</h2>
 <p>Protons are pumped by complexes I, III, and IV as electrons flow through the complexes, generating an electrochemical gradient across the membrane <u>(<strong>protonmotive force, pmf</strong>， 质子驱动力).</u></p>
 <p>Proton re-entry to the matrix, through the F0 channel of <u>ATP synthase (complex V)</u>, provides the energy to drive ATP synthesis.</p>
 <p><u>Chemiosmotic coupling</u>（化学渗透耦联） refers to the use of a transmembrane proton gradient to drive endergonic processes like ATP synthesis.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120148651.png" alt="image-20200308120148651" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120148651.png" srcset="/img/loading.gif" alt="image-20200308120148651" /></p>
 <p>“direct chemical coupling”: no</p>
 <p>Peter Mitchell (1961), British biochemist Nobel Prize in 1978</p>
 <p>Oxidation and phosphorylation are closely coupled!</p>
@@ -505,7 +519,7 @@
 <p>The lipophilic weak acids <strong>2,4-dinitrophenol (DNP, 2,4-二硝基苯酚)</strong> and <strong>trifluorocarbonylcyanide phenylhydrazone</strong> (<strong>FCCP</strong>, 三氟羰基氰苯腙) are called <u>uncoupling agents</u>, or <strong>uncouplers</strong> （解耦器）.</p>
 <p>Uncoupling agents, when added to mitochondria, <u>permit electron transport along the respiratory chain to O2 to occur in the absence of ATP synthesis.</u></p>
 <p>They u<u>ncouple the process of electron transport from the process of ATP synthesis.</u>  破坏H+ gradient，电子传递仍在进行，但是ATP不进行合成。</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120403273.png" alt="image-20200308120403273" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120403273.png" srcset="/img/loading.gif" alt="image-20200308120403273" style="zoom:50%;" />
 <p>dieting drug: kill people</p>
 <h3 id="2-structure-of-the-f0f1-complex-complex-v"><a class="markdownIt-Anchor" href="#2-structure-of-the-f0f1-complex-complex-v"></a> 2. Structure of the F<sub>0</sub>F<sub>1</sub> complex (Complex Ⅴ)</h3>
 <p>The <u>F<sub>0</sub>F<sub>1</sub> complex</u>, also called <u>ATP synthase or complex V</u>, contains an F<sub>1</sub> knob projecting into the mitochondrial matrix and connected by a central stalk to the F<sub>0</sub> base.</p>
@@ -519,26 +533,26 @@
 </ul>
 <p>The central stalk and the c-ring compose the “rotor（转子）” of ATP synthase.</p>
 <p>The remainder of the subunits make up the “stator（定子）,” a structure that prevents the rotation of the three dimers of F<sub>1</sub>.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120707510.png" alt="image-20200308120707510" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120707510.png" srcset="/img/loading.gif" alt="image-20200308120707510" style="zoom:80%;" />
 <h3 id="3-structure-of-the-mitochondrial-atp-synthase-complex"><a class="markdownIt-Anchor" href="#3-structure-of-the-mitochondrial-atp-synthase-complex"></a> 3. Structure of the mitochondrial ATP synthase complex</h3>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120809907.png" alt="image-20200308120809907" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120809907.png" srcset="/img/loading.gif" alt="image-20200308120809907" style="zoom: 50%;" />
 <h4 id="binding-change-model-for-atp-synthase"><a class="markdownIt-Anchor" href="#binding-change-model-for-atp-synthase"></a> Binding change model for ATP synthase</h4>
 <p>The <u>nucleotide binding site (catalytic site)</u> of the three dimers exists in <u>three different conformations</u>, termed <strong>loose (L), tight (T), and open (O).</strong></p>
 <p><u>The subunit rotates counterclockwise, driven by the passage of protons through channels in F0</u>, while the dimer assemblies are held stationary by a stator.</p>
 <p>Step 1 represents <u>120° rotation</u> of the subunit, leading to a conformational change in all three dimers, such that <u>the T site changes to an O site, leading to ATP release, and an O site changes to an L site, binding ADP and Pi.</u></p>
 <p>The third site changes from an <strong>L</strong> conformation, with loosely bound ADP and Pi, to <u>a T conformation</u>, where the <u>substrates are tightly bound</u>, leading to <strong>ATP formation</strong> in step 2.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120901051.png" alt="image-20200308120901051" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120901051.png" srcset="/img/loading.gif" alt="image-20200308120901051" style="zoom:50%;" />
 <h4 id="the-uexperimental-systemu-that-permits-observation-of-rotation-in-the-f1-component-of-f1f0-atp-synthase"><a class="markdownIt-Anchor" href="#the-uexperimental-systemu-that-permits-observation-of-rotation-in-the-f1-component-of-f1f0-atp-synthase"></a> The <u>experimental system</u> that permits observation of rotation in the F1 component of F1F0 ATP synthase</h4>
 <p>The cloned gene encoding the F1b subunit was modified by adding a sequence that encodes an <strong>oligohistidine</strong> sequence that binds to a nickel-coated bead (<u>Ni</u>-NTA coated bead) in the conformation shown.</p>
 <p>Thus, the complex was <u>immobilized on the bead</u> and attached to a glass coverslip.</p>
 <p><strong>Streptavidin</strong> is a protein used to couple <u>fluorescent-tagged actin to the subunit.</u></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120942963.png" alt="image-20200308120942963" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308120942963.png" srcset="/img/loading.gif" alt="image-20200308120942963" style="zoom:50%;" />
 <p><u>Fluorescence microscopic examination</u> showed that, following addition of <strong>ATP</strong> and its subsequent <u>hydrolysis</u> by the <u>catalytic subunits</u>, the actin molecule was rotating, which proved that the subunit itself was rotating.</p>
 <p>The time interval between images is 133 ms.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121111866.png" alt="image-20200308121111866" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121111866.png" srcset="/img/loading.gif" alt="image-20200308121111866" /></p>
 <h3 id="4-proton-driven-rotation-of-the-c-ring-of-the-component-of-atp-synthase"><a class="markdownIt-Anchor" href="#4-proton-driven-rotation-of-the-c-ring-of-the-component-of-atp-synthase"></a> 4. Proton-driven rotation of the c-ring of the component of ATP synthase</h3>
 <p>This model is based on the X-ray structure of the E. coli ATP synthase.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121144923.png" alt="image-20200308121144923" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121144923.png" srcset="/img/loading.gif" alt="image-20200308121144923" style="zoom:50%;" />
 <ul>
 <li>
 <p>No ADP: stops it</p>
@@ -555,29 +569,29 @@
 <p>ADP stimulates respiration only until all of the ADP + Pi has been converted to ATP.</p>
 <p>Oxygen uptake is recorded in moles O, because one pair of electrons reduces one atom of O, not one molecule of O2.</p>
 <p>加入ADP后，O2的消耗显著增多，之后又恢复正常，后加入2倍浓度的ADP，消耗量大致也提升2倍：</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121237141.png" alt="image-20200308121237141" style="zoom:42%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121237141.png" srcset="/img/loading.gif" alt="image-20200308121237141" style="zoom:42%;" />
 <p>In most aerobic cells the level of <u>ATP exceeds that of ADP by 4- to 10-fold.</u></p>
 <p>It is convenient to think of respiratory control as a dependence of respiration on <u>ADP as a substrate for phosphorylation.</u></p>
 <p>If the energy demands on a cell cause ATP to be consumed at high rates, the <u>resultant accumulation of ADP will stimulate respiration</u>, with concomitant activation of ATP resynthesis.</p>
 <p>Conversely, <u>in a relaxed and well-nourished cell, ATP accumulates</u> at the expense（开支，消费） of ADP, and the <u>depletion of ADP limits the rate of both electron transport and its own phosphorylation to ATP.</u></p>
 <p>Thus, the energy-generating capacity of the cell is closely attuned (协调) to its <u>energy demands.</u></p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121658513.png" alt="image-20200308121658513" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121658513.png" srcset="/img/loading.gif" alt="image-20200308121658513" /></p>
 <p>Effects of an inhibitor and an uncoupler on oxygen uptake and ATP synthesis.</p>
 <p><u>DNP uncouples respiration from phosphorylation</u> so that <u>O2 uptake is stimulated even in the presence of oligomycin (ATP synthase inhibitor), but ATP synthesis remains blocked.</u></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121717995.png" alt="image-20200308121717995" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121717995.png" srcset="/img/loading.gif" alt="image-20200308121717995" style="zoom:80%;" />
 <h2 id="respiratory-control"><a class="markdownIt-Anchor" href="#respiratory-control"></a> Respiratory Control</h2>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121816132.png" alt="image-20200308121816132" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121816132.png" srcset="/img/loading.gif" alt="image-20200308121816132" /></p>
 <h2 id="reversibility-of-f1f0-atp-synthase"><a class="markdownIt-Anchor" href="#reversibility-of-f1f0-atp-synthase"></a> Reversibility of F<sub>1</sub>F<sub>0</sub> ATP synthase</h2>
 <p>In <u>normally</u> respiring mitochondria, the <strong>pmf (proton motive force)</strong> is high and ATP synthase operates in the direction of ATP synthesis. The ATP is exchanged for cytoplasmic ADP via the adenine nucleotide translocase (<strong>ant</strong>).</p>
 <p>During <u>hypoxia（低氧）</u>, the pmf falls, and the cell relies mainly on <u>homolactic (or alcoholic)</u> <u>fermentation</u> for ATP production. This ATP enters the matrix in exchange for ADP.</p>
 <ul>
 <li>F1F0 ATP synthase operates as a <u>proton-translocating ATPase</u>, pumping protons out of the matrix, temporarily sustaining the <u>pmf</u> to support other processes, such as <u>metabolite transport.</u></li>
 </ul>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121907344.png" alt="image-20200308121907344" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308121907344.png" srcset="/img/loading.gif" alt="image-20200308121907344" /></p>
 <h2 id="major-inner-membrane-transport-systems-for-respiratory-substrates-and-products"><a class="markdownIt-Anchor" href="#major-inner-membrane-transport-systems-for-respiratory-substrates-and-products"></a> Major inner membrane transport systems for respiratory substrates and products</h2>
 <p>The <u>ADP/ATP carrier</u> and the <u>phosphate translocase</u> move substrates for oxidative phosphorylation (ADP and Pi) into the mitochondrion and the product (ATP) out.</p>
 <p>Other transport systems move <u>substrates and products for citric acid cycle</u> oxidation into or out of the matrix, as dictated by the metabolic needs of the cell.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122057492.png" alt="image-20200308122057492" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122057492.png" srcset="/img/loading.gif" alt="image-20200308122057492" style="zoom:67%;" />
 <h1 id="四-mitochondrial-transport-systems"><a class="markdownIt-Anchor" href="#四-mitochondrial-transport-systems"></a> 四、Mitochondrial Transport Systems</h1>
 <p><u>Electrons are transported into mitochondria by <strong>metabolic shuttles.</strong></u></p>
 <p><u>Reducing equivalents are shuttled from cytosol into mitochondria.</u></p>
@@ -585,8 +599,8 @@
 <li>The <u>dihydroxyacetone phosphate/glycerol-3-phosphate shuttle.</u></li>
 <li>The <u>malate/aspartate shuttle</u></li>
 </ol>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122204773.png" alt="image-20200308122204773" style="zoom:67%;" />
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200318103156346.png" alt="image-20200318103156346" /></p>
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122204773.png" srcset="/img/loading.gif" alt="image-20200308122204773" style="zoom:67%;" />
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200318103156346.png" srcset="/img/loading.gif" alt="image-20200318103156346" /></p>
 <ol>
 <li>The <strong>malate/aspartate shuttle:</strong>
 <ol>
@@ -607,9 +621,9 @@
 </li>
 </ol>
 <h1 id="五-energy-yields-from-oxidative-metabolism"><a class="markdownIt-Anchor" href="#五-energy-yields-from-oxidative-metabolism"></a> 五、Energy Yields from Oxidative Metabolism</h1>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122218981.png" alt="image-20200308122218981" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122218981.png" srcset="/img/loading.gif" alt="image-20200308122218981" /></p>
 <p>The complete oxidation of 1 mole of glucose generates about <strong>30–32</strong> moles of ATP synthesized from ADP.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200320200842416.png" alt="image-20200320200842416" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200320200842416.png" srcset="/img/loading.gif" alt="image-20200320200842416" /></p>
 <p><strong><u>Now turn the NADH, FADH<sub>2</sub>, ATP all to ATP</u></strong>:</p>
 <ul>
 <li>In glycolysis, produces 5 or 7 ATPs, dur to the different shuttling method.</li>
@@ -622,14 +636,14 @@
 <p>The five multisubunit complexes of the respiratory chain are shown with mtDNA-encoded subunits in red and nuclear-encoded subunits in blue.</p>
 <p>A morbidity map of the human mitochondrial genome.</p>
 <p><u>The 16,569-bp mtDNA shows the locations of the 13 protein-coding genes, the 12S and 16S ribosomal RNAs, and the 22 transfer RNAs.</u></p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122307261.png" alt="image-20200308122307261" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122307261.png" srcset="/img/loading.gif" alt="image-20200308122307261" /></p>
 <p>Endosymbiont hypothesis （内共生假说）</p>
 <h1 id="七-oxygen-as-a-substrate-for-other-metabolic-reactions"><a class="markdownIt-Anchor" href="#七-oxygen-as-a-substrate-for-other-metabolic-reactions"></a> 七、Oxygen as a Substrate for Other Metabolic Reactions</h1>
 <p>The term <strong>oxidase</strong>（氧化酶） is applied to enzymes that <u>catalyze the oxidation of a substrate without incorporation of oxygen from O2 into the product.</u></p>
 <p>A <u>two-electron oxidation</u> is usually involved, so the <u>oxygen is converted to H2O2.</u></p>
 <p>Most oxidases utilize either a <u>metal or a flavin coenzyme.</u></p>
 <p><u>D-Amino acid oxidases</u>, for example, use FAD as a cofactor.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122421515.png" alt="image-20200308122421515" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122421515.png" srcset="/img/loading.gif" alt="image-20200308122421515" /></p>
 <ul>
 <li>
 <p><u>&gt; 90% O<sub>2</sub></u> is used by oxidative phosphorylation</p>
@@ -646,32 +660,32 @@
 <p><strong>Oxygenases</strong> (加氧酶) are enzymes that <u>incorporate oxygen atoms from O2 into the oxidized products</u>; there are <u>two classes</u>—<strong>monooxygenases</strong> (单加氧酶) and <strong>dioxygenases</strong> (双加氧酶).</p>
 <p><strong>Dioxygenases</strong>, which incorporate <u>both atoms</u> of O2 into one substrate, are of limited distribution.</p>
 <p>An example is tryptophan 2,3-dioxygenase, which contains a heme cofactor and catalyzes the first reaction in tryptophan catabolism:</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122519109.png" alt="image-20200308122519109" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122519109.png" srcset="/img/loading.gif" alt="image-20200308122519109" /></p>
 <hr />
 <p><u>Far more widely distributed</u> are <strong>monooxygenases</strong> (单加氧酶), which <u>incorporate one atom from O2 into a product and reduce the other atom to water.</u></p>
 <p>A <strong>monooxygenase</strong> has <strong>one substrate (AH)</strong> that accepts oxygen and <strong>another (BH2)</strong> that furnishes the two H atoms that reduce the other oxygen to water.</p>
 <p>Because <u>two substrates are oxidized</u>, enzymes of this class are also called mixed-function oxidases (混合功能氧化酶).</p>
 <p>The general reaction catalyzed by monooxygenases is as follows:</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122624044.png" alt="image-20200308122624044" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122624044.png" srcset="/img/loading.gif" alt="image-20200308122624044" /></p>
 <p>Because the substrate <u>AH usually becomes hydroxylated</u> by this class of enzymes, the term <strong>hydroxylase</strong> (羟化酶) is also used.</p>
 <p>An example of this type of reaction is the <u>hydroxylation of steroids</u>. Here the reductive cofactor, <u>NADPH, appears as BH<sub>2</sub>.</u></p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122630420.png" alt="image-20200308122630420" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122630420.png" srcset="/img/loading.gif" alt="image-20200308122630420" /></p>
 <h2 id="cytochrome-p450"><a class="markdownIt-Anchor" href="#cytochrome-p450"></a> Cytochrome P<sub>450</sub></h2>
 <p>Active site of human cytochrome CYP2A6 in complex with the anticoagulant <strong>coumarin</strong> (香豆素).</p>
 <p>The flavoprotein enzyme <strong>P450 oxidoreductase</strong> (POR) delivers electrons <u>one at a time</u> from NADPH to cytochrome P450.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122931587.png" alt="image-20200308122931587" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122931587.png" srcset="/img/loading.gif" alt="image-20200308122931587" /></p>
 <ul>
 <li>Absorbs light strongly at 450 nm, heme</li>
 <li>Found in nearly all organisms</li>
 <li>Human genome has 57 genes for P450, a large and diverse protein family</li>
 </ul>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122939424.png" alt="image-20200308122939424" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308122939424.png" srcset="/img/loading.gif" alt="image-20200308122939424" /></p>
 <p><u>Cytochromes P450 are involved in hydroxylating</u> a large variety of compounds.</p>
 <p>These reactions include the <u>hydroxylations in steroid hormone biosynthesis</u> and the synthesis of <u>hydroxylated fatty acids</u> and <u>fatty acid epoxides</u> (环氧化合物).</p>
 <p>In addition, cytochromes P450 act upon thousands of <strong>xenobiotics</strong> (外源化合物).</p>
 <p><u>Hydroxylation of foreign substances</u> usually increases their <u>solubility</u> and is an important step in their <u>detoxification</u>, or <u>metabolism and excretion</u>.</p>
 <p>However, some of these reactions result in <u>activation of potentially carcinogenic substances to more reactive species</u>, as shown for <strong>aflatoxin (黄曲霉毒素) B1</strong> which is converted to more reactive species either by hydroxylation or epoxidation.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123041236.png" alt="image-20200308123041236" style="zoom:33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123041236.png" srcset="/img/loading.gif" alt="image-20200308123041236" style="zoom:33%;" />
 <h1 id="八-reactive-oxygen-species-antioxidant-defenses-and-human-disease"><a class="markdownIt-Anchor" href="#八-reactive-oxygen-species-antioxidant-defenses-and-human-disease"></a> 八、Reactive Oxygen Species, Antioxidant Defenses, and Human Disease</h1>
 <h2 id="reactive-oxygen-species-ros-活性氧簇"><a class="markdownIt-Anchor" href="#reactive-oxygen-species-ros-活性氧簇"></a> Reactive oxygen species (ROS, 活性氧簇)</h2>
 <p>The generation and interconversion of the most common reactive oxygen species are shown:</p>
@@ -693,7 +707,7 @@
 </li>
 </ul>
 <p>Reactive oxygen species (ROS，活性氧类) are <u>chemically reactive</u> chemical species containing oxygen. Examples include <u>peroxides, superoxide, hydroxyl radical, singlet oxygen（单线态氧）, and alpha-oxygen</u>.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123216309.png" alt="image-20200308123216309" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123216309.png" srcset="/img/loading.gif" alt="image-20200308123216309" style="zoom: 50%;" />
 <ul>
 <li>
 <p>Incompletely reduced oxygen species</p>
@@ -708,18 +722,18 @@
 <h3 id="1-hydroxyl-radical"><a class="markdownIt-Anchor" href="#1-hydroxyl-radical"></a> 1. Hydroxyl Radical</h3>
 <p><u>Hydroxyl radical is the most active mutagen derived from ionizing radiation.</u></p>
 <p>Hydroxyl radical is also produced from H<sub>2</sub>O<sub>2</sub> in the Fenton reaction:</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123324021.png" alt="image-20200308123324021" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123324021.png" srcset="/img/loading.gif" alt="image-20200308123324021" /></p>
 <h3 id="2-superoxide"><a class="markdownIt-Anchor" href="#2-superoxide"></a> 2. Superoxide</h3>
 <p><u>Superoxide per se is relatively nontoxic.</u></p>
 <p>Because it contains an <u>unpaired electron</u>, it is a free radical, and it combines readily with another free radical, <strong>nitric oxide (NO, 信号分子，促进血管扩张)</strong>, a biological signaling agent that is produced in many animal tissues.</p>
 <p>The product is <strong>peroxynitrite</strong> also considered a reactive oxygen species.</p>
 <p>Peroxynitrite causes <u>lipid peroxidation</u> and also causes <u>nitration of tyrosyl hydroxyl groups</u> in proteins, a reaction particularly damaging to membrane proteins.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123345159.png" alt="image-20200308123345159" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123345159.png" srcset="/img/loading.gif" alt="image-20200308123345159" style="zoom: 33%;" />
 <p><strong>Hydroxyl radical</strong> also damages <u>nucleic acids</u>, both by causing polynucleotide strand <u>breakage</u> (double-stranded DNA breaks are lethal) and by changing the structure of DNA bases.</p>
 <p>About 20 different base changes, or <u>DNA lesions</u>, are known to result from reactions of hydroxyl radical with DNA.</p>
 <p>Some lesions are mutagenic because the altered base created, such as <strong>8-oxoguanine</strong> (8-氧鸟嘌呤), <u>forms non-Watson–Crick base pairs during DNA replication.</u> (Cause DNA mutation)</p>
 <p>Other lesions, such as <strong>thymine glycol</strong> (胸腺嘧啶二醇), are potentially lethal because, unless the lesion is repaired  their occurrence in DNA <u>blocks replication</u> past that site.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123709531.png" alt="image-20200308123709531" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123709531.png" srcset="/img/loading.gif" alt="image-20200308123709531" style="zoom:67%;" />
 <p><u>Uncontrolled overproduction of reactive oxygen species</u> has the potential to inflict considerable <u>damage</u> on the tissues in which they are produced, a situation called <strong>oxidative stress</strong>.</p>
 <p>A series of elaborate mechanisms has evolved to minimize its harmful consequences.</p>
 <p>The <u>nonenzymatic protection</u> is afforded by <strong>antioxidant compounds</strong>:</p>
@@ -733,12 +747,12 @@
 <li>Blueberry reduces ROS</li>
 <li>Smoking increases ROS</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123835907.png" alt="image-20200308123835907" style="zoom:33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308123835907.png" srcset="/img/loading.gif" alt="image-20200308123835907" style="zoom:33%;" />
 <h2 id="disease"><a class="markdownIt-Anchor" href="#disease"></a> Disease</h2>
 <p>Among <u>enzymatic mechanisms</u> the first line of defense is <strong>superoxide dismutase (SOD, 超氧化物歧化酶)</strong>, a family of metalloenzymes that catalyze a <u>dismutation</u> (<u>a reaction in which two identical substrate molecules have different fates).</u></p>
 <p>Here, <u>one molecule of superoxide is oxidized to H2O2 and one is reduced to O2.</u></p>
 <p><strong>Hydrogen peroxide</strong> (过氧化氢) is metabolized either by <strong>peroxiredoxins</strong> (过氧化还原酶), a ubiquitous family of thiol proteins, <strong>catalase</strong> (过氧化氢酶), another widely distributed enzyme, or by a more limited family of <strong>peroxidases</strong> (过氧化物酶).</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308124000483.png" alt="image-20200308124000483" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Biochemistry%20II%20%28Metabolism%29/image-20200308124000483.png" srcset="/img/loading.gif" alt="image-20200308124000483" /></p>
 <p>Oxidative stress: damages lipids, proteins, and nucleic acids; causes cardiovascular disease, cancer, stroke, neurodegenerative  diseases, chronic inflammatory diseases, aging</p>
 <p>Amyotrophic lateral sclerosis (ALS): 肌萎缩侧索硬化; AKA motor neuron disease (MND) or Lou Gehrig’s disease</p>
 <p>Catalase (过氧化氢酶) is a heme protein with an extremely high turnover rate (&gt; 40,000 molecules per second).</p>
@@ -763,189 +777,377 @@
 </li>
 </ul>
 
-    </div>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Biochemistry-II-Metabolism/">Biochemistry II (Metabolism)</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/17/L03%20Citric%20Acid%20Cycle%20and%20Glyoxylate%20Cycle/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L03 Citric Acid Cycle and Glyoxylate Cycle</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/17/L05%20Photosynthesis/">
+                        <span class="hidden-mobile">L05 Photosynthesis</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
 
-    
-    
-    
+            
+              <!-- Valine Comments 国内版-->
+              
+              <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                requiredFields: ['nick'],
+                })
+                </script>
 
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Biochemistry-II-Metabolism/" rel="tag"># Biochemistry II (Metabolism)</a>
-          </div>
+              <!-- Valine Comments 国内版-->
+              
+              <!-- <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
+                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
+                requiredFields: ['nick'],
+                })
+                </script> -->
 
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/07/17/L05%20Photosynthesis/" rel="prev" title="L05 Photosynthesis">
-      <i class="fa fa-chevron-left"></i> L05 Photosynthesis
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/07/17/L03%20Citric%20Acid%20Cycle%20and%20Glyoxylate%20Cycle/" rel="next" title="L03 Citric Acid Cycle and Glyoxylate Cycle">
-      L03 Citric Acid Cycle and Glyoxylate Cycle <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+              <!-- Utterances Comments -->
+              <!--<div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
+          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一-the-mitochondrion-scene-of-the-action"><span class="nav-number">1.</span> <span class="nav-text"> 一、The Mitochondrion: Scene of the Action</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#localization-of-respiratory-processes-in-the-mitochondrion"><span class="nav-number">1.1.</span> <span class="nav-text"> Localization of respiratory processes in the mitochondrion</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-electron-transport"><span class="nav-number">2.</span> <span class="nav-text"> 二、Electron Transport</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#respiratory-electron-carriers-in-the-mitochondrion"><span class="nav-number">2.1.</span> <span class="nav-text"> Respiratory electron carriers in the mitochondrion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#electron-carriers-in-the-respiratory-chain"><span class="nav-number">2.2.</span> <span class="nav-text"> Electron Carriers in the Respiratory Chain</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-structures-of-ironsulfur-clusters"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 1. Structures of iron–sulfur clusters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-coenzyme-q"><span class="nav-number">2.2.2.</span> <span class="nav-text"> 2. Coenzyme Q</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-cytochromes"><span class="nav-number">2.2.3.</span> <span class="nav-text"> 3. Cytochromes</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#absorption-spectra-of-cytochromes"><span class="nav-number">2.2.3.1.</span> <span class="nav-text"> Absorption spectra of cytochromes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#the-uhemesu-found-uin-cytochromesu"><span class="nav-number">2.2.3.2.</span> <span class="nav-text"> The hemes found in cytochromes</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#determining-the-sequence-of-respiratory-electron-carriers"><span class="nav-number">2.3.</span> <span class="nav-text"> Determining the sequence of respiratory electron carriers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#difference-spectra-差分光谱-of-mitochondria"><span class="nav-number">2.4.</span> <span class="nav-text"> Difference spectra (差分光谱) of mitochondria</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sites-of-action-of-some-respiratory-inhibitors-and-artificial-electron-acceptors"><span class="nav-number">2.4.0.1.</span> <span class="nav-text"> Sites of action of some respiratory inhibitors and artificial electron acceptors</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#multiprotein-complexes-in-the-mitochondrial-respiratory-assembly"><span class="nav-number">2.5.</span> <span class="nav-text"> Multiprotein complexes in the mitochondrial respiratory assembly</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-complex-i"><span class="nav-number">2.5.1.</span> <span class="nav-text"> 1. Complex Ⅰ</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#structure-and-function-of-complex-i-nadhcoenzyme-q-reductase"><span class="nav-number">2.5.1.1.</span> <span class="nav-text"> Structure and function of complex I (NADH–coenzyme Q reductase)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-complex-ii"><span class="nav-number">2.5.2.</span> <span class="nav-text"> 2. Complex Ⅱ</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#structure-of-complex-ii-succinate-dehydrogenase"><span class="nav-number">2.5.2.1.</span> <span class="nav-text"> Structure of complex II (succinate dehydrogenase)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-complex-iii"><span class="nav-number">2.5.3.</span> <span class="nav-text"> 3. Complex Ⅲ</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#structure-of-complex-iii-coenzyme-qcytochrome-c-oxidoreductase氧化还原酶"><span class="nav-number">2.5.3.1.</span> <span class="nav-text"> Structure of Complex III (coenzyme Q:cytochrome c oxidoreductase（氧化还原酶）)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-complex-iv"><span class="nav-number">2.5.4.</span> <span class="nav-text"> 4. Complex Ⅳ</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#structure-of-cytochrome-c-oxidase-complex-iv"><span class="nav-number">2.5.4.1.</span> <span class="nav-text"> Structure of cytochrome c oxidase (complex IV)</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三-oxidative-phosphorylation"><span class="nav-number">3.</span> <span class="nav-text"> 三、Oxidative Phosphorylation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#uchemiosmotic-化学渗透的-coupling-of-electron-transport-andu-atp-synthesis"><span class="nav-number">3.1.</span> <span class="nav-text"> Chemiosmotic (化学渗透的) coupling of electron transport and ATP synthesis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-uncouplers-act-by-dissipating-the-proton-gradient"><span class="nav-number">3.1.1.</span> <span class="nav-text"> 1. Uncouplers Act by Dissipating the Proton Gradient</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-structure-of-the-f0f1-complex-complex-v"><span class="nav-number">3.1.2.</span> <span class="nav-text"> 2. Structure of the F0F1 complex (Complex Ⅴ)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-structure-of-the-mitochondrial-atp-synthase-complex"><span class="nav-number">3.1.3.</span> <span class="nav-text"> 3. Structure of the mitochondrial ATP synthase complex</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#binding-change-model-for-atp-synthase"><span class="nav-number">3.1.3.1.</span> <span class="nav-text"> Binding change model for ATP synthase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#the-uexperimental-systemu-that-permits-observation-of-rotation-in-the-f1-component-of-f1f0-atp-synthase"><span class="nav-number">3.1.3.2.</span> <span class="nav-text"> The experimental system that permits observation of rotation in the F1 component of F1F0 ATP synthase</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-proton-driven-rotation-of-the-c-ring-of-the-component-of-atp-synthase"><span class="nav-number">3.1.4.</span> <span class="nav-text"> 4. Proton-driven rotation of the c-ring of the component of ATP synthase</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#experimental-demonstration-of-respiratory-control"><span class="nav-number">3.2.</span> <span class="nav-text"> Experimental demonstration of respiratory control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#respiratory-control"><span class="nav-number">3.3.</span> <span class="nav-text"> Respiratory Control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reversibility-of-f1f0-atp-synthase"><span class="nav-number">3.4.</span> <span class="nav-text"> Reversibility of F1F0 ATP synthase</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#major-inner-membrane-transport-systems-for-respiratory-substrates-and-products"><span class="nav-number">3.5.</span> <span class="nav-text"> Major inner membrane transport systems for respiratory substrates and products</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四-mitochondrial-transport-systems"><span class="nav-number">4.</span> <span class="nav-text"> 四、Mitochondrial Transport Systems</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五-energy-yields-from-oxidative-metabolism"><span class="nav-number">5.</span> <span class="nav-text"> 五、Energy Yields from Oxidative Metabolism</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六-the-mitochondrial-genome-and-disease"><span class="nav-number">6.</span> <span class="nav-text"> 六、The Mitochondrial Genome and Disease</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七-oxygen-as-a-substrate-for-other-metabolic-reactions"><span class="nav-number">7.</span> <span class="nav-text"> 七、Oxygen as a Substrate for Other Metabolic Reactions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#cytochrome-p450"><span class="nav-number">7.1.</span> <span class="nav-text"> Cytochrome P450</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八-reactive-oxygen-species-antioxidant-defenses-and-human-disease"><span class="nav-number">8.</span> <span class="nav-text"> 八、Reactive Oxygen Species, Antioxidant Defenses, and Human Disease</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#reactive-oxygen-species-ros-活性氧簇"><span class="nav-number">8.1.</span> <span class="nav-text"> Reactive oxygen species (ROS, 活性氧簇)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-hydroxyl-radical"><span class="nav-number">8.1.1.</span> <span class="nav-text"> 1. Hydroxyl Radical</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-superoxide"><span class="nav-number">8.1.2.</span> <span class="nav-text"> 2. Superoxide</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#disease"><span class="nav-number">8.2.</span> <span class="nav-text"> Disease</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">向海</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">187</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">分类</span>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">17</span>
-        <span class="site-state-item-name">标签</span>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+    
+  <div class="statistics">
+    
+    
 
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">向海</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             
+          </span>
+      
+    
   </div>
 
-        
 
+    
 
-
-
-
-
-
-
-      </div>
-    </footer>
+    
   </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
+    <script  src="/js/lazyload.js" ></script>
   
 
 
 
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
 
 
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
 
 
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L04 Electron Transport, Oxidative Phosphorylation, and Oxygen Metabolism&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
 
 
 
@@ -954,6 +1156,33 @@
   
 
   
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
 
 </body>
+
+
 </html>

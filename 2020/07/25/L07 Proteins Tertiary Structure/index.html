@@ -1,237 +1,271 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
+
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L07 Proteins Tertiary Structure - 鹘横海</title>
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (GMT+08:00)">
-<meta property="og:type" content="article">
-<meta property="og:title" content="L07 Proteins Tertiary Structure">
-<meta property="og:url" content="https://zhenyumi.github.io/2020/07/25/L07%20Proteins%20Tertiary%20Structure/index.html">
-<meta property="og:site_name" content="鹘横海">
-<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (GMT+08:00)">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571463955537.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571465006459.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571465854860.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571467470470.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571469041801.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102213633692.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571470032303.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571547806048.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571548217599.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571472807662.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571472843270.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571473787608.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571473968257.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474015601.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474427361.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474617045.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474920788.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571473546206.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571471428683.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571471613873.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571471984688.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571662080448.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571658986922.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571658503456.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571659433230.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571658253587.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102220059687.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571660355690.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571660376952.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571660482400.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571661077088.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102222551196.png">
-<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
-<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
-<meta property="article:author" content="向海">
-<meta property="article:tag" content="Biochemistry I (Macromolecules)">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571463955537.png">
-
-<link rel="canonical" href="https://zhenyumi.github.io/2020/07/25/L07%20Proteins%20Tertiary%20Structure/">
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
-  <title>L07 Proteins Tertiary Structure | 鹘横海</title>
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
   
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+<link  rel="stylesheet" href="/css/main.css" />
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<!-- 自定义样式保持在最底部 -->
 
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+ 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">鹘横海</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">兴趣使然的记事网站</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
 </nav>
 
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-10_21-07-00.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
 
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-25 23:45">
+      2020年7月25日 晚上
+    </time>
   </div>
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
+<div class="mt-1">
   
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.3k 字
+    </span>
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/25/L07%20Proteins%20Tertiary%20Structure/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="向海">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="鹘横海">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          L07 Proteins Tertiary Structure
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-25 23:45:00" itemprop="dateCreated datePublished" datetime="2020-07-25T23:45:00+08:00">2020-07-25</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
+  
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
       
-        <h1 id="tertiary-structure-of-proteins"><a class="markdownIt-Anchor" href="#tertiary-structure-of-proteins"></a> Tertiary structure of proteins</h1>
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <!-- 鼠标烟花特效 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/fireworks.js"></script>
+
+    <!--浏览器搞笑标题-->
+    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+
+    <!--动态线条背景-->
+    <!--<script type="text/javascript"
+    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>-->
+
+
+    
+      
+<head>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：3 个月前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#tertiary-structure-of-proteins"><span class="post-toc-text"> Tertiary structure of proteins</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#two-major-structural-classes-of-proteins"><span class="post-toc-text"> Two major structural classes of proteins</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-fibrous-protein"><span class="post-toc-text"> 1. Fibrous Protein</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#keratins-角蛋白"><span class="post-toc-text"> keratins 角蛋白</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-alpha-keratins"><span class="post-toc-text"> (1) α−\alpha-α−keratins</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-beta-keratins"><span class="post-toc-text"> (2) β−\beta-β−keratins</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#fibroin-丝蛋白"><span class="post-toc-text"> Fibroin 丝蛋白</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#collagen-胶原质"><span class="post-toc-text"> collagen 胶原质</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-collagen-structure"><span class="post-toc-text"> (1) Collagen Structure</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-poly-proline-ii-helix"><span class="post-toc-text"> (2) Poly-proline II helix</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-globular-proteins"><span class="post-toc-text"> 2. Globular proteins</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#classification-of-globular-proteins"><span class="post-toc-text"> Classification of globular proteins</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#protein-domains"><span class="post-toc-text"> Protein domains</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#alpha-domain-structure"><span class="post-toc-text"> Alpha domain structure</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-four-helix-bundle"><span class="post-toc-text"> (1) Four Helix Bundle</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#beta-domain-structure"><span class="post-toc-text"> Beta domain structure</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#beta-sandwich"><span class="post-toc-text"> β\betaβ Sandwich</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#beta-barrel"><span class="post-toc-text"> β\betaβ barrel</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#alphabeta-domain-structures"><span class="post-toc-text"> Alpha&#x2F;Beta domain structures</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#tim-barrel"><span class="post-toc-text"> TIM barrel</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#open-twisted-αβ"><span class="post-toc-text"> Open twisted α&#x2F;β</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#domain-structure"><span class="post-toc-text"> Domain structure</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#general-rules-governing-tertiary-structure"><span class="post-toc-text"> General rules governing tertiary structure</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cath-database"><span class="post-toc-text"> CATH database</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#protein-purification"><span class="post-toc-text"> Protein purification</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#chromatographic-separations"><span class="post-toc-text"> Chromatographic separations</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-ion-exchange-chromotography-离子交换色谱"><span class="post-toc-text"> 1. Ion exchange chromotography 离子交换色谱</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-gel-filtration-chromatography-凝胶色谱"><span class="post-toc-text"> 2. Gel filtration chromatography 凝胶色谱</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-affinity-chromatography-亲和色谱法亲和层析"><span class="post-toc-text"> 3. Affinity chromatography 亲和色谱法，亲和层析</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#protein-folding"><span class="post-toc-text"> Protein folding</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#factors-determining-secondary-and-tertiary-structure"><span class="post-toc-text"> Factors Determining Secondary and Tertiary Structure</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#thermodynamics"><span class="post-toc-text"> Thermodynamics</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-negative-free-energy-change"><span class="post-toc-text"> 1. Negative Free Energy Change</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-thermodynamics"><span class="post-toc-text"> 2. Thermodynamics</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#kinetics"><span class="post-toc-text"> Kinetics</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-free-energy-landscape"><span class="post-toc-text"> 1. Free Energy Landscape</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-rate-limiting-factors"><span class="post-toc-text"> 2.  rate limiting factors</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#factors-determining-secondary-and-tertiary-structure-2"><span class="post-toc-text"> Factors Determining Secondary and Tertiary Structure</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#denaturation-and-renaturation-变性与复性"><span class="post-toc-text"> denaturation and renaturation 变性与复性</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-thermal-denaturation-热变性"><span class="post-toc-text"> 1. Thermal denaturation 热变性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#protein-folding-in-vivo"><span class="post-toc-text"> Protein folding in vivo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#diseases-about-protein-folding"><span class="post-toc-text"> diseases about protein folding</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-prion"><span class="post-toc-text"> 1. Prion</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-amyloid-淀粉样变性"><span class="post-toc-text"> 2. Amyloid 淀粉样变性</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#protein-dynamics"><span class="post-toc-text"> Protein dynamics</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#categories"><span class="post-toc-text"> Categories</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-atomic-fluctuations-原子波动"><span class="post-toc-text"> 1. Atomic fluctuations 原子波动</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-collective-motions-集体运动"><span class="post-toc-text"> 2. Collective motions 集体运动</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-triggered-conformational-changes"><span class="post-toc-text"> 3. Triggered conformational changes</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#prediction-of-secondary-structure"><span class="post-toc-text"> Prediction of secondary structure</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#prediction-of-tertiary-structure"><span class="post-toc-text"> Prediction of tertiary structure</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#protein-structure-determination"><span class="post-toc-text"> Protein structure determination</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#xray-crystallography"><span class="post-toc-text"> X‐ray Crystallography</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#protein-crystallography-in-applications"><span class="post-toc-text"> Protein crystallography in applications</span></a></li></ol></li></ol>
+
+              <h1 id="tertiary-structure-of-proteins"><a class="markdownIt-Anchor" href="#tertiary-structure-of-proteins"></a> Tertiary structure of proteins</h1>
 <p>Tertiary structure describes the folding of the polypeptide chain to assemble the different secondary structure elements in a particular arrangement (a unique shape).</p>
 <p>（蛋白质的三维结构描述了蛋白质的折叠，将不同的二级结构以特定的方式结合在一起）</p>
 <p>Models of proteins:</p>
@@ -240,10 +274,10 @@
 <li>cartoon model: show the backbone</li>
 <li>surface model: show the solvent accessible surface</li>
 </ol>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571463955537.png" alt="1571463955537" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571463955537.png" srcset="/img/loading.gif" alt="1571463955537" /></p>
 <h2 id="two-major-structural-classes-of-proteins"><a class="markdownIt-Anchor" href="#two-major-structural-classes-of-proteins"></a> Two major structural classes of proteins</h2>
 <p>The proteins have two major classes——<strong>Fibrous protein（纤维蛋白）</strong> and <strong>Globular protein</strong>（球状蛋白质）</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571465006459.png" alt="1571465006459" style="zoom: 80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571465006459.png" srcset="/img/loading.gif" alt="1571465006459" style="zoom: 80%;" />
 <h3 id="1-fibrous-protein"><a class="markdownIt-Anchor" href="#1-fibrous-protein"></a> 1. Fibrous Protein</h3>
 <p>Fibrous proteins include the major proteins of skin and connective tissue and of animal fibers like hair and silk.</p>
 <ul>
@@ -257,7 +291,7 @@
 <p>The amino acid sequence of each of these proteins <u>favors a particular kind of secondary structure</u>（具有特定的二级结构）, which <u>confers on each protein a particular set of appropriate mechanical properties</u>（赋予了特定蛋白特定的机械机能）.</p>
 </li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571465854860.png" alt="1571465854860" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571465854860.png" srcset="/img/loading.gif" alt="1571465854860" style="zoom:67%;" />
 <h4 id="keratins-角蛋白"><a class="markdownIt-Anchor" href="#keratins-角蛋白"></a> keratins 角蛋白</h4>
 <p>在生物体中存在<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">\alpha-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mord">−</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>β</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">\beta-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05278em;">β</span><span class="mord">−</span></span></span></span>keratins，其中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">\alpha-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mord">−</span></span></span></span>keratins结构主要为alpha-helix，而beta–keratins包含更多的beta-sheet</p>
 <p><strong>keratins are adapted to helical form.</strong></p>
@@ -267,7 +301,7 @@
 <p><strong>Predominantly α-helical structure</strong>. The structure is also called a kind of <strong>coiled-coil</strong>.</p>
 <p>α-keratins have <u>cysteine-rich</u> sequences, adapt to <strong>disulfide cross-links</strong></p>
 <p>The structure of a typical α-keratin, that of hair, is depicted in Figure:</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571467470470.png" alt="1571467470470" style="zoom:90%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571467470470.png" srcset="/img/loading.gif" alt="1571467470470" style="zoom:90%;" />
 <p>The individual molecules contain long sequences—over 300 residues in length— that are wholly α-helical. Pairs of these <u>right-handed helices</u> twist about one another in a <strong>left-handed coiled-coil structure</strong></p>
 <p>In intermediate filaments,pairs of coiled coils themselves tend to associate into a four-chain protofilament ©,and two of these in turn pack together to form a protofibril (d).</p>
 <p>在一些组织中， <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi><mo>−</mo></mrow><annotation encoding="application/x-tex">\alpha-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mord">−</span></span></span></span>keratins形成的总体结构可以很柔软，但是在某些组织中（如指甲）也可以变得很坚硬。这个变化的主要原因在于 <strong>disulfide cross-links</strong> <strong>within the several levels of fiber structure</strong></p>
@@ -277,7 +311,7 @@
 <h4 id="fibroin-丝蛋白"><a class="markdownIt-Anchor" href="#fibroin-丝蛋白"></a> Fibroin 丝蛋白</h4>
 <p>Fibroin is the main component of silk created by silkworms or spiders</p>
 <p><u>Glycine and alanine rich sequence</u> (45% and 29%) ，The β-sheet regions comprise almost exclusively multiple repetitions of the sequence</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571469041801.png" alt="1571469041801" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571469041801.png" srcset="/img/loading.gif" alt="1571469041801" style="zoom:67%;" />
 <p>Contains long regions of <strong>antiparallel  β‐sheet</strong>,  <u>with the polypeptide chains running parallel to the fiber axis</u></p>
 <p>fibroin contains small amounts of other, <strong>bulky amino acids like valine and tyrosine</strong>, which would not fit into the structure we have shown. These are carried in compact folded regions that periodically interrupt the β-sheet segments, and they probably account for the amount of stretchiness that silk fibers have.</p>
 <h4 id="collagen-胶原质"><a class="markdownIt-Anchor" href="#collagen-胶原质"></a> collagen 胶原质</h4>
@@ -299,7 +333,7 @@
 </li>
 <li>
 <p>Y: proline or hydroxyproline</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102213633692.png" alt="image-20191102213633692" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102213633692.png" srcset="/img/loading.gif" alt="image-20191102213633692" style="zoom: 33%;" />
 </li>
 </ul>
 </li>
@@ -308,7 +342,7 @@
 </li>
 </ul>
 <p>Examination of the model reveals that every third residue, which must lie near the center of the triple helix, can be only glycine. Any side chain other than —H would be too bulky.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571470032303.png" alt="1571470032303" style="zoom: 80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571470032303.png" srcset="/img/loading.gif" alt="1571470032303" style="zoom: 80%;" />
 <p>Formation of the individual helices of the collagen type is also favored by the presence of proline or hydroxyproline in the tropocollagen molecule. A repetitive motif in the sequence is of the form <strong>Gly–X–Y</strong>, where X is often proline and Y is  proline or hydroxyproline</p>
 <h5 id="2-poly-proline-ii-helix"><a class="markdownIt-Anchor" href="#2-poly-proline-ii-helix"></a> (2) Poly-proline II helix</h5>
 <p>The PPII helix is defined by (φ,ψ) backbone dihedral angles of roughly (-75°, 150°) and trans isomers of the peptide bonds.</p>
@@ -333,13 +367,13 @@ Common examples include the SH3 domain, the beta-propeller domain, the immunoglo
 </ol>
 <p>α+β proteins are a class of structural domains in which the secondary structure is composed of α-helices and β-strands that <strong>occur separately</strong> along the backbone. <strong>The β-strands are therefore mostly antiparallel.</strong><br />
 Common examples include the ferredoxin fold, ribonuclease A, and the SH2 domain.</p>
-   <img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571547806048.png" alt="1571547806048" style="zoom:50%;" />
+   <img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571547806048.png" srcset="/img/loading.gif" alt="1571547806048" style="zoom:50%;" />
 <ol start="4">
 <li>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi><mi mathvariant="normal">/</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\alpha / \beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.05278em;">β</span></span></span></span> proteins：</p>
 <p>α/β proteins are a class of structural domains in which the secondary structure is composed of **alternating α-helices and β-strand（交替出现）**s along the backbone. <strong>The β-strands are therefore mostly parallel.</strong><br />
 Common examples include the flavodoxin fold, the TIM barrel and leucine-rich-repeat (LRR) proteins such as ribonuclease inhibitor.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571548217599.png" alt="1571548217599" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571548217599.png" srcset="/img/loading.gif" alt="1571548217599" style="zoom:50%;" />
 </li>
 <li>
 <p>Others:</p>
@@ -349,8 +383,8 @@ Common examples include the flavodoxin fold, the TIM barrel and leucine-rich-rep
 </ul>
 </li>
 </ol>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571472807662.png" alt="1571472807662" /></p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571472843270.png" alt="1571472843270" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571472807662.png" srcset="/img/loading.gif" alt="1571472807662" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571472843270.png" srcset="/img/loading.gif" alt="1571472843270" /></p>
 <p>The majority of globular domainscan be broadly  classified as: “mainly  α ”,“mainly  β ” and “ α + β ”</p>
 <p>A small number of globular domains have little  α or β secondary structure</p>
 <h4 id="protein-domains"><a class="markdownIt-Anchor" href="#protein-domains"></a> Protein domains</h4>
@@ -368,21 +402,21 @@ Common examples include the flavodoxin fold, the TIM barrel and leucine-rich-rep
 <p>Larger proteins may contain several domains</p>
 <h4 id="alpha-domain-structure"><a class="markdownIt-Anchor" href="#alpha-domain-structure"></a> Alpha domain structure</h4>
 <h5 id="1-four-helix-bundle"><a class="markdownIt-Anchor" href="#1-four-helix-bundle"></a> (1) Four Helix Bundle</h5>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571473787608.png" alt="1571473787608" style="zoom: 67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571473787608.png" srcset="/img/loading.gif" alt="1571473787608" style="zoom: 67%;" />
 <h4 id="beta-domain-structure"><a class="markdownIt-Anchor" href="#beta-domain-structure"></a> Beta domain structure</h4>
 <h5 id="beta-sandwich"><a class="markdownIt-Anchor" href="#beta-sandwich"></a> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05278em;">β</span></span></span></span> Sandwich</h5>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571473968257.png" alt="1571473968257" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571473968257.png" srcset="/img/loading.gif" alt="1571473968257" style="zoom: 50%;" />
 <p>The sandwich has a edge, H-bond is influenced by that, so it is less stable than barrel.</p>
 <h5 id="beta-barrel"><a class="markdownIt-Anchor" href="#beta-barrel"></a> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05278em;">β</span></span></span></span> barrel</h5>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474015601.png" alt="1571474015601" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474015601.png" srcset="/img/loading.gif" alt="1571474015601" style="zoom:50%;" />
 <h4 id="alphabeta-domain-structures"><a class="markdownIt-Anchor" href="#alphabeta-domain-structures"></a> Alpha/Beta domain structures</h4>
 <h5 id="tim-barrel"><a class="markdownIt-Anchor" href="#tim-barrel"></a> TIM barrel</h5>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474427361.png" alt="1571474427361" style="zoom:60%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474427361.png" srcset="/img/loading.gif" alt="1571474427361" style="zoom:60%;" />
 <h5 id="open-twisted-αβ"><a class="markdownIt-Anchor" href="#open-twisted-αβ"></a> Open twisted α/β</h5>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474617045.png" alt="1571474617045" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474617045.png" srcset="/img/loading.gif" alt="1571474617045" style="zoom:67%;" />
 <h4 id="domain-structure"><a class="markdownIt-Anchor" href="#domain-structure"></a> Domain structure</h4>
 <p>Complex domain structure are composed of simple domains</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474920788.png" alt="1571474920788" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571474920788.png" srcset="/img/loading.gif" alt="1571474920788" style="zoom:67%;" />
 <h2 id="general-rules-governing-tertiary-structure"><a class="markdownIt-Anchor" href="#general-rules-governing-tertiary-structure"></a> General rules governing tertiary structure</h2>
 <p><font color="990000">The environment is the key factor of protein folding</font></p>
 <p>All globular proteins have a <u>defined inside and outside</u></p>
@@ -392,20 +426,20 @@ Common examples include the flavodoxin fold, the TIM barrel and leucine-rich-rep
 <h4 id="cath-database"><a class="markdownIt-Anchor" href="#cath-database"></a> CATH database</h4>
 <p>The CATH Protein Structure Classification database is a free, publicly available online resource that provides information on the evolutionary relationships of protein domains.</p>
 <p>CATH database (<strong>C</strong>lass, <strong>A</strong>rchitecture, <strong>T</strong>opology, and  “<strong>H</strong>omologous superfamily)</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571473546206.png" alt="1571473546206" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571473546206.png" srcset="/img/loading.gif" alt="1571473546206" /></p>
 <h1 id="protein-purification"><a class="markdownIt-Anchor" href="#protein-purification"></a> Protein purification</h1>
 <h2 id="chromatographic-separations"><a class="markdownIt-Anchor" href="#chromatographic-separations"></a> Chromatographic separations</h2>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571471428683.png" alt="1571471428683" style="zoom: 80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571471428683.png" srcset="/img/loading.gif" alt="1571471428683" style="zoom: 80%;" />
 <p>色谱法利用不同物质在不同相态的选择性分配，以流动相对固定相中的混合物进行洗脱，混合物中不同的物质会以不同的速度沿固定相移动，最终达到分离的效果。</p>
 <h3 id="1-ion-exchange-chromotography-离子交换色谱"><a class="markdownIt-Anchor" href="#1-ion-exchange-chromotography-离子交换色谱"></a> 1. Ion exchange chromotography 离子交换色谱</h3>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571471613873.png" alt="1571471613873" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571471613873.png" srcset="/img/loading.gif" alt="1571471613873" style="zoom:80%;" />
 <p>离子交换色谱利用待分离组分与固定相之间发生离子交换的能力差异来实现分离。离子交换色谱的固定相一般为离子交换树脂，树脂分子结构中存在许多可以电离的活性中心，待分离组分中的离子会与这些活性中心发生离子交换，形成<strong>离子交换平衡</strong>，从而在流动相与固定相之间形成分配。固定相的固有离子与待分离组分中的离子之间相互争夺固定相中的离子交换中心，并随着流动相的运动而运动，最终实现分离。<br />
 离子交换色谱的分配系数又叫做选择系数，其表达式为：</p>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mi>s</mi></msub><mo>=</mo><mfrac><mrow><mo stretchy="false">[</mo><mi>R</mi><msup><mi>X</mi><mo>+</mo></msup><mo stretchy="false">]</mo></mrow><mrow><mo stretchy="false">[</mo><msup><mi>X</mi><mo>+</mo></msup><mo stretchy="false">]</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">K_{s} = \frac{[RX^+]}{[X^+]} 
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.384331em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.448331em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">[</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.697331em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mclose">]</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
 <h3 id="2-gel-filtration-chromatography-凝胶色谱"><a class="markdownIt-Anchor" href="#2-gel-filtration-chromatography-凝胶色谱"></a> 2. Gel filtration chromatography <strong>凝胶色谱</strong></h3>
 <p>凝胶色谱的原理比较特殊，类似于分子筛。待分离组分在进入凝胶色谱后，会依据分子量的不同，进入或者不进入固定相凝胶的孔隙中，不能进入凝胶孔隙的分子会很快随流动相洗脱，而能够进入凝胶孔隙的分子则需要更长时间的冲洗才能够流出固定相，从而实现了根据分子量差异对各组分的分离。调整固定相使用的凝胶的交联度可以调整凝胶孔隙的大小；改变流动相的溶剂组成会改变固定相凝胶的溶涨状态，进而改变孔隙的大小，获得不同的分离效果。</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571471984688.png" alt="1571471984688" style="zoom:80%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571471984688.png" srcset="/img/loading.gif" alt="1571471984688" style="zoom:80%;" />
 <h3 id="3-affinity-chromatography-亲和色谱法亲和层析"><a class="markdownIt-Anchor" href="#3-affinity-chromatography-亲和色谱法亲和层析"></a> 3. Affinity chromatography <strong>亲和色谱法，亲和层析</strong></h3>
 <p><font color="990000">High specificity</font></p>
 <p>亲和色谱法（英语：Affinity chromatography，又称为亲和层析）是一种利用固定相的结合特性来分离分子的色谱方法。亲和色谱在凝胶过滤色谱柱上连接与待分离的物质有一定结合能力的分子，并且它们的结合是可逆的，在改变流动相条件时二者还能相互分离。亲和色谱可以用来从混合物中纯化或浓缩某一分子，也可以用来去除或减少混合物中某一分子的含量。</p>
@@ -445,13 +479,13 @@ Common examples include the flavodoxin fold, the TIM barrel and leucine-rich-rep
 </ol>
 </li>
 </ol>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571662080448.png" alt="1571662080448" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571662080448.png" srcset="/img/loading.gif" alt="1571662080448" style="zoom:67%;" />
 <ol start="4">
 <li>van der Waals interactions</li>
 <li>Hydrophobic interactions (hydrophobic effects)</li>
 <li>Disulfide bonds (exist in some proteins): An important structure called disulfide bond stabilize the protein structure. The disufide bond is unstable in reductive environment. 在细胞内的环境通常是还原性的，而细胞外通常是氧化性的环境。在细胞内二硫键处于被还原（—SH  HS—）的状态，而在细胞外处于被氧化的状态（—S—S—）。因此对于细胞产生的<strong>分泌蛋白以及位于外膜的蛋白</strong>，通常选择使用二硫键对蛋白质结构进行稳定。</li>
 </ol>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571658986922.png" alt="1571658986922" style="zoom:33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571658986922.png" srcset="/img/loading.gif" alt="1571658986922" style="zoom:33%;" />
 <p>Disulfide bonds are relatively rare, they mainly exists in:</p>
 <ul>
 <li>Secreted proteins</li>
@@ -478,13 +512,13 @@ Common examples include the flavodoxin fold, the TIM barrel and leucine-rich-rep
 <p>The favorable entropy change <u>arising from the burying of hydrophobic groups within the molecule</u></p>
 </li>
 <li>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571658503456.png" alt="1571658503456" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571658503456.png" srcset="/img/loading.gif" alt="1571658503456" style="zoom:50%;" />
 </li>
 </ul>
 <h2 id="kinetics"><a class="markdownIt-Anchor" href="#kinetics"></a> Kinetics</h2>
 <p>Protein folding is <strong>not a completely random</strong> search through a vast conformational space</p>
 <h3 id="1-free-energy-landscape"><a class="markdownIt-Anchor" href="#1-free-energy-landscape"></a> 1. Free Energy Landscape</h3>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571659433230.png" alt="1571659433230" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571659433230.png" srcset="/img/loading.gif" alt="1571659433230" style="zoom:50%;" />
 <p>In physics, chemistry, and biochemistry, an energy landscape is a mapping of all possible conformations of a molecular entity, or the spatial positions of interacting molecules in a system, or parameters and their corresponding energy levels, typically Gibbs free energy.</p>
 <h3 id="2-rate-limiting-factors"><a class="markdownIt-Anchor" href="#2-rate-limiting-factors"></a> 2.  rate limiting factors</h3>
 <ol>
@@ -513,7 +547,7 @@ Common examples include the flavodoxin fold, the TIM barrel and leucine-rich-rep
 </ol>
 <h2 id="denaturation-and-renaturation-变性与复性"><a class="markdownIt-Anchor" href="#denaturation-and-renaturation-变性与复性"></a> denaturation and renaturation 变性与复性</h2>
 <p>The process that a protein loses its native (functional)  3D structure is call <strong>denaturation</strong></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571658253587.png" alt="1571658253587" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571658253587.png" srcset="/img/loading.gif" alt="1571658253587" style="zoom:50%;" />
 <p><font color="000099">Anfinsen 表明，即使没有二硫键，蛋白质也可以正常折叠。</font></p>
 <p><font color="000099">Anfinsen experiment表明，二硫键应该是最后形成的。</font></p>
 <p>protein can self-assemble into its functional conformation, and it needs no information to guide it other than that contained in its sequence.</p>
@@ -545,7 +579,7 @@ Common examples include the flavodoxin fold, the TIM barrel and leucine-rich-rep
 <h3 id="1-thermal-denaturation-热变性"><a class="markdownIt-Anchor" href="#1-thermal-denaturation-热变性"></a> 1. Thermal denaturation 热变性</h3>
 <p>Differences between the native and denatured conformations can be detected by several spectroscopic(借助分光镜的) methods</p>
 <p>例：对于DNase A</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102220059687.png" alt="image-20191102220059687" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102220059687.png" srcset="/img/loading.gif" alt="image-20191102220059687" style="zoom: 50%;" />
 <ul>
 <li>Solution viscosity (<font color="FF0000">red</font>)</li>
 <li>Optical rotation at 365 nm (<font color="00cc00">green</font>)</li>
@@ -566,13 +600,13 @@ Common examples include the flavodoxin fold, the TIM barrel and leucine-rich-rep
 <ul>
 <li>
 <p>疯牛病：</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571660355690.png" alt="1571660355690" style="zoom:33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571660355690.png" srcset="/img/loading.gif" alt="1571660355690" style="zoom:33%;" />
 </li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571660376952.png" alt="1571660376952" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571660376952.png" srcset="/img/loading.gif" alt="1571660376952" style="zoom:50%;" />
 <h3 id="2-amyloid-淀粉样变性"><a class="markdownIt-Anchor" href="#2-amyloid-淀粉样变性"></a> 2. Amyloid 淀粉样变性</h3>
 <p>Amyloid与许多疾病有关，比如阿尔茨海默症，帕金森症，二型糖尿病等…</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571660482400.png" alt="1571660482400" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571660482400.png" srcset="/img/loading.gif" alt="1571660482400" style="zoom:50%;" />
 <h1 id="protein-dynamics"><a class="markdownIt-Anchor" href="#protein-dynamics"></a> Protein dynamics</h1>
 <p>Protein have dynamics  structures</p>
 <p>Protein dyanmicsis  essential for protein  activities</p>
@@ -607,7 +641,7 @@ Common examples include the flavodoxin fold, the TIM barrel and leucine-rich-rep
 <h1 id="prediction-of-secondary-structure"><a class="markdownIt-Anchor" href="#prediction-of-secondary-structure"></a> Prediction of secondary structure</h1>
 <p>High accuracy $\ \rarr \ $~80%</p>
 <p>Differences are most frequently found in definition of the precise location of the ends of helices and strands</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571661077088.png" alt="1571661077088" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1571661077088.png" srcset="/img/loading.gif" alt="1571661077088" style="zoom:50%;" />
 <h1 id="prediction-of-tertiary-structure"><a class="markdownIt-Anchor" href="#prediction-of-tertiary-structure"></a> Prediction of tertiary structure</h1>
 <p>对三级结构的预测精确度很低，但是如果所预测的蛋白有已知的同源结构，准确度会提升</p>
 <p>Largely depends on sizes of predicted proteins</p>
@@ -615,7 +649,7 @@ Common examples include the flavodoxin fold, the TIM barrel and leucine-rich-rep
 <p>Higher sequence similarity, higher accuracy</p>
 <h1 id="protein-structure-determination"><a class="markdownIt-Anchor" href="#protein-structure-determination"></a> Protein structure determination</h1>
 <h2 id="xray-crystallography"><a class="markdownIt-Anchor" href="#xray-crystallography"></a> X‐ray Crystallography</h2>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102222551196.png" alt="image-20191102222551196" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191102222551196.png" srcset="/img/loading.gif" alt="image-20191102222551196" /></p>
 <h2 id="protein-crystallography-in-applications"><a class="markdownIt-Anchor" href="#protein-crystallography-in-applications"></a> Protein crystallography in applications</h2>
 <ul>
 <li>
@@ -636,189 +670,377 @@ Common examples include the flavodoxin fold, the TIM barrel and leucine-rich-rep
 </li>
 </ul>
 
-    </div>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Biochemistry-I-Macromolecules/">Biochemistry I (Macromolecules)</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/25/L06%20Variation%20in%20Chromosomes%20Structure%20and%20Number%20reversed%20version/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L06 Variation in Chromosomes Structure and Number reversed version</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/25/L07%20Linkage,%20Crossing%20Over,%20and%20Chromosome%20Mapping/">
+                        <span class="hidden-mobile">L07 Linkage, Crossing Over, and Chromosome Mapping</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
 
-    
-    
-    
+            
+              <!-- Valine Comments 国内版-->
+              
+              <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                requiredFields: ['nick'],
+                })
+                </script>
 
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Biochemistry-I-Macromolecules/" rel="tag"># Biochemistry I (Macromolecules)</a>
-          </div>
+              <!-- Valine Comments 国内版-->
+              
+              <!-- <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
+                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
+                requiredFields: ['nick'],
+                })
+                </script> -->
 
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/07/25/L08%20Genetics%20of%20Bacteria%20and%20Bacteriophages/" rel="prev" title="L08 Genetics of Bacteria and Bacteriophages">
-      <i class="fa fa-chevron-left"></i> L08 Genetics of Bacteria and Bacteriophages
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/07/25/L07%20Linkage,%20Crossing%20Over,%20and%20Chromosome%20Mapping/" rel="next" title="L07 Linkage, Crossing Over, and Chromosome Mapping">
-      L07 Linkage, Crossing Over, and Chromosome Mapping <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+              <!-- Utterances Comments -->
+              <!--<div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
+          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tertiary-structure-of-proteins"><span class="nav-number">1.</span> <span class="nav-text"> Tertiary structure of proteins</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#two-major-structural-classes-of-proteins"><span class="nav-number">1.1.</span> <span class="nav-text"> Two major structural classes of proteins</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-fibrous-protein"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 1. Fibrous Protein</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#keratins-角蛋白"><span class="nav-number">1.1.1.1.</span> <span class="nav-text"> keratins 角蛋白</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-alpha-keratins"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text"> (1) α−\alpha-α−keratins</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-beta-keratins"><span class="nav-number">1.1.1.1.2.</span> <span class="nav-text"> (2) β−\beta-β−keratins</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fibroin-丝蛋白"><span class="nav-number">1.1.1.2.</span> <span class="nav-text"> Fibroin 丝蛋白</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#collagen-胶原质"><span class="nav-number">1.1.1.3.</span> <span class="nav-text"> collagen 胶原质</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-collagen-structure"><span class="nav-number">1.1.1.3.1.</span> <span class="nav-text"> (1) Collagen Structure</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-poly-proline-ii-helix"><span class="nav-number">1.1.1.3.2.</span> <span class="nav-text"> (2) Poly-proline II helix</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-globular-proteins"><span class="nav-number">1.1.2.</span> <span class="nav-text"> 2. Globular proteins</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#classification-of-globular-proteins"><span class="nav-number">1.1.2.1.</span> <span class="nav-text"> Classification of globular proteins</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#protein-domains"><span class="nav-number">1.1.2.2.</span> <span class="nav-text"> Protein domains</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#alpha-domain-structure"><span class="nav-number">1.1.2.3.</span> <span class="nav-text"> Alpha domain structure</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-four-helix-bundle"><span class="nav-number">1.1.2.3.1.</span> <span class="nav-text"> (1) Four Helix Bundle</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#beta-domain-structure"><span class="nav-number">1.1.2.4.</span> <span class="nav-text"> Beta domain structure</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#beta-sandwich"><span class="nav-number">1.1.2.4.1.</span> <span class="nav-text"> β\betaβ Sandwich</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#beta-barrel"><span class="nav-number">1.1.2.4.2.</span> <span class="nav-text"> β\betaβ barrel</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#alphabeta-domain-structures"><span class="nav-number">1.1.2.5.</span> <span class="nav-text"> Alpha&#x2F;Beta domain structures</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#tim-barrel"><span class="nav-number">1.1.2.5.1.</span> <span class="nav-text"> TIM barrel</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#open-twisted-αβ"><span class="nav-number">1.1.2.5.2.</span> <span class="nav-text"> Open twisted α&#x2F;β</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#domain-structure"><span class="nav-number">1.1.2.6.</span> <span class="nav-text"> Domain structure</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#general-rules-governing-tertiary-structure"><span class="nav-number">1.2.</span> <span class="nav-text"> General rules governing tertiary structure</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cath-database"><span class="nav-number">1.2.0.1.</span> <span class="nav-text"> CATH database</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#protein-purification"><span class="nav-number">2.</span> <span class="nav-text"> Protein purification</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#chromatographic-separations"><span class="nav-number">2.1.</span> <span class="nav-text"> Chromatographic separations</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-ion-exchange-chromotography-离子交换色谱"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 1. Ion exchange chromotography 离子交换色谱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-gel-filtration-chromatography-凝胶色谱"><span class="nav-number">2.1.2.</span> <span class="nav-text"> 2. Gel filtration chromatography 凝胶色谱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-affinity-chromatography-亲和色谱法亲和层析"><span class="nav-number">2.1.3.</span> <span class="nav-text"> 3. Affinity chromatography 亲和色谱法，亲和层析</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#protein-folding"><span class="nav-number">3.</span> <span class="nav-text"> Protein folding</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#factors-determining-secondary-and-tertiary-structure"><span class="nav-number">3.1.</span> <span class="nav-text"> Factors Determining Secondary and Tertiary Structure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#thermodynamics"><span class="nav-number">3.2.</span> <span class="nav-text"> Thermodynamics</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-negative-free-energy-change"><span class="nav-number">3.2.1.</span> <span class="nav-text"> 1. Negative Free Energy Change</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-thermodynamics"><span class="nav-number">3.2.2.</span> <span class="nav-text"> 2. Thermodynamics</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#kinetics"><span class="nav-number">3.3.</span> <span class="nav-text"> Kinetics</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-free-energy-landscape"><span class="nav-number">3.3.1.</span> <span class="nav-text"> 1. Free Energy Landscape</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-rate-limiting-factors"><span class="nav-number">3.3.2.</span> <span class="nav-text"> 2.  rate limiting factors</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#factors-determining-secondary-and-tertiary-structure-2"><span class="nav-number">3.4.</span> <span class="nav-text"> Factors Determining Secondary and Tertiary Structure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#denaturation-and-renaturation-变性与复性"><span class="nav-number">3.5.</span> <span class="nav-text"> denaturation and renaturation 变性与复性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-thermal-denaturation-热变性"><span class="nav-number">3.5.1.</span> <span class="nav-text"> 1. Thermal denaturation 热变性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#protein-folding-in-vivo"><span class="nav-number">3.6.</span> <span class="nav-text"> Protein folding in vivo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#diseases-about-protein-folding"><span class="nav-number">3.7.</span> <span class="nav-text"> diseases about protein folding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-prion"><span class="nav-number">3.7.1.</span> <span class="nav-text"> 1. Prion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-amyloid-淀粉样变性"><span class="nav-number">3.7.2.</span> <span class="nav-text"> 2. Amyloid 淀粉样变性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#protein-dynamics"><span class="nav-number">4.</span> <span class="nav-text"> Protein dynamics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#categories"><span class="nav-number">4.1.</span> <span class="nav-text"> Categories</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-atomic-fluctuations-原子波动"><span class="nav-number">4.1.1.</span> <span class="nav-text"> 1. Atomic fluctuations 原子波动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-collective-motions-集体运动"><span class="nav-number">4.1.2.</span> <span class="nav-text"> 2. Collective motions 集体运动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-triggered-conformational-changes"><span class="nav-number">4.1.3.</span> <span class="nav-text"> 3. Triggered conformational changes</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#prediction-of-secondary-structure"><span class="nav-number">5.</span> <span class="nav-text"> Prediction of secondary structure</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#prediction-of-tertiary-structure"><span class="nav-number">6.</span> <span class="nav-text"> Prediction of tertiary structure</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#protein-structure-determination"><span class="nav-number">7.</span> <span class="nav-text"> Protein structure determination</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#xray-crystallography"><span class="nav-number">7.1.</span> <span class="nav-text"> X‐ray Crystallography</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#protein-crystallography-in-applications"><span class="nav-number">7.2.</span> <span class="nav-text"> Protein crystallography in applications</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">向海</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">187</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">分类</span>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">17</span>
-        <span class="site-state-item-name">标签</span>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+    
+  <div class="statistics">
+    
+    
 
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">向海</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             
+          </span>
+      
+    
   </div>
 
-        
 
+    
 
-
-
-
-
-
-
-      </div>
-    </footer>
+    
   </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
+    <script  src="/js/lazyload.js" ></script>
   
 
 
 
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
 
 
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
 
 
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L07 Proteins Tertiary Structure&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
 
 
 
@@ -827,6 +1049,33 @@ Common examples include the flavodoxin fold, the TIM barrel and leucine-rich-rep
   
 
   
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
 
 </body>
+
+
 </html>

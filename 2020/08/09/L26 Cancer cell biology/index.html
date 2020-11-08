@@ -1,267 +1,273 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
+
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L26 Cancer cell biology - 鹘横海</title>
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="The Final Part of Cell Biology">
-<meta property="og:type" content="article">
-<meta property="og:title" content="L26 Cancer cell biology">
-<meta property="og:url" content="https://zhenyumi.github.io/2020/08/09/L26%20Cancer%20cell%20biology/index.html">
-<meta property="og:site_name" content="鹘横海">
-<meta property="og:description" content="The Final Part of Cell Biology">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101208199.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101449432.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101545052.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101710933.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101726266.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101753906.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101816883.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102007758.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102042457.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102056540.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102819485.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102933057.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103048004.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103104061.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103240716.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103314439.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200623203954735.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103717272.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103756914.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103937608.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105552898.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105729203.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105845088.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105916907.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105940892.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110039524.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110112969.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110238547.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110259219.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110312492.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110328480.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110443598.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110455636.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110523508.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110541579.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110555852.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110620832.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110707515.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110721782.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110902564.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111304506.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111318162.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111358608.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111518430.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111844665.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112011866.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112030853.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112046385.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112118172.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112140357.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112158258.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112424385.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112630444.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112648748.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112728988.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112750194.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601113027886.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601113132261.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601113138113.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601113143579.png">
-<meta property="article:published_time" content="2020-08-09T06:46:00.000Z">
-<meta property="article:modified_time" content="2020-08-09T06:46:00.000Z">
-<meta property="article:author" content="向海">
-<meta property="article:tag" content="Cell Biology">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101208199.png">
-
-<link rel="canonical" href="https://zhenyumi.github.io/2020/08/09/L26%20Cancer%20cell%20biology/">
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
-  <title>L26 Cancer cell biology | 鹘横海</title>
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
   
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+<link  rel="stylesheet" href="/css/main.css" />
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<!-- 自定义样式保持在最底部 -->
 
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+ 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">鹘横海</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">兴趣使然的记事网站</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
 </nav>
 
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_02.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
 
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-08-09 14:46">
+      2020年8月9日 下午
+    </time>
   </div>
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
+<div class="mt-1">
   
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4.2k 字
+    </span>
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/09/L26%20Cancer%20cell%20biology/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="向海">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="鹘横海">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          L26 Cancer cell biology
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-09 14:46:00" itemprop="dateCreated datePublished" datetime="2020-08-09T14:46:00+08:00">2020-08-09</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
+  
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
       
-        <h1 id="一-cancer-as-a-microevolutionary-process"><a class="markdownIt-Anchor" href="#一-cancer-as-a-microevolutionary-process"></a> 一、Cancer as a microevolutionary process</h1>
+      
+      21
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <!-- 鼠标烟花特效 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/fireworks.js"></script>
+
+    <!--浏览器搞笑标题-->
+    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+
+    <!--动态线条背景-->
+    <!--<script type="text/javascript"
+    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>-->
+
+
+    
+      
+<head>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：3 个月前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-cancer-as-a-microevolutionary-process"><span class="post-toc-text"> 一、Cancer as a microevolutionary process</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#two-types-of-evolution"><span class="post-toc-text"> Two types of evolution</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#microevolutionary"><span class="post-toc-text"> microevolutionary</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-definition"><span class="post-toc-text"> 1. Definition</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#the-nature-of-cancer"><span class="post-toc-text"> The nature of cancer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-morphological-changes-of-cancerous-cells"><span class="post-toc-text"> 1. Morphological changes of cancerous cells</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-monoclonal-originclonal-descendance-of-cancer"><span class="post-toc-text"> 2. Monoclonal origin&#x2F;clonal descendance of cancer</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-cancer-develops-gradually-from-increasing-aberrant-cells"><span class="post-toc-text"> 3. Cancer develops gradually from increasing aberrant cells</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#darwinian-evolution-and-clonal-succession"><span class="post-toc-text"> Darwinian evolution and clonal succession</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-clonal-evolution"><span class="post-toc-text"> 1. Clonal evolution</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-cancers-progress-as-a-series-of-subclones"><span class="post-toc-text"> 2. Cancers progress as a series of subclones</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-genome-instability-of-cancer-cells"><span class="post-toc-text"> 3. Genome instability of cancer cells</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extraordinarily-disrupted-genome-of-cancer-cells"><span class="post-toc-text"> Extraordinarily disrupted genome of cancer cells</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cancer-cells-escape-normal-restrictions-on-proliferation-potential"><span class="post-toc-text"> Cancer cells escape normal restrictions on proliferation potential</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cancer-cells-have-an-altered-sugar-metabolism"><span class="post-toc-text"> Cancer cells have an altered sugar metabolism</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cancer-cells-have-abnormal-responses-to-dna-damage-and-other-stresses"><span class="post-toc-text"> Cancer cells have abnormal responses to DNA damage and other stresses</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#the-tumor-microenvironment-plays-a-role-in-tumorigenesis"><span class="post-toc-text"> The tumor microenvironment plays a role in tumorigenesis</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#metastasis"><span class="post-toc-text"> Metastasis</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-high-activity-of-angiogenesis-formation-of-blood-vessels"><span class="post-toc-text"> 1. High activity of angiogenesis (formation of blood vessels)</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-critical-genes-in-cancer"><span class="post-toc-text"> 二、Critical genes in cancer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#discovery-of-genes-which-are-critical-to-cancer-formation"><span class="post-toc-text"> Discovery of genes which are critical to cancer formation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-discovery-of-tumor-suppressor"><span class="post-toc-text"> 1. Discovery of tumor suppressor</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-alteration-of-cancer-critical-genes-influence-cancer-development"><span class="post-toc-text"> 2. Alteration of “cancer-critical genes” influence cancer development</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cancer-critical-genes-in-human-genome"><span class="post-toc-text"> Cancer-critical genes in human genome</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#molecular-mechanisms-for-cancer-critical-genes-activation-of-proto-oncogenes"><span class="post-toc-text"> Molecular mechanisms for cancer critical genes: activation of proto-oncogenes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-example-egfr-mutation-can-make-it-active-even-in-the-absence-of-egf"><span class="post-toc-text"> (1) Example: EGFR mutation can make it active even in the absence of EGF</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#molecular-mechanisms-for-cancer-critical-genes-inactivation-of-tumor-suppressor"><span class="post-toc-text"> Molecular mechanisms for cancer critical genes: inactivation of tumor suppressor</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-molecular-mechanisms-for-cancer-critical-genes-with-examples"><span class="post-toc-text"> 3. Molecular mechanisms for cancer critical genes with examples</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#myc"><span class="post-toc-text"> Myc</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ras-mutation"><span class="post-toc-text"> Ras mutation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-most-oncogenic-mutations-on-ras-occur-on-amino-acid-12"><span class="post-toc-text"> (1) Most oncogenic mutations on Ras occur on amino acid 12</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#rb-and-cell-cycle-control"><span class="post-toc-text"> Rb and cell cycle control</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#mutation-of-p53-in-human-cancers"><span class="post-toc-text"> Mutation of p53 in human cancers</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-p53-prevent-cells-from-proliferation-upon-dna-damage"><span class="post-toc-text"> (1) p53 prevent cells from proliferation upon DNA damage</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-mode-of-action-for-hpv-p53-inactivation"><span class="post-toc-text"> (2) Mode of action for HPV: p53 inactivation</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#mutations-in-the-pi3kaktmtor-pathway"><span class="post-toc-text"> Mutations in the PI3K&#x2F;Akt&#x2F;mTOR pathway</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#a-few-key-lesions-in-a-large-fraction-of-human-colorectal-cancers"><span class="post-toc-text"> A few key lesions in a large fraction of human colorectal cancers</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#wnt-pathway"><span class="post-toc-text"> Wnt pathway</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#changes-underlying-the-development-of-colorectal-carcinoma"><span class="post-toc-text"> Changes underlying the development of colorectal carcinoma</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#metastasis-remains-largely-unknown"><span class="post-toc-text"> Metastasis remains largely unknown</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-epithelial-mesenchymal-transition-is-important-in-metastasis"><span class="post-toc-text"> 1. Epithelial-mesenchymal transition is important in metastasis</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#increased-activity-of-mt-mmp-promotes-cancer-invasion"><span class="post-toc-text"> Increased activity of MT-MMP promotes cancer invasion</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-cancer-stem-cells"><span class="post-toc-text"> 三、Cancer stem cells</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#stem-celllike-cancer-cells"><span class="post-toc-text"> Stem cell–like cancer cells</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cancers-may-arise-from-cancer-stem-cells"><span class="post-toc-text"> Cancers may arise from cancer stem cells</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四-study-cancer-using-mice"><span class="post-toc-text"> 四、Study cancer using mice</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五-cancer-prevention-and-treatment"><span class="post-toc-text"> 五、Cancer prevention and treatment</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#some-known-carcinogens"><span class="post-toc-text"> Some known carcinogens</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#viruses-associated-with-human-cancers"><span class="post-toc-text"> Viruses associated with human cancers</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cancer-treatment"><span class="post-toc-text"> cancer treatment</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-traditional-cancer-treatment-before-1975"><span class="post-toc-text"> 1. Traditional cancer treatment ( before 1975)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-drugs"><span class="post-toc-text"> 2.  drugs</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#more-specific-cancer-drug-development"><span class="post-toc-text"> More specific cancer drug development</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tumors-genetic-instability-can-be-exploited-for-cancer-therapy"><span class="post-toc-text"> Tumor’s genetic instability can be exploited for cancer therapy</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#the-conversion-of-the-abl-proto-oncogene-into-an-oncogene-in-patients-with-cll"><span class="post-toc-text"> The conversion of the Abl proto-oncogene into an oncogene in patients with CLL</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#the-successful-case-of-imatinib-gleevec"><span class="post-toc-text"> The successful case of Imatinib (Gleevec)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#targeting-rasmap-kinase-signaling-pathway"><span class="post-toc-text"> Targeting Ras–MAP-kinase signaling pathway</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#drug-resistance-and-combinational-treatment"><span class="post-toc-text"> Drug resistance and combinational treatment</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-combination-therapies-tailored-to-the-individual-patient-personalized-medicine"><span class="post-toc-text"> 1. Combination therapies tailored to the individual patient (personalized medicine)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cancer-immunotherapy"><span class="post-toc-text"> Cancer immunotherapy</span></a></li></ol></li></ol>
+
+              <h1 id="一-cancer-as-a-microevolutionary-process"><a class="markdownIt-Anchor" href="#一-cancer-as-a-microevolutionary-process"></a> 一、Cancer as a microevolutionary process</h1>
 <h2 id="two-types-of-evolution"><a class="markdownIt-Anchor" href="#two-types-of-evolution"></a> Two types of evolution</h2>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101208199.png" alt="image-20200601101208199" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101208199.png" srcset="/img/loading.gif" alt="image-20200601101208199" style="zoom: 33%;" />
 <p>Microevolution</p>
 <ul>
 <li>Microevolution is evolution on a small scale — <u>within a single population.</u></li>
@@ -313,7 +319,7 @@
 <li>cancer cells can contain an unusually large amount of <strong>heterochromatin</strong></li>
 </ul>
 <p>Cancer cells spread and grow and destroy the surrounding tissue → metastasis</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101449432.png" alt="image-20200601101449432" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101449432.png" srcset="/img/loading.gif" alt="image-20200601101449432" /></p>
 <p>Primary tumor versus metastasis</p>
 <ul>
 <li>Primary tumor is the <strong>initial tumor</strong>, the starting point of the cancer growth</li>
@@ -323,14 +329,14 @@
 <blockquote>
 <p>They are abnormal in their <strong>shape</strong>, their <strong>motility</strong>, their <u>responses to growth factors</u> in the culture medium, and, most characteristically, in the way they react to contact with the substratum and with one another</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101545052.png" alt="image-20200601101545052" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101545052.png" srcset="/img/loading.gif" alt="image-20200601101545052" /></p>
 <ul>
 <li>左图：Normal cells With highly condensed nucleus</li>
 <li>中图：Precancerous lesions, still differentiated cells, not yet invasive</li>
 <li>右图：Invasive carcinoma, undifferentiated cells, little cytoplasm, large nucleus</li>
 </ul>
 <h3 id="2-monoclonal-originclonal-descendance-of-cancer"><a class="markdownIt-Anchor" href="#2-monoclonal-originclonal-descendance-of-cancer"></a> 2. Monoclonal origin/clonal descendance of cancer</h3>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101710933.png" alt="image-20200601101710933" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101710933.png" srcset="/img/loading.gif" alt="image-20200601101710933" style="zoom: 50%;" />
 <p>How to proof monoclonal origin of cancer?</p>
 <ul>
 <li>Molecular analysis of chromosomes reveals the <strong>clonal descendance（克隆血统）</strong> of the cancer cells.</li>
@@ -341,21 +347,21 @@
 </ul>
 </li>
 </ul>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101726266.png" alt="image-20200601101726266" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101726266.png" srcset="/img/loading.gif" alt="image-20200601101726266" /></p>
 <ul>
 <li>Proof of monoclonal origin of cancer by <strong>X-inactivation mosaic analyses</strong> within tumor tissue</li>
 </ul>
 <h3 id="3-cancer-develops-gradually-from-increasing-aberrant-cells"><a class="markdownIt-Anchor" href="#3-cancer-develops-gradually-from-increasing-aberrant-cells"></a> 3. Cancer develops gradually from increasing aberrant cells</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101753906.png" alt="image-20200601101753906" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101753906.png" srcset="/img/loading.gif" alt="image-20200601101753906" /></p>
 <h2 id="darwinian-evolution-and-clonal-succession"><a class="markdownIt-Anchor" href="#darwinian-evolution-and-clonal-succession"></a> Darwinian evolution and clonal succession</h2>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101816883.png" alt="image-20200601101816883" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601101816883.png" srcset="/img/loading.gif" alt="image-20200601101816883" style="zoom:67%;" />
 <ul>
 <li>A single mutation is not enough to change a normal cell into a cancer cell</li>
 <li>Initiation of cancer is usually driven by <strong>multiple mutations</strong></li>
 <li>Development of a tumor by repeated rounds of mutations</li>
 </ul>
 <h3 id="1-clonal-evolution"><a class="markdownIt-Anchor" href="#1-clonal-evolution"></a> 1. Clonal evolution</h3>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102007758.png" alt="image-20200601102007758" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102007758.png" srcset="/img/loading.gif" alt="image-20200601102007758" style="zoom:50%;" />
 <p>Development of a tumor by repeated rounds of mutations:</p>
 <ul>
 <li>each mutation either <u>enhances cell proliferation</u> or <u>decreases cell death</u>
@@ -372,12 +378,12 @@
 <p>Most commonly, the gene may become packaged into <strong>heterochromatin</strong> and/or the <strong>C nucleotides in CG sequences in its promoter</strong> may become <strong>methylated</strong> in a heritable manner</p>
 </blockquote>
 <h3 id="2-cancers-progress-as-a-series-of-subclones"><a class="markdownIt-Anchor" href="#2-cancers-progress-as-a-series-of-subclones"></a> 2. Cancers progress as a series of subclones</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102042457.png" alt="image-20200601102042457" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102042457.png" srcset="/img/loading.gif" alt="image-20200601102042457" /></p>
 <h3 id="3-genome-instability-of-cancer-cells"><a class="markdownIt-Anchor" href="#3-genome-instability-of-cancer-cells"></a> 3. Genome instability of cancer cells</h3>
 <blockquote>
 <p>Human Cancer Cells Are Genetically Unstable</p>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102056540.png" alt="image-20200601102056540" style="zoom: 23%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102056540.png" srcset="/img/loading.gif" alt="image-20200601102056540" style="zoom: 23%;" />
 <ul>
 <li>Chromosomes from a tumor displaying abnormalities in structure &amp; number: polyploidy（多倍性）, aneuploidy（非整倍性）, translocations（易位）, etc.</li>
 </ul>
@@ -398,7 +404,7 @@
 </ul>
 <p>Clearly, cancer cells are <strong>constantly</strong> mutating, multiplying, competing, evolving, and diversifying as they exploit new ecological niches and react to the treatments that are used against them</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102819485.png" alt="image-20200601102819485" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102819485.png" srcset="/img/loading.gif" alt="image-20200601102819485" /></p>
 <h2 id="cancer-cells-escape-normal-restrictions-on-proliferation-potential"><a class="markdownIt-Anchor" href="#cancer-cells-escape-normal-restrictions-on-proliferation-potential"></a> Cancer cells escape normal restrictions on proliferation potential</h2>
 <blockquote>
 <p>Cancer Cells Display an Altered Control of Growth</p>
@@ -427,7 +433,7 @@
 <li>They can <u>maintain the activity of telomerase</u> as they proliferate, so that their telomeres do not shorten or become uncapped, or <u>they can evolve an alternate mechanism based on homologous recombination (called <strong>ALT</strong>) for elongating their chromosome ends</u>.</li>
 </ul>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102933057.png" alt="image-20200601102933057" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601102933057.png" srcset="/img/loading.gif" alt="image-20200601102933057" style="zoom: 50%;" />
 <ul>
 <li>Loss of contact-inhibition
 <ul>
@@ -437,13 +443,13 @@
 </ul>
 </li>
 </ul>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103048004.png" alt="image-20200601103048004" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103048004.png" srcset="/img/loading.gif" alt="image-20200601103048004" /></p>
 <h2 id="cancer-cells-have-an-altered-sugar-metabolism"><a class="markdownIt-Anchor" href="#cancer-cells-have-an-altered-sugar-metabolism"></a> Cancer cells have an altered sugar metabolism</h2>
 <blockquote>
 <p>Cancer Cells Have an Altered Sugar Metabolism</p>
 <p>most tumors have a metabolism more similar to that of a <u>growing embryo</u> than to that of normal adult tissue.</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103104061.png" alt="image-20200601103104061" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103104061.png" srcset="/img/loading.gif" alt="image-20200601103104061" /></p>
 <ul>
 <li>Warburg effects
 <ul>
@@ -456,7 +462,7 @@
 <p>Cancer Cells Have an Abnormal Ability to Survive Stress and DNA Damage</p>
 <p>In fact, one of the most important properties of many types of cancer cells is that they <u>fail to undergo apoptosis</u> when a normal cell would do so</p>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103240716.png" alt="image-20200601103240716" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103240716.png" srcset="/img/loading.gif" alt="image-20200601103240716" style="zoom:50%;" />
 <ul>
 <li>DNA damage:
 <ul>
@@ -471,13 +477,13 @@
 <p>The Tumor Microenvironment Influences Cancer Development</p>
 <p>The development of a tumor relies on a <strong>two-way communication</strong> between the <strong>tumor cells</strong> and the <strong>tumor stroma</strong>, just as the normal development of epithelial organs relies on communication between <strong>epithelial cells</strong> and <strong>mesenchymal cells</strong> (间充质细胞)</p>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103314439.png" alt="image-20200601103314439" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103314439.png" srcset="/img/loading.gif" alt="image-20200601103314439" style="zoom:67%;" />
 <p>Cell microenvironment includes neighboring cells and ECM.</p>
 <h2 id="metastasis"><a class="markdownIt-Anchor" href="#metastasis"></a> Metastasis</h2>
 <blockquote>
 <p>Cancer Cells Must Survive and Proliferate in a Foreign Environment</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200623203954735.png" alt="image-20200623203954735" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200623203954735.png" srcset="/img/loading.gif" alt="image-20200623203954735" /></p>
 <blockquote>
 <ol>
 <li>First, the cells must <strong>escape the normal confines</strong> of their parent epithelium and <strong>begin to invade the tissue</strong> immediately beneath.</li>
@@ -503,7 +509,7 @@
 <li>To discover which of the later steps in metastasis present cancer cells with the greatest difficulties, one can label the cells with a <strong>fluorescent dye</strong> or <strong>green fluorescent protein (GFP)</strong>, inject them into the bloodstream of a mouse, and then monitor  their fate</li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103717272.png" alt="image-20200601103717272" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103717272.png" srcset="/img/loading.gif" alt="image-20200601103717272" /></p>
 <p>Cancer cells must survive proliferate in a foreign environment</p>
 <blockquote>
 <p><strong>Metastasis</strong> is itself a multi-step process: the cancer cells first have to <u>invade</u> local tissues and vessels, <u>move through the circulation</u>, <u>leave</u> the vessels, and then <u>establish</u> new cellular colonies at distant sites</p>
@@ -511,7 +517,7 @@
 <p>For <strong>carcinomas</strong>, this change resembles the <strong>epithelial–mesenchymal transition (EMT)</strong> that occurs in some epithelial tissues during normal development</p>
 </blockquote>
 <h3 id="1-high-activity-of-angiogenesis-formation-of-blood-vessels"><a class="markdownIt-Anchor" href="#1-high-activity-of-angiogenesis-formation-of-blood-vessels"></a> 1. High activity of angiogenesis (formation of blood vessels)</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103756914.png" alt="image-20200601103756914" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103756914.png" srcset="/img/loading.gif" alt="image-20200601103756914" /></p>
 <ul>
 <li>Tumors <u>induce the formation of new blood vessels</u> to <u>secure their own supply with oxygen and nutrients</u></li>
 <li><font color="EE0000">VEGF</font> (vascular endothelial growth factor) protein</li>
@@ -548,7 +554,7 @@
 </ul>
 </blockquote>
 <h2 id="discovery-of-genes-which-are-critical-to-cancer-formation"><a class="markdownIt-Anchor" href="#discovery-of-genes-which-are-critical-to-cancer-formation"></a> Discovery of genes which are critical to cancer formation</h2>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103937608.png" alt="image-20200601103937608" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601103937608.png" srcset="/img/loading.gif" alt="image-20200601103937608" /></p>
 <ul>
 <li>Discovery of sarcoma (Src) genes</li>
 <li>The egg or the chicken? This time, it started with the chicken</li>
@@ -567,14 +573,14 @@
 </ul>
 </blockquote>
 <h3 id="1-discovery-of-tumor-suppressor"><a class="markdownIt-Anchor" href="#1-discovery-of-tumor-suppressor"></a> 1. Discovery of tumor suppressor</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105552898.png" alt="image-20200601105552898" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105552898.png" srcset="/img/loading.gif" alt="image-20200601105552898" /></p>
 <ul>
 <li>Studies of rare hereditary cancer syndromes first identified tumor suppressor genes</li>
 <li><strong>Rb</strong> (retinoblastoma) gene identification: infected individual has a deletion of a certain band in his chromosome 13.</li>
 <li>Both copies of the Rb gene need to be defective to confer cancer phenotype.</li>
 </ul>
 <h3 id="2-alteration-of-cancer-critical-genes-influence-cancer-development"><a class="markdownIt-Anchor" href="#2-alteration-of-cancer-critical-genes-influence-cancer-development"></a> 2. Alteration of “cancer-critical genes” influence cancer development</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105729203.png" alt="image-20200601105729203" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105729203.png" srcset="/img/loading.gif" alt="image-20200601105729203" /></p>
 <p>Two broad categories</p>
 <ul>
 <li>Proto-oncogenes vs. tumor suppressors
@@ -585,25 +591,25 @@
 </li>
 </ul>
 <h4 id="cancer-critical-genes-in-human-genome"><a class="markdownIt-Anchor" href="#cancer-critical-genes-in-human-genome"></a> Cancer-critical genes in human genome</h4>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105845088.png" alt="image-20200601105845088" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105845088.png" srcset="/img/loading.gif" alt="image-20200601105845088" style="zoom:50%;" />
 <ul>
 <li>1 % of the genes in the human genome are cancer-critical genes</li>
 <li>The mutation landscape in colorectal cancer</li>
 <li>These cancer-critical genes are amazingly diverse</li>
 </ul>
 <h4 id="molecular-mechanisms-for-cancer-critical-genes-activation-of-proto-oncogenes"><a class="markdownIt-Anchor" href="#molecular-mechanisms-for-cancer-critical-genes-activation-of-proto-oncogenes"></a> Molecular mechanisms for cancer critical genes: activation of proto-oncogenes</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105916907.png" alt="image-20200601105916907" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105916907.png" srcset="/img/loading.gif" alt="image-20200601105916907" /></p>
 <ul>
 <li>Genes mutated in cancer can be made overactive in many ways</li>
 </ul>
 <h5 id="1-example-egfr-mutation-can-make-it-active-even-in-the-absence-of-egf"><a class="markdownIt-Anchor" href="#1-example-egfr-mutation-can-make-it-active-even-in-the-absence-of-egf"></a> (1) Example: EGFR mutation can make it active even in the absence of EGF</h5>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105940892.png" alt="image-20200601105940892" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601105940892.png" srcset="/img/loading.gif" alt="image-20200601105940892" /></p>
 <h4 id="molecular-mechanisms-for-cancer-critical-genes-inactivation-of-tumor-suppressor"><a class="markdownIt-Anchor" href="#molecular-mechanisms-for-cancer-critical-genes-inactivation-of-tumor-suppressor"></a> Molecular mechanisms for cancer critical genes: inactivation of tumor suppressor</h4>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110039524.png" alt="image-20200601110039524" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110039524.png" srcset="/img/loading.gif" alt="image-20200601110039524" style="zoom: 50%;" />
 <ul>
 <li>Six ways of losing the remaining good copy of a tumor suppressor gene through a change in DNA sequences.</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110112969.png" alt="image-20200601110112969" style="zoom: 33%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110112969.png" srcset="/img/loading.gif" alt="image-20200601110112969" style="zoom: 33%;" />
 <ul>
 <li>The pathways leading to loss of tumor suppressor gene function in cancer involve both genetic and epigenetic changes</li>
 </ul>
@@ -636,9 +642,9 @@
 <p><strong>normal Ras proteins</strong> are <strong>monomeric GTPases</strong> that <u>help transmit signals from cell-surface receptors to the cell interior</u></p>
 <p>Another consisted of genes in the same <strong>regulatory subnetwork as Ras</strong>—a more loosely defined system of genes referred to as the <strong>RTK/Ras/PI3K pathway</strong>, after three of its core components; this pathway serves to transmit signals for cell growth and cell division from the cell exterior into the heart of the cell.</p>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110238547.png" alt="image-20200601110238547" style="zoom:60%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110238547.png" srcset="/img/loading.gif" alt="image-20200601110238547" style="zoom:60%;" />
 <h5 id="1-most-oncogenic-mutations-on-ras-occur-on-amino-acid-12"><a class="markdownIt-Anchor" href="#1-most-oncogenic-mutations-on-ras-occur-on-amino-acid-12"></a> (1) Most oncogenic mutations on Ras occur on amino acid 12</h5>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110259219.png" alt="image-20200601110259219" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110259219.png" srcset="/img/loading.gif" alt="image-20200601110259219" /></p>
 <h4 id="rb-and-cell-cycle-control"><a class="markdownIt-Anchor" href="#rb-and-cell-cycle-control"></a> Rb and cell cycle control</h4>
 <blockquote>
 <p><strong>Rb protein</strong>, which is a universal regulator of the <strong>cell cycle</strong> present in almost all cells of the body</p>
@@ -646,9 +652,9 @@
 <li>One of these groupings consisted of genes in the <strong>Rb pathway</strong> (that is, Rb itself,  along with genes that directly regulate Rb); this pathway <u>governs initiation of the cell-division cycle</u></li>
 </ul>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110312492.png" alt="image-20200601110312492" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110312492.png" srcset="/img/loading.gif" alt="image-20200601110312492" style="zoom:67%;" />
 <p>Phosphorylation of Rb promotes <strong>cyclin E/cdk</strong> activity</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110328480.png" alt="image-20200601110328480" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110328480.png" srcset="/img/loading.gif" alt="image-20200601110328480" style="zoom:67%;" />
 <h4 id="mutation-of-p53-in-human-cancers"><a class="markdownIt-Anchor" href="#mutation-of-p53-in-human-cancers"></a> Mutation of p53 in human cancers</h4>
 <blockquote>
 <p>The third grouping consisted of genes in a pathway regulating responses to  <u>stress and DNA damage</u>—<strong>the p53 pathway.</strong></p>
@@ -656,16 +662,16 @@
 <p>The p53 pathway, therefore, behaves as a sort of <strong>antenna</strong>, <u>sensing the presence of a wide range of dangerous conditions, and when any are detected</u>, triggering appropriate action—either a <u>temporary or permanent arrest of cell cycling</u>  (senescence), or <strong>suicide</strong> by <strong>apoptosis</strong></p>
 <p>Only by losing p53 function can the cancer cells with hyperactive oncogenes survive and progress.</p>
 </blockquote>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110443598.png" alt="image-20200601110443598" style="zoom: 43%;" />
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110455636.png" alt="image-20200601110455636" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110443598.png" srcset="/img/loading.gif" alt="image-20200601110443598" style="zoom: 43%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110455636.png" srcset="/img/loading.gif" alt="image-20200601110455636" style="zoom: 50%;" />
 <h5 id="1-p53-prevent-cells-from-proliferation-upon-dna-damage"><a class="markdownIt-Anchor" href="#1-p53-prevent-cells-from-proliferation-upon-dna-damage"></a> (1) p53 prevent cells from proliferation upon DNA damage</h5>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110523508.png" alt="image-20200601110523508" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110523508.png" srcset="/img/loading.gif" alt="image-20200601110523508" /></p>
 <h5 id="2-mode-of-action-for-hpv-p53-inactivation"><a class="markdownIt-Anchor" href="#2-mode-of-action-for-hpv-p53-inactivation"></a> (2) Mode of action for HPV: p53 inactivation</h5>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110541579.png" alt="image-20200601110541579" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110541579.png" srcset="/img/loading.gif" alt="image-20200601110541579" style="zoom:67%;" />
 <ul>
 <li>Cancers of the uterine cervix（子宫颈） can be prevented by vaccination against human papillomavirus（人乳头状瘤病毒）</li>
 </ul>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110555852.png" alt="image-20200601110555852" style="zoom:50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110555852.png" srcset="/img/loading.gif" alt="image-20200601110555852" style="zoom:50%;" />
 <h4 id="mutations-in-the-pi3kaktmtor-pathway"><a class="markdownIt-Anchor" href="#mutations-in-the-pi3kaktmtor-pathway"></a> Mutations in the PI3K/Akt/mTOR pathway</h4>
 <blockquote>
 <p>The <strong>phosphoinositide 3-kinase (PI 3-kinase)/Akt/mTOR</strong> intracellular signaling pathway is critical for <u>cell growth control</u></p>
@@ -675,11 +681,11 @@
 <li><strong>PTEN</strong> is thus a <u>common tumor-suppressor gene.</u></li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110620832.png" alt="image-20200601110620832" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110620832.png" srcset="/img/loading.gif" alt="image-20200601110620832" /></p>
 <h4 id="a-few-key-lesions-in-a-large-fraction-of-human-colorectal-cancers"><a class="markdownIt-Anchor" href="#a-few-key-lesions-in-a-large-fraction-of-human-colorectal-cancers"></a> A few key lesions in a large fraction of human colorectal cancers</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110707515.png" alt="image-20200601110707515" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110707515.png" srcset="/img/loading.gif" alt="image-20200601110707515" /></p>
 <h4 id="wnt-pathway"><a class="markdownIt-Anchor" href="#wnt-pathway"></a> Wnt pathway</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110721782.png" alt="image-20200601110721782" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110721782.png" srcset="/img/loading.gif" alt="image-20200601110721782" /></p>
 <ul>
 <li>Co-receptor: <strong><font color="EE0000">LRP</font></strong> ( LDL-receptor-related protein) and <strong><font color="EE0000">Frizzled</font></strong></li>
 <li>Latent transcription regulators: <strong><font color="EE0000">β-catenin</font></strong></li>
@@ -699,19 +705,19 @@
 </ul>
 </blockquote>
 <h4 id="changes-underlying-the-development-of-colorectal-carcinoma"><a class="markdownIt-Anchor" href="#changes-underlying-the-development-of-colorectal-carcinoma"></a> Changes underlying the development of colorectal carcinoma</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110902564.png" alt="image-20200601110902564" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601110902564.png" srcset="/img/loading.gif" alt="image-20200601110902564" /></p>
 <p>Colorectal cancers evolve slowly via a succession of visible changes</p>
 <p>Suggested typical sequence of genetic changes underlying the development of a colorectal carcinoma.</p>
 <h2 id="metastasis-remains-largely-unknown"><a class="markdownIt-Anchor" href="#metastasis-remains-largely-unknown"></a> Metastasis remains largely unknown</h2>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111304506.png" alt="image-20200601111304506" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111304506.png" srcset="/img/loading.gif" alt="image-20200601111304506" /></p>
 <h3 id="1-epithelial-mesenchymal-transition-is-important-in-metastasis"><a class="markdownIt-Anchor" href="#1-epithelial-mesenchymal-transition-is-important-in-metastasis"></a> 1. Epithelial-mesenchymal transition is important in metastasis</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111318162.png" alt="image-20200601111318162" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111318162.png" srcset="/img/loading.gif" alt="image-20200601111318162" /></p>
 <ul>
 <li>EMT(<em>epithelial–mesenchymal transition</em>） promoting transcription factors promotes metastasis</li>
 <li>EMT is associating to increased migration of epithelial cells</li>
 </ul>
 <h4 id="increased-activity-of-mt-mmp-promotes-cancer-invasion"><a class="markdownIt-Anchor" href="#increased-activity-of-mt-mmp-promotes-cancer-invasion"></a> Increased activity of MT-MMP promotes cancer invasion</h4>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111358608.png" alt="image-20200601111358608" style="zoom:67%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111358608.png" srcset="/img/loading.gif" alt="image-20200601111358608" style="zoom:67%;" />
 <ul>
 <li>MT-MMP: membrane type MMP</li>
 </ul>
@@ -724,7 +730,7 @@
 <li>Those that can induce tumor formation has the characteristics of cancer stem cells: They are capable of indefinite self-renewal, but they also give rise to rapidly cells that have limited capacity to self-renewal. They are responsible for maintaining the Population of cells in a tumor.</li>
 </ol>
 <h2 id="cancers-may-arise-from-cancer-stem-cells"><a class="markdownIt-Anchor" href="#cancers-may-arise-from-cancer-stem-cells"></a> Cancers may arise from cancer stem cells</h2>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111518430.png" alt="image-20200601111518430" style="zoom: 50%;" />
+<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111518430.png" srcset="/img/loading.gif" alt="image-20200601111518430" style="zoom: 50%;" />
 <blockquote>
 <p>On average, the two fates—stem cell or differentiating cell—normally occur with equal probability, so that half the daughters of stem-cell divisions take the one path and half take the other.</p>
 <ul>
@@ -737,14 +743,14 @@
 </ul>
 </blockquote>
 <h1 id="四-study-cancer-using-mice"><a class="markdownIt-Anchor" href="#四-study-cancer-using-mice"></a> 四、Study cancer using mice</h1>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111844665.png" alt="image-20200601111844665" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601111844665.png" srcset="/img/loading.gif" alt="image-20200601111844665" /></p>
 <h1 id="五-cancer-prevention-and-treatment"><a class="markdownIt-Anchor" href="#五-cancer-prevention-and-treatment"></a> 五、Cancer prevention and treatment</h1>
 <blockquote>
 <p>Epidemiology Reveals That Many Cases of Cancer Are  Preventable</p>
 <p>the differences are thought to be due mostly to environmental,  not genetic, factors. From such findings, it has been suggested that 80–90% of cancers should be avoidable, or at least postponable</p>
 </blockquote>
 <p>Cancer incidence related to environmental influences</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112011866.png" alt="image-20200601112011866" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112011866.png" srcset="/img/loading.gif" alt="image-20200601112011866" /></p>
 <ul>
 <li>Fifty percent of cancers could be prevented by changes in lifestyle</li>
 </ul>
@@ -758,53 +764,53 @@
 <li>asbestos</li>
 </ul>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112030853.png" alt="image-20200601112030853" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112030853.png" srcset="/img/loading.gif" alt="image-20200601112030853" /></p>
 <h2 id="viruses-associated-with-human-cancers"><a class="markdownIt-Anchor" href="#viruses-associated-with-human-cancers"></a> Viruses associated with human cancers</h2>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112046385.png" alt="image-20200601112046385" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112046385.png" srcset="/img/loading.gif" alt="image-20200601112046385" /></p>
 <ul>
 <li>Viruses and other infections contribute to a significant proportion of human cancers</li>
 </ul>
 <h2 id="cancer-treatment"><a class="markdownIt-Anchor" href="#cancer-treatment"></a> cancer treatment</h2>
 <h3 id="1-traditional-cancer-treatment-before-1975"><a class="markdownIt-Anchor" href="#1-traditional-cancer-treatment-before-1975"></a> 1. Traditional cancer treatment ( before 1975)</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112118172.png" alt="image-20200601112118172" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112118172.png" srcset="/img/loading.gif" alt="image-20200601112118172" /></p>
 <ul>
 <li>Three cancer treatments: “Slash, burn, and poison”</li>
 </ul>
 <h3 id="2-drugs"><a class="markdownIt-Anchor" href="#2-drugs"></a> 2.  drugs</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112140357.png" alt="image-20200601112140357" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112140357.png" srcset="/img/loading.gif" alt="image-20200601112140357" /></p>
 <ul>
 <li>Examples for some of them, all are generally cytotoxic</li>
 </ul>
 <h4 id="more-specific-cancer-drug-development"><a class="markdownIt-Anchor" href="#more-specific-cancer-drug-development"></a> More specific cancer drug development</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112158258.png" alt="image-20200601112158258" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112158258.png" srcset="/img/loading.gif" alt="image-20200601112158258" /></p>
 <h4 id="tumors-genetic-instability-can-be-exploited-for-cancer-therapy"><a class="markdownIt-Anchor" href="#tumors-genetic-instability-can-be-exploited-for-cancer-therapy"></a> Tumor’s genetic instability can be exploited for cancer therapy</h4>
 <blockquote>
 <p>genetic instability is not an accidental by-product of malignant behavior but a contributory cause—and that cancer cells can acquire this instability in multiple ways. is not an accidental by-product of malignant behavior but a contributory cause—and that cancer cells can acquire this instability in multiple ways.</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112424385.png" alt="image-20200601112424385" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112424385.png" srcset="/img/loading.gif" alt="image-20200601112424385" /></p>
 <h4 id="the-conversion-of-the-abl-proto-oncogene-into-an-oncogene-in-patients-with-cll"><a class="markdownIt-Anchor" href="#the-conversion-of-the-abl-proto-oncogene-into-an-oncogene-in-patients-with-cll"></a> The conversion of the Abl proto-oncogene into an oncogene in patients with CLL</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112630444.png" alt="image-20200601112630444" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112630444.png" srcset="/img/loading.gif" alt="image-20200601112630444" /></p>
 <ul>
 <li>CLL: chronic myelogenous Leukemia</li>
 </ul>
 <h4 id="the-successful-case-of-imatinib-gleevec"><a class="markdownIt-Anchor" href="#the-successful-case-of-imatinib-gleevec"></a> The successful case of Imatinib (Gleevec)</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112648748.png" alt="image-20200601112648748" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112648748.png" srcset="/img/loading.gif" alt="image-20200601112648748" /></p>
 <ul>
 <li>Target BCR-Abl, which is the initiating oncogene to induce chronic myelogenous leukemia (CML), greatly increase the lifespan of this type of leukemia patients.</li>
 <li>The inhibition of Gleevec to BCR-Abl is specific</li>
 </ul>
 <h4 id="targeting-rasmap-kinase-signaling-pathway"><a class="markdownIt-Anchor" href="#targeting-rasmap-kinase-signaling-pathway"></a> Targeting Ras–MAP-kinase signaling pathway</h4>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112728988.png" alt="image-20200601112728988" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112728988.png" srcset="/img/loading.gif" alt="image-20200601112728988" /></p>
 <ul>
 <li>Some anticancer drugs and drug targets in the Ras–MAP-kinase signaling pathway</li>
 </ul>
 <h2 id="drug-resistance-and-combinational-treatment"><a class="markdownIt-Anchor" href="#drug-resistance-and-combinational-treatment"></a> Drug resistance and combinational treatment</h2>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112750194.png" alt="image-20200601112750194" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601112750194.png" srcset="/img/loading.gif" alt="image-20200601112750194" /></p>
 <ul>
 <li>Multidrug treatments can be more effective than sequential treatments for cancer therapy</li>
 </ul>
 <h3 id="1-combination-therapies-tailored-to-the-individual-patient-personalized-medicine"><a class="markdownIt-Anchor" href="#1-combination-therapies-tailored-to-the-individual-patient-personalized-medicine"></a> 1. Combination therapies tailored to the individual patient (personalized medicine)</h3>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601113027886.png" alt="image-20200601113027886" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601113027886.png" srcset="/img/loading.gif" alt="image-20200601113027886" /></p>
 <ul>
 <li>Better understanding which genes are altered in the cells of any given tumor can help to tailor treatments more accurately to each individual patient.</li>
 </ul>
@@ -822,193 +828,381 @@
 <li>03/2013, New England Journal of Medicine</li>
 <li>It was approved by FDA in August 2017.</li>
 </ul>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601113132261.png" alt="image-20200601113132261" /></p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601113138113.png" alt="image-20200601113138113" /></p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601113143579.png" alt="image-20200601113143579" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601113132261.png" srcset="/img/loading.gif" alt="image-20200601113132261" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601113138113.png" srcset="/img/loading.gif" alt="image-20200601113138113" /></p>
+<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200601113143579.png" srcset="/img/loading.gif" alt="image-20200601113143579" /></p>
 
-    </div>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Cell-Biology/">Cell Biology</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/08/09/%E5%91%8A%E4%B8%80%E6%AE%B5%E8%90%BD/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">告一段落</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/08/05/06-R-%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E2%85%A1/">
+                        <span class="hidden-mobile">06. R <- 基本绘图Ⅱ</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
 
-    
-    
-    
+            
+              <!-- Valine Comments 国内版-->
+              
+              <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                requiredFields: ['nick'],
+                })
+                </script>
 
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Cell-Biology/" rel="tag"># Cell Biology</a>
-          </div>
+              <!-- Valine Comments 国内版-->
+              
+              <!-- <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
+                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
+                requiredFields: ['nick'],
+                })
+                </script> -->
 
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/08/05/06-R-%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E2%85%A1/" rel="prev" title="06. R <- 基本绘图Ⅱ">
-      <i class="fa fa-chevron-left"></i> 06. R <- 基本绘图Ⅱ
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/08/09/%E5%91%8A%E4%B8%80%E6%AE%B5%E8%90%BD/" rel="next" title="告一段落">
-      告一段落 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+              <!-- Utterances Comments -->
+              <!--<div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
+          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一-cancer-as-a-microevolutionary-process"><span class="nav-number">1.</span> <span class="nav-text"> 一、Cancer as a microevolutionary process</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#two-types-of-evolution"><span class="nav-number">1.1.</span> <span class="nav-text"> Two types of evolution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#microevolutionary"><span class="nav-number">1.2.</span> <span class="nav-text"> microevolutionary</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-definition"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 1. Definition</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-nature-of-cancer"><span class="nav-number">1.3.</span> <span class="nav-text"> The nature of cancer</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-morphological-changes-of-cancerous-cells"><span class="nav-number">1.3.1.</span> <span class="nav-text"> 1. Morphological changes of cancerous cells</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-monoclonal-originclonal-descendance-of-cancer"><span class="nav-number">1.3.2.</span> <span class="nav-text"> 2. Monoclonal origin&#x2F;clonal descendance of cancer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-cancer-develops-gradually-from-increasing-aberrant-cells"><span class="nav-number">1.3.3.</span> <span class="nav-text"> 3. Cancer develops gradually from increasing aberrant cells</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#darwinian-evolution-and-clonal-succession"><span class="nav-number">1.4.</span> <span class="nav-text"> Darwinian evolution and clonal succession</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-clonal-evolution"><span class="nav-number">1.4.1.</span> <span class="nav-text"> 1. Clonal evolution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-cancers-progress-as-a-series-of-subclones"><span class="nav-number">1.4.2.</span> <span class="nav-text"> 2. Cancers progress as a series of subclones</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-genome-instability-of-cancer-cells"><span class="nav-number">1.4.3.</span> <span class="nav-text"> 3. Genome instability of cancer cells</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#extraordinarily-disrupted-genome-of-cancer-cells"><span class="nav-number">1.4.3.1.</span> <span class="nav-text"> Extraordinarily disrupted genome of cancer cells</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cancer-cells-escape-normal-restrictions-on-proliferation-potential"><span class="nav-number">1.5.</span> <span class="nav-text"> Cancer cells escape normal restrictions on proliferation potential</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cancer-cells-have-an-altered-sugar-metabolism"><span class="nav-number">1.6.</span> <span class="nav-text"> Cancer cells have an altered sugar metabolism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cancer-cells-have-abnormal-responses-to-dna-damage-and-other-stresses"><span class="nav-number">1.7.</span> <span class="nav-text"> Cancer cells have abnormal responses to DNA damage and other stresses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-tumor-microenvironment-plays-a-role-in-tumorigenesis"><span class="nav-number">1.8.</span> <span class="nav-text"> The tumor microenvironment plays a role in tumorigenesis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#metastasis"><span class="nav-number">1.9.</span> <span class="nav-text"> Metastasis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-high-activity-of-angiogenesis-formation-of-blood-vessels"><span class="nav-number">1.9.1.</span> <span class="nav-text"> 1. High activity of angiogenesis (formation of blood vessels)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-critical-genes-in-cancer"><span class="nav-number">2.</span> <span class="nav-text"> 二、Critical genes in cancer</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#discovery-of-genes-which-are-critical-to-cancer-formation"><span class="nav-number">2.1.</span> <span class="nav-text"> Discovery of genes which are critical to cancer formation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-discovery-of-tumor-suppressor"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 1. Discovery of tumor suppressor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-alteration-of-cancer-critical-genes-influence-cancer-development"><span class="nav-number">2.1.2.</span> <span class="nav-text"> 2. Alteration of “cancer-critical genes” influence cancer development</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cancer-critical-genes-in-human-genome"><span class="nav-number">2.1.2.1.</span> <span class="nav-text"> Cancer-critical genes in human genome</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#molecular-mechanisms-for-cancer-critical-genes-activation-of-proto-oncogenes"><span class="nav-number">2.1.2.2.</span> <span class="nav-text"> Molecular mechanisms for cancer critical genes: activation of proto-oncogenes</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-example-egfr-mutation-can-make-it-active-even-in-the-absence-of-egf"><span class="nav-number">2.1.2.2.1.</span> <span class="nav-text"> (1) Example: EGFR mutation can make it active even in the absence of EGF</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#molecular-mechanisms-for-cancer-critical-genes-inactivation-of-tumor-suppressor"><span class="nav-number">2.1.2.3.</span> <span class="nav-text"> Molecular mechanisms for cancer critical genes: inactivation of tumor suppressor</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-molecular-mechanisms-for-cancer-critical-genes-with-examples"><span class="nav-number">2.1.3.</span> <span class="nav-text"> 3. Molecular mechanisms for cancer critical genes with examples</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#myc"><span class="nav-number">2.1.3.1.</span> <span class="nav-text"> Myc</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ras-mutation"><span class="nav-number">2.1.3.2.</span> <span class="nav-text"> Ras mutation</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-most-oncogenic-mutations-on-ras-occur-on-amino-acid-12"><span class="nav-number">2.1.3.2.1.</span> <span class="nav-text"> (1) Most oncogenic mutations on Ras occur on amino acid 12</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rb-and-cell-cycle-control"><span class="nav-number">2.1.3.3.</span> <span class="nav-text"> Rb and cell cycle control</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mutation-of-p53-in-human-cancers"><span class="nav-number">2.1.3.4.</span> <span class="nav-text"> Mutation of p53 in human cancers</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-p53-prevent-cells-from-proliferation-upon-dna-damage"><span class="nav-number">2.1.3.4.1.</span> <span class="nav-text"> (1) p53 prevent cells from proliferation upon DNA damage</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-mode-of-action-for-hpv-p53-inactivation"><span class="nav-number">2.1.3.4.2.</span> <span class="nav-text"> (2) Mode of action for HPV: p53 inactivation</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mutations-in-the-pi3kaktmtor-pathway"><span class="nav-number">2.1.3.5.</span> <span class="nav-text"> Mutations in the PI3K&#x2F;Akt&#x2F;mTOR pathway</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#a-few-key-lesions-in-a-large-fraction-of-human-colorectal-cancers"><span class="nav-number">2.1.3.6.</span> <span class="nav-text"> A few key lesions in a large fraction of human colorectal cancers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wnt-pathway"><span class="nav-number">2.1.3.7.</span> <span class="nav-text"> Wnt pathway</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#changes-underlying-the-development-of-colorectal-carcinoma"><span class="nav-number">2.1.3.8.</span> <span class="nav-text"> Changes underlying the development of colorectal carcinoma</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#metastasis-remains-largely-unknown"><span class="nav-number">2.2.</span> <span class="nav-text"> Metastasis remains largely unknown</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-epithelial-mesenchymal-transition-is-important-in-metastasis"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 1. Epithelial-mesenchymal transition is important in metastasis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#increased-activity-of-mt-mmp-promotes-cancer-invasion"><span class="nav-number">2.2.1.1.</span> <span class="nav-text"> Increased activity of MT-MMP promotes cancer invasion</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三-cancer-stem-cells"><span class="nav-number">3.</span> <span class="nav-text"> 三、Cancer stem cells</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#stem-celllike-cancer-cells"><span class="nav-number">3.1.</span> <span class="nav-text"> Stem cell–like cancer cells</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cancers-may-arise-from-cancer-stem-cells"><span class="nav-number">3.2.</span> <span class="nav-text"> Cancers may arise from cancer stem cells</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四-study-cancer-using-mice"><span class="nav-number">4.</span> <span class="nav-text"> 四、Study cancer using mice</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五-cancer-prevention-and-treatment"><span class="nav-number">5.</span> <span class="nav-text"> 五、Cancer prevention and treatment</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#some-known-carcinogens"><span class="nav-number">5.1.</span> <span class="nav-text"> Some known carcinogens</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#viruses-associated-with-human-cancers"><span class="nav-number">5.2.</span> <span class="nav-text"> Viruses associated with human cancers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cancer-treatment"><span class="nav-number">5.3.</span> <span class="nav-text"> cancer treatment</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-traditional-cancer-treatment-before-1975"><span class="nav-number">5.3.1.</span> <span class="nav-text"> 1. Traditional cancer treatment ( before 1975)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-drugs"><span class="nav-number">5.3.2.</span> <span class="nav-text"> 2.  drugs</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#more-specific-cancer-drug-development"><span class="nav-number">5.3.2.1.</span> <span class="nav-text"> More specific cancer drug development</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tumors-genetic-instability-can-be-exploited-for-cancer-therapy"><span class="nav-number">5.3.2.2.</span> <span class="nav-text"> Tumor’s genetic instability can be exploited for cancer therapy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#the-conversion-of-the-abl-proto-oncogene-into-an-oncogene-in-patients-with-cll"><span class="nav-number">5.3.2.3.</span> <span class="nav-text"> The conversion of the Abl proto-oncogene into an oncogene in patients with CLL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#the-successful-case-of-imatinib-gleevec"><span class="nav-number">5.3.2.4.</span> <span class="nav-text"> The successful case of Imatinib (Gleevec)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#targeting-rasmap-kinase-signaling-pathway"><span class="nav-number">5.3.2.5.</span> <span class="nav-text"> Targeting Ras–MAP-kinase signaling pathway</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#drug-resistance-and-combinational-treatment"><span class="nav-number">5.4.</span> <span class="nav-text"> Drug resistance and combinational treatment</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-combination-therapies-tailored-to-the-individual-patient-personalized-medicine"><span class="nav-number">5.4.1.</span> <span class="nav-text"> 1. Combination therapies tailored to the individual patient (personalized medicine)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cancer-immunotherapy"><span class="nav-number">5.5.</span> <span class="nav-text"> Cancer immunotherapy</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">向海</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">187</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">分类</span>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">17</span>
-        <span class="site-state-item-name">标签</span>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+    
+  <div class="statistics">
+    
+    
 
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">向海</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             
+          </span>
+      
+    
   </div>
 
-        
 
+    
 
-
-
-
-
-
-
-      </div>
-    </footer>
+    
   </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
+    <script  src="/js/lazyload.js" ></script>
   
 
 
 
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
 
 
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
 
 
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L26 Cancer cell biology&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
 
 
 
@@ -1017,6 +1211,33 @@
   
 
   
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
 
 </body>
+
+
 </html>
