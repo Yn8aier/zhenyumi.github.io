@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L1&amp;2 Intro and Genetic Structure - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+ 
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-11-11 08:33">
+      2020年11月11日 早上
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      9
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <!-- 鼠标烟花特效 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/fireworks.js"></script>
+
+    <!--浏览器搞笑标题-->
+    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+
+    <!--动态线条背景-->
+    <!--<script type="text/javascript"
+    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>-->
+
+
+    
+      
+<head>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：30 分钟前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-introduction-to-genetic-engineering"><span class="post-toc-text"> 一、Introduction to Genetic Engineering</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#important-discoveries-in-genetic-engineering"><span class="post-toc-text"> Important Discoveries in Genetic Engineering</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#theoretical-foundation-of-genetic-engineering"><span class="post-toc-text"> Theoretical foundation of Genetic Engineering</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-the-general-procedure-of-genetic-engineering"><span class="post-toc-text"> 1. The general procedure of genetic engineering</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-a-timeline-of-the-history-of-genetic-engineering"><span class="post-toc-text"> 2. A timeline of the history of Genetic Engineering</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#the-objectives-of-genetic-engineering"><span class="post-toc-text"> The objectives of Genetic Engineering</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-basic-knowledge-for-genetic-engineering"><span class="post-toc-text"> 二、Basic Knowledge for Genetic Engineering</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#the-difference-between-ge-and-molecular-biology"><span class="post-toc-text"> The difference between GE and Molecular Biology</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#the-central-dogma"><span class="post-toc-text"> The central dogma</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#structure-of-dna-and-rna"><span class="post-toc-text"> Structure of DNA and RNA</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-deoxyribonucleic-acid-and-ribonucleic-acid"><span class="post-toc-text"> 1. Deoxyribonucleic Acid and Ribonucleic Acid</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dna-replication"><span class="post-toc-text"> DNA Replication</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-synthesis-of-the-new-dna-strands"><span class="post-toc-text"> 1. Synthesis of the new DNA Strands:</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#gene-structure-and-organization"><span class="post-toc-text"> Gene structure and organization</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-prokaryotic-gene-structure"><span class="post-toc-text"> 1. Prokaryotic gene structure</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#promoter-region"><span class="post-toc-text"> Promoter region</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#rna-coding-sequence"><span class="post-toc-text"> RNA coding sequence</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#terminator-region"><span class="post-toc-text"> Terminator region</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-eukaryotic-gene-structure"><span class="post-toc-text"> 2. Eukaryotic gene structure</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#different-strands"><span class="post-toc-text"> Different Strands</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#the-coding-region-structure"><span class="post-toc-text"> The Coding Region Structure</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-general-structure"><span class="post-toc-text"> (1) General Structure</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-introns-and-exons"><span class="post-toc-text"> (2) Introns and Exons</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#significance-of-introns"><span class="post-toc-text"> Significance of Introns</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-promoters"><span class="post-toc-text"> (3) Promoters</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-upstream-5end"><span class="post-toc-text"> (4) Upstream (5’end)</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#5-downstream-3end"><span class="post-toc-text"> (5) Downstream (3’end)</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#6-terminator"><span class="post-toc-text"> (6) Terminator</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#7-enhancer"><span class="post-toc-text"> (7) Enhancer</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#8-silencers"><span class="post-toc-text"> (8) Silencers</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-salient-features-of-gene"><span class="post-toc-text"> 3. Salient features of gene</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-mutations"><span class="post-toc-text"> 4. Mutations</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#genome-organization"><span class="post-toc-text"> Genome organization</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-histone-modification"><span class="post-toc-text"> 1. Histone Modification</span></a></li></ol></li></ol></li></ol>
+
+              <h1 id="一-introduction-to-genetic-engineering"><a class="markdownIt-Anchor" href="#一-introduction-to-genetic-engineering"></a> 一、Introduction to Genetic Engineering</h1>
+<p>Genetic engineering is a term which involves the group of techniques used to cut up and join together genetic material, especially DNA from different biological species, and to introduce the resulting hybrid DNA into an organism in order to form new combinations of heritable genetic material.</p>
+<ol>
+<li>It is a recombinant DNA technique</li>
+<li>It involves transfer the recombinant DNA into a host cell–transformation</li>
+<li>The newly transformed recombinant DNA is heritable</li>
+</ol>
+<h2 id="important-discoveries-in-genetic-engineering"><a class="markdownIt-Anchor" href="#important-discoveries-in-genetic-engineering"></a> Important Discoveries in Genetic Engineering</h2>
+<p><strong>Gregor Mendel</strong> – basic principle of genetics. Law of segregation and Law of independent assortment. Knowing the basis of genetics.</p>
+<p><strong>Thomas Hunt Morgan</strong> – established the chromosome theory of heredity. He showed that genes are linked in a series on chromosomes and are responsible for identifiable, hereditary traits. He adopted the term gene, which was introduced by the Danish botanist Wilhelm Johannsen in 1909. Mechanism of Mendelian Heredity (1915). Morgan’s work played a key role in establishing the field of genetics. He received the Nobel Prize for Physiology or Medicine in 1933.</p>
+<p><strong>James Watson</strong> and <strong>Francis Crick</strong> – The discovery of DNA structure 1953</p>
+<h2 id="theoretical-foundation-of-genetic-engineering"><a class="markdownIt-Anchor" href="#theoretical-foundation-of-genetic-engineering"></a> Theoretical foundation of Genetic Engineering</h2>
+<p>The discovery made by Gregor Mendel, Thomas Hunt Morgan， James Watson and Francis Crick pretty much laid the theoretical foundation for Genetic Engineering.</p>
+<ol>
+<li>Development of various enzymes which are important tools of Genetic Engineering</li>
+<li>Development of carriers of recombinant DNA – Vectors</li>
+<li>Development of methods for delivering the recombinant DNA into the host cell. – Transformation</li>
+</ol>
+<h3 id="1-the-general-procedure-of-genetic-engineering"><a class="markdownIt-Anchor" href="#1-the-general-procedure-of-genetic-engineering"></a> 1. The general procedure of genetic engineering</h3>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922092143544.png" srcset="/img/loading.gif" alt="image-20200922092143544" style="zoom:67%;" />
+<h3 id="2-a-timeline-of-the-history-of-genetic-engineering"><a class="markdownIt-Anchor" href="#2-a-timeline-of-the-history-of-genetic-engineering"></a> 2. A timeline of the history of Genetic Engineering</h3>
+<p>DNA polymerase - A. Kornberg in 1956 purified DNA polymerase.</p>
+<p>DNA ligase - In 1967 the enzyme DNA ligase was isolated by Weiss and Richardson.</p>
+<p>Restriction Enzyme - isolation of the first restriction enzyme in 1970.</p>
+<p>Recombinant DNA molecules – the first pieces were generated at Stanford University in 1972, utilizing the cleavage properties of restriction enzymes (scissors) and the ability of DNA ligase to join DNA strands together (glue). (By P. Berg)</p>
+<p>Vector - The key to gene cloning is to tended in 1973 by joining DNA fragments to the plasmid pSC101, ensure that the target sequence is replicated in a suitable host cell. which is an extrachromosomal element isolated from the bacterium Escherichia coli. (By Cohen and Boyer)</p>
+<p>DNA sequencing - 1977, Sanger DNA sequencing</p>
+<p>PCR - 1987, K.B. Mullis developed PCR.</p>
+<h2 id="the-objectives-of-genetic-engineering"><a class="markdownIt-Anchor" href="#the-objectives-of-genetic-engineering"></a> The objectives of Genetic Engineering</h2>
+<ol>
+<li>Bioreactor
+<ul>
+<li>Prokaryotic or Eukaryotic cells are cultured as host cells for foreign<br />
+gene expression, to produce useful proteins in low cost</li>
+<li>Mainly used for pharmaceutical purpose !</li>
+<li>advantages genetically engineered drug:
+<ul>
+<li>Not limited by the slaughter of animals.</li>
+<li>Large quantities can be made quickly.</li>
+<li>No risk of transferring infections.</li>
+<li>More effective at treating disease as animal proteins is different to human proteins.</li>
+<li>No ethical issues concerning the use of animals.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Aid basic research
+<ul>
+<li>Example: <strong>Reporter genes</strong> can be used to measure promoter activity or tissue-specific expression.</li>
+</ul>
+</li>
+</ol>
+<p>Summary of objectives of genetic engineering:</p>
+<ol>
+<li>Basic Research, Gene’s function, link phenotype to genotype</li>
+<li>Production of useful proteins and compound – Bioreactor or Molecular Farming.</li>
+<li>Generation of transgenic plants and animals</li>
+<li>Medical diagnosis and treatment</li>
+<li>Genome analysis by DNA sequencing</li>
+<li>Synthetic Biology</li>
+<li>Forensic Analysis; (法医分析)</li>
+<li>Paternity Disputes;</li>
+</ol>
+<h1 id="二-basic-knowledge-for-genetic-engineering"><a class="markdownIt-Anchor" href="#二-basic-knowledge-for-genetic-engineering"></a> 二、Basic Knowledge for Genetic Engineering</h1>
+<p>Important knowledges:</p>
+<ol>
+<li>The difference between GE and Molecular Biology</li>
+<li>The Central Dogma of Molecular Biology</li>
+<li>DNA and RNA structure, DNA replication</li>
+<li>Mutations</li>
+<li>Gene structure and organization</li>
+<li>Genome organization</li>
+</ol>
+<h2 id="the-difference-between-ge-and-molecular-biology"><a class="markdownIt-Anchor" href="#the-difference-between-ge-and-molecular-biology"></a> The difference between GE and Molecular Biology</h2>
+<p>Molecular Biology instruct you knowledge around the central dogma, you get to know how a cell works at molecular level in a nutshell</p>
+<p>The knowledge you learned in the course of Molecular Biology are generated mostly (if not all)from experimental works</p>
+<p>Genetic Engineering pretty much tells you how do those experiments work</p>
+<p>This course is best served as a companion for your daily lab works</p>
+<h2 id="the-central-dogma"><a class="markdownIt-Anchor" href="#the-central-dogma"></a> The central dogma</h2>
+<p>The Flow of Information: DNA to RNA to protein</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922095002553.png" srcset="/img/loading.gif" alt="image-20200922095002553" /></p>
+<p>A gene is expressed in two</p>
+<ul>
+<li>steps: DNA is transcribed to RNA</li>
+<li>Then RNA is translated into protein.</li>
+</ul>
+<p>Modification of Central Dogma:</p>
+<ul>
+<li>RNA dependent RNA polymerase (RDR)</li>
+<li>RNA dependent DNA polymerase (Reverse transcriptase)</li>
+</ul>
+<h2 id="structure-of-dna-and-rna"><a class="markdownIt-Anchor" href="#structure-of-dna-and-rna"></a> Structure of DNA and RNA</h2>
+<h3 id="1-deoxyribonucleic-acid-and-ribonucleic-acid"><a class="markdownIt-Anchor" href="#1-deoxyribonucleic-acid-and-ribonucleic-acid"></a> 1. Deoxyribonucleic Acid and Ribonucleic Acid</h3>
+<p>Made up of nucleotides (DNA molecule) in a DNA double helix.</p>
+<ul>
+<li>~2 nm wide</li>
+</ul>
+<p>Nucleotide:</p>
+<ol>
+<li>Phosphate group</li>
+<li>5-carbon sugar</li>
+<li>Nitrogenous base</li>
+</ol>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922095132530.png" srcset="/img/loading.gif" alt="image-20200922095132530" /></p>
+<p>DNA Nucleotide:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922095144614.png" srcset="/img/loading.gif" alt="image-20200922095144614" style="zoom:67%;" />
+<p>RNA Nucleotide:</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922095218864.png" srcset="/img/loading.gif" alt="image-20200922095218864" style="zoom:67%;" />
+<h2 id="dna-replication"><a class="markdownIt-Anchor" href="#dna-replication"></a> DNA Replication</h2>
+<p>Origins of replication</p>
+<ol>
+<li><strong>Replication Forks</strong>: hundreds of Y-shaped regions of replicating DNA molecules where new strands are growing.</li>
+</ol>
+<ul>
+<li>By default, name the upper strand as 5’ <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rarr</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> 3’</li>
+</ul>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922095327986.png" srcset="/img/loading.gif" alt="image-20200922095327986" /></p>
+<ol start="2">
+<li>Origins of replication: <strong>Replication Bubbles</strong>:
+<ol>
+<li>Hundreds of replicating bubbles (Eukaryotes).</li>
+<li>Single replication fork (bacteria).</li>
+</ol>
+</li>
+</ol>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922095520606.png" srcset="/img/loading.gif" alt="image-20200922095520606" /></p>
+<h3 id="1-synthesis-of-the-new-dna-strands"><a class="markdownIt-Anchor" href="#1-synthesis-of-the-new-dna-strands"></a> 1. Synthesis of the new DNA Strands:</h3>
+<ol>
+<li>Leading Strand: synthesized as a single polymer in the 5’ to 3’ direction.</li>
+</ol>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922095559002.png" srcset="/img/loading.gif" alt="image-20200922095559002" /></p>
+<ol start="2">
+<li>Lagging Strand: also synthesized in the 5’ to 3’ direction, but discontinuously against overall direction of replication.</li>
+</ol>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922095637864.png" srcset="/img/loading.gif" alt="image-20200922095637864" /></p>
+<ol start="3">
+<li><strong>Okazaki Fragments</strong>: series of short segments on the lagging strand.</li>
+</ol>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922103630717.png" srcset="/img/loading.gif" alt="image-20200922103630717" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922103644361.png" srcset="/img/loading.gif" alt="image-20200922103644361" /></p>
+<ol start="4">
+<li><strong>DNA ligase</strong>: a linking enzyme that catalyzes the formation of a covalent bond from the 3’ to 5’ end of joining stands.</li>
+</ol>
+<ul>
+<li>Example: joining two Okazaki fragments together</li>
+</ul>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922103734962.png" srcset="/img/loading.gif" alt="image-20200922103734962" /></p>
+<h2 id="gene-structure-and-organization"><a class="markdownIt-Anchor" href="#gene-structure-and-organization"></a> Gene structure and organization</h2>
+<h3 id="1-prokaryotic-gene-structure"><a class="markdownIt-Anchor" href="#1-prokaryotic-gene-structure"></a> 1. Prokaryotic gene structure</h3>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922104541217.png" srcset="/img/loading.gif" alt="image-20200922104541217" /></p>
+<p>Prokaryotic Gene is composed of three regions:</p>
+<ol>
+<li>Promoter region</li>
+<li>RNA coding sequence</li>
+<li>Terminator region</li>
+</ol>
+<p>Prokaryotic gene is continues and uninterested where there is no introns present</p>
+<p>The region 5’ of the promoter sequence is called <strong>upstream sequence</strong> and the region 3’ of the terminator sequence is called <strong>downstream sequence.</strong></p>
+<h4 id="promoter-region"><a class="markdownIt-Anchor" href="#promoter-region"></a> Promoter region</h4>
+<p>This is situated on upstream of the sequence that codes for RNA.</p>
+<p>This is the site that <u>interact RNA polymerase</u> before RNA synthesis(Transcription).</p>
+<p>Promoter region provides the <u>location and direction to initiate transcription</u></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922104753593.png" srcset="/img/loading.gif" alt="image-20200922104753593" /></p>
+<ul>
+<li>At -10 there is a sequence TATAAT or PRIBNOW BOX.</li>
+<li>At -35 another consensus sequence TTGACA</li>
+<li>These two are the most important promoter elements recognized by transcription factors.</li>
+</ul>
+<h4 id="rna-coding-sequence"><a class="markdownIt-Anchor" href="#rna-coding-sequence"></a> RNA coding sequence</h4>
+<p>The DNA sequence that will become copied into an RNA molecule (RNA transcript).</p>
+<p>Starts with an initiator codon and ends with termination codon</p>
+<ul>
+<li><strong>No introns (uninterrupted).</strong></li>
+<li>Collinear to its mRNA</li>
+</ul>
+<p>Any nucleotide present on the left is denoted by (-)symbol and the region is called <strong>upstream element</strong>. E.g. -10,-20,-35 etc.</p>
+<p>Any sequence to the right of the start is <strong>downstream elements</strong> and numbered as +10,+35 etc.).</p>
+<h4 id="terminator-region"><a class="markdownIt-Anchor" href="#terminator-region"></a> Terminator region</h4>
+<p>The region that <u>signal the RNA polymerase to stop transcription</u> from DNA template.</p>
+<p>Transcription termination occur through <u>Rho dependent or Rho independent manner</u></p>
+<h3 id="2-eukaryotic-gene-structure"><a class="markdownIt-Anchor" href="#2-eukaryotic-gene-structure"></a> 2. Eukaryotic gene structure</h3>
+<p>Eukaryotic gene are complex structures compared that prokaryotic gene.</p>
+<p>They are composed of following regions:</p>
+<ol>
+<li>Exons</li>
+<li>Introns</li>
+<li>Promoter sequences</li>
+<li>Terminator sequences</li>
+<li>Upstream sequences</li>
+<li>Downstream sequences</li>
+<li><strong>Enhancers</strong> and <strong>silencers</strong> (upstream or downstream)</li>
+<li><strong>Signals</strong> (Upstream sequence signal for addition of cap. Downstream sequences signal for addition of poly A tail.)</li>
+</ol>
+<h4 id="different-strands"><a class="markdownIt-Anchor" href="#different-strands"></a> Different Strands</h4>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922105822623.png" srcset="/img/loading.gif" alt="image-20200922105822623" /></p>
+<p>The RNA transcripted has similar sequence to the <strong>Coding Strand (Sense Strand, Crick Strand)</strong></p>
+<ul>
+<li>The DNA sequence downloaded from database are always coding strand</li>
+</ul>
+<p>The RNA Pol use the <strong>Template Strand (Antisense Strand, Waston Strand)</strong> to synthesize RNA</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/ink-image.png" srcset="/img/loading.gif" alt="ink-image" /></p>
+<h4 id="the-coding-region-structure"><a class="markdownIt-Anchor" href="#the-coding-region-structure"></a> The Coding Region Structure</h4>
+<h5 id="1-general-structure"><a class="markdownIt-Anchor" href="#1-general-structure"></a> (1) General Structure</h5>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922105719789.png" srcset="/img/loading.gif" alt="image-20200922105719789" /></p>
+<ul>
+<li>TSS：transcription start site</li>
+<li>TES/TTS: transcription termination site</li>
+<li>PAS: polyadenylation site</li>
+<li>Enhancers/silencers</li>
+</ul>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/ink-image-1600743657095.png" srcset="/img/loading.gif" alt="ink-image" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/ink-image-1600743703041.png" srcset="/img/loading.gif" alt="ink-image" /></p>
+<h5 id="2-introns-and-exons"><a class="markdownIt-Anchor" href="#2-introns-and-exons"></a> (2) Introns and Exons</h5>
+<p>Exons</p>
+<ol>
+<li>Coding sequence, transcribed and translated.</li>
+<li>Coding for amino acids in the polypeptide chain.</li>
+<li>Vary in number ,sequence and length. A gene <u>starts and ends with exons</u>.(5’to 3’).</li>
+<li>Some exon includes <strong>untranslated(UTR) region</strong>.</li>
+</ol>
+<p>Introns</p>
+<ol>
+<li>Coding sequences are separated by noncoding sequences called introns.</li>
+<li>They are removed when the primary transcript is processed to give the mature RNA</li>
+<li>All introns share the base sequence GT in the 5’end and AG in the 3’end.</li>
+<li>Introns were 1st discovered in 1977 independently by Phillip Sharp and Richard Roberts.</li>
+</ol>
+<h6 id="significance-of-introns"><a class="markdownIt-Anchor" href="#significance-of-introns"></a> Significance of Introns</h6>
+<p>Introns don’t specify the synthesis of proteins but have other important cellular activities.</p>
+<p>Many introns encodes RNA’s that are major regulators of gene expression.</p>
+<p>Contain regulatory sequences that control trancription and mRNA processing.</p>
+<p>Introns allow exons to be joined in different combinations(alternative splicing),resulting in the synthesis of different proteins from the same gene.</p>
+<p>Important role in evolution by facilitating recombination between exons of different genes(exon shuffling)</p>
+<h5 id="3-promoters"><a class="markdownIt-Anchor" href="#3-promoters"></a> (3) Promoters</h5>
+<p>A promoter is a regulatory region of DNA located upstream controlling gene expression.</p>
+<ol>
+<li>Core promoter – transcription start site(-34) Binding site for RNA polymerase<br />
+and it is a general transcription factor binding sites</li>
+<li>Proximal promoter-contain. primary regulatory element.</li>
+</ol>
+<ul>
+<li>These together are responsible for binding of RNA polymerase II which is responsible for transcription</li>
+</ul>
+<h5 id="4-upstream-5end"><a class="markdownIt-Anchor" href="#4-upstream-5end"></a> (4) Upstream (5’end)</h5>
+<p>5’UTR serve several functions including mRNA transport and initiation of translation.</p>
+<p>Signal for addition of cap(7 methyl guanisine) to the 5’end of the mRNA.</p>
+<p>The cap facilitates the initiation of translation</p>
+<p>Stabilization of mRNA.</p>
+<h5 id="5-downstream-3end"><a class="markdownIt-Anchor" href="#5-downstream-3end"></a> (5) Downstream (3’end)</h5>
+<p>3’UTR serves to add mRNA</p>
+<p>Stability and attachment site for poly-A-tail.</p>
+<p>The translation termination codon TAA.</p>
+<p>AATAA sequence signal for addition of poly A tail</p>
+<h5 id="6-terminator"><a class="markdownIt-Anchor" href="#6-terminator"></a> (6) Terminator</h5>
+<p>Recognized by RNA polymerase as a signal to stop transcription</p>
+<h5 id="7-enhancer"><a class="markdownIt-Anchor" href="#7-enhancer"></a> (7) Enhancer</h5>
+<p>Enhances the transcription of a gene upto few thousand bp upstream</p>
+<ul>
+<li>Enhancer influence the 3D structure of DNA molecule, therefore enhance transcription</li>
+<li>使得DNA链上两个区域空间位置更加接近</li>
+</ul>
+<h5 id="8-silencers"><a class="markdownIt-Anchor" href="#8-silencers"></a> (8) Silencers</h5>
+<p>Reduce or shut down the expression of a near by gene.</p>
+<h3 id="3-salient-features-of-gene"><a class="markdownIt-Anchor" href="#3-salient-features-of-gene"></a> 3. Salient features of gene</h3>
+<p>Number of genes in each organism is more than the number of chromosomes; hence several genes are located on each chromosome.</p>
+<p>The genes are arranged in a single linear order like beads on a string.</p>
+<p>Each gene occupies specific position called <strong>locus</strong>.</p>
+<p>If the position of gene changes, character changes.</p>
+<p>Genes can be transmitted from parent to off springs.</p>
+<p>Genes may exist in several alternate formed called <strong>alleles</strong>.</p>
+<p>Genes are capable of combined together or can be replicated during a cell division.</p>
+<p>Genes may undergo for sudden changes in position and composition called <strong>mutation</strong>.</p>
+<p>Genes are capable of self duplication producing their own exact copies</p>
+<h3 id="4-mutations"><a class="markdownIt-Anchor" href="#4-mutations"></a> 4. Mutations</h3>
+<p>Mutation- change in DNA sequence leading to a different protein sequence being produced</p>
+<ul>
+<li>same codon produced.</li>
+</ul>
+<p><strong>Missense mutation</strong> - different codon introduced</p>
+<ul>
+<li>Partially acceptable</li>
+</ul>
+<p><strong>Nonsense mutation</strong> -stop codon introduced</p>
+<ul>
+<li>Usually unacceptable</li>
+</ul>
+<p><strong>Silent Mutation</strong> – change of DNA sequence without a subsequent change in the amino acid</p>
+<h2 id="genome-organization"><a class="markdownIt-Anchor" href="#genome-organization"></a> Genome organization</h2>
+<p><strong>Nucleosome</strong> – The basic structural subunit of chromatin, consisting of ~200 bp of DNA and an octamer of histone proteins.</p>
+<p><strong>10 nm fiber</strong> – A linear array of nucleosomes generated by unfolding from the natural condition of chromatin.</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922111750079.png" srcset="/img/loading.gif" alt="image-20200922111750079" /></p>
+<p><strong>Histone tails</strong> – Flexible amino or carboxy-terminal regions of the core histones that extend beyond the surface of the nucleosome.</p>
+<ul>
+<li>Histone tails are sites of extensive posttranslational modification</li>
+</ul>
+<p><strong>Nonhistone</strong> – Any structural protein found in a chromosome except one of the histones</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922111838099.png" srcset="/img/loading.gif" alt="image-20200922111838099" /></p>
+<ul>
+<li>A nucleosome contains ~200 bp of DNA and two copies of each core histone (H2A, H2B, H3, and H4).</li>
+<li>The <strong>histone octamer</strong> has a structure of an H32-H42 tetramer associated with two H2A-H2B dimers</li>
+</ul>
+<p><strong>30 nm fiber</strong> – A coil of nucleosomes</p>
+<ul>
+<li>It is the basic level of organization of nucleosomes in chromatin.</li>
+</ul>
+<h3 id="1-histone-modification"><a class="markdownIt-Anchor" href="#1-histone-modification"></a> 1. Histone Modification</h3>
+<p>Nucleosomes Are Covalently Modified – mainly at histone tails</p>
+<p>Histones are modified by methylation, acetylation, phosphorylation, and other modifications</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922112006086.png" srcset="/img/loading.gif" alt="image-20200922112006086" /></p>
+<p>Histones are modified by methylation, acetylation,phosphorylation, and other modifications.</p>
+<p>Combinations of specific histone modifications define the function of local regions of chromatin; this is known as the <strong>histone code</strong>.</p>
+<p>Histone modification can affect process such as transcription and DNA replication.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922112244545.png" srcset="/img/loading.gif" alt="image-20200922112244545" style="zoom:67%;" />
+<p>Acetylation associated with gene activation occurs by directly modifying specific sites on histones that are already incorporated into nucleosomes.</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20200922112313282.png" srcset="/img/loading.gif" alt="image-20200922112313282" /></p>
+<ul>
+<li>Linker histone H1 helped the package of nucleosome into 30nm fiber
+<ul>
+<li>Affect heterochromatin</li>
+<li>H1 is not essential in eukaryotes</li>
+</ul>
+</li>
+</ul>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Genetic-Engineering/">Genetic Engineering</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/11/L10%20DNA%20Polymerases/">
+                        <span class="hidden-mobile">L10 DNA Polymerases</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Valine Comments 国内版-->
+              
+              <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                requiredFields: ['nick'],
+                })
+                </script>
+
+              <!-- Valine Comments 国内版-->
+              
+              <!-- <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
+                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
+                requiredFields: ['nick'],
+                })
+                </script> -->
+
+              <!-- Utterances Comments -->
+              <!--<div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
+          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
+</script>
+
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L1&2 Intro and Genetic Structure&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>

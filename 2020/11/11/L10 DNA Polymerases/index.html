@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L10 DNA Polymerases - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+ 
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-11-11 08:33">
+      2020年11月11日 早上
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      586 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      3
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <!-- 鼠标烟花特效 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/fireworks.js"></script>
+
+    <!--浏览器搞笑标题-->
+    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+
+    <!--动态线条背景-->
+    <!--<script type="text/javascript"
+    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>-->
+
+
+    
+      
+<head>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：29 分钟前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ecoli-dna-polymerase-i"><span class="post-toc-text"> E.coli DNA Polymerase I</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-to-5-exonuclease-activities-proofreading-activity"><span class="post-toc-text"> 3’ to 5′ exonuclease activities – proofreading activity</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#klenow-fragment"><span class="post-toc-text"> Klenow Fragment</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#t4-dna-polymerase"><span class="post-toc-text"> T4 DNA Polymerase</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#t7-dna-polymerase"><span class="post-toc-text"> T7 DNA Polymerase</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#phi29-dna-polymerase"><span class="post-toc-text"> phi29 DNA Polymerase</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#reverse-transcriptase"><span class="post-toc-text"> Reverse transcriptase</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#a-comparison-between-different-dna-polymerase"><span class="post-toc-text"> A comparison between different DNA polymerase</span></a></li></ol>
+
+              <h1 id="ecoli-dna-polymerase-i"><a class="markdownIt-Anchor" href="#ecoli-dna-polymerase-i"></a> <em>E.coli</em> DNA Polymerase I</h1>
+<p>Discovered by A. Kornberg 1957.</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span></span></span></span> DNA-dependent DNA polymerase</p>
+<p>5’ to 3’ polymerase activity</p>
+<p>inherent 3′– 5´ and 5′– 3′ exonuclease activities</p>
+<p><strong>Application</strong>:</p>
+<ul>
+<li>Nick translation for labeling</li>
+</ul>
+<h2 id="3-to-5-exonuclease-activities-proofreading-activity"><a class="markdownIt-Anchor" href="#3-to-5-exonuclease-activities-proofreading-activity"></a> 3’ to 5′ exonuclease activities – proofreading activity</h2>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201108121813159.png" srcset="/img/loading.gif" alt="image-20201108121813159" style="zoom: 67%;" />
+<p>5′ to 3’ exonuclease activities – chew up RNA primer  during DNA replication.</p>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201108121831523.png" srcset="/img/loading.gif" alt="image-20201108121831523" style="zoom: 50%;" />
+<p>With DNA replication there is a leading strand  which follows the replication fork and a lagging  strand which goes in the other direction. Before  DNA replication can begin Primase must lay down  RNA primers so that DNA polymerase III can  elongate the new strand by laying down new bases.  Once elongation is complete there is the issue with  having RNA primers are the start of the leading  strand and also in between the Okazaki fragments on  the lagging strand. This is where DNA polymerase I  comes in. <strong>DNA polymerase I</strong> has a 5’-3’  exonuclease that <u>chews up the RNA primer</u> so that  it can replace the RNA with DNA. Once it has done  this ligase comes in to seal the nick</p>
+<h1 id="klenow-fragment"><a class="markdownIt-Anchor" href="#klenow-fragment"></a> Klenow Fragment</h1>
+<p>DNA Polymerase I, Large (Klenow) Fragment</p>
+<p>Without 5′– 3′ exonuclease activity</p>
+<p>5’ to 3’ polymerase activity</p>
+<p>3′ to 5´ exonuclease activity</p>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Generates probes using random primers</li>
+<li>Second strand cDNA synthesis</li>
+<li>Dideoxy sequencing (less frequently used)</li>
+</ul>
+<h1 id="t4-dna-polymerase"><a class="markdownIt-Anchor" href="#t4-dna-polymerase"></a> T4 DNA Polymerase</h1>
+<p>5’ to 3’ polymerase activity</p>
+<p>Strong 3′ to 5’ exonuclease activity (much higher than DNA Pol I)</p>
+<p>Without 5′– 3′ exonuclease activity</p>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Gap filling, 5’ overhang filling</li>
+<li>3’ overhang removal</li>
+<li>Probe labeling using replacement synthesis</li>
+</ul>
+<p>T4 DNA Pol behave like an 3’ to 5’ exonuclease in the absence of dNTPs</p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201108122428776.png" srcset="/img/loading.gif" alt="image-20201108122428776" /></p>
+<h1 id="t7-dna-polymerase"><a class="markdownIt-Anchor" href="#t7-dna-polymerase"></a> T7 DNA Polymerase</h1>
+<p>catalyze the DNA replication of T7 phage genome</p>
+<p>High 5’ to 3’ polymerase activity (rapid extension rate)</p>
+<p>High 3′ to 5´ exonuclease activity</p>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Gap filling, 5’ overhang filling</li>
+<li>Synthesize long stretch of DNA (several kb)</li>
+<li>Native T7 DNA Pol is unsuitable for DNA sequencing, why?</li>
+<li>Engineered T7 DNA Pol are used in Sanger sequencing</li>
+</ul>
+<h1 id="phi29-dna-polymerase"><a class="markdownIt-Anchor" href="#phi29-dna-polymerase"></a> <strong>phi29 DNA Polymerase</strong></h1>
+<p>Replicative polymerase from the <em>Bacillus subtilis</em> phage phi29</p>
+<p>5’ to 3’ polymerase activity (extremely processive, up to 70kb)</p>
+<p>3′ to 5´ exonuclease activity</p>
+<p>very high strand displacement activity (the ability to displace downstream DNA encountered during synthesis)</p>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Ideal for rolling cycle amplification</li>
+<li>PacBio sequencing (smart-seq).</li>
+</ul>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201108122550376.png" srcset="/img/loading.gif" alt="image-20201108122550376" /></p>
+<h1 id="reverse-transcriptase"><a class="markdownIt-Anchor" href="#reverse-transcriptase"></a> Reverse transcriptase</h1>
+<p>RNA directed DNA polymerase</p>
+<p><strong>AMV RT</strong> (Avian Myelobastosis Virus) &amp; <strong>M-MLV RT</strong> (Moloney Murine Leukemia Virus), what’s the difference ?</p>
+<p><strong>AMV RT</strong></p>
+<ul>
+<li>relatively insensitive to RNA secondary structure,</li>
+<li>Intrinsic RNase H activity, which degrades RNA of  RNA/DNA hybrid and can cleave the RNA template  if the RT pauses during synthesis.
+<ul>
+<li><u>RNA template  no longer available</u></li>
+</ul>
+</li>
+<li>Difficult to obtain fragment longer than 5kb.</li>
+</ul>
+<p><strong>M-MLV RT</strong></p>
+<ul>
+<li>Moloney Murine Leukemia Virus Reverse Transcriptase</li>
+<li>RNase H activity less than AMV-RT</li>
+<li>Different versions of <strong>RNase H– mutant available</strong>, idea for making long cDNA.</li>
+<li>Some RNase H- variants can work <u>at 55 degree</u>, can <u>reduce the effect of RNA secondary structure</u></li>
+<li>Reaction is more sensitive to impurities of RNA samples.
+<ul>
+<li>inhibited 50% by 5% (v/v) formamide, 17% (v/v) DMSO, 34% (v/v) glycerol, 15mM guanidine isothiocyanate, 1mM EDTA, 0.0025% SDS and 4µg/ml heparin</li>
+</ul>
+</li>
+</ul>
+<h1 id="a-comparison-between-different-dna-polymerase"><a class="markdownIt-Anchor" href="#a-comparison-between-different-dna-polymerase"></a> A comparison between different DNA polymerase</h1>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201108122614199.png" srcset="/img/loading.gif" alt="image-20201108122614199" /></p>
+<p><strong>DNA polymerases</strong></p>
+<ul>
+<li><em>E.coli</em> DNA Pol I (Nick translation, 5’ to 3’ exonuclease activity)</li>
+<li>Klenow fragement (Random probe labeling)</li>
+<li>T4 DNA polymerase (High 3’ to 5’ exonuclease activity, Gibson Assembly</li>
+<li>T7 DNA polymerase (High polymerase activity, Engineered for DNA sequencing</li>
+<li>phi29 DNA polymerase (PacBio sequencing, Rolling Cycler Amplification</li>
+<li>Reverse transcriptase (AMV versus M-MLV, Rnase H- version).</li>
+</ul>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Genetic-Engineering/">Genetic Engineering</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/11/11/L1&amp;2%20Intro%20and%20Genetic%20Structure/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L1&2 Intro and Genetic Structure</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/11/L3%20%20Isolation%20of%20DNA%20and%20RNAs/">
+                        <span class="hidden-mobile">L3  Isolation of DNA and RNAs</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Valine Comments 国内版-->
+              
+              <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                requiredFields: ['nick'],
+                })
+                </script>
+
+              <!-- Valine Comments 国内版-->
+              
+              <!-- <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
+                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
+                requiredFields: ['nick'],
+                })
+                </script> -->
+
+              <!-- Utterances Comments -->
+              <!--<div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
+          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
+</script>
+
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L10 DNA Polymerases&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>
