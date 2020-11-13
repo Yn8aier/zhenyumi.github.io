@@ -49,7 +49,7 @@
 
 
   <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <head>
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      6.6k 字
+      6.7k 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      24
+      25
        分钟
     </span>
   
@@ -245,7 +245,7 @@
       
 <head>
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+</head>
 
 <div class="container-fluid">
   <div class="row">
@@ -263,7 +263,7 @@
             
             <article class="markdown-body">
               <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-一键式描述性统计分析"><span class="post-toc-text"> 一、一键式描述性统计分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总体计算样本描述性统计量"><span class="post-toc-text"> 总体计算样本描述性统计量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-summary-fivenum-一步获得常见统计量"><span class="post-toc-text"> 1. summary &amp; fivenum 一步获得常见统计量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-sapply-apply-通过自定义函数进行分析"><span class="post-toc-text"> 2. sapply &amp; apply 通过（自定义）函数进行分析</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-第三方包提供的其他方法"><span class="post-toc-text"> 3. 第三方包提供的其他方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#hmisc"><span class="post-toc-text"> Hmisc</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pastecs"><span class="post-toc-text"> pastecs</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#psych"><span class="post-toc-text"> psych</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分组计算描述性统计量"><span class="post-toc-text"> 分组计算描述性统计量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-整合aggregate和重塑reshape数据"><span class="post-toc-text"> 1. 整合(Aggregate)和重塑(reshape)数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#transposition-转置"><span class="post-toc-text"> Transposition 转置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用-aggregate-by-整合"><span class="post-toc-text"> 使用 aggregate &amp; by 整合</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#aggregate"><span class="post-toc-text"> aggregate</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#by"><span class="post-toc-text"> by</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#packagereshape2"><span class="post-toc-text"> Package：reshape2</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-频数表和列联表"><span class="post-toc-text"> 2. 频数表和列联表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#生成频数表"><span class="post-toc-text"> 生成频数表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-一维列联表"><span class="post-toc-text"> (1) 一维列联表</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-二维列联表"><span class="post-toc-text"> (2) 二维列联表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#函数table"><span class="post-toc-text"> 函数table()</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#packagegmodels"><span class="post-toc-text"> Package：gmodels</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-多维列联表"><span class="post-toc-text"> (3) 多维列联表</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-单项描述性统计分析"><span class="post-toc-text"> 二、单项描述性统计分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数学函数"><span class="post-toc-text"> 数学函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#统计函数"><span class="post-toc-text"> 统计函数</span></a></li></ol></li></ol>
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80-%E4%B8%80%E9%94%AE%E5%BC%8F%E6%8F%8F%E8%BF%B0%E6%80%A7%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90"><span class="post-toc-text"> 一、一键式描述性统计分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%80%BB%E4%BD%93%E8%AE%A1%E7%AE%97%E6%A0%B7%E6%9C%AC%E6%8F%8F%E8%BF%B0%E6%80%A7%E7%BB%9F%E8%AE%A1%E9%87%8F"><span class="post-toc-text"> 总体计算样本描述性统计量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-summary-fivenum-%E4%B8%80%E6%AD%A5%E8%8E%B7%E5%BE%97%E5%B8%B8%E8%A7%81%E7%BB%9F%E8%AE%A1%E9%87%8F"><span class="post-toc-text"> 1. summary &amp; fivenum 一步获得常见统计量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-sapply-apply-%E9%80%9A%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E8%BF%9B%E8%A1%8C%E5%88%86%E6%9E%90"><span class="post-toc-text"> 2. sapply &amp; apply 通过（自定义）函数进行分析</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8C%85%E6%8F%90%E4%BE%9B%E7%9A%84%E5%85%B6%E4%BB%96%E6%96%B9%E6%B3%95"><span class="post-toc-text"> 3. 第三方包提供的其他方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#hmisc"><span class="post-toc-text"> Hmisc</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pastecs"><span class="post-toc-text"> pastecs</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#psych"><span class="post-toc-text"> psych</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%88%86%E7%BB%84%E8%AE%A1%E7%AE%97%E6%8F%8F%E8%BF%B0%E6%80%A7%E7%BB%9F%E8%AE%A1%E9%87%8F"><span class="post-toc-text"> 分组计算描述性统计量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E6%95%B4%E5%90%88aggregate%E5%92%8C%E9%87%8D%E5%A1%91reshape%E6%95%B0%E6%8D%AE"><span class="post-toc-text"> 1. 整合(Aggregate)和重塑(reshape)数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#transposition-%E8%BD%AC%E7%BD%AE"><span class="post-toc-text"> Transposition 转置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8-aggregate-by-%E6%95%B4%E5%90%88"><span class="post-toc-text"> 使用 aggregate &amp; by 整合</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#aggregate"><span class="post-toc-text"> aggregate</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#by"><span class="post-toc-text"> by</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#packagereshape2"><span class="post-toc-text"> Package：reshape2</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E9%A2%91%E6%95%B0%E8%A1%A8%E5%92%8C%E5%88%97%E8%81%94%E8%A1%A8"><span class="post-toc-text"> 2. 频数表和列联表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%94%9F%E6%88%90%E9%A2%91%E6%95%B0%E8%A1%A8"><span class="post-toc-text"> 生成频数表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-%E4%B8%80%E7%BB%B4%E5%88%97%E8%81%94%E8%A1%A8"><span class="post-toc-text"> (1) 一维列联表</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-%E4%BA%8C%E7%BB%B4%E5%88%97%E8%81%94%E8%A1%A8"><span class="post-toc-text"> (2) 二维列联表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#%E5%87%BD%E6%95%B0table"><span class="post-toc-text"> 函数table()</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#packagegmodels"><span class="post-toc-text"> Package：gmodels</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-%E5%A4%9A%E7%BB%B4%E5%88%97%E8%81%94%E8%A1%A8"><span class="post-toc-text"> (3) 多维列联表</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8C-%E5%8D%95%E9%A1%B9%E6%8F%8F%E8%BF%B0%E6%80%A7%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90"><span class="post-toc-text"> 二、单项描述性统计分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0"><span class="post-toc-text"> 数学函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%BB%9F%E8%AE%A1%E5%87%BD%E6%95%B0"><span class="post-toc-text"> 统计函数</span></a></li></ol></li></ol>
 
               <p>这篇文章主要讲解如何对一些数据进行基本的统计学分析</p>
 <h1 id="一-一键式描述性统计分析"><a class="markdownIt-Anchor" href="#一-一键式描述性统计分析"></a> 一、一键式描述性统计分析</h1>
@@ -276,17 +276,17 @@
 <p><code>summary()</code> 提供了最小值、最大值、四分位数和数值型变量的均值，以及因子向量和逻辑型向量的频数统计。</p>
 <p>例：</p>
 <div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 指定在mtcars中要分析的列</span>
-myvars &lt;- c(<span class="hljs-string">"mpg"</span>, <span class="hljs-string">"hp"</span>, <span class="hljs-string">"wt"</span>)
+myvars &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;mpg&quot;</span>, <span class="hljs-string">&quot;hp&quot;</span>, <span class="hljs-string">&quot;wt&quot;</span>)
 <span class="hljs-comment"># 进行初步分析</span>
 summary(mtcars[myvars])</code></pre></div>
 <p>结果：</p>
 <div class="hljs"><pre><code class="hljs R">&gt; summary(mtcars[myvars])
       mpg              hp              wt       
  Min.   :<span class="hljs-number">10.40</span>   Min.   : <span class="hljs-number">52.0</span>   Min.   :<span class="hljs-number">1.513</span>  
- 1st Qu.:<span class="hljs-number">15.43</span>   1st Qu.: <span class="hljs-number">96.5</span>   1st Qu.:<span class="hljs-number">2.581</span>  
+ <span class="hljs-number">1</span>st Qu.:<span class="hljs-number">15.43</span>   <span class="hljs-number">1</span>st Qu.: <span class="hljs-number">96.5</span>   <span class="hljs-number">1</span>st Qu.:<span class="hljs-number">2.581</span>  
  Median :<span class="hljs-number">19.20</span>   Median :<span class="hljs-number">123.0</span>   Median :<span class="hljs-number">3.325</span>  
  Mean   :<span class="hljs-number">20.09</span>   Mean   :<span class="hljs-number">146.7</span>   Mean   :<span class="hljs-number">3.217</span>  
- 3rd Qu.:<span class="hljs-number">22.80</span>   3rd Qu.:<span class="hljs-number">180.0</span>   3rd Qu.:<span class="hljs-number">3.610</span>  
+ <span class="hljs-number">3</span>rd Qu.:<span class="hljs-number">22.80</span>   <span class="hljs-number">3</span>rd Qu.:<span class="hljs-number">180.0</span>   <span class="hljs-number">3</span>rd Qu.:<span class="hljs-number">3.610</span>  
  Max.   :<span class="hljs-number">33.90</span>   Max.   :<span class="hljs-number">335.0</span>   Max.   :<span class="hljs-number">5.424</span></code></pre></div>
 <p><code>fivenum()</code> 可返回图基五数总括（Tukey’s five-number summary，即最小值、下四分位数、中位数、上四分位数和最大值）。</p>
 <p>例：</p>
@@ -319,20 +319,20 @@ summary(mtcars[myvars])</code></pre></div>
 <div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 使用预定义函数</span>
 &gt; sapply(mtcars[myvars], min)
    mpg     hp     wt 
-<span class="hljs-number">10.400</span> <span class="hljs-number">52.000</span>  <span class="hljs-number">1.513</span> 
+10.400 <span class="hljs-number">52.000</span>  <span class="hljs-number">1.513</span> 
 
 <span class="hljs-comment"># 使用自定义的函数</span>
 &gt;  mystats &lt;- <span class="hljs-keyword">function</span>(x, na.omit=<span class="hljs-literal">FALSE</span>)&#123; 
     <span class="hljs-keyword">if</span> (na.omit) 
-        x &lt;- x[!is.na(x)] 
+        x &lt;- x[!<span class="hljs-built_in">is.na</span>(x)] 
     m &lt;- mean(x) 
-    n &lt;- length(x) 
+    n &lt;- <span class="hljs-built_in">length</span>(x) 
     s &lt;- sd(x) 
-    skew &lt;- sum((x-m)^<span class="hljs-number">3</span>/s^<span class="hljs-number">3</span>)/n 
-    kurt &lt;- sum((x-m)^<span class="hljs-number">4</span>/s^<span class="hljs-number">4</span>)/n - <span class="hljs-number">3</span> 
-    <span class="hljs-keyword">return</span>(c(n=n, mean=m, stdev=s, skew=skew, kurtosis=kurt)) 
+    skew &lt;- <span class="hljs-built_in">sum</span>((x-m)^<span class="hljs-number">3</span>/s^<span class="hljs-number">3</span>)/n 
+    kurt &lt;- <span class="hljs-built_in">sum</span>((x-m)^<span class="hljs-number">4</span>/s^<span class="hljs-number">4</span>)/n - <span class="hljs-number">3</span> 
+    <span class="hljs-built_in">return</span>(<span class="hljs-built_in">c</span>(n=n, mean=m, stdev=s, skew=skew, kurtosis=kurt)) 
  &#125;
-&gt; myvars &lt;- c(<span class="hljs-string">"mpg"</span>, <span class="hljs-string">"hp"</span>, <span class="hljs-string">"wt"</span>) 
+&gt; myvars &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;mpg&quot;</span>, <span class="hljs-string">&quot;hp&quot;</span>, <span class="hljs-string">&quot;wt&quot;</span>) 
 &gt; sapply(mtcars[myvars], mystats)
                mpg          hp          wt
 n        <span class="hljs-number">32.000000</span>  <span class="hljs-number">32.0000000</span> <span class="hljs-number">32.00000000</span>
@@ -344,8 +344,8 @@ kurtosis -<span class="hljs-number">0.372766</span>  -<span class="hljs-number">
 <p>若干用户贡献包都提供了计算描述性统计量的函数，其中包括Hmisc、pastecs和psych。由于这些包并未包括在基础安装中，所以需要在首次使用之前先进行安装</p>
 <h4 id="hmisc"><a class="markdownIt-Anchor" href="#hmisc"></a> Hmisc</h4>
 <p><code>Hmisc</code>包中的<code>describe()</code>函数可返回变量和观测的数量、缺失值和唯一值的数目、平均值、分位数，以及五个最大的值和五个最小的值。</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-keyword">library</span>(Hmisc)
-myvars &lt;- c(<span class="hljs-string">"mpg"</span>, <span class="hljs-string">"hp"</span>, <span class="hljs-string">"wt"</span>)
+<div class="hljs"><pre><code class="hljs R">library(Hmisc)
+myvars &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;mpg&quot;</span>, <span class="hljs-string">&quot;hp&quot;</span>, <span class="hljs-string">&quot;wt&quot;</span>)
 describe(mtcars[myvars])</code></pre></div>
 <p>结果：</p>
 <p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200725182442001.png" srcset="/img/loading.gif" alt="image-20200725182442001" /></p>
@@ -383,17 +383,17 @@ describe(mtcars[myvars])</code></pre></div>
 </tbody>
 </table>
 <p>例：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(pastecs) 
-&gt; myvars &lt;- c(<span class="hljs-string">"mpg"</span>, <span class="hljs-string">"hp"</span>, <span class="hljs-string">"wt"</span>) 
+<div class="hljs"><pre><code class="hljs R">&gt; library(pastecs) 
+&gt; myvars &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;mpg&quot;</span>, <span class="hljs-string">&quot;hp&quot;</span>, <span class="hljs-string">&quot;wt&quot;</span>) 
 &gt; stat.desc(mtcars[myvars])
                      mpg           hp          wt
 nbr.val       <span class="hljs-number">32.0000000</span>   <span class="hljs-number">32.0000000</span>  <span class="hljs-number">32.0000000</span>
 nbr.null       <span class="hljs-number">0.0000000</span>    <span class="hljs-number">0.0000000</span>   <span class="hljs-number">0.0000000</span>
 nbr.na         <span class="hljs-number">0.0000000</span>    <span class="hljs-number">0.0000000</span>   <span class="hljs-number">0.0000000</span>
 min           <span class="hljs-number">10.4000000</span>   <span class="hljs-number">52.0000000</span>   <span class="hljs-number">1.5130000</span>
-max           <span class="hljs-number">33.9000000</span>  <span class="hljs-number">335.0000000</span>   <span class="hljs-number">5.4240000</span>
-range         <span class="hljs-number">23.5000000</span>  <span class="hljs-number">283.0000000</span>   <span class="hljs-number">3.9110000</span>
-sum          <span class="hljs-number">642.9000000</span> <span class="hljs-number">4694.0000000</span> <span class="hljs-number">102.9520000</span>
+<span class="hljs-built_in">max</span>           <span class="hljs-number">33.9000000</span>  <span class="hljs-number">335.0000000</span>   <span class="hljs-number">5.4240000</span>
+<span class="hljs-built_in">range</span>         <span class="hljs-number">23.5000000</span>  <span class="hljs-number">283.0000000</span>   <span class="hljs-number">3.9110000</span>
+<span class="hljs-built_in">sum</span>          <span class="hljs-number">642.9000000</span> <span class="hljs-number">4694.0000000</span> <span class="hljs-number">102.9520000</span>
 median        <span class="hljs-number">19.2000000</span>  <span class="hljs-number">123.0000000</span>   <span class="hljs-number">3.3250000</span>
 mean          <span class="hljs-number">20.0906250</span>  <span class="hljs-number">146.6875000</span>   <span class="hljs-number">3.2172500</span>
 SE.mean        <span class="hljs-number">1.0654240</span>   <span class="hljs-number">12.1203173</span>   <span class="hljs-number">0.1729685</span>
@@ -404,9 +404,9 @@ coef.var       <span class="hljs-number">0.2999881</span>    <span class="hljs-n
 <h4 id="psych"><a class="markdownIt-Anchor" href="#psych"></a> psych</h4>
 <p><code>psych</code>包也拥有一个名为<code>describe()</code>的函数，它可以计算非缺失值的数量、平均数、标准差、中位数、截尾均值、绝对中位差、最小值、最大值、值域、偏度、峰度和平均值的标准误。</p>
 <p>例：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(psych) 
+<div class="hljs"><pre><code class="hljs R">&gt; library(psych) 
 <span class="hljs-comment"># 相关先前引入的同名函数被覆盖</span>
-Attaching package: <span class="hljs-string">'psych'</span> 
+Attaching package: <span class="hljs-string">&#x27;psych&#x27;</span> 
 The following object is masked from ‘package:Hmisc’:
 
     describe
@@ -414,9 +414,9 @@ The following object is masked from ‘package:Hmisc’:
 The following objects are masked from ‘package:ggplot2’:
 
     %+%, alpha
-&gt; myvars &lt;- c(<span class="hljs-string">"mpg"</span>, <span class="hljs-string">"hp"</span>, <span class="hljs-string">"wt"</span>)
+&gt; myvars &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;mpg&quot;</span>, <span class="hljs-string">&quot;hp&quot;</span>, <span class="hljs-string">&quot;wt&quot;</span>)
 &gt; describe(mtcars[myvars])
-    vars  n   mean    sd median trimmed   mad   min    max  range skew kurtosis    se
+    vars  n   mean    sd median trimmed   mad   min    <span class="hljs-built_in">max</span>  <span class="hljs-built_in">range</span> skew kurtosis    se
 mpg    <span class="hljs-number">1</span> <span class="hljs-number">32</span>  <span class="hljs-number">20.09</span>  <span class="hljs-number">6.03</span>  <span class="hljs-number">19.20</span>   <span class="hljs-number">19.70</span>  <span class="hljs-number">5.41</span> <span class="hljs-number">10.40</span>  <span class="hljs-number">33.90</span>  <span class="hljs-number">23.50</span> <span class="hljs-number">0.61</span>    -<span class="hljs-number">0.37</span>  <span class="hljs-number">1.07</span>
 hp     <span class="hljs-number">2</span> <span class="hljs-number">32</span> <span class="hljs-number">146.69</span> <span class="hljs-number">68.56</span> <span class="hljs-number">123.00</span>  <span class="hljs-number">141.19</span> <span class="hljs-number">77.10</span> <span class="hljs-number">52.00</span> <span class="hljs-number">335.00</span> <span class="hljs-number">283.00</span> <span class="hljs-number">0.73</span>    -<span class="hljs-number">0.14</span> <span class="hljs-number">12.12</span>
 wt     <span class="hljs-number">3</span> <span class="hljs-number">32</span>   <span class="hljs-number">3.22</span>  <span class="hljs-number">0.98</span>   <span class="hljs-number">3.33</span>    <span class="hljs-number">3.15</span>  <span class="hljs-number">0.77</span>  <span class="hljs-number">1.51</span>   <span class="hljs-number">5.42</span>   <span class="hljs-number">3.91</span> <span class="hljs-number">0.42</span>    -<span class="hljs-number">0.02</span>  <span class="hljs-number">0.17</span></code></pre></div>
@@ -474,34 +474,34 @@ cyl         <span class="hljs-number">6</span>             <span class="hljs-num
 </ul>
 <p>例：</p>
 <p>构建示例用数据集：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; name &lt;- c(<span class="hljs-string">'a'</span>,<span class="hljs-string">'h'</span>,<span class="hljs-string">'b'</span>,<span class="hljs-string">'c'</span>,<span class="hljs-string">'d'</span>,<span class="hljs-string">'e'</span>)
-&gt; age &lt;- c(<span class="hljs-number">18</span>,<span class="hljs-number">16</span>,<span class="hljs-number">12</span>,<span class="hljs-number">14</span>,<span class="hljs-number">16</span>,<span class="hljs-number">14</span>)
-&gt; gender &lt;- c(<span class="hljs-string">'M'</span>,<span class="hljs-string">'M'</span>,<span class="hljs-string">"F"</span>,<span class="hljs-string">'F'</span>,<span class="hljs-string">"F"</span>,<span class="hljs-string">'F'</span>)
-&gt; height &lt;- c(<span class="hljs-number">180</span>,<span class="hljs-number">170</span>,<span class="hljs-number">120</span>,<span class="hljs-number">140</span>,<span class="hljs-number">160</span>,<span class="hljs-number">150</span>)
+<div class="hljs"><pre><code class="hljs R">&gt; name &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-string">&#x27;a&#x27;</span>,<span class="hljs-string">&#x27;h&#x27;</span>,<span class="hljs-string">&#x27;b&#x27;</span>,<span class="hljs-string">&#x27;c&#x27;</span>,<span class="hljs-string">&#x27;d&#x27;</span>,<span class="hljs-string">&#x27;e&#x27;</span>)
+&gt; age &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-number">18</span>,<span class="hljs-number">16</span>,<span class="hljs-number">12</span>,<span class="hljs-number">14</span>,<span class="hljs-number">16</span>,<span class="hljs-number">14</span>)
+&gt; gender &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-string">&#x27;M&#x27;</span>,<span class="hljs-string">&#x27;M&#x27;</span>,<span class="hljs-string">&quot;F&quot;</span>,<span class="hljs-string">&#x27;F&#x27;</span>,<span class="hljs-string">&quot;F&quot;</span>,<span class="hljs-string">&#x27;F&#x27;</span>)
+&gt; height &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-number">180</span>,<span class="hljs-number">170</span>,<span class="hljs-number">120</span>,<span class="hljs-number">140</span>,<span class="hljs-number">160</span>,<span class="hljs-number">150</span>)
 &gt; frame1 &lt;- data.frame(name=name,age=age,gender=gender,height=height)
 &gt; frame1
   name age gender height
-<span class="hljs-number">1</span>    a  <span class="hljs-number">18</span>      M    <span class="hljs-number">180</span>
-<span class="hljs-number">2</span>    b  <span class="hljs-number">16</span>      M    <span class="hljs-number">170</span>
-<span class="hljs-number">3</span>    c  <span class="hljs-number">12</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">120</span>
-<span class="hljs-number">4</span>    d  <span class="hljs-number">14</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">140</span>
-<span class="hljs-number">5</span>    e  <span class="hljs-number">16</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">160</span>
-<span class="hljs-number">6</span>    f  <span class="hljs-number">14</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">150</span></code></pre></div>
+1    a  <span class="hljs-number">18</span>      M    <span class="hljs-number">180</span>
+2    b  <span class="hljs-number">16</span>      M    <span class="hljs-number">170</span>
+3    <span class="hljs-built_in">c</span>  <span class="hljs-number">12</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">120</span>
+4    d  <span class="hljs-number">14</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">140</span>
+5    e  <span class="hljs-number">16</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">160</span>
+6    f  <span class="hljs-number">14</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">150</span></code></pre></div>
 <p><strong>单因子分组</strong>：在这个例子当中，按照年龄分组，并且对同组求均值。其中无法被<code>mean</code>函数计算的值，将表示为<code>NA</code></p>
-<div class="hljs"><pre><code class="hljs R">&gt; aggregate(frame1, by = list(Group.age=frame1$age), FUN = mean)
+<div class="hljs"><pre><code class="hljs R">&gt; aggregate(frame1, by = <span class="hljs-built_in">list</span>(Group.age=frame1$age), FUN = mean)
   Group.age name age gender height
-<span class="hljs-number">1</span>        <span class="hljs-number">12</span>   <span class="hljs-literal">NA</span>  <span class="hljs-number">12</span>     <span class="hljs-literal">NA</span>    <span class="hljs-number">120</span>
-<span class="hljs-number">2</span>        <span class="hljs-number">14</span>   <span class="hljs-literal">NA</span>  <span class="hljs-number">14</span>     <span class="hljs-literal">NA</span>    <span class="hljs-number">145</span>
-<span class="hljs-number">3</span>        <span class="hljs-number">16</span>   <span class="hljs-literal">NA</span>  <span class="hljs-number">16</span>     <span class="hljs-literal">NA</span>    <span class="hljs-number">165</span>
-<span class="hljs-number">4</span>        <span class="hljs-number">18</span>   <span class="hljs-literal">NA</span>  <span class="hljs-number">18</span>     <span class="hljs-literal">NA</span>    <span class="hljs-number">180</span></code></pre></div>
+1        <span class="hljs-number">12</span>   <span class="hljs-literal">NA</span>  <span class="hljs-number">12</span>     <span class="hljs-literal">NA</span>    <span class="hljs-number">120</span>
+2        <span class="hljs-number">14</span>   <span class="hljs-literal">NA</span>  <span class="hljs-number">14</span>     <span class="hljs-literal">NA</span>    <span class="hljs-number">145</span>
+3        <span class="hljs-number">16</span>   <span class="hljs-literal">NA</span>  <span class="hljs-number">16</span>     <span class="hljs-literal">NA</span>    <span class="hljs-number">165</span>
+4        <span class="hljs-number">18</span>   <span class="hljs-literal">NA</span>  <span class="hljs-number">18</span>     <span class="hljs-literal">NA</span>    <span class="hljs-number">180</span></code></pre></div>
 <p><strong>多因子分组</strong>：在这个例子当中，按照年龄和性别分组，并求每组的最大值。</p>
-<div class="hljs"><pre><code class="hljs R">&gt; aggregate(frame1, by = list(Group.age=frame1$age, Group.gender=frame1$gender), FUN = max)
+<div class="hljs"><pre><code class="hljs R">&gt; aggregate(frame1, by = <span class="hljs-built_in">list</span>(Group.age=frame1$age, Group.gender=frame1$gender), FUN = <span class="hljs-built_in">max</span>)
   Group.age Group.gender name age gender height
-<span class="hljs-number">1</span>        <span class="hljs-number">12</span>            <span class="hljs-literal">F</span>    c  <span class="hljs-number">12</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">120</span>
-<span class="hljs-number">2</span>        <span class="hljs-number">14</span>            <span class="hljs-literal">F</span>    f  <span class="hljs-number">14</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">150</span> <span class="hljs-comment">#找到了age=14，gender=F这一组中的最大值</span>
-<span class="hljs-number">3</span>        <span class="hljs-number">16</span>            <span class="hljs-literal">F</span>    e  <span class="hljs-number">16</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">160</span>
-<span class="hljs-number">4</span>        <span class="hljs-number">16</span>            M    b  <span class="hljs-number">16</span>      M    <span class="hljs-number">170</span>
-<span class="hljs-number">5</span>        <span class="hljs-number">18</span>            M    a  <span class="hljs-number">18</span>      M    <span class="hljs-number">180</span></code></pre></div>
+1        <span class="hljs-number">12</span>            <span class="hljs-built_in">F</span>    <span class="hljs-built_in">c</span>  <span class="hljs-number">12</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">120</span>
+2        <span class="hljs-number">14</span>            <span class="hljs-built_in">F</span>    f  <span class="hljs-number">14</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">150</span> <span class="hljs-comment">#找到了age=14，gender=F这一组中的最大值</span>
+3        <span class="hljs-number">16</span>            <span class="hljs-built_in">F</span>    e  <span class="hljs-number">16</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">160</span>
+4        <span class="hljs-number">16</span>            M    b  <span class="hljs-number">16</span>      M    <span class="hljs-number">170</span>
+5        <span class="hljs-number">18</span>            M    a  <span class="hljs-number">18</span>      M    <span class="hljs-number">180</span></code></pre></div>
 <h5 id="by"><a class="markdownIt-Anchor" href="#by"></a> by</h5>
 <p><code>aggregate()</code>仅允许在每次调用中使用平均数、标准差这样的单返回值函数。它无法一次返回若干个统计量。要完成这项任务，可以使用<code>by()</code>函数。格式为：</p>
 <p><code>by(data, INDICES, FUN)</code></p>
@@ -529,70 +529,70 @@ cyl         <span class="hljs-number">6</span>             <span class="hljs-num
 </table>
 <p>例：</p>
 <p>构建示例用数据集：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; name &lt;- c(<span class="hljs-string">'a'</span>,<span class="hljs-string">'h'</span>,<span class="hljs-string">'b'</span>,<span class="hljs-string">'c'</span>,<span class="hljs-string">'d'</span>,<span class="hljs-string">'e'</span>)
-&gt; age &lt;- c(<span class="hljs-number">18</span>,<span class="hljs-number">16</span>,<span class="hljs-number">12</span>,<span class="hljs-number">14</span>,<span class="hljs-number">16</span>,<span class="hljs-number">14</span>)
-&gt; gender &lt;- c(<span class="hljs-string">'M'</span>,<span class="hljs-string">'M'</span>,<span class="hljs-string">"F"</span>,<span class="hljs-string">'F'</span>,<span class="hljs-string">"F"</span>,<span class="hljs-string">'F'</span>)
-&gt; height &lt;- c(<span class="hljs-number">180</span>,<span class="hljs-number">170</span>,<span class="hljs-number">120</span>,<span class="hljs-number">140</span>,<span class="hljs-number">160</span>,<span class="hljs-number">150</span>)
+<div class="hljs"><pre><code class="hljs R">&gt; name &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-string">&#x27;a&#x27;</span>,<span class="hljs-string">&#x27;h&#x27;</span>,<span class="hljs-string">&#x27;b&#x27;</span>,<span class="hljs-string">&#x27;c&#x27;</span>,<span class="hljs-string">&#x27;d&#x27;</span>,<span class="hljs-string">&#x27;e&#x27;</span>)
+&gt; age &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-number">18</span>,<span class="hljs-number">16</span>,<span class="hljs-number">12</span>,<span class="hljs-number">14</span>,<span class="hljs-number">16</span>,<span class="hljs-number">14</span>)
+&gt; gender &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-string">&#x27;M&#x27;</span>,<span class="hljs-string">&#x27;M&#x27;</span>,<span class="hljs-string">&quot;F&quot;</span>,<span class="hljs-string">&#x27;F&#x27;</span>,<span class="hljs-string">&quot;F&quot;</span>,<span class="hljs-string">&#x27;F&#x27;</span>)
+&gt; height &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-number">180</span>,<span class="hljs-number">170</span>,<span class="hljs-number">120</span>,<span class="hljs-number">140</span>,<span class="hljs-number">160</span>,<span class="hljs-number">150</span>)
 &gt; frame1 &lt;- data.frame(name=name,age=age,gender=gender,height=height)
 &gt; frame1
   name age gender height
-<span class="hljs-number">1</span>    a  <span class="hljs-number">18</span>      M    <span class="hljs-number">180</span>
-<span class="hljs-number">2</span>    b  <span class="hljs-number">16</span>      M    <span class="hljs-number">170</span>
-<span class="hljs-number">3</span>    c  <span class="hljs-number">12</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">120</span>
-<span class="hljs-number">4</span>    d  <span class="hljs-number">14</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">140</span>
-<span class="hljs-number">5</span>    e  <span class="hljs-number">16</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">160</span>
-<span class="hljs-number">6</span>    f  <span class="hljs-number">14</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">150</span></code></pre></div>
+1    a  <span class="hljs-number">18</span>      M    <span class="hljs-number">180</span>
+2    b  <span class="hljs-number">16</span>      M    <span class="hljs-number">170</span>
+3    <span class="hljs-built_in">c</span>  <span class="hljs-number">12</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">120</span>
+4    d  <span class="hljs-number">14</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">140</span>
+5    e  <span class="hljs-number">16</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">160</span>
+6    f  <span class="hljs-number">14</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">150</span></code></pre></div>
 <p>分组，并且使用预设的<code>summar</code>函数进行初步分析：</p>
 <div class="hljs"><pre><code class="hljs R">&gt; by(frame1, frame1$gender, summary)
-frame1$gender: <span class="hljs-literal">F</span>
+frame1$gender: <span class="hljs-built_in">F</span>
      name                age          gender              height     
  Length:<span class="hljs-number">4</span>           Min.   :<span class="hljs-number">12.0</span>   Length:<span class="hljs-number">4</span>           Min.   :<span class="hljs-number">120.0</span>  
- Class :character   1st Qu.:<span class="hljs-number">13.5</span>   Class :character   1st Qu.:<span class="hljs-number">135.0</span>  
+ Class :character   <span class="hljs-number">1</span>st Qu.:<span class="hljs-number">13.5</span>   Class :character   <span class="hljs-number">1</span>st Qu.:<span class="hljs-number">135.0</span>  
  Mode  :character   Median :<span class="hljs-number">14.0</span>   Mode  :character   Median :<span class="hljs-number">145.0</span>  
                     Mean   :<span class="hljs-number">14.0</span>                      Mean   :<span class="hljs-number">142.5</span>  
-                    3rd Qu.:<span class="hljs-number">14.5</span>                      3rd Qu.:<span class="hljs-number">152.5</span>  
+                    <span class="hljs-number">3</span>rd Qu.:<span class="hljs-number">14.5</span>                      <span class="hljs-number">3</span>rd Qu.:<span class="hljs-number">152.5</span>  
                     Max.   :<span class="hljs-number">16.0</span>                      Max.   :<span class="hljs-number">160.0</span>  
 --------------------------------------------------------------------------------- 
 frame1$gender: M
      name                age          gender              height     
  Length:<span class="hljs-number">2</span>           Min.   :<span class="hljs-number">16.0</span>   Length:<span class="hljs-number">2</span>           Min.   :<span class="hljs-number">170.0</span>  
- Class :character   1st Qu.:<span class="hljs-number">16.5</span>   Class :character   1st Qu.:<span class="hljs-number">172.5</span>  
+ Class :character   <span class="hljs-number">1</span>st Qu.:<span class="hljs-number">16.5</span>   Class :character   <span class="hljs-number">1</span>st Qu.:<span class="hljs-number">172.5</span>  
  Mode  :character   Median :<span class="hljs-number">17.0</span>   Mode  :character   Median :<span class="hljs-number">175.0</span>  
                     Mean   :<span class="hljs-number">17.0</span>                      Mean   :<span class="hljs-number">175.0</span>  
-                    3rd Qu.:<span class="hljs-number">17.5</span>                      3rd Qu.:<span class="hljs-number">177.5</span>  
+                    <span class="hljs-number">3</span>rd Qu.:<span class="hljs-number">17.5</span>                      <span class="hljs-number">3</span>rd Qu.:<span class="hljs-number">177.5</span>  
                     Max.   :<span class="hljs-number">18.0</span>                      Max.   :<span class="hljs-number">180.0</span></code></pre></div>
 <h4 id="packagereshape2"><a class="markdownIt-Anchor" href="#packagereshape2"></a> Package：reshape2</h4>
 <p><code>reshape2</code>包是一套重构和整合数据集的绝妙的万能工具。</p>
 <p>大致说来，你需要首先将数据融合（melt），以使每一行都是唯一的标识符变量组合。然后将数据重铸（cast）为你想要的任何形状。在重铸过程中，你可以使用任何函数对数据进行整合。</p>
 <p>例：</p>
 <p>构建示例数据：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(reshape2)
-&gt; ID &lt;- c(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)
-&gt; time &lt;- c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>)
-&gt; x1 &lt;- c(<span class="hljs-number">5</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>)
-&gt; x2 &lt;- c(<span class="hljs-number">6</span>,<span class="hljs-number">5</span>,<span class="hljs-number">1</span>,<span class="hljs-number">4</span>)
+<div class="hljs"><pre><code class="hljs R">&gt; library(reshape2)
+&gt; ID &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)
+&gt; time &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>)
+&gt; x1 &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-number">5</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>)
+&gt; x2 &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-number">6</span>,<span class="hljs-number">5</span>,<span class="hljs-number">1</span>,<span class="hljs-number">4</span>)
 &gt; data1 &lt;- data.frame(ID=ID,time=time,x1=x1,x2=x2)
 &gt; data1
   ID time x1 x2
-<span class="hljs-number">1</span>  <span class="hljs-number">1</span>    <span class="hljs-number">1</span>  <span class="hljs-number">5</span>  <span class="hljs-number">6</span>
-<span class="hljs-number">2</span>  <span class="hljs-number">1</span>    <span class="hljs-number">2</span>  <span class="hljs-number">3</span>  <span class="hljs-number">5</span>
-<span class="hljs-number">3</span>  <span class="hljs-number">2</span>    <span class="hljs-number">1</span>  <span class="hljs-number">6</span>  <span class="hljs-number">1</span>
-<span class="hljs-number">4</span>  <span class="hljs-number">3</span>    <span class="hljs-number">2</span>  <span class="hljs-number">2</span>  <span class="hljs-number">4</span></code></pre></div>
+1  <span class="hljs-number">1</span>    <span class="hljs-number">1</span>  <span class="hljs-number">5</span>  <span class="hljs-number">6</span>
+2  <span class="hljs-number">1</span>    <span class="hljs-number">2</span>  <span class="hljs-number">3</span>  <span class="hljs-number">5</span>
+3  <span class="hljs-number">2</span>    <span class="hljs-number">1</span>  <span class="hljs-number">6</span>  <span class="hljs-number">1</span>
+4  <span class="hljs-number">3</span>    <span class="hljs-number">2</span>  <span class="hljs-number">2</span>  <span class="hljs-number">4</span></code></pre></div>
 <p>融合（melt）: 数据集的融合是将它重构为这样一种格式：每个测量变量独占一行，行中带有要唯一确定这个测量所需的标识符变量。</p>
 <ul>
 <li>必须指定要唯一确定每个测量所需的变量（ID和time），而表示测量变量名的变量（x1或x2）将由程序为你自动创建。</li>
 </ul>
-<div class="hljs"><pre><code class="hljs R">&gt; md &lt;- melt(data1, id=c(<span class="hljs-string">"ID"</span>, <span class="hljs-string">"time"</span>))
+<div class="hljs"><pre><code class="hljs R">&gt; md &lt;- melt(data1, id=<span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;ID&quot;</span>, <span class="hljs-string">&quot;time&quot;</span>))
 &gt; md
   ID time variable value
-<span class="hljs-number">1</span>  <span class="hljs-number">1</span>    <span class="hljs-number">1</span>       x1     <span class="hljs-number">5</span>
-<span class="hljs-number">2</span>  <span class="hljs-number">1</span>    <span class="hljs-number">2</span>       x1     <span class="hljs-number">3</span>
-<span class="hljs-number">3</span>  <span class="hljs-number">2</span>    <span class="hljs-number">1</span>       x1     <span class="hljs-number">6</span>
-<span class="hljs-number">4</span>  <span class="hljs-number">3</span>    <span class="hljs-number">2</span>       x1     <span class="hljs-number">2</span>
-<span class="hljs-number">5</span>  <span class="hljs-number">1</span>    <span class="hljs-number">1</span>       x2     <span class="hljs-number">6</span>
-<span class="hljs-number">6</span>  <span class="hljs-number">1</span>    <span class="hljs-number">2</span>       x2     <span class="hljs-number">5</span>
-<span class="hljs-number">7</span>  <span class="hljs-number">2</span>    <span class="hljs-number">1</span>       x2     <span class="hljs-number">1</span>
-<span class="hljs-number">8</span>  <span class="hljs-number">3</span>    <span class="hljs-number">2</span>       x2     <span class="hljs-number">4</span></code></pre></div>
+1  <span class="hljs-number">1</span>    <span class="hljs-number">1</span>       x1     <span class="hljs-number">5</span>
+2  <span class="hljs-number">1</span>    <span class="hljs-number">2</span>       x1     <span class="hljs-number">3</span>
+3  <span class="hljs-number">2</span>    <span class="hljs-number">1</span>       x1     <span class="hljs-number">6</span>
+4  <span class="hljs-number">3</span>    <span class="hljs-number">2</span>       x1     <span class="hljs-number">2</span>
+5  <span class="hljs-number">1</span>    <span class="hljs-number">1</span>       x2     <span class="hljs-number">6</span>
+6  <span class="hljs-number">1</span>    <span class="hljs-number">2</span>       x2     <span class="hljs-number">5</span>
+7  <span class="hljs-number">2</span>    <span class="hljs-number">1</span>       x2     <span class="hljs-number">1</span>
+8  <span class="hljs-number">3</span>    <span class="hljs-number">2</span>       x2     <span class="hljs-number">4</span></code></pre></div>
 <p>重铸（cast）: <code>dcast()</code>函数读取已融合的数据，并使用你提供的公式和一个（可选的）用于整合数据的函数将其重塑。调用格式为：</p>
 <p><code>newdata &lt;- dcast(md, formula, fun.aggregate)</code></p>
 <table>
@@ -673,16 +673,16 @@ frame1$gender: M
 <img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200728195014696.png" srcset="/img/loading.gif" alt="image-20200728195014696" style="zoom:67%;" />
 <h3 id="2-频数表和列联表"><a class="markdownIt-Anchor" href="#2-频数表和列联表"></a> 2. 频数表和列联表</h3>
 <p>本节中的数据来自<code>vcd</code>包中的<code>Arthritis</code>数据集。这份数据来自<strong>Kock &amp; Edward （1988）</strong>，表示了一项风湿性关节炎新疗法的双盲临床实验的结果。前几个观测是这样的：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(vcd)
+<div class="hljs"><pre><code class="hljs R">&gt; library(vcd)
 载入需要的程辑包：grid
 &gt; head(Arthritis)
   ID Treatment  Sex Age Improved
-<span class="hljs-number">1</span> <span class="hljs-number">57</span>   Treated Male  <span class="hljs-number">27</span>     Some
-<span class="hljs-number">2</span> <span class="hljs-number">46</span>   Treated Male  <span class="hljs-number">29</span>     None
-<span class="hljs-number">3</span> <span class="hljs-number">77</span>   Treated Male  <span class="hljs-number">30</span>     None
-<span class="hljs-number">4</span> <span class="hljs-number">17</span>   Treated Male  <span class="hljs-number">32</span>   Marked
-<span class="hljs-number">5</span> <span class="hljs-number">36</span>   Treated Male  <span class="hljs-number">46</span>   Marked
-<span class="hljs-number">6</span> <span class="hljs-number">23</span>   Treated Male  <span class="hljs-number">58</span>   Marked</code></pre></div>
+1 <span class="hljs-number">57</span>   Treated Male  <span class="hljs-number">27</span>     Some
+2 <span class="hljs-number">46</span>   Treated Male  <span class="hljs-number">29</span>     None
+3 <span class="hljs-number">77</span>   Treated Male  <span class="hljs-number">30</span>     None
+4 <span class="hljs-number">17</span>   Treated Male  <span class="hljs-number">32</span>   Marked
+5 <span class="hljs-number">36</span>   Treated Male  <span class="hljs-number">46</span>   Marked
+6 <span class="hljs-number">23</span>   Treated Male  <span class="hljs-number">58</span>   Marked</code></pre></div>
 <ul>
 <li>其中的治疗情况（安慰剂治疗、用药治疗）、性别（男性、女性）和改善情况（无改善、一定程度的改善、显著改善）均为类别型因子</li>
 </ul>
@@ -733,12 +733,12 @@ frame1$gender: M
 <div class="hljs"><pre><code class="hljs R">&gt; prop.table(data1)
 
      None      Some    Marked 
-<span class="hljs-number">0.5000000</span> <span class="hljs-number">0.1666667</span> <span class="hljs-number">0.3333333</span></code></pre></div>
+0.5000000 <span class="hljs-number">0.1666667</span> <span class="hljs-number">0.3333333</span></code></pre></div>
 <p>或使用<code>prop.table()*100</code>转化为百分比：</p>
 <div class="hljs"><pre><code class="hljs r">&gt; prop.table(data1)*<span class="hljs-number">100</span>
 
     None     Some   Marked 
-<span class="hljs-number">50.00000</span> <span class="hljs-number">16.66667</span> <span class="hljs-number">33.33333</span></code></pre></div>
+50.00000 <span class="hljs-number">16.66667</span> <span class="hljs-number">33.33333</span></code></pre></div>
 <h5 id="2-二维列联表"><a class="markdownIt-Anchor" href="#2-二维列联表"></a> (2) 二维列联表</h5>
 <h6 id="函数table"><a class="markdownIt-Anchor" href="#函数table"></a> 函数<code>table()</code></h6>
 <p>对于二维列联表，<code>table()</code>函数的使用格式为：</p>
@@ -748,35 +748,35 @@ frame1$gender: M
 </ul>
 <p>例：</p>
 <p>构建数据集：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; name &lt;- c(<span class="hljs-string">'a'</span>,<span class="hljs-string">'h'</span>,<span class="hljs-string">'b'</span>,<span class="hljs-string">'c'</span>,<span class="hljs-string">'d'</span>,<span class="hljs-string">'e'</span>)
-&gt; age &lt;- c(<span class="hljs-number">18</span>,<span class="hljs-number">16</span>,<span class="hljs-number">12</span>,<span class="hljs-number">14</span>,<span class="hljs-number">16</span>,<span class="hljs-number">14</span>)
-&gt; gender &lt;- c(<span class="hljs-string">'M'</span>,<span class="hljs-string">'M'</span>,<span class="hljs-string">"F"</span>,<span class="hljs-string">'F'</span>,<span class="hljs-string">"F"</span>,<span class="hljs-string">'F'</span>)
-&gt; height &lt;- c(<span class="hljs-number">180</span>,<span class="hljs-number">170</span>,<span class="hljs-number">120</span>,<span class="hljs-number">140</span>,<span class="hljs-number">160</span>,<span class="hljs-number">150</span>)
+<div class="hljs"><pre><code class="hljs R">&gt; name &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-string">&#x27;a&#x27;</span>,<span class="hljs-string">&#x27;h&#x27;</span>,<span class="hljs-string">&#x27;b&#x27;</span>,<span class="hljs-string">&#x27;c&#x27;</span>,<span class="hljs-string">&#x27;d&#x27;</span>,<span class="hljs-string">&#x27;e&#x27;</span>)
+&gt; age &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-number">18</span>,<span class="hljs-number">16</span>,<span class="hljs-number">12</span>,<span class="hljs-number">14</span>,<span class="hljs-number">16</span>,<span class="hljs-number">14</span>)
+&gt; gender &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-string">&#x27;M&#x27;</span>,<span class="hljs-string">&#x27;M&#x27;</span>,<span class="hljs-string">&quot;F&quot;</span>,<span class="hljs-string">&#x27;F&#x27;</span>,<span class="hljs-string">&quot;F&quot;</span>,<span class="hljs-string">&#x27;F&#x27;</span>)
+&gt; height &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-number">180</span>,<span class="hljs-number">170</span>,<span class="hljs-number">120</span>,<span class="hljs-number">140</span>,<span class="hljs-number">160</span>,<span class="hljs-number">150</span>)
 &gt; frame1 &lt;- data.frame(name=name,age=age,gender=gender,height=height)
 &gt; frame1
   name age gender height
-<span class="hljs-number">1</span>    a  <span class="hljs-number">18</span>      M    <span class="hljs-number">180</span>
-<span class="hljs-number">2</span>    b  <span class="hljs-number">16</span>      M    <span class="hljs-number">170</span>
-<span class="hljs-number">3</span>    c  <span class="hljs-number">12</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">120</span>
-<span class="hljs-number">4</span>    d  <span class="hljs-number">14</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">140</span>
-<span class="hljs-number">5</span>    e  <span class="hljs-number">16</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">160</span>
-<span class="hljs-number">6</span>    f  <span class="hljs-number">14</span>      <span class="hljs-literal">F</span>    <span class="hljs-number">150</span></code></pre></div>
+1    a  <span class="hljs-number">18</span>      M    <span class="hljs-number">180</span>
+2    b  <span class="hljs-number">16</span>      M    <span class="hljs-number">170</span>
+3    <span class="hljs-built_in">c</span>  <span class="hljs-number">12</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">120</span>
+4    d  <span class="hljs-number">14</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">140</span>
+5    e  <span class="hljs-number">16</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">160</span>
+6    f  <span class="hljs-number">14</span>      <span class="hljs-built_in">F</span>    <span class="hljs-number">150</span></code></pre></div>
 <p>制表：</p>
 <div class="hljs"><pre><code class="hljs R">&gt; table(frame1$name,frame1$age)
    
     <span class="hljs-number">12</span> <span class="hljs-number">14</span> <span class="hljs-number">16</span> <span class="hljs-number">18</span>
   a  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>
   b  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>
-  c  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>
+  <span class="hljs-built_in">c</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>
   d  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>
   e  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>
   h  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>
 &gt; table(frame1$name,frame1$gender)
    
-    <span class="hljs-literal">F</span> M
+    <span class="hljs-built_in">F</span> M
   a <span class="hljs-number">0</span> <span class="hljs-number">1</span>
   b <span class="hljs-number">1</span> <span class="hljs-number">0</span>
-  c <span class="hljs-number">1</span> <span class="hljs-number">0</span>
+  <span class="hljs-built_in">c</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>
   d <span class="hljs-number">1</span> <span class="hljs-number">0</span>
   e <span class="hljs-number">1</span> <span class="hljs-number">0</span>
   h <span class="hljs-number">0</span> <span class="hljs-number">1</span></code></pre></div>
@@ -786,16 +786,16 @@ frame1$gender: M
 <li>其中的<code>mydata</code>是一个矩阵或数据框。总的来说，要进行交叉分类的变量应出现在公式的右侧（即<code>~</code>符号的右方），以<code>+</code>作为**<font color="DD0000">分隔符</font>**。若某个变量写在公式的左侧，则其为一个频数向量（在数据已经被表格化时很有用）。</li>
 </ul>
 <p>例, 对于<code>Arthritis</code>数据，有：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(vcd)
+<div class="hljs"><pre><code class="hljs R">&gt; library(vcd)
 载入需要的程辑包：grid
 &gt; head(Arthritis)
   ID Treatment  Sex Age Improved
-<span class="hljs-number">1</span> <span class="hljs-number">57</span>   Treated Male  <span class="hljs-number">27</span>     Some
-<span class="hljs-number">2</span> <span class="hljs-number">46</span>   Treated Male  <span class="hljs-number">29</span>     None
-<span class="hljs-number">3</span> <span class="hljs-number">77</span>   Treated Male  <span class="hljs-number">30</span>     None
-<span class="hljs-number">4</span> <span class="hljs-number">17</span>   Treated Male  <span class="hljs-number">32</span>   Marked
-<span class="hljs-number">5</span> <span class="hljs-number">36</span>   Treated Male  <span class="hljs-number">46</span>   Marked
-<span class="hljs-number">6</span> <span class="hljs-number">23</span>   Treated Male  <span class="hljs-number">58</span>   Marked</code></pre></div>
+1 <span class="hljs-number">57</span>   Treated Male  <span class="hljs-number">27</span>     Some
+2 <span class="hljs-number">46</span>   Treated Male  <span class="hljs-number">29</span>     None
+3 <span class="hljs-number">77</span>   Treated Male  <span class="hljs-number">30</span>     None
+4 <span class="hljs-number">17</span>   Treated Male  <span class="hljs-number">32</span>   Marked
+5 <span class="hljs-number">36</span>   Treated Male  <span class="hljs-number">46</span>   Marked
+6 <span class="hljs-number">23</span>   Treated Male  <span class="hljs-number">58</span>   Marked</code></pre></div>
 <div class="hljs"><pre><code class="hljs R">&gt; mytable1 &lt;- xtabs(~ Treatment+Improved, data=Arthritis)
 &gt; mytable1
          Improved
@@ -835,7 +835,7 @@ Treatment      None      Some    Marked
   Treated <span class="hljs-number">0.3095238</span> <span class="hljs-number">0.5000000</span> <span class="hljs-number">0.7500000</span>
 
 <span class="hljs-comment"># 按照第1，2维度计算，对于多维列联表时适用</span>
-&gt; prop.table(mytable1, c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>))
+&gt; prop.table(mytable1, <span class="hljs-built_in">c</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>))
          Improved
 Treatment None Some Marked
   Placebo    <span class="hljs-number">1</span>    <span class="hljs-number">1</span>      <span class="hljs-number">1</span>
@@ -859,7 +859,7 @@ Improved
     <span class="hljs-number">42</span>     <span class="hljs-number">14</span>     <span class="hljs-number">28</span> 
 
 <span class="hljs-comment"># 按照第1，2维度计算，对于多维列联表时适用</span>
-&gt; margin.table(mytable1, c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>))
+&gt; margin.table(mytable1, <span class="hljs-built_in">c</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>))
          Improved
 Treatment None Some Marked
   Placebo   <span class="hljs-number">29</span>    <span class="hljs-number">7</span>      <span class="hljs-number">7</span>
@@ -898,9 +898,9 @@ Treatment None Some Marked Sum
 <ul>
 <li><code>CrossTable()</code>函数仿照<code>SAS</code>中<code>PROC FREQ</code>或<code>SPSS</code>中<code>CROSSTABS</code>的形式生成二维列联表。</li>
 </ul>
-<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">library</span>(gmodels)
+<div class="hljs"><pre><code class="hljs R">&gt; library(gmodels)
 Warning message:
-程辑包‘gmodels’是用R版本<span class="hljs-number">4.0</span><span class="hljs-number">.2</span> 来建造的 
+程辑包‘gmodels’是用R版本<span class="hljs-number">4.0</span>.2 来建造的 
 &gt; CrossTable(Arthritis$Treatment, Arthritis$Improved)
 
  
@@ -934,13 +934,14 @@ Arthritis$Treatment |      None |      Some |    Marked | Row Total |
 --------------------|-----------|-----------|-----------|-----------|
        Column Total |        <span class="hljs-number">42</span> |        <span class="hljs-number">14</span> |        <span class="hljs-number">28</span> |        <span class="hljs-number">84</span> | 
                     |     <span class="hljs-number">0.500</span> |     <span class="hljs-number">0.167</span> |     <span class="hljs-number">0.333</span> |           | 
---------------------|-----------|-----------|-----------|-----------|</code></pre></div>
+--------------------|-----------|-----------|-----------|-----------|
+</code></pre></div>
 <p><code>CrossTable()</code>函数有很多选项，可以做许多事情：计算（行、列、单元格）的百分比；指定小数位数；进行卡方、Fisher和McNemar独立性检验；计算期望和（皮尔逊、标准化、调整的标准化）残差；将缺失值作为一种有效值；进行行和列标题的标注；生成SAS或SPSS风格的输出。</p>
 <p>这里不赘述，因为不常用，具体可参阅<code>help(CrossTable)</code></p>
 <h5 id="3-多维列联表"><a class="markdownIt-Anchor" href="#3-多维列联表"></a> (3) 多维列联表</h5>
 <p>如果有两个以上的类别型变量，那么就是在处理多维列联表。之前提到的<code>table()</code>和<code>xtabs()</code>函数同样可以用来生成多维列联表，只需要改变公式即可：</p>
 <p>使用<code>table()</code>创建时，不同的维度需要通过<code>,</code>隔开：<code>table(var1, var2, var3,...)</code></p>
-<div class="hljs"><pre><code class="hljs R">&gt; <span class="hljs-keyword">attach</span>(Arthritis)
+<div class="hljs"><pre><code class="hljs R">&gt; attach(Arthritis)
 
 <span class="hljs-comment"># 这里的输入变量的顺序决定了输出表格的不同维度：</span>
 <span class="hljs-comment"># 第一维度：Treatment；第二维度：Sex，...</span>
@@ -966,7 +967,7 @@ Treatment Female Male
   Placebo      <span class="hljs-number">6</span>    <span class="hljs-number">1</span>
   Treated     <span class="hljs-number">16</span>    <span class="hljs-number">5</span>
 
-&gt; <span class="hljs-keyword">detach</span>(Arthritis)</code></pre></div>
+&gt; detach(Arthritis)</code></pre></div>
 <p>通过<code>xtab()</code>创建时，不同的变量需要通过<code>+</code>隔开：</p>
 <div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 这里的输入变量的顺序决定了输出表格的不同维度：</span>
 <span class="hljs-comment"># 第一维度：Treatment；第二维度：Sex，...</span>
@@ -1017,7 +1018,7 @@ Treatment
 Placebo Treated 
      <span class="hljs-number">43</span>      <span class="hljs-number">41</span> 
 
-&gt; margin.table(table1, <span class="hljs-string">"Treatment"</span>)
+&gt; margin.table(table1, <span class="hljs-string">&quot;Treatment&quot;</span>)
 Treatment
 Placebo Treated 
      <span class="hljs-number">43</span>      <span class="hljs-number">41</span>
@@ -1035,20 +1036,20 @@ Improved
     <span class="hljs-number">42</span>     <span class="hljs-number">14</span>     <span class="hljs-number">28</span> 
 
 <span class="hljs-comment"># 对1，2维度求和，即重新构建次级表格</span>
-&gt; margin.table(table1, c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>))
+&gt; margin.table(table1, <span class="hljs-built_in">c</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>))
          Sex
 Treatment Female Male
   Placebo     <span class="hljs-number">32</span>   <span class="hljs-number">11</span>
   Treated     <span class="hljs-number">27</span>   <span class="hljs-number">14</span>
 
 <span class="hljs-comment"># 对2，3维度求和，不同的顺序可以改变输出表格的行列</span>
-&gt; margin.table(table1, c(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>))
+&gt; margin.table(table1, <span class="hljs-built_in">c</span>(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>))
         Improved
 Sex      None Some Marked
   Female   <span class="hljs-number">25</span>   <span class="hljs-number">12</span>     <span class="hljs-number">22</span>
   Male     <span class="hljs-number">17</span>    <span class="hljs-number">2</span>      <span class="hljs-number">6</span>
 
-&gt; margin.table(table1, c(<span class="hljs-number">3</span>,<span class="hljs-number">2</span>))
+&gt; margin.table(table1, <span class="hljs-built_in">c</span>(<span class="hljs-number">3</span>,<span class="hljs-number">2</span>))
         Sex
 Improved Female Male
   None       <span class="hljs-number">25</span>   <span class="hljs-number">17</span>
@@ -1068,7 +1069,7 @@ Treated   Female          <span class="hljs-number">0.14634146</span> <span clas
           Male            <span class="hljs-number">0.17073171</span> <span class="hljs-number">0.04878049</span> <span class="hljs-number">0.12195122</span></code></pre></div>
 <p><code>addmargins()</code>:</p>
 <div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 计算原表1，2维度上各项的概率，同时计算各个项在第3维度的概率和</span>
-&gt; ftable(addmargins(prop.table(table1, c(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)), <span class="hljs-number">3</span>))
+&gt; ftable(addmargins(prop.table(table1, <span class="hljs-built_in">c</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)), <span class="hljs-number">3</span>))
                  Improved       None       Some     Marked        Sum
 Treatment Sex                                                        
 Placebo   Female          <span class="hljs-number">0.59375000</span> <span class="hljs-number">0.21875000</span> <span class="hljs-number">0.18750000</span> <span class="hljs-number">1.00000000</span>
@@ -1077,7 +1078,7 @@ Treated   Female          <span class="hljs-number">0.22222222</span> <span clas
           Male            <span class="hljs-number">0.50000000</span> <span class="hljs-number">0.14285714</span> <span class="hljs-number">0.35714286</span> <span class="hljs-number">1.00000000</span>
 
 <span class="hljs-comment"># 计算原表1，2维度上各项的概率，同时计算各个项在第2维度的概率和</span>
-&gt; ftable(addmargins(prop.table(table1, c(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)), <span class="hljs-number">2</span>))
+&gt; ftable(addmargins(prop.table(table1, <span class="hljs-built_in">c</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)), <span class="hljs-number">2</span>))
                  Improved       None       Some     Marked
 Treatment Sex                                             
 Placebo   Female          <span class="hljs-number">0.59375000</span> <span class="hljs-number">0.21875000</span> <span class="hljs-number">0.18750000</span>
@@ -1242,16 +1243,16 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
                 
               </div>
               
-                <p class="note note-warning">采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
+                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
               
               
                 <div class="post-prevnext row">
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/07/25/L9.5%20Microbial%20Taxonomy%20%20and%20the%20Evolution%20of%20%20Diversity/">
+                      <a href="/2020/07/25/L10%20Claffications%20And%20Introduction%20of%20Some%20Bacterias/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">L9.5 Microbial Taxonomy  and the Evolution of  Diversity</span>
+                        <span class="hidden-mobile">L10 Claffications And Introduction of Some Bacterias</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -1326,7 +1327,7 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
     }
     createObserver(loadValine, 'vcomments');
   </script>
-  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
       powered by Valine.</a></noscript>
 
 
