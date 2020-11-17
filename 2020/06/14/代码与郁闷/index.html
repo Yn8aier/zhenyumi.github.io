@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>代码与郁闷 - 鹘横海</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+ 
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-06-14 15:17">
+      2020年6月14日 下午
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      1
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <!-- 鼠标烟花特效 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/fireworks.js"></script>
+
+    <!--浏览器搞笑标题-->
+    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+
+    <!--动态线条背景-->
+    <!--<script type="text/javascript"
+    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>-->
+
+
+    
+      
+<head>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+</head>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：5 个月前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              
+
+              <div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Hey, password is required here.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="2d6f550f6f8d904542bcc5d754f4047599715fe8b7e8de947012067bfaa91eab">b56d7cfc65e1dd3a11831938719127fcd5b416a3ff3e10360daf99e6e6a4d987a33fc10774e4724972a831ef52bbcfbfc078aa185d584b96435f2e2e9a9b0a92140a5e052623e4710e455a546ad4ceb26b9e12dda9c6d222891144f2138a5fa961a6d77994a76816b03b75106e2ee175aa636cb6f72b0849bba90cd3e5a53b45d8c1d3fb51d1ce2e6392e409ee948b04a17f6bfeaaaba68a9a5410c3998d71294961ec11629b381b0d260e47a4c103f11ad045f4f8fc777420503cdf938acba214f77d976b88b26d087aed5c235f98e7e9033def3500ed67afee77841c3c07f2b0a4e5744ef055c149d7e165002ab340fbbe282bec679f06f0561f1b7a772c599e937bc3bd05bb07bd43bfe38dd78b0ce857a08e7b1c48d6371af4b2ead2cea863af37b8b250534462c66301508a73e2434768080997747f7ccef013ce3d1e5d254e6ffd759e15f17a579496a0f250adad33e5ab0be7ab8f73d014cfafd729e2fd6125ef69937c2722c02f80e34d992ecf1e2871b0075b5f01b3d3d1c2b8bbf8691b7524df41cb8f1f1bd04cba818c7a87fa1182421521d9aca49d392f546dc0f0c750d140b0be244c8e74f7a9f7b6965ad3c00cbaf2a38e30c9d87c7dafafd35d9677de93bbfb8d4876d6c756a71caf8b670e0bb80c85b62e0092f89c0757c4bac4bc2b1c33778425f2bc7b7d1c04b31fddf53a241601ddd8bf2c9dc005d855657dd9aa99e101c0433d8be9dd192606ab657c346e3a5e7bdb22e3548ad5bc462dbcc6d7d2bb48487823cd85ec390957c6ac2bbff8503033e08e2911143ee8c01f27fc837f41bdc4ac95975e7ad2c54df54fdb102320ba544b70405d2b3815150783f4e13085962bb627d101e6ec5540e72e3a54f4926ef31c1738f9f03afb8d40b6842a92dab620459ee2e15f48a9df63e0e9f97275b69b20dec8972437bd5507b924563b109c3f3211a3327a05ea4367b6eea72f60dad50936e427922940f4bec2f03cd2198118e4ce3d0f853c3942a4bdbe57d95b7bd861505f17f96cb2a46371fbd1e258f66438695b4953335453e7501ed093640b4e696e8e668007140c88bf076d632ff7928f3ea25c52ccccff8391118c7f1fb11dcda85b63733d00f2131d0cbed37966e524f2b0a3b58c8af1fc258d60a115702cc1ff83ae6e879f60f883dffa876d434bb45b1804c8711e4b87c45befc436ec0c83bb0f7e6dd4ebfe0516400913a7b73cbffecf7d9245da79f085e7afd6677e25775c15b7e3026d95c3b791ebc9954794e6fe51b7cde2dcc88983f1a62e70c384c3bdd2bdf9224dbbf9e39c8d8efe54b011f3dd58a61c5de8de5503fa5ba0f3218839e8d92397f1913d415a54d04f332cd784b1b9f4f9d6bcaa998821a1ddbe53735c1d81c5c10af0f0b705aa56e0f05dc65995bc6403530da6032e7c0062e0bd1578b613582c8521a73677b16c730f084ae0d892f42c5249365e6b8b1fa610f1c728366e23d675fb5aec855e5f44e0ca24e68c0f9f35b5691db48aa692dac6e7f88e00583386469bf602ba89dccd940a942b2748b40fb16f979657a4ef69b4cd15e384518fe5b6682dfcb9e22058dfb5259a93db7853a24ece38f193749c893a4ff126c57338c61efd33d1033e5c8db10d4eab8b292fa42099ca8ad89e9b341107c68f5df58011931f7c4f16102dcadb7ebbfc2f12075ec28811a4c48a5cce2b7e63db1747dbb670c578fe27c92d3ebda26aebbe4dcc9fb67bb47a084c256ef3276142e3d97b887f52b4d97e3b6a36e27e3651668d4722878efa63c9cd05e56ea03c58eeb6ac18befe6daa298b148dc11e256e1358982dc16234dd1a0bd355486fac8cf586386e388a46c71912d15c5a9be2f4985cb8df7e2a595cb5bb8734fd8236b790a844c761647ddc3062c9ed91f1520c58a84a3a1b56b9851fa238ebdffcaba837ecefaec9</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/">云下日记</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%97%A5%E8%AE%B0/">日记</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/06/25/%E5%BE%97%E8%BF%87%E4%B8%94%E8%BF%87%E3%80%81%E5%BC%80%E5%BF%83%E7%9A%84%E4%BA%8B%E4%BB%A5%E5%8F%8A%E6%BB%A1%E5%A4%B4%E5%86%B7%E6%B0%B4/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">得过且过、开心的事以及满头冷水</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/06/11/%E5%81%87%E6%9C%9F%E7%9A%84%E5%BB%B6%E7%BB%AD/">
+                        <span class="hidden-mobile">假期的延续</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Valine Comments 国内版-->
+              
+              <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                requiredFields: ['nick'],
+                })
+                </script>
+
+              <!-- Valine Comments 国内版-->
+              
+              <!-- <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
+                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
+                requiredFields: ['nick'],
+                })
+                </script> -->
+
+              <!-- Utterances Comments -->
+              <!--<div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
+          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
+  </div>
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
+
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
+</script>
+
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "代码与郁闷&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>
