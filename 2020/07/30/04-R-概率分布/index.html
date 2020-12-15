@@ -14,10 +14,12 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="二项、泊松以及正态（高斯）分布；其它概率分布函数">
@@ -175,7 +177,7 @@
     <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/30/04-R-%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
       <meta itemprop="name" content="向海">
       <meta itemprop="description" content="Tomorrow is still shining.">
     </span>
@@ -283,20 +285,7 @@
 <li><code>seq(from, to, length.out = )</code></li>
 <li><code>seq(length.out = )</code></li>
 </ol>
-<pre><code class="hljs R">&gt; seq(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>)
- [<span class="hljs-number">1</span>]  <span class="hljs-number">1</span>  <span class="hljs-number">2</span>  <span class="hljs-number">3</span>  <span class="hljs-number">4</span>  <span class="hljs-number">5</span>  <span class="hljs-number">6</span>  <span class="hljs-number">7</span>  <span class="hljs-number">8</span>  <span class="hljs-number">9</span> <span class="hljs-number">10</span>
-&gt; seq(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>,by = <span class="hljs-number">2</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">1</span> <span class="hljs-number">3</span> <span class="hljs-number">5</span> <span class="hljs-number">7</span> <span class="hljs-number">9</span>
-&gt; seq(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>,by = <span class="hljs-number">3</span>)
-[<span class="hljs-number">1</span>]  <span class="hljs-number">1</span>  <span class="hljs-number">4</span>  <span class="hljs-number">7</span> <span class="hljs-number">10</span>
-&gt; seq(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>,length.out = <span class="hljs-number">5</span>)
-[<span class="hljs-number">1</span>]  <span class="hljs-number">1.00</span>  <span class="hljs-number">3.25</span>  <span class="hljs-number">5.50</span>  <span class="hljs-number">7.75</span> <span class="hljs-number">10.00</span>
-&gt; seq(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>,length.out = <span class="hljs-number">6</span>)
-[<span class="hljs-number">1</span>]  <span class="hljs-number">1.0</span>  <span class="hljs-number">2.8</span>  <span class="hljs-number">4.6</span>  <span class="hljs-number">6.4</span>  <span class="hljs-number">8.2</span> <span class="hljs-number">10.0</span>
-&gt; seq(length.out=<span class="hljs-number">10</span>)
- [<span class="hljs-number">1</span>]  <span class="hljs-number">1</span>  <span class="hljs-number">2</span>  <span class="hljs-number">3</span>  <span class="hljs-number">4</span>  <span class="hljs-number">5</span>  <span class="hljs-number">6</span>  <span class="hljs-number">7</span>  <span class="hljs-number">8</span>  <span class="hljs-number">9</span> <span class="hljs-number">10</span>
-&gt; seq(length.out=<span class="hljs-number">5</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span></code></pre>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt; seq(<span class="number">1</span>,<span class="number">10</span>)</span><br><span class="line"> [<span class="number">1</span>]  <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span>  <span class="number">4</span>  <span class="number">5</span>  <span class="number">6</span>  <span class="number">7</span>  <span class="number">8</span>  <span class="number">9</span> <span class="number">10</span></span><br><span class="line">&gt; seq(<span class="number">1</span>,<span class="number">10</span>,by = <span class="number">2</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">7</span> <span class="number">9</span></span><br><span class="line">&gt; seq(<span class="number">1</span>,<span class="number">10</span>,by = <span class="number">3</span>)</span><br><span class="line">[<span class="number">1</span>]  <span class="number">1</span>  <span class="number">4</span>  <span class="number">7</span> <span class="number">10</span></span><br><span class="line">&gt; seq(<span class="number">1</span>,<span class="number">10</span>,length.out = <span class="number">5</span>)</span><br><span class="line">[<span class="number">1</span>]  <span class="number">1.00</span>  <span class="number">3.25</span>  <span class="number">5.50</span>  <span class="number">7.75</span> <span class="number">10.00</span></span><br><span class="line">&gt; seq(<span class="number">1</span>,<span class="number">10</span>,length.out = <span class="number">6</span>)</span><br><span class="line">[<span class="number">1</span>]  <span class="number">1.0</span>  <span class="number">2.8</span>  <span class="number">4.6</span>  <span class="number">6.4</span>  <span class="number">8.2</span> <span class="number">10.0</span></span><br><span class="line">&gt; seq(length.out=<span class="number">10</span>)</span><br><span class="line"> [<span class="number">1</span>]  <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span>  <span class="number">4</span>  <span class="number">5</span>  <span class="number">6</span>  <span class="number">7</span>  <span class="number">8</span>  <span class="number">9</span> <span class="number">10</span></span><br><span class="line">&gt; seq(length.out=<span class="number">5</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span></span><br></pre></td></tr></table></figure>
 <h2 id="二项分布-binomial"><a class="markdownIt-Anchor" href="#二项分布-binomial"></a> 二项分布 (Binomial)</h2>
 <h3 id="1-相关概念"><a class="markdownIt-Anchor" href="#1-相关概念"></a> 1. 相关概念</h3>
 <p>二项分布模型处理在一系列实验中仅发现两个可能结果的事件的成功概率。例如，掷硬币总是给出头或尾。 在二项分布期间估计在10次重复抛掷硬币中精确找到3个头的概率。</p>
@@ -319,10 +308,7 @@
 </ol>
 <h3 id="2-相关函数"><a class="markdownIt-Anchor" href="#2-相关函数"></a> 2. 相关函数</h3>
 <p>R语言有四个内置函数来生成二项分布。 它们描述如下。</p>
-<pre><code class="hljs R">dbinom(x, size, prob)
-pbinom(x, size, prob)
-qbinom(p, size, prob)
-rbinom(n, size, prob)</code></pre>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dbinom(x, size, prob)</span><br><span class="line">pbinom(x, size, prob)</span><br><span class="line">qbinom(p, size, prob)</span><br><span class="line">rbinom(n, size, prob)</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -364,28 +350,8 @@ rbinom(n, size, prob)</code></pre>
 </ul>
 </li>
 </ul>
-<pre><code class="hljs R"><span class="hljs-comment"># 当x的长度等于1</span>
-&gt; dbinom(x = <span class="hljs-number">1</span>,size = <span class="hljs-number">50</span>,prob = <span class="hljs-number">0.5</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">4.440892e-14</span>
-&gt; dbinom(x = <span class="hljs-number">25</span>,size = <span class="hljs-number">50</span>,prob = <span class="hljs-number">0.5</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">0.1122752</span>
-&gt; dbinom(x = <span class="hljs-number">50</span>,size = <span class="hljs-number">50</span>,prob = <span class="hljs-number">0.5</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">8.881784e-16</span>
-
-<span class="hljs-comment"># 当x的长度大于1</span>
-&gt; x &lt;- seq(<span class="hljs-number">1</span>,<span class="hljs-number">50</span>,by = <span class="hljs-number">1</span>)
-&gt; y &lt;- dbinom(x = x, size = <span class="hljs-number">50</span>, prob = <span class="hljs-number">0.5</span>)
-&gt; y
- [<span class="hljs-number">1</span>] <span class="hljs-number">4.440892e-14</span> <span class="hljs-number">1.088019e-12</span> <span class="hljs-number">1.740830e-11</span> <span class="hljs-number">2.045475e-10</span> <span class="hljs-number">1.881837e-09</span> <span class="hljs-number">1.411378e-08</span> <span class="hljs-number">8.871517e-08</span> <span class="hljs-number">4.768440e-07</span>
- [<span class="hljs-number">9</span>] <span class="hljs-number">2.225272e-06</span> <span class="hljs-number">9.123616e-06</span> <span class="hljs-number">3.317678e-05</span> <span class="hljs-number">1.078246e-04</span> <span class="hljs-number">3.151795e-04</span> <span class="hljs-number">8.329743e-04</span> <span class="hljs-number">1.999138e-03</span> <span class="hljs-number">4.373115e-03</span>
-[<span class="hljs-number">17</span>] <span class="hljs-number">8.746230e-03</span> <span class="hljs-number">1.603475e-02</span> <span class="hljs-number">2.700590e-02</span> <span class="hljs-number">4.185915e-02</span> <span class="hljs-number">5.979878e-02</span> <span class="hljs-number">7.882567e-02</span> <span class="hljs-number">9.596169e-02</span> <span class="hljs-number">1.079569e-01</span>
-[<span class="hljs-number">25</span>] <span class="hljs-number">1.122752e-01</span> <span class="hljs-number">1.079569e-01</span> <span class="hljs-number">9.596169e-02</span> <span class="hljs-number">7.882567e-02</span> <span class="hljs-number">5.979878e-02</span> <span class="hljs-number">4.185915e-02</span> <span class="hljs-number">2.700590e-02</span> <span class="hljs-number">1.603475e-02</span>
-[<span class="hljs-number">33</span>] <span class="hljs-number">8.746230e-03</span> <span class="hljs-number">4.373115e-03</span> <span class="hljs-number">1.999138e-03</span> <span class="hljs-number">8.329743e-04</span> <span class="hljs-number">3.151795e-04</span> <span class="hljs-number">1.078246e-04</span> <span class="hljs-number">3.317678e-05</span> <span class="hljs-number">9.123616e-06</span>
-[<span class="hljs-number">41</span>] <span class="hljs-number">2.225272e-06</span> <span class="hljs-number">4.768440e-07</span> <span class="hljs-number">8.871517e-08</span> <span class="hljs-number">1.411378e-08</span> <span class="hljs-number">1.881837e-09</span> <span class="hljs-number">2.045475e-10</span> <span class="hljs-number">1.740830e-11</span> <span class="hljs-number">1.088019e-12</span>
-[<span class="hljs-number">49</span>] <span class="hljs-number">4.440892e-14</span> <span class="hljs-number">8.881784e-16</span>
-<span class="hljs-comment"># 当绘图的时候，x与y的长度应该相等</span>
-&gt; plot(x,y)</code></pre>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200731104032468.png" alt="image-20200731104032468" style="zoom: 67%;" />
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 当x的长度等于1</span></span><br><span class="line">&gt; dbinom(x = <span class="number">1</span>,size = <span class="number">50</span>,prob = <span class="number">0.5</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">4.440892e-14</span></span><br><span class="line">&gt; dbinom(x = <span class="number">25</span>,size = <span class="number">50</span>,prob = <span class="number">0.5</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">0.1122752</span></span><br><span class="line">&gt; dbinom(x = <span class="number">50</span>,size = <span class="number">50</span>,prob = <span class="number">0.5</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">8.881784e-16</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 当x的长度大于1</span></span><br><span class="line">&gt; x &lt;- seq(<span class="number">1</span>,<span class="number">50</span>,by = <span class="number">1</span>)</span><br><span class="line">&gt; y &lt;- dbinom(x = x, size = <span class="number">50</span>, prob = <span class="number">0.5</span>)</span><br><span class="line">&gt; y</span><br><span class="line"> [<span class="number">1</span>] <span class="number">4.440892e-14</span> <span class="number">1.088019e-12</span> <span class="number">1.740830e-11</span> <span class="number">2.045475e-10</span> <span class="number">1.881837e-09</span> <span class="number">1.411378e-08</span> <span class="number">8.871517e-08</span> <span class="number">4.768440e-07</span></span><br><span class="line"> [<span class="number">9</span>] <span class="number">2.225272e-06</span> <span class="number">9.123616e-06</span> <span class="number">3.317678e-05</span> <span class="number">1.078246e-04</span> <span class="number">3.151795e-04</span> <span class="number">8.329743e-04</span> <span class="number">1.999138e-03</span> <span class="number">4.373115e-03</span></span><br><span class="line">[<span class="number">17</span>] <span class="number">8.746230e-03</span> <span class="number">1.603475e-02</span> <span class="number">2.700590e-02</span> <span class="number">4.185915e-02</span> <span class="number">5.979878e-02</span> <span class="number">7.882567e-02</span> <span class="number">9.596169e-02</span> <span class="number">1.079569e-01</span></span><br><span class="line">[<span class="number">25</span>] <span class="number">1.122752e-01</span> <span class="number">1.079569e-01</span> <span class="number">9.596169e-02</span> <span class="number">7.882567e-02</span> <span class="number">5.979878e-02</span> <span class="number">4.185915e-02</span> <span class="number">2.700590e-02</span> <span class="number">1.603475e-02</span></span><br><span class="line">[<span class="number">33</span>] <span class="number">8.746230e-03</span> <span class="number">4.373115e-03</span> <span class="number">1.999138e-03</span> <span class="number">8.329743e-04</span> <span class="number">3.151795e-04</span> <span class="number">1.078246e-04</span> <span class="number">3.317678e-05</span> <span class="number">9.123616e-06</span></span><br><span class="line">[<span class="number">41</span>] <span class="number">2.225272e-06</span> <span class="number">4.768440e-07</span> <span class="number">8.871517e-08</span> <span class="number">1.411378e-08</span> <span class="number">1.881837e-09</span> <span class="number">2.045475e-10</span> <span class="number">1.740830e-11</span> <span class="number">1.088019e-12</span></span><br><span class="line">[<span class="number">49</span>] <span class="number">4.440892e-14</span> <span class="number">8.881784e-16</span></span><br><span class="line"><span class="comment"># 当绘图的时候，x与y的长度应该相等</span></span><br><span class="line">&gt; plot(x,y)</span><br></pre></td></tr></table></figure>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200731104032468.png" alt="image-20200731104032468" style="zoom: 67%;" />
 <h4 id="pbinom"><a class="markdownIt-Anchor" href="#pbinom"></a> pbinom</h4>
 <p><code>pbinom(x, size, prob)</code></p>
 <p>此函数给出事件的累积概率。 它是表示概率的单个值。此处的概率指的是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>X</mi><mo>≤</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(X \leq x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">x</span><span class="mclose">)</span></span></span></span>。</p>
@@ -393,61 +359,21 @@ rbinom(n, size, prob)</code></pre>
 <li>若x长度为1，返回至多成功<code>x</code>次的概率，即累积概率</li>
 <li>若x长度大于1，则返回一个范围的值，此时为累积 (cumulative) 概率模式</li>
 </ul>
-<pre><code class="hljs R"><span class="hljs-comment"># Probability of getting 26 or less heads from a 51 tosses of a coin.</span>
-<span class="hljs-comment"># 投掷51次硬币，最多得到26次正面朝上的概率</span>
-&gt; x &lt;- pbinom(<span class="hljs-number">26</span>,<span class="hljs-number">51</span>,<span class="hljs-number">0.5</span>)
-&gt; x
-[<span class="hljs-number">1</span>] <span class="hljs-number">0.610116</span>
-
-&gt; x &lt;- pbinom(<span class="hljs-number">25</span>,<span class="hljs-number">50</span>,<span class="hljs-number">0.5</span>)
-&gt; x
-[<span class="hljs-number">1</span>] <span class="hljs-number">0.5561376</span>
-
-&gt; x &lt;- pbinom(<span class="hljs-number">50</span>,<span class="hljs-number">100</span>,<span class="hljs-number">0.5</span>)
-&gt; x
-[<span class="hljs-number">1</span>] <span class="hljs-number">0.5397946</span>
-
-&gt; x &lt;- pbinom(<span class="hljs-number">5000</span>,<span class="hljs-number">10000</span>,<span class="hljs-number">0.5</span>)
-&gt; x
-[<span class="hljs-number">1</span>] <span class="hljs-number">0.5039893</span></code></pre>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Probability of getting 26 or less heads from a 51 tosses of a coin.</span></span><br><span class="line"><span class="comment"># 投掷51次硬币，最多得到26次正面朝上的概率</span></span><br><span class="line">&gt; x &lt;- pbinom(<span class="number">26</span>,<span class="number">51</span>,<span class="number">0.5</span>)</span><br><span class="line">&gt; x</span><br><span class="line">[<span class="number">1</span>] <span class="number">0.610116</span></span><br><span class="line"></span><br><span class="line">&gt; x &lt;- pbinom(<span class="number">25</span>,<span class="number">50</span>,<span class="number">0.5</span>)</span><br><span class="line">&gt; x</span><br><span class="line">[<span class="number">1</span>] <span class="number">0.5561376</span></span><br><span class="line"></span><br><span class="line">&gt; x &lt;- pbinom(<span class="number">50</span>,<span class="number">100</span>,<span class="number">0.5</span>)</span><br><span class="line">&gt; x</span><br><span class="line">[<span class="number">1</span>] <span class="number">0.5397946</span></span><br><span class="line"></span><br><span class="line">&gt; x &lt;- pbinom(<span class="number">5000</span>,<span class="number">10000</span>,<span class="number">0.5</span>)</span><br><span class="line">&gt; x</span><br><span class="line">[<span class="number">1</span>] <span class="number">0.5039893</span></span><br></pre></td></tr></table></figure>
 <h4 id="qbinom"><a class="markdownIt-Anchor" href="#qbinom"></a> qbinom</h4>
 <p><code>qbinom(p, size, prob)</code></p>
 <p>该函数采用概率值 (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>X</mi><mo>≤</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(X \leq x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">x</span><span class="mclose">)</span></span></span></span>)，并给出累积值与概率值匹配的数字。</p>
 <ul>
 <li>返回相应分位点<code>x</code></li>
 </ul>
-<pre><code class="hljs R">&gt; qbinom(<span class="hljs-number">0.610116</span>,<span class="hljs-number">51</span>,<span class="hljs-number">0.5</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">26</span>
-<span class="hljs-comment"># 从这个例子可以看出，回推的时候也只是得到近似值</span>
-<span class="hljs-comment"># pbinom(25,50,0.5) = 0.5561376</span>
-&gt; qbinom(<span class="hljs-number">0.5561376</span>,<span class="hljs-number">50</span>,<span class="hljs-number">0.5</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">26</span>
-
-&gt; qbinom(<span class="hljs-number">0.5397946</span>,<span class="hljs-number">100</span>,<span class="hljs-number">0.5</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">50</span>
-
-&gt; qbinom(<span class="hljs-number">0.5039893</span>,<span class="hljs-number">10000</span>,<span class="hljs-number">0.5</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">5000</span></code></pre>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt; qbinom(<span class="number">0.610116</span>,<span class="number">51</span>,<span class="number">0.5</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">26</span></span><br><span class="line"><span class="comment"># 从这个例子可以看出，回推的时候也只是得到近似值</span></span><br><span class="line"><span class="comment"># pbinom(25,50,0.5) = 0.5561376</span></span><br><span class="line">&gt; qbinom(<span class="number">0.5561376</span>,<span class="number">50</span>,<span class="number">0.5</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">26</span></span><br><span class="line"></span><br><span class="line">&gt; qbinom(<span class="number">0.5397946</span>,<span class="number">100</span>,<span class="number">0.5</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">50</span></span><br><span class="line"></span><br><span class="line">&gt; qbinom(<span class="number">0.5039893</span>,<span class="number">10000</span>,<span class="number">0.5</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">5000</span></span><br></pre></td></tr></table></figure>
 <h4 id="rbinom"><a class="markdownIt-Anchor" href="#rbinom"></a> rbinom</h4>
 <p><code>rbinom(n, size, prob)</code></p>
 <p>该函数从给定样本产生给定概率的所需数量的随机值。</p>
 <ul>
 <li>返回每组试验的成功次数</li>
 </ul>
-<pre><code class="hljs R">&gt; rbinom(<span class="hljs-number">10</span>,<span class="hljs-number">100</span>,<span class="hljs-number">0.5</span>)
- [<span class="hljs-number">1</span>] <span class="hljs-number">45</span> <span class="hljs-number">52</span> <span class="hljs-number">48</span> <span class="hljs-number">44</span> <span class="hljs-number">52</span> <span class="hljs-number">43</span> <span class="hljs-number">45</span> <span class="hljs-number">53</span> <span class="hljs-number">45</span> <span class="hljs-number">51</span>
-
-&gt; rbinom(<span class="hljs-number">10</span>,<span class="hljs-number">1000</span>,<span class="hljs-number">0.5</span>)
- [<span class="hljs-number">1</span>] <span class="hljs-number">480</span> <span class="hljs-number">528</span> <span class="hljs-number">503</span> <span class="hljs-number">497</span> <span class="hljs-number">515</span> <span class="hljs-number">520</span> <span class="hljs-number">528</span> <span class="hljs-number">514</span> <span class="hljs-number">502</span> <span class="hljs-number">517</span>
-
-&gt; rbinom(<span class="hljs-number">10</span>,<span class="hljs-number">500</span>,<span class="hljs-number">0.5</span>)
- [<span class="hljs-number">1</span>] <span class="hljs-number">224</span> <span class="hljs-number">252</span> <span class="hljs-number">254</span> <span class="hljs-number">248</span> <span class="hljs-number">253</span> <span class="hljs-number">236</span> <span class="hljs-number">260</span> <span class="hljs-number">257</span> <span class="hljs-number">251</span> <span class="hljs-number">260</span>
-
-&gt; rbinom(<span class="hljs-number">10</span>,<span class="hljs-number">500</span>,<span class="hljs-number">0.4</span>)
- [<span class="hljs-number">1</span>] <span class="hljs-number">184</span> <span class="hljs-number">204</span> <span class="hljs-number">211</span> <span class="hljs-number">193</span> <span class="hljs-number">195</span> <span class="hljs-number">184</span> <span class="hljs-number">201</span> <span class="hljs-number">210</span> <span class="hljs-number">210</span> <span class="hljs-number">215</span>
-
-&gt; rbinom(<span class="hljs-number">10</span>,<span class="hljs-number">500</span>,<span class="hljs-number">0.1</span>)
- [<span class="hljs-number">1</span>] <span class="hljs-number">60</span> <span class="hljs-number">52</span> <span class="hljs-number">50</span> <span class="hljs-number">63</span> <span class="hljs-number">50</span> <span class="hljs-number">55</span> <span class="hljs-number">48</span> <span class="hljs-number">63</span> <span class="hljs-number">59</span> <span class="hljs-number">48</span></code></pre>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt; rbinom(<span class="number">10</span>,<span class="number">100</span>,<span class="number">0.5</span>)</span><br><span class="line"> [<span class="number">1</span>] <span class="number">45</span> <span class="number">52</span> <span class="number">48</span> <span class="number">44</span> <span class="number">52</span> <span class="number">43</span> <span class="number">45</span> <span class="number">53</span> <span class="number">45</span> <span class="number">51</span></span><br><span class="line"></span><br><span class="line">&gt; rbinom(<span class="number">10</span>,<span class="number">1000</span>,<span class="number">0.5</span>)</span><br><span class="line"> [<span class="number">1</span>] <span class="number">480</span> <span class="number">528</span> <span class="number">503</span> <span class="number">497</span> <span class="number">515</span> <span class="number">520</span> <span class="number">528</span> <span class="number">514</span> <span class="number">502</span> <span class="number">517</span></span><br><span class="line"></span><br><span class="line">&gt; rbinom(<span class="number">10</span>,<span class="number">500</span>,<span class="number">0.5</span>)</span><br><span class="line"> [<span class="number">1</span>] <span class="number">224</span> <span class="number">252</span> <span class="number">254</span> <span class="number">248</span> <span class="number">253</span> <span class="number">236</span> <span class="number">260</span> <span class="number">257</span> <span class="number">251</span> <span class="number">260</span></span><br><span class="line"></span><br><span class="line">&gt; rbinom(<span class="number">10</span>,<span class="number">500</span>,<span class="number">0.4</span>)</span><br><span class="line"> [<span class="number">1</span>] <span class="number">184</span> <span class="number">204</span> <span class="number">211</span> <span class="number">193</span> <span class="number">195</span> <span class="number">184</span> <span class="number">201</span> <span class="number">210</span> <span class="number">210</span> <span class="number">215</span></span><br><span class="line"></span><br><span class="line">&gt; rbinom(<span class="number">10</span>,<span class="number">500</span>,<span class="number">0.1</span>)</span><br><span class="line"> [<span class="number">1</span>] <span class="number">60</span> <span class="number">52</span> <span class="number">50</span> <span class="number">63</span> <span class="number">50</span> <span class="number">55</span> <span class="number">48</span> <span class="number">63</span> <span class="number">59</span> <span class="number">48</span></span><br></pre></td></tr></table></figure>
 <h2 id="泊松分布-poisson-distribution"><a class="markdownIt-Anchor" href="#泊松分布-poisson-distribution"></a> 泊松分布 (Poisson distribution)</h2>
 <h3 id="1-相关概念-2"><a class="markdownIt-Anchor" href="#1-相关概念-2"></a> 1. 相关概念</h3>
 <ol>
@@ -505,23 +431,7 @@ rbinom(n, size, prob)</code></pre>
 </table>
 <p>这些函数的使用方式同二项分布类似，下文不再赘述了。</p>
 <p>例：</p>
-<pre><code class="hljs R">&gt; dpois(x = <span class="hljs-number">0</span>, lambda = <span class="hljs-number">1</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">0.3678794</span>
-&gt; dpois(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">0.3678794</span>
-&gt; dpois(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">0.3678794</span>
-
-&gt; ppois(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">0.7357589</span>
-
-&gt; qpois(<span class="hljs-number">0.3678794</span>,<span class="hljs-number">1</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">0</span>
-
-&gt; rpois(<span class="hljs-number">5</span>,<span class="hljs-number">1</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">4</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>
-&gt; rpois(<span class="hljs-number">10</span>,<span class="hljs-number">1</span>)
- [<span class="hljs-number">1</span>] <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span></code></pre>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&gt; dpois(x = <span class="number">0</span>, lambda = <span class="number">1</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">0.3678794</span></span><br><span class="line">&gt; dpois(<span class="number">0</span>,<span class="number">1</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">0.3678794</span></span><br><span class="line">&gt; dpois(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">0.3678794</span></span><br><span class="line"></span><br><span class="line">&gt; ppois(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">0.7357589</span></span><br><span class="line"></span><br><span class="line">&gt; qpois(<span class="number">0.3678794</span>,<span class="number">1</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">0</span></span><br><span class="line"></span><br><span class="line">&gt; rpois(<span class="number">5</span>,<span class="number">1</span>)</span><br><span class="line">[<span class="number">1</span>] <span class="number">0</span> <span class="number">1</span> <span class="number">4</span> <span class="number">1</span> <span class="number">2</span></span><br><span class="line">&gt; rpois(<span class="number">10</span>,<span class="number">1</span>)</span><br><span class="line"> [<span class="number">1</span>] <span class="number">1</span> <span class="number">0</span> <span class="number">2</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">2</span> <span class="number">1</span> <span class="number">3</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
 <h2 id="正态分布-normal-gaussian-distribution"><a class="markdownIt-Anchor" href="#正态分布-normal-gaussian-distribution"></a> 正态分布 (Normal  (Gaussian) Distribution)</h2>
 <h3 id="1-相关概念-3"><a class="markdownIt-Anchor" href="#1-相关概念-3"></a> 1. 相关概念</h3>
 <p>在随机收集来自独立来源的数据中，通常观察到数据的分布是正常的。 这意味着，在绘制水平轴上的变量的值和垂直轴中的值的计数时，我们得到一个钟形曲线。 曲线的中心代表数据集的平均值。 在图中，百分之五十的值位于平均值的左侧，另外五十分之一位于图的右侧。 统称为正态分布。</p>
@@ -616,7 +526,7 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 </table>
 <p>使用方法同二项分布，不再赘述</p>
 <h1 id="二-其它概率分布函数"><a class="markdownIt-Anchor" href="#二-其它概率分布函数"></a> 二、其它概率分布函数</h1>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200731143923010.png" alt="image-20200731143923010" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200731143923010.png" alt="image-20200731143923010" /></p>
 <p>使用方法都相近：</p>
 <p>其中第一个字母表示其所指分布的某一方面：</p>
 <p>d = 密度函数（density）</p>
@@ -715,6 +625,8 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
   <p class="site-author-name" itemprop="name">向海</p>
   <div class="site-description" itemprop="description">Tomorrow is still shining.</div>
 </div>
@@ -769,8 +681,6 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
   </span>
   <span class="author" itemprop="copyrightHolder">向海</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
-  </div>
 
         
 
@@ -796,7 +706,7 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>

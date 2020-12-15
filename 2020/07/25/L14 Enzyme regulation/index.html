@@ -14,10 +14,12 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (GMT+08:00)">
@@ -188,7 +190,7 @@
     <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/25/L14%20Enzyme%20regulation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
       <meta itemprop="name" content="向海">
       <meta itemprop="description" content="Tomorrow is still shining.">
     </span>
@@ -262,7 +264,7 @@
 <p>Substrate-level control is not sufficient for the regulation of many metabolic pathways. In many instances, it is advantageous <u>to have an enzyme regulated by some substance quite different from the substrate or immediate product.</u>（Not sufficient的原因是<u>在许多情况下，使酶受到与底物或直接产物截然不同的物质的调节是有利的。</u>）</p>
 <h2 id="example"><a class="markdownIt-Anchor" href="#example"></a> Example</h2>
 <p>As an example, consider the first step in <strong>glycolysis (醣酵解)</strong> (see Chapter 13)—the phosphorylation of glucose to yield glucose-6-phosphate (G6P):</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201205257902.png" alt="image-20191201205257902" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201205257902.png" alt="image-20191201205257902" /></p>
 <p>The enzyme <strong>hexokinase（己糖激酶）</strong>, which catalyzes this reaction, is inhibited by its product, <strong>G6P</strong></p>
 <p>If subsequent steps in glycolysis are blocked for any reason, G6P will accumulate and <u>bind to hexokinase</u>. This results in inhibition of hexokinase and slows down further production of G6P from glucose.</p>
 <p>In many cases the reaction product <u>binds the enzyme active site</u> and therefore acts as a competitive inhibitor.</p>
@@ -271,17 +273,17 @@
 <p><u>Regulation of enzyme activity is essential for the efficient and ordered flow of metabolism.</u></p>
 <p><u>Feedback control is important in the efficient regulation of complex metabolic pathways.</u></p>
 <p>We have emphasized that most metabolic pathways resemble assembly lines. The simplest metabolic assembly line looks like this:</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201210953763.png" alt="image-20191201210953763" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201210953763.png" alt="image-20191201210953763" /></p>
 <p>where A is the initial reactant or raw material; B, C, and D are intermediate products; and E is the final product.</p>
 <blockquote>
 <p>The final product of this pathway, E, will probably be used in some other pathway. Similarly, the “raw material,” A, may also participate in some other set of processes. Suppose the utilization of E suddenly slows down. If everything kept going as before, E would accumulate, and consumption of A would continue. But this process is inefficient. A more efficient process would solve this problem by closely monitoring the concentration of E and, as E accumulated, sending a signal back to inhibit its production.</p>
 </blockquote>
 <p>The cell can control generation of the final product through <u>activation</u> or <u>inhibition</u> of a key step in the pathway. <u>It would be most efficient to slow the <em>first step</em>—the conversion of A to B.</u></p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201211918248.png" alt="image-20191201211918248" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201211918248.png" alt="image-20191201211918248" /></p>
 <p>This type of <strong>feedback control</strong> is called <strong>feedback inhibition</strong> because an <em>increase</em> in the concentration of E leads to a <em>decrease</em> in its rate of production. Note that by inhibiting the first step, we prevent both unwanted utilization of A and accumulation of E.</p>
 <h2 id="example-2"><a class="markdownIt-Anchor" href="#example-2"></a> Example</h2>
 <p>consider a slightly more complex case, in which A is fed into two pathways, which lead to two products needed in roughly equivalent amounts. Then a scheme like the following emerges:</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201212552042.png" alt="image-20191201212552042" style="zoom:67%;" />
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201212552042.png" alt="image-20191201212552042" style="zoom:67%;" />
 <p>To control the pathways so that <u>G and N keep in balance</u>, high concentrations of G might <em>inhibit</em> the C →D enzyme and/or <em>activate</em> the C → K enzyme.</p>
 <p>Conversely, N might inhibit the C → K enzyme and/or activate the C → D enzyme.</p>
 <p>Furthermore, control of pathways by their end products means that the necessary inhibitions and activations must be produced by molecules that come from far down the assembly line and therefore bear little or no resemblance to either the substrates or the direct products of the enzymes to be regulated</p>
@@ -303,7 +305,7 @@
 </ul>
 <h3 id="1-effect-of-cooperative-substrate-binding-on-enzyme-kinetics"><a class="markdownIt-Anchor" href="#1-effect-of-cooperative-substrate-binding-on-enzyme-kinetics"></a> 1. Effect of cooperative substrate binding on enzyme kinetics:</h3>
 <p>We imagine this happening, as with hemoglobin, because <u>as more substrate is bound, the enzyme undergoes a transition from a lower affinity state (T state) to a higher affinity state (R state).</u></p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201214436182.png" alt="image-20191201214436182" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201214436182.png" alt="image-20191201214436182" /></p>
 <p>(a) Comparison of v vs. [S] curves for a noncooperative enzyme and an allosteric enzyme with cooperative binding. The two enzymes are assumed to have the same <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>V</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{max}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
 <p>(b) Lineweaver-Burk Plot. The T state has a high <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mi>M</mi></msub></mrow><annotation encoding="application/x-tex">K_{M}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">M</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>  (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>V</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{max}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is achieved at higher [S]). As more S is bound, the equilibrium shifts toward the R state, which has a lower $K_{M} $.</p>
 <h3 id="2-effect-of-extreme-homoallostery"><a class="markdownIt-Anchor" href="#2-effect-of-extreme-homoallostery"></a> 2. Effect of extreme homoallostery</h3>
@@ -312,7 +314,7 @@
 <p>The enzyme is essentially inactive at lower [S], allowing [S] to increase up to <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">[</mo><mi>S</mi><msub><mo stretchy="false">]</mo><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">[S]_{c }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
 <p>However, <u>any further increase leads to a greatly increased enzyme activity so that the substrate will be more rapidly consumed and its concentration will be maintained near the value</u></p>
 <p><strong>[S] control the “switch” on and off</strong></p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201215134335.png" alt="image-20191201215134335" style="zoom: 80%;" />
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201215134335.png" alt="image-20191201215134335" style="zoom: 80%;" />
 <p>The <u>vertical blue line</u> in the figure represents the <u>homeostatic concentration</u> range for S.</p>
 <p>The v vs. [S] curve is shown for a hypothetical enzyme with extreme positive cooperativity in substrate binding.</p>
 <p>At concentrations below the enzyme is almost inactive; above this concentration, it is very active.</p>
@@ -327,7 +329,7 @@
 <p>In the absence of activation or inhibitors, the v vs. [S] curve is sigmoidal.</p>
 <p>Activators shift the system toward the R state. Inhibitors stabilize the T state. <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">[</mo><mi>S</mi><msub><mo stretchy="false">]</mo><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">[S]_{c}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> represents the homeostatic concentration range for S.</p>
 <p>Note that effectors significantly alter the activity of the enzyme over this range of [S].</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201220756361.png" alt="image-20191201220756361" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201220756361.png" alt="image-20191201220756361" /></p>
 <h2 id="example-aspartate-carbamoyltransferase"><a class="markdownIt-Anchor" href="#example-aspartate-carbamoyltransferase"></a> Example: Aspartate Carbamoyltransferase</h2>
 <h3 id="1-regulation"><a class="markdownIt-Anchor" href="#1-regulation"></a> 1. Regulation</h3>
 <p>An excellent example of allosteric regulation is provided by the enzyme <strong>aspartate</strong> <strong>carbamoyltransferase</strong> (also known as aspartate transcarbamoylase, or ATCase), a key enzyme in pyrimidine synthesis</p>
@@ -336,19 +338,19 @@
 </blockquote>
 <p>Glutamine, glutamate, and aspartate are also used in protein synthesis; but once aspartate has been carbamoylated to form <strong>N-carbamoyl-L-aspartate (CAA, N-氨基甲酰基-L-天冬氨酸)</strong>, the molecule is committed to <u>pyrimidine synthesis</u>.</p>
 <p>Thus, the enzyme that controls this step must be sensitive to pyrimidine need.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201221335516.png" alt="image-20191201221335516" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201221335516.png" alt="image-20191201221335516" /></p>
 <p>This enzyme, as shown in <u>Figure 11.48</u>, is inhibited by <strong>cytidine triphosphate (CTP)</strong> and <strong>activated by ATP</strong>.</p>
 <p>Both responses make physiological sense; when CTP levels are already high, more pyrimidines are not needed.</p>
 <p>On the other hand, high ATP signals both a purine-rich state (signaling a need for increased pyrimidine synthesis) and an energy-rich cell condition under which DNA and RNA synthesis will be active.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201221428524.png" alt="image-20191201221428524" style="zoom: 80%;" />
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201221428524.png" alt="image-20191201221428524" style="zoom: 80%;" />
 <h3 id="2-structure"><a class="markdownIt-Anchor" href="#2-structure"></a> 2. Structure</h3>
 <p>Figure 11.49a. There are six <strong><em>catalytic</em> subunits</strong>, in two tiers of three, held together by six <strong><em>regulatory</em> subunits</strong>. Pairs of regulatory subunits appear to connect catalytic subunits in the two tiers.</p>
 <p>The <u>catalytic subunit comprises two domains</u>, one binding aspartate and the other <u>carbamoyl phosphate (氨甲酰磷酸)</u>, and the active site lies between them. The regulatory subunit is likewise of two parts; the so-called <strong>zinc domain</strong> and the <strong>allosteric domain</strong>.</p>
 <p>The former <u>binds a structurally necessary <strong>zinc</strong> atom</u>; the latter contains the <u>ATP/CTP binding site</u>. ATP and CTP thus compete for the same site so that the activity of ATCase is regulated by the <em>ratio</em> of ATP to CTP in the cell.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201221613033.png" alt="image-20191201221613033" style="zoom: 80%;" />
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201221613033.png" alt="image-20191201221613033" style="zoom: 80%;" />
 <p>As in the case of hemoglobin, the allosteric regulation of ATCase i<u>nvolves changes in the quaternary structure of the molecule.</u></p>
 <p>Conformations of the R and T states have been determined by X-ray diffraction. As Figure 11.49b shows, a major rearrangement of subunit positions occurs in the T → R transition.</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201222236050.png" alt="image-20191201222236050" style="zoom:67%;" />
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201222236050.png" alt="image-20191201222236050" style="zoom:67%;" />
 <p>The transition involves a rotation of the regulatory  subunits, which pushes the two tiers of catalytic subunits apart and rotates them slightly about the three-fold axis</p>
 <blockquote>
 <p>Recently, examples of single subunit proteins under allosteric control have been described. Here, dynamics is thought to be of critical importance. In this model for allostery, the enzyme samples different conformational states, corresponding to higher (“R-like”) and lower (“T-like”) activities, and the effector binds to a particular conformation and stabilizes it. A positive effector binds the higher activity conformation, whereas a negative effector binds the lower activity conformation. This model suggests that any dynamic protein could, in principle, be subject to allosteric regulation.</p>
@@ -357,7 +359,7 @@
 <h2 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h2>
 <p>Some enzyme undergo <strong>covalent modification</strong> and then begin to function. In some cases such modification acts in the opposite direction, to inactivate otherwise active enzymes. Some such modifications can be reversed; others cannot.</p>
 <p>A number of kinds of covalent modification are commonly used to regulate enzyme activity (Figure 11.51).</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201222803590.png" alt="image-20191201222803590" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201222803590.png" alt="image-20191201222803590" /></p>
 <p>The most widespread is <strong>phosphorylation (磷酸化作用)</strong> or <strong>dephosphorylation (脱磷酸作用;去磷作用)</strong> of various amino acid side chains (serine, threonine, tyrosine, and histidine, for example).</p>
 <p>Other covalent modifications include</p>
 <ul>
@@ -367,7 +369,7 @@
 </ul>
 <h2 id="protein-kinases"><a class="markdownIt-Anchor" href="#protein-kinases"></a> Protein kinases</h2>
 <p>The majority of enzymes, and their associated metabolic and signaling pathways, are regulated by reversible phosphorylation. <strong>Protein kinases</strong> are ATPdependent enzymes that add a phosphoryl group to the -OH group of a Tyr, Ser, or Thr on some target protein (Figure 11.52)</p>
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201223409454.png" alt="image-20191201223409454" style="zoom: 67%;" />
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201223409454.png" alt="image-20191201223409454" style="zoom: 67%;" />
 <ul>
 <li>
 <p>The target residues for ATP-dependent phosphorylation  by <strong>kinases</strong> are serine,  threonine, or tyrosine.</p>
@@ -390,7 +392,7 @@
 <blockquote>
 <p>有些酶在刚分泌时时没有催化活性的，这种没有活性的前体物称为酶原。一般生物体会通过肽键的剪切改变酶的构象使酶的活性中心形成或暴露出来而使酶具有活性。酶原的生理意思使为了避免酶消化细胞自身。</p>
 </blockquote>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201224150957.png" alt="image-20191201224150957" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201224150957.png" alt="image-20191201224150957" /></p>
 <p>Some enzymes, such as pancreatic proteases, are irreversibly switched on by proteolytic cleavage.</p>
 <ol>
 <li>
@@ -408,7 +410,7 @@
 <li>
 <ul>
 <li>Activation of <strong>chymotrypsinogen(胰凝乳蛋白酶原,糜蛋白酶原)</strong> to <strong>chymotrypsin (胰凝乳蛋白酶,糜蛋白酶)</strong><br />
-<img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201224831550.png" alt="image-20191201224831550" style="zoom: 80%;" /></li>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201224831550.png" alt="image-20191201224831550" style="zoom: 80%;" /></li>
 </ul>
 <p>In the first step, trypsin cleaves the bond between arginine 15 and isoleucine 16. The N-terminal peptide remains attached to the rest of the molecule because of the disulfide bond between residues 1 and 122. The product, called<em>π-chymotrypsin</em>, is an active enzyme.</p>
 <p>π-Chymotrypsin is not the most active form of chymotrypsin. More autocatalytic cleavages remove residues 14-15 and 147-148 from the molecule, to produce the final α-chymotrypsin, which is the principal and fully active form found in the digestive tract.</p>
@@ -427,7 +429,7 @@
 <p>a) Red blood cells enmeshed in the insoluble strands of a fibrin clot.</p>
 <p>b) Electron micrograph of part of a fibrin fiber.</p>
 <p>c) Schematic view of how fibrin monomers are thought to associate to form a fiber. Removal of fibrinopeptides A and B from fibrinogen by thrombin makes sites accessible for association with complementary sites a and b on adjacent monomers. The molecules are believed to overlap as shown because the striations seen in the fibers are 23 nm wide, exactly half the length of the fibrinogen molecule.</p>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201230352457.png" alt="image-20191201230352457" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201230352457.png" alt="image-20191201230352457" /></p>
 <p>If a blood clot is examined in the electron microscope, it is found to be composed of striated fibers of a protein called <strong>fibrin ([生化]纤维蛋白，血纤蛋白)</strong> (Figure 11.55a).</p>
 <p>The fibrin monomers are elongated molecules, about 46 nm long, that stick together in a staggered array as shown in Figure 11.55c. Fibrin monomers are derived from a precursor, <strong>fibrinogen (纤维蛋白原)</strong>, by proteolytic cleavages that release small <em>fibrinopeptides</em>(A and B in Figure 11.55c).</p>
 <blockquote>
@@ -476,7 +478,7 @@
 </tr>
 </tbody>
 </table>
-<p><img src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201230618420.png" alt="image-20191201230618420" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191201230618420.png" alt="image-20191201230618420" /></p>
 <p>Blood clotting involves a cascade of proteolytic activation of specific proteases, culminating in the transition of fibrinogen to fibrin.</p>
 <p>Each factor (protease) in the pathway can exist in an inactive form (red) or an active form (green).</p>
 <p>The cascade of proteolytic activations can start from exposure of blood at damaged tissue surfaces (intrinsic pathway) or from internal trauma to blood vessels (extrinsic pathway).</p>
@@ -581,6 +583,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
   <p class="site-author-name" itemprop="name">向海</p>
   <div class="site-description" itemprop="description">Tomorrow is still shining.</div>
 </div>
@@ -635,8 +639,6 @@
   </span>
   <span class="author" itemprop="copyrightHolder">向海</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
-  </div>
 
         
 
@@ -662,7 +664,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>

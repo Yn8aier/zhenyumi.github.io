@@ -14,10 +14,12 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="Something About Me SUSTech本科在读，生物科学魔法符篆及炼金专业。 是懒狗。  一、欢迎  为什么建立这个博客？？ 最初建立这个小博客只是因为早上起床的临时想法，后来觉得这里是一个很好的私人空间，可以用来发泄一些平常难以言表的事情。 兴趣使然的博客罢了。 如果有必要的话，可以通过上方的QQ以及WeChat的二维码找到我，或者通过我的邮箱zhenyumi@foxmail.c">
@@ -208,7 +210,7 @@
 <div class="row">
     <div class="col-md-4 col-sm-6 jQueryEqualHeight3">
         <div class="card">
-            <img class="card-img-top" src="https://i.vince.pub/blog-file/photo/note/9b323e9549d67ec8a75fbc14b9cd0e237ccce8de.png" alt="Card image cap">
+            <img class="card-img-top" data-src="https://i.vince.pub/blog-file/photo/note/9b323e9549d67ec8a75fbc14b9cd0e237ccce8de.png" alt="Card image cap">
             <div class="card-body">
                 <h4 class="card-title">🚀 随便说说</h4>
                 <p class="card-text">日记，以及日常的牢骚。</p>
@@ -218,7 +220,7 @@
     </div>
     <div class="col-md-4 col-sm-6 jQueryEqualHeight3">
         <div class="card">
-            <img class="card-img-top" src="https://i.vince.pub/blog-file/photo/note/debug.png" alt="Card image cap">
+            <img class="card-img-top" data-src="https://i.vince.pub/blog-file/photo/note/debug.png" alt="Card image cap">
             <div class="card-body">
                 <h4 class="card-title">🚧 更新计划与博客内容简介</h4>
                 <p class="card-text">内容简介。</p>
@@ -228,7 +230,7 @@
     </div>
     <div class="col-md-4 col-sm-6 jQueryEqualHeight3">
         <div class="card">
-            <img class="card-img-top" src="https://i.vince.pub/blog-file/photo/note/bed6d90f1b2f62b817e17029a7261311a23231ec.png" alt="Card image cap">
+            <img class="card-img-top" data-src="https://i.vince.pub/blog-file/photo/note/bed6d90f1b2f62b817e17029a7261311a23231ec.png" alt="Card image cap">
             <div class="card-body">
                 <h4 class="card-title">📄 常用内容</h4>
                 <p class="card-text">博文索引。</p>
@@ -304,6 +306,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
   <p class="site-author-name" itemprop="name">向海</p>
   <div class="site-description" itemprop="description">Tomorrow is still shining.</div>
 </div>
@@ -358,8 +362,6 @@
   </span>
   <span class="author" itemprop="copyrightHolder">向海</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
-  </div>
 
         
 
@@ -385,7 +387,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
