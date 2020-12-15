@@ -1,271 +1,249 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="从不同来源读取数据，常用数据处理，生成报告">
+<meta property="og:type" content="article">
+<meta property="og:title" content="08. R &lt;- 输入、读取、标注数据与创建报告">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/08/10/08-R-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E4%B8%8E%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="从不同来源读取数据，常用数据处理，生成报告">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184245881.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184337931.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204656466.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204715481.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184758166.png">
+<meta property="article:published_time" content="2020-08-10T10:14:21.000Z">
+<meta property="article:modified_time" content="2020-08-10T12:34:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="R">
+<meta property="article:tag" content="Statistics">
+<meta property="article:tag" content="速查">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184245881.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/08/10/08-R-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E4%B8%8E%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>08. R <- 输入、读取、标注数据与创建报告 | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>08. R &lt;- 输入、读取、标注数据与创建报告 - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200810-photo_2020-07-08_20-07-31.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-08-10 18:14">
-      2020年8月10日 晚上
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">兴趣使然的记事网站</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      3.9k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      13
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/10/08-R-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E4%B8%8E%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="Tomorrow is still shining.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          08. R <- 输入、读取、标注数据与创建报告
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-08-10 18:14:21 / 修改时间：20:34:00" itemprop="dateCreated datePublished" datetime="2020-08-10T18:14:21+08:00">2020-08-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">软件使用总结</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/08/10/08-R-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E4%B8%8E%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A/" class="post-meta-item leancloud_visitors" data-flag-title="08. R <- 输入、读取、标注数据与创建报告" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/08/10/08-R-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E4%B8%8E%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/10/08-R-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E4%B8%8E%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-</head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：4 个月前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80-%E8%BE%93%E5%85%A5%E4%B8%8E%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="post-toc-text"> 一、输入与读取数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BB%8E%E9%94%AE%E7%9B%98%E8%BE%93%E5%85%A5"><span class="post-toc-text"> 从键盘输入</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8"><span class="post-toc-text"> 1. 文本编辑器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E4%BB%8E%E4%BB%A3%E7%A0%81%E8%BE%93%E5%85%A5"><span class="post-toc-text"> 2. 从代码输入</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BB%8E%E5%B8%A6%E5%88%86%E9%9A%94%E7%AC%A6%E7%9A%84%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="post-toc-text"> 从带分隔符的文本文件导入数据</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AF%BC%E5%85%A5-excel-%E6%95%B0%E6%8D%AE"><span class="post-toc-text"> 导入 Excel 数据</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8C-%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E6%A0%87%E6%B3%A8"><span class="post-toc-text"> 二、数据集的标注</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%98%E9%87%8F%E6%A0%87%E7%AD%BE%E5%90%8D%E7%A7%B0%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="post-toc-text"> 变量标签（名称）的修改</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E8%8E%B7%E5%BE%97%E6%A0%87%E7%AD%BE%E5%90%8D%E7%A7%B0"><span class="post-toc-text"> 1. 获得标签（名称）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%90%8D%E7%A7%B0"><span class="post-toc-text"> 对象名称</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%A1%8C-%E5%88%97%E5%90%8D%E7%A7%B0"><span class="post-toc-text"> 行、列名称</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E5%80%BC%E6%A0%87%E7%AD%BE%E7%9A%84%E8%8E%B7%E5%BE%97%E4%B8%8E%E4%BF%AE%E6%94%B9"><span class="post-toc-text"> 2. 值标签的获得与修改</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="post-toc-text"> 处理数据对象的常用函数</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%89-%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A"><span class="post-toc-text"> 三、创建报告</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%94%A8-r-%E5%92%8C-markdown-%E5%88%9B%E5%BB%BA%E5%8A%A8%E6%80%81%E6%8A%A5%E5%91%8A"><span class="post-toc-text"> 用 R 和 Markdown 创建动态报告</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A%E6%96%87%E4%BB%B6"><span class="post-toc-text"> 1. 创建报告文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E6%8A%A5%E5%91%8A%E6%96%87%E4%BB%B6%E8%AF%AD%E6%B3%95"><span class="post-toc-text"> 2. 报告文件语法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E6%96%87%E4%BB%B6%E8%BE%93%E5%87%BA"><span class="post-toc-text"> 3. 文件输出</span></a></li></ol></li></ol></li></ol>
-
-              <h1 id="一-输入与读取数据"><a class="markdownIt-Anchor" href="#一-输入与读取数据"></a> 一、输入与读取数据</h1>
+        <h1 id="一-输入与读取数据"><a class="markdownIt-Anchor" href="#一-输入与读取数据"></a> 一、输入与读取数据</h1>
 <p>R可从键盘、文本文件、Microsoft Excel和Access、流行的统计软件、特殊格式的文件、多种关系型数据库管理系统、专业数据库、网站和在线服务中导入数据。</p>
 <h2 id="从键盘输入"><a class="markdownIt-Anchor" href="#从键盘输入"></a> 从键盘输入</h2>
 <p>从键盘输入数据有两种方式：</p>
@@ -281,13 +259,13 @@
 <li>针对这个数据对象调用文本编辑器，输入你的数据，并将结果保存回此数据对象中。</li>
 </ol>
 <p>在创建一个数据集的开始，可以首先规定一些变量名以及变量类型：</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 规定一些变量名以及变量类型</span>
+<pre><code class="hljs R"><span class="hljs-comment"># 规定一些变量名以及变量类型</span>
 mydata &lt;- data.frame(age=numeric(<span class="hljs-number">0</span>), 
                      gender=character(<span class="hljs-number">0</span>), 
                      weight=numeric(<span class="hljs-number">0</span>))
 
 <span class="hljs-comment"># 键入数据，保存结果</span>
-mydata &lt;- edit(mydata)</code></pre></div>
+mydata &lt;- edit(mydata)</code></pre>
 <p>如在这个例子当中，创建一个名为<code>mydata</code>的数据框，它含有三个变量：age（数值型）、gender（字符型）和weight（数值型）。然后你将调用文本编辑器，键入数据，最后保存结果。</p>
 <ul>
 <li><code>age=numeric(0)</code>的赋值语句将创建一个指定模式但不含实际数据的变量</li>
@@ -299,16 +277,16 @@ mydata &lt;- edit(mydata)</code></pre></div>
 </ul>
 <h3 id="2-从代码输入"><a class="markdownIt-Anchor" href="#2-从代码输入"></a> 2. 从代码输入</h3>
 <p>与首先规定变量名相对的，也可以直接通过代码来输入：</p>
-<div class="hljs"><pre><code class="hljs R">mydatatxt &lt;- <span class="hljs-string">&quot; </span>
+<pre><code class="hljs R">mydatatxt &lt;- <span class="hljs-string">&quot; </span>
 <span class="hljs-string">age gender weight </span>
 <span class="hljs-string">25 m 166 </span>
 <span class="hljs-string">30 f 115 </span>
 <span class="hljs-string">18 f 120 </span>
 <span class="hljs-string">&quot;</span> 
-mydata &lt;- read.table(header=<span class="hljs-literal">TRUE</span>, text=mydatatxt)</code></pre></div>
+mydata &lt;- read.table(header=<span class="hljs-literal">TRUE</span>, text=mydatatxt)</code></pre>
 <h2 id="从带分隔符的文本文件导入数据"><a class="markdownIt-Anchor" href="#从带分隔符的文本文件导入数据"></a> 从带分隔符的文本文件导入数据</h2>
 <p>可以使用<code>read.table()</code>从带分隔符的文本文件中导入数据。此函数可读入一个表格格式的文件并将其保存为一个数据框。表格的每一行分别出现在文件中每一行。其语法如下：</p>
-<div class="hljs"><pre><code class="hljs R">mydataframe &lt;- read.table(file, options)</code></pre></div>
+<pre><code class="hljs R">mydataframe &lt;- read.table(file, options)</code></pre>
 <p>其中，<code>file</code>是一个带分隔符的ASCII文本文件，<code>options</code>是控制如何处理数据的选项:</p>
 <table>
 <thead>
@@ -389,16 +367,16 @@ mydata &lt;- read.table(header=<span class="hljs-literal">TRUE</span>, text=myda
 </tbody>
 </table>
 <p>考虑一个名为studentgrades.csv的文本文件，它包含了学生在数学、科学、和社会学习的分数。文件中每一行表示一个学生，第一行包含了变量名，用逗号分隔。每一个单独的行都包含了学生的信息，它们也是用逗号进行分隔的。文件的前几行如下：</p>
-<div class="hljs"><pre><code class="hljs lsl">StudentID,First,Last,Math,Science,Social Studies 
+<pre><code class="hljs lsl">StudentID,First,Last,Math,Science,Social Studies 
 <span class="hljs-number">011</span>,Bob,Smith,<span class="hljs-number">90</span>,<span class="hljs-number">80</span>,<span class="hljs-number">67</span> 
 <span class="hljs-number">012</span>,Jane,Weary,<span class="hljs-number">75</span>,,<span class="hljs-number">80</span> 
 <span class="hljs-number">010</span>,Dan,<span class="hljs-string">&quot;Thornton, III&quot;</span>,<span class="hljs-number">65</span>,<span class="hljs-number">75</span>,<span class="hljs-number">70</span> 
-<span class="hljs-number">040</span>,Mary,<span class="hljs-string">&quot;O&#x27;Leary&quot;</span>,<span class="hljs-number">90</span>,<span class="hljs-number">95</span>,<span class="hljs-number">92</span></code></pre></div>
+<span class="hljs-number">040</span>,Mary,<span class="hljs-string">&quot;O&#x27;Leary&quot;</span>,<span class="hljs-number">90</span>,<span class="hljs-number">95</span>,<span class="hljs-number">92</span></code></pre>
 <p>这个文件可以用以下语句来读入成一个数据框：</p>
-<div class="hljs"><pre><code class="hljs R">grades &lt;- read.table(<span class="hljs-string">&quot;studentgrades.csv&quot;</span>, header=<span class="hljs-literal">TRUE</span>, 
-                     row.names=<span class="hljs-string">&quot;StudentID&quot;</span>, sep=<span class="hljs-string">&quot;,&quot;</span>)</code></pre></div>
+<pre><code class="hljs R">grades &lt;- read.table(<span class="hljs-string">&quot;studentgrades.csv&quot;</span>, header=<span class="hljs-literal">TRUE</span>, 
+                     row.names=<span class="hljs-string">&quot;StudentID&quot;</span>, sep=<span class="hljs-string">&quot;,&quot;</span>)</code></pre>
 <p>结果如下：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; grades
+<pre><code class="hljs R">&gt; grades
    First          Last Math Science Social.Studies
 11   Bob         Smith   <span class="hljs-number">90</span>      <span class="hljs-number">80</span>             <span class="hljs-number">67</span>
 12  Jane         Weary   <span class="hljs-number">75</span>      <span class="hljs-literal">NA</span>             <span class="hljs-number">80</span>
@@ -411,15 +389,15 @@ mydata &lt;- read.table(header=<span class="hljs-literal">TRUE</span>, text=myda
 <span class="hljs-string"> $ Last          : chr  &quot;Smith&quot; &quot;Weary&quot; &quot;Thornton, III&quot; &quot;O&#x27;</span>Leary<span class="hljs-string">&quot;</span>
 <span class="hljs-string"> $ Math          : int  90 75 65 90</span>
 <span class="hljs-string"> $ Science       : int  80 NA 75 95</span>
-<span class="hljs-string"> $ Social.Studies: num  67 80 70 92</span></code></pre></div>
+<span class="hljs-string"> $ Social.Studies: num  67 80 70 92</span></code></pre>
 <p>默认地，<code>read.table()</code>把字符变量转化为因子，这并不一定都是我们想要的情况。</p>
 <p>加上选项<code>stringsAsFactors=FALSE</code>可以对所有的字符变量都去掉这个行为。</p>
 <p>可以用<code>colClasses</code>选项去对每一列都指定一个类（比如说，逻辑型、数值型、字符型或因子型）:</p>
-<div class="hljs"><pre><code class="hljs R">grades &lt;- read.table(<span class="hljs-string">&quot;studentgrades.csv&quot;</span>, header=<span class="hljs-literal">TRUE</span>, 
+<pre><code class="hljs R">grades &lt;- read.table(<span class="hljs-string">&quot;studentgrades.csv&quot;</span>, header=<span class="hljs-literal">TRUE</span>, 
                      row.names=<span class="hljs-string">&quot;StudentID&quot;</span>, sep=<span class="hljs-string">&quot;,&quot;</span>, 
                      colClasses=<span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;character&quot;</span>, <span class="hljs-string">&quot;character&quot;</span>, <span class="hljs-string">&quot;character&quot;</span>, 
-                                  <span class="hljs-string">&quot;numeric&quot;</span>, <span class="hljs-string">&quot;numeric&quot;</span>, <span class="hljs-string">&quot;numeric&quot;</span>))</code></pre></div>
-<div class="hljs"><pre><code class="hljs R">&gt; grades
+                                  <span class="hljs-string">&quot;numeric&quot;</span>, <span class="hljs-string">&quot;numeric&quot;</span>, <span class="hljs-string">&quot;numeric&quot;</span>))</code></pre>
+<pre><code class="hljs R">&gt; grades
     First          Last Math Science Social.Studies
 011   Bob         Smith   <span class="hljs-number">90</span>      <span class="hljs-number">80</span>             <span class="hljs-number">67</span>
 012  Jane         Weary   <span class="hljs-number">75</span>      <span class="hljs-literal">NA</span>             <span class="hljs-number">80</span>
@@ -432,7 +410,7 @@ mydata &lt;- read.table(header=<span class="hljs-literal">TRUE</span>, text=myda
 <span class="hljs-string"> $ Last          : chr  &quot;Smith&quot; &quot;Weary&quot; &quot;Thornton, III&quot; &quot;O&#x27;</span>Leary<span class="hljs-string">&quot;</span>
 <span class="hljs-string"> $ Math          : num  90 75 65 90</span>
 <span class="hljs-string"> $ Science       : num  80 NA 75 95</span>
-<span class="hljs-string"> $ Social.Studies: num  67 80 70 92</span></code></pre></div>
+<span class="hljs-string"> $ Social.Studies: num  67 80 70 92</span></code></pre>
 <h2 id="导入-excel-数据"><a class="markdownIt-Anchor" href="#导入-excel-数据"></a> 导入 Excel 数据</h2>
 <p>读取一个Excel文件的最好方式，就是在Excel中将其导出为一个逗号分隔文件（csv），并使用前文描述的方式将其导入R中。此外，也可以用<code>xlsx</code>包直接地导入Excel工作表。</p>
 <p><code>xlsx</code>包可以用来对Excel 97/2000/XP/2003/2007文件进行读取、写入和格式转换。</p>
@@ -441,12 +419,12 @@ mydata &lt;- read.table(header=<span class="hljs-literal">TRUE</span>, text=myda
 <li>在R中，路径的分割符号使用 <code>/</code> 而不是 <code>\</code></li>
 </ul>
 <p>例：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(xlsx) 
+<pre><code class="hljs R">&gt; library(xlsx) 
 &gt; workbook &lt;- <span class="hljs-string">&quot;c:/myworkbook.xlsx&quot;</span> 
-&gt; mydataframe &lt;- read.xlsx(workbook, <span class="hljs-number">1</span>)</code></pre></div>
+&gt; mydataframe &lt;- read.xlsx(workbook, <span class="hljs-number">1</span>)</code></pre>
 <p>此外，函数<code>read.xlsx2</code>也可以用来读取xlsx文件。它使用到了Java，有时候可以获得更加优秀的读取结果。</p>
 <p>关于这两个函数的完成用法如下：</p>
-<div class="hljs"><pre><code class="hljs R">read.xlsx(
+<pre><code class="hljs R">read.xlsx(
   file,
   sheetIndex,
   sheetName = <span class="hljs-literal">NULL</span>,
@@ -475,7 +453,7 @@ read.xlsx2(
   colClasses = <span class="hljs-string">&quot;character&quot;</span>,
   password = <span class="hljs-literal">NULL</span>,
   ...
-)</code></pre></div>
+)</code></pre>
 <p>相关参数：</p>
 <table>
 <thead>
@@ -577,15 +555,15 @@ read.xlsx2(
 <h3 id="1-获得标签名称"><a class="markdownIt-Anchor" href="#1-获得标签名称"></a> 1. 获得标签（名称）</h3>
 <h4 id="对象名称"><a class="markdownIt-Anchor" href="#对象名称"></a> 对象名称</h4>
 <p>函数<code>names()</code>可以获得或设定某个对象的名称：</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># Usage</span>
+<pre><code class="hljs R"><span class="hljs-comment"># Usage</span>
 <span class="hljs-built_in">names</span>(x)
 <span class="hljs-built_in">names</span>(x) &lt;- value
 
 <span class="hljs-comment"># x: an R object.</span>
 
-<span class="hljs-comment"># value: a character vector of up to the same length as x, or NULL.</span></code></pre></div>
+<span class="hljs-comment"># value: a character vector of up to the same length as x, or NULL.</span></code></pre>
 <p>例,修改某一行或一列的名称（标签）：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; grades
+<pre><code class="hljs R">&gt; grades
     First          Last Math Science Social.Studies
 011   Bob         Smith   <span class="hljs-number">90</span>      <span class="hljs-number">80</span>             <span class="hljs-number">67</span>
 012  Jane         Weary   <span class="hljs-number">75</span>      <span class="hljs-literal">NA</span>             <span class="hljs-number">80</span>
@@ -602,10 +580,10 @@ read.xlsx2(
 <span class="hljs-string">011        Bob         Smith   90      80             67</span>
 <span class="hljs-string">012       Jane         Weary   75      NA             80</span>
 <span class="hljs-string">010        Dan Thornton, III   65      75             70</span>
-<span class="hljs-string">040       Mary       O&#x27;</span>Leary   <span class="hljs-number">90</span>      <span class="hljs-number">95</span>             <span class="hljs-number">92</span></code></pre></div>
+<span class="hljs-string">040       Mary       O&#x27;</span>Leary   <span class="hljs-number">90</span>      <span class="hljs-number">95</span>             <span class="hljs-number">92</span></code></pre>
 <h4 id="行-列名称"><a class="markdownIt-Anchor" href="#行-列名称"></a> 行、列名称</h4>
 <p>使用函数<code>row.names()</code>与<code>colnames()</code>可以获得某个数据框的行、列名称：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; grades
+<pre><code class="hljs R">&gt; grades
     First Name          Last Math Science Social.Studies
 011        Bob         Smith   <span class="hljs-number">90</span>      <span class="hljs-number">80</span>             <span class="hljs-number">67</span>
 012       Jane         Weary   <span class="hljs-number">75</span>      <span class="hljs-literal">NA</span>             <span class="hljs-number">80</span>
@@ -616,9 +594,9 @@ read.xlsx2(
 <span class="hljs-string">[1] &quot;First Name&quot;     &quot;Last&quot;           &quot;Math&quot;           &quot;Science&quot;        &quot;Social.Studies&quot;</span>
 <span class="hljs-string"></span>
 <span class="hljs-string">&gt; row.names(grades)</span>
-<span class="hljs-string">[1] &quot;011&quot; &quot;012&quot; &quot;010&quot; &quot;040&quot;</span></code></pre></div>
+<span class="hljs-string">[1] &quot;011&quot; &quot;012&quot; &quot;010&quot; &quot;040&quot;</span></code></pre>
 <p>之后可以使用序号的索引对标签进行修改：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; colnames(grades)[<span class="hljs-number">2</span>] &lt;- <span class="hljs-string">&quot;Last Name&quot;</span>
+<pre><code class="hljs R">&gt; colnames(grades)[<span class="hljs-number">2</span>] &lt;- <span class="hljs-string">&quot;Last Name&quot;</span>
 &gt; row.names(grades)[<span class="hljs-number">1</span>] &lt;- <span class="hljs-string">&quot;Row 1&quot;</span>
 &gt; row.names(grades)[<span class="hljs-number">2</span>:<span class="hljs-number">4</span>] &lt;- <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;Row 2&quot;</span>, <span class="hljs-string">&quot;Row 3&quot;</span>, <span class="hljs-string">&quot;Row 4&quot;</span>)
 
@@ -627,12 +605,12 @@ read.xlsx2(
 Row <span class="hljs-number">1</span>        Bob         Smith   <span class="hljs-number">90</span>      <span class="hljs-number">80</span>             <span class="hljs-number">67</span>
 Row <span class="hljs-number">2</span>       Jane         Weary   <span class="hljs-number">75</span>      <span class="hljs-literal">NA</span>             <span class="hljs-number">80</span>
 Row <span class="hljs-number">3</span>        Dan Thornton, III   <span class="hljs-number">65</span>      <span class="hljs-number">75</span>             <span class="hljs-number">70</span>
-Row <span class="hljs-number">4</span>       Mary       O<span class="hljs-string">&#x27;Leary   90      95             92</span></code></pre></div>
+Row <span class="hljs-number">4</span>       Mary       O<span class="hljs-string">&#x27;Leary   90      95             92</span></code></pre>
 <h3 id="2-值标签的获得与修改"><a class="markdownIt-Anchor" href="#2-值标签的获得与修改"></a> 2. 值标签的获得与修改</h3>
 <p>函数<code>factor()</code>可为类别型变量创建值标签。继续上例，假设你有一个名为<code>gender</code>的变量，其中<code>1</code>表示男性，<code>2</code>表示女性。你可以使用以下代码来创建值标签：</p>
-<div class="hljs"><pre><code class="hljs R">patientdata$gender &lt;- factor(patientdata$gender, 
+<pre><code class="hljs R">patientdata$gender &lt;- factor(patientdata$gender, 
  levels = <span class="hljs-built_in">c</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>), 
- labels = <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;male&quot;</span>, <span class="hljs-string">&quot;female&quot;</span>))</code></pre></div>
+ labels = <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;male&quot;</span>, <span class="hljs-string">&quot;female&quot;</span>))</code></pre>
 <p>这里<code>levels</code>代表变量的实际值，而<code>labels</code>表示包含了理想值标签的字符型向量。</p>
 <h2 id="处理数据对象的常用函数"><a class="markdownIt-Anchor" href="#处理数据对象的常用函数"></a> 处理数据对象的常用函数</h2>
 <table>
@@ -741,9 +719,9 @@ Row <span class="hljs-number">4</span>       Mary       O<span class="hljs-strin
 </ol>
 <h3 id="1-创建报告文件"><a class="markdownIt-Anchor" href="#1-创建报告文件"></a> 1. 创建报告文件</h3>
 <p>在R studio中，从GUI菜单中选择“File”→“New File”→“R Markdown”，可以可视化地创建Markdown文件。之后就会出现GUI界面，进行选择与设置。</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184245881.png" srcset="/img/loading.gif" alt="image-20200810184245881" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184245881.png" alt="image-20200810184245881" style="zoom:67%;" />
 <p>在完成设置之后，就进入到了编辑界面：</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184337931.png" srcset="/img/loading.gif" alt="image-20200810184337931" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184337931.png" alt="image-20200810184337931" /></p>
 <p>在这里，就可以进行相关代码的编辑了。</p>
 <h3 id="2-报告文件语法"><a class="markdownIt-Anchor" href="#2-报告文件语法"></a> 2. 报告文件语法</h3>
 <p>这部分的语法也就是Markdown的语法，就不多赘述了。</p>
@@ -787,425 +765,247 @@ Row <span class="hljs-number">4</span>       Mary       O<span class="hljs-strin
 </tbody>
 </table>
 <p>例如：</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204656466.png" srcset="/img/loading.gif" alt="image-20200810204656466" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204656466.png" alt="image-20200810204656466" /></p>
 <p>例2：</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204715481.png" srcset="/img/loading.gif" alt="image-20200810204715481" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204715481.png" alt="image-20200810204715481" /></p>
 <h3 id="3-文件输出"><a class="markdownIt-Anchor" href="#3-文件输出"></a> 3. 文件输出</h3>
 <p>使用R Studio可以很方便地实现文件的编辑和输出。</p>
 <p>在GUI中创建完成报告文件之后，就可以在R Studio中的一个Pane中进行代码的编辑。</p>
 <p>而输出的话则需要从<code>Knit</code>下拉菜单当中选取目标输出格式，之后在<code>Viewer</code> Pane中预览，可以在下拉菜单中选择保存的目标路径等。</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184758166.png" srcset="/img/loading.gif" alt="image-20200810184758166" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184758166.png" alt="image-20200810184758166" /></p>
 
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/R/">R</a>
-                    
-                      <a class="hover-with-bg" href="/tags/Statistics/">Statistics</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E9%80%9F%E6%9F%A5/">速查</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/08/11/%E6%BD%AE%E6%B0%B4/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">潮水</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/08/09/07-R-ggplot2/">
-                        <span class="hidden-mobile">07. R <- ggplot2语法概述及基本图片操作</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
+    </div>
 
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
+    
+    
+    
 
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
-
-
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/R/" rel="tag"># R</a>
+              <a href="/tags/Statistics/" rel="tag"># Statistics</a>
+              <a href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag"># 速查</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/09/07-R-ggplot2/" rel="prev" title="07. R <- ggplot2语法概述及基本图片操作">
+      <i class="fa fa-chevron-left"></i> 07. R <- ggplot2语法概述及基本图片操作
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/08/11/%E6%BD%AE%E6%B0%B4/" rel="next" title="潮水">
+      潮水 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-%E8%BE%93%E5%85%A5%E4%B8%8E%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="nav-number">1.</span> <span class="nav-text"> 一、输入与读取数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E9%94%AE%E7%9B%98%E8%BE%93%E5%85%A5"><span class="nav-number">1.1.</span> <span class="nav-text"> 从键盘输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E5%B8%A6%E5%88%86%E9%9A%94%E7%AC%A6%E7%9A%84%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="nav-number">1.2.</span> <span class="nav-text"> 从带分隔符的文本文件导入数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5-excel-%E6%95%B0%E6%8D%AE"><span class="nav-number">1.3.</span> <span class="nav-text"> 导入 Excel 数据</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E6%A0%87%E6%B3%A8"><span class="nav-number">2.</span> <span class="nav-text"> 二、数据集的标注</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E6%A0%87%E7%AD%BE%E5%90%8D%E7%A7%B0%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="nav-number">2.1.</span> <span class="nav-text"> 变量标签（名称）的修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="nav-number">2.2.</span> <span class="nav-text"> 处理数据对象的常用函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89-%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A"><span class="nav-number">3.</span> <span class="nav-text"> 三、创建报告</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8-r-%E5%92%8C-markdown-%E5%88%9B%E5%BB%BA%E5%8A%A8%E6%80%81%E6%8A%A5%E5%91%8A"><span class="nav-number">3.1.</span> <span class="nav-text"> 用 R 和 Markdown 创建动态报告</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">Tomorrow is still shining.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">202</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
   </div>
 
+        
 
-    
 
-    
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
-  
-</footer>
-
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
-
-<!-- Plugins -->
-
 
   
-    <script  src="/js/lazyload.js" ></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
   
 
 
 
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
 
 
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
 
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
-      }
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
     });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "08. R <- 输入、读取、标注数据与创建报告&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
     });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
-
-
-
-
-
-  
-
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
-  
-
-
-
-
-
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
-
-
-
-
-
-
+  }, window.Valine);
+});
+</script>
 
 </body>
-
-
 </html>

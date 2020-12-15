@@ -1,288 +1,287 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="散点图、折线图、相关图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="06. R &lt;- 基本绘图Ⅱ">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/08/05/06-R-%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E2%85%A1/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="散点图、折线图、相关图">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807185540098.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807190937479.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807200618128.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807200813952.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807201430874.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807201854214.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807202119770.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807203539287.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807203829535.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807204318549.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200712222057141.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200712223518295.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808214925804.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808214108345.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808215508583.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809162242215.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809162355711.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809163800392.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809163906795.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809164118661.png">
+<meta property="article:published_time" content="2020-08-05T13:14:43.000Z">
+<meta property="article:modified_time" content="2020-08-09T08:43:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="R">
+<meta property="article:tag" content="Statistics">
+<meta property="article:tag" content="速查">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807185540098.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/08/05/06-R-%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E2%85%A1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>06. R <- 基本绘图Ⅱ | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>06. R &lt;- 基本绘图Ⅱ - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200809-photo_2020-07-16_23-09-13.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-08-05 21:14">
-      2020年8月5日 晚上
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">兴趣使然的记事网站</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      4.4k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      17
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/05/06-R-%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E2%85%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="Tomorrow is still shining.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          06. R <- 基本绘图Ⅱ
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-05 21:14:43" itemprop="dateCreated datePublished" datetime="2020-08-05T21:14:43+08:00">2020-08-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-09 16:43:00" itemprop="dateModified" datetime="2020-08-09T16:43:00+08:00">2020-08-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">软件使用总结</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/08/05/06-R-%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E2%85%A1/" class="post-meta-item leancloud_visitors" data-flag-title="06. R <- 基本绘图Ⅱ" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/08/05/06-R-%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E2%85%A1/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/05/06-R-%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E2%85%A1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-</head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：4 个月前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80-%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="post-toc-text"> 一、散点图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%95%A3%E7%82%B9%E5%9B%BE%E7%9F%A9%E9%98%B5"><span class="post-toc-text"> 散点图矩阵</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%AB%98%E5%AF%86%E5%BA%A6%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="post-toc-text"> 高密度散点图</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%89%E7%BB%B4%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="post-toc-text"> 三维散点图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E9%9D%99%E6%80%81"><span class="post-toc-text"> 1. 静态</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E6%97%8B%E8%BD%AC%E5%8F%AF%E4%BA%A4%E4%BA%92%E5%BC%8F%E4%B8%89%E7%BB%B4%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="post-toc-text"> 2. 旋转可交互式三维散点图</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B0%94%E6%B3%A1%E5%9B%BE"><span class="post-toc-text"> 气泡图</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8C-%E6%8A%98%E7%BA%BF%E5%9B%BE"><span class="post-toc-text"> 二、折线图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E5%8F%8A%E5%8F%82%E6%95%B0"><span class="post-toc-text"> 相关函数及参数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E7%82%B9%E7%B1%BB%E5%9E%8B"><span class="post-toc-text"> 1. 点类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E7%BA%BF%E6%9D%A1%E7%B1%BB%E5%9E%8B"><span class="post-toc-text"> 2. 线条类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E5%8F%82%E6%95%B0type"><span class="post-toc-text"> 3. 参数：type</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E7%A4%BA%E4%BE%8B"><span class="post-toc-text"> 4. 示例</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%89-%E7%9B%B8%E5%85%B3%E5%9B%BE"><span class="post-toc-text"> 三、相关图</span></a></li></ol>
-
-              <h1 id="一-散点图"><a class="markdownIt-Anchor" href="#一-散点图"></a> 一、散点图</h1>
+        <h1 id="一-散点图"><a class="markdownIt-Anchor" href="#一-散点图"></a> 一、散点图</h1>
 <p>R中创建散点图的基础函数是plot(x, y)，其中，x和y是数值型向量，代表着图形中的(x, y)点。</p>
 <p>在这个例子当中，使用 <code>mtcars</code> 预设数据集来进行演示：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; head(mtcars)
+<pre><code class="hljs R">&gt; head(mtcars)
                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
 Mazda RX4         <span class="hljs-number">21.0</span>   <span class="hljs-number">6</span>  <span class="hljs-number">160</span> <span class="hljs-number">110</span> <span class="hljs-number">3.90</span> <span class="hljs-number">2.620</span> <span class="hljs-number">16.46</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>    <span class="hljs-number">4</span>    <span class="hljs-number">4</span>
 Mazda RX4 Wag     <span class="hljs-number">21.0</span>   <span class="hljs-number">6</span>  <span class="hljs-number">160</span> <span class="hljs-number">110</span> <span class="hljs-number">3.90</span> <span class="hljs-number">2.875</span> <span class="hljs-number">17.02</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>    <span class="hljs-number">4</span>    <span class="hljs-number">4</span>
 Datsun <span class="hljs-number">710</span>        <span class="hljs-number">22.8</span>   <span class="hljs-number">4</span>  <span class="hljs-number">108</span>  <span class="hljs-number">93</span> <span class="hljs-number">3.85</span> <span class="hljs-number">2.320</span> <span class="hljs-number">18.61</span>  <span class="hljs-number">1</span>  <span class="hljs-number">1</span>    <span class="hljs-number">4</span>    <span class="hljs-number">1</span>
 Hornet <span class="hljs-number">4</span> Drive    <span class="hljs-number">21.4</span>   <span class="hljs-number">6</span>  <span class="hljs-number">258</span> <span class="hljs-number">110</span> <span class="hljs-number">3.08</span> <span class="hljs-number">3.215</span> <span class="hljs-number">19.44</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>    <span class="hljs-number">3</span>    <span class="hljs-number">1</span>
 Hornet Sportabout <span class="hljs-number">18.7</span>   <span class="hljs-number">8</span>  <span class="hljs-number">360</span> <span class="hljs-number">175</span> <span class="hljs-number">3.15</span> <span class="hljs-number">3.440</span> <span class="hljs-number">17.02</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>    <span class="hljs-number">3</span>    <span class="hljs-number">2</span>
-Valiant           <span class="hljs-number">18.1</span>   <span class="hljs-number">6</span>  <span class="hljs-number">225</span> <span class="hljs-number">105</span> <span class="hljs-number">2.76</span> <span class="hljs-number">3.460</span> <span class="hljs-number">20.22</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>    <span class="hljs-number">3</span>    <span class="hljs-number">1</span></code></pre></div>
+Valiant           <span class="hljs-number">18.1</span>   <span class="hljs-number">6</span>  <span class="hljs-number">225</span> <span class="hljs-number">105</span> <span class="hljs-number">2.76</span> <span class="hljs-number">3.460</span> <span class="hljs-number">20.22</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>    <span class="hljs-number">3</span>    <span class="hljs-number">1</span></code></pre>
 <h2 id="散点图矩阵"><a class="markdownIt-Anchor" href="#散点图矩阵"></a> 散点图矩阵</h2>
 <p>R中有很多创建散点图矩阵的实用函数。<code>pairs()</code>函数可以创建基础的散点图矩阵。下面的代码生成了一个散点图矩阵，包含<code>mpg</code>、<code>disp</code>、<code>drat</code>和<code>wt</code>四个变量，在这个图中，可以看到分别以其中两个变量作为<code>x</code>, <code>y</code>值的散点图：</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># S3 method for class &#x27;formula&#x27;: </span>
+<pre><code class="hljs R"><span class="hljs-comment"># S3 method for class &#x27;formula&#x27;: </span>
 pairs(formula,
 data = <span class="hljs-literal">NULL</span>, ..., subset,
-na.action = stats::na.pass)</code></pre></div>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span>
+na.action = stats::na.pass)</code></pre>
+<pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span>
 pairs(x, labels, panel = points, ...,
       horInd = <span class="hljs-number">1</span>:nc, verInd = <span class="hljs-number">1</span>:nc,
       lower.panel = panel, upper.panel = panel,
@@ -290,13 +289,13 @@ pairs(x, labels, panel = points, ...,
       label.pos = <span class="hljs-number">0.5</span> + has.diag/<span class="hljs-number">3</span>, line.main = <span class="hljs-number">3</span>,
       cex.labels = <span class="hljs-literal">NULL</span>, font.labels = <span class="hljs-number">1</span>,
       row1attop = <span class="hljs-literal">TRUE</span>, gap = <span class="hljs-number">1</span>, <span class="hljs-built_in">log</span> = <span class="hljs-string">&quot;&quot;</span>,
-      horOdd = !row1attop, verOdd = !row1attop)</code></pre></div>
-<div class="hljs"><pre><code class="hljs R">pairs(~mpg+disp+drat+wt, 
+      horOdd = !row1attop, verOdd = !row1attop)</code></pre>
+<pre><code class="hljs R">pairs(~mpg+disp+drat+wt, 
       data=mtcars, 
-      main=<span class="hljs-string">&quot;Basic Scatter Plot Matrix&quot;</span>)</code></pre></div>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807185540098.png" srcset="/img/loading.gif" alt="image-20200807185540098" style="zoom: 80%;" />
+      main=<span class="hljs-string">&quot;Basic Scatter Plot Matrix&quot;</span>)</code></pre>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807185540098.png" alt="image-20200807185540098" style="zoom: 80%;" />
 <p>可以控制参数，调整只显示上方三角或下方三角的图：</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 只显示下方</span>
+<pre><code class="hljs R"><span class="hljs-comment"># 只显示下方</span>
 pairs(~mpg+disp+drat+wt, 
       data=mtcars, 
       main=<span class="hljs-string">&quot;Basic Scatter Plot Matrix&quot;</span>,
@@ -306,7 +305,7 @@ pairs(~mpg+disp+drat+wt,
 pairs(~mpg+disp+drat+wt, 
       data=mtcars, 
       main=<span class="hljs-string">&quot;Basic Scatter Plot Matrix&quot;</span>,
-      lower.panel = <span class="hljs-literal">NULL</span>)</code></pre></div>
+      lower.panel = <span class="hljs-literal">NULL</span>)</code></pre>
 <p><code>car</code>包中的<code>scatterplotMatrix()</code>函数也可以生成散点图矩阵，它增强了散点图的许多功能，它可以很方便地绘制散点图，并能添加拟合曲线、边界箱线图和置信椭圆，还可以按子集绘图和交互式地识别点。</p>
 <p>有以下可选操作：</p>
 <ul>
@@ -316,17 +315,17 @@ pairs(~mpg+disp+drat+wt,
 <li>在各单元格的边界添加轴须图。</li>
 </ul>
 <p>例：线性和平滑（loess）拟合曲线被默认添加，主对角线处添加了核密度曲线和轴须图。<code>spread = FALSE</code>选项表示不添加展示分散度和对称信息的直线，<code>smoother.args=list(lty=2)</code>设定平滑（loess）拟合曲线使用虚线而不是实线。</p>
-<div class="hljs"><pre><code class="hljs R">library(car) 
+<pre><code class="hljs R">library(car) 
 scatterplotMatrix(~ mpg + disp + drat + wt, 
                   data=mtcars, 
                   spread=<span class="hljs-literal">FALSE</span>, 
                   smoother.args=<span class="hljs-built_in">list</span>(lty=<span class="hljs-number">2</span>), 
-                  main=<span class="hljs-string">&quot;Scatter Plot Matrix via car Package&quot;</span>)</code></pre></div>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807190937479.png" srcset="/img/loading.gif" alt="image-20200807190937479" style="zoom:80%;" />
+                  main=<span class="hljs-string">&quot;Scatter Plot Matrix via car Package&quot;</span>)</code></pre>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807190937479.png" alt="image-20200807190937479" style="zoom:80%;" />
 <p>R提供了许多其他的方式来创建散点图矩阵。你可能想探索<code>glus</code>包中的<code>cpars()</code>函数，<code>TeachingDemos</code>包中的<code>pairs2()</code>函数，<code>HH</code>包中的<code>xysplom()</code>函数，<code>ResourceSelection</code>包中的<code>kepairs()</code>函数和<code>SMPracticals</code>包中的<code>pairs.mod()</code>函数。每个包都加入了自己独特的曲线。</p>
 <h2 id="高密度散点图"><a class="markdownIt-Anchor" href="#高密度散点图"></a> 高密度散点图</h2>
 <p>当数据点重叠很严重时，用散点图来观察变量关系就显得“力不从心”了。下面是一个人为设计的例子，其中10000个观测点分布在两个重叠的数据群中：</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 以seed=1234按照正态分布产生10000个伪随机数</span>
+<pre><code class="hljs R"><span class="hljs-comment"># 以seed=1234按照正态分布产生10000个伪随机数</span>
 &gt; set.seed(<span class="hljs-number">1234</span>) 
 &gt; n &lt;- <span class="hljs-number">10000</span> 
 &gt; c1 &lt;- matrix(rnorm(n, mean=<span class="hljs-number">0</span>, sd=<span class="hljs-number">.5</span>), ncol=<span class="hljs-number">2</span>) 
@@ -370,42 +369,42 @@ scatterplotMatrix(~ mpg + disp + drat + wt,
 3  <span class="hljs-number">0.5422206</span> -<span class="hljs-number">0.4600465</span>
 4 -<span class="hljs-number">1.1728489</span> -<span class="hljs-number">0.1436682</span>
 5  <span class="hljs-number">0.2145623</span> -<span class="hljs-number">0.2755651</span>
-6  <span class="hljs-number">0.2530279</span>  <span class="hljs-number">0.4243228</span></code></pre></div>
+6  <span class="hljs-number">0.2530279</span>  <span class="hljs-number">0.4243228</span></code></pre>
 <p>生成散点图：</p>
-<div class="hljs"><pre><code class="hljs R">attach(mydata)
+<pre><code class="hljs R">attach(mydata)
 plot(x, y, pch=<span class="hljs-number">19</span>, main=<span class="hljs-string">&quot;Scatter Plot with 10,000 Observations&quot;</span>)
-detach(mydata)</code></pre></div>
+detach(mydata)</code></pre>
 <p><code>smoothScatter()</code>函数可利用核密度估计生成用颜色密度来表示点分布的散点图。</p>
-<div class="hljs"><pre><code class="hljs R">smoothScatter(x, y = <span class="hljs-literal">NULL</span>, nbin = <span class="hljs-number">128</span>, bandwidth,
+<pre><code class="hljs R">smoothScatter(x, y = <span class="hljs-literal">NULL</span>, nbin = <span class="hljs-number">128</span>, bandwidth,
               colramp = colorRampPalette(<span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;white&quot;</span>, blues9)),
               nrpoints = <span class="hljs-number">100</span>, ret.selection = <span class="hljs-literal">FALSE</span>,
               pch = <span class="hljs-string">&quot;.&quot;</span>, cex = <span class="hljs-number">1</span>, col = <span class="hljs-string">&quot;black&quot;</span>,
               transformation = <span class="hljs-keyword">function</span>(x) x^<span class="hljs-number">.25</span>,
               postPlotHook = box,
               xlab = <span class="hljs-literal">NULL</span>, ylab = <span class="hljs-literal">NULL</span>, xlim, ylim,
-              xaxs = par(<span class="hljs-string">&quot;xaxs&quot;</span>), yaxs = par(<span class="hljs-string">&quot;yaxs&quot;</span>), ...)</code></pre></div>
+              xaxs = par(<span class="hljs-string">&quot;xaxs&quot;</span>), yaxs = par(<span class="hljs-string">&quot;yaxs&quot;</span>), ...)</code></pre>
 <p>代码如下：</p>
-<div class="hljs"><pre><code class="hljs R">attach(mydata)
+<pre><code class="hljs R">attach(mydata)
 smoothScatter(x, y, main=<span class="hljs-string">&quot;Scatter Plot Colored by Smoothed Densities&quot;</span>)
-detach(mydata)</code></pre></div>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807200618128.png" srcset="/img/loading.gif" alt="image-20200807200618128" /></p>
+detach(mydata)</code></pre>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807200618128.png" alt="image-20200807200618128" /></p>
 <p><code>hexbin</code>包中的<code>hexbin()</code>函数将二元变量的封箱放到六边形单元格中（图形比名称更直观）。</p>
-<div class="hljs"><pre><code class="hljs R">hexbin(x, y, xbins = <span class="hljs-number">30</span>, shape = <span class="hljs-number">1</span>,
+<pre><code class="hljs R">hexbin(x, y, xbins = <span class="hljs-number">30</span>, shape = <span class="hljs-number">1</span>,
        xbnds = <span class="hljs-built_in">range</span>(x), ybnds = <span class="hljs-built_in">range</span>(y),
-       xlab = <span class="hljs-literal">NULL</span>, ylab = <span class="hljs-literal">NULL</span>, IDs = <span class="hljs-literal">FALSE</span>)</code></pre></div>
+       xlab = <span class="hljs-literal">NULL</span>, ylab = <span class="hljs-literal">NULL</span>, IDs = <span class="hljs-literal">FALSE</span>)</code></pre>
 <p>示例如下：</p>
-<div class="hljs"><pre><code class="hljs R">library(hexbin) 
+<pre><code class="hljs R">library(hexbin) 
 with(mydata, &#123; 
     bin &lt;- hexbin(x, y, xbins=<span class="hljs-number">50</span>) 
     plot(bin, main=<span class="hljs-string">&quot;Hexagonal Binning with 10,000 Observations&quot;</span>) 
- &#125;)</code></pre></div>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807200813952.png" srcset="/img/loading.gif" alt="image-20200807200813952" style="zoom: 80%;" />
+ &#125;)</code></pre>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807200813952.png" alt="image-20200807200813952" style="zoom: 80%;" />
 <h2 id="三维散点图"><a class="markdownIt-Anchor" href="#三维散点图"></a> 三维散点图</h2>
 <h3 id="1-静态"><a class="markdownIt-Anchor" href="#1-静态"></a> 1. 静态</h3>
 <p>可用<code>scatterplot3d</code>包中的<code>scatterplot3d()</code>函数来绘制三维散点图</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># S3 method for class &#x27;formula&#x27;: </span>
-scatter3d(formula, data, subset, radius, xlab, ylab, zlab, id=<span class="hljs-literal">FALSE</span>, ...)</code></pre></div>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span>
+<pre><code class="hljs R"><span class="hljs-comment"># S3 method for class &#x27;formula&#x27;: </span>
+scatter3d(formula, data, subset, radius, xlab, ylab, zlab, id=<span class="hljs-literal">FALSE</span>, ...)</code></pre>
+<pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span>
 scatter3d(x, y, z,
 	  xlab=deparse(<span class="hljs-built_in">substitute</span>(x)), ylab=deparse(<span class="hljs-built_in">substitute</span>(y)),
 	  zlab=deparse(<span class="hljs-built_in">substitute</span>(z)), axis.scales=<span class="hljs-literal">TRUE</span>, axis.ticks=<span class="hljs-literal">FALSE</span>,
@@ -429,29 +428,29 @@ scatter3d(x, y, z,
 
 Identify3d(x, y, z, axis.scales=<span class="hljs-literal">TRUE</span>, groups = <span class="hljs-literal">NULL</span>, labels = <span class="hljs-number">1</span>:<span class="hljs-built_in">length</span>(x),
 	col = <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;blue&quot;</span>, <span class="hljs-string">&quot;green&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;magenta&quot;</span>, <span class="hljs-string">&quot;cyan&quot;</span>, <span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;yellow&quot;</span>, <span class="hljs-string">&quot;gray&quot;</span>),
-	offset = ((<span class="hljs-number">100</span>/<span class="hljs-built_in">length</span>(x))^(<span class="hljs-number">1</span>/<span class="hljs-number">3</span>)) * <span class="hljs-number">0.02</span>)</code></pre></div>
+	offset = ((<span class="hljs-number">100</span>/<span class="hljs-built_in">length</span>(x))^(<span class="hljs-number">1</span>/<span class="hljs-number">3</span>)) * <span class="hljs-number">0.02</span>)</code></pre>
 <p><code>satterplot3d()</code>函数提供了许多选项，包括设置图形符号、轴、颜色、线条、网格线、突出显示和角度等功能。</p>
 <p>示例如下：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(scatterplot3d)
+<pre><code class="hljs R">&gt; library(scatterplot3d)
 &gt; scatterplot3d(x,y,z)
 &gt; library(scatterplot3d) 
 &gt; attach(mtcars) 
 &gt; scatterplot3d(wt, disp, mpg, 
                main=<span class="hljs-string">&quot;Basic 3D Scatter Plot&quot;</span>)
-&gt; detach(mtcars)</code></pre></div>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807201430874.png" srcset="/img/loading.gif" alt="image-20200807201430874" style="zoom: 67%;" />
+&gt; detach(mtcars)</code></pre>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807201430874.png" alt="image-20200807201430874" style="zoom: 67%;" />
 <p>突出显示例：</p>
-<div class="hljs"><pre><code class="hljs R">library(scatterplot3d) 
+<pre><code class="hljs R">library(scatterplot3d) 
 attach(mtcars) 
 scatterplot3d(wt, disp, mpg, 
               pch=<span class="hljs-number">16</span>, 
               highlight.3d=<span class="hljs-literal">TRUE</span>, 
               type=<span class="hljs-string">&quot;h&quot;</span>, 
               main=<span class="hljs-string">&quot;3D Scatter Plot with Vertical Lines&quot;</span>)
-detach(mtcars)</code></pre></div>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807201854214.png" srcset="/img/loading.gif" alt="image-20200807201854214" style="zoom:67%;" />
+detach(mtcars)</code></pre>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807201854214.png" alt="image-20200807201854214" style="zoom:67%;" />
 <p>添加回归面：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; attach(mtcars)
+<pre><code class="hljs R">&gt; attach(mtcars)
 &gt; s3d &lt;-scatterplot3d(wt, disp, mpg, 
                    pch=<span class="hljs-number">16</span>, 
                    highlight.3d=<span class="hljs-literal">TRUE</span>, 
@@ -459,37 +458,37 @@ detach(mtcars)</code></pre></div>
                    main=<span class="hljs-string">&quot;3D Scatter Plot with Vertical Lines and Regression Plane&quot;</span>) 
 &gt; fit &lt;- lm(mpg ~ wt+disp) 
 &gt; s3d$plane3d(fit)
-&gt; detach(mtcars)</code></pre></div>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807202119770.png" srcset="/img/loading.gif" alt="image-20200807202119770" style="zoom:80%;" />
+&gt; detach(mtcars)</code></pre>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807202119770.png" alt="image-20200807202119770" style="zoom:80%;" />
 <h3 id="2-旋转可交互式三维散点图"><a class="markdownIt-Anchor" href="#2-旋转可交互式三维散点图"></a> 2. 旋转可交互式三维散点图</h3>
 <p>如果能对三维散点图进行交互式操作，那么图形将会更好解释。R提供了一些旋转图形的功能，让你可以从多个角度观测绘制的数据点。</p>
 <p>可用rgl包中的plot3d()函数创建可交互的三维散点图。你能通过鼠标对图形进行旋转。函数格式为：</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span>
+<pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span>
 plot3d(x, y, z,  
 	xlab, ylab, zlab, type = <span class="hljs-string">&quot;p&quot;</span>, col,  
 	size, lwd, radius,
 	add = <span class="hljs-literal">FALSE</span>, aspect = !add, 
 	xlim = <span class="hljs-literal">NULL</span>, ylim = <span class="hljs-literal">NULL</span>, zlim = <span class="hljs-literal">NULL</span>, 
-	forceClipregion = <span class="hljs-literal">FALSE</span>, ...)</code></pre></div>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># S3 method for class &#x27;mesh3d&#x27;:</span>
+	forceClipregion = <span class="hljs-literal">FALSE</span>, ...)</code></pre>
+<pre><code class="hljs R"><span class="hljs-comment"># S3 method for class &#x27;mesh3d&#x27;:</span>
 plot3d(x, xlab = <span class="hljs-string">&quot;x&quot;</span>, ylab = <span class="hljs-string">&quot;y&quot;</span>, zlab = <span class="hljs-string">&quot;z&quot;</span>, type = <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;shade&quot;</span>, <span class="hljs-string">&quot;wire&quot;</span>, <span class="hljs-string">&quot;dots&quot;</span>),
 	add = <span class="hljs-literal">FALSE</span>, aspect = !add, ...)
 decorate3d(xlim, ylim, zlim, 
 	xlab = <span class="hljs-string">&quot;x&quot;</span>, ylab = <span class="hljs-string">&quot;y&quot;</span>, zlab = <span class="hljs-string">&quot;z&quot;</span>, 
 	box = <span class="hljs-literal">TRUE</span>, axes = <span class="hljs-literal">TRUE</span>, main = <span class="hljs-literal">NULL</span>, sub = <span class="hljs-literal">NULL</span>,
 	top = <span class="hljs-literal">TRUE</span>, aspect = <span class="hljs-literal">FALSE</span>, expand = <span class="hljs-number">1.03</span>, 
-	...)</code></pre></div>
+	...)</code></pre>
 <p>例：</p>
-<div class="hljs"><pre><code class="hljs R">library(rgl) 
+<pre><code class="hljs R">library(rgl) 
 attach(mtcars) 
 plot3d(wt, disp, mpg, col=<span class="hljs-string">&quot;red&quot;</span>, size=<span class="hljs-number">5</span>)
-detach(mtcars)</code></pre></div>
+detach(mtcars)</code></pre>
 <p>之后会出现这样的一个可交互的界面，可以通过鼠标来对模型进行旋转操作：</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807203539287.png" srcset="/img/loading.gif" alt="image-20200807203539287" style="zoom:50%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807203539287.png" alt="image-20200807203539287" style="zoom:50%;" />
 <p>用<code>car</code>包中类似的函数<code>scatter3d()</code>也可以实现交互效果：</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># S3 method for class &#x27;formula&#x27;: </span>
-scatter3d(formula, data, subset, radius, xlab, ylab, zlab, id=<span class="hljs-literal">FALSE</span>, ...)</code></pre></div>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span>
+<pre><code class="hljs R"><span class="hljs-comment"># S3 method for class &#x27;formula&#x27;: </span>
+scatter3d(formula, data, subset, radius, xlab, ylab, zlab, id=<span class="hljs-literal">FALSE</span>, ...)</code></pre>
+<pre><code class="hljs R"><span class="hljs-comment"># Default S3 method:</span>
 scatter3d(x, y, z,
 	  xlab=deparse(<span class="hljs-built_in">substitute</span>(x)), ylab=deparse(<span class="hljs-built_in">substitute</span>(y)),
 	  zlab=deparse(<span class="hljs-built_in">substitute</span>(z)), axis.scales=<span class="hljs-literal">TRUE</span>, axis.ticks=<span class="hljs-literal">FALSE</span>,
@@ -513,21 +512,21 @@ scatter3d(x, y, z,
 
 Identify3d(x, y, z, axis.scales=<span class="hljs-literal">TRUE</span>, groups = <span class="hljs-literal">NULL</span>, labels = <span class="hljs-number">1</span>:<span class="hljs-built_in">length</span>(x),
 	col = <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;blue&quot;</span>, <span class="hljs-string">&quot;green&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;magenta&quot;</span>, <span class="hljs-string">&quot;cyan&quot;</span>, <span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;yellow&quot;</span>, <span class="hljs-string">&quot;gray&quot;</span>),
-	offset = ((<span class="hljs-number">100</span>/<span class="hljs-built_in">length</span>(x))^(<span class="hljs-number">1</span>/<span class="hljs-number">3</span>)) * <span class="hljs-number">0.02</span>)</code></pre></div>
+	offset = ((<span class="hljs-number">100</span>/<span class="hljs-built_in">length</span>(x))^(<span class="hljs-number">1</span>/<span class="hljs-number">3</span>)) * <span class="hljs-number">0.02</span>)</code></pre>
 <p>例：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(car) 
+<pre><code class="hljs R">&gt; library(car) 
 &gt; with(mtcars, 
-      scatter3d(wt, disp, mpg))</code></pre></div>
+      scatter3d(wt, disp, mpg))</code></pre>
 <p>效果如下：</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807203829535.png" srcset="/img/loading.gif" alt="image-20200807203829535" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807203829535.png" alt="image-20200807203829535" style="zoom:67%;" />
 <h2 id="气泡图"><a class="markdownIt-Anchor" href="#气泡图"></a> 气泡图</h2>
 <p>气泡图（bubble plot）即先创建一个二维散点图，然后用点的大小来代表第三个变量的值。</p>
 <p>可用<code>symbols()</code>函数来创建气泡图。该函数可以在指定的(<em>x</em>, <em>y</em>)坐标上绘制圆圈图、方形图、星形图、温度计图和箱线图。</p>
-<div class="hljs"><pre><code class="hljs R">symbols(x, y = <span class="hljs-literal">NULL</span>, circles, squares, rectangles, stars,
+<pre><code class="hljs R">symbols(x, y = <span class="hljs-literal">NULL</span>, circles, squares, rectangles, stars,
         thermometers, boxplots, inches = <span class="hljs-literal">TRUE</span>, add = <span class="hljs-literal">FALSE</span>,
         fg = par(<span class="hljs-string">&quot;col&quot;</span>), bg = <span class="hljs-literal">NA</span>,
         xlab = <span class="hljs-literal">NULL</span>, ylab = <span class="hljs-literal">NULL</span>, main = <span class="hljs-literal">NULL</span>,
-        xlim = <span class="hljs-literal">NULL</span>, ylim = <span class="hljs-literal">NULL</span>, ...)</code></pre></div>
+        xlim = <span class="hljs-literal">NULL</span>, ylim = <span class="hljs-literal">NULL</span>, ...)</code></pre>
 <p>以绘制圆圈图为例：</p>
 <p><code>symbols(x, y, circle=radius)</code>, 其中<code>x</code>、<code>y</code>和<code>radius</code>是需要设定的向量，分别表示x、y坐标和圆圈半径。</p>
 <p>如果想用面积而不是半径来表示第三个变量，那么按照圆圈半径的公式（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mo>=</mo><msqrt><mfrac><mi>A</mi><mi>π</mi></mfrac></msqrt></mrow><annotation encoding="application/x-tex">r = \sqrt{\frac{A}{\pi}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.84em;vertical-align:-0.5913344999999999em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2486655000000002em;"><span class="svg-align" style="top:-3.8em;"><span class="pstrut" style="height:3.8em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">π</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.2086655em;"><span class="pstrut" style="height:3.8em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.8800000000000001em;"><svg width='400em' height='1.8800000000000001em' viewBox='0 0 400000 1944' preserveAspectRatio='xMinYMin slice'><path d='M1001,80H400000v40H1013.1s-83.4,268,-264.1,840c-180.7,
@@ -537,7 +536,7 @@ c-6,-5.3,-15,-14,-27,-26s25,-30,25,-30c26.7,-32.7,52,-63,76,-91s52,-60,52,-60
 s208,722,208,722c56,-175.3,126.3,-397.3,211,-666c84.7,-268.7,153.8,-488.2,207.5,
 -658.5c53.7,-170.3,84.5,-266.8,92.5,-289.5c4,-6.7,10,-10,18,-10z
 M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5913344999999999em;"><span></span></span></span></span></span></span></span></span> ）变换即可：<code>symbols(x, y, circle=sqrt(z/pi))</code></p>
-<div class="hljs"><pre><code class="hljs R">&gt; r &lt;- sqrt(disp/<span class="hljs-built_in">pi</span>) 
+<pre><code class="hljs R">&gt; r &lt;- sqrt(disp/<span class="hljs-built_in">pi</span>) 
 &gt; symbols(wt, mpg, circle=r, inches=<span class="hljs-number">0.30</span>, 
          fg=<span class="hljs-string">&quot;white&quot;</span>, bg=<span class="hljs-string">&quot;lightblue&quot;</span>, 
          main=<span class="hljs-string">&quot;Bubble Plot with point size proportional to displacement&quot;</span>, 
@@ -545,19 +544,19 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
          xlab=<span class="hljs-string">&quot;Weight of Car (lbs/1000)&quot;</span>) 
 <span class="hljs-comment"># inches是比例因子，控制着圆圈大小（默认最大圆圈为1英寸）</span>
 &gt; text(wt, mpg, rownames(mtcars), cex=<span class="hljs-number">0.6</span>) 
-&gt; detach(mtcars)</code></pre></div>
+&gt; detach(mtcars)</code></pre>
 <p>效果：</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807204318549.png" srcset="/img/loading.gif" alt="image-20200807204318549" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200807204318549.png" alt="image-20200807204318549" /></p>
 <h1 id="二-折线图"><a class="markdownIt-Anchor" href="#二-折线图"></a> 二、折线图</h1>
 <p>这部分以R内置的<code>Orange</code>数据集为例：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; head(Orange)
+<pre><code class="hljs R">&gt; head(Orange)
   Tree  age circumference
 1    <span class="hljs-number">1</span>  <span class="hljs-number">118</span>            <span class="hljs-number">30</span>
 2    <span class="hljs-number">1</span>  <span class="hljs-number">484</span>            <span class="hljs-number">58</span>
 3    <span class="hljs-number">1</span>  <span class="hljs-number">664</span>            <span class="hljs-number">87</span>
 4    <span class="hljs-number">1</span> <span class="hljs-number">1004</span>           <span class="hljs-number">115</span>
 5    <span class="hljs-number">1</span> <span class="hljs-number">1231</span>           <span class="hljs-number">120</span>
-6    <span class="hljs-number">1</span> <span class="hljs-number">1372</span>           <span class="hljs-number">142</span></code></pre></div>
+6    <span class="hljs-number">1</span> <span class="hljs-number">1372</span>           <span class="hljs-number">142</span></code></pre>
 <p>如果将散点图上的点从左往右连接起来，就会得到一个折线图.</p>
 <h2 id="相关函数及参数"><a class="markdownIt-Anchor" href="#相关函数及参数"></a> 相关函数及参数</h2>
 <p>折线图一般可用下列两个函数之一来创建：</p>
@@ -582,7 +581,7 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
 </tr>
 </tbody>
 </table>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200712222057141.png" srcset="/img/loading.gif" alt="image-20200712222057141" style="zoom: 67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200712222057141.png" alt="image-20200712222057141" style="zoom: 67%;" />
 <h3 id="2-线条类型"><a class="markdownIt-Anchor" href="#2-线条类型"></a> 2. 线条类型</h3>
 <table>
 <thead>
@@ -602,7 +601,7 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
 </tr>
 </tbody>
 </table>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200712223518295.png" srcset="/img/loading.gif" alt="image-20200712223518295" style="zoom:67%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Plot%E5%8F%82%E6%95%B0/image-20200712223518295.png" alt="image-20200712223518295" style="zoom:67%;" />
 <h3 id="3-参数type"><a class="markdownIt-Anchor" href="#3-参数type"></a> 3. 参数：<code>type</code></h3>
 <p>参数<code>type</code>指定图像类型：</p>
 <table>
@@ -643,10 +642,10 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
 </tr>
 </tbody>
 </table>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808214925804.png" srcset="/img/loading.gif" alt="image-20200808214925804" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808214925804.png" alt="image-20200808214925804" /></p>
 <h3 id="4-示例"><a class="markdownIt-Anchor" href="#4-示例"></a> 4. 示例</h3>
 <p>在绘制单一数据集的折线图的时候，在<code>plot</code>, <code>line</code>函数中直接调用数据集：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; opar &lt;- par(no.readonly = <span class="hljs-literal">TRUE</span>)
+<pre><code class="hljs R">&gt; opar &lt;- par(no.readonly = <span class="hljs-literal">TRUE</span>)
 &gt; par(mfrow=<span class="hljs-built_in">c</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>))
 &gt; t1 &lt;- subset(Orange, Tree==<span class="hljs-number">1</span>)
 &gt; plot(t1$age, t1$circumference, 
@@ -658,10 +657,10 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
       ylab=<span class="hljs-string">&quot;Circumference (mm)&quot;</span>, 
       main=<span class="hljs-string">&quot;Orange Tree 1 Growth&quot;</span>, 
       type=<span class="hljs-string">&quot;b&quot;</span>)
-&gt; par(opar)</code></pre></div>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808214108345.png" srcset="/img/loading.gif" alt="image-20200808214108345" style="zoom:67%;" />
+&gt; par(opar)</code></pre>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808214108345.png" alt="image-20200808214108345" style="zoom:67%;" />
 <p>在绘制多个数据集的时候，即将多个折线放在同一张图里时，则先使用<code>plot</code>函数绘制出一个只有坐标轴的空的区域，之后再向上添加折线：</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 为方便起见，将因子转化为数值型</span>
+<pre><code class="hljs R"><span class="hljs-comment"># 为方便起见，将因子转化为数值型</span>
 &gt; Orange$Tree &lt;- <span class="hljs-built_in">as.numeric</span>(Orange$Tree) 
 <span class="hljs-comment"># 确定需要绘制的折线数目</span>
 &gt; ntrees &lt;- <span class="hljs-built_in">max</span>(Orange$Tree)
@@ -708,13 +707,13 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
         pch=plotchar, 
         lty=linetype, 
         title=<span class="hljs-string">&quot;Tree&quot;</span>
- )</code></pre></div>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808215508583.png" srcset="/img/loading.gif" alt="image-20200808215508583" style="zoom:80%;" />
+ )</code></pre>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200808215508583.png" alt="image-20200808215508583" style="zoom:80%;" />
 <h1 id="三-相关图"><a class="markdownIt-Anchor" href="#三-相关图"></a> 三、相关图</h1>
 <p>相关系数矩阵是多元统计分析的一个基本方面。哪些被考察的变量与其他变量相关性很强，而哪些并不强？相关变量是否以某种特定的方式聚集在一起？随着变量数的增加，这类问题将变得更难回答。相关图作为一种相对现代的方法，可以通过对相关系数矩阵的可视化来回答这些问题。</p>
 <p>可以使用<code>cor()</code>函数获得变量之间的相关关系：</p>
 <p>Correlation, Variance and Covariance (Matrices):</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># Usage</span>
+<pre><code class="hljs R"><span class="hljs-comment"># Usage</span>
 var(x, y = <span class="hljs-literal">NULL</span>, na.rm = <span class="hljs-literal">FALSE</span>, use)
 
 cov(x, y = <span class="hljs-literal">NULL</span>, use = <span class="hljs-string">&quot;everything&quot;</span>,
@@ -723,7 +722,7 @@ cov(x, y = <span class="hljs-literal">NULL</span>, use = <span class="hljs-strin
 cor(x, y = <span class="hljs-literal">NULL</span>, use = <span class="hljs-string">&quot;everything&quot;</span>,
     method = <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;pearson&quot;</span>, <span class="hljs-string">&quot;kendall&quot;</span>, <span class="hljs-string">&quot;spearman&quot;</span>))
 
-cov2cor(V)</code></pre></div>
+cov2cor(V)</code></pre>
 <table>
 <thead>
 <tr>
@@ -760,7 +759,7 @@ cov2cor(V)</code></pre></div>
 </table>
 <p>在绘制相关图的时候，利用<code>corrgram</code>包中的<code>corrgram()</code>函数，你可以用图形的方式展示该相关系数矩阵。</p>
 <p>常用格式：<code>corrgram(x, order=, panel=, text.panel=, diag.panel=)</code></p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># Usage</span>
+<pre><code class="hljs R"><span class="hljs-comment"># Usage</span>
 corrgram(x, type = <span class="hljs-literal">NULL</span>, order = <span class="hljs-literal">FALSE</span>, labels, 
          panel = panel.shade, lower.panel = panel, 
          upper.panel = panel, diag.panel = <span class="hljs-literal">NULL</span>,
@@ -769,7 +768,7 @@ corrgram(x, type = <span class="hljs-literal">NULL</span>, order = <span class="
          row1attop = <span class="hljs-literal">TRUE</span>, dir = <span class="hljs-string">&quot;&quot;</span>,
          gap = <span class="hljs-number">0</span>, <span class="hljs-built_in">abs</span> = <span class="hljs-literal">FALSE</span>, 
          col.regions = colorRampPalette(<span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;salmon&quot;</span>,<span class="hljs-string">&quot;white&quot;</span>, <span class="hljs-string">&quot;royalblue&quot;</span>, <span class="hljs-string">&quot;navy&quot;</span>)), 
-         cor.method = <span class="hljs-string">&quot;pearson&quot;</span>,outer.labels = <span class="hljs-literal">NULL</span>, ...)</code></pre></div>
+         cor.method = <span class="hljs-string">&quot;pearson&quot;</span>,outer.labels = <span class="hljs-literal">NULL</span>, ...)</code></pre>
 <table>
 <thead>
 <tr>
@@ -849,15 +848,15 @@ corrgram(x, type = <span class="hljs-literal">NULL</span>, order = <span class="
 </tbody>
 </table>
 <p>这部分以预设数据集<code>mtcars</code>为例，进行制图示例。</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 获得相关系数</span>
-&gt; cor(mtcars)</code></pre></div>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809162242215.png" srcset="/img/loading.gif" alt="image-20200809162242215" /></p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 绘制相关图</span>
+<pre><code class="hljs R"><span class="hljs-comment"># 获得相关系数</span>
+&gt; cor(mtcars)</code></pre>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809162242215.png" alt="image-20200809162242215" /></p>
+<pre><code class="hljs R"><span class="hljs-comment"># 绘制相关图</span>
 &gt; library(corrgram)
 &gt; corrgram(mtcars, order=<span class="hljs-literal">TRUE</span>, lower.panel=panel.shade, 
           upper.panel=panel.pie, text.panel=panel.txt, 
-          main=<span class="hljs-string">&quot;Corrgram of mtcars intercorrelations&quot;</span>)</code></pre></div>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809162355711.png" srcset="/img/loading.gif" alt="image-20200809162355711" /></p>
+          main=<span class="hljs-string">&quot;Corrgram of mtcars intercorrelations&quot;</span>)</code></pre>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809162355711.png" alt="image-20200809162355711" /></p>
 <p>对于图像的解释（本图为了将有相似相关模式的变量聚集在一起，对矩阵的行和列都重新进行了排序（使用主成分法））：</p>
 <ol>
 <li>蓝色和从左下指向右上的斜杠表示单元格中的两个变量呈正相关。反过来，红色和从左上指向右下的斜杠表示变量呈负相关。</li>
@@ -870,433 +869,255 @@ corrgram(x, type = <span class="hljs-literal">NULL</span>, order = <span class="
 <li>上三角单元格用饼图展示了相同的信息。颜色的功能同上，但相关性大小由被填充的饼图块的大小来展示。正相关性将从12点钟处开始顺时针填充饼图，而负相关性则逆时针方向填充饼图。</li>
 </ol>
 <p>其它示例：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; corrgram(mtcars, order=<span class="hljs-literal">TRUE</span>, lower.panel=panel.ellipse, 
+<pre><code class="hljs R">&gt; corrgram(mtcars, order=<span class="hljs-literal">TRUE</span>, lower.panel=panel.ellipse, 
 +          upper.panel=panel.pts, text.panel=panel.txt, 
-+          main=<span class="hljs-string">&quot;low:panel.ellipse, up:panel.pts&quot;</span>)</code></pre></div>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809163800392.png" srcset="/img/loading.gif" alt="image-20200809163800392" style="zoom: 67%;" />
-<div class="hljs"><pre><code class="hljs R">&gt; corrgram(mtcars, order=<span class="hljs-literal">TRUE</span>, lower.panel=panel.ellipse, 
++          main=<span class="hljs-string">&quot;low:panel.ellipse, up:panel.pts&quot;</span>)</code></pre>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809163800392.png" alt="image-20200809163800392" style="zoom: 67%;" />
+<pre><code class="hljs R">&gt; corrgram(mtcars, order=<span class="hljs-literal">TRUE</span>, lower.panel=panel.ellipse, 
 +          upper.panel=panel.conf, text.panel=panel.txt, 
-+          main=<span class="hljs-string">&quot;low:panel.ellipse, up:panel.conf&quot;</span>)</code></pre></div>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809163906795.png" srcset="/img/loading.gif" alt="image-20200809163906795" style="zoom:67%;" />
++          main=<span class="hljs-string">&quot;low:panel.ellipse, up:panel.conf&quot;</span>)</code></pre>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809163906795.png" alt="image-20200809163906795" style="zoom:67%;" />
 <p>可以使用<code>col.corrgram</code>或在<code>corrgram()</code>函数中使用<code>col.regions</code>参数更改颜色：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; cols &lt;- colorRampPalette(<span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;darkgoldenrod4&quot;</span>, <span class="hljs-string">&quot;burlywood1&quot;</span>, 
+<pre><code class="hljs R">&gt; cols &lt;- colorRampPalette(<span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;darkgoldenrod4&quot;</span>, <span class="hljs-string">&quot;burlywood1&quot;</span>, 
 +                            <span class="hljs-string">&quot;darkkhaki&quot;</span>, <span class="hljs-string">&quot;darkgreen&quot;</span>)) 
 &gt; corrgram(mtcars, order=<span class="hljs-literal">TRUE</span>, col.regions=cols, 
 +          lower.panel=panel.shade, 
 +          upper.panel=panel.conf, text.panel=panel.txt, 
-+          main=<span class="hljs-string">&quot;A Corrgram (or Horse) of a Different Color&quot;</span>)</code></pre></div>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809164118661.png" srcset="/img/loading.gif" alt="image-20200809164118661" /></p>
++          main=<span class="hljs-string">&quot;A Corrgram (or Horse) of a Different Color&quot;</span>)</code></pre>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200809164118661.png" alt="image-20200809164118661" /></p>
 
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/R/">R</a>
-                    
-                      <a class="hover-with-bg" href="/tags/Statistics/">Statistics</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E9%80%9F%E6%9F%A5/">速查</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/08/09/L26%20Cancer%20cell%20biology/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">L26 Cancer cell biology</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/08/05/L25%20Cells%20to%20tissues%20cell%20adhesion%20to%20extracellular%20matrix%20%20(ECM)/">
-                        <span class="hidden-mobile">L25 Cells to tissues cell adhesion to extracellular matrix (ECM)</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
+    </div>
 
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
+    
+    
+    
 
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
-
-
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/R/" rel="tag"># R</a>
+              <a href="/tags/Statistics/" rel="tag"># Statistics</a>
+              <a href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag"># 速查</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/05/L25%20Cells%20to%20tissues%20cell%20adhesion%20to%20extracellular%20matrix%20%20(ECM)/" rel="prev" title="L25 Cells to tissues cell adhesion to extracellular matrix (ECM)">
+      <i class="fa fa-chevron-left"></i> L25 Cells to tissues cell adhesion to extracellular matrix (ECM)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/08/09/L26%20Cancer%20cell%20biology/" rel="next" title="L26 Cancer cell biology">
+      L26 Cancer cell biology <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="nav-number">1.</span> <span class="nav-text"> 一、散点图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%A3%E7%82%B9%E5%9B%BE%E7%9F%A9%E9%98%B5"><span class="nav-number">1.1.</span> <span class="nav-text"> 散点图矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AB%98%E5%AF%86%E5%BA%A6%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="nav-number">1.2.</span> <span class="nav-text"> 高密度散点图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E7%BB%B4%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="nav-number">1.3.</span> <span class="nav-text"> 三维散点图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B0%94%E6%B3%A1%E5%9B%BE"><span class="nav-number">1.4.</span> <span class="nav-text"> 气泡图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E6%8A%98%E7%BA%BF%E5%9B%BE"><span class="nav-number">2.</span> <span class="nav-text"> 二、折线图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E5%8F%8A%E5%8F%82%E6%95%B0"><span class="nav-number">2.1.</span> <span class="nav-text"> 相关函数及参数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89-%E7%9B%B8%E5%85%B3%E5%9B%BE"><span class="nav-number">3.</span> <span class="nav-text"> 三、相关图</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">Tomorrow is still shining.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">202</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
   </div>
 
+        
 
-    
 
-    
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
-  
-</footer>
-
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
-
-<!-- Plugins -->
-
 
   
-    <script  src="/js/lazyload.js" ></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
   
 
 
 
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
 
 
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
 
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
-      }
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
     });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "06. R <- 基本绘图Ⅱ&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
     });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
-
-
-
-
-
-  
-
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
-  
-
-
-
-
-
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
-
-
-
-
-
-
+  }, window.Valine);
+});
+</script>
 
 </body>
-
-
 </html>

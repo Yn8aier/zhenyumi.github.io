@@ -1,271 +1,265 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="各种分布；假设检验；方差分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="05. R &lt;- 独立性、相关性、假设检验以及相关统计量">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/08/01/05-R-%E7%8B%AC%E7%AB%8B%E6%80%A7%E3%80%81%E7%9B%B8%E5%85%B3%E6%80%A7%E3%80%81%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="各种分布；假设检验；方差分析">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802201833305.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802201854804.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802201905729.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200801212425336.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802212617184.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802211008431.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803202751070.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200511172104986.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200511173014263.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200512182618288.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200813211014546.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803212729715.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803214000157.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803214823691.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200813212955405.png">
+<meta property="article:published_time" content="2020-08-01T05:29:18.000Z">
+<meta property="article:modified_time" content="2020-08-13T14:01:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="R">
+<meta property="article:tag" content="Statistics">
+<meta property="article:tag" content="速查">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802201833305.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/08/01/05-R-%E7%8B%AC%E7%AB%8B%E6%80%A7%E3%80%81%E7%9B%B8%E5%85%B3%E6%80%A7%E3%80%81%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>05. R <- 独立性、相关性、假设检验以及相关统计量 | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>05. R &lt;- 独立性、相关性、假设检验以及相关统计量 - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200813-__amiya_arknights_drawn_by_seorang__1f921738bf0af1cd4366f26fa6a272a8%281%29.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-08-01 13:29">
-      2020年8月1日 下午
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">兴趣使然的记事网站</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      7.8k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      30
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/01/05-R-%E7%8B%AC%E7%AB%8B%E6%80%A7%E3%80%81%E7%9B%B8%E5%85%B3%E6%80%A7%E3%80%81%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="Tomorrow is still shining.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          05. R <- 独立性、相关性、假设检验以及相关统计量
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-01 13:29:18" itemprop="dateCreated datePublished" datetime="2020-08-01T13:29:18+08:00">2020-08-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-13 22:01:00" itemprop="dateModified" datetime="2020-08-13T22:01:00+08:00">2020-08-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">软件使用总结</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/08/01/05-R-%E7%8B%AC%E7%AB%8B%E6%80%A7%E3%80%81%E7%9B%B8%E5%85%B3%E6%80%A7%E3%80%81%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/" class="post-meta-item leancloud_visitors" data-flag-title="05. R <- 独立性、相关性、假设检验以及相关统计量" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/08/01/05-R-%E7%8B%AC%E7%AB%8B%E6%80%A7%E3%80%81%E7%9B%B8%E5%85%B3%E6%80%A7%E3%80%81%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/01/05-R-%E7%8B%AC%E7%AB%8B%E6%80%A7%E3%80%81%E7%9B%B8%E5%85%B3%E6%80%A7%E3%80%81%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-</head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：4 个月前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80-sampling-distribution-%E6%8A%BD%E6%A0%B7%E5%88%86%E5%B8%83"><span class="post-toc-text"> 一、Sampling Distribution (抽样分布)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="post-toc-text"> 相关概念</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-point-estimation"><span class="post-toc-text"> 1. Point Estimation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-in-hypothesis-test"><span class="post-toc-text"> 2. In Hypothesis Test</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-interval-estimation-confidence-interval-%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"><span class="post-toc-text"> 3. Interval Estimation - Confidence Interval 置信区间</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#confidence-interval-for-the-mean"><span class="post-toc-text"> Confidence Interval for The Mean</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#confidence-interval-for-the-variance"><span class="post-toc-text"> Confidence Interval for The Variance</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#interval-for-proportion"><span class="post-toc-text"> Interval for proportion</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E8%BF%9E%E7%BB%AD%E6%80%A7%E7%9F%AB%E6%AD%A3-continuity-correction"><span class="post-toc-text"> 4. 连续性矫正 (Continuity Correction)</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8C-%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C-hypothesis-test"><span class="post-toc-text"> 二、假设检验 (Hypothesis Test)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5-2"><span class="post-toc-text"> 相关概念</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="post-toc-text"> 相关函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-testing-for-means-t-test"><span class="post-toc-text"> 1. Testing for Means: t-test</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%8B%AC%E7%AB%8B%E6%A0%B7%E6%9C%AC%E7%9A%84-t-%E6%A3%80%E9%AA%8C"><span class="post-toc-text"> 独立样本的 t 检验</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%9D%9E%E7%8B%AC%E7%AB%8B%E6%A0%B7%E6%9C%AC%E7%9A%84-t-%E6%A3%80%E9%AA%8C"><span class="post-toc-text"> 非独立样本的 t 检验</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-testing-for-variances-chi-square-and-f-test"><span class="post-toc-text"> 2. Testing for Variances: Chi-Square and F Test</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#one-sample-hypothesis-testing-for-variance-chi-square-test"><span class="post-toc-text"> One-sample hypothesis testing for variance： Chi-Square Test</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#testing-for-the-equality-of-two-variances-f-test"><span class="post-toc-text"> Testing for The Equality of Two variances: F-test</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5-3"><span class="post-toc-text"> 相关概念</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0-2"><span class="post-toc-text"> 相关函数</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-testing-for-proportions"><span class="post-toc-text"> 3. Testing for Proportions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#one-sample-hypothesis-testing-for-proportion"><span class="post-toc-text"> One-sample hypothesis testing for proportion</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90-analysis-of-variance-anova"><span class="post-toc-text"> 方差分析 (Analysis of Variance, ANOVA)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="post-toc-text"> 1. 相关概念</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#source-of-variance"><span class="post-toc-text"> Source of Variance</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="post-toc-text"> 基本思想</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="post-toc-text"> 基本步骤</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-total-sum-of-squares-sst"><span class="post-toc-text"> (1) Total sum of squares (SST)</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-sum-of-squares-within-ssw"><span class="post-toc-text"> (2) Sum of squares within (SSW)</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-sum-of-squares-between-ssb"><span class="post-toc-text"> (3) Sum of squares between (SSB)</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-the-anova-table"><span class="post-toc-text"> (4) The ANOVA Table</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#f-test-in-anova"><span class="post-toc-text"> F Test in ANOVA</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#assumptions-when-using-anova"><span class="post-toc-text"> Assumptions when using ANOVA</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#post-hoc-tests"><span class="post-toc-text"> Post hoc tests</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-relationship-between-f-test-and-t-test"><span class="post-toc-text"> (1) Relationship between F-test and t-test</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-bonferroni-procedure"><span class="post-toc-text"> (2) Bonferroni Procedure</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-fishers-least-significant-difference-lsd"><span class="post-toc-text"> (3) Fisher’s Least Significant Difference (LSD)</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#chi-square-test-for-categorial-data"><span class="post-toc-text"> Chi-Square Test for Categorial Data</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="post-toc-text"> 2. 相关函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#aov"><span class="post-toc-text"> aov</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-%E5%87%BD%E6%95%B0%E8%A7%A3%E9%87%8A"><span class="post-toc-text"> (1) 函数解释</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-%E8%A1%A8%E8%BE%BE%E5%BC%8Fformula"><span class="post-toc-text"> (2) 表达式（formula）</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%BB%93%E6%9E%9C%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="post-toc-text"> 结果可视化</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E5%8D%95%E5%9B%A0%E7%B4%A0%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90-anova"><span class="post-toc-text"> 3. 单因素方差分析 (ANOVA)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%88%86%E6%9E%90"><span class="post-toc-text"> 分析</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%A4%9A%E9%87%8D%E6%AF%94%E8%BE%83"><span class="post-toc-text"> 多重比较</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%AF%84%E4%BC%B0%E6%A3%80%E9%AA%8C%E7%9A%84%E5%81%87%E8%AE%BE%E6%9D%A1%E4%BB%B6"><span class="post-toc-text"> 评估检验的假设条件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-%E6%AD%A3%E6%80%81%E6%80%A7%E6%A3%80%E9%AA%8Cq-q-plot"><span class="post-toc-text"> (1) 正态性检验：Q-Q Plot</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-%E6%96%B9%E5%B7%AE%E9%BD%90%E6%80%A7%E6%A3%80%E9%AA%8C"><span class="post-toc-text"> (2) 方差齐性检验</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-%E7%A6%BB%E7%BE%A4%E7%82%B9%E6%A3%80%E6%B5%8B"><span class="post-toc-text"> (3) 离群点检测</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E5%8D%95%E5%9B%A0%E7%B4%A0%E5%8D%8F%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90-ancova"><span class="post-toc-text"> 4. 单因素协方差分析 (ANCOVA)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%AE%A1%E7%AE%97"><span class="post-toc-text"> 计算</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%AE%A1%E7%AE%97%E8%B0%83%E6%95%B4%E7%9A%84%E5%9D%87%E5%80%BC"><span class="post-toc-text"> 计算调整的均值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%A4%9A%E9%87%8D%E6%AF%94%E8%BE%83-2"><span class="post-toc-text"> 多重比较</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%AF%84%E4%BC%B0%E6%A3%80%E9%AA%8C%E7%9A%84%E5%81%87%E8%AE%BE%E6%9D%A1%E4%BB%B6-ancova-special%E6%A3%80%E9%AA%8C%E5%9B%9E%E5%BD%92%E6%96%9C%E7%8E%87%E7%9A%84%E5%90%8C%E8%B4%A8%E6%80%A7"><span class="post-toc-text"> 评估检验的假设条件: ANCOVA Special，检验回归斜率的同质性</span></a></li></ol></li></ol></li></ol></li></ol>
-
-              <h1 id="一-sampling-distribution-抽样分布"><a class="markdownIt-Anchor" href="#一-sampling-distribution-抽样分布"></a> 一、Sampling Distribution (抽样分布)</h1>
+        <h1 id="一-sampling-distribution-抽样分布"><a class="markdownIt-Anchor" href="#一-sampling-distribution-抽样分布"></a> 一、Sampling Distribution (抽样分布)</h1>
 <h2 id="相关概念"><a class="markdownIt-Anchor" href="#相关概念"></a> 相关概念</h2>
 <h3 id="1-point-estimation"><a class="markdownIt-Anchor" href="#1-point-estimation"></a> 1. Point Estimation</h3>
 <table>
@@ -370,13 +364,13 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
 <h3 id="3-interval-estimation-confidence-interval-置信区间"><a class="markdownIt-Anchor" href="#3-interval-estimation-confidence-interval-置信区间"></a> 3. Interval Estimation - Confidence Interval 置信区间</h3>
 <h4 id="confidence-interval-for-the-mean"><a class="markdownIt-Anchor" href="#confidence-interval-for-the-mean"></a> Confidence Interval for The Mean</h4>
 <p>若总体方差 (Population Variance, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\sigma^{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span>)已知，可以直接使用它来计算出样本的置信区间，涉及正态分布</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802201833305.png" srcset="/img/loading.gif" alt="image-20200802201833305" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802201833305.png" alt="image-20200802201833305" /></p>
 <h4 id="confidence-interval-for-the-variance"><a class="markdownIt-Anchor" href="#confidence-interval-for-the-variance"></a> Confidence Interval for The Variance</h4>
 <p>只有在样本正态分布的时候，才可以使用此方法估计方差的样本空间。</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802201854804.png" srcset="/img/loading.gif" alt="image-20200802201854804" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802201854804.png" alt="image-20200802201854804" /></p>
 <h4 id="interval-for-proportion"><a class="markdownIt-Anchor" href="#interval-for-proportion"></a> Interval for proportion</h4>
 <p>涉及比例的时候，使用正态分布相关对置信区间进行估计：</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802201905729.png" srcset="/img/loading.gif" alt="image-20200802201905729" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802201905729.png" alt="image-20200802201905729" /></p>
 <h3 id="4-连续性矫正-continuity-correction"><a class="markdownIt-Anchor" href="#4-连续性矫正-continuity-correction"></a> 4. 连续性矫正 (Continuity Correction)</h3>
 <p>当满足n足够大，p不过小，np&gt;5或者nq&lt;30的条件时，可近似地采用u检验法，就是有连续性矫正，即正态近似法来进行显著性检验；</p>
 <p>在R中的检验函数中通过参数<code>correct</code>进行设置。</p>
@@ -384,11 +378,11 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
 <h2 id="相关概念-2"><a class="markdownIt-Anchor" href="#相关概念-2"></a> 相关概念</h2>
 <p>在统计假设检验中，首先要对总体分布参数设定一个假设（零假设，H<sub>0</sub>），然后从总体分布中抽样，通过样本计算所得的统计量来对总体参数进行推断。假定零假设为真，如果计算获得观测样本的统计量的概率非常小，便可以拒绝原假设，接受它的对立面（称作备择假设或者研究假设，H<sub>1</sub>）。</p>
 <p>在假设检验当中，通常会提到两种错误：</p>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200801212425336.png" srcset="/img/loading.gif" alt="image-20200801212425336" style="zoom:80%;" />
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200801212425336.png" alt="image-20200801212425336" style="zoom:80%;" />
 <h2 id="相关函数"><a class="markdownIt-Anchor" href="#相关函数"></a> 相关函数</h2>
 <h3 id="1-testing-for-means-t-test"><a class="markdownIt-Anchor" href="#1-testing-for-means-t-test"></a> 1. Testing for Means: t-test</h3>
 <p>在这一部分当中，使用<code>MASS</code>包的<code>UScrime</code>数据集来进行示范：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(MASS)
+<pre><code class="hljs R">&gt; library(MASS)
 &gt; head(UScrime)
     M So  Ed Po1 Po2  LF  M.F Pop  NW  U1 U2 GDP Ineq     Prob    Time    y
 1 <span class="hljs-number">151</span>  <span class="hljs-number">1</span>  <span class="hljs-number">91</span>  <span class="hljs-number">58</span>  <span class="hljs-number">56</span> <span class="hljs-number">510</span>  <span class="hljs-number">950</span>  <span class="hljs-number">33</span> <span class="hljs-number">301</span> <span class="hljs-number">108</span> <span class="hljs-number">41</span> <span class="hljs-number">394</span>  <span class="hljs-number">261</span> <span class="hljs-number">0.084602</span> <span class="hljs-number">26.2011</span>  <span class="hljs-number">791</span>
@@ -396,7 +390,7 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
 3 <span class="hljs-number">142</span>  <span class="hljs-number">1</span>  <span class="hljs-number">89</span>  <span class="hljs-number">45</span>  <span class="hljs-number">44</span> <span class="hljs-number">533</span>  <span class="hljs-number">969</span>  <span class="hljs-number">18</span> <span class="hljs-number">219</span>  <span class="hljs-number">94</span> <span class="hljs-number">33</span> <span class="hljs-number">318</span>  <span class="hljs-number">250</span> <span class="hljs-number">0.083401</span> <span class="hljs-number">24.3006</span>  <span class="hljs-number">578</span>
 4 <span class="hljs-number">136</span>  <span class="hljs-number">0</span> <span class="hljs-number">121</span> <span class="hljs-number">149</span> <span class="hljs-number">141</span> <span class="hljs-number">577</span>  <span class="hljs-number">994</span> <span class="hljs-number">157</span>  <span class="hljs-number">80</span> <span class="hljs-number">102</span> <span class="hljs-number">39</span> <span class="hljs-number">673</span>  <span class="hljs-number">167</span> <span class="hljs-number">0.015801</span> <span class="hljs-number">29.9012</span> <span class="hljs-number">1969</span>
 5 <span class="hljs-number">141</span>  <span class="hljs-number">0</span> <span class="hljs-number">121</span> <span class="hljs-number">109</span> <span class="hljs-number">101</span> <span class="hljs-number">591</span>  <span class="hljs-number">985</span>  <span class="hljs-number">18</span>  <span class="hljs-number">30</span>  <span class="hljs-number">91</span> <span class="hljs-number">20</span> <span class="hljs-number">578</span>  <span class="hljs-number">174</span> <span class="hljs-number">0.041399</span> <span class="hljs-number">21.2998</span> <span class="hljs-number">1234</span>
-6 <span class="hljs-number">121</span>  <span class="hljs-number">0</span> <span class="hljs-number">110</span> <span class="hljs-number">118</span> <span class="hljs-number">115</span> <span class="hljs-number">547</span>  <span class="hljs-number">964</span>  <span class="hljs-number">25</span>  <span class="hljs-number">44</span>  <span class="hljs-number">84</span> <span class="hljs-number">29</span> <span class="hljs-number">689</span>  <span class="hljs-number">126</span> <span class="hljs-number">0.034201</span> <span class="hljs-number">20.9995</span>  <span class="hljs-number">682</span></code></pre></div>
+6 <span class="hljs-number">121</span>  <span class="hljs-number">0</span> <span class="hljs-number">110</span> <span class="hljs-number">118</span> <span class="hljs-number">115</span> <span class="hljs-number">547</span>  <span class="hljs-number">964</span>  <span class="hljs-number">25</span>  <span class="hljs-number">44</span>  <span class="hljs-number">84</span> <span class="hljs-number">29</span> <span class="hljs-number">689</span>  <span class="hljs-number">126</span> <span class="hljs-number">0.034201</span> <span class="hljs-number">20.9995</span>  <span class="hljs-number">682</span></code></pre>
 <p>t检验涉及到t分布（t distribution）:</p>
 <h4 id="独立样本的-t-检验"><a class="markdownIt-Anchor" href="#独立样本的-t-检验"></a> 独立样本的 t 检验</h4>
 <p>假设两组数据是独立的，并且是从正态总体中抽得。一种检验的调用格式为：</p>
@@ -452,7 +446,7 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
 </tbody>
 </table>
 <p>例：</p>
-<div class="hljs"><pre><code class="hljs R"><span class="hljs-comment"># 简化后续代码</span>
+<pre><code class="hljs R"><span class="hljs-comment"># 简化后续代码</span>
 &gt; library(MASS)
 &gt; attach(UScrime)
 
@@ -526,12 +520,12 @@ sample estimates:
    mean of x    mean of y 
   <span class="hljs-number">0.04709138</span> <span class="hljs-number">525.38297872</span> 
 
-&gt; detach(UScrime)</code></pre></div>
+&gt; detach(UScrime)</code></pre>
 <h4 id="非独立样本的-t-检验"><a class="markdownIt-Anchor" href="#非独立样本的-t-检验"></a> 非独立样本的 t 检验</h4>
 <p>非独立样本的t检验假定组间的差异呈正态分布。对于本例，检验的调用格式为：</p>
 <p><code>t.test(y1, y2, paired = TRUE)</code></p>
 <p>例：针对<code>UScrime</code>数据集当中的两个数据组<code>U1</code>和<code>U2</code>进行分析</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(MASS)
+<pre><code class="hljs R">&gt; library(MASS)
 &gt; attach(UScrime)
 
 <span class="hljs-comment"># 对这两个数据集进行初步分析</span>
@@ -554,10 +548,10 @@ sample estimates:
 mean of the differences 
                <span class="hljs-number">61.48936</span> 
 
-&gt; detach(UScrime)</code></pre></div>
+&gt; detach(UScrime)</code></pre>
 <h3 id="2-testing-for-variances-chi-square-and-f-test"><a class="markdownIt-Anchor" href="#2-testing-for-variances-chi-square-and-f-test"></a> 2. Testing for Variances: Chi-Square and F Test</h3>
 <h4 id="one-sample-hypothesis-testing-for-variance-chi-square-test"><a class="markdownIt-Anchor" href="#one-sample-hypothesis-testing-for-variance-chi-square-test"></a> One-sample hypothesis testing for variance： Chi-Square Test</h4>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802212617184.png" srcset="/img/loading.gif" alt="image-20200802212617184" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802212617184.png" alt="image-20200802212617184" /></p>
 <p>对于单样本的假设检验，需要使用到卡方检验 (Chi-Square test)，使用格式如下：</p>
 <p><code>chisq.test(x, y = NULL, correct = TRUE, p = rep(1/length(x), length(x)), rescale.p = FALSE, simulate.p.value = FALSE, B = 2000)</code></p>
 <table>
@@ -595,7 +589,7 @@ mean of the differences
 </tbody>
 </table>
 <p>例，使用<code>MASS</code>包的<code>UScrime</code>数据集来进行示范比较<code>U1</code>和<code>U2</code>：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(MASS)
+<pre><code class="hljs R">&gt; library(MASS)
 &gt; head(Uscrime)
     M So  Ed Po1 Po2  LF  M.F Pop  NW  U1 U2 GDP Ineq     Prob    Time    y
 1 <span class="hljs-number">151</span>  <span class="hljs-number">1</span>  <span class="hljs-number">91</span>  <span class="hljs-number">58</span>  <span class="hljs-number">56</span> <span class="hljs-number">510</span>  <span class="hljs-number">950</span>  <span class="hljs-number">33</span> <span class="hljs-number">301</span> <span class="hljs-number">108</span> <span class="hljs-number">41</span> <span class="hljs-number">394</span>  <span class="hljs-number">261</span> <span class="hljs-number">0.084602</span> <span class="hljs-number">26.2011</span>  <span class="hljs-number">791</span>
@@ -613,7 +607,7 @@ mean of the differences
 <span class="hljs-string">X-squared = 877.07, df = 850, p-value = 0.2527</span>
 <span class="hljs-string"></span>
 <span class="hljs-string">Warning message:</span>
-<span class="hljs-string">In chisq.test(U1, U2) : Chi-squared近似算法有可能不准</span></code></pre></div>
+<span class="hljs-string">In chisq.test(U1, U2) : Chi-squared近似算法有可能不准</span></code></pre>
 <h4 id="testing-for-the-equality-of-two-variances-f-test"><a class="markdownIt-Anchor" href="#testing-for-the-equality-of-two-variances-f-test"></a> Testing for The Equality of Two variances: F-test</h4>
 <h4 id="相关概念-3"><a class="markdownIt-Anchor" href="#相关概念-3"></a> 相关概念</h4>
 <p>Uses the F distribution（统计值服从F-分布的检验）</p>
@@ -624,7 +618,7 @@ mean of the differences
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><msub><mi>U</mi><mn>1</mn></msub><mi mathvariant="normal">/</mi><msub><mi>v</mi><mn>1</mn></msub></mrow><mrow><msub><mi>U</mi><mn>2</mn></msub><mi mathvariant="normal">/</mi><msub><mi>v</mi><mn>2</mn></msub></mrow></mfrac><mo>=</mo><mfrac><mrow><mfrac><mrow><mo stretchy="false">(</mo><msub><mi>n</mi><mn>1</mn></msub><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><msubsup><mi>s</mi><mn>1</mn><mn>2</mn></msubsup></mrow><msubsup><mi>σ</mi><mn>1</mn><mn>2</mn></msubsup></mfrac><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><msub><mi>n</mi><mn>1</mn></msub><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mrow><mfrac><mrow><mo stretchy="false">(</mo><msub><mi>n</mi><mn>2</mn></msub><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><msubsup><mi>s</mi><mn>2</mn><mn>2</mn></msubsup></mrow><msubsup><mi>σ</mi><mn>2</mn><mn>2</mn></msubsup></mfrac><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><msub><mi>n</mi><mn>2</mn></msub><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac><mo>=</mo><mfrac><msubsup><mi>s</mi><mn>1</mn><mn>2</mn></msubsup><msubsup><mi>s</mi><mn>2</mn><mn>2</mn></msubsup></mfrac><mo>⋅</mo><mfrac><msubsup><mi>σ</mi><mn>2</mn><mn>2</mn></msubsup><msubsup><mi>σ</mi><mn>1</mn><mn>2</mn></msubsup></mfrac></mrow><annotation encoding="application/x-tex">F = \frac{U_{1}/v_{1}}{U_{2}/v_{2}} = \frac{\frac{(n_{1}-1)s_{1}^{2}}{\sigma_{1}^2}/(n_{1}-1)}{\frac{(n_{2}-1)s_{2}^{2}}{\sigma_{2}^2}/(n_{2}-1)} = 
 \frac{s_{1}^{2}}{s_{2}^{2}} \cdot \frac{\sigma_{2}^{2}}{\sigma_{1}^{2}}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.68904em;vertical-align:-1.57328em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.11576em;"><span style="top:-2.1524799999999997em;"><span class="pstrut" style="height:3.13412em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.09164em;"><span style="top:-2.62642em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8051142857142857em;"><span style="top:-2.188485714285714em;margin-left:-0.03588em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-2.8448em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.31151428571428574em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.52806em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mclose mtight">)</span><span class="mord mtight"><span class="mord mathdefault mtight">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8051142857142857em;"><span style="top:-2.188485714285714em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-2.8448em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.31151428571428574em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5916399999999999em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord">/</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span><span style="top:-3.3641199999999998em;"><span class="pstrut" style="height:3.13412em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-4.11576em;"><span class="pstrut" style="height:3.13412em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1341199999999998em;"><span style="top:-2.62642em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8051142857142857em;"><span style="top:-2.188485714285714em;margin-left:-0.03588em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span><span style="top:-2.8448em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.31151428571428574em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.5102em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mclose mtight">)</span><span class="mord mtight"><span class="mord mathdefault mtight">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.214em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5916399999999999em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord">/</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.57328em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.443416em;vertical-align:-0.9523079999999999em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911079999999999em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7959080000000001em;"><span style="top:-2.433692em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.0448000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.26630799999999993em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4518920000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24810799999999997em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9523079999999999em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.443416em;vertical-align:-0.9523079999999999em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911079999999999em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7959080000000001em;"><span style="top:-2.433692em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span><span style="top:-3.0448000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.26630799999999993em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4518920000000004em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24810799999999997em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9523079999999999em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
-<center><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802211008431.png" srcset="/img/loading.gif" alt="image-20200802211008431" style="zoom:67%;" /></center>
+<center><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200802211008431.png" alt="image-20200802211008431" style="zoom:67%;" /></center>
 <h4 id="相关函数-2"><a class="markdownIt-Anchor" href="#相关函数-2"></a> 相关函数</h4>
 <p>在R中，使用F test的时候，可以通过函数<code>var.test()</code>来实现，和<code>t.test()</code>相似，它也有两种使用格式：</p>
 <p>Default S3 method:<br />
@@ -650,7 +644,7 @@ mean of the differences
 </tbody>
 </table>
 <p>例，使用<code>MASS</code>包的<code>UScrime</code>数据集来进行示范比较<code>U1</code>和<code>U2</code>：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(MASS)
+<pre><code class="hljs R">&gt; library(MASS)
 &gt; head(UScrime)
     M So  Ed Po1 Po2  LF  M.F Pop  NW  U1 U2 GDP Ineq     Prob    Time    y
 1 <span class="hljs-number">151</span>  <span class="hljs-number">1</span>  <span class="hljs-number">91</span>  <span class="hljs-number">58</span>  <span class="hljs-number">56</span> <span class="hljs-number">510</span>  <span class="hljs-number">950</span>  <span class="hljs-number">33</span> <span class="hljs-number">301</span> <span class="hljs-number">108</span> <span class="hljs-number">41</span> <span class="hljs-number">394</span>  <span class="hljs-number">261</span> <span class="hljs-number">0.084602</span> <span class="hljs-number">26.2011</span>  <span class="hljs-number">791</span>
@@ -678,15 +672,15 @@ sample estimates:
 ratio of variances 
           <span class="hljs-number">4.557086</span> 
 
-&gt; detach(UScrime)</code></pre></div>
+&gt; detach(UScrime)</code></pre>
 <h3 id="3-testing-for-proportions"><a class="markdownIt-Anchor" href="#3-testing-for-proportions"></a> 3. Testing for Proportions</h3>
 <h4 id="one-sample-hypothesis-testing-for-proportion"><a class="markdownIt-Anchor" href="#one-sample-hypothesis-testing-for-proportion"></a> One-sample hypothesis testing for proportion</h4>
 <p>当对样本的比例与总体进行假设检验的时候，需要使用<code>z test</code>，在R中可以通过函数<code>prop.test</code>实现：<br />
 <code>prop.test(x, n, p = NULL, alternative = c(&quot;two.sided&quot;, &quot;less&quot;, &quot;greater&quot;), conf.level = 0.95, correct = TRUE)</code></p>
 <p>使用方法同之前的<code>t.test()</code></p>
 <p>例：1175个病人当中大约0.38的病人为A血型，检验此样本的A血型比例是否与之前得到的结论：“比例为0.32” 一致</p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803202751070.png" srcset="/img/loading.gif" alt="image-20200803202751070" /></p>
-<div class="hljs"><pre><code class="hljs R">&gt; prop.test(<span class="hljs-number">446.5</span>, <span class="hljs-number">1175</span>, p = <span class="hljs-number">0.32</span>, correct = <span class="hljs-literal">FALSE</span>)
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803202751070.png" alt="image-20200803202751070" /></p>
+<pre><code class="hljs R">&gt; prop.test(<span class="hljs-number">446.5</span>, <span class="hljs-number">1175</span>, p = <span class="hljs-number">0.32</span>, correct = <span class="hljs-literal">FALSE</span>)
 
 	<span class="hljs-number">1</span>-sample proportions test without continuity correction
 
@@ -723,7 +717,7 @@ alternative hypothesis: true p is greater than <span class="hljs-number">0.32</s
  <span class="hljs-number">0.3570094</span> <span class="hljs-number">1.0000000</span>
 sample estimates:
    p 
-0.38</code></pre></div>
+0.38</code></pre>
 <h2 id="方差分析-analysis-of-variance-anova"><a class="markdownIt-Anchor" href="#方差分析-analysis-of-variance-anova"></a> 方差分析 (Analysis of Variance, ANOVA)</h2>
 <h3 id="1-相关概念"><a class="markdownIt-Anchor" href="#1-相关概念"></a> 1. 相关概念</h3>
 <h4 id="source-of-variance"><a class="markdownIt-Anchor" href="#source-of-variance"></a> Source of Variance</h4>
@@ -800,7 +794,7 @@ SS_{B} = \sum \Big{(} n_{k}\cdot (\overline{x_{k}} - \bar{\bar{x}})^2 \Big{)}
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>s</mi><mi>B</mi><mn>2</mn></msubsup><mo>=</mo><mfrac><mrow><mi>S</mi><msub><mi>S</mi><mi>B</mi></msub></mrow><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">s_{B}^{2} = \frac{SS_{B}}{k-1}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1111079999999998em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.1296600000000003em;vertical-align:-0.7693300000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693300000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
 <h5 id="4-the-anova-table"><a class="markdownIt-Anchor" href="#4-the-anova-table"></a> (4) The ANOVA Table</h5>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200511172104986.png" srcset="/img/loading.gif" alt="image-20200511172104986" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200511172104986.png" alt="image-20200511172104986" /></p>
 <h4 id="f-test-in-anova"><a class="markdownIt-Anchor" href="#f-test-in-anova"></a> F Test in ANOVA</h4>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><msub><mi>μ</mi><mn>1</mn></msub><mo>=</mo><msub><mi>μ</mi><mn>2</mn></msub><mo>=</mo><mo separator="true">⋅</mo><mo separator="true">⋅</mo><mo separator="true">⋅</mo><mo>=</mo><msub><mi>μ</mi><mi>k</mi></msub><mo>→</mo><mi>F</mi><mo>≤</mo><mn>1</mn><mspace linebreak="newline"></mspace><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo><mtext>not all are equal</mtext><mo>→</mo><mi>F</mi><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">H_{0} : \mu_{1} = \mu_{2} = ··· = \mu_{k} \rarr F \leq 1\\ 
 H_{1} : \text{not all are equal} \rarr F &gt; 1
@@ -810,7 +804,7 @@ H_{1} : \text{not all are equal} \rarr F &gt; 1
 <p>The p-value:</p>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>p-value</mtext><mo>=</mo><mi>P</mi><mo stretchy="false">(</mo><mo>≥</mo><mfrac><msubsup><mi>s</mi><mi>B</mi><mn>2</mn></msubsup><msubsup><mi>s</mi><mi>W</mi><mn>2</mn></msubsup></mfrac><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\text{p-value} = P(\geq \frac{s_{B}^{2}}{s_{W}^{2}})
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord">p-value</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.4706390000000003em;vertical-align:-0.9795309999999999em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7959080000000001em;"><span style="top:-2.4064690000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.13889em;">W</span></span></span></span><span style="top:-3.0448000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29353099999999993em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.424669em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9795309999999999em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></span></p>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200511173014263.png" srcset="/img/loading.gif" alt="image-20200511173014263" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200511173014263.png" alt="image-20200511173014263" /></p>
 <h4 id="assumptions-when-using-anova"><a class="markdownIt-Anchor" href="#assumptions-when-using-anova"></a> Assumptions when using ANOVA</h4>
 <ol>
 <li>Randomness, independence</li>
@@ -826,7 +820,7 @@ H_{1} : \text{not all are equal} \rarr F &gt; 1
 <h5 id="1-relationship-between-f-test-and-t-test"><a class="markdownIt-Anchor" href="#1-relationship-between-f-test-and-t-test"></a> (1) Relationship between F-test and t-test</h5>
 <p>When there are only two groups: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>F</mi><mrow><mn>1</mn><mo separator="true">,</mo><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msub><mo>=</mo><msubsup><mi>t</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">F_{1,n-2} = t_{n-2}^{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.1205469999999997em;vertical-align:-0.30643899999999996em;"></span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999998em;"><span style="top:-2.451892em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">2</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.30643899999999996em;"><span></span></span></span></span></span></span></span></span></span></p>
 <h5 id="2-bonferroni-procedure"><a class="markdownIt-Anchor" href="#2-bonferroni-procedure"></a> (2) Bonferroni Procedure</h5>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200512182618288.png" srcset="/img/loading.gif" alt="image-20200512182618288" /></p>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200512182618288.png" alt="image-20200512182618288" /></p>
 \text{p.adj = min} \Big{[} p \times {k \choose 2} ,1 \Big{]} 
 
 <p>If <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi mathvariant="normal">.</mi><mi>a</mi><mi>d</mi><mi>j</mi><mo>&lt;</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">p.adj &lt; \alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord">.</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span></span></span></span>, then <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_{0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is rejected.</p>
@@ -981,7 +975,7 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
 <h4 id="结果可视化"><a class="markdownIt-Anchor" href="#结果可视化"></a> 结果可视化</h4>
 <p><code>HH</code>包中的<code>ancova()</code>函数可以绘制因变量、协变量和因子之间的关系图。</p>
 <p>这部分演示使用<code>multcomp</code>包中的<code>litter</code>数据集进行演示：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(multcomp)
+<pre><code class="hljs R">&gt; library(multcomp)
 &gt; head(litter)
   dose weight gesttime number
 1    <span class="hljs-number">0</span>  <span class="hljs-number">28.05</span>     <span class="hljs-number">22.5</span>     <span class="hljs-number">15</span>
@@ -989,9 +983,9 @@ M1001 80H400000v40H1013z'/></svg></span></span></span><span class="vlist-s">​<
 3    <span class="hljs-number">0</span>  <span class="hljs-number">36.37</span>     <span class="hljs-number">22.0</span>     <span class="hljs-number">14</span>
 4    <span class="hljs-number">0</span>  <span class="hljs-number">35.52</span>     <span class="hljs-number">22.0</span>     <span class="hljs-number">13</span>
 5    <span class="hljs-number">0</span>  <span class="hljs-number">36.77</span>     <span class="hljs-number">21.5</span>     <span class="hljs-number">15</span>
-6    <span class="hljs-number">0</span>  <span class="hljs-number">29.60</span>     <span class="hljs-number">23.0</span>      <span class="hljs-number">5</span></code></pre></div>
+6    <span class="hljs-number">0</span>  <span class="hljs-number">29.60</span>     <span class="hljs-number">23.0</span>      <span class="hljs-number">5</span></code></pre>
 <p>示例代码：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(HH)
+<pre><code class="hljs R">&gt; library(HH)
 &gt; ancova(weight ~ gesttime + dose, data=litter)
 Analysis of Variance Table
 
@@ -1001,12 +995,12 @@ gesttime   <span class="hljs-number">1</span>  <span class="hljs-number">134.30<
 dose       <span class="hljs-number">3</span>  <span class="hljs-number">137.12</span>  <span class="hljs-number">45.708</span>  <span class="hljs-number">2.7394</span> <span class="hljs-number">0.049883</span> * 
 Residuals <span class="hljs-number">69</span> <span class="hljs-number">1151.27</span>  <span class="hljs-number">16.685</span>                    
 ---
-Signif. codes:  <span class="hljs-number">0</span> ‘***’ <span class="hljs-number">0.001</span> ‘**’ <span class="hljs-number">0.01</span> ‘*’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span></code></pre></div>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200813211014546.png" srcset="/img/loading.gif" alt="image-20200813211014546" /></p>
+Signif. codes:  <span class="hljs-number">0</span> ‘***’ <span class="hljs-number">0.001</span> ‘**’ <span class="hljs-number">0.01</span> ‘*’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span></code></pre>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200813211014546.png" alt="image-20200813211014546" /></p>
 <h3 id="3-单因素方差分析-anova"><a class="markdownIt-Anchor" href="#3-单因素方差分析-anova"></a> 3. 单因素方差分析 (ANOVA)</h3>
 <h4 id="分析"><a class="markdownIt-Anchor" href="#分析"></a> 分析</h4>
 <p>单因素方差分析中，你感兴趣的是比较分类因子定义的两个或多个组别中的因变量均值。以<code>multcomp</code>包中的<code>cholesterol</code>数据集为例:</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(multcomp)
+<pre><code class="hljs R">&gt; library(multcomp)
 &gt; attach(cholesterol)
 &gt; head(cholesterol)
     trt response
@@ -1069,11 +1063,11 @@ Residuals   <span class="hljs-number">45</span>  <span class="hljs-number">468.8
 Signif. codes:  <span class="hljs-number">0</span> ‘***’ <span class="hljs-number">0.001</span> ‘**’ <span class="hljs-number">0.01</span> ‘*’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span>
 
 <span class="hljs-comment"># 展示数据：各组的均值和置信区间</span>
-&gt; plot(response ~ trt)</code></pre></div>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803212729715.png" srcset="/img/loading.gif" alt="image-20200803212729715" /></p>
+&gt; plot(response ~ trt)</code></pre>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803212729715.png" alt="image-20200803212729715" /></p>
 <h4 id="多重比较"><a class="markdownIt-Anchor" href="#多重比较"></a> 多重比较</h4>
 <p>虽然ANOVA对各疗法的F检验表明五种药物疗法效果不同，但是并没有告诉你哪种疗法与其他疗法不同。多重比较可以解决这个问题。例如，<code>TukeyHSD()</code>函数提供了对各组均值差异的成对检验，这个函数需要在<code>aov()</code>函数得到单因素方差分析的结果后（例如：<code>fit &lt;- aov(factor1 ~ factor2)</code>），对得到的结果进行分析（例如: <code>TukeyHSD(fit)</code>，即<code>TukeyHSD(aov(factor1 ~ factor2))</code>）:</p>
-<div class="hljs"><pre><code class="hljs R">&gt; ...
+<pre><code class="hljs R">&gt; ...
 
 <span class="hljs-comment"># 可以看到，1time和2times的均值差异不显著（p=0.138），</span>
 <span class="hljs-comment"># 而1time和4times间的差异非常显著（p&lt;0.001）。</span>
@@ -1102,11 +1096,11 @@ drugE-drugD    5.58635  1.4850683  9.687632 0.0030633
 &gt; par(las = 2)
 &gt; par(mar=c(5,8,4,2))
 &gt; plot(TukeyHSD(fit))
-&gt; par(opar)</code></pre></div>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803214000157.png" srcset="/img/loading.gif" alt="image-20200803214000157" /></p>
+&gt; par(opar)</code></pre>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803214000157.png" alt="image-20200803214000157" /></p>
 <p><code>multcomp</code>包中的<code>glht()</code>函数提供了多重均值比较更为全面的方法，既适用于线性模型，也适用于广义线性模型。</p>
 <p>下面的代码重现了Tukey HSD检验:</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(multcomp)
+<pre><code class="hljs R">&gt; library(multcomp)
 
 &gt; tuk &lt;- glht(fit, linfct=mcp(trt=<span class="hljs-string">&quot;Tukey&quot;</span>))
 &gt; tuk
@@ -1133,12 +1127,12 @@ drugE - drugD == <span class="hljs-number">0</span>      <span class="hljs-numbe
 &gt; opar &lt;- par()
 &gt; par(mar=<span class="hljs-built_in">c</span>(<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>))
 &gt; plot(cld(tuk, level=<span class="hljs-number">.05</span>),col=<span class="hljs-string">&quot;lightgrey&quot;</span>)
-&gt; par(opar)</code></pre></div>
-<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803214823691.png" srcset="/img/loading.gif" alt="image-20200803214823691" /></p>
+&gt; par(opar)</code></pre>
+<p><img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200803214823691.png" alt="image-20200803214823691" /></p>
 <h4 id="评估检验的假设条件"><a class="markdownIt-Anchor" href="#评估检验的假设条件"></a> 评估检验的假设条件</h4>
 <p>我们对于结果的信心依赖于做统计检验时数据满足假设条件的程度。单因素方差分析中，我们假设因变量服从正态分布，各组方差相等。</p>
 <p>这部分的演示使用<code>multcomp</code>包中的<code>cholesterol</code>来演示：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; data(cholesterol, package = <span class="hljs-string">&quot;multcomp&quot;</span>)
+<pre><code class="hljs R">&gt; data(cholesterol, package = <span class="hljs-string">&quot;multcomp&quot;</span>)
 &gt; head(cholesterol)
     trt response
 1 <span class="hljs-number">1</span>time   <span class="hljs-number">3.8612</span>
@@ -1146,55 +1140,55 @@ drugE - drugD == <span class="hljs-number">0</span>      <span class="hljs-numbe
 3 <span class="hljs-number">1</span>time   <span class="hljs-number">5.9059</span>
 4 <span class="hljs-number">1</span>time   <span class="hljs-number">3.0609</span>
 5 <span class="hljs-number">1</span>time   <span class="hljs-number">7.7204</span>
-6 <span class="hljs-number">1</span>time   <span class="hljs-number">2.7139</span></code></pre></div>
+6 <span class="hljs-number">1</span>time   <span class="hljs-number">2.7139</span></code></pre>
 <h5 id="1-正态性检验q-q-plot"><a class="markdownIt-Anchor" href="#1-正态性检验q-q-plot"></a> (1) 正态性检验：Q-Q Plot</h5>
 <p>可以使用Q-Q图来检验正态性假设，这个过程需要使用<code>car</code>包中的<code>qqPlot()</code>函数：</p>
 <p>示例代码：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; qqPlot(lm(response ~ trt, data=cholesterol), 
+<pre><code class="hljs R">&gt; qqPlot(lm(response ~ trt, data=cholesterol), 
          simulate=<span class="hljs-literal">TRUE</span>, main=<span class="hljs-string">&quot;Q-Q Plot&quot;</span>, labels=<span class="hljs-literal">FALSE</span>)
-[<span class="hljs-number">1</span>] <span class="hljs-number">19</span> <span class="hljs-number">38</span></code></pre></div>
-<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200813212955405.png" srcset="/img/loading.gif" alt="image-20200813212955405" style="zoom:67%;" />
+[<span class="hljs-number">1</span>] <span class="hljs-number">19</span> <span class="hljs-number">38</span></code></pre>
+<img src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200813212955405.png" alt="image-20200813212955405" style="zoom:67%;" />
 <p><code>qqPlot()</code>要求用<code>lm()</code>拟合。图形如上图所示。数据落在95%的置信区间范围内，说明满足正态性假设。</p>
 <h5 id="2-方差齐性检验"><a class="markdownIt-Anchor" href="#2-方差齐性检验"></a> (2) 方差齐性检验</h5>
 <p>R提供了一些可用来做方差齐性检验的函数。例如，可以通过如下代码来做Bartlett检验：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; bartlett.test(response ~ trt, data=cholesterol)
+<pre><code class="hljs R">&gt; bartlett.test(response ~ trt, data=cholesterol)
 
 	Bartlett test of homogeneity of variances
 
 data:  response by trt
-Bartlett<span class="hljs-string">&#x27;s K-squared = 0.57975, df = 4, p-value = 0.9653</span></code></pre></div>
+Bartlett<span class="hljs-string">&#x27;s K-squared = 0.57975, df = 4, p-value = 0.9653</span></code></pre>
 <p>Fligner-Killeen检验（<code>fligner.test()</code>函数）:</p>
-<div class="hljs"><pre><code class="hljs R">&gt; fligner.test(response ~ trt, data=cholesterol)
+<pre><code class="hljs R">&gt; fligner.test(response ~ trt, data=cholesterol)
 
 	Fligner-Killeen test of homogeneity of variances
 
 data:  response by trt
 Fligner-Killeen:med chi-squared = <span class="hljs-number">0.74277</span>, df = <span class="hljs-number">4</span>, p-value = <span class="hljs-number">0.946</span>
 
-</code></pre></div>
+</code></pre>
 <p>和Brown-Forsythe检验（<code>HH</code>包中的<code>hov()</code>函数）</p>
-<div class="hljs"><pre><code class="hljs R">&gt; hov(response ~ trt, data=cholesterol)
+<pre><code class="hljs R">&gt; hov(response ~ trt, data=cholesterol)
 
 	hov: Brown-Forsyth
 
 data:  response
 <span class="hljs-built_in">F</span> = <span class="hljs-number">0.075477</span>, df:trt = <span class="hljs-number">4</span>, df:Residuals = <span class="hljs-number">45</span>, p-value = <span class="hljs-number">0.9893</span>
-alternative hypothesis: variances are not identical</code></pre></div>
+alternative hypothesis: variances are not identical</code></pre>
 <h5 id="3-离群点检测"><a class="markdownIt-Anchor" href="#3-离群点检测"></a> (3) 离群点检测</h5>
 <p>可利用<code>car</code>包中的<code>outlierTest()</code>函数来检测离群点：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(car)
+<pre><code class="hljs R">&gt; library(car)
 &gt; outlierTest(fit)
 No Studentized residuals with Bonferroni p &lt; <span class="hljs-number">0.05</span>
 Largest |rstudent|:
     rstudent unadjusted p-value Bonferroni p
-63 -<span class="hljs-number">3.109569</span>          <span class="hljs-number">0.0027364</span>       <span class="hljs-number">0.2025</span></code></pre></div>
+63 -<span class="hljs-number">3.109569</span>          <span class="hljs-number">0.0027364</span>       <span class="hljs-number">0.2025</span></code></pre>
 <hr />
 <p>对于这个例子，综上：从输出结果来看，并没有证据说明胆固醇数据（<code>cholesterol</code>）中含有离群点（当p&gt;1时将产生NA）。因此根据Q-Q图、Bartlett检验和离群点检验，该数据似乎可以用ANOVA模型拟合得很好。这些方法反过来增强了我们对于所得结果的信心。</p>
 <h3 id="4-单因素协方差分析-ancova"><a class="markdownIt-Anchor" href="#4-单因素协方差分析-ancova"></a> 4. 单因素协方差分析 (ANCOVA)</h3>
 <h4 id="计算"><a class="markdownIt-Anchor" href="#计算"></a> 计算</h4>
 <p>单因素协方差分析（ANCOVA）扩展了单因素方差分析（ANOVA），包含一个或多个定量的协变量。</p>
 <p>这部分演示使用<code>multcomp</code>包中的<code>litter</code>数据集进行演示：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; data(litter, package = <span class="hljs-string">&quot;multcomp&quot;</span>)
+<pre><code class="hljs R">&gt; data(litter, package = <span class="hljs-string">&quot;multcomp&quot;</span>)
 &gt; head(litter)
   dose weight gesttime number
 1    <span class="hljs-number">0</span>  <span class="hljs-number">28.05</span>     <span class="hljs-number">22.5</span>     <span class="hljs-number">15</span>
@@ -1202,9 +1196,9 @@ Largest |rstudent|:
 3    <span class="hljs-number">0</span>  <span class="hljs-number">36.37</span>     <span class="hljs-number">22.0</span>     <span class="hljs-number">14</span>
 4    <span class="hljs-number">0</span>  <span class="hljs-number">35.52</span>     <span class="hljs-number">22.0</span>     <span class="hljs-number">13</span>
 5    <span class="hljs-number">0</span>  <span class="hljs-number">36.77</span>     <span class="hljs-number">21.5</span>     <span class="hljs-number">15</span>
-6    <span class="hljs-number">0</span>  <span class="hljs-number">29.60</span>     <span class="hljs-number">23.0</span>      <span class="hljs-number">5</span></code></pre></div>
+6    <span class="hljs-number">0</span>  <span class="hljs-number">29.60</span>     <span class="hljs-number">23.0</span>      <span class="hljs-number">5</span></code></pre>
 <p>示例代码：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; attach(litter)
+<pre><code class="hljs R">&gt; attach(litter)
 
 &gt; table(dose)
 dose
@@ -1227,20 +1221,20 @@ Residuals   <span class="hljs-number">69</span> <span class="hljs-number">1151.3
 ---
 Signif. codes:  <span class="hljs-number">0</span> ‘***’ <span class="hljs-number">0.001</span> ‘**’ <span class="hljs-number">0.01</span> ‘*’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span>
 
-&gt; detach(litter)</code></pre></div>
+&gt; detach(litter)</code></pre>
 <h4 id="计算调整的均值"><a class="markdownIt-Anchor" href="#计算调整的均值"></a> 计算调整的均值</h4>
 <p>由于使用了协变量，你可能想要获取调整的组均值，即去除协变量效应后的组均值。可使用<code>effects</code>包中的<code>effects()</code>函数来计算调整的均值：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(effects)
+<pre><code class="hljs R">&gt; library(effects)
 
 &gt; effect(<span class="hljs-string">&quot;dose&quot;</span>, fit)
 
  dose effect
 dose
        <span class="hljs-number">0</span>        <span class="hljs-number">5</span>       <span class="hljs-number">50</span>      <span class="hljs-number">500</span> 
-32.35367 <span class="hljs-number">28.87672</span> <span class="hljs-number">30.56614</span> <span class="hljs-number">29.33460</span></code></pre></div>
+32.35367 <span class="hljs-number">28.87672</span> <span class="hljs-number">30.56614</span> <span class="hljs-number">29.33460</span></code></pre>
 <h4 id="多重比较-2"><a class="markdownIt-Anchor" href="#多重比较-2"></a> 多重比较</h4>
 <p>使用<code>multcomp</code>包来对所有均值进行成对比较。另外，<code>multcomp</code>包还可以用来检验用户自定义的均值假设。</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(multcomp) 
+<pre><code class="hljs R">&gt; library(multcomp) 
 &gt; contrast &lt;- rbind(<span class="hljs-string">&quot;no drug vs. drug&quot;</span> = <span class="hljs-built_in">c</span>(<span class="hljs-number">3</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>)) 
 &gt; summary(glht(fit, linfct=mcp(dose=contrast)))
 
@@ -1256,20 +1250,20 @@ Linear Hypotheses:
 no drug vs. drug == <span class="hljs-number">0</span>    <span class="hljs-number">8.284</span>      <span class="hljs-number">3.209</span>   <span class="hljs-number">2.581</span>    <span class="hljs-number">0.012</span> *
 ---
 Signif. codes:  <span class="hljs-number">0</span> ‘***’ <span class="hljs-number">0.001</span> ‘**’ <span class="hljs-number">0.01</span> ‘*’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span>
-(Adjusted p values reported -- single-step method)</code></pre></div>
+(Adjusted p values reported -- single-step method)</code></pre>
 <h4 id="评估检验的假设条件-ancova-special检验回归斜率的同质性"><a class="markdownIt-Anchor" href="#评估检验的假设条件-ancova-special检验回归斜率的同质性"></a> 评估检验的假设条件: ANCOVA Special，检验回归斜率的同质性</h4>
 <p>ANCOVA与ANOVA相同，都需要正态性和同方差性假设，可以用在ANOVA中提到的相同的步骤来检验这些假设条件。另外，ANCOVA还假定回归斜率相同。</p>
 <p>以<code>multcomp</code>包中的<code>litter</code>数据集为例：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; head(litter)
+<pre><code class="hljs R">&gt; head(litter)
   dose weight gesttime number
 1    <span class="hljs-number">0</span>  <span class="hljs-number">28.05</span>     <span class="hljs-number">22.5</span>     <span class="hljs-number">15</span>
 2    <span class="hljs-number">0</span>  <span class="hljs-number">33.33</span>     <span class="hljs-number">22.5</span>     <span class="hljs-number">14</span>
 3    <span class="hljs-number">0</span>  <span class="hljs-number">36.37</span>     <span class="hljs-number">22.0</span>     <span class="hljs-number">14</span>
 4    <span class="hljs-number">0</span>  <span class="hljs-number">35.52</span>     <span class="hljs-number">22.0</span>     <span class="hljs-number">13</span>
 5    <span class="hljs-number">0</span>  <span class="hljs-number">36.77</span>     <span class="hljs-number">21.5</span>     <span class="hljs-number">15</span>
-6    <span class="hljs-number">0</span>  <span class="hljs-number">29.60</span>     <span class="hljs-number">23.0</span>      <span class="hljs-number">5</span></code></pre></div>
+6    <span class="hljs-number">0</span>  <span class="hljs-number">29.60</span>     <span class="hljs-number">23.0</span>      <span class="hljs-number">5</span></code></pre>
 <p>假定四个处理组通过<strong>怀孕时间</strong> (gesttime)来预测<strong>出生体重</strong> (weight)的回归斜率都相同。ANCOVA模型包含<strong>怀孕时间</strong> (gesttime)×<strong>剂量</strong> (dose)的交互项时，可对回归斜率的同质性进行检验。交互效应若显著，则意味着时间和幼崽出生体重间的关系依赖于药物剂量的水平：</p>
-<div class="hljs"><pre><code class="hljs R">&gt; library(multcomp) 
+<pre><code class="hljs R">&gt; library(multcomp) 
 &gt; fit2 &lt;- aov(weight ~ gesttime*dose, data=litter) 
 &gt; summary(fit2)
               Df Sum Sq Mean Sq <span class="hljs-built_in">F</span> value  Pr(&gt;<span class="hljs-built_in">F</span>)   
@@ -1278,421 +1272,243 @@ dose           <span class="hljs-number">3</span>  <span class="hljs-number">137
 gesttime:dose  <span class="hljs-number">3</span>   <span class="hljs-number">81.9</span>   <span class="hljs-number">27.29</span>   <span class="hljs-number">1.684</span> <span class="hljs-number">0.17889</span>   
 Residuals     <span class="hljs-number">66</span> <span class="hljs-number">1069.4</span>   <span class="hljs-number">16.20</span>                   
 ---
-Signif. codes:  <span class="hljs-number">0</span> ‘***’ <span class="hljs-number">0.001</span> ‘**’ <span class="hljs-number">0.01</span> ‘*’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span></code></pre></div>
+Signif. codes:  <span class="hljs-number">0</span> ‘***’ <span class="hljs-number">0.001</span> ‘**’ <span class="hljs-number">0.01</span> ‘*’ <span class="hljs-number">0.05</span> ‘.’ <span class="hljs-number">0.1</span> ‘ ’ <span class="hljs-number">1</span></code></pre>
 <p>可以看到交互效应不显著，支持了斜率相等的假设。若假设不成立，可以尝试变换协变量或因变量，或使用能对每个斜率独立解释的模型，或使用不需要假设回归斜率同质性的非参数ANCOVA方法。<code>sm</code>包中的<code>sm.ancova()</code>函数为后者提供了一个例子。</p>
 <hr />
 <p>方差分析当然不止这么点，只不过双因素方差分析、重复测量方差分析、多元方差分析对我来说用的实在太少，于是也就不费心在这里去记录课本上的内容以及相关笔记了。</p>
 
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/R/">R</a>
-                    
-                      <a class="hover-with-bg" href="/tags/Statistics/">Statistics</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E9%80%9F%E6%9F%A5/">速查</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/08/03/L23%20Cellular%20motility/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">L23 Cellular motility</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/07/30/04-R-%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/">
-                        <span class="hidden-mobile">04. R <- 概率分布</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
+    </div>
 
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
+    
+    
+    
 
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
-
-
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/R/" rel="tag"># R</a>
+              <a href="/tags/Statistics/" rel="tag"># Statistics</a>
+              <a href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag"># 速查</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/30/04-R-%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/" rel="prev" title="04. R <- 概率分布">
+      <i class="fa fa-chevron-left"></i> 04. R <- 概率分布
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/08/03/L23%20Cellular%20motility/" rel="next" title="L23 Cellular motility">
+      L23 Cellular motility <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-sampling-distribution-%E6%8A%BD%E6%A0%B7%E5%88%86%E5%B8%83"><span class="nav-number">1.</span> <span class="nav-text"> 一、Sampling Distribution (抽样分布)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text"> 相关概念</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C-hypothesis-test"><span class="nav-number">2.</span> <span class="nav-text"> 二、假设检验 (Hypothesis Test)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5-2"><span class="nav-number">2.1.</span> <span class="nav-text"> 相关概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">2.2.</span> <span class="nav-text"> 相关函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90-analysis-of-variance-anova"><span class="nav-number">2.3.</span> <span class="nav-text"> 方差分析 (Analysis of Variance, ANOVA)</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">Tomorrow is still shining.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">202</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
   </div>
 
+        
 
-    
 
-    
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
-  
-</footer>
-
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
-
-<!-- Plugins -->
-
 
   
-    <script  src="/js/lazyload.js" ></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
   
 
 
 
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
 
 
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
 
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
-      }
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
     });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "05. R <- 独立性、相关性、假设检验以及相关统计量&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
     });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
-
-
-
-
-
-  
-
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
-  
-
-
-
-
-
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
-
-
-
-
-
-
+  }, window.Valine);
+});
+</script>
 
 </body>
-
-
 </html>
