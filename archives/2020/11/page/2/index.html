@@ -191,8 +191,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2020/11/11/L4%20Qualification%20and%20Quantification%20of%20DNA&RNA/" itemprop="url">
-            <span itemprop="name">L4 Qualification and Quantification of DNA&RNA</span>
+          <a class="post-title-link" href="/2020/11/11/L3%20Isolation%20of%20DNA%20and%20RNAs/" itemprop="url">
+            <span itemprop="name">L3  Isolation of DNA and RNAs</span>
           </a>
       </div>
 
@@ -211,8 +211,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2020/11/11/L5%20DNA%20sequencing/" itemprop="url">
-            <span itemprop="name">L5 DNA sequencing</span>
+          <a class="post-title-link" href="/2020/11/11/L1&2%20Intro%20and%20Genetic%20Structure/" itemprop="url">
+            <span itemprop="name">L1&2 Intro and Genetic Structure</span>
           </a>
       </div>
 
@@ -233,6 +233,26 @@
       <div class="post-title">
           <a class="post-title-link" href="/2020/11/09/%E8%A3%85%E6%AD%BB/" itemprop="url">
             <span itemprop="name">装死</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-11-07T15:22:00+08:00"
+              content="2020-11-07">
+          11-07
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2020/11/07/L7%20Metabolism/" itemprop="url">
+            <span itemprop="name">L7 Metabolism</span>
           </a>
       </div>
 
@@ -273,26 +293,6 @@
       <div class="post-title">
           <a class="post-title-link" href="/2020/11/07/L6%20Digestion/" itemprop="url">
             <span itemprop="name">L6 Digestion</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-11-07T15:22:00+08:00"
-              content="2020-11-07">
-          11-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/07/L7%20Metabolism/" itemprop="url">
-            <span itemprop="name">L7 Metabolism</span>
           </a>
       </div>
 
@@ -371,8 +371,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2020/11/04/L1%20Introduction%20(2)/" itemprop="url">
-            <span itemprop="name">L1 Introduction</span>
+          <a class="post-title-link" href="/2020/11/04/L4%20Circulation%20-%20Cardiovascular%20System/" itemprop="url">
+            <span itemprop="name">L4 Circulation - Cardiovascular System</span>
           </a>
       </div>
 
@@ -622,10 +622,60 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
   
       
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
-  <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css">
 
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
