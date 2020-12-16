@@ -1,326 +1,338 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="这一章没有根据课本内容整理，感觉很虚">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L20 Regulation of stem cell self-renewal and growth">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/07/24/L20%20Regulation%20of%20stem%20cell%20self-renewal%20and%20growth/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="这一章没有根据课本内容整理，感觉很虚">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163327811.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163352652.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163502114.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163544797.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163708818.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163737016.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163906530.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508164318145.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508164911846.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508164927149.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165012608.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165156608.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165223538.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165341882.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165422345.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165501272.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165531689.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508170413404.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508170958192.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508171321532.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508171350975.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508173828231.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508173848888.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174145282.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174238672.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174302565.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174332968.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174430573.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174447666.png">
+<meta property="article:published_time" content="2020-07-24T09:14:00.000Z">
+<meta property="article:modified_time" content="2020-07-24T09:14:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Cell Biology">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163327811.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/07/24/L20%20Regulation%20of%20stem%20cell%20self-renewal%20and%20growth/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>L20 Regulation of stem cell self-renewal and growth | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="一个普通人">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>L20 Regulation of stem cell self-renewal and growth - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_02.png') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-07-24 17:14">
-      2020年7月24日 下午
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      1.5k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      7
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/24/L20%20Regulation%20of%20stem%20cell%20self-renewal%20and%20growth/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="一个普通人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          L20 Regulation of stem cell self-renewal and growth
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-24 17:14:00" itemprop="dateCreated datePublished" datetime="2020-07-24T17:14:00+08:00">2020-07-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/Cell-Biology/" itemprop="url" rel="index"><span itemprop="name">Cell Biology</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/07/24/L20%20Regulation%20of%20stem%20cell%20self-renewal%20and%20growth/" class="post-meta-item leancloud_visitors" data-flag-title="L20 Regulation of stem cell self-renewal and growth" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/07/24/L20%20Regulation%20of%20stem%20cell%20self-renewal%20and%20growth/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/24/L20%20Regulation%20of%20stem%20cell%20self-renewal%20and%20growth/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>8.5k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-</head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：5 个月前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80stem-cells-and-stem-cell-renewal"><span class="post-toc-text">一、Stem cells and stem cell renewal</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#the-intestinal-epithelia-cells"><span class="post-toc-text">The Intestinal Epithelia Cells</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#stem-cells-definition"><span class="post-toc-text">Stem cells definition</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#wnt-maintains-stem-cell-niche-in-intestinal-epithelia"><span class="post-toc-text">1. Wnt maintains stem cell niche in intestinal epithelia</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#lgr5-expressing-cell-in-culture-can-generate-an-entire-organized-crypt-villus-system"><span class="post-toc-text">Lgr5-expressing cell in culture can generate an entire organized crypt-villus system</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#ephrin-induces-growth-cone-collapse-through-activating-rho-gtpase"><span class="post-toc-text">(1) ephrin induces growth cone collapse through activating Rho GTPase</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#a-repulsive-interaction-based-on-ephrin-eph-interaction"><span class="post-toc-text">(2) A repulsive interaction based on ephrin-Eph interaction</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#notch-pathway-and-differentiation"><span class="post-toc-text">2. Notch pathway and differentiation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#the-processing-and-activation-of-notch"><span class="post-toc-text">The processing and activation of Notch</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#notch-signaling-controls-gut-cell-diversification-and-helps-maintain-the-stem-cell-state"><span class="post-toc-text">Notch signaling controls gut cell diversification and helps maintain the stem-cell state</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#the-cell-lineage-tracing-the-origin-of-a-cell"><span class="post-toc-text">The cell lineage: tracing the origin of a cell</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#stem-cells-at-the-crypt-base-are-multipotent"><span class="post-toc-text">1. Stem cells at the crypt base are multipotent</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#clonal-analysis"><span class="post-toc-text">Clonal Analysis</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cell-fate-determination"><span class="post-toc-text">Cell Fate Determination</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#example-the-epidermal-stem-cell-system-renewal"><span class="post-toc-text">1. Example: The epidermal stem-cell system Renewal</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#other-tissue-renewal"><span class="post-toc-text">2. Other tissue renewal</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8Ccell-reprogramming-and-pluripotent-stem-cells"><span class="post-toc-text">二、Cell reprogramming and pluripotent stem cells</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#animal-cloning-reverse-differentiation"><span class="post-toc-text">Animal cloning: reverse differentiation</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#different-types-of-stem-cells"><span class="post-toc-text">Different types of stem cells</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#pluri--multi--mono-potent-stem-cells"><span class="post-toc-text">1. Pluri-, multi- &amp; mono-potent stem cells</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#inner-cell-mass-of-early-embryos-embryonic-stem-es-cells"><span class="post-toc-text">Inner cell mass of early embryos: embryonic stem (ES) cells</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#es-cells-and-their-pluripotency"><span class="post-toc-text">1. ES cells and their pluripotency</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#identification-of-factors-controlmaintain-the-pluripotency-of-es-cells-in-animals"><span class="post-toc-text">2. Identification of factors control&#x2F;maintain the pluripotency of ES cells in animals</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#transcription-network-of-es-cells"><span class="post-toc-text">3. Transcription network of ES cells</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#oskmyamanaka-transcription-factors-and-induced-pluripotent-stem-ips-cells"><span class="post-toc-text">OSKM&#x2F;Yamanaka transcription factors and induced pluripotent stem (iPS) cells</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#major-events-accompanying-the-reprogramming-of-mouse-fibroblasts-to-ips-cells"><span class="post-toc-text">Major events accompanying the reprogramming of mouse fibroblasts to iPS cells</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#factors-that-have-been-observed-to-enhance-reprogramming-efficiency"><span class="post-toc-text">Factors that have been observed to enhance reprogramming efficiency</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#a-strategy-used-to-select-cells-that-have-converted-to-an-ips-cell"><span class="post-toc-text">A strategy used to select cells that have converted to an iPS cell</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#using-of-stem-cells"><span class="post-toc-text">Using of stem cells</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cultured-es-cells-can-give-rise-to-a-three-dimensional-organ"><span class="post-toc-text">1. Cultured ES cells can give rise to a three-dimensional organ</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#medical-applications-for-induced-pluripotent-stem-cells-ips"><span class="post-toc-text">2. Medical applications for induced pluripotent stem cells (iPS)</span></a></li></ol></li></ol></li></ol>
-
-              <h1 id="一stem-cells-and-stem-cell-renewal">一、Stem cells and stem cell renewal</h1>
+        <h1 id="一stem-cells-and-stem-cell-renewal">一、Stem cells and stem cell renewal</h1>
 <h2 id="the-intestinal-epithelia-cells">The Intestinal Epithelia Cells</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163327811.png" srcset="/img/loading.gif" alt="image-20200508163327811" /><figcaption aria-hidden="true">image-20200508163327811</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163327811.png" alt="image-20200508163327811" /><figcaption aria-hidden="true">image-20200508163327811</figcaption>
 </figure>
 <p>Intestinal epithelial stem cells resides in crypts at the base</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163352652.png" srcset="/img/loading.gif" alt="image-20200508163352652" /><figcaption aria-hidden="true">image-20200508163352652</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163352652.png" alt="image-20200508163352652" /><figcaption aria-hidden="true">image-20200508163352652</figcaption>
 </figure>
 <p>Intestinal differentiated cells are derived from stem cells at the crypt</p>
 <h2 id="stem-cells-definition">Stem cells definition</h2>
 <p>All tissues need to be renewed, but specialization do not allow for cell division</p>
 <p>Stem cells are undifferentiated cells that have the potential for self-renewal and differentiation + Self-renewal: at least one of the daughter cells is identical to the parent!</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163502114.png" srcset="/img/loading.gif" alt="image-20200508163502114" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163502114.png" alt="image-20200508163502114" style="zoom:50%;" /></p>
 <h3 id="wnt-maintains-stem-cell-niche-in-intestinal-epithelia">1. Wnt maintains stem cell niche in intestinal epithelia</h3>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163544797.png" srcset="/img/loading.gif" alt="image-20200508163544797" style="zoom: 43%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163544797.png" alt="image-20200508163544797" style="zoom: 43%;" /></p>
 <p>The cell division of the stem cells and differentiated cells in the intestine is regulated by <strong>mitogens (有丝分裂原)</strong> and anti-mitogens.</p>
 <p><font color="EE0000">Wnt</font> stimulates cell proliferation in crypts of intestinal epithelium, where as <strong>anti-mitogens</strong> (<font color="EE0000">BMP, TGF-β</font>) inhibit cell proliferation further up the intestinal epithelium</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163708818.png" srcset="/img/loading.gif" alt="image-20200508163708818" /><figcaption aria-hidden="true">image-20200508163708818</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163708818.png" alt="image-20200508163708818" /><figcaption aria-hidden="true">image-20200508163708818</figcaption>
 </figure>
 <p>Co-receptor: <font color="EE0000"><strong>LRP</strong> ( LDL-receptor-related protein)</font> and <font color="EE0000">Frizzled</font> + Latent transcription regulators: <font color="EE0000">β-catenin</font> + Scaffold protein: + Adenomatous polyposis coli (<font color="EE0000">APC</font>) + <font color="EE0000">axin</font></p>
 <p>Mutated <strong>APC</strong> leads to elevated <strong>beta-catenin</strong> in nucleus and cell proliferation:</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163737016.png" srcset="/img/loading.gif" alt="image-20200508163737016" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163737016.png" alt="image-20200508163737016" style="zoom: 33%;" /></p>
 <ul>
 <li><strong>Wn</strong>t signaling maintains cell proliferation in the crypts, and overactivation of the <strong>Wnt</strong> pathway gives rise to tumors.</li>
 <li>A mutation in the other <strong>Apc</strong> (<u>Adenomatous polyposis coli</u>) gene copy, occurring in a colon epithelial cell during adult life, has given rise to a clone of cells that behave as though the <strong>Wnt</strong> signaling pathway is permanently activated</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163906530.png" srcset="/img/loading.gif" alt="image-20200508163906530" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508163906530.png" alt="image-20200508163906530" style="zoom:50%;" /></p>
 <p><strong>APC</strong> is tumor suppressor that mediates degradation of <strong>β-catenin</strong></p>
 <h4 id="lgr5-expressing-cell-in-culture-can-generate-an-entire-organized-crypt-villus-system">Lgr5-expressing cell in culture can generate an entire organized crypt-villus system</h4>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508164318145.png" srcset="/img/loading.gif" alt="image-20200508164318145" style="zoom:80%;" height=750/></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508164318145.png" alt="image-20200508164318145" style="zoom:80%;" height=750/></p>
 <p><font color="EE0000">Lgr5</font> is one of Wnt-signaling responsive genes, which encodes a receptor for the signal molecules called <font color="EE0000">R-spondin</font>.</p>
 <p>Genesis of mini-gut from single in vitro cultured Lrg5-expressing cell</p>
 <h5 id="ephrin-induces-growth-cone-collapse-through-activating-rho-gtpase">(1) ephrin induces growth cone collapse through activating Rho GTPase</h5>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508164911846.png" srcset="/img/loading.gif" alt="image-20200508164911846" /><figcaption aria-hidden="true">image-20200508164911846</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508164911846.png" alt="image-20200508164911846" /><figcaption aria-hidden="true">image-20200508164911846</figcaption>
 </figure>
 <p>Ephrin (extracellular signaling proteins ) binds and activates the Eph family of RTKs (EphA4) on the surface of motor neurons</p>
 <p>Helps guide the migrating tip of the axon (called a growth cone) to its muscle target</p>
 <h5 id="a-repulsive-interaction-based-on-ephrin-eph-interaction">(2) A repulsive interaction based on ephrin-Eph interaction</h5>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508164927149.png" srcset="/img/loading.gif" alt="image-20200508164927149" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508164927149.png" alt="image-20200508164927149" style="zoom: 50%;" /></p>
 <h3 id="notch-pathway-and-differentiation">2. Notch pathway and differentiation</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165012608.png" srcset="/img/loading.gif" alt="image-20200508165012608" /><figcaption aria-hidden="true">image-20200508165012608</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165012608.png" alt="image-20200508165012608" /><figcaption aria-hidden="true">image-20200508165012608</figcaption>
 </figure>
 <p>In fly neural cells, when a precursor cell commits to becoming a neural cell, it signals to its immediate neighbors not to do the same; the inhibited cells develop into epidermal cells instead. This process is called <strong>lateral inhibition</strong>.</p>
 <p>This depends on a contact-dependent signaling mechanism that is activated by a single-pass transmembrane signal protein called <font color="EE0000">Delta</font> that activates <font color="EE0000">Notch</font> receptors.</p>
 <p>By activation, <strong>Notch</strong> cleaved and its tail migrates to nucleus where activates responsible genes</p>
 <h4 id="the-processing-and-activation-of-notch">The processing and activation of Notch</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165156608.png" srcset="/img/loading.gif" alt="image-20200508165156608" /><figcaption aria-hidden="true">image-20200508165156608</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165156608.png" alt="image-20200508165156608" /><figcaption aria-hidden="true">image-20200508165156608</figcaption>
 </figure>
 <p>3-step proteolytic processing 1. The first proteolytic processing step occurs within the <strong>trans Golgi network</strong> to generate the mature heterodimeric <strong>Notch receptor</strong> that is then displayed on the cell surface. 2. The binding to <strong>Delta</strong> on a neighboring cell triggers the next two proteolytic steps: + <strong>Delta-Notch complex</strong> is endocytosed by the <strong>Delta expressing cell,</strong> exposing the extracellular <strong>cleavage site</strong> in the <strong>transmembrane Notch subunit</strong>. 3. The released Notch tail migrates into the nucleus, where it binds to the <font color="EE0000">Rbpsuhprotein</font>, which it converts from a transcriptional repressor to a transcriptional activator.</p>
 <h4 id="notch-signaling-controls-gut-cell-diversification-and-helps-maintain-the-stem-cell-state">Notch signaling controls gut cell diversification and helps maintain the stem-cell state</h4>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165223538.png" srcset="/img/loading.gif" alt="image-20200508165223538" style="zoom: 43%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165223538.png" alt="image-20200508165223538" style="zoom: 43%;" /></p>
 <p><strong>Paneth cells</strong> create <strong>stem cell niche</strong></p>
 <ul>
 <li>The <strong>paneth cells</strong> generate signals, including a strong <strong>Wnt</strong> signal, that act over a short range to maintain the stem-cell state.</li>
@@ -328,20 +340,20 @@
 </ul>
 <h2 id="the-cell-lineage-tracing-the-origin-of-a-cell">The cell lineage: tracing the origin of a cell</h2>
 <p>Pathway from stem cells to lineage-restricted progenitors to differentiated cells.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165341882.png" srcset="/img/loading.gif" alt="image-20200508165341882" style="zoom:80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165341882.png" alt="image-20200508165341882" style="zoom:80%;" /></p>
 <h3 id="stem-cells-at-the-crypt-base-are-multipotent">1. Stem cells at the crypt base are multipotent</h3>
 <h4 id="clonal-analysis">Clonal Analysis</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165422345.png" srcset="/img/loading.gif" alt="image-20200508165422345" /><figcaption aria-hidden="true">image-20200508165422345</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165422345.png" alt="image-20200508165422345" /><figcaption aria-hidden="true">image-20200508165422345</figcaption>
 </figure>
 <h2 id="cell-fate-determination">Cell Fate Determination</h2>
 <p>Two ways for a stem cell to produce daughters with different fates</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165501272.png" srcset="/img/loading.gif" alt="image-20200508165501272" /><figcaption aria-hidden="true">image-20200508165501272</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165501272.png" alt="image-20200508165501272" /><figcaption aria-hidden="true">image-20200508165501272</figcaption>
 </figure>
 <h3 id="example-the-epidermal-stem-cell-system-renewal">1. Example: The epidermal stem-cell system Renewal</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165531689.png" srcset="/img/loading.gif" alt="image-20200508165531689" /><figcaption aria-hidden="true">image-20200508165531689</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508165531689.png" alt="image-20200508165531689" /><figcaption aria-hidden="true">image-20200508165531689</figcaption>
 </figure>
 <h3 id="other-tissue-renewal">2. Other tissue renewal</h3>
 <p>Tissue renewal that do not depend on stem cells + Insulin-secreting cell (<font color="EE0000">β-cell</font>) + Hepatocytes</p>
@@ -350,11 +362,11 @@
 <h2 id="animal-cloning-reverse-differentiation">Animal cloning: reverse differentiation</h2>
 <p>Cloned animal by the transfer of a nucleus of a differentiated somatic cell into an enucleated egg</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508170413404.png" srcset="/img/loading.gif" alt="image-20200508170413404" /><figcaption aria-hidden="true">image-20200508170413404</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508170413404.png" alt="image-20200508170413404" /><figcaption aria-hidden="true">image-20200508170413404</figcaption>
 </figure>
 <h2 id="different-types-of-stem-cells">Different types of stem cells</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508170958192.png" srcset="/img/loading.gif" alt="image-20200508170958192" /><figcaption aria-hidden="true">image-20200508170958192</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508170958192.png" alt="image-20200508170958192" /><figcaption aria-hidden="true">image-20200508170958192</figcaption>
 </figure>
 <ul>
 <li>Stem cells can be named after their location/fate or according to their differentiation capability</li>
@@ -365,12 +377,12 @@
 <p>Pluripotent cells can differentiate into a wide variety of cells, but can not differentiate to form the whole organism. + Examples: + embryonic stem cells + bone marrow stromal stem cells + nerve stem cells + embryonic germ</p>
 <p>Multi- and mono-potent stem cells can differentiate into a few types of cells or only in a special type of cells, respectively + Examples: + neuroglial cells + nerve stem cells + satellite cells + epithelial stem cells + hematopoietic stem cells</p>
 <h2 id="inner-cell-mass-of-early-embryos-embryonic-stem-es-cells">Inner cell mass of early embryos: embryonic stem (ES) cells</h2>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508171321532.png" srcset="/img/loading.gif" alt="image-20200508171321532" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508171321532.png" alt="image-20200508171321532" style="zoom: 67%;" /></p>
 <p>Cells taken from the inner cell mass of an early mammalian embryo are embryonic stem (ES) cells.</p>
 <p>ES cells cultured in suspension develop into embryoid bodies upon stimulation with the <strong>transcription factor</strong> <font color="EE0000">STAT3</font> (Signal transducer and activator of transcription 3)</p>
 <h3 id="es-cells-and-their-pluripotency">1. ES cells and their pluripotency</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508171350975.png" srcset="/img/loading.gif" alt="image-20200508171350975" /><figcaption aria-hidden="true">image-20200508171350975</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508171350975.png" alt="image-20200508171350975" /><figcaption aria-hidden="true">image-20200508171350975</figcaption>
 </figure>
 <p>ES cells are derived from inner cell mass of early embryos</p>
 <p>ES cells can be propagated in culture indefinitely in a pluripotent state. When transplanted back into a host early embryo, they can contribute cells to any tissue, including the germ line (germ cell).</p>
@@ -382,13 +394,13 @@
 <p>Multiple transcription regulators: <font color="EE0000">Oct4</font>, <font color="EE0000">Sox9</font>, <font color="EE0000">Nanog</font>…</p>
 <h3 id="transcription-network-of-es-cells">3. Transcription network of ES cells</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508173828231.png" srcset="/img/loading.gif" alt="image-20200508173828231" /><figcaption aria-hidden="true">image-20200508173828231</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508173828231.png" alt="image-20200508173828231" /><figcaption aria-hidden="true">image-20200508173828231</figcaption>
 </figure>
 <p>Each of these transcription factors has been found to regulate over 1000 different genes. + <strong><font color="EE0000">OCT4</font></strong> (octamer binding transcription factor 4) + <strong><font color="EE0000">Sox2</font></strong> (sex determining region Y- box 2) + <strong><font color="EE0000">Nanog</font></strong> (Irish, Tír na nÓg , “land of eternal youth”)</p>
 <p>The master regulators control their own expression.</p>
 <p>Many target genes are bound by more than one regulators.</p>
 <h4 id="oskmyamanaka-transcription-factors-and-induced-pluripotent-stem-ips-cells">OSKM/Yamanaka transcription factors and induced pluripotent stem (iPS) cells</h4>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508173848888.png" srcset="/img/loading.gif" alt="image-20200508173848888" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508173848888.png" alt="image-20200508173848888" style="zoom:50%;" /></p>
 <p>A total of 24 candidate ES-critical genes were tested to reprogram fibroblast to create <strong>Induced pluripotent stem cells (iPS)</strong></p>
 <p>By introducing four different transcription factors, <font color="EE0000">Kif4</font>, <font color="EE0000">Sox2</font>, <font color="EE0000">Oct4</font>, <font color="EE0000">c-myc</font> (they are also called <font color="EE0000">OSKM/Yamanaka transcription factors</font>).</p>
 <ul>
@@ -397,19 +409,19 @@
 <p>Master transcription factors + Self-induction + Regulate other genes, leading to changing patterns of + histone modification + DNA methylation (at early stage of development, a wide-spread DNA demethylation occurs) + Chromatin remodeling + miRNAs</p>
 <h4 id="major-events-accompanying-the-reprogramming-of-mouse-fibroblasts-to-ips-cells">Major events accompanying the reprogramming of mouse fibroblasts to iPS cells</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174145282.png" srcset="/img/loading.gif" alt="image-20200508174145282" /><figcaption aria-hidden="true">image-20200508174145282</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174145282.png" alt="image-20200508174145282" /><figcaption aria-hidden="true">image-20200508174145282</figcaption>
 </figure>
 <p>Biochemical analysis of iPS cells at different stages after transfection of <font color="EE0000">OSKM/Yamanaka transcription factors</font>.</p>
 <h4 id="factors-that-have-been-observed-to-enhance-reprogramming-efficiency">Factors that have been observed to enhance reprogramming efficiency</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174238672.png" srcset="/img/loading.gif" alt="image-20200508174238672" /><figcaption aria-hidden="true">image-20200508174238672</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174238672.png" alt="image-20200508174238672" /><figcaption aria-hidden="true">image-20200508174238672</figcaption>
 </figure>
 <ul>
 <li>上图“尖角”朝上的表明enhance reprogramming， “尖角”朝下的表明inhibit</li>
 </ul>
 <h4 id="a-strategy-used-to-select-cells-that-have-converted-to-an-ips-cell">A strategy used to select cells that have converted to an iPS cell</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174302565.png" srcset="/img/loading.gif" alt="image-20200508174302565" /><figcaption aria-hidden="true">image-20200508174302565</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174302565.png" alt="image-20200508174302565" /><figcaption aria-hidden="true">image-20200508174302565</figcaption>
 </figure>
 <p><font color="EE0000">Fbx15</font> is present in all cells but is normally expressed only in ES and early embryonic cells</p>
 <h2 id="using-of-stem-cells">Using of stem cells</h2>
@@ -417,424 +429,382 @@
 <p>The use of embryonic stem cells to cure diseases such as diabetes. + Embryonic stem cells were induced to differentiate into pancreatic endoderm, which were then transplanted into mice. + These mice will produce functional <strong>beta islet cells</strong> to produce insulin. + Danger in introducing undifferentiated embryonic stem cells, because they will produce <u>tumor like mass</u>, containing large amounts of poorly differentiated cells</p>
 <p>New tissue generation via iPS stem cells</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174332968.png" srcset="/img/loading.gif" alt="image-20200508174332968" /><figcaption aria-hidden="true">image-20200508174332968</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174332968.png" alt="image-20200508174332968" /><figcaption aria-hidden="true">image-20200508174332968</figcaption>
 </figure>
 <h3 id="cultured-es-cells-can-give-rise-to-a-three-dimensional-organ">1. Cultured ES cells can give rise to a three-dimensional organ</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174430573.png" srcset="/img/loading.gif" alt="image-20200508174430573" /><figcaption aria-hidden="true">image-20200508174430573</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174430573.png" alt="image-20200508174430573" /><figcaption aria-hidden="true">image-20200508174430573</figcaption>
 </figure>
 <h3 id="medical-applications-for-induced-pluripotent-stem-cells-ips">2. Medical applications for induced pluripotent stem cells (iPS)</h3>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174447666.png" srcset="/img/loading.gif" alt="image-20200508174447666" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200508174447666.png" alt="image-20200508174447666" style="zoom: 50%;" /></p>
 <p>Two options to use iPS cells to cure the diseases. + Option 1: Use of iPS cells to produce a <u>patient-specific drug</u> to cure the disease + Option 2: Use of iPS cells to <u>repair a genetic defect</u> and to <u>regenerate patient-specific cells</u> for implantation</p>
 
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/Cell-Biology/">Cell Biology</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/Cell-Biology/">Cell Biology</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/07/24/L05%20Bioinformatics/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">L05 Bioinformatics</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/07/24/L19%20Control%20of%20cell%20division%20and%20cell%20growth/">
-                        <span class="hidden-mobile">L19 Control of cell division and cell growth</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
+    </div>
 
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
+    
+    
+    
+        
 
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>向海
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://zhenyumi.github.io/2020/07/24/L20%20Regulation%20of%20stem%20cell%20self-renewal%20and%20growth/" title="L20 Regulation of stem cell self-renewal and growth">https://zhenyumi.github.io/2020/07/24/L20 Regulation of stem cell self-renewal and growth/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
 
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Cell-Biology/" rel="tag"># Cell Biology</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/24/L19%20Control%20of%20cell%20division%20and%20cell%20growth/" rel="prev" title="L19 Control of cell division and cell growth">
+      <i class="fa fa-chevron-left"></i> L19 Control of cell division and cell growth
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/24/L05%20Bioinformatics/" rel="next" title="L05 Bioinformatics">
+      L05 Bioinformatics <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80stem-cells-and-stem-cell-renewal"><span class="nav-number">1.</span> <span class="nav-text">一、Stem cells and stem cell renewal</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#the-intestinal-epithelia-cells"><span class="nav-number">1.1.</span> <span class="nav-text">The Intestinal Epithelia Cells</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stem-cells-definition"><span class="nav-number">1.2.</span> <span class="nav-text">Stem cells definition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-cell-lineage-tracing-the-origin-of-a-cell"><span class="nav-number">1.3.</span> <span class="nav-text">The cell lineage: tracing the origin of a cell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cell-fate-determination"><span class="nav-number">1.4.</span> <span class="nav-text">Cell Fate Determination</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Ccell-reprogramming-and-pluripotent-stem-cells"><span class="nav-number">2.</span> <span class="nav-text">二、Cell reprogramming and pluripotent stem cells</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#animal-cloning-reverse-differentiation"><span class="nav-number">2.1.</span> <span class="nav-text">Animal cloning: reverse differentiation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#different-types-of-stem-cells"><span class="nav-number">2.2.</span> <span class="nav-text">Different types of stem cells</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#inner-cell-mass-of-early-embryos-embryonic-stem-es-cells"><span class="nav-number">2.3.</span> <span class="nav-text">Inner cell mass of early embryos: embryonic stem (ES) cells</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#using-of-stem-cells"><span class="nav-number">2.4.</span> <span class="nav-text">Using of stem cells</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">一个普通人</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">204</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2.1m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">31:04</span>
+</div><br /> <!-- 换行 -->
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
 
-
-    
-
-    
-  </div>
   
-</footer>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
+<script src="/js/utils.js"></script>
 
-<!-- Plugins -->
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
 
 
   
-    <script  src="/js/lazyload.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
   
 
+  
+      
 
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
       }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "L20 Regulation of stem cell self-renewal and growth&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
     };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
-
-
-
-
+    
 
   
 
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
-  
 
-
-
-
-
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
-
-
-
-
-
-
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
-
-
 </html>

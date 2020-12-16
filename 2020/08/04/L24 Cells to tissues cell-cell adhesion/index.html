@@ -1,273 +1,305 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="比L23好懂一点...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L24 Cells to tissues cell-cell adhesion">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="比L23好懂一点...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175534848.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180307337.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180322439.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180328205.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180350453.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180450310.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180525081.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180552216.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200729162025563.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180624545.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180714767.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180808213.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180827269.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185255157.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185323547.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185413256.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185440552.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185449893.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185523724.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185529456.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185542328.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185616174.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185628580.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185653064.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185805741.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185900111.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185914610.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190001673.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190144199.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190303887.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190324290.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190407814.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190427849.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190629259.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190800153.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190934751.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191007239.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191037930.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191126549.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191143482.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191255225.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191311319.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191351378.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191449153.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191620796.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191656118.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191837350.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191845789.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191932829.png">
+<meta property="article:published_time" content="2020-08-04T07:39:00.000Z">
+<meta property="article:modified_time" content="2020-08-04T07:39:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Cell Biology">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175534848.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>L24 Cells to tissues cell-cell adhesion | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="一个普通人">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>L24 Cells to tissues cell-cell adhesion - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_02.png') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-08-04 15:39">
-      2020年8月4日 下午
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      5.2k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      26
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="一个普通人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          L24 Cells to tissues cell-cell adhesion
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-04 15:39:00" itemprop="dateCreated datePublished" datetime="2020-08-04T15:39:00+08:00">2020-08-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/Cell-Biology/" itemprop="url" rel="index"><span itemprop="name">Cell Biology</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/" class="post-meta-item leancloud_visitors" data-flag-title="L24 Cells to tissues cell-cell adhesion" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>28k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-</head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：4 个月前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#two-main-ways-in-which-animal-cells-are-bound-together"><span class="post-toc-text">Two main ways in which animal cells are bound together</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80adhesion-between-cells"><span class="post-toc-text">一、Adhesion between cells</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#anchoring-junctions"><span class="post-toc-text">Anchoring junctions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cadherins-control-selective-assortmentrecognition-of-cells"><span class="post-toc-text">1. Cadherins control selective assortment&#x2F;recognition of cells</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cadherins-are-the-adhesion-molecule-of-adhering-junctions-and-desmosomes"><span class="post-toc-text">2. Cadherins are the adhesion molecule of adhering junctions and desmosomes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cadherins-comprise-a-large-family-of-proteins"><span class="post-toc-text">Cadherins comprise a large family of proteins</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#homophilic-adhesion"><span class="post-toc-text">Homophilic adhesion</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#changes-in-expression-of-cadherins-leads-to-development-of-different-tissues"><span class="post-toc-text">Changes in expression of cadherins leads to development of different tissues</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cadherin-interactions-are-dependent-on-calcium"><span class="post-toc-text">Cadherin interactions are dependent on calcium</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#clustering-of-cadherins-increases-strength-of-interactions-between-cells"><span class="post-toc-text">(1) Clustering of cadherins increases strength of interactions between cells</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#links-to-cytoskeleton-cluster-cadherins-in-desmosomes-and-adhering-junctions"><span class="post-toc-text">(2) Links to cytoskeleton cluster cadherins in desmosomes and adhering junctions</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#catenins%E8%BF%9E%E7%8E%AF%E7%B4%A0-link-cadherins-to-actin-filaments-in-adherens-junctions"><span class="post-toc-text">(3) Catenins（连环素） link cadherins to actin filaments in adherens junctions</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#assembly-of-an-adherent-junction"><span class="post-toc-text">Assembly of an adherent junction</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#epithelialmesenchymal-transitions-depend-on-control-of-cadherins"><span class="post-toc-text">3. Epithelial–Mesenchymal Transitions Depend on Control of Cadherins</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mechanotransduction-in-an-adherent-junction"><span class="post-toc-text">4. Mechanotransduction in an adherent junction</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tissue-remodeling-depends-on-the-coordination-of-actin-mediated-contraction-with-cellcell-adhesion"><span class="post-toc-text">Tissue remodeling depends on the coordination of actin-mediated contraction with cell–cell adhesion</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#in-desmosomes-cadherins-are-linked-to-intermediate-filaments"><span class="post-toc-text">In desmosomes, cadherins are linked to intermediate filaments</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#desmosome"><span class="post-toc-text">5. Desmosome</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#desmosome-hemidesmosome-and-intermediate-filament-network"><span class="post-toc-text">Desmosome, hemidesmosome and intermediate filament network</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#specialized-adhesion-selectin"><span class="post-toc-text">6. Specialized adhesion: selectin</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#specialized-adhesion-immunoglobulin-superfamily-members"><span class="post-toc-text">7. Specialized adhesion: Immunoglobulin superfamily members</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#occluding-junctions-tight-junctions-zonula-occludens"><span class="post-toc-text">Occluding junctions: tight junctions (zonula occludens)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#organization-of-tight-junction"><span class="post-toc-text">1. Organization of tight junction</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#the-function-of-tight-junctions"><span class="post-toc-text">2. The function of tight junctions</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#molecular-organization-of-tight-junctions"><span class="post-toc-text">3. Molecular organization of tight junctions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#scaffold-protein-zonula-occludens-zo"><span class="post-toc-text">Scaffold protein: zonula occludens (ZO)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tight-junction-and-grass-seeds"><span class="post-toc-text">Tight junction and grass seeds</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8Csignaling-between-neighboring-cells"><span class="post-toc-text">二、Signaling between neighboring cells</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%CE%B2-catenin-in-adhering-junctions-is-a-transcription-factor-activated-by-wnt-signaling"><span class="post-toc-text">1. β-catenin in adhering junctions is a transcription factor activated by Wnt signaling</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#neighboring-cells-communicate-directly-through-gap-junctions"><span class="post-toc-text">2. Neighboring cells communicate directly through gap junctions</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#gap-junctions-allow-diffusion-of-small-molecules-between-neighboring-cells"><span class="post-toc-text">3. Gap junctions allow diffusion of small molecules between neighboring cells</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#structure-of-gap-junctions"><span class="post-toc-text">Structure of Gap junctions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#gap-junctions-are-dynamic-structure"><span class="post-toc-text">1. Gap junctions are dynamic structure</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#regulation-of-gap-junction-communication"><span class="post-toc-text">Regulation of gap-junction communication</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#end-to-end-junctions-in-heart-muscle"><span class="post-toc-text">1. End-to-end junctions in heart muscle</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#the-function-of-gap-junctions"><span class="post-toc-text">2. The function of gap junctions</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#gap-junction-in-plant-plasmodesmata-%E5%8E%9F%E7%94%9F%E8%B4%A8%E4%B8%9D"><span class="post-toc-text">Gap junction in plant: plasmodesmata 原生质丝</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#signal-relayed-junctions-synapse"><span class="post-toc-text">Signal relayed junctions: synapse</span></a></li></ol>
-
-              <h2 id="two-main-ways-in-which-animal-cells-are-bound-together">Two main ways in which animal cells are bound together</h2>
+        <h2 id="two-main-ways-in-which-animal-cells-are-bound-together">Two main ways in which animal cells are bound together</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175534848.png" srcset="/img/loading.gif" alt="image-20200529175534848" /><figcaption aria-hidden="true">image-20200529175534848</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529175534848.png" alt="image-20200529175534848" /><figcaption aria-hidden="true">image-20200529175534848</figcaption>
 </figure>
 <p>Connection is important! + Allow cells to form distinct communities, i.e. tissues + Bidirectional communication between interior and exterior of cells.</p>
 <p>Epithelial tissue (lining sheets): + cell-cell junctions, cytoskeleton of the cell transmits mechanical stresses + from cell to cell via cell-cell adhesion sites and to the basal matrix.</p>
@@ -277,7 +309,7 @@
 </blockquote>
 <h1 id="一adhesion-between-cells">一、Adhesion between cells</h1>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180307337.png" srcset="/img/loading.gif" alt="image-20200529180307337" /><figcaption aria-hidden="true">image-20200529180307337</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180307337.png" alt="image-20200529180307337" /><figcaption aria-hidden="true">image-20200529180307337</figcaption>
 </figure>
 <blockquote>
 <p>In epithelial tissues, such as the lining of the gut or the epidermal covering of the skin, cells are tightly bound together into sheets called <strong>epithelia</strong>.</p>
@@ -308,12 +340,12 @@
 <li>while <strong>hemidesmosomes（半桥粒）</strong> anchor <strong>intermediate filaments</strong> to it.</li>
 </ol>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180322439.png" srcset="/img/loading.gif" alt="image-20200529180322439" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180322439.png" alt="image-20200529180322439" style="zoom:50%;" /></p>
 <blockquote>
 <p>Each of the four major <strong>anchoring junction</strong> types <u>depends on <strong>transmembrane</strong> <strong>adhesion proteins</strong> that span the plasma membrane</u>, with one end linking to the cytoskeleton inside the cell and the other end linking to other structures outside it</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180328205.png" srcset="/img/loading.gif" alt="image-20200529180328205" /><figcaption aria-hidden="true">image-20200529180328205</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180328205.png" alt="image-20200529180328205" /><figcaption aria-hidden="true">image-20200529180328205</figcaption>
 </figure>
 <table>
 <caption>
@@ -428,13 +460,13 @@ Plectin, BP230
 </ul>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180350453.png" srcset="/img/loading.gif" alt="image-20200529180350453" /><figcaption aria-hidden="true">image-20200529180350453</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180350453.png" alt="image-20200529180350453" /><figcaption aria-hidden="true">image-20200529180350453</figcaption>
 </figure>
 <p>Classical experiment (1950s): + disaggregation and reaggregation of an early amphibian embryo in vitro. + The embryo consisting of mesoderm cells, neural plate cells and epidermal cells has been disaggregated and then reaggregated in a random mixture</p>
 <p>disaggregated embryo (randomized arrangement of different cell types) + → “self”-arrangement reminiscent of a normal embryo with a “neural tube” internally, epidermis externally, and mesoderm in between.</p>
 <h3 id="cadherins-are-the-adhesion-molecule-of-adhering-junctions-and-desmosomes">2. Cadherins are the adhesion molecule of adhering junctions and desmosomes</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180450310.png" srcset="/img/loading.gif" alt="image-20200529180450310" /><figcaption aria-hidden="true">image-20200529180450310</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180450310.png" alt="image-20200529180450310" /><figcaption aria-hidden="true">image-20200529180450310</figcaption>
 </figure>
 <ul>
 <li>The name is derived from <strong>Ca2+</strong> and <strong>adherin</strong>（粘附素）, meaning <u>Ca2+-dependent adhering</u></li>
@@ -443,7 +475,7 @@ Plectin, BP230
 <li>Plants, fungi, bacteria and archaea have <strong>no</strong> cadherins</li>
 </ul>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180525081.png" srcset="/img/loading.gif" alt="image-20200529180525081" /><figcaption aria-hidden="true">image-20200529180525081</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180525081.png" alt="image-20200529180525081" /><figcaption aria-hidden="true">image-20200529180525081</figcaption>
 </figure>
 <h4 id="cadherins-comprise-a-large-family-of-proteins">Cadherins comprise a large family of proteins</h4>
 <blockquote>
@@ -454,7 +486,7 @@ Plectin, BP230
 </ul>
 <p>Other eukaryotes, including <strong>fungi</strong> and <strong>plants</strong>, lack <strong>cadherins</strong>, and they are also absent from <strong>bacteria</strong> and <strong>archaea</strong>.</p>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180552216.png" srcset="/img/loading.gif" alt="image-20200529180552216" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180552216.png" alt="image-20200529180552216" style="zoom:67%;" /></p>
 <blockquote>
 <p>The cadherins take their name from their dependence on Ca2+ ions: removing Ca2+ from the extracellular medium causes adhesions mediated by cadherins to come apart（破碎；崩溃）. The first three <strong>cadherins</strong> to be discovered were named according to the <u>main tissues in which they were found</u>:</p>
 <ol type="1">
@@ -472,7 +504,7 @@ Plectin, BP230
 <p>Other family members are involved primarily in signaling. Together, the classical and nonclassical cadherin proteins constitute the <strong>cadherin superfamily</strong> (Figure 19–4), with more than 180 members in humans.</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200729162025563.png" srcset="/img/loading.gif" alt="image-20200729162025563" /><figcaption aria-hidden="true">image-20200729162025563</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200729162025563.png" alt="image-20200729162025563" /><figcaption aria-hidden="true">image-20200729162025563</figcaption>
 </figure>
 <h4 id="homophilic-adhesion">Homophilic adhesion</h4>
 <blockquote>
@@ -490,11 +522,11 @@ Plectin, BP230
 <p>Regulatory mechanisms can easily disassemble the junction by <u>separating</u> the molecules sequentially</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180624545.png" srcset="/img/loading.gif" alt="image-20200529180624545" /><figcaption aria-hidden="true">image-20200529180624545</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180624545.png" alt="image-20200529180624545" /><figcaption aria-hidden="true">image-20200529180624545</figcaption>
 </figure>
 <p>Homophilic adhesion: + the same type or similar subtype of molecule binds to each other + ensures linkage of the same type of cells and make sure that different types of cells remain separated</p>
 <p>In general, only the same type of cadherin binds to each other + ensures linkage of the same type of filaments across cell borders + ensures linkage of the same type of cells and make sure that different types of cells remain separated</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180714767.png" srcset="/img/loading.gif" alt="image-20200529180714767" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180714767.png" alt="image-20200529180714767" style="zoom:50%;" /></p>
 <ul>
 <li>Cells can be sorted by types and expression level of cadherins</li>
 <li>Qualitative differences in the expression of cadherins play a role in the organization of tissues</li>
@@ -506,13 +538,13 @@ Plectin, BP230
 <p>Both <strong>qualitative</strong> and <strong>quantitative</strong> differences in the expression of cadherins have a role in organizing tissues.</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180808213.png" srcset="/img/loading.gif" alt="image-20200529180808213" /><figcaption aria-hidden="true">image-20200529180808213</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180808213.png" alt="image-20200529180808213" /><figcaption aria-hidden="true">image-20200529180808213</figcaption>
 </figure>
 <ul>
 <li>Changes in expression of cadherins leads to development of different tissues</li>
 </ul>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180827269.png" srcset="/img/loading.gif" alt="image-20200529180827269" /><figcaption aria-hidden="true">image-20200529180827269</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529180827269.png" alt="image-20200529180827269" /><figcaption aria-hidden="true">image-20200529180827269</figcaption>
 </figure>
 <ul>
 <li>During embryonic development: cells expressing the same cadherins group together</li>
@@ -521,17 +553,17 @@ Plectin, BP230
 <p>In the vertebrate embryo changes in cadherin expression are seen when the <strong>neural tube</strong> forms and pinches off from the overlying ectoderm: + Neural tube cells lose <strong><font color="EE0000">E-cadherin</font></strong> and acquire other cadherins (<strong><font color="EE0000">N-cadherin</font></strong>) while the cells in the overlying ectoderm continue to express E-cadherin. + Neural crest cells express <strong><font color="EE0000">cadherin 7</font></strong>, allowing detachment/migration away from the neutral tube but keeps holding them together. + For <strong>ganglion formation (神经节形成)</strong>, cells switch back to <strong>N-cadherin</strong> expression.</p>
 <h4 id="cadherin-interactions-are-dependent-on-calcium">Cadherin interactions are dependent on calcium</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185255157.png" srcset="/img/loading.gif" alt="image-20200529185255157" /><figcaption aria-hidden="true">image-20200529185255157</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185255157.png" alt="image-20200529185255157" /><figcaption aria-hidden="true">image-20200529185255157</figcaption>
 </figure>
 <h5 id="clustering-of-cadherins-increases-strength-of-interactions-between-cells">(1) Clustering of cadherins increases strength of interactions between cells</h5>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185323547.png" srcset="/img/loading.gif" alt="image-20200529185323547" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185323547.png" alt="image-20200529185323547" style="zoom: 33%;" /></p>
 <ul>
 <li>Interaction between individual cadherins is weak.</li>
 <li>Strength comes from clustering of cadherins in common domain.</li>
 <li>Similar to Velcro (一种尼龙塔扣).</li>
 </ul>
 <h5 id="links-to-cytoskeleton-cluster-cadherins-in-desmosomes-and-adhering-junctions">(2) Links to cytoskeleton cluster cadherins in desmosomes and adhering junctions</h5>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185413256.png" srcset="/img/loading.gif" alt="image-20200529185413256" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185413256.png" alt="image-20200529185413256" style="zoom:50%;" /></p>
 <h5 id="catenins连环素-link-cadherins-to-actin-filaments-in-adherens-junctions">(3) Catenins（连环素） link cadherins to actin filaments in adherens junctions</h5>
 <blockquote>
 <p>Catenins Link Classical Cadherins to the Actin Cytoskeleton</p>
@@ -539,14 +571,14 @@ Plectin, BP230
 <p>The linkage of cadherins to the cytoskeleton is indirect and depends on <strong>adaptor proteins</strong> that <u>assemble on the cytoplasmic tail</u> of the <strong>cadherin</strong></p>
 <p>At <strong>adherens junctions</strong>, the cadherin tail binds two such proteins: <strong><font color="EE0000">β-catenin</font>/</strong> and a distant relative called <strong><font color="EE0000">p120-catenin</font></strong>; a third protein called <strong><font color="EE0000">α-catenin</font></strong> interacts with <strong><font color="EE0000">β-catenin</font></strong> and recruits a variety of other proteins to provide a dynamic linkage to actin filaments</p>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185440552.png" srcset="/img/loading.gif" alt="image-20200529185440552" style="zoom: 50%;" /></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185449893.png" srcset="/img/loading.gif" alt="image-20200529185449893" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185440552.png" alt="image-20200529185440552" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185449893.png" alt="image-20200529185449893" style="zoom: 50%;" /></p>
 <h4 id="assembly-of-an-adherent-junction">Assembly of an adherent junction</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185523724.png" srcset="/img/loading.gif" alt="image-20200529185523724" /><figcaption aria-hidden="true">image-20200529185523724</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185523724.png" alt="image-20200529185523724" /><figcaption aria-hidden="true">image-20200529185523724</figcaption>
 </figure>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185529456.png" srcset="/img/loading.gif" alt="image-20200529185529456" /><figcaption aria-hidden="true">image-20200529185529456</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185529456.png" alt="image-20200529185529456" /><figcaption aria-hidden="true">image-20200529185529456</figcaption>
 </figure>
 <blockquote>
 <p><strong>Adherens junctions</strong> are <u>not</u> simply <u>passive</u> sites of protein–protein binding but are <strong>dynamic tension sensors</strong> that regulate their behavior in response to changing mechanical conditions</p>
@@ -574,13 +606,13 @@ Plectin, BP230
 </ul>
 </blockquote>
 <h3 id="mechanotransduction-in-an-adherent-junction">4. Mechanotransduction in an adherent junction</h3>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185542328.png" srcset="/img/loading.gif" alt="image-20200529185542328" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185542328.png" alt="image-20200529185542328" style="zoom: 50%;" /></p>
 <h4 id="tissue-remodeling-depends-on-the-coordination-of-actin-mediated-contraction-with-cellcell-adhesion">Tissue remodeling depends on the coordination of actin-mediated contraction with cell–cell adhesion</h4>
 <blockquote>
 <p><strong>Tissue Remodeling</strong> (组织重塑) Depends on the Coordination of Actin-Mediated Contraction With Cell–Cell Adhesion</p>
 <p>By indirectly linking the <strong>actin filaments</strong> in one cell to those in its neighbors, they enable the cells in the tissue to use their actin cytoskeletons in a coordinated way.</p>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185616174.png" srcset="/img/loading.gif" alt="image-20200529185616174" style="zoom:80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185616174.png" alt="image-20200529185616174" style="zoom:80%;" /></p>
 <blockquote>
 <p>the prototypical examples of adherens junctions occur in epithelia, where they often form a continuous <strong>adhesion belt (粘附带)</strong> (or <strong>zonula adherens (小带粘连)</strong>) just <u>beneath the apical face of the epithelium</u>, encircling each of the interacting cells in the sheet</p>
 <p>Within each cell, a <strong>contractile bundle</strong> of <strong>actin filaments</strong> and <strong><font color="EE0000">myosin II</font></strong> lies adjacent to the <strong>adhesion belt</strong>, oriented parallel to the plasma membrane and tethered to it by the <strong>cadherins</strong> and their associated intracellular <strong>adaptor proteins</strong>.</p>
@@ -594,10 +626,10 @@ Plectin, BP230
 <p>The mechanisms underlying the loss of adhesion along specific cell boundaries are not clear, but they depend in part on <u>increased degradation of <strong>β-catenin</strong></u>, due to its <strong>phosphorylation</strong> by a protein kinase that is localized specifically at those boundaries.</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185628580.png" srcset="/img/loading.gif" alt="image-20200529185628580" /><figcaption aria-hidden="true">image-20200529185628580</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185628580.png" alt="image-20200529185628580" /><figcaption aria-hidden="true">image-20200529185628580</figcaption>
 </figure>
 <h4 id="in-desmosomes-cadherins-are-linked-to-intermediate-filaments">In desmosomes, cadherins are linked to intermediate filaments</h4>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185653064.png" srcset="/img/loading.gif" alt="image-20200529185653064" style="zoom:47%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185653064.png" alt="image-20200529185653064" style="zoom:47%;" /></p>
 <p><strong>Desmosomes</strong> are structurally similar to <strong>adherens junctions</strong>.</p>
 <ul>
 <li>In Desmosomes, cadherins link to <strong>intermediate filaments</strong> while in adherens junctions, cadherins link to <strong>actin filaments.</strong></li>
@@ -617,7 +649,7 @@ Plectin, BP230
 </ul>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185805741.png" srcset="/img/loading.gif" alt="image-20200529185805741" /><figcaption aria-hidden="true">image-20200529185805741</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185805741.png" alt="image-20200529185805741" /><figcaption aria-hidden="true">image-20200529185805741</figcaption>
 </figure>
 <p><strong>Desmoglein</strong> and <strong>desmocollin</strong> are <strong>nonclassical cadherins.</strong></p>
 <ul>
@@ -625,7 +657,7 @@ Plectin, BP230
 </ul>
 <p><strong>Desmoplakin</strong> binds to the sides of intermediate filaments, thereby <u>tying the desmosome to these filaments.</u></p>
 <h4 id="desmosome-hemidesmosome-and-intermediate-filament-network">Desmosome, hemidesmosome and intermediate filament network</h4>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185900111.png" srcset="/img/loading.gif" alt="image-20200529185900111" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185900111.png" alt="image-20200529185900111" style="zoom: 50%;" /></p>
 <h3 id="specialized-adhesion-selectin">6. Specialized adhesion: selectin</h3>
 <blockquote>
 <p>Selectins Mediate <strong>Transient</strong> Cell–Cell Adhesions in the Bloodstream</p>
@@ -647,7 +679,7 @@ Plectin, BP230
 <p>Selectins and integrins act in sequence to let white blood cells leave the bloodstream and enter tissues</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185914610.png" srcset="/img/loading.gif" alt="image-20200529185914610" /><figcaption aria-hidden="true">image-20200529185914610</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529185914610.png" alt="image-20200529185914610" /><figcaption aria-hidden="true">image-20200529185914610</figcaption>
 </figure>
 <ul>
 <li>Selectins are cell-surface carbohydrate-binding proteins (lectins)</li>
@@ -674,7 +706,7 @@ Plectin, BP230
 </ul>
 <p>Some forms of <strong>NCAM</strong> carry an unusually large quantity of <strong>sialic acid</strong> (with chains containing hundreds of repeating sialic acid units). By virtue of their negative charge, the <strong>long polysialic acid</strong> chains can interfere with cell adhesion (because like charges repel one another); thus, these forms of <strong>NCAM</strong> can serve to <u>inhibit adhesion</u>, rather than cause it</p>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190001673.png" srcset="/img/loading.gif" alt="image-20200529190001673" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190001673.png" alt="image-20200529190001673" style="zoom:50%;" /></p>
 <ul>
 <li>Ca2+ -independent</li>
 <li>Heavy glycosylation, multiple disulfide bonds</li>
@@ -697,7 +729,7 @@ Plectin, BP230
 <p>This barrier function requires that the adjacent cells be sealed together by <strong>tight junctions</strong>, so that molecules cannot leak freely across the cell sheet.</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190144199.png" srcset="/img/loading.gif" alt="image-20200529190144199" /><figcaption aria-hidden="true">image-20200529190144199</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190144199.png" alt="image-20200529190144199" /><figcaption aria-hidden="true">image-20200529190144199</figcaption>
 </figure>
 <ul>
 <li>Epithelial tissue
@@ -713,7 +745,7 @@ Plectin, BP230
 </ul>
 <h3 id="organization-of-tight-junction">1. Organization of tight junction</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190303887.png" srcset="/img/loading.gif" alt="image-20200529190303887" /><figcaption aria-hidden="true">image-20200529190303887</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190303887.png" alt="image-20200529190303887" /><figcaption aria-hidden="true">image-20200529190303887</figcaption>
 </figure>
 <ul>
 <li>Tight junctions spot-weld (点焊) the plasma membranes of neighboring cells</li>
@@ -735,12 +767,12 @@ Plectin, BP230
 </ul>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190324290.png" srcset="/img/loading.gif" alt="image-20200529190324290" /><figcaption aria-hidden="true">image-20200529190324290</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190324290.png" alt="image-20200529190324290" /><figcaption aria-hidden="true">image-20200529190324290</figcaption>
 </figure>
 <ul>
 <li>Tight junctions seal the intracellular space to form a barrier</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190407814.png" srcset="/img/loading.gif" alt="image-20200529190407814" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190407814.png" alt="image-20200529190407814" style="zoom:50%;" /></p>
 <ul>
 <li>Tight junctions <u>maintain cell polarity</u></li>
 <li>This segregation permits a vectorialtransfer (向量转移) of nutrients across the epithelium from the gut lumen to the blood.</li>
@@ -771,11 +803,11 @@ Plectin, BP230
 <p>Normal tight junctions also contain a second major transmembrane protein called <strong><font color="EE0000">occludin</font> (封端蛋白)</strong>, which is <u>not essential</u> for the assembly or structure of the tight junction but is important for <u>limiting junctional permeability</u></p>
 <p>A third transmembrane protein, <strong><font color="EE0000">tricellulin</font></strong>, is required to seal cell membranes together and <u>prevent transepithelial leakage</u> at the points where <u>three cells meet.</u></p>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190427849.png" srcset="/img/loading.gif" alt="image-20200529190427849" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190427849.png" alt="image-20200529190427849" style="zoom: 50%;" /></p>
 <p>Claudin: + Loss causes dehydration and death in mice + Overexpression causes tight junction formation in fibroblasts</p>
 <p>Occludin: + Detailed function unknown</p>
 <p>Tricellulin: + Required to seal membrane</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190629259.png" srcset="/img/loading.gif" alt="image-20200529190629259" style="zoom: 40%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190629259.png" alt="image-20200529190629259" style="zoom: 40%;" /></p>
 <ul>
 <li>Scaffold proteins (ZO/Tjp) link claudins to the actin-cytoskeleton
 <ul>
@@ -797,7 +829,7 @@ Plectin, BP230
 <p>One domain of these scaffold proteins can <u>attach to a claudin protein,</u> while others can <u>attach to <strong>occludin</strong> or the actin cytoskeleton</u>.</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190800153.png" srcset="/img/loading.gif" alt="image-20200529190800153" /><figcaption aria-hidden="true">image-20200529190800153</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190800153.png" alt="image-20200529190800153" /><figcaption aria-hidden="true">image-20200529190800153</figcaption>
 </figure>
 <ul>
 <li>ZO proteins contains multiple protein-binding domains</li>
@@ -807,7 +839,7 @@ Plectin, BP230
 <p>The tight-junctional network of sealing strands usually lies just apical to adherens and desmosome junctions that bond the cells together mechanically; the whole assembly is called a <strong>junctional complex</strong></p>
 </blockquote>
 <h4 id="tight-junction-and-grass-seeds">Tight junction and grass seeds</h4>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190934751.png" srcset="/img/loading.gif" alt="image-20200529190934751" style="zoom: 43%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529190934751.png" alt="image-20200529190934751" style="zoom: 43%;" /></p>
 <ul>
 <li><strong>Grass seeds</strong> normally contain proteins (<strong><font color="EE0000">glutens</font></strong>) which
 <ul>
@@ -817,16 +849,16 @@ Plectin, BP230
 <li><strong><font color="EE0000">Gliadin</font></strong> (component of <strong>glutens</strong>) also split into polypeptides which weakens tight cell junctions: this will cause celiac disease. 10% of humans are sensitive to glutens.</li>
 </ul>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191007239.png" srcset="/img/loading.gif" alt="image-20200529191007239" /><figcaption aria-hidden="true">image-20200529191007239</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191007239.png" alt="image-20200529191007239" /><figcaption aria-hidden="true">image-20200529191007239</figcaption>
 </figure>
 <h1 id="二signaling-between-neighboring-cells">二、Signaling between neighboring cells</h1>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191037930.png" srcset="/img/loading.gif" alt="image-20200529191037930" style="zoom:80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191037930.png" alt="image-20200529191037930" style="zoom:80%;" /></p>
 <ul>
 <li>Cell contacts regulate cell division and coordinate activities between cells</li>
 </ul>
 <h3 id="β-catenin-in-adhering-junctions-is-a-transcription-factor-activated-by-wnt-signaling">1. β-catenin in adhering junctions is a transcription factor activated by Wnt signaling</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191126549.png" srcset="/img/loading.gif" alt="image-20200529191126549" /><figcaption aria-hidden="true">image-20200529191126549</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191126549.png" alt="image-20200529191126549" /><figcaption aria-hidden="true">image-20200529191126549</figcaption>
 </figure>
 <h3 id="neighboring-cells-communicate-directly-through-gap-junctions">2. Neighboring cells communicate directly through gap junctions</h3>
 <blockquote>
@@ -836,10 +868,10 @@ Plectin, BP230
 <li>Another type of junctional structure has a radically different function: it bridges gaps between adjacent cells so as to <strong>create direct channels</strong> from the cytoplasm of one to that of the other. These channels are called <strong>gap junctions.</strong></li>
 </ul>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191143482.png" srcset="/img/loading.gif" alt="image-20200529191143482" style="zoom:47%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191143482.png" alt="image-20200529191143482" style="zoom:47%;" /></p>
 <h3 id="gap-junctions-allow-diffusion-of-small-molecules-between-neighboring-cells">3. Gap junctions allow diffusion of small molecules between neighboring cells</h3>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191255225.png" srcset="/img/loading.gif" alt="image-20200529191255225" style="zoom: 33%;" /></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191311319.png" srcset="/img/loading.gif" alt="image-20200529191311319" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191255225.png" alt="image-20200529191255225" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191311319.png" alt="image-20200529191311319" style="zoom:50%;" /></p>
 <ul>
 <li><strong><font color="EE0000">Connexons</font></strong> are protein assembles which regulate the gap junction transfer.</li>
 <li>Six <strong><font color="EE0000">connexins</font></strong> form one <strong>connexon</strong> and two connexons build one channel.</li>
@@ -860,7 +892,7 @@ Plectin, BP230
 <p>In principle, the sharing of small metabolites and ions provides a mechanism for <u>coordinating the activities of individual cells</u> in such tissues and for smoothing out random fluctuations in small-molecule concentrations in different cells.</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191351378.png" srcset="/img/loading.gif" alt="image-20200529191351378" /><figcaption aria-hidden="true">image-20200529191351378</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191351378.png" alt="image-20200529191351378" /><figcaption aria-hidden="true">image-20200529191351378</figcaption>
 </figure>
 <ul>
 <li>Six connexons can be homomeric or heteromeric</li>
@@ -896,7 +928,7 @@ Plectin, BP230
 </ul>
 <p>in some circumstances they can open and serve as channels for the release of small signal molecules.</p>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191449153.png" srcset="/img/loading.gif" alt="image-20200529191449153" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191449153.png" alt="image-20200529191449153" style="zoom:50%;" /></p>
 <ul>
 <li>Assembly and remodeling of gap junctions over 20 hrs</li>
 <li>Experiment (metabolic labeling)
@@ -908,7 +940,7 @@ Plectin, BP230
 </ul>
 <h2 id="regulation-of-gap-junction-communication">Regulation of gap-junction communication</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191620796.png" srcset="/img/loading.gif" alt="image-20200529191620796" /><figcaption aria-hidden="true">image-20200529191620796</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191620796.png" alt="image-20200529191620796" /><figcaption aria-hidden="true">image-20200529191620796</figcaption>
 </figure>
 <ul>
 <li>Gap junctions have open and closed states</li>
@@ -922,7 +954,7 @@ Plectin, BP230
 </ul></li>
 </ul>
 <h3 id="end-to-end-junctions-in-heart-muscle">1. End-to-end junctions in heart muscle</h3>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191656118.png" srcset="/img/loading.gif" alt="image-20200529191656118" style="zoom:100%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191656118.png" alt="image-20200529191656118" style="zoom:100%;" /></p>
 <h3 id="the-function-of-gap-junctions">2. The function of gap junctions</h3>
 <p>Electrically excitable cells + rapid spreading of action potentials (no delay by synapses) synchronization of a set of neurons electrical coupling throughgap junctions allows: + synchronization of heart muscle cells + synchronization of smooth muscle cells (peristaltic movement of intestine</p>
 <p>Other cells: + sharing of metabolites smoothing-out random fluctuations of metabolites and small molecules coordination of cells in tissues / organs (e.g. liver)</p>
@@ -942,425 +974,383 @@ Plectin, BP230
 <p>They can also be inserted <em>de novo</em> through preexisting cell walls, where they are commonly found in dense clusters called <strong>pit fields</strong>. When no longer required, plasmodesmata can be removed</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191837350.png" srcset="/img/loading.gif" alt="image-20200529191837350" /><figcaption aria-hidden="true">image-20200529191837350</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191837350.png" alt="image-20200529191837350" /><figcaption aria-hidden="true">image-20200529191837350</figcaption>
 </figure>
 <ul>
 <li>Connect the cytoplasm of the two adjacent cells, cut-off 800 Da by a rough and cylindrical channel with a diameter of 20-40 nm.</li>
 <li>Connected by desmotubule which is the continuation of the smooth endoplasmic reticulum (ER)</li>
 <li>Certain virus movement proteins spread via plasmodesmata</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191845789.png" srcset="/img/loading.gif" alt="image-20200529191845789" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191845789.png" alt="image-20200529191845789" style="zoom:50%;" /></p>
 <h2 id="signal-relayed-junctions-synapse">Signal relayed junctions: synapse</h2>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191932829.png" srcset="/img/loading.gif" alt="image-20200529191932829" /> + Many types of adhesion molecules act together to create a synapse.</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200529191932829.png" alt="image-20200529191932829" /> + Many types of adhesion molecules act together to create a synapse.</p>
 
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/Cell-Biology/">Cell Biology</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/Cell-Biology/">Cell Biology</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/08/05/L25%20Cells%20to%20tissues%20cell%20adhesion%20to%20extracellular%20matrix%20%20(ECM)/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">L25 Cells to tissues cell adhesion to extracellular matrix (ECM)</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/08/03/L23%20Cellular%20motility/">
-                        <span class="hidden-mobile">L23 Cellular motility</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
+    </div>
 
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
+    
+    
+    
+        
 
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>向海
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://zhenyumi.github.io/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/" title="L24 Cells to tissues cell-cell adhesion">https://zhenyumi.github.io/2020/08/04/L24 Cells to tissues cell-cell adhesion/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
 
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Cell-Biology/" rel="tag"># Cell Biology</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/03/L23%20Cellular%20motility/" rel="prev" title="L23 Cellular motility">
+      <i class="fa fa-chevron-left"></i> L23 Cellular motility
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/08/05/L25%20Cells%20to%20tissues%20cell%20adhesion%20to%20extracellular%20matrix%20%20(ECM)/" rel="next" title="L25 Cells to tissues cell adhesion to extracellular matrix (ECM)">
+      L25 Cells to tissues cell adhesion to extracellular matrix (ECM) <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#two-main-ways-in-which-animal-cells-are-bound-together"><span class="nav-number">1.</span> <span class="nav-text">Two main ways in which animal cells are bound together</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80adhesion-between-cells"><span class="nav-number"></span> <span class="nav-text">一、Adhesion between cells</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#anchoring-junctions"><span class="nav-number">1.</span> <span class="nav-text">Anchoring junctions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#occluding-junctions-tight-junctions-zonula-occludens"><span class="nav-number">2.</span> <span class="nav-text">Occluding junctions: tight junctions (zonula occludens)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Csignaling-between-neighboring-cells"><span class="nav-number"></span> <span class="nav-text">二、Signaling between neighboring cells</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#structure-of-gap-junctions"><span class="nav-number">1.</span> <span class="nav-text">Structure of Gap junctions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#regulation-of-gap-junction-communication"><span class="nav-number">2.</span> <span class="nav-text">Regulation of gap-junction communication</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gap-junction-in-plant-plasmodesmata-%E5%8E%9F%E7%94%9F%E8%B4%A8%E4%B8%9D"><span class="nav-number">3.</span> <span class="nav-text">Gap junction in plant: plasmodesmata 原生质丝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#signal-relayed-junctions-synapse"><span class="nav-number">4.</span> <span class="nav-text">Signal relayed junctions: synapse</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">一个普通人</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">204</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2.1m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">31:04</span>
+</div><br /> <!-- 换行 -->
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
 
-
-    
-
-    
-  </div>
   
-</footer>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
+<script src="/js/utils.js"></script>
 
-<!-- Plugins -->
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
 
 
   
-    <script  src="/js/lazyload.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
   
 
+  
+      
 
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
       }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "L24 Cells to tissues cell-cell adhesion&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
     };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
-
-
-
-
+    
 
   
 
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
-  
 
-
-
-
-
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
-
-
-
-
-
-
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
-
-
 </html>

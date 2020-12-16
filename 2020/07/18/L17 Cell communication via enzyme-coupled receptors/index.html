@@ -1,271 +1,298 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Enzyme-coupled cell surface receptors  Like GPCRs, enzyme-coupled receptors are transmembrane proteins with their ligand-binding domain on the outer surface of the plasma membrane Instead of having">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L17 Cell communication via enzyme-coupled receptors">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/07/18/L17%20Cell%20communication%20via%20enzyme-coupled%20receptors/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Enzyme-coupled cell surface receptors  Like GPCRs, enzyme-coupled receptors are transmembrane proteins with their ligand-binding domain on the outer surface of the plasma membrane Instead of having">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708195645624.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708195657596.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708195809484.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200044974.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200804450.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200909222.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200921525.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200946686.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201123564.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201701621.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201723934.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201811180.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201905221.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201944542.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202018066.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202416557.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202519254.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708195855971.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200433727.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200453124.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200217084.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202802918.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202958466.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708203047738.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708203112934.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708203126121.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708203846491.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708204036410.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708204050373.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708204107482.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708204131047.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709194707975.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709194805512.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709195344032.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200018756.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200405435.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200522231.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200558060.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200629161.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200827600.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200928835.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709201005556.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709201013039.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709201021300.png">
+<meta property="article:published_time" content="2020-07-18T10:49:00.000Z">
+<meta property="article:modified_time" content="2020-07-18T10:49:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Cell Biology">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708195645624.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/07/18/L17%20Cell%20communication%20via%20enzyme-coupled%20receptors/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>L17 Cell communication via enzyme-coupled receptors | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="一个普通人">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>L17 Cell communication via enzyme-coupled receptors - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_02.png') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-07-18 18:49">
-      2020年7月18日 晚上
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      8.7k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      45
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/18/L17%20Cell%20communication%20via%20enzyme-coupled%20receptors/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="一个普通人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          L17 Cell communication via enzyme-coupled receptors
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-18 18:49:00" itemprop="dateCreated datePublished" datetime="2020-07-18T18:49:00+08:00">2020-07-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/Cell-Biology/" itemprop="url" rel="index"><span itemprop="name">Cell Biology</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/07/18/L17%20Cell%20communication%20via%20enzyme-coupled%20receptors/" class="post-meta-item leancloud_visitors" data-flag-title="L17 Cell communication via enzyme-coupled receptors" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/07/18/L17%20Cell%20communication%20via%20enzyme-coupled%20receptors/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/18/L17%20Cell%20communication%20via%20enzyme-coupled%20receptors/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>50k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-</head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：5 个月前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#enzyme-coupled-cell-surface-receptors"><span class="post-toc-text">Enzyme-coupled cell surface receptors</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80receptor-tyrosine-kinases-rtks-and-downstream-signaling"><span class="post-toc-text">一、Receptor tyrosine kinases (RTKs) and downstream signaling</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#signaling-via-rtks"><span class="post-toc-text">Signaling via RTKs</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#domain-structure-of-some-rtks"><span class="post-toc-text">Domain structure of some RTKs</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#activation-of-rtks"><span class="post-toc-text">Activation of RTKs</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mutant-rtks-can-act-in-a-dominant-negative-manner"><span class="post-toc-text">1. Mutant RTKs can act in a dominant negative manner</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#signaling-pathways-downstream-of-rtks-the-ras-signaling-pathway"><span class="post-toc-text">2. Signaling pathways downstream of RTKs: the Ras signaling pathway</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#the-ras-signaling-pathway-was-discovered-by-analysis-of-drosophila-eye-development"><span class="post-toc-text">The Ras signaling pathway was discovered by analysis of Drosophila eye development</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#activation-of-ras-downstream-of-sev-rtk-requires-an-adaptor-protein-grb2-and-the-gef-sos"><span class="post-toc-text">Activation of Ras downstream of Sev RTK requires an adaptor protein Grb2 and the GEF Sos</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#rtk-activates-ras"><span class="post-toc-text">RTK activates Ras</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ras-activation-is-transient"><span class="post-toc-text">Ras activation is transient</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ras-activates-a-mitogen-activated-protein-kinase-mapk-signaling-module-rasrafmekerk"><span class="post-toc-text">Ras activates a mitogen-activated protein kinase (MAPK) signaling module (Ras–Raf–Mek–Erk)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#specificity-of-mapk-signaling-provided-by-scaffold-proteins"><span class="post-toc-text">(1) Specificity of MAPK signaling provided by scaffold proteins</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ras-superfamily-of-monomeric-gtpases"><span class="post-toc-text">Ras superfamily of monomeric GTPases</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#signaling-pathways-downstream-of-rtks-the-rho-gtpase-signaling-pathway"><span class="post-toc-text">3. Signaling pathways downstream of RTKs: the Rho GTPase signaling pathway</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#signaling-pathways-downstream-of-rtks-the-pi3-kinase-pi3k-signaling-pathway"><span class="post-toc-text">Signaling pathways downstream of RTKs: the PI3-kinase (PI3K) signaling pathway</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#the-pi3kakt-signaling-pathway"><span class="post-toc-text">The PI3K&#x2F;Akt signaling pathway</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#coordination-and-integration-of-growth-factor-and-nutrient-sensing-pathways"><span class="post-toc-text">(1) Coordination and integration of growth factor and nutrient sensing pathways</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#activation-of-mtorc1-by-the-pi3-kinase-pi3k-akt"><span class="post-toc-text">(2) Activation of mTORC1 by the PI3-kinase (PI3K)-Akt</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#the-pi3k-and-the-phosphatase-and-tensin-homolog-pten-control-pip3-levels-at-the-plasma-membrane"><span class="post-toc-text">(3) The PI3K and the phosphatase and tensin homolog (PTEN) control PIP3 levels at the plasma membrane</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#rtks-and-gpcrs-activate-overlapping-signaling-pathways"><span class="post-toc-text">4. RTKs and GPCRs activate overlapping signaling pathways</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#summary-major-downstream-signaling-of-receptor-tyrosine-kinases-rtks"><span class="post-toc-text">5. Summary: major downstream signaling of receptor tyrosine kinases (RTKs)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#activation-of-egfr-epithelia-growth-factor-receptor"><span class="post-toc-text">Activation of EGFR (epithelia growth factor receptor)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#the-pdgf-platelet-derived-growth-factor-receptor-and-signal-relay"><span class="post-toc-text">The PDGF (platelet-derived growth factor) receptor and signal relay</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sh2-domain-structure"><span class="post-toc-text">1. SH2 domain structure</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#conserved-interaction-domains"><span class="post-toc-text">Conserved Interaction Domains</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8Cnonreceptor-tyrosine-kinases"><span class="post-toc-text">二、Non–receptor tyrosine kinases</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#major-types-of-cytosolic-non-receptor-tyrosine-kinases"><span class="post-toc-text">Major types of cytosolic non-receptor tyrosine kinases</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#src-tyrosine-kinase-protein-family"><span class="post-toc-text">Src tyrosine kinase protein family</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#src-kinase-has-on-and-off-states"><span class="post-toc-text">1. Src kinase has “on” and “off” states</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%89receptor-serthr-kinases"><span class="post-toc-text">三、Receptor Ser&#x2F;Thr kinases</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#serinethreonine-kinase-receptor"><span class="post-toc-text">Serine&#x2F;Threonine kinase receptor</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#smad-dependent-signaling-activated-by-tgf-%CE%B2"><span class="post-toc-text">1. Smad-dependent signaling activated by TGF-β</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9B%9Bcytokine-receptors-that-activates-jak-stat-signaling"><span class="post-toc-text">四、Cytokine receptors that activates JAK-STAT signaling</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#jak-stat-signaling-pathway"><span class="post-toc-text">JAK-STAT signaling pathway</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jak-stat-signaling-pathway-activated-by-cytokines"><span class="post-toc-text">1. JAK-STAT signaling pathway activated by cytokines</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#how-does-prolactin-promote-milk-production"><span class="post-toc-text">2. How does prolactin promote milk production?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#how-to-deactivate-phosphorylated-tyrosines"><span class="post-toc-text">3. How to deactivate phosphorylated tyrosines?</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%94cytokine-receptors-that-activates-nfkappab-signaling"><span class="post-toc-text">五、Cytokine receptors that activates NF\(\kappa\)B signaling</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#nfkappab-pathway"><span class="post-toc-text">NF\(\kappa\)B pathway</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#negative-feedback-in-the-nfkappab-signaling-pathway-induced-in-nfkappab-activation"><span class="post-toc-text">1. Negative feedback in the NF\(\kappa\)B signaling pathway induced in NF\(\kappa\)B activation</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%85%ADother-signaling-notch-wnt-hedgehog-and-circadian-clock"><span class="post-toc-text">六、Other signaling: Notch, Wnt, Hedgehog and Circadian clock</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#notch-pathway"><span class="post-toc-text">Notch pathway</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#the-processing-and-activation-of-notch"><span class="post-toc-text">1. The processing and activation of Notch</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#wnt-pathway"><span class="post-toc-text">Wnt pathway</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hedgehog-pathway"><span class="post-toc-text">Hedgehog pathway</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#circadian-clock"><span class="post-toc-text">Circadian clock</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#oscillation-of-circadian-clock-in-cyanobacteria"><span class="post-toc-text">1. Oscillation of circadian clock in cyanobacteria</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%83plant-signaling"><span class="post-toc-text">七、Plant signaling</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#response-to-stimuli-tropisms"><span class="post-toc-text">Response to stimuli: tropisms</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#plant-hormones"><span class="post-toc-text">Plant hormones</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#similar-signaling-pathways-exist-in-plants-to-regulate-plant-growth"><span class="post-toc-text">Similar signaling pathways exist in plants to regulate plant growth</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ethylene"><span class="post-toc-text">1. Ethylene</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#the-auxin-signaling-pathway"><span class="post-toc-text">2. The auxin signaling pathway</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#auxin-transport-and-rot-gravitropism"><span class="post-toc-text">Auxin transport and rot gravitropism</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#photoperiod"><span class="post-toc-text">3. Photoperiod</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#light-response-mediated-by-phytochromes"><span class="post-toc-text">Light response mediated by phytochromes</span></a></li></ol></li></ol></li></ol>
-
-              <h2 id="enzyme-coupled-cell-surface-receptors">Enzyme-coupled cell surface receptors</h2>
+        <h2 id="enzyme-coupled-cell-surface-receptors">Enzyme-coupled cell surface receptors</h2>
 <blockquote>
 <p>Like GPCRs, <strong>enzyme-coupled receptors</strong> are transmembrane proteins with their ligand-binding domain on the <u>outer surface</u> of the plasma membrane</p>
 <p>Instead of having a <strong>cytosolic domain</strong> that associates with a trimeric G protein, however, their cytosolic domain either has <strong>intrinsic enzyme activity</strong> or <strong>associates directly with an enzyme</strong>. Whereas a GPCR has <u>seven</u> transmembrane segments, each subunit of an enzyme-coupled receptor typically has only <u>one</u>.</p>
@@ -286,7 +313,7 @@
 </blockquote>
 <h2 id="signaling-via-rtks">Signaling via RTKs</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708195645624.png" srcset="/img/loading.gif" alt="image-20200708195645624" /><figcaption aria-hidden="true">image-20200708195645624</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708195645624.png" alt="image-20200708195645624" /><figcaption aria-hidden="true">image-20200708195645624</figcaption>
 </figure>
 <table>
 <colgroup>
@@ -355,7 +382,7 @@
 </blockquote>
 <h2 id="domain-structure-of-some-rtks">Domain structure of some RTKs</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708195657596.png" srcset="/img/loading.gif" alt="image-20200708195657596" /><figcaption aria-hidden="true">image-20200708195657596</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708195657596.png" alt="image-20200708195657596" /><figcaption aria-hidden="true">image-20200708195657596</figcaption>
 </figure>
 <p>RTKs are <strong>single</strong> transmembrane receptors.</p>
 <p>RTKs are kinases themselves and possess three domains:</p>
@@ -376,7 +403,7 @@
 <p>Once bound to the activated RTK, a signaling protein may become <u>phosphorylated on tyrosines</u> and thereby activated. In many cases, however, the <u>binding alone</u> may be sufficient to activate the docked signaling protein, by either <u>inducing a conformational change</u> in the protein or simply <u>bringing it near</u> the protein that is next in the signaling pathway.</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708195809484.png" srcset="/img/loading.gif" alt="image-20200708195809484" /><figcaption aria-hidden="true">image-20200708195809484</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708195809484.png" alt="image-20200708195809484" /><figcaption aria-hidden="true">image-20200708195809484</figcaption>
 </figure>
 <p>Phosphorylation on RTK has <strong>dual roles</strong>:</p>
 <ul>
@@ -392,7 +419,7 @@
 </blockquote>
 <h3 id="mutant-rtks-can-act-in-a-dominant-negative-manner">1. Mutant RTKs can act in a dominant negative manner</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200044974.png" srcset="/img/loading.gif" alt="image-20200708200044974" /><figcaption aria-hidden="true">image-20200708200044974</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200044974.png" alt="image-20200708200044974" /><figcaption aria-hidden="true">image-20200708200044974</figcaption>
 </figure>
 <p>Dominant negative (DN) mutant:</p>
 <ul>
@@ -441,14 +468,14 @@
 </ul>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200804450.png" srcset="/img/loading.gif" alt="image-20200708200804450" /><figcaption aria-hidden="true">image-20200708200804450</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200804450.png" alt="image-20200708200804450" /><figcaption aria-hidden="true">image-20200708200804450</figcaption>
 </figure>
 <p>Activation of <font color="EE0000">Ras</font> is mediated by the Ras GEF Sos (Son of sevenless) (Ras-GDP → Ras-GTP)</p>
 <p>In human, <font color="EE0000">Grb2</font> is homolog for D<strong>r</strong>k: adaptor protein</p>
 <p>The adaptor protein Grb2 (growth factor receptor binding protein 2) /Drk that binds to Sos</p>
 <h4 id="rtk-activates-ras">RTK activates Ras</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200909222.png" srcset="/img/loading.gif" alt="image-20200708200909222" /><figcaption aria-hidden="true">image-20200708200909222</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200909222.png" alt="image-20200708200909222" /><figcaption aria-hidden="true">image-20200708200909222</figcaption>
 </figure>
 <h4 id="ras-activation-is-transient">Ras activation is transient</h4>
 <blockquote>
@@ -468,7 +495,7 @@
 </ul>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200921525.png" srcset="/img/loading.gif" alt="image-20200708200921525" /><figcaption aria-hidden="true">image-20200708200921525</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200921525.png" alt="image-20200708200921525" /><figcaption aria-hidden="true">image-20200708200921525</figcaption>
 </figure>
 <h4 id="ras-activates-a-mitogen-activated-protein-kinase-mapk-signaling-module-rasrafmekerk">Ras activates a mitogen-activated protein kinase (MAPK) signaling module (Ras–Raf–Mek–Erk)</h4>
 <blockquote>
@@ -489,7 +516,7 @@
 </ul>
 <p><strong>Erk</strong> also <strong>phosphorylates</strong> and <strong>inactivates Raf</strong>, providing another <strong>negative feedback</strong> loop that helps <strong>shut off the MAP kinase module.</strong></p>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200946686.png" srcset="/img/loading.gif" alt="image-20200708200946686" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200946686.png" alt="image-20200708200946686" style="zoom: 33%;" /></p>
 <p>MAP kinase pathway controls both,</p>
 <ul>
 <li><p>protein activity</p></li>
@@ -505,7 +532,7 @@
 <p>Although the scaffold strategy provides precision and avoids cross-talk, it reduces the opportunities for <strong>amplification</strong> and <strong>spreading</strong> of the signal to different <u>parts of the cell</u>, which require at least some of the components to be diffusible</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201123564.png" srcset="/img/loading.gif" alt="image-20200708201123564" /><figcaption aria-hidden="true">image-20200708201123564</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201123564.png" alt="image-20200708201123564" /><figcaption aria-hidden="true">image-20200708201123564</figcaption>
 </figure>
 <p>12 MAPKs, 7 MAPKKs, and 7 MAPKKKs</p>
 <ul>
@@ -517,7 +544,7 @@
 </ul>
 <h4 id="ras-superfamily-of-monomeric-gtpases">Ras superfamily of monomeric GTPases</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201701621.png" srcset="/img/loading.gif" alt="image-20200708201701621" /><figcaption aria-hidden="true">image-20200708201701621</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201701621.png" alt="image-20200708201701621" /><figcaption aria-hidden="true">image-20200708201701621</figcaption>
 </figure>
 <h3 id="signaling-pathways-downstream-of-rtks-the-rho-gtpase-signaling-pathway">3. Signaling pathways downstream of RTKs: the Rho GTPase signaling pathway</h3>
 <blockquote>
@@ -537,7 +564,7 @@
 <li>Signaling by extracellular signaling proteins of the <strong><font color="EE0000">ephrin</font></strong> family provides an example of how RTKs can activate a Rho GTPase.</li>
 </ul>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201723934.png" srcset="/img/loading.gif" alt="image-20200708201723934" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201723934.png" alt="image-20200708201723934" style="zoom:33%;" /></p>
 <p>Ephrin (extracellular signaling proteins) binds and activates the <font color="EE0000">Eph</font> family of RTKs (<font color="EE0000">EphA4</font>) on the surface of motor neurons</p>
 <p>Helps guide the migrating tip of the axon (called a growth cone) to its muscle target.</p>
 <h4 id="signaling-pathways-downstream-of-rtks-the-pi3-kinase-pi3k-signaling-pathway">Signaling pathways downstream of RTKs: the PI<sub>3</sub>-kinase (PI<sub>3</sub>K) signaling pathway</h4>
@@ -557,7 +584,7 @@
 <li>GPCRs activate <strong>class <font color="0000EE">Ⅰb</font> PI 3-kinases</strong>, which have a <strong>regulatory subunit</strong> that binds to the <strong>βγ complex</strong> of an activated trimeric G protein (<font color="0000EE">G<sub>q</sub> </font>) when GPCRs are activated by their extracellular ligand.</li>
 </ul>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201811180.png" srcset="/img/loading.gif" alt="image-20200708201811180" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201811180.png" alt="image-20200708201811180" style="zoom: 50%;" /></p>
 <p>There are various types of PI 3-kinases.</p>
 <p>Those activated by RTKs and GPCRs belong to class I.</p>
 <p>These are heterodimers composed of a common catalytic subunit and different regulatory subunits.</p>
@@ -583,7 +610,7 @@
 </ul>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201905221.png" srcset="/img/loading.gif" alt="image-20200708201905221" /><figcaption aria-hidden="true">image-20200708201905221</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201905221.png" alt="image-20200708201905221" /><figcaption aria-hidden="true">image-20200708201905221</figcaption>
 </figure>
 <p>Intracellular signaling proteins bind to PI(3,4,5)P3 produced by activated PI3K via a specific interaction domain, such as a PH domain (pleckstrin homology first identified in the platelet protein pleckstrin) (PH domain is very common, and is present in Sos as well)</p>
 <p>PI3K-Akt signaling is to</p>
@@ -603,21 +630,21 @@
 </ul></li>
 </ul>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201944542.png" srcset="/img/loading.gif" alt="image-20200708201944542" style="zoom: 25%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708201944542.png" alt="image-20200708201944542" style="zoom: 25%;" /></p>
 <h5 id="activation-of-mtorc1-by-the-pi3-kinase-pi3k-akt">(2) Activation of mTORC1 by the PI3-kinase (PI3K)-Akt</h5>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202018066.png" srcset="/img/loading.gif" alt="image-20200708202018066" /><figcaption aria-hidden="true">image-20200708202018066</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202018066.png" alt="image-20200708202018066" /><figcaption aria-hidden="true">image-20200708202018066</figcaption>
 </figure>
 <p>mTOR1: Raptor (regulatory subunit, rapamycin <strong>sensitive</strong>)</p>
 <p>mTOR2: rictor (regulatory subunit, rapamycin <strong>insensitive</strong>)</p>
 <h5 id="the-pi3k-and-the-phosphatase-and-tensin-homolog-pten-control-pip3-levels-at-the-plasma-membrane">(3) The PI3K and the phosphatase and tensin homolog (PTEN) control PIP3 levels at the plasma membrane</h5>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202416557.png" srcset="/img/loading.gif" alt="image-20200708202416557" /><figcaption aria-hidden="true">image-20200708202416557</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202416557.png" alt="image-20200708202416557" /><figcaption aria-hidden="true">image-20200708202416557</figcaption>
 </figure>
 <p>PI3K hyperactivation and PTEN loss-of-function occurs frequently in human cancers.</p>
 <h3 id="rtks-and-gpcrs-activate-overlapping-signaling-pathways">4. RTKs and GPCRs activate overlapping signaling pathways</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202519254.png" srcset="/img/loading.gif" alt="image-20200708202519254" /><figcaption aria-hidden="true">image-20200708202519254</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202519254.png" alt="image-20200708202519254" /><figcaption aria-hidden="true">image-20200708202519254</figcaption>
 </figure>
 <p>Some pathway components like Ca2+ or phospholipase C could participate in both GPCR and RTK pathways</p>
 <p>Pathway may also integrate signal via double phosphorylation or activating complementary proteins</p>
@@ -627,7 +654,7 @@
 <p>PI3K/Akt signaling pathway</p>
 <h2 id="activation-of-egfr-epithelia-growth-factor-receptor">Activation of EGFR (epithelia growth factor receptor)</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708195855971.png" srcset="/img/loading.gif" alt="image-20200708195855971" /><figcaption aria-hidden="true">image-20200708195855971</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708195855971.png" alt="image-20200708195855971" /><figcaption aria-hidden="true">image-20200708195855971</figcaption>
 </figure>
 <p>EGF binding results in a conformational change that promotes dimerization of the external domains.</p>
 <p>The receptor kinase domain is not activated by trans-autophosphorylation.</p>
@@ -635,11 +662,11 @@
 <p>The active receiver domain then phosphorylates multiple tyrosines in the C-terminal tails of both receptors.</p>
 <h2 id="the-pdgf-platelet-derived-growth-factor-receptor-and-signal-relay">The PDGF (platelet-derived growth factor) receptor and signal relay</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200433727.png" srcset="/img/loading.gif" alt="image-20200708200433727" /><figcaption aria-hidden="true">image-20200708200433727</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200433727.png" alt="image-20200708200433727" /><figcaption aria-hidden="true">image-20200708200433727</figcaption>
 </figure>
 <h3 id="sh2-domain-structure">1. SH2 domain structure</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200453124.png" srcset="/img/loading.gif" alt="image-20200708200453124" /><figcaption aria-hidden="true">image-20200708200453124</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200453124.png" alt="image-20200708200453124" /><figcaption aria-hidden="true">image-20200708200453124</figcaption>
 </figure>
 <h2 id="conserved-interaction-domains">Conserved Interaction Domains</h2>
 <blockquote>
@@ -669,7 +696,7 @@
 <li>Pleckstrin homology (PH): bind phosphoinositides</li>
 </ol>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200217084.png" srcset="/img/loading.gif" alt="image-20200708200217084" /><figcaption aria-hidden="true">image-20200708200217084</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708200217084.png" alt="image-20200708200217084" /><figcaption aria-hidden="true">image-20200708200217084</figcaption>
 </figure>
 <ul>
 <li>autophosphorylation of activated receptor <u>recruits IRS1</u></li>
@@ -741,7 +768,7 @@
 <h3 id="src-kinase-has-on-and-off-states">1. Src kinase has “on” and “off” states</h3>
 <p>This part also described in L12</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202802918.png" srcset="/img/loading.gif" alt="image-20200708202802918" /><figcaption aria-hidden="true">image-20200708202802918</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202802918.png" alt="image-20200708202802918" /><figcaption aria-hidden="true">image-20200708202802918</figcaption>
 </figure>
 <ul>
 <li>Three distinct domains: SH2, SH3, kinase domain</li>
@@ -800,7 +827,7 @@
 </ol>
 <p>During the signaling response, the <strong>Smads</strong> <u>shuttle</u> continuously between the cytoplasm and the nucleus: they are <strong>dephosphorylated</strong> in the nucleus and exported to the cytoplasm</p>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202958466.png" srcset="/img/loading.gif" alt="image-20200708202958466" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708202958466.png" alt="image-20200708202958466" style="zoom:50%;" /></p>
 <p>In activated tetramer, the type-II receptors phosphorylate specific sites on the type-I receptors, and activate their kinase domains</p>
 <ul>
 <li>Phosphorylation R-Smads (Smad2 and Smad3) (<strong>BMP signaling, R-Smads: 1, 5, 8</strong>)</li>
@@ -828,18 +855,18 @@
 </blockquote>
 <h2 id="jak-stat-signaling-pathway">JAK-STAT signaling pathway</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708203047738.png" srcset="/img/loading.gif" alt="image-20200708203047738" /><figcaption aria-hidden="true">image-20200708203047738</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708203047738.png" alt="image-20200708203047738" /><figcaption aria-hidden="true">image-20200708203047738</figcaption>
 </figure>
 <p>JAK-Janus kinase (cytosolic tyrosine kinase)</p>
 <p>Mediates growth hormone, prolactin, cytokine signaling</p>
 <p>STAT-Signal transducers and activators of transcription (transcription factors)</p>
 <h3 id="jak-stat-signaling-pathway-activated-by-cytokines">1. JAK-STAT signaling pathway activated by cytokines</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708203112934.png" srcset="/img/loading.gif" alt="image-20200708203112934" /><figcaption aria-hidden="true">image-20200708203112934</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708203112934.png" alt="image-20200708203112934" /><figcaption aria-hidden="true">image-20200708203112934</figcaption>
 </figure>
 <h3 id="how-does-prolactin-promote-milk-production">2. How does prolactin promote milk production?</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708203126121.png" srcset="/img/loading.gif" alt="image-20200708203126121" /><figcaption aria-hidden="true">image-20200708203126121</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708203126121.png" alt="image-20200708203126121" /><figcaption aria-hidden="true">image-20200708203126121</figcaption>
 </figure>
 <h3 id="how-to-deactivate-phosphorylated-tyrosines">3. How to deactivate phosphorylated tyrosines?</h3>
 <dl>
@@ -874,7 +901,7 @@
 </blockquote>
 <h2 id="nfkappab-pathway">NF<span class="math inline">\(\kappa\)</span>B pathway</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708203846491.png" srcset="/img/loading.gif" alt="image-20200708203846491" /><figcaption aria-hidden="true">image-20200708203846491</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708203846491.png" alt="image-20200708203846491" /><figcaption aria-hidden="true">image-20200708203846491</figcaption>
 </figure>
 <p>NF<span class="math inline">\(\kappa\)</span>B proteins are <u>latent transcription regulators</u> that are present in most animal cells and are central to many stressful, inflammatory, and innate immune responses.</p>
 <p>Various cell-surface receptors can activate the NF<span class="math inline">\(\kappa\)</span>B signaling pathway in animal cells.</p>
@@ -907,7 +934,7 @@
 </blockquote>
 <h3 id="negative-feedback-in-the-nfkappab-signaling-pathway-induced-in-nfkappab-activation">1. Negative feedback in the NF<span class="math inline">\(\kappa\)</span>B signaling pathway induced in NF<span class="math inline">\(\kappa\)</span>B activation</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708204036410.png" srcset="/img/loading.gif" alt="image-20200708204036410" /><figcaption aria-hidden="true">image-20200708204036410</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708204036410.png" alt="image-20200708204036410" /><figcaption aria-hidden="true">image-20200708204036410</figcaption>
 </figure>
 <h1 id="六other-signaling-notch-wnt-hedgehog-and-circadian-clock">六、Other signaling: Notch, Wnt, Hedgehog and Circadian clock</h1>
 <h2 id="notch-pathway">Notch pathway</h2>
@@ -916,7 +943,7 @@
 <p>it has a general role in controlling <strong>cell fate</strong> <strong>choices</strong> and regulating <strong>pattern formation</strong> during the development of most tissues, as well as in the <strong>continual renewal of tissues</strong> such as the lining of the gut.</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708204050373.png" srcset="/img/loading.gif" alt="image-20200708204050373" /><figcaption aria-hidden="true">image-20200708204050373</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708204050373.png" alt="image-20200708204050373" /><figcaption aria-hidden="true">image-20200708204050373</figcaption>
 </figure>
 <p>In fly neural cells, when a precursor cell commits to becoming a neural cell, it signals to its immediate neighbors not to do the same; the inhibited cells develop into epidermal cells instead. This process is called lateral inhibition.</p>
 <blockquote>
@@ -924,7 +951,7 @@
 </blockquote>
 <p>This depends on a contact-dependent signaling mechanism that is activated by a single-pass transmembrane signal protein called <font color="EE0000">Delta</font> that activates <font color="EE0000">Notch receptors</font>.</p>
 <p>By activation, Notch cleaved and its tail migrates to nucleus where activates responsible genes.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708204107482.png" srcset="/img/loading.gif" alt="image-20200708204107482" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708204107482.png" alt="image-20200708204107482" style="zoom:50%;" /></p>
 <blockquote>
 <p>Notch is a single-pass transmembrane protein that requires <strong>proteolytic processing</strong> to function. It acts as a <strong>latent transcription regulator</strong> and provides the simplest and most direct signaling pathway known from a cell-surface receptor to the nucleus.</p>
 <p>Note that, unlike most receptors, the activation of Notch is <strong>irreversible</strong>; once activated by ligand binding, the protein cannot be used again.</p>
@@ -935,7 +962,7 @@
 </blockquote>
 <h3 id="the-processing-and-activation-of-notch">1. The processing and activation of Notch</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708204131047.png" srcset="/img/loading.gif" alt="image-20200708204131047" /><figcaption aria-hidden="true">image-20200708204131047</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200708204131047.png" alt="image-20200708204131047" /><figcaption aria-hidden="true">image-20200708204131047</figcaption>
 </figure>
 <p>3-step proteolytic processing</p>
 <ol type="1">
@@ -982,7 +1009,7 @@
 <p>Thus, as in the case of Notch signaling, <strong>Wnt/β-catenin signaling</strong> triggers a switch <u>from transcriptional repression to transcriptional activation.</u></p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709194707975.png" srcset="/img/loading.gif" alt="image-20200709194707975" /><figcaption aria-hidden="true">image-20200709194707975</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709194707975.png" alt="image-20200709194707975" /><figcaption aria-hidden="true">image-20200709194707975</figcaption>
 </figure>
 <p>Co-receptor: LRP ( LDL-receptor-related protein) and Frizzled</p>
 <p>Latent transcription regulators: <span class="math inline">\(\beta\)</span>-catenin</p>
@@ -1034,7 +1061,7 @@
 <p>Hedgehog signaling can <u>promote cell proliferation</u>, and excessive Hedgehog signaling can lead to cancer</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709194805512.png" srcset="/img/loading.gif" alt="image-20200709194805512" /><figcaption aria-hidden="true">image-20200709194805512</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709194805512.png" alt="image-20200709194805512" /><figcaption aria-hidden="true">image-20200709194805512</figcaption>
 </figure>
 <p>Patched is predicted to cross the plasma membrane 12 times</p>
 <p>iHog is also on the cell surface and is thought to serve as a co-receptor for Hedgehog.</p>
@@ -1056,7 +1083,7 @@
 <p>In Drosophila and many other animals, including humans, the heart of the circadian clock is a <strong>delayed negative feedback loop</strong> based on <strong>transcription regulators</strong>: accumulation of certain gene products switches off the transcription of their own genes</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709195344032.png" srcset="/img/loading.gif" alt="image-20200709195344032" /><figcaption aria-hidden="true">image-20200709195344032</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709195344032.png" alt="image-20200709195344032" /><figcaption aria-hidden="true">image-20200709195344032</figcaption>
 </figure>
 <p>The internal oscillators that control such diurnal rhythms are called <strong>circadian clocks</strong>.</p>
 <p>A central feature of the clock is the periodic accumulation and decay of two transcription regulatory proteins</p>
@@ -1081,7 +1108,7 @@
 <p>Circadian oscillations in <strong>KaiC</strong> phosphorylation lead to parallel rhythms in the expression of large numbers of genes involved in controlling <u>metabolic activities</u> and <u>cell division</u></p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200018756.png" srcset="/img/loading.gif" alt="image-20200709200018756" /><figcaption aria-hidden="true">image-20200709200018756</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200018756.png" alt="image-20200709200018756" /><figcaption aria-hidden="true">image-20200709200018756</figcaption>
 </figure>
 <p>KaiC is a combined kinase and phosphatase that phosphorylates and dephosphorylates itself on two adjacent sites.</p>
 <ul>
@@ -1109,10 +1136,10 @@
 </blockquote>
 <h2 id="response-to-stimuli-tropisms">Response to stimuli: tropisms</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200405435.png" srcset="/img/loading.gif" alt="image-20200709200405435" /><figcaption aria-hidden="true">image-20200709200405435</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200405435.png" alt="image-20200709200405435" /><figcaption aria-hidden="true">image-20200709200405435</figcaption>
 </figure>
 <h2 id="plant-hormones">Plant hormones</h2>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200522231.png" srcset="/img/loading.gif" alt="image-20200709200522231" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200522231.png" alt="image-20200709200522231" style="zoom:50%;" /></p>
 <p>Plant cells are not using RTKs, steroid hormones, cyclic AMPs</p>
 <p>GPCRs are known for plants, but there are few of them</p>
 <p>In contrast, plants have specific receptors for specific plant molecules—plant hormones</p>
@@ -1131,7 +1158,7 @@
 <ul>
 <li>Enzyme signaling</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200558060.png" srcset="/img/loading.gif" alt="image-20200709200558060" style="zoom: 43%;" height = 1500 width = 1400/></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200558060.png" alt="image-20200709200558060" style="zoom: 43%;" height = 1500 width = 1400/></p>
 <p>Ethylene pathway</p>
 <ul>
 <li>Ethylene promote fruit ripening, leaf abscission, and plant senescence.<br />
@@ -1157,7 +1184,7 @@
 </ul>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200629161.png" srcset="/img/loading.gif" alt="image-20200709200629161" /><figcaption aria-hidden="true">image-20200709200629161</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200629161.png" alt="image-20200709200629161" /><figcaption aria-hidden="true">image-20200709200629161</figcaption>
 </figure>
 <p>Auxin</p>
 <ul>
@@ -1167,11 +1194,11 @@
 </ul>
 <h4 id="auxin-transport-and-rot-gravitropism">Auxin transport and rot gravitropism</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200827600.png" srcset="/img/loading.gif" alt="image-20200709200827600" /><figcaption aria-hidden="true">image-20200709200827600</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200827600.png" alt="image-20200709200827600" /><figcaption aria-hidden="true">image-20200709200827600</figcaption>
 </figure>
 <h3 id="photoperiod">3. Photoperiod</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200928835.png" srcset="/img/loading.gif" alt="image-20200709200928835" /><figcaption aria-hidden="true">image-20200709200928835</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709200928835.png" alt="image-20200709200928835" /><figcaption aria-hidden="true">image-20200709200928835</figcaption>
 </figure>
 <p>Florists apply knowledge of the photoperiod of particular plants to bring us flowers out of season.</p>
 <h4 id="light-response-mediated-by-phytochromes">Light response mediated by phytochromes</h4>
@@ -1198,423 +1225,381 @@
 </ul>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709201005556.png" srcset="/img/loading.gif" alt="image-20200709201005556" /><figcaption aria-hidden="true">image-20200709201005556</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709201005556.png" alt="image-20200709201005556" /><figcaption aria-hidden="true">image-20200709201005556</figcaption>
 </figure>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709201013039.png" srcset="/img/loading.gif" alt="image-20200709201013039" /><figcaption aria-hidden="true">image-20200709201013039</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709201013039.png" alt="image-20200709201013039" /><figcaption aria-hidden="true">image-20200709201013039</figcaption>
 </figure>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709201021300.png" srcset="/img/loading.gif" alt="image-20200709201021300" /><figcaption aria-hidden="true">image-20200709201021300</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200709201021300.png" alt="image-20200709201021300" /><figcaption aria-hidden="true">image-20200709201021300</figcaption>
 </figure>
 
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/Cell-Biology/">Cell Biology</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/Cell-Biology/">Cell Biology</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/07/23/L18%20Cell%20Devision-%20Mitosis/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">L18 Cell Division- Mitosis</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/07/17/L03%20Citric%20Acid%20Cycle%20and%20Glyoxylate%20Cycle/">
-                        <span class="hidden-mobile">L03 Citric Acid Cycle and Glyoxylate Cycle</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
+    </div>
 
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
+    
+    
+    
+        
 
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>向海
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://zhenyumi.github.io/2020/07/18/L17%20Cell%20communication%20via%20enzyme-coupled%20receptors/" title="L17 Cell communication via enzyme-coupled receptors">https://zhenyumi.github.io/2020/07/18/L17 Cell communication via enzyme-coupled receptors/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
 
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Cell-Biology/" rel="tag"># Cell Biology</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/17/L03%20Citric%20Acid%20Cycle%20and%20Glyoxylate%20Cycle/" rel="prev" title="L03 Citric Acid Cycle and Glyoxylate Cycle">
+      <i class="fa fa-chevron-left"></i> L03 Citric Acid Cycle and Glyoxylate Cycle
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/23/L18%20Cell%20Devision-%20Mitosis/" rel="next" title="L18 Cell Division- Mitosis">
+      L18 Cell Division- Mitosis <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#enzyme-coupled-cell-surface-receptors"><span class="nav-number">1.</span> <span class="nav-text">Enzyme-coupled cell surface receptors</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80receptor-tyrosine-kinases-rtks-and-downstream-signaling"><span class="nav-number"></span> <span class="nav-text">一、Receptor tyrosine kinases (RTKs) and downstream signaling</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#signaling-via-rtks"><span class="nav-number">1.</span> <span class="nav-text">Signaling via RTKs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#domain-structure-of-some-rtks"><span class="nav-number">2.</span> <span class="nav-text">Domain structure of some RTKs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#activation-of-rtks"><span class="nav-number">3.</span> <span class="nav-text">Activation of RTKs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#activation-of-egfr-epithelia-growth-factor-receptor"><span class="nav-number">4.</span> <span class="nav-text">Activation of EGFR (epithelia growth factor receptor)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-pdgf-platelet-derived-growth-factor-receptor-and-signal-relay"><span class="nav-number">5.</span> <span class="nav-text">The PDGF (platelet-derived growth factor) receptor and signal relay</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conserved-interaction-domains"><span class="nav-number">6.</span> <span class="nav-text">Conserved Interaction Domains</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Cnonreceptor-tyrosine-kinases"><span class="nav-number"></span> <span class="nav-text">二、Non–receptor tyrosine kinases</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#major-types-of-cytosolic-non-receptor-tyrosine-kinases"><span class="nav-number">1.</span> <span class="nav-text">Major types of cytosolic non-receptor tyrosine kinases</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#src-tyrosine-kinase-protein-family"><span class="nav-number">2.</span> <span class="nav-text">Src tyrosine kinase protein family</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89receptor-serthr-kinases"><span class="nav-number"></span> <span class="nav-text">三、Receptor Ser&#x2F;Thr kinases</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#serinethreonine-kinase-receptor"><span class="nav-number">1.</span> <span class="nav-text">Serine&#x2F;Threonine kinase receptor</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9Bcytokine-receptors-that-activates-jak-stat-signaling"><span class="nav-number"></span> <span class="nav-text">四、Cytokine receptors that activates JAK-STAT signaling</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#jak-stat-signaling-pathway"><span class="nav-number">1.</span> <span class="nav-text">JAK-STAT signaling pathway</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94cytokine-receptors-that-activates-nfkappab-signaling"><span class="nav-number"></span> <span class="nav-text">五、Cytokine receptors that activates NF\(\kappa\)B signaling</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nfkappab-pathway"><span class="nav-number">1.</span> <span class="nav-text">NF\(\kappa\)B pathway</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%ADother-signaling-notch-wnt-hedgehog-and-circadian-clock"><span class="nav-number"></span> <span class="nav-text">六、Other signaling: Notch, Wnt, Hedgehog and Circadian clock</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#notch-pathway"><span class="nav-number">1.</span> <span class="nav-text">Notch pathway</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wnt-pathway"><span class="nav-number">2.</span> <span class="nav-text">Wnt pathway</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hedgehog-pathway"><span class="nav-number">3.</span> <span class="nav-text">Hedgehog pathway</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#circadian-clock"><span class="nav-number">4.</span> <span class="nav-text">Circadian clock</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83plant-signaling"><span class="nav-number"></span> <span class="nav-text">七、Plant signaling</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#response-to-stimuli-tropisms"><span class="nav-number">1.</span> <span class="nav-text">Response to stimuli: tropisms</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plant-hormones"><span class="nav-number">2.</span> <span class="nav-text">Plant hormones</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#similar-signaling-pathways-exist-in-plants-to-regulate-plant-growth"><span class="nav-number">3.</span> <span class="nav-text">Similar signaling pathways exist in plants to regulate plant growth</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">一个普通人</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">204</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2.1m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">31:04</span>
+</div><br /> <!-- 换行 -->
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
 
-
-    
-
-    
-  </div>
   
-</footer>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
+<script src="/js/utils.js"></script>
 
-<!-- Plugins -->
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
 
 
   
-    <script  src="/js/lazyload.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
   
 
+  
+      
 
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
       }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "L17 Cell communication via enzyme-coupled receptors&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
     };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
-
-
-
-
+    
 
   
 
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
-  
 
-
-
-
-
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
-
-
-
-
-
-
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
-
-
 </html>

@@ -1,271 +1,294 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (GMT+08:00)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L11 Mutation and DNA repair">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/07/25/L11%20Mutation%20and%20DNA%20repair/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (GMT+08:00)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130164702111.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130165336424.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130165937018.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130170252901.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130170739655.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130171012417.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130171228511.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130171858384.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130173353820.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130174625066.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130174708225.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130175026490.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130175145338.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130175624700.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130180409422.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130181151907.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130181744318.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182221508.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182412237.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182543536.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182845729.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183132651.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183455902.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183637475.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183655700.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184106958.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184236065.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184509507.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184800489.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130185740285.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130185758179.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130190126239.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130190514159.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130191254017.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130191707854.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130191826617.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192322187.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192443939.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192512895.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192628841.png">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130164702111.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/07/25/L11%20Mutation%20and%20DNA%20repair/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>L11 Mutation and DNA repair | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="一个普通人">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>L11 Mutation and DNA repair - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-10_19-16-57.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-07-25 23:45">
-      2020年7月25日 晚上
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      3.1k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      13
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/25/L11%20Mutation%20and%20DNA%20repair/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="一个普通人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          L11 Mutation and DNA repair
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-25 23:45:00" itemprop="dateCreated datePublished" datetime="2020-07-25T23:45:00+08:00">2020-07-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/Genetics/" itemprop="url" rel="index"><span itemprop="name">Genetics</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/07/25/L11%20Mutation%20and%20DNA%20repair/" class="post-meta-item leancloud_visitors" data-flag-title="L11 Mutation and DNA repair" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/07/25/L11%20Mutation%20and%20DNA%20repair/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/25/L11%20Mutation%20and%20DNA%20repair/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>13k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-</head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：5 个月前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80mutations"><span class="post-toc-text">一、Mutations</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#introduction"><span class="post-toc-text">Introduction</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mutation-types"><span class="post-toc-text">Mutation Types</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#chromosome-mutations-and-genome-mutations"><span class="post-toc-text">Chromosome Mutations And Genome Mutations</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#alter-chromosome-structure"><span class="post-toc-text">1. Alter Chromosome Structure</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#alter-chromosome-number"><span class="post-toc-text">2. Alter Chromosome Number</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#gene-mutations"><span class="post-toc-text">Gene Mutations</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mutation-effects"><span class="post-toc-text">Mutation Effects</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#point-mutation-effects"><span class="post-toc-text">1. Point Mutation Effects</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#point-mutations-silent-mutation-%E9%9D%99%E9%BB%98%E7%AA%81%E5%8F%98"><span class="post-toc-text">Point Mutations: Silent Mutation 静默突变</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#point-mutations-missense-mutations-%E9%94%99%E4%B9%89%E7%AA%81%E5%8F%98"><span class="post-toc-text">Point Mutations: Missense Mutations 错义突变</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#point-mutations-nonsense-mutations-%E6%97%A0%E4%B9%89%E7%AA%81%E5%8F%98"><span class="post-toc-text">Point Mutations: Nonsense Mutations 无义突变</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#point-mutations-frameshift-mutations-%E7%A7%BB%E7%A0%81%E7%AA%81%E5%8F%98"><span class="post-toc-text">Point Mutations: Frameshift Mutations 移码突变</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#summary-of-point-mutations"><span class="post-toc-text">Summary of Point Mutations</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mutation-effects-on-genotype-and-phenotype"><span class="post-toc-text">2. Mutation Effects on Genotype and Phenotype</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#gene-mutations-outside-of-coding-sequences"><span class="post-toc-text">3. Gene Mutations outside of coding sequences</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#different-mutation-locations"><span class="post-toc-text">Different Mutation Locations</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#occur-in-germline-%E7%94%9F%E6%AE%96%E7%BB%86%E8%83%9E"><span class="post-toc-text">1. Occur in Germline 生殖细胞</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#occur-in-somatic-cells-%E4%BD%93%E7%BB%86%E8%83%9E"><span class="post-toc-text">2. Occur in Somatic Cells 体细胞</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#occurrence-and-causes-of-mutation"><span class="post-toc-text">Occurrence and Causes of Mutation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#spontaneous-mutations"><span class="post-toc-text">1. Spontaneous Mutations</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#depurination"><span class="post-toc-text">Depurination</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#deamination"><span class="post-toc-text">Deamination</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tautomeric-shift"><span class="post-toc-text">Tautomeric Shift</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#types-of-mutagens"><span class="post-toc-text">2. Types of Mutagens</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#chemical-mutagens-alter-dna-structure-in-different-ways"><span class="post-toc-text">Chemical Mutagens Alter DNA Structure in Different Ways</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#base-modifiers"><span class="post-toc-text">(1) Base Modifiers</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#deaminating-agent"><span class="post-toc-text">Deaminating Agent</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#hydroxylating-agent"><span class="post-toc-text">Hydroxylating Agent</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#alkylating-agent"><span class="post-toc-text">Alkylating Agent</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#intercalating-agent"><span class="post-toc-text">(2) Intercalating Agent</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#base-analogs"><span class="post-toc-text">(3) Base Analogs</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#physical-mutagens"><span class="post-toc-text">Physical Mutagens</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#nonionizing-radiation"><span class="post-toc-text">(2) Nonionizing radiation</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tests-for-mutagens"><span class="post-toc-text">Tests for Mutagens</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8Cdna-repair"><span class="post-toc-text">二、DNA Repair</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#directly-repaired"><span class="post-toc-text">Directly Repaired</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#base-excision-repair"><span class="post-toc-text">Base Excision Repair</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#nucleotide-excision-repair-ner"><span class="post-toc-text">nucleotide excision repair (NER)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mismatch-repair-systems-detect-correct-a-base-pair-mismatch"><span class="post-toc-text">Mismatch Repair Systems Detect Correct A Base Pair Mismatch</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#recombination-repair"><span class="post-toc-text">Recombination Repair</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#homologous-recombination-repair-%E5%90%8C%E6%BA%90%E9%87%8D%E7%BB%84%E4%BF%AE%E5%A4%8D"><span class="post-toc-text">1. homologous recombination repair 同源重组修复</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nonhomologous-end-joining-%E9%9D%9E%E5%90%8C%E6%BA%90%E7%AB%AF%E8%81%94%E6%8E%A5"><span class="post-toc-text">2. nonhomologous end joining 非同源端联接</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#inherited-human-diseases-with-defects-in-dna-repair"><span class="post-toc-text">Inherited Human Diseases with Defects in DNA Repair</span></a></li></ol></li></ol>
-
-              <h1 id="一mutations">一、Mutations</h1>
+        <h1 id="一mutations">一、Mutations</h1>
 <h2 id="introduction">Introduction</h2>
 <p>The term mutation refers to a <u>heritable</u> change in the genetic material</p>
 <blockquote>
@@ -311,14 +334,14 @@
 </ol>
 <h3 id="alter-chromosome-number">2. Alter Chromosome Number</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130164702111.png" srcset="/img/loading.gif" alt="image-20191130164702111" /><figcaption aria-hidden="true">image-20191130164702111</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130164702111.png" alt="image-20191130164702111" /><figcaption aria-hidden="true">image-20191130164702111</figcaption>
 </figure>
 <h2 id="gene-mutations">Gene Mutations</h2>
 <p>A point mutation is a change in a single base pair</p>
 <ul>
 <li>It can involve a base substitution</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130165336424.png" srcset="/img/loading.gif" alt="image-20191130165336424" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130165336424.png" alt="image-20191130165336424" style="zoom: 33%;" /></p>
 <ol type="1">
 <li><p>A <strong>transition（（碱基）转换）</strong> is a change of <u>a pyrimidine (C, T) to another pyrimidine or a purine (A, G) to another purine</u></p></li>
 <li><p>A <strong>transversion（（碱基）颠换）</strong> is a change of a <u>pyrimidine to a purine or vice versa</u></p></li>
@@ -330,11 +353,11 @@
 <li><strong>Insertion</strong></li>
 <li><strong>Deletion</strong></li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130165937018.png" srcset="/img/loading.gif" alt="image-20191130165937018" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130165937018.png" alt="image-20191130165937018" style="zoom: 33%;" /></p>
 <h2 id="mutation-effects">Mutation Effects</h2>
 <h3 id="point-mutation-effects">1. Point Mutation Effects</h3>
 <p>Mutations in the coding sequence of a structural gene can have various effects on the polypeptide</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130170252901.png" srcset="/img/loading.gif" alt="image-20191130170252901" style="zoom: 80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130170252901.png" alt="image-20191130170252901" style="zoom: 80%;" /></p>
 <h4 id="point-mutations-silent-mutation-静默突变">Point Mutations: Silent Mutation 静默突变</h4>
 <p><strong>Silent mutations</strong> are those base substitutions that <u>do not alter the amino acid sequence of the polypeptide</u></p>
 <p>原因在于Due to the <strong>degeneracy（简并）</strong> of the genetic code</p>
@@ -351,7 +374,7 @@
 </ul>
 <p>Example: Sickle-cell anemia：</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130170739655.png" srcset="/img/loading.gif" alt="image-20191130170739655" /><figcaption aria-hidden="true">image-20191130170739655</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130170739655.png" alt="image-20191130170739655" /><figcaption aria-hidden="true">image-20191130170739655</figcaption>
 </figure>
 <h4 id="point-mutations-nonsense-mutations-无义突变">Point Mutations: Nonsense Mutations 无义突变</h4>
 <p><strong>Nonsense mutations</strong> are those base substitutions that <u>change a normal codon to a stop codon</u></p>
@@ -361,12 +384,12 @@
 <li>This <u>shifts the reading frame</u> so that translation of the mRNA results in a completely different amino acid sequence downstream of the mutation</li>
 </ul>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130171012417.png" srcset="/img/loading.gif" alt="image-20191130171012417" /><figcaption aria-hidden="true">image-20191130171012417</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130171012417.png" alt="image-20191130171012417" /><figcaption aria-hidden="true">image-20191130171012417</figcaption>
 </figure>
 <p>但是最终蛋白质的功能也可能不改变</p>
 <h4 id="summary-of-point-mutations">Summary of Point Mutations</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130171228511.png" srcset="/img/loading.gif" alt="image-20191130171228511" /><figcaption aria-hidden="true">image-20191130171228511</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130171228511.png" alt="image-20191130171228511" /><figcaption aria-hidden="true">image-20191130171228511</figcaption>
 </figure>
 <h3 id="mutation-effects-on-genotype-and-phenotype">2. Mutation Effects on Genotype and Phenotype</h3>
 <p>Mutations can also be described based on their effects on the wild-type phenotype</p>
@@ -393,7 +416,7 @@
 <li>Up mutations increase expression.</li>
 <li>Down mutations decrease expression</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130171858384.png" srcset="/img/loading.gif" alt="image-20191130171858384" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130171858384.png" alt="image-20191130171858384" style="zoom: 50%;" /></p>
 <h2 id="different-mutation-locations">Different Mutation Locations</h2>
 <p>Geneticists classify animal cells into two types</p>
 <ol type="1">
@@ -412,7 +435,7 @@
 <p>Somatic mutations are those that occur directly in a body cell, or in one of its precursor cells</p>
 <p>Somatic cell mutation may cause cancer.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130173353820.png" srcset="/img/loading.gif" alt="image-20191130173353820" /><figcaption aria-hidden="true">image-20191130173353820</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130173353820.png" alt="image-20191130173353820" /><figcaption aria-hidden="true">image-20191130173353820</figcaption>
 </figure>
 <h2 id="occurrence-and-causes-of-mutation">Occurrence and Causes of Mutation</h2>
 <p>Mutations can occur spontaneously or be induced</p>
@@ -448,25 +471,25 @@
 <p>AP位点能够由自发的去嘌呤作用产生，但也可能充当碱基切除修复机制中的中间产物。在这过程之中，DNA 糖苷酶识别受损的碱基，并切下N-糖苷键结，使碱基脱去产生AP位点。</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130174625066.png" srcset="/img/loading.gif" alt="image-20191130174625066" /><figcaption aria-hidden="true">image-20191130174625066</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130174625066.png" alt="image-20191130174625066" /><figcaption aria-hidden="true">image-20191130174625066</figcaption>
 </figure>
 <p>Fortunately, apurinic sites can be repaired</p>
 <ul>
 <li>However, if the repair system fails, a mutation may result during subsequent rounds of DNA replication</li>
 </ul>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130174708225.png" srcset="/img/loading.gif" alt="image-20191130174708225" /><figcaption aria-hidden="true">image-20191130174708225</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130174708225.png" alt="image-20191130174708225" /><figcaption aria-hidden="true">image-20191130174708225</figcaption>
 </figure>
 <h4 id="deamination">Deamination</h4>
 <p>Deamination involves the <u>removal of an amino group from the cytosine base</u></p>
 <ul>
 <li>The other bases are not readily deaminated</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130175026490.png" srcset="/img/loading.gif" alt="image-20191130175026490" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130175026490.png" alt="image-20191130175026490" style="zoom: 33%;" /></p>
 <p>DNA repair enzymes can recognize uracil as an inappropriate base in DNA and remove it</p>
 <p>However; if the repair system fails, a C-G to A-T mutation will result during subsequent rounds of DNA replication</p>
 <p>Deamination of 5-methyl cytosine can also occur</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130175145338.png" srcset="/img/loading.gif" alt="image-20191130175145338" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130175145338.png" alt="image-20191130175145338" style="zoom:33%;" /></p>
 <p>Thymine is a normal constituent of DNA</p>
 <p>This poses a problem for repair enzymes</p>
 <ul>
@@ -483,9 +506,9 @@
 <ul>
 <li>At a low rate, A and C can interconvert to an <strong>imino</strong> form（亚氨基形式）</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130175624700.png" srcset="/img/loading.gif" alt="image-20191130175624700" style="zoom: 50%;" /></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130180409422.png" srcset="/img/loading.gif" alt="image-20191130180409422" style="zoom: 67%;" /></p>
-<p>For a tautomeric shift to cause a mutation it must occur immediately prior to DNA replication <img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130181151907.png" srcset="/img/loading.gif" alt="image-20191130181151907" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130175624700.png" alt="image-20191130175624700" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130180409422.png" alt="image-20191130180409422" style="zoom: 67%;" /></p>
+<p>For a tautomeric shift to cause a mutation it must occur immediately prior to DNA replication <img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130181151907.png" alt="image-20191130181151907" style="zoom: 67%;" /></p>
 <h3 id="types-of-mutagens">2. Types of Mutagens</h3>
 <p>An enormous array of agents can act as mutagens that permanently alter the structure of DNA</p>
 <p>The public is concerned about mutagens for two main reasons:</p>
@@ -495,7 +518,7 @@
 </ol>
 <p>Mutagenic agents are usually classified as <strong>chemical</strong> or <strong>physical</strong> mutagens</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130181744318.png" srcset="/img/loading.gif" alt="image-20191130181744318" /><figcaption aria-hidden="true">image-20191130181744318</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130181744318.png" alt="image-20191130181744318" /><figcaption aria-hidden="true">image-20191130181744318</figcaption>
 </figure>
 <h4 id="chemical-mutagens-alter-dna-structure-in-different-ways">Chemical Mutagens Alter DNA Structure in Different Ways</h4>
 <p>Chemical Mutagens come into 3 main types:</p>
@@ -504,7 +527,7 @@
 <li>Intercalating agents 插入剂</li>
 <li>Base analogues</li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182221508.png" srcset="/img/loading.gif" alt="image-20191130182221508" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182221508.png" alt="image-20191130182221508" style="zoom:67%;" /></p>
 <h5 id="base-modifiers">(1) Base Modifiers</h5>
 <p>Base modifiers <u>covalently modify</u> the structure of nucleotides.</p>
 <ol type="1">
@@ -514,7 +537,7 @@
 </ol>
 <h6 id="deaminating-agent">Deaminating Agent</h6>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182412237.png" srcset="/img/loading.gif" alt="image-20191130182412237" /><figcaption aria-hidden="true">image-20191130182412237</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182412237.png" alt="image-20191130182412237" /><figcaption aria-hidden="true">image-20191130182412237</figcaption>
 </figure>
 <p>Example:</p>
 <ol type="1">
@@ -522,7 +545,7 @@
 </ol>
 <h6 id="hydroxylating-agent">Hydroxylating Agent</h6>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182543536.png" srcset="/img/loading.gif" alt="image-20191130182543536" /><figcaption aria-hidden="true">image-20191130182543536</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182543536.png" alt="image-20191130182543536" /><figcaption aria-hidden="true">image-20191130182543536</figcaption>
 </figure>
 <p>Example:</p>
 <ol type="1">
@@ -540,7 +563,7 @@
 <li>Attack <u>negative centers</u></li>
 <li>Add carbon-containinggroups (<strong>alkyl</strong> groups 烷基基团)</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182845729.png" srcset="/img/loading.gif" alt="image-20191130182845729" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130182845729.png" alt="image-20191130182845729" style="zoom: 67%;" /></p>
 <p>Common targets (red): N7 of G, N3 of A, phosphodiester bond O6 ofG</p>
 <p>Some chemical mutagens disrupt the appropriate pairing between nucleotides by alkylating bases within the DNA</p>
 <ul>
@@ -548,7 +571,7 @@
 <li>Examples: Nitrogen mustards and ethyl methanesulfonate (EMS)</li>
 </ul>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183132651.png" srcset="/img/loading.gif" alt="image-20191130183132651" /><figcaption aria-hidden="true">image-20191130183132651</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183132651.png" alt="image-20191130183132651" /><figcaption aria-hidden="true">image-20191130183132651</figcaption>
 </figure>
 <h5 id="intercalating-agent">(2) Intercalating Agent</h5>
 <p>Intercalating agents contain flat planar structures that <u>intercalate themselves into the double helix</u></p>
@@ -561,20 +584,20 @@
 <li>Acridine dyes 吖啶染料</li>
 <li>Proflavin 原黄素；二氨基吖啶</li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183455902.png" srcset="/img/loading.gif" alt="image-20191130183455902" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183455902.png" alt="image-20191130183455902" style="zoom: 50%;" /></p>
 <h5 id="base-analogs">(3) Base Analogs</h5>
 <p>Base analogues become incorporated into daughter strands during DNA replication</p>
 <ul>
 <li>For example, <strong>5-bromouracil（5-溴尿嘧啶 ）</strong> is a <u>thymine analogue</u></li>
 <li>It can be incorporated into DNA instead of thymine</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183637475.png" srcset="/img/loading.gif" alt="image-20191130183637475" style="zoom:67%;" /></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183655700.png" srcset="/img/loading.gif" alt="image-20191130183655700" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183637475.png" alt="image-20191130183637475" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130183655700.png" alt="image-20191130183655700" style="zoom:67%;" /></p>
 <p>In this way, 5-bromouracil can promote a change of an AT base pair into a GC base pair</p>
 <h4 id="physical-mutagens">Physical Mutagens</h4>
 <p>Physical mutagens come into two main types 1. Ionizing radiation 2. Nonionizing radiation ##### (1) Ionizing radiation + Includes X-rays and gamma rays + Has short wavelength and high energy + Can penetrate deeply into biological molecules + Creates chemically reactive molecules termed <u>free radicals</u> + Can cause + Base deletions + Oxidized bases + Single nicks（裂纹） in DNA strands + Cross-linking + Chromosomal breaks</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184106958.png" srcset="/img/loading.gif" alt="image-20191130184106958" /><figcaption aria-hidden="true">image-20191130184106958</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184106958.png" alt="image-20191130184106958" /><figcaption aria-hidden="true">image-20191130184106958</figcaption>
 </figure>
 <h5 id="nonionizing-radiation">(2) Nonionizing radiation</h5>
 <p>Includes UV light</p>
@@ -582,7 +605,7 @@
 <p>Cannot penetrate deeply into biological molecules</p>
 <p>Causes the formation of cross-linked thymine dimers</p>
 <p>Thymine dimers may cause mutations when that DNA strand is replicated</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184236065.png" srcset="/img/loading.gif" alt="image-20191130184236065" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184236065.png" alt="image-20191130184236065" style="zoom:50%;" /></p>
 <h4 id="tests-for-mutagens">Tests for Mutagens</h4>
 <p>Many different kinds of tests have been used to evaluate mutagenicity</p>
 <ul>
@@ -596,7 +619,7 @@
 <li>The Ames test <u>monitors the rate at which this second mutation occurs</u></li>
 </ul>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184509507.png" srcset="/img/loading.gif" alt="image-20191130184509507" /><figcaption aria-hidden="true">image-20191130184509507</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184509507.png" alt="image-20191130184509507" /><figcaption aria-hidden="true">image-20191130184509507</figcaption>
 </figure>
 <blockquote>
 <p>艾美氏试验（英语：Ames test，又称为细菌回复突变试验或安姆氏突变试验）为美国人布鲁斯·埃姆斯博士于1983年所提出的突变物测试方法。此法检测出175已知之致癌物，并发现其中有超过90%者皆显示为阳性(具突变性)，因此，艾美氏试验也被做为先期测试方法之一。而现在正以艾美氏试验为模式系统，进行各式化学物可能的毒性及致突变性之安全评估，但仍需其它的测试辅助测试而进一步确认。</p>
@@ -613,7 +636,7 @@
 <li>Normal DNA is <u>synthesized</u></li>
 </ol>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184800489.png" srcset="/img/loading.gif" alt="image-20191130184800489" /><figcaption aria-hidden="true">image-20191130184800489</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130184800489.png" alt="image-20191130184800489" /><figcaption aria-hidden="true">image-20191130184800489</figcaption>
 </figure>
 <h2 id="directly-repaired">Directly Repaired</h2>
 <p>In a few cases, the <u>covalent modification</u>s of nucleotides can be reversed by specific enzymes</p>
@@ -629,13 +652,13 @@
 <p>由系统发生学来看，光裂合酶为一个相当古老的酵素，从细菌、真菌，到动物体内都有，在植物体内尤为重要。但人和其他胎盘哺乳类体内却改以另一种较无效率的核苷酸切除修复法来取代光裂合酶，因此并无此酵素活性。</p>
 <p>在DNA中，相邻的胸腺嘧啶受到紫外线的照射时，会形成共价键，形成环丁烷桥，称为胸腺嘧啶二聚体，导致基因病变。光裂合酶会接在DNA上，切除胸腺嘧啶二聚体。</p>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130185740285.png" srcset="/img/loading.gif" alt="image-20191130185740285" style="zoom:67%;" /></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130185758179.png" srcset="/img/loading.gif" alt="image-20191130185758179" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130185740285.png" alt="image-20191130185740285" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130185758179.png" alt="image-20191130185758179" style="zoom:50%;" /></p>
 <p><span class="math inline">\(O^{6}\)</span><strong>-alkylguanine alkyltransferase</strong> <u>repairs alkylated</u> bases It transfers the methyl or ethyl group from the base to a cysteine side chain within the alkyltransferase protein</p>
 <ul>
 <li>Surprisingly, this permanently inactivates alkyltransferase!</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130190126239.png" srcset="/img/loading.gif" alt="image-20191130190126239" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130190126239.png" alt="image-20191130190126239" style="zoom:50%;" /></p>
 <h2 id="base-excision-repair">Base Excision Repair</h2>
 <p><strong>Base excision repair (BER)</strong> involves a category of enzymes known as DNA N-glycosylases</p>
 <ul>
@@ -647,7 +670,7 @@
 <li><p>3-methyladenine; 7-methylguanine</p></li>
 </ul>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130190514159.png" srcset="/img/loading.gif" alt="image-20191130190514159" /><figcaption aria-hidden="true">image-20191130190514159</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130190514159.png" alt="image-20191130190514159" /><figcaption aria-hidden="true">image-20191130190514159</figcaption>
 </figure>
 <h2 id="nucleotide-excision-repair-ner">nucleotide excision repair (NER)</h2>
 <p>An important general process for DNA repair is <u>nucleotide excision repair (NER)</u></p>
@@ -673,7 +696,7 @@
 <li>DNA polymerase and ligase finish the repair job</li>
 </ul>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130191254017.png" srcset="/img/loading.gif" alt="image-20191130191254017" /><figcaption aria-hidden="true">image-20191130191254017</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130191254017.png" alt="image-20191130191254017" /><figcaption aria-hidden="true">image-20191130191254017</figcaption>
 </figure>
 <h2 id="mismatch-repair-systems-detect-correct-a-base-pair-mismatch">Mismatch Repair Systems Detect Correct A Base Pair Mismatch</h2>
 <p>A base mismatch is another type of abnormality in DNA</p>
@@ -697,8 +720,8 @@
 <li>Immediately after replication, <u>the parental strand is methylated whereas the daughter is not!</u></li>
 </ul></li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130191707854.png" srcset="/img/loading.gif" alt="image-20191130191707854" style="zoom:67%;" /></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130191826617.png" srcset="/img/loading.gif" alt="image-20191130191826617" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130191707854.png" alt="image-20191130191707854" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130191826617.png" alt="image-20191130191826617" style="zoom:67%;" /></p>
 <h2 id="recombination-repair">Recombination Repair</h2>
 <p>DNA Double-Strand Breaks are very dangerous</p>
 <ul>
@@ -713,429 +736,387 @@
 </ul>
 <h3 id="homologous-recombination-repair-同源重组修复">1. homologous recombination repair 同源重组修复</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192322187.png" srcset="/img/loading.gif" alt="image-20191130192322187" /><figcaption aria-hidden="true">image-20191130192322187</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192322187.png" alt="image-20191130192322187" /><figcaption aria-hidden="true">image-20191130192322187</figcaption>
 </figure>
 <p>Advantage: Error-free</p>
 <p>Disadvantage: Sister chromatids <u>only available during S and G2 phases</u> of the cell cycle in eukaryotes or following DNA replication in bacteria</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192443939.png" srcset="/img/loading.gif" alt="image-20191130192443939" /><figcaption aria-hidden="true">image-20191130192443939</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192443939.png" alt="image-20191130192443939" /><figcaption aria-hidden="true">image-20191130192443939</figcaption>
 </figure>
 <h3 id="nonhomologous-end-joining-非同源端联接">2. nonhomologous end joining 非同源端联接</h3>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192512895.png" srcset="/img/loading.gif" alt="image-20191130192512895" />Advantage: NHEJ doesn't involve the participation of a sister chromatids → available at any stage of the cell cycle</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192512895.png" alt="image-20191130192512895" />Advantage: NHEJ doesn't involve the participation of a sister chromatids → available at any stage of the cell cycle</p>
 <p>Disadvantage: result in small deletions on the region that has been repaired</p>
 <h2 id="inherited-human-diseases-with-defects-in-dna-repair">Inherited Human Diseases with Defects in DNA Repair</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192628841.png" srcset="/img/loading.gif" alt="image-20191130192628841" /><figcaption aria-hidden="true">image-20191130192628841</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191130192628841.png" alt="image-20191130192628841" /><figcaption aria-hidden="true">image-20191130192628841</figcaption>
 </figure>
 
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/Genetics/">Genetics</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/Genetics/">Genetics</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/07/25/L11%20Biological%20Catalysts/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">L11 Biological Catalysts</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/07/25/L12%20The%20Kinetics%20of%20Enzymatic%20%20Catalysis/">
-                        <span class="hidden-mobile">L12 The Kinetics of Enzymatic Catalysis</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
+    </div>
 
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
+    
+    
+    
+        
 
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>向海
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://zhenyumi.github.io/2020/07/25/L11%20Mutation%20and%20DNA%20repair/" title="L11 Mutation and DNA repair">https://zhenyumi.github.io/2020/07/25/L11 Mutation and DNA repair/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
 
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Genetics/" rel="tag"># Genetics</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/25/L12%20The%20Kinetics%20of%20Enzymatic%20%20Catalysis/" rel="prev" title="L12 The Kinetics of Enzymatic Catalysis">
+      <i class="fa fa-chevron-left"></i> L12 The Kinetics of Enzymatic Catalysis
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/25/L11%20Biological%20Catalysts/" rel="next" title="L11 Biological Catalysts">
+      L11 Biological Catalysts <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80mutations"><span class="nav-number">1.</span> <span class="nav-text">一、Mutations</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-number">1.1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mutation-types"><span class="nav-number">1.2.</span> <span class="nav-text">Mutation Types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#chromosome-mutations-and-genome-mutations"><span class="nav-number">1.3.</span> <span class="nav-text">Chromosome Mutations And Genome Mutations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gene-mutations"><span class="nav-number">1.4.</span> <span class="nav-text">Gene Mutations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mutation-effects"><span class="nav-number">1.5.</span> <span class="nav-text">Mutation Effects</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#different-mutation-locations"><span class="nav-number">1.6.</span> <span class="nav-text">Different Mutation Locations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#occurrence-and-causes-of-mutation"><span class="nav-number">1.7.</span> <span class="nav-text">Occurrence and Causes of Mutation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Cdna-repair"><span class="nav-number">2.</span> <span class="nav-text">二、DNA Repair</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#directly-repaired"><span class="nav-number">2.1.</span> <span class="nav-text">Directly Repaired</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#base-excision-repair"><span class="nav-number">2.2.</span> <span class="nav-text">Base Excision Repair</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nucleotide-excision-repair-ner"><span class="nav-number">2.3.</span> <span class="nav-text">nucleotide excision repair (NER)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mismatch-repair-systems-detect-correct-a-base-pair-mismatch"><span class="nav-number">2.4.</span> <span class="nav-text">Mismatch Repair Systems Detect Correct A Base Pair Mismatch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#recombination-repair"><span class="nav-number">2.5.</span> <span class="nav-text">Recombination Repair</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#inherited-human-diseases-with-defects-in-dna-repair"><span class="nav-number">2.6.</span> <span class="nav-text">Inherited Human Diseases with Defects in DNA Repair</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">一个普通人</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">204</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2.1m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">31:04</span>
+</div><br /> <!-- 换行 -->
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
 
-
-    
-
-    
-  </div>
   
-</footer>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
+<script src="/js/utils.js"></script>
 
-<!-- Plugins -->
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
 
 
   
-    <script  src="/js/lazyload.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
   
 
+  
+      
 
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
       }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "L11 Mutation and DNA repair&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
     };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
-
-
-
-
+    
 
   
 
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
-  
 
-
-
-
-
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
-
-
-
-
-
-
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
-
-
 </html>

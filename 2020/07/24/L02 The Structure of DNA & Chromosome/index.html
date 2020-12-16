@@ -1,277 +1,305 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="No such things">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L02 The Structure of DNA &amp; Chromosome">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/07/24/L02%20The%20Structure%20of%20DNA%20&%20Chromosome/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="No such things">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104090950452.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568430505963.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568431000053.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568431229298.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568431282734.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104091858652.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104091803593.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224030946448.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224031103713.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568432693041.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224031051650.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224031325876.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568432888203.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568433005767.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568433357010.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568433641091.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568433482022.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104092807706.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568434503445.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568434596113.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568438122982.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568438238757.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224032457918.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224032521820.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224032834921.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224033858521.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224034251662.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568441045883.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224034911138.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568441338629.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568441787029.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224035554723.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568442133481.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568442997399.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224035858069.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568447836387.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568447868772.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224040133731.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224040215796.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224040703520.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224040851792.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224041147167.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224041546930.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224041653969.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224041715629.png">
+<meta property="article:published_time" content="2020-07-24T09:20:09.000Z">
+<meta property="article:modified_time" content="2020-07-24T09:20:09.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Molecular Biology">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104090950452.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/07/24/L02%20The%20Structure%20of%20DNA%20&%20Chromosome/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>L02 The Structure of DNA & Chromosome | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="一个普通人">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>L02 The Structure of DNA &amp; Chromosome - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_Sunlight%281%29.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-07-24 17:20">
-      2020年7月24日 下午
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      3.5k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      15
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/24/L02%20The%20Structure%20of%20DNA%20&%20Chromosome/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="一个普通人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          L02 The Structure of DNA & Chromosome
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-24 17:20:09" itemprop="dateCreated datePublished" datetime="2020-07-24T17:20:09+08:00">2020-07-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/Molecular-Biology/" itemprop="url" rel="index"><span itemprop="name">Molecular Biology</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/07/24/L02%20The%20Structure%20of%20DNA%20&%20Chromosome/" class="post-meta-item leancloud_visitors" data-flag-title="L02 The Structure of DNA & Chromosome" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/07/24/L02%20The%20Structure%20of%20DNA%20&%20Chromosome/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/24/L02%20The%20Structure%20of%20DNA%20&%20Chromosome/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>14k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-</head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：5 个月前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80dna"><span class="post-toc-text">一、DNA</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#central-dogma"><span class="post-toc-text">Central Dogma</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#components-of-nucleic-acids"><span class="post-toc-text">Components of Nucleic Acids</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#the-chemical-nature-of-dna"><span class="post-toc-text">The chemical nature of DNA</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#base-composition-in-dna"><span class="post-toc-text">1. Base Composition in DNA</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#chargoff"><span class="post-toc-text">Chargoff</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#g-c-and-a-t-pairing"><span class="post-toc-text">G-C and A-T pairing</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nucleic-acids-are-comprised-of-nucleotides"><span class="post-toc-text">2. Nucleic acids are comprised of nucleotides</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#g-c-and-a-t-pairing-1"><span class="post-toc-text">3. G-C and A-T pairing</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#structure-of-dna"><span class="post-toc-text">Structure of DNA</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#dna-comprised-of-anti-parallel-strands-held-together-by-hydrogen-bonds."><span class="post-toc-text">1. DNA: comprised of anti-parallel strands held together by hydrogen bonds.</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#dna-structures"><span class="post-toc-text">2. DNA structures</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dna-denaturation%E5%8F%98%E6%80%A7-and-hybridization%E6%9D%82%E4%BA%A4"><span class="post-toc-text">DNA denaturation（变性） and hybridization（杂交）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#denaturation-of-dna"><span class="post-toc-text">Denaturation of DNA</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#stability-of-dna-bases-of-molecular-tools-and-techniques"><span class="post-toc-text">Stability of DNA &amp; Bases of Molecular tools and techniques</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#tm-melting-temperature"><span class="post-toc-text">1. Tm (Melting Temperature)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#gc-bond-and-tm"><span class="post-toc-text">2. G–C Bond and Tm</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#renaturation-of-dna-aka-reannealing"><span class="post-toc-text">3. Renaturation of DNA (aka “reannealing)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dna-secondary-structures"><span class="post-toc-text">DNA secondary structures</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#patterns-in-dna"><span class="post-toc-text">Patterns in DNA</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#tandem-repeats-%E4%B8%B2%E8%81%94%E9%87%8D%E5%A4%8D"><span class="post-toc-text">1. Tandem repeats 串联重复</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#inverted-repeats-%E5%8F%8D%E5%90%91%E9%87%8D%E5%A4%8D%E5%BA%8F%E5%88%97"><span class="post-toc-text">2. Inverted Repeats 反向重复序列</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dna-supercoiling-%E8%B6%85%E8%9E%BA%E6%97%8B"><span class="post-toc-text">DNA supercoiling 超螺旋</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#topoisomerase"><span class="post-toc-text">1. Topoisomerase</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#macromolecule-isolation-and-characterization-dna-electrophoresis"><span class="post-toc-text">Macromolecule isolation and characterization: DNA electrophoresis</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8Cgenome-organization-from-nucleotides-to-chromatin"><span class="post-toc-text">二、Genome Organization: from nucleotides to chromatin</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#genome-size-varies"><span class="post-toc-text">Genome Size Varies</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#genome-packing"><span class="post-toc-text">Genome Packing</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#e.coli-genome"><span class="post-toc-text">1. E.coli Genome</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#eukaryotic-genome"><span class="post-toc-text">2. Eukaryotic Genome</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#whats-in-a-genome"><span class="post-toc-text">What’s In a Genome?</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#microscopically-visible-chromosomal-parts"><span class="post-toc-text">1. Microscopically visible chromosomal parts</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#heterochromatin-%E5%BC%82%E6%9F%93%E8%89%B2%E8%B4%A8"><span class="post-toc-text">Heterochromatin 异染色质</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#euchromatin-%E5%B8%B8%E6%9F%93%E8%89%B2%E8%B4%A8"><span class="post-toc-text">Euchromatin 常染色质</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#centromere-%E7%9D%80%E4%B8%9D%E7%B2%92"><span class="post-toc-text">Centromere 着丝粒</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#telomere-%E7%AB%AF%E7%B2%92"><span class="post-toc-text">Telomere 端粒</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sequence-defined-parts"><span class="post-toc-text">2. Sequence defined parts</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#genes-exonsintrons"><span class="post-toc-text">Genes (exons&#x2F;introns)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#regulatory-sequences"><span class="post-toc-text">Regulatory sequences</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#promoters-enhancers-repressors-insulators"><span class="post-toc-text">(1) Promoters, enhancers, repressors, insulators</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#small-heterochromatic-regions"><span class="post-toc-text">Small heterochromatic regions</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#higher-order-structure-and-regulatory-regions-of-eukaryotic-chromosomes"><span class="post-toc-text">Higher order structure and regulatory regions of eukaryotic chromosomes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#condensed-chromosomes"><span class="post-toc-text">1. Condensed Chromosomes</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nucleosome-%E6%A0%B8%E5%B0%8F%E4%BD%93"><span class="post-toc-text">2. Nucleosome 核小体</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#nucleosome-core-particle"><span class="post-toc-text">Nucleosome core particle</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#histone-modification"><span class="post-toc-text">3. Histone Modification</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#relationship-between-heterochromatin-and-euchromatin"><span class="post-toc-text">Relationship Between Heterochromatin And Euchromatin</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#histone-modification-alter-nucleosome-function"><span class="post-toc-text">Histone modification alter nucleosome function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#acetylation"><span class="post-toc-text">(1) acetylation</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#diversity-of-histone-modification"><span class="post-toc-text">Diversity of histone modification</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ways-to-study-the-histone-modification"><span class="post-toc-text">Ways to Study The Histone Modification</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%89different-genome"><span class="post-toc-text">三、Different Genome</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#bacterial-genome"><span class="post-toc-text">Bacterial Genome</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#organelle-dna"><span class="post-toc-text">Organelle DNA</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#chloroplast"><span class="post-toc-text">1. Chloroplast</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mitochondria"><span class="post-toc-text">2. Mitochondria</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dna-virus"><span class="post-toc-text">DNA Virus</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#eukaryotic-rna-viruses"><span class="post-toc-text">Eukaryotic RNA Viruses</span></a></li></ol></li></ol>
-
-              <h1 id="一dna">一、DNA</h1>
+        <h1 id="一dna">一、DNA</h1>
 <h2 id="central-dogma">Central Dogma</h2>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104090950452.png" srcset="/img/loading.gif" alt="image-20191104090950452" style="zoom: 80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104090950452.png" alt="image-20191104090950452" style="zoom: 80%;" /></p>
 <p>This defines the three important cellular processes: 1. Replication of DNA 2. Production of single-stranded RNA (“ssRNA”) from double-stranded DNA (dsDNA). This is known as “transcription”. 3. Production of proteins from RNA. This is known as translation. 4. Reverse transcription is rather unusual, but occurs mainly in viral-derived elements.</p>
 <h2 id="components-of-nucleic-acids">Components of Nucleic Acids</h2>
 <p>Nucleic acids, DNA and RNA, are comprised of monomeric units (nucleotides or “bases”) that have been joined together. These bases, sugars and phosphates are the fundamental building blocks</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568430505963.png" srcset="/img/loading.gif" alt="1568430505963" style="zoom: 40%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568430505963.png" alt="1568430505963" style="zoom: 40%;" /></p>
 <table>
 <thead>
 <tr class="header">
@@ -296,10 +324,10 @@
 </table>
 <h2 id="the-chemical-nature-of-dna">The chemical nature of DNA</h2>
 <p>Monomeric units (nucleotides or “bases”) joined together to form a phosphodiester backbone with of repeating <strong>pentose-phosphate</strong> units. Purine and pyrimidine bases extend as side groups</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568431000053.png" srcset="/img/loading.gif" alt="1568431000053" style="zoom:45%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568431000053.png" alt="1568431000053" style="zoom:45%;" /></p>
 <p>Like a polypeptide, a nucleic acid strand has an endto-end chemical orientation: <strong>the 5’ end has a hydroxyl or phosphate group on the 5’ carbon of its terminal sugar</strong>; the <strong>3’ end usually has a hydroxyl group</strong> on the 3’ carbon of its terminal sugar.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568431229298.png" srcset="/img/loading.gif" alt="1568431229298" style="zoom:33%;" /></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568431282734.png" srcset="/img/loading.gif" alt="1568431282734" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568431229298.png" alt="1568431229298" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568431282734.png" alt="1568431282734" style="zoom:67%;" /></p>
 <h3 id="base-composition-in-dna">1. Base Composition in DNA</h3>
 <h4 id="chargoff">Chargoff</h4>
 <p>Examined base ratios from bacteria, animals, and plants. Whenever he determined the ratio of the two purines (adenine / guanine) the A:G ratio was found to vary dramatically. For example: 0.4 for bacteria versus 1.72 for yeast <u>Chargoff's Rule states that [A] = [T] and [G] = [C]</u></p>
@@ -309,49 +337,49 @@
 \]</span></p>
 <h4 id="g-c-and-a-t-pairing">G-C and A-T pairing</h4>
 <p>Guanine-cytosine pairs use three hydrogen bonds, adenine-thymine use two.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104091858652.png" srcset="/img/loading.gif" alt="image-20191104091858652" style="zoom:57%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104091858652.png" alt="image-20191104091858652" style="zoom:57%;" /></p>
 <h3 id="nucleic-acids-are-comprised-of-nucleotides">2. Nucleic acids are comprised of nucleotides</h3>
 <p>Each nucleotide consists of a cyclic 5-carbon sugar, a purine or pyrimidine base attached to the sugar, and a phosphate.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104091803593.png" srcset="/img/loading.gif" alt="image-20191104091803593" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104091803593.png" alt="image-20191104091803593" style="zoom: 33%;" /></p>
 <h3 id="g-c-and-a-t-pairing-1">3. G-C and A-T pairing</h3>
 <p>Guanine-cytosine pairs use three hydrogen bonds, adenine-thymine use two.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224030946448.png" srcset="/img/loading.gif" alt="image-20191224030946448" style="zoom: 80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224030946448.png" alt="image-20191224030946448" style="zoom: 80%;" /></p>
 <h2 id="structure-of-dna">Structure of DNA</h2>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224031103713.png" srcset="/img/loading.gif" alt="image-20191224031103713" style="zoom:80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224031103713.png" alt="image-20191224031103713" style="zoom:80%;" /></p>
 <h3 id="dna-comprised-of-anti-parallel-strands-held-together-by-hydrogen-bonds.">1. DNA: comprised of anti-parallel strands held together by hydrogen bonds.</h3>
 <p>This is an important concept: the “top” and “bottom” strands of DNA are in opposite directions and are <strong>complementary（互补的）</strong> (A pairs with T and G pairs with C).</p>
 <p>By convention (and because synthesis proceeds in this direction), <font color="990000">the 5’ end of the top strand is drawn at the left</font>:</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568432693041.png" srcset="/img/loading.gif" alt="1568432693041" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568432693041.png" alt="1568432693041" style="zoom:33%;" /></p>
 <p>This is another way to draw two strands of DNA, but it means the same as a more complicated cartoon like this:</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224031051650.png" srcset="/img/loading.gif" alt="image-20191224031051650" /><figcaption aria-hidden="true">image-20191224031051650</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224031051650.png" alt="image-20191224031051650" /><figcaption aria-hidden="true">image-20191224031051650</figcaption>
 </figure>
 <h3 id="dna-structures">2. DNA structures</h3>
 <p>Three DNA structures have been described.</p>
 <p>In low humidity（湿度）, <strong>B DNA</strong> changes to the <strong>A form</strong>; RNA-DNA and RNA-RNA helices exist in this form.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224031325876.png" srcset="/img/loading.gif" alt="image-20191224031325876" style="zoom:80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224031325876.png" alt="image-20191224031325876" style="zoom:80%;" /></p>
 <p>Short DNA molecules can adopt an alternative left-handed configuration instead of the normal right-handed helix called <strong>Z DNA</strong> because the bases seem to zigzag when viewed from the side.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568432888203.png" srcset="/img/loading.gif" alt="1568432888203" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568432888203.png" alt="1568432888203" style="zoom:33%;" /></p>
 <h2 id="dna-denaturation变性-and-hybridization杂交">DNA denaturation（变性） and hybridization（杂交）</h2>
 <p>Denatured macromolecules have disrupted 3-D structures, compared to the ‘natural’ state. DNA can be disrupted by heating or high pH (basic) treatment to break the hydrogen bonds between the two strands.</p>
 <p>DNA can be disrupted by <strong>heating or high pH</strong> (basic) treatment to break the <strong>hydrogen bonds</strong> between the two strands.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568433005767.png" srcset="/img/loading.gif" alt="1568433005767" style="zoom: 60%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568433005767.png" alt="1568433005767" style="zoom: 60%;" /></p>
 <h4 id="denaturation-of-dna">Denaturation of DNA</h4>
 <p>Thermal stability of DNA molecules – helix favored by stacked bases and hydrogen bonding by anti-parallel strands.</p>
 <p>It is possible to follow denaturation in a spectrophotometer, by observing the change in absorbance at 260nm. Unstacked bases (random orientation) absorb more light than neatly stacked (oriented) base-pairs. This results in a melting curve. The rise in <span class="math inline">\(A_{260}\)</span> takes place rapidly.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568433357010.png" srcset="/img/loading.gif" alt="1568433357010" style="zoom:35%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568433357010.png" alt="1568433357010" style="zoom:35%;" /></p>
 <h4 id="stability-of-dna-bases-of-molecular-tools-and-techniques">Stability of DNA &amp; Bases of Molecular tools and techniques</h4>
 <p>The polar charges in each strand of the DNA attract, thus making double stranded more stable than single stranded.</p>
 <p>Therefore, if you optimize the conditions, it is possible to get only specific hybridization between nearly identical fragments. Less optimal conditions produce mis-paired bases</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568433641091.png" srcset="/img/loading.gif" alt="1568433641091" style="zoom: 43%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568433641091.png" alt="1568433641091" style="zoom: 43%;" /></p>
 <h3 id="tm-melting-temperature">1. T<sub>m</sub> (Melting Temperature)</h3>
 <p>T<sub>m</sub> = melting temperature (rise in A260 is half complete)</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568433482022.png" srcset="/img/loading.gif" alt="1568433482022" /><figcaption aria-hidden="true">1568433482022</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568433482022.png" alt="1568433482022" /><figcaption aria-hidden="true">1568433482022</figcaption>
 </figure>
 <p>The polar charges in each strand of the DNA attract, thus making double stranded more stable than single stranded. Therefore, if you optimize the conditions, it is possible to get only specific hybridization between nearly identical fragments. Less optimal conditions produce mis-paired bases</p>
 <h3 id="gc-bond-and-tm">2. G–C Bond and T<sub>m</sub></h3>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104092807706.png" srcset="/img/loading.gif" alt="image-20191104092807706" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104092807706.png" alt="image-20191104092807706" style="zoom:33%;" /></p>
 <center>
 Green line(Left Line) = low salt; Orange line(Right Line) = high salt
 </center>
@@ -366,31 +394,31 @@ Green line(Left Line) = low salt; Orange line(Right Line) = high salt
 </ol>
 <p><strong>Renaturation is a</strong> <strong>random process</strong> <strong>by which a strand finds its complementary partner.</strong></p>
 <p>As with denaturation, the change in <span class="math inline">\(A_{260}\)</span> is used to monitor the status of the DNA in solution</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568434503445.png" srcset="/img/loading.gif" alt="1568434503445" style="zoom: 25%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568434503445.png" alt="1568434503445" style="zoom: 25%;" /></p>
 <p>As with denaturation, the change in A260 is used to monitor the status of the DNA in solution.</p>
 <h2 id="dna-secondary-structures">DNA secondary structures</h2>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568434596113.png" srcset="/img/loading.gif" alt="1568434596113" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568434596113.png" alt="1568434596113" style="zoom: 67%;" /></p>
 <h2 id="patterns-in-dna">Patterns in DNA</h2>
 <h3 id="tandem-repeats-串联重复">1. Tandem repeats 串联重复</h3>
 <p>Tandem repeats – multiple copies of a short sequence, perhaps 2 to 5 bp, but can be much longer.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568438122982.png" srcset="/img/loading.gif" alt="1568438122982" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568438122982.png" alt="1568438122982" style="zoom: 50%;" /></p>
 <p>由于串联重复在不同个体中有着特异性，因此可以用来进行亲缘关系识别</p>
 <h3 id="inverted-repeats-反向重复序列">2. Inverted Repeats 反向重复序列</h3>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568438238757.png" srcset="/img/loading.gif" alt="1568438238757" style="zoom:60%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568438238757.png" alt="1568438238757" style="zoom:60%;" /></p>
 <p>a pair of similar or identical sequences, in an inverted orientation. Because of base-pairing, these can fold back on themselves ultimately can facilitate recombination.</p>
 <h2 id="dna-supercoiling-超螺旋">DNA supercoiling 超螺旋</h2>
 <p>脱氧核糖核酸链在双螺旋基础上如绳索般扭转的现象与过程称为DNA<u>超螺旋</u>。当脱氧核糖核酸处于“松弛”状态时，双螺旋的两股通常会延着中轴，<u>以每10.4个碱基对旋转一圈的方式扭转</u>。但如果脱氧核糖核酸受到扭转，其两股的缠绕方式将变得更紧或更松。<u>当脱氧核糖核酸扭转方向与双股螺旋的旋转方向相同时，称为正超螺旋，此时碱基将更加紧密地结合。反之若扭转方向与双股螺旋相反，则称为负超螺旋，碱基之间的结合度会降低。</u></p>
 <p>T = number of turns of DNA L = number of times one strand crosses the other.</p>
 <p>L &lt; T is a negative supercoil</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224032457918.png" srcset="/img/loading.gif" alt="image-20191224032457918" style="zoom:67%;" /></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224032521820.png" srcset="/img/loading.gif" alt="image-20191224032521820" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224032457918.png" alt="image-20191224032457918" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224032521820.png" alt="image-20191224032521820" style="zoom:50%;" /></p>
 <h3 id="topoisomerase">1. Topoisomerase</h3>
 <p>自然界中大多数的脱氧核糖核酸，会因为<strong>拓扑异构酶</strong>的作用，而形成轻微的负超螺旋状态。拓扑异构酶同时也在转录作用或DNA复制过程中，负责<u>纾解</u>脱氧核糖核酸链所受的扭转压力。</p>
 <p>Topoisomerase nicks one strand allowing the other to rotate, either introducing or releasing additional supercoils.</p>
 <h2 id="macromolecule-isolation-and-characterization-dna-electrophoresis">Macromolecule isolation and characterization: DNA electrophoresis</h2>
 <p>Electrophoresis: separation of nucleic acids or proteins-on the basis of <u>size, electric charge, and other physical properties.</u></p>
 <p>This usually takes place in a gel, under the influence of an electric field.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224032834921.png" srcset="/img/loading.gif" alt="image-20191224032834921" style="zoom: 80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224032834921.png" alt="image-20191224032834921" style="zoom: 80%;" /></p>
 <h1 id="二genome-organization-from-nucleotides-to-chromatin">二、Genome Organization: from nucleotides to chromatin</h1>
 <h2 id="genome-size-varies">Genome Size Varies</h2>
 <p>Classical measurements of DNA content showed that genome size is highly variable among diverse organisms</p>
@@ -405,10 +433,10 @@ Green line(Left Line) = low salt; Orange line(Right Line) = high salt
 <p>The E. coli chromosome is 1,300 um in length, but the cell is only 1x3 um.</p>
 <p>The DNA forms a tightly supercoiled “nucleoid” structure with a dense protein-containing “scaffold” core.</p>
 <p>The degree of supercoiling can be determined by centrifugation; nicked DNA is less dense, and one nick will release one loop of the DNA.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224033858521.png" srcset="/img/loading.gif" alt="image-20191224033858521" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224033858521.png" alt="image-20191224033858521" style="zoom:67%;" /></p>
 <h3 id="eukaryotic-genome">2. Eukaryotic Genome</h3>
 <p>The eukaryotic genome is located in the cell nucleus</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224034251662.png" srcset="/img/loading.gif" alt="image-20191224034251662" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224034251662.png" alt="image-20191224034251662" style="zoom:67%;" /></p>
 <h2 id="whats-in-a-genome">What’s In a Genome?</h2>
 <p>Microscopically visible chromosomal parts:</p>
 <ul>
@@ -443,13 +471,13 @@ Green line(Left Line) = low salt; Orange line(Right Line) = high salt
 <li>No meiotic recombination (减数分裂重组)</li>
 </ul>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568441045883.png" srcset="/img/loading.gif" alt="1568441045883" /><figcaption aria-hidden="true">1568441045883</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568441045883.png" alt="1568441045883" /><figcaption aria-hidden="true">1568441045883</figcaption>
 </figure>
 <h4 id="centromere-着丝粒">Centromere 着丝粒</h4>
 <p><u>A highly condensed and constricted region of a chromosome. During mitosis, spindle fibers attach to this point to direct segregation of chromosomes.</u></p>
 <p>染色体着丝粒（centromere），又称中节，主要作用是使复制的染色体在有丝分裂和减数分裂中可均等地分配到子细胞中。</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224034911138.png" srcset="/img/loading.gif" alt="image-20191224034911138" /><figcaption aria-hidden="true">image-20191224034911138</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224034911138.png" alt="image-20191224034911138" /><figcaption aria-hidden="true">image-20191224034911138</figcaption>
 </figure>
 <h4 id="telomere-端粒">Telomere 端粒</h4>
 <p><u>repetitive structures at the end of the chromosome that function to protect chromosome ends during replication.</u></p>
@@ -469,19 +497,19 @@ Green line(Left Line) = low salt; Orange line(Right Line) = high salt
 <p>Chromosomes condense during cell division, and condensed chromosome equals many levels of packaging</p>
 <p>The long linear eukaryotic chromosomes are dramatically condensed: approximately 2 meters of DNA fits in each cell.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568441338629.png" srcset="/img/loading.gif" alt="1568441338629" /><figcaption aria-hidden="true">1568441338629</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568441338629.png" alt="1568441338629" /><figcaption aria-hidden="true">1568441338629</figcaption>
 </figure>
 <h3 id="nucleosome-核小体">2. Nucleosome 核小体</h3>
 <p>Nucleosomes are the <u>basic units of eukaryotic chromosome structure.</u></p>
 <p>Two types of proteins are bound to the DNA which are classified as <strong>histones</strong> and <strong>non-histone chromosomal proteins.</strong></p>
 <p><u>The complex of both classes of proteins with nuclear DNA is known as chromatin</u></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568441787029.png" srcset="/img/loading.gif" alt="1568441787029" style="zoom: 23%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568441787029.png" alt="1568441787029" style="zoom: 23%;" /></p>
 <p>Partial digestion of chromatin produces ~180 bp bands, while more complete digestion produces 147 bp bands. 表明一个核小体包含的DNA长度为147 bp.</p>
 <ul>
 <li>Core histones H3, H2B, H2A, H4</li>
 <li>Linker histones H1, H5</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224035554723.png" srcset="/img/loading.gif" alt="image-20191224035554723" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224035554723.png" alt="image-20191224035554723" style="zoom: 33%;" /></p>
 <center>
 Isolated And Denatured Histone Proteins
 </center>
@@ -495,9 +523,9 @@ Isolated And Denatured Histone Proteins
 <li>Heterochromatin - “closed” form that is associated with a silenced state.</li>
 <li>Euchromatin - “open” or active chromatin which allows gene expression.</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568442133481.png" srcset="/img/loading.gif" alt="1568442133481" style="zoom: 80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568442133481.png" alt="1568442133481" style="zoom: 80%;" /></p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568442997399.png" srcset="/img/loading.gif" alt="1568442997399" /><figcaption aria-hidden="true">1568442997399</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568442997399.png" alt="1568442997399" /><figcaption aria-hidden="true">1568442997399</figcaption>
 </figure>
 <h4 id="histone-modification-alter-nucleosome-function">Histone modification alter nucleosome function</h4>
 <p>Post-translational modifications of the core histone tails that stick out from the nucleosomes have been directly linked to the regulation of chromatin structure, a concept known as the histone code 从核小体中伸出的核心组蛋白尾部的<strong>翻译后修饰（Post-translational modifications）</strong>与染色质结构的调控直接相关，这一概念被称为<strong>组蛋白密码（histone code）</strong></p>
@@ -505,31 +533,31 @@ Isolated And Denatured Histone Proteins
 <p>Depending on diverse histone modifications, a variety of multi-protein complexes wilbe recruited, thus allowing for tightly regulated transcriptional control.</p>
 <p>One obvious change is that <strong>acetylation（乙酰化作用）</strong> and <strong>phosphorylation（磷酸化作用）</strong> each acts to reduce the overall positive charge of the histone tails</p>
 <h5 id="acetylation">(1) acetylation</h5>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224035858069.png" srcset="/img/loading.gif" alt="image-20191224035858069" style="zoom: 60%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224035858069.png" alt="image-20191224035858069" style="zoom: 60%;" /></p>
 <p>Acetyl groups are added to histone tails, by <strong>HAT’s (Histone acetyl transferases).</strong> Acetyl groups are taken off by <strong>Histone deacetyl transferases (HDAC’s)</strong></p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568447836387.png" srcset="/img/loading.gif" alt="1568447836387" /><figcaption aria-hidden="true">1568447836387</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568447836387.png" alt="1568447836387" /><figcaption aria-hidden="true">1568447836387</figcaption>
 </figure>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568447868772.png" srcset="/img/loading.gif" alt="1568447868772" /><figcaption aria-hidden="true">1568447868772</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568447868772.png" alt="1568447868772" /><figcaption aria-hidden="true">1568447868772</figcaption>
 </figure>
 <p>Acetylation of histone tails, carried out by histone <strong>acetyltransferases（乙酰转移酶）</strong>, is primarily associated with <strong>active gene expression.</strong> <u>乙酰化使得异染色质向常染色质转化，而脱乙酰化与甲基化使得常染色质转化为异染色质</u></p>
 <p>Histone acetylation results in the <u>relaxation of the basic chromatin structure</u> through increased <strong>charge repulsion</strong> and by serving as binding sites for protein complexes of chromatin-modifying and transcriptional activators.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224040133731.png" srcset="/img/loading.gif" alt="image-20191224040133731" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224040133731.png" alt="image-20191224040133731" style="zoom: 67%;" /></p>
 <p>Acetylation of lysine（赖氨酸） neutralizes its positive charge (Fig. 8-41). This loss of positive charge reduces the affinity of the tails for <strong>the negatively charged backbone</strong> of the DNA.</p>
 <h4 id="diversity-of-histone-modification">Diversity of histone modification</h4>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224040215796.png" srcset="/img/loading.gif" alt="image-20191224040215796" style="zoom: 80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224040215796.png" alt="image-20191224040215796" style="zoom: 80%;" /></p>
 <p>Depending on diverse histone modifications, a variety of multi-protein complexes will be recruited, thus allowing for tightly regulated transcriptional control.</p>
 <h4 id="ways-to-study-the-histone-modification">Ways to Study The Histone Modification</h4>
 <p>It’s possible to use “chromatin immunoprecipitation” (Chromatin-IP, or ChIP) to identify DNA sequences associated with specific histone modifications</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224040703520.png" srcset="/img/loading.gif" alt="image-20191224040703520" /><figcaption aria-hidden="true">image-20191224040703520</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224040703520.png" alt="image-20191224040703520" /><figcaption aria-hidden="true">image-20191224040703520</figcaption>
 </figure>
 <h1 id="三different-genome">三、Different Genome</h1>
 <h2 id="bacterial-genome">Bacterial Genome</h2>
 <p><u>No histones in bacteria</u>! So no heterochromatin or euchromatin.</p>
 <p>Bacterium also contain circular plasmids – extrachromosomal &amp; self-replicating. These are important tools for molecular biology.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224040851792.png" srcset="/img/loading.gif" alt="image-20191224040851792" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224040851792.png" alt="image-20191224040851792" style="zoom: 67%;" /></p>
 <h2 id="organelle-dna">Organelle DNA</h2>
 <p>Majority of eukaryotic DNA is in nucleus but some is present in mitochondria and chloroplast</p>
 <p>Organelle DNA is like the bacterial genome: <u>without nucleus, circular DNA</u></p>
@@ -543,13 +571,13 @@ Isolated And Denatured Histone Proteins
 <li>The RNA polymerases and ribosomal proteins are <u>similar</u> to those of bacteria.</li>
 </ul>
 <p>Comparisons across plant species show variation whether some proteins are encoded in the chloroplast or the nucleus, but all chloroplasts contain similar sets of proteins. <u>Therefore, some exchange of genes occurs between the chloroplast and nucleus.</u></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224041147167.png" srcset="/img/loading.gif" alt="image-20191224041147167" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224041147167.png" alt="image-20191224041147167" style="zoom:67%;" /></p>
 <h3 id="mitochondria">2. Mitochondria</h3>
 <p>At mitosis, each daughter cell receives approximately the same number of mitochondria.</p>
 <p>Each mitochondria contains <u>multiple copies</u> of the genome.</p>
 <p>Therefore, the amount of mtDNA per cell depends on the number of mitochondria, the number of genomes per mitochondria, and the size of the mitochondrial genome.</p>
 <p>To date, plant mitochondrial genomes have not been successfully transformed. Selection is a particular challenge because these organelles are essential for life.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224041546930.png" srcset="/img/loading.gif" alt="image-20191224041546930" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224041546930.png" alt="image-20191224041546930" style="zoom: 33%;" /></p>
 <center>
 Cells contain multiple copies of the mtDNA. The yellow dots above mark the prescence of the mtDNA –at least 30 are visible in this cell.
 </center>
@@ -558,423 +586,381 @@ Cells contain multiple copies of the mtDNA. The yellow dots above mark the presc
 <p>Very simple “genomes” of just a few genes required for infection and replication. There are many, many types with different host specificities.</p>
 <p>DNA viruses can also <strong>package</strong> their DNA , taking advantage of host cellular machinery such as histones.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224041653969.png" srcset="/img/loading.gif" alt="image-20191224041653969" /><figcaption aria-hidden="true">image-20191224041653969</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224041653969.png" alt="image-20191224041653969" /><figcaption aria-hidden="true">image-20191224041653969</figcaption>
 </figure>
 <h2 id="eukaryotic-rna-viruses">Eukaryotic RNA Viruses</h2>
 <p>核糖核酸病毒（英语：RNA virus），又称RNA病毒，其遗传物质为RNA，这些核糖核酸通常是单链RNA（ssRNA），但是也可能是双链RNA（dsRNA）。</p>
 <p>Variety of sizes and shapes, enveloped or not. Typically replicate without an RNA intermediate (RNA RNA).</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224041715629.png" srcset="/img/loading.gif" alt="image-20191224041715629" /><figcaption aria-hidden="true">image-20191224041715629</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191224041715629.png" alt="image-20191224041715629" /><figcaption aria-hidden="true">image-20191224041715629</figcaption>
 </figure>
 
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/Molecular-Biology/">Molecular Biology</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/Molecular-Biology/">Molecular Biology</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/07/24/L15%20Plant%20Biotech/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">L15 Plant Biotech</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/07/24/L03%20RNA%20and%20Protin/">
-                        <span class="hidden-mobile">L03 RNA and Protein</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
+    </div>
 
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
+    
+    
+    
+        
 
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>向海
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://zhenyumi.github.io/2020/07/24/L02%20The%20Structure%20of%20DNA%20&%20Chromosome/" title="L02 The Structure of DNA &amp; Chromosome">https://zhenyumi.github.io/2020/07/24/L02 The Structure of DNA & Chromosome/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
 
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Molecular-Biology/" rel="tag"># Molecular Biology</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/24/L03%20RNA%20and%20Protin/" rel="prev" title="L03 RNA and Protein">
+      <i class="fa fa-chevron-left"></i> L03 RNA and Protein
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/24/L15%20Plant%20Biotech/" rel="next" title="L15 Plant Biotech">
+      L15 Plant Biotech <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80dna"><span class="nav-number">1.</span> <span class="nav-text">一、DNA</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#central-dogma"><span class="nav-number">1.1.</span> <span class="nav-text">Central Dogma</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#components-of-nucleic-acids"><span class="nav-number">1.2.</span> <span class="nav-text">Components of Nucleic Acids</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-chemical-nature-of-dna"><span class="nav-number">1.3.</span> <span class="nav-text">The chemical nature of DNA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#structure-of-dna"><span class="nav-number">1.4.</span> <span class="nav-text">Structure of DNA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dna-denaturation%E5%8F%98%E6%80%A7-and-hybridization%E6%9D%82%E4%BA%A4"><span class="nav-number">1.5.</span> <span class="nav-text">DNA denaturation（变性） and hybridization（杂交）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dna-secondary-structures"><span class="nav-number">1.6.</span> <span class="nav-text">DNA secondary structures</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#patterns-in-dna"><span class="nav-number">1.7.</span> <span class="nav-text">Patterns in DNA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dna-supercoiling-%E8%B6%85%E8%9E%BA%E6%97%8B"><span class="nav-number">1.8.</span> <span class="nav-text">DNA supercoiling 超螺旋</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#macromolecule-isolation-and-characterization-dna-electrophoresis"><span class="nav-number">1.9.</span> <span class="nav-text">Macromolecule isolation and characterization: DNA electrophoresis</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Cgenome-organization-from-nucleotides-to-chromatin"><span class="nav-number">2.</span> <span class="nav-text">二、Genome Organization: from nucleotides to chromatin</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#genome-size-varies"><span class="nav-number">2.1.</span> <span class="nav-text">Genome Size Varies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#genome-packing"><span class="nav-number">2.2.</span> <span class="nav-text">Genome Packing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#whats-in-a-genome"><span class="nav-number">2.3.</span> <span class="nav-text">What’s In a Genome?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#higher-order-structure-and-regulatory-regions-of-eukaryotic-chromosomes"><span class="nav-number">2.4.</span> <span class="nav-text">Higher order structure and regulatory regions of eukaryotic chromosomes</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89different-genome"><span class="nav-number">3.</span> <span class="nav-text">三、Different Genome</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#bacterial-genome"><span class="nav-number">3.1.</span> <span class="nav-text">Bacterial Genome</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#organelle-dna"><span class="nav-number">3.2.</span> <span class="nav-text">Organelle DNA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dna-virus"><span class="nav-number">3.3.</span> <span class="nav-text">DNA Virus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eukaryotic-rna-viruses"><span class="nav-number">3.4.</span> <span class="nav-text">Eukaryotic RNA Viruses</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">一个普通人</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">204</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2.1m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">31:04</span>
+</div><br /> <!-- 换行 -->
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
 
-
-    
-
-    
-  </div>
   
-</footer>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
+<script src="/js/utils.js"></script>
 
-<!-- Plugins -->
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
 
 
   
-    <script  src="/js/lazyload.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
   
 
+  
+      
 
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
       }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "L02 The Structure of DNA & Chromosome&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
     };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
-
-
-
-
+    
 
   
 
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
-  
 
-
-
-
-
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
-
-
-
-
-
-
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
-
-
 </html>

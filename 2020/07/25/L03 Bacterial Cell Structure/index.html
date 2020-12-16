@@ -1,271 +1,313 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Sat Jul 25 2020 23:16:09 GMT+0800 (GMT+08:00)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L03 Bacterial Cell Structure">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/07/25/L03%20Bacterial%20Cell%20Structure/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:16:09 GMT+0800 (GMT+08:00)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220103933000.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567920794621.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567840324169.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567840525661.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567841524644.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567841874541.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567842221368.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567842599751.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567842838776.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567843619194.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567652749674.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567852338839.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220105141783.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567921393433.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567922693099.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567922607405.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567923850353.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220110223955.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567925834138.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567926079384.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220110859753.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567926817514.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567927760144.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567927118512.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567928189860.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567928631694.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220115012172.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567929015142.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220115157466.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220115647904.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220115733375.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568271099112.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567949969518.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567950030679.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568271898952.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568272999662.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220154314242.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220154813320.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220155137247.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220155309808.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220160725580.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220161017640.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220161632652.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220162205508.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220162233760.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220162755353.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220163221972.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220163346673.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220165019507.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220165159515.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220165429350.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220165543773.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220171424636.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220171457604.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220171643527.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220171737546.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220172037087.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220172311238.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220172428897.png">
+<meta property="article:published_time" content="2020-07-25T15:16:09.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:16:09.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Microbiology">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220103933000.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/07/25/L03%20Bacterial%20Cell%20Structure/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>L03 Bacterial Cell Structure | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="一个普通人">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>L03 Bacterial Cell Structure - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Microbiology/20200725_%E7%A9%BA%E3%81%AE%E6%97%85%281%29.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-07-25 23:16">
-      2020年7月25日 晚上
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      5.1k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      20
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/25/L03%20Bacterial%20Cell%20Structure/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="一个普通人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          L03 Bacterial Cell Structure
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-25 23:16:09" itemprop="dateCreated datePublished" datetime="2020-07-25T23:16:09+08:00">2020-07-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/Microbiology/" itemprop="url" rel="index"><span itemprop="name">Microbiology</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/07/25/L03%20Bacterial%20Cell%20Structure/" class="post-meta-item leancloud_visitors" data-flag-title="L03 Bacterial Cell Structure" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/07/25/L03%20Bacterial%20Cell%20Structure/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/25/L03%20Bacterial%20Cell%20Structure/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>20k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-</head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：5 个月前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80a-typical-bacterial-cell"><span class="post-toc-text">一、A Typical Bacterial Cell</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#size"><span class="post-toc-text">Size</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#shape-and-arrangement"><span class="post-toc-text">Shape and Arrangement</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cocci-s.-coccus%E7%90%83%E8%8F%8C-spheres"><span class="post-toc-text">1. Cocci (s., coccus，球菌) – spheres</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#diplococci-%E5%8F%8C%E7%90%83%E8%8F%8C"><span class="post-toc-text">diplococci 双球菌</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tetrads-%E5%9B%9B%E8%81%94%E7%90%83%E8%8F%8C"><span class="post-toc-text">tetrads 四联球菌</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#sarcinae-%E5%85%AB%E5%8F%A0%E7%90%83%E8%8F%8C"><span class="post-toc-text">sarcinae 八叠球菌</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#streptococci-%E9%93%BE%E7%90%83%E8%8F%8C"><span class="post-toc-text">streptococci 链球菌</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#staphylococci-%E8%91%A1%E8%90%84%E7%90%83%E8%8F%8C"><span class="post-toc-text">staphylococci 葡萄球菌</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#bacilli-s.-bacillus%E8%8A%BD%E5%AD%A2%E6%9D%86%E8%8F%8C%E5%B1%9E-rods"><span class="post-toc-text">2. bacilli (s., bacillus芽孢杆菌属) – rods</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#coccobacillus-%E7%90%83%E6%9D%86%E8%8F%8C"><span class="post-toc-text">Coccobacillus 球杆菌</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#vibrios-%E5%BC%A7%E8%8F%8C"><span class="post-toc-text">vibrios 弧菌</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#spirilla-%E8%9E%BA%E6%97%8B%E8%8F%8C"><span class="post-toc-text">spirilla 螺旋菌</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#spirochetes-%E8%9E%BA%E6%97%8B%E4%BD%93"><span class="post-toc-text">spirochetes 螺旋体</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#others"><span class="post-toc-text">3. Others</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#mycelium%E8%8F%8C%E4%B8%9D%E4%BD%93"><span class="post-toc-text">mycelium（菌丝体）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pleomorphic"><span class="post-toc-text">pleomorphic</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8Cbacterial-cell-organizationbacterial-cell-envelope"><span class="post-toc-text">二、Bacterial Cell Organization（Bacterial Cell Envelope）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#bacterial-plasma-membranes"><span class="post-toc-text">Bacterial Plasma Membranes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#membrane-proteins"><span class="post-toc-text">1. Membrane Proteins</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#fluid-mosaic-model-of-membrane-structure"><span class="post-toc-text">2. Fluid Mosaic Model of Membrane Structure</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#bacterial-lipid"><span class="post-toc-text">3. Bacterial Lipid</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#uptake-of-nutrients"><span class="post-toc-text">4. Uptake of Nutrients</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#primary-active-transport-%E5%8E%9F%E5%8F%91%E6%80%A7%E4%B8%BB%E5%8A%A8%E8%BF%90%E8%BE%93"><span class="post-toc-text">Primary active transport 原发性主动运输</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#abc-transporters"><span class="post-toc-text">(1) ABC Transporters</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#secondly-active-transport-%E7%BB%A7%E5%8F%91%E6%80%A7%E4%B8%BB%E5%8A%A8%E8%BF%90%E8%BE%93"><span class="post-toc-text">Secondly active transport 继发性主动运输</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#group-translocationbacteria-and-archaea"><span class="post-toc-text">Group Translocation—Bacteria and Archaea</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ion-uptake"><span class="post-toc-text">5. Ion uptake</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#bacterial-cell-walls"><span class="post-toc-text">Bacterial Cell Walls</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#functions"><span class="post-toc-text">1. Functions</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#peptidoglycan-%E8%82%BD%E8%81%9A%E7%B3%96murein%E8%83%9E%E5%A3%81%E8%B4%A8"><span class="post-toc-text">2. Peptidoglycan 肽聚糖（murein，胞壁质）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#strands-are-crosslinked"><span class="post-toc-text">Strands Are Crosslinked</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#gram-positive-cell-walls"><span class="post-toc-text">3. Gram-Positive Cell Walls</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%BB%93%E6%9E%84"><span class="post-toc-text">结构</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#functions-1"><span class="post-toc-text">Functions</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#periplasmic-space-of-gram-bacteria"><span class="post-toc-text">Periplasmic Space of Gram + Bacteria</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#gram-negative-cell-walls"><span class="post-toc-text">4. Gram-Negative Cell Walls</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%BB%93%E6%9E%84-1"><span class="post-toc-text">结构</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#gram-negative-outer-membrane-permeability"><span class="post-toc-text">Gram-Negative Outer Membrane Permeability</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#functions-of-lps"><span class="post-toc-text">5. Functions of LPS</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#importance-of-lps"><span class="post-toc-text">Importance of LPS</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mechanism-of-gram-stain-reaction"><span class="post-toc-text">6. Mechanism of Gram Stain Reaction</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#evidence-of-protective-nature-of-the-cell-wall"><span class="post-toc-text">7. Evidence of Protective Nature of the Cell Wall</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cell-envelope-layers-outside-the-cell-wall"><span class="post-toc-text">Cell Envelope Layers Outside the Cell Wall</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#capsules%E8%8D%9A%E8%86%9C-and-slime-layers%E9%BB%8F%E6%B6%B2%E5%B1%82"><span class="post-toc-text">1. Capsules（荚膜） and Slime Layers（黏液层）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#capsules"><span class="post-toc-text">Capsules</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#slime-layers"><span class="post-toc-text">Slime Layers</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#biofilm"><span class="post-toc-text">Biofilm</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#s-layers-surface-layers"><span class="post-toc-text">2. S-Layers (Surface Layers)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#bacterial-cytoplasm"><span class="post-toc-text">Bacterial Cytoplasm</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#bacterial-cytoskeleton"><span class="post-toc-text">1. Bacterial Cytoskeleton</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#three-elements"><span class="post-toc-text">Three elements</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#examples"><span class="post-toc-text">(1) Examples</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#three-model-cells"><span class="post-toc-text">Three model cells</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#intracytoplasmic-membranes-%E8%83%9E%E8%B4%A8%E5%86%85%E8%86%9C"><span class="post-toc-text">2. Intracytoplasmic Membranes 胞质内膜</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#inclusions%E7%BB%86%E8%83%9E%E8%B4%A8%E5%86%85%E5%90%AB%E7%89%A9"><span class="post-toc-text">3. Inclusions（细胞质内含物）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#storage-inclusions"><span class="post-toc-text">Storage Inclusions</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#microcompartments"><span class="post-toc-text">Microcompartments</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#other-inclusions"><span class="post-toc-text">Other Inclusions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#gas-vacuoles"><span class="post-toc-text">(1) Gas vacuoles</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#magnetosomes-%E7%A3%81%E5%B0%8F%E4%BD%93"><span class="post-toc-text">(2) Magnetosomes 磁小体</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ribosomes"><span class="post-toc-text">4. Ribosomes</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#the-nucleoid"><span class="post-toc-text">5. The Nucleoid</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#plasmids"><span class="post-toc-text">6. Plasmids</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#external-structures"><span class="post-toc-text">External Structures</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#fimbriae%E8%8F%8C%E6%AF%9B-and-pili"><span class="post-toc-text">Fimbriae（菌毛） and Pili</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#flagella-%E9%9E%AD%E6%AF%9B"><span class="post-toc-text">2. Flagella 鞭毛</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#functions-2"><span class="post-toc-text">Functions</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#patterns-of-flagella-distribution"><span class="post-toc-text">Patterns of Flagella Distribution</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#three-parts-of-flagella"><span class="post-toc-text">Three Parts of Flagella</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#flagellar-synthesis"><span class="post-toc-text">3. Flagellar Synthesis</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%89bacterial-motility-and-chemotaxis"><span class="post-toc-text">三、Bacterial Motility and Chemotaxis</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#motility"><span class="post-toc-text">Motility</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#bacterial-flagellar-movement"><span class="post-toc-text">1. Bacterial Flagellar Movement</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#mechanism"><span class="post-toc-text">Mechanism</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#spirochete-motility"><span class="post-toc-text">2. Spirochete Motility</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#twitching-and-gliding-motility"><span class="post-toc-text">3. Twitching and Gliding Motility</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#chemotaxis"><span class="post-toc-text">Chemotaxis</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9B%9Bthe-bacterial-endospore"><span class="post-toc-text">四、The Bacterial Endospore</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#endospore-structure"><span class="post-toc-text">Endospore Structure</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#reason-of-endospore-resistance"><span class="post-toc-text">Reason of Endospore Resistance</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sporulation-%E5%AD%A2%E5%AD%90%E5%BD%A2%E6%88%90"><span class="post-toc-text">Sporulation 孢子形成</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#formation-of-vegetative-cell"><span class="post-toc-text">Formation of Vegetative Cell</span></a></li></ol></li></ol>
-
-              <h1 id="一a-typical-bacterial-cell">一、A Typical Bacterial Cell</h1>
+        <h1 id="一a-typical-bacterial-cell">一、A Typical Bacterial Cell</h1>
 <h2 id="size">Size</h2>
 <p>The size of bacteria varies.</p>
 <ul>
@@ -273,17 +315,17 @@
 <li><p>average rod: 1.1-1.5 x2-6 pm (E.coli)</p></li>
 <li><p>very large 一 600 x 80pm Epulopiscium fishelsoni</p></li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220103933000.png" srcset="/img/loading.gif" alt="image-20191220103933000" style="zoom: 40%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220103933000.png" alt="image-20191220103933000" style="zoom: 40%;" /></p>
 <h2 id="shape-and-arrangement">Shape and Arrangement</h2>
 <p>cocci and rod are most common, but have many other shapes.</p>
 <p><font color="990000">怎么保持两个一组的？细胞膜表面的蛋白质？蛋白质位置？有什么用？提高物质交换的效率？</font></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567920794621.png" srcset="/img/loading.gif" alt="1567920794621" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567920794621.png" alt="1567920794621" style="zoom: 33%;" /></p>
 <h3 id="cocci-s.-coccus球菌-spheres">1. Cocci (s., coccus，球菌) – spheres</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567840324169.png" srcset="/img/loading.gif" alt="1567840324169" /><figcaption aria-hidden="true">1567840324169</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567840324169.png" alt="1567840324169" /><figcaption aria-hidden="true">1567840324169</figcaption>
 </figure>
 <h4 id="diplococci-双球菌">diplococci 双球菌</h4>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567840525661.png" srcset="/img/loading.gif" alt="1567840525661" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567840525661.png" alt="1567840525661" style="zoom: 67%;" /></p>
 <p>双球菌（拉丁语：diplococcus，复数diplococci）是球菌的一类，其细胞沿一平面分裂，而子细胞成双排列。代表种类有脑膜炎双球菌（Neisseria meningitidis）、淋球菌（Neisseria gonorrhoeae）等。</p>
 <h4 id="tetrads-四联球菌">tetrads 四联球菌</h4>
 <p>四联球菌由四个球菌呈正方形排列</p>
@@ -295,32 +337,32 @@
 <p>葡萄球菌（学名：Staphylococcus）是一群<strong>革兰氏染色阳性球菌</strong>，因常常堆聚成葡萄串状而得名。在生物学分类上，葡萄球菌是芽孢杆菌目的一个属。多数葡萄球菌为非致病菌，少数可致病。有些菌种为人类皮肤和黏膜上的正常菌种，不会产生芽孢，夹膜不明显，无鞭毛和运动性。</p>
 <p>代表种有金黄色葡萄球菌（S. aureus）、白色葡萄球菌（S. albus）、柠檬色葡萄球菌（S. citreus）等。</p>
 <h3 id="bacilli-s.-bacillus芽孢杆菌属-rods">2. bacilli (s., bacillus芽孢杆菌属) – rods</h3>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567841524644.png" srcset="/img/loading.gif" alt="1567841524644" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567841524644.png" alt="1567841524644" style="zoom: 33%;" /></p>
 <p>芽孢杆菌属（Bacillus）属于<strong>革兰氏阳性菌</strong>，包括模式生物枯草芽孢杆菌和著名的致病菌炭疽杆菌等。此属细菌中有专性需氧菌或兼性厌氧菌，他们遍布于各种环境，有些独立存在亦有些会寄生于其他生物。在不适合生存的情况下，此属细菌可以转化为<strong>内生孢子（endospore）</strong>以进入休眠状态，此休眠状态可以持续很久。</p>
 <p>在芽孢杆菌属中，其中枯草杆菌可以作为科学研究用的模式生物，还有可致病的炭疽杆菌和蜡样芽孢杆菌。</p>
 <h4 id="coccobacillus-球杆菌">Coccobacillus 球杆菌</h4>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567841874541.png" srcset="/img/loading.gif" alt="1567841874541" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567841874541.png" alt="1567841874541" style="zoom: 50%;" /></p>
 <p>球杆菌（英语：coccobacillus 复数时：coccobacilli）是一种形状介于球菌、杆菌之间的微生物。它的形状是非常短的杆形，因而常常被误认为球菌。流感嗜血杆菌，阴道加德纳菌和沙眼衣原体均为球杆菌。Aggregatibacter actinomycetemcomitans菌是一种普遍存于牙龈菌斑上的革兰氏阴性菌，它也是球杆菌的一员。同属球杆菌的不动杆菌菌株可在固体培养基上生长。可诱发百日咳的百日咳杆菌同样是球杆菌。在医学上具有重要地位、能诱发布氏杆菌病的布氏杆菌，以及同样在医学上具有重要地位、在第三世界国家常见的能诱发软下疳的、属于革兰氏阴性菌的杜克雷嗜血杆菌也是球杆菌家族的一员。</p>
 <h4 id="vibrios-弧菌">vibrios 弧菌</h4>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567842221368.png" srcset="/img/loading.gif" alt="1567842221368" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567842221368.png" alt="1567842221368" style="zoom:33%;" /></p>
 <p>弧菌菌体<strong>只有一个弯曲</strong>，呈<strong>弧状或逗点状</strong>。如霍乱弧菌。</p>
 <h4 id="spirilla-螺旋菌">spirilla 螺旋菌</h4>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567842599751.png" srcset="/img/loading.gif" alt="1567842599751" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567842599751.png" alt="1567842599751" style="zoom:50%;" /></p>
 <p><font color="990000">vibrios和spirilla的结构并不是flexible的，而螺旋体是flexible</font></p>
 <h4 id="spirochetes-螺旋体">spirochetes 螺旋体</h4>
 <p>螺旋体（spirochete）是一类细长、柔软、弯曲呈螺旋状、运动活泼的原核细胞型微生物。在生物学位置上介于细菌与原虫之间。螺旋体在自然界中分布广泛，常见于水、土壤及腐败的有机物上，亦有的存在人体口腔或动物体内。</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567842838776.png" srcset="/img/loading.gif" alt="1567842838776" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567842838776.png" alt="1567842838776" style="zoom: 67%;" /></p>
 <h3 id="others">3. Others</h3>
 <h4 id="mycelium菌丝体">mycelium（菌丝体）</h4>
 <p>Some bacteria can be thought of as multicellular.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567843619194.png" srcset="/img/loading.gif" alt="1567843619194" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567843619194.png" alt="1567843619194" style="zoom: 50%;" /></p>
 <p>Actino­mycetes（放线菌） typically form long filaments called hyphae（hypha的复数，菌丝）. The hy­phae may branch to produce a network called a mycelium, and in this sense, they are <strong>similar to</strong> eukaryotic filamentous fungi.</p>
 <h4 id="pleomorphic">pleomorphic</h4>
 <p>这种细菌being variable in shape and lacking a single, characteristic form.</p>
 <h1 id="二bacterial-cell-organizationbacterial-cell-envelope">二、Bacterial Cell Organization（Bacterial Cell Envelope）</h1>
 <p><strong>Cell envelope：</strong> The cell envelope is defined as the plasma membrane and all the surround­ing layers external to it.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567652749674.png" srcset="/img/loading.gif" alt="1567652749674" /><figcaption aria-hidden="true">1567652749674</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567652749674.png" alt="1567652749674" /><figcaption aria-hidden="true">1567652749674</figcaption>
 </figure>
 <table>
 <colgroup>
@@ -378,7 +420,7 @@
 </table>
 <p><font color="990000">Note that no single bacte­rium possesses all of these structures at all times. Some are found only in certain cells in certain conditions or in certain phases of the life cycle.</font></p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567852338839.png" srcset="/img/loading.gif" alt="1567852338839" /><figcaption aria-hidden="true">1567852338839</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567852338839.png" alt="1567852338839" /><figcaption aria-hidden="true">1567852338839</figcaption>
 </figure>
 <h2 id="bacterial-plasma-membranes">Bacterial Plasma Membranes</h2>
 <p>Encompasses the cytoplasm</p>
@@ -405,14 +447,14 @@
 </ul></li>
 <li>Membrane proteins</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220105141783.png" srcset="/img/loading.gif" alt="image-20191220105141783" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220105141783.png" alt="image-20191220105141783" style="zoom: 50%;" /></p>
 <h3 id="bacterial-lipid">3. Bacterial Lipid</h3>
 <p>Bacterial membranes lack sterols but do contain sterol-like molecules, hopanoids</p>
 <ol type="1">
 <li>stabilize membrane</li>
 <li>found in petroleum</li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567921393433.png" srcset="/img/loading.gif" alt="1567921393433" style="zoom: 25%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567921393433.png" alt="1567921393433" style="zoom: 25%;" /></p>
 <p>Bacterial membranes usually differ from eukaryotic mem­ branes in lacking <strong>sterols（甾醇类；固醇类）</strong> (steroid-containing lipids，含类固醇的脂质) such as cholesterol</p>
 <p>However, many bacterial membranes contain sterol-like molecules called <strong>hopanoids（藿烷类化合物）</strong></p>
 <p>hopanoids have contributed significantly to the formation of petroleum（石油）.</p>
@@ -428,7 +470,7 @@
 <h4 id="primary-active-transport-原发性主动运输">Primary active transport <strong>原发性主动运输</strong></h4>
 <p>直接利用ATP裂解所产生的能量进行物质运输 <font color="990000">without modifying them</font></p>
 <p>Primary active transporters are uniporters（单向运输载体）; that is, they move a single molecule across the membrane</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567922693099.png" srcset="/img/loading.gif" alt="1567922693099" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567922693099.png" alt="1567922693099" style="zoom: 33%;" /></p>
 <h5 id="abc-transporters">(1) ABC Transporters</h5>
 <p><strong>ATP-binding cassette transporters (ABC transporters)</strong> are important <u>primary active transporters</u>. It is observed in Bacteria, Archaea, and eukaryotes</p>
 <p>Primary active transporters use ATP</p>
@@ -438,7 +480,7 @@
 <li>2 cytoplasmic associated ATP-binding domains</li>
 <li>Substrate binding domains</li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567922607405.png" srcset="/img/loading.gif" alt="1567922607405" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567922607405.png" alt="1567922607405" style="zoom: 50%;" /></p>
 <h4 id="secondly-active-transport-继发性主动运输">Secondly active transport 继发性主动运输</h4>
 <p>继发性主动运输利用势能进行运输，在这个过程中也不会对所运输的物质进行修饰</p>
 <p>Secondary active transporters include the major facilitator superfamily (MFS，转运蛋白超家族) proteins.</p>
@@ -447,12 +489,12 @@
 <p>The distinguishing characteristic of group translocation is that a molecule is <strong>chemically modified</strong> as it is brought into the cell.</p>
 <p>Energy dependent transport that chemically modifies molecule as it is brought into cell</p>
 <p>Best known translocation system is phosphoenolpyruvate（PEP）: sugar phosphotransferase system (PTS)</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567923850353.png" srcset="/img/loading.gif" alt="1567923850353" style="zoom: 38%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567923850353.png" alt="1567923850353" style="zoom: 38%;" /></p>
 <h3 id="ion-uptake">5. Ion uptake</h3>
 <p>以铁离子为例。</p>
 <p>Ferric iron is very insoluble so uptake is difficult</p>
 <p>Microorganisms secrete siderophores to aid uptake</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220110223955.png" srcset="/img/loading.gif" alt="image-20191220110223955" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220110223955.png" alt="image-20191220110223955" style="zoom:33%;" /></p>
 <p>siderophores（铁载体），许多细菌通过分泌siderophores使得其与铁离子结合，再通过ABC transporters进入细胞</p>
 <h2 id="bacterial-cell-walls">Bacterial Cell Walls</h2>
 <h3 id="functions">1. Functions</h3>
@@ -470,7 +512,7 @@
 <li><p>N- acetylmuramic acid (NAM)</p></li>
 </ol>
 <p>alternating D- and L-amino acids</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567925834138.png" srcset="/img/loading.gif" alt="1567925834138" style="zoom:15%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567925834138.png" alt="1567925834138" style="zoom:15%;" /></p>
 <p>肽聚糖，存在于真细菌中的革兰氏阳性菌和革兰氏阴性菌的细胞壁中。肽聚糖的骨架是由两种糖衍生物：N-乙酰葡糖胺（N-acetylglucosamine，GlcNAc，NAG）和N-乙酰胞壁酸（N-acetylmuramic，MurNAc，NAM）交替相连而形成的多糖链，这些链相互交联形成肽聚糖。</p>
 <h4 id="strands-are-crosslinked">Strands Are Crosslinked</h4>
 <p>Peptidoglycan chains are crosslinked by peptides for strength</p>
@@ -479,20 +521,20 @@
 <li>peptidoglycan sacs 一 interconnected networks</li>
 <li>various structures occur</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567926079384.png" srcset="/img/loading.gif" alt="1567926079384" style="zoom:33%;" /></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220110859753.png" srcset="/img/loading.gif" alt="image-20191220110859753" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567926079384.png" alt="1567926079384" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220110859753.png" alt="image-20191220110859753" style="zoom:33%;" /></p>
 <blockquote>
 <p>The peptidoglycan sacculus is formed by linking the sugars of the peptidoglycan subunits together to form a strand; the strands are then cross-linked to each other by covalent bonds formed between the peptides extending from each strand.</p>
 </blockquote>
 <p>Peptidoglycan strands have a helical shape</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567926817514.png" srcset="/img/loading.gif" alt="1567926817514" style="zoom:25%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567926817514.png" alt="1567926817514" style="zoom:25%;" /></p>
 <p>The strand is helical, and the peptides extend out from the backbone in different direc­tions.</p>
 <ol type="1">
 <li><strong>Direct</strong>：Many bacteria cross-link the strands by connecting the carboxyl group of the D-alanine at position 4 directly to the amino group of diaminopimelic acid (position 3) of the other strand (the position 5o-alanine is removed as the cross-link is formed).</li>
 <li><strong>Indirect：</strong>Other bacteria use a <strong>peptide interbridge</strong> instead (figure 3.19). With or without an interbridge, cross-link results in one dense, interconnected network of peptidoglycan strands</li>
 </ol>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567927760144.png" srcset="/img/loading.gif" alt="1567927760144" /><figcaption aria-hidden="true">1567927760144</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567927760144.png" alt="1567927760144" /><figcaption aria-hidden="true">1567927760144</figcaption>
 </figure>
 <h3 id="gram-positive-cell-walls">3. Gram-Positive Cell Walls</h3>
 <h4 id="结构">结构</h4>
@@ -503,7 +545,7 @@
 <li>protect from environmental substances</li>
 <li>may bind to host cells</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567927118512.png" srcset="/img/loading.gif" alt="1567927118512" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567927118512.png" alt="1567927118512" style="zoom: 67%;" /></p>
 <p>Most bacteria that stain Gram positive belong to the phyla Fir­micutes and Actinobacteria, and most of these bacteria have <strong>thick cell walls</strong> composed of peptidoglycan and large amounts of other polymers such as <strong>teichoic acids</strong>（磷壁酸，(negatively charged)）</p>
 <h4 id="functions-1">Functions</h4>
 <ol type="1">
@@ -523,11 +565,11 @@
 <p>Consist of a thin layer of peptidoglycan surrounded by an outer membrane</p>
 <p>Outer membrane composed of <strong>lipids</strong>, <strong>lipoproteins</strong>, and <strong>lipopolysaccharide (LPS)</strong></p>
 <p><strong>No teichoic acids</strong></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567928189860.png" srcset="/img/loading.gif" alt="1567928189860" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567928189860.png" alt="1567928189860" style="zoom: 67%;" /></p>
 <h4 id="结构-1">结构</h4>
 <p>One of the most striking differences is the paucity of peptidoglycan. The peptidoglycan layer is very <strong>thin</strong> (2 to 7 nm, depending on the bacterium) and sits within the periplasmic space.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567928631694.png" srcset="/img/loading.gif" alt="1567928631694" /><figcaption aria-hidden="true">1567928631694</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567928631694.png" alt="1567928631694" /><figcaption aria-hidden="true">1567928631694</figcaption>
 </figure>
 <p>The outer membrane lies outside the thin peptidoglycan layer. It is linked to the cell by <strong>Braun's lipoprotein（胞壁质脂蛋白）</strong>, the most abun­dant protein in the outer membrane</p>
 <p><strong>Lipopolysaccharides (LPSs，脂多糖)</strong>. These large, complex molecules contain both lipid and carbohydrate, and consist of three parts: (1) lipid A, (2) the core polysaccharide, and (3) the O side chain（O antigen）.</p>
@@ -545,7 +587,7 @@
 <ul>
 <li>porin proteins form channels to let small molecules (600-700 daltons) pass</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220115012172.png" srcset="/img/loading.gif" alt="image-20191220115012172" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220115012172.png" alt="image-20191220115012172" style="zoom: 33%;" /></p>
 <h3 id="functions-of-lps">5. Functions of LPS</h3>
 <p>Consists of three parts</p>
 <ol type="1">
@@ -555,7 +597,7 @@
 </ol>
 <p>Lipid A embedded in outer membrane</p>
 <p>Core polysaccharide, O side chain extend out from the cell</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567929015142.png" srcset="/img/loading.gif" alt="1567929015142" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567929015142.png" alt="1567929015142" style="zoom: 33%;" /></p>
 <h4 id="importance-of-lps">Importance of LPS</h4>
 <ul>
 <li>contributes to negative charge on cell surface</li>
@@ -588,7 +630,7 @@
 </ol>
 <h3 id="evidence-of-protective-nature-of-the-cell-wall">7. Evidence of Protective Nature of the Cell Wall</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220115157466.png" srcset="/img/loading.gif" alt="image-20191220115157466" /><figcaption aria-hidden="true">image-20191220115157466</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220115157466.png" alt="image-20191220115157466" /><figcaption aria-hidden="true">image-20191220115157466</figcaption>
 </figure>
 <p><strong>lysozyme</strong> breaks the bond between N-acetyl glucosamine and N-acetylmuramic acid</p>
 <p><strong>penicillin</strong> inhibits peptidoglycan synthesis</p>
@@ -615,7 +657,7 @@
 <li>protect from desiccation</li>
 <li>exclude viruses and detergents</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220115647904.png" srcset="/img/loading.gif" alt="image-20191220115647904" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220115647904.png" alt="image-20191220115647904" style="zoom: 33%;" /></p>
 <p>Capsules are most often composed of polysaccha­rides, but some are constructed of other materials.</p>
 <p>(Bacillus anthracis（炭疽杆菌） has a proteinaceous capsule composed of poly­ D-glutamic acid.)</p>
 <p>Functions：</p>
@@ -626,17 +668,17 @@
 <h4 id="slime-layers">Slime Layers</h4>
 <p>similar to capsules except diffuse, unorganized and easily removed</p>
 <p>slime may aid in motility</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220115733375.png" srcset="/img/loading.gif" alt="image-20191220115733375" style="zoom:43%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220115733375.png" alt="image-20191220115733375" style="zoom:43%;" /></p>
 <p><strong>黏液层</strong>（slime layer）为一种细菌的特殊构造，它是围绕细菌细胞的一层很容易除去（比如通过离心的方法），而且<strong>无规则</strong>的物质。黏液层的主要化学成分为外多糖、糖蛋白，以及糖脂。</p>
 <p>黏液层的功能是保护细菌细胞免受来自环境的伤害，诸如抗菌素和干燥的环境。黏液层亦可以使细菌附着到光滑的表面上，比如义肢类医疗设备和导管。黏液层能保护菌落免被含氯制剂、含碘制剂等化学灭菌剂杀死，使得高压蒸汽灭菌法或沸水冲洗成为唯一的去污染方法。</p>
 <p>黏液层与S-Layers不同</p>
 <h4 id="biofilm">Biofilm</h4>
 <p>生物薄膜（英语：biofilm），也称作“生物膜”或“菌膜”，是一些微生物细胞由自身产生的胞外多聚物基质（主要为多糖）所包围而形成，且附著在浸有液体的惰性或生物表面的，具有结构的群落。</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568271099112.png" srcset="/img/loading.gif" alt="1568271099112" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568271099112.png" alt="1568271099112" style="zoom: 33%;" /></p>
 <h3 id="s-layers-surface-layers">2. S-Layers (Surface Layers)</h3>
 <p>Regularly structured layers of <strong>protein</strong> or <strong>glycoprotein</strong> that <u>self-assemble</u></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567949969518.png" srcset="/img/loading.gif" alt="1567949969518" style="zoom: 33%;" /></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567950030679.png" srcset="/img/loading.gif" alt="1567950030679" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567949969518.png" alt="1567949969518" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1567950030679.png" alt="1567950030679" style="zoom:33%;" /></p>
 <p>S层（S-layer, surface layer）是古菌和细菌细胞包被的一部分。S层由糖蛋白，蛋白质和铺成的单分子组成。S层通过分子的自组装形成，会覆盖整个细胞表面。</p>
 <p>Functions:</p>
 <ol type="1">
@@ -665,7 +707,7 @@
 <h4 id="three-elements">Three elements</h4>
 <p>Eukaryotes possess three cytoskeletal elements: actin <strong>actin filaments（微丝）</strong>, <strong>microtubules（微管）</strong>, and <strong>intermediate filaments（中间纤维，中间丝）</strong>.</p>
 <p>Actin filaments are made from actin, and microtubules are made from tubulin. Inter­ mediate filaments are composed of a mixture of one or more members of different classes of proteins.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568271898952.png" srcset="/img/loading.gif" alt="1568271898952" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568271898952.png" alt="1568271898952" style="zoom: 33%;" /></p>
 <h5 id="examples">(1) Examples</h5>
 <p><strong>FtsZ</strong> 一 many bacteria</p>
 <ul>
@@ -685,7 +727,7 @@
 <li>observed in many photosynthetic bacteria</li>
 <li>observed in many bacteria with high respiratory activity</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568272999662.png" srcset="/img/loading.gif" alt="1568272999662" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1568272999662.png" alt="1568272999662" style="zoom:33%;" /></p>
 <p>These can be extensive and complex in photosynthetic bacteria and in bacteria with very high respiratory activity, such as the nitrifying bacteria（硝化细菌）.</p>
 <p>The internal membranes of the photosyn­thetic cyanobacteria（蓝细菌） are called thylakoids（类囊体） and are analogous（同功的） to the thylakoids of chloroplasts.</p>
 <p>However, these internal membranes differ from the plasma membrane by being enriched for proteins and other molecules involved in energy conservation.</p>
@@ -707,7 +749,7 @@
 </ul>
 <p>Phosphate - Polyphosphate (Volutin, 异染质)</p>
 <p>Amino acids - cyanophycin granules</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220154314242.png" srcset="/img/loading.gif" alt="image-20191220154314242" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220154314242.png" alt="image-20191220154314242" style="zoom:50%;" /></p>
 <p>Cells have a wide variety of storage inclusions. Many are formed when one nutrient is in ready supply but another nutrient is not. Some store end products of metabolic processes.</p>
 <h4 id="microcompartments">Microcompartments</h4>
 <p>Not bound by membranes but compartmentalized for a specific function</p>
@@ -715,18 +757,18 @@
 <ul>
 <li>contain the enzyme used for <span class="math inline">\(CO_{2}\)</span> fixation</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220154813320.png" srcset="/img/loading.gif" alt="image-20191220154813320" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220154813320.png" alt="image-20191220154813320" style="zoom:33%;" /></p>
 <h4 id="other-inclusions">Other Inclusions</h4>
 <h5 id="gas-vacuoles">(1) Gas vacuoles</h5>
 <p>found in aquatic, photosynthetic bacteria and archaea</p>
 <p>provide buoyancy in gas vesicles</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220155137247.png" srcset="/img/loading.gif" alt="image-20191220155137247" /><figcaption aria-hidden="true">image-20191220155137247</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220155137247.png" alt="image-20191220155137247" /><figcaption aria-hidden="true">image-20191220155137247</figcaption>
 </figure>
 <h5 id="magnetosomes-磁小体">(2) Magnetosomes 磁小体</h5>
 <p>found in aquatic bacteria</p>
 <p>magnetite particles for orientation in Earth’s magnetic field</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220155309808.png" srcset="/img/loading.gif" alt="image-20191220155309808" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220155309808.png" alt="image-20191220155309808" style="zoom:33%;" /></p>
 <h3 id="ribosomes">4. Ribosomes</h3>
 <p>Complex protein/RNA structures</p>
 <ul>
@@ -739,13 +781,13 @@
 <li>23S and 5S in large subunit</li>
 </ul>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220160725580.png" srcset="/img/loading.gif" alt="image-20191220160725580" /><figcaption aria-hidden="true">image-20191220160725580</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220160725580.png" alt="image-20191220160725580" /><figcaption aria-hidden="true">image-20191220160725580</figcaption>
 </figure>
 <h3 id="the-nucleoid">5. The Nucleoid</h3>
 <p>Usually not membrane bound (few exceptions)</p>
 <p>Usually 1 closed circular, double-stranded DNA molecule</p>
 <p>Supercoiling and nucleoid proteins (different from histones) aid in folding</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220161017640.png" srcset="/img/loading.gif" alt="image-20191220161017640" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220161017640.png" alt="image-20191220161017640" style="zoom: 50%;" /></p>
 <h3 id="plasmids">6. Plasmids</h3>
 <p>Extrachromosomal DNA</p>
 <ul>
@@ -757,7 +799,7 @@
 <li>inherited during cell division</li>
 </ul>
 <p>Contain few genes that are non-essential</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220161632652.png" srcset="/img/loading.gif" alt="image-20191220161632652" style="zoom: 40%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220161632652.png" alt="image-20191220161632652" style="zoom: 40%;" /></p>
 <h2 id="external-structures">External Structures</h2>
 <p>Extend beyond the cell envelope in bacteria</p>
 <ul>
@@ -777,14 +819,14 @@
 <li>required for conjugation</li>
 <li>gene transfer</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220162205508.png" srcset="/img/loading.gif" alt="image-20191220162205508" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220162205508.png" alt="image-20191220162205508" style="zoom: 67%;" /></p>
 <p>Pili are primarily composed of oligomeric pilin proteins, which arrange helically to form a hollow cylinder.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220162233760.png" srcset="/img/loading.gif" alt="image-20191220162233760" /><figcaption aria-hidden="true">image-20191220162233760</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220162233760.png" alt="image-20191220162233760" /><figcaption aria-hidden="true">image-20191220162233760</figcaption>
 </figure>
 <h3 id="flagella-鞭毛">2. Flagella 鞭毛</h3>
 <p>Threadlike, locomotor appendages extending outward from plasma membrane and cell wall</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220162755353.png" srcset="/img/loading.gif" alt="image-20191220162755353" style="zoom: 80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220162755353.png" alt="image-20191220162755353" style="zoom: 80%;" /></p>
 <h4 id="functions-2">Functions</h4>
 <p>motility and swarming behavior</p>
 <p>attachment to surfaces</p>
@@ -809,12 +851,12 @@
 <ul>
 <li>series of rinqs that drive flaqellar motor</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220163221972.png" srcset="/img/loading.gif" alt="image-20191220163221972" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220163221972.png" alt="image-20191220163221972" style="zoom:50%;" /></p>
 <h3 id="flagellar-synthesis">3. Flagellar Synthesis</h3>
 <p>complex process involving many genes/gene products</p>
 <p>new flagellin molecules transported through the hollow filament using Type Ill-like secretion system</p>
 <p>filament subunits self-assemble with help of filament cap at tip, not base</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220163346673.png" srcset="/img/loading.gif" alt="image-20191220163346673" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220163346673.png" alt="image-20191220163346673" style="zoom: 33%;" /></p>
 <h1 id="三bacterial-motility-and-chemotaxis">三、Bacterial Motility and Chemotaxis</h1>
 <h2 id="motility">Motility</h2>
 <p>Flagellar movement 鞭毛运动</p>
@@ -828,7 +870,7 @@
 <li>in general, counterclockwise (CCW) rotation causes forward motion (run)</li>
 <li>in general, clockwise rotation (CW) disrupts run causing cell to stop and tumble</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220165019507.png" srcset="/img/loading.gif" alt="image-20191220165019507" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220165019507.png" alt="image-20191220165019507" style="zoom:33%;" /></p>
 <h4 id="mechanism">Mechanism</h4>
 <p>Flagellum is 2 part motor</p>
 <p>Rotor</p>
@@ -841,11 +883,11 @@
 <li><p>protons move through Mot A and Mot B channels using energy of proton motive force</p></li>
 <li><p>torque powers rotation of the basal body and filament</p></li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220165159515.png" srcset="/img/loading.gif" alt="image-20191220165159515" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220165159515.png" alt="image-20191220165159515" style="zoom: 50%;" /></p>
 <h3 id="spirochete-motility">2. Spirochete Motility</h3>
 <p>Multiple flagella form axial fibril which winds around the cell</p>
 <p>Corkscrew shape exhibits flexing and spinning movements</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220165429350.png" srcset="/img/loading.gif" alt="image-20191220165429350" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220165429350.png" alt="image-20191220165429350" style="zoom: 50%;" /></p>
 <h3 id="twitching-and-gliding-motility">3. Twitching and Gliding Motility</h3>
 <p>Twitching</p>
 <ul>
@@ -856,13 +898,13 @@
 <ul>
 <li>smooth movements</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220165543773.png" srcset="/img/loading.gif" alt="image-20191220165543773" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220165543773.png" alt="image-20191220165543773" style="zoom:67%;" /></p>
 <h2 id="chemotaxis">Chemotaxis</h2>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220171424636.png" srcset="/img/loading.gif" alt="image-20191220171424636" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220171424636.png" alt="image-20191220171424636" style="zoom:50%;" /></p>
 <p>In presence of attractant (b) tumbling frequency is intermittently reduced and runs in direction of attractant are longer</p>
 <p>Chemotaxis away from repellent involves similar but opposite responses</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220171457604.png" srcset="/img/loading.gif" alt="image-20191220171457604" /><figcaption aria-hidden="true">image-20191220171457604</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220171457604.png" alt="image-20191220171457604" /><figcaption aria-hidden="true">image-20191220171457604</figcaption>
 </figure>
 <h1 id="四the-bacterial-endospore">四、The Bacterial Endospore</h1>
 <p>Complex, dormant structure formed by some bacteria</p>
@@ -874,14 +916,14 @@
 <li>chemicals</li>
 <li>desiccation</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220171643527.png" srcset="/img/loading.gif" alt="image-20191220171643527" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220171643527.png" alt="image-20191220171643527" style="zoom: 33%;" /></p>
 <h2 id="endospore-structure">Endospore Structure</h2>
 <p>Spore surrounded by thin covering called exosporium</p>
 <p>Thick layers of protein form the spore coat</p>
 <p>Cortex, beneath the coat, thick peptidoglycan</p>
 <p>Core has nucleoid and ribosomes</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220171737546.png" srcset="/img/loading.gif" alt="image-20191220171737546" /><figcaption aria-hidden="true">image-20191220171737546</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220171737546.png" alt="image-20191220171737546" /><figcaption aria-hidden="true">image-20191220171737546</figcaption>
 </figure>
 <h2 id="reason-of-endospore-resistance">Reason of Endospore Resistance</h2>
 <p>Calcium (complexed with dipicolinic acid)</p>
@@ -889,7 +931,7 @@
 <p>Dehydrated core</p>
 <p>Spore coat and exosporium protect</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220172037087.png" srcset="/img/loading.gif" alt="image-20191220172037087" /><figcaption aria-hidden="true">image-20191220172037087</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220172037087.png" alt="image-20191220172037087" /><figcaption aria-hidden="true">image-20191220172037087</figcaption>
 </figure>
 <h2 id="sporulation-孢子形成">Sporulation 孢子形成</h2>
 <p>Process of endospore formation</p>
@@ -897,7 +939,7 @@
 <p>Occurs in a hours (up to 10 hours)</p>
 <p>Normally commences when growth ceases because of lack of nutrients</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220172311238.png" srcset="/img/loading.gif" alt="image-20191220172311238" /><figcaption aria-hidden="true">image-20191220172311238</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220172311238.png" alt="image-20191220172311238" /><figcaption aria-hidden="true">image-20191220172311238</figcaption>
 </figure>
 <h2 id="formation-of-vegetative-cell">Formation of Vegetative Cell</h2>
 <ol type="1">
@@ -914,416 +956,374 @@
 </ul></li>
 <li>Outgrowth - emergence of vegetative cell</li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220172428897.png" srcset="/img/loading.gif" alt="image-20191220172428897" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191220172428897.png" alt="image-20191220172428897" style="zoom: 33%;" /></p>
 
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
-                    
-                      <a class="hover-with-bg" href="/categories/Academic-Notebook/Microbiology/">Microbiology</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/Microbiology/">Microbiology</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/07/25/L13%20Adaptive%20Immunity/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">L13 Adaptive Immunity</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/07/25/L10%20Claffications%20And%20Introduction%20of%20Some%20Bacterias/">
-                        <span class="hidden-mobile">L10 Claffications And Introduction of Some Bacterias</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
+    </div>
 
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
+    
+    
+    
+        
 
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>向海
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://zhenyumi.github.io/2020/07/25/L03%20Bacterial%20Cell%20Structure/" title="L03 Bacterial Cell Structure">https://zhenyumi.github.io/2020/07/25/L03 Bacterial Cell Structure/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
 
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Microbiology/" rel="tag"># Microbiology</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/25/L10%20Claffications%20And%20Introduction%20of%20Some%20Bacterias/" rel="prev" title="L10 Claffications And Introduction of Some Bacterias">
+      <i class="fa fa-chevron-left"></i> L10 Claffications And Introduction of Some Bacterias
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/25/L13%20Adaptive%20Immunity/" rel="next" title="L13 Adaptive Immunity">
+      L13 Adaptive Immunity <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80a-typical-bacterial-cell"><span class="nav-number">1.</span> <span class="nav-text">一、A Typical Bacterial Cell</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#size"><span class="nav-number">1.1.</span> <span class="nav-text">Size</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shape-and-arrangement"><span class="nav-number">1.2.</span> <span class="nav-text">Shape and Arrangement</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Cbacterial-cell-organizationbacterial-cell-envelope"><span class="nav-number">2.</span> <span class="nav-text">二、Bacterial Cell Organization（Bacterial Cell Envelope）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#bacterial-plasma-membranes"><span class="nav-number">2.1.</span> <span class="nav-text">Bacterial Plasma Membranes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bacterial-cell-walls"><span class="nav-number">2.2.</span> <span class="nav-text">Bacterial Cell Walls</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cell-envelope-layers-outside-the-cell-wall"><span class="nav-number">2.3.</span> <span class="nav-text">Cell Envelope Layers Outside the Cell Wall</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bacterial-cytoplasm"><span class="nav-number">2.4.</span> <span class="nav-text">Bacterial Cytoplasm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#external-structures"><span class="nav-number">2.5.</span> <span class="nav-text">External Structures</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89bacterial-motility-and-chemotaxis"><span class="nav-number">3.</span> <span class="nav-text">三、Bacterial Motility and Chemotaxis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#motility"><span class="nav-number">3.1.</span> <span class="nav-text">Motility</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#chemotaxis"><span class="nav-number">3.2.</span> <span class="nav-text">Chemotaxis</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9Bthe-bacterial-endospore"><span class="nav-number">4.</span> <span class="nav-text">四、The Bacterial Endospore</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#endospore-structure"><span class="nav-number">4.1.</span> <span class="nav-text">Endospore Structure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reason-of-endospore-resistance"><span class="nav-number">4.2.</span> <span class="nav-text">Reason of Endospore Resistance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sporulation-%E5%AD%A2%E5%AD%90%E5%BD%A2%E6%88%90"><span class="nav-number">4.3.</span> <span class="nav-text">Sporulation 孢子形成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#formation-of-vegetative-cell"><span class="nav-number">4.4.</span> <span class="nav-text">Formation of Vegetative Cell</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">一个普通人</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">204</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2.1m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">31:04</span>
+</div><br /> <!-- 换行 -->
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
 
-
-    
-
-    
-  </div>
   
-</footer>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
+<script src="/js/utils.js"></script>
 
-<!-- Plugins -->
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
 
 
   
-    <script  src="/js/lazyload.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
   
 
+  
+      
 
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
       }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "L03 Bacterial Cell Structure&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
     };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
-
-
-
-
+    
 
   
 
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
-  
 
-
-
-
-
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
-
-
-
-
-
-
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
-
-
 </html>

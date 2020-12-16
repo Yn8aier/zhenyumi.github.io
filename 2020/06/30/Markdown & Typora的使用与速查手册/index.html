@@ -1,271 +1,270 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-
-
-
-
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="如何更加优雅快捷地使用Typora">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown &amp; Typora的使用与速查手册">
+<meta property="og:url" content="https://zhenyumi.github.io/2020/06/30/Markdown%20&%20Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/index.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="如何更加优雅快捷地使用Typora">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630153003845.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630160629783.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630160811535.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/08/table-thead-tbody-tfoot.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg">
+<meta property="article:published_time" content="2020-06-30T07:17:31.000Z">
+<meta property="article:modified_time" content="2020-07-29T08:00:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Typora">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630153003845.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/2020/06/30/Markdown%20&%20Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Markdown & Typora的使用与速查手册 | 鹘横海</title>
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="一个普通人">
-  <meta name="author" content="向海">
-  <meta name="keywords" content="">
-  <title>Markdown &amp; Typora的使用与速查手册 - 鹘横海</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
-  
-
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-  <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"></head>
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-
-<head>
-  <!-- Live2D Settings -->
-  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
-  <!--
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="/live2d-widget/autoload.js"></script>
-  
-  -->
- 
 </head>
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/typora_banner1.png') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
-              
-            </span>
+  <div class="site-meta">
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-06-30 15:17">
-      2020年6月30日 下午
-    </time>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.</p>
   </div>
 
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      4.9k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      16
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
-            
-          </div>
 
-          
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main>
-      <!-- 鼠标烟花特效 -->
-  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-  <script type="text/javascript" src="/js/fireworks.js"></script>
 
-    <!--浏览器搞笑标题-->
-    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    <!--动态线条背景-->
-    <!--<script type="text/javascript"
-    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/06/30/Markdown%20&%20Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="一个普通人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Markdown & Typora的使用与速查手册
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-06-30 15:17:31" itemprop="dateCreated datePublished" datetime="2020-06-30T15:17:31+08:00">2020-06-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-29 16:00:00" itemprop="dateModified" datetime="2020-07-29T16:00:00+08:00">2020-07-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">软件使用总结</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/" itemprop="url" rel="index"><span itemprop="name">Typora</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/06/30/Markdown%20&%20Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" class="post-meta-item leancloud_visitors" data-flag-title="Markdown & Typora的使用与速查手册" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/06/30/Markdown%20&%20Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/30/Markdown%20&%20Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>10k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-<head>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-</head>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：5 个月前
-                
-              </p>
-            
-            <article class="markdown-body">
-              <!-- Post toc 目录 -->
-              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%BF%AB%E9%80%9F%E6%A3%80%E7%B4%A2"><span class="post-toc-text">快速检索</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%89%8D%E8%A8%80"><span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80markdown%E4%B8%8Etypora%E7%AE%80%E4%BB%8B"><span class="post-toc-text">一、Markdown与Typora简介</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFmarkdown"><span class="post-toc-text">什么是Markdown</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFtypora"><span class="post-toc-text">什么是Typora</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8Ctypora-%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E4%B8%8E%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="post-toc-text">二、Typora 常用指令与常用快捷键</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%8C%87%E4%BB%A4%E4%B8%8E%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="post-toc-text">常用代码指令与快捷键</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%A0%87%E9%A2%98"><span class="post-toc-text">1. 标题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B"><span class="post-toc-text">2. 首行缩进</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%96%87%E6%9C%AC%E5%BC%BA%E8%B0%83%E6%96%9C%E4%BD%93%E7%B2%97%E4%BD%93%E5%8F%98%E7%B2%97-%E6%96%9C%E4%BD%93"><span class="post-toc-text">3. 文本强调：斜体、粗体、变粗 + 斜体</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%88%86%E5%89%B2%E7%BA%BF%E4%B8%8B%E5%88%92%E7%BA%BF%E5%88%A0%E9%99%A4%E7%BA%BF%E6%96%87%E6%9C%AC%E9%AB%98%E4%BA%AE"><span class="post-toc-text">4. 分割线、下划线、删除线、文本高亮</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%88%97%E8%A1%A8"><span class="post-toc-text">5. 列表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%BC%95%E7%94%A8%E5%9D%97block-quote"><span class="post-toc-text">6. 引用块（Block Quote）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97%E4%B8%8E%E4%BB%A3%E7%A0%81%E6%AE%B5"><span class="post-toc-text">代码块与代码段</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%93%BE%E6%8E%A5"><span class="post-toc-text">7. 链接</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%AE%BF%E9%97%AE%E7%BD%91%E9%A1%B5%E6%88%96%E6%96%87%E4%BB%B6"><span class="post-toc-text">访问网页或文件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%A1%B5%E5%86%85%E8%B7%B3%E8%BD%AC"><span class="post-toc-text">页内跳转</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%9B%BE%E7%89%87"><span class="post-toc-text">图片</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="post-toc-text">8. 表格</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%A1%A8%E6%A0%BC"><span class="post-toc-text">基本表格</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%AB%98%E7%BA%A7%E8%A1%A8%E6%A0%BC"><span class="post-toc-text">高级表格</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="post-toc-text">(1) 基本语法</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#html-%E8%A1%A8%E6%A0%BC%E8%A1%A8%E5%A4%B4"><span class="post-toc-text">(2) HTML 表格表头</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E8%A1%A8%E6%A0%BC%E7%9A%84%E6%A0%87%E9%A2%98"><span class="post-toc-text">(3) 表格的标题</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E7%89%B9%E6%AE%8A%E6%93%8D%E4%BD%9C"><span class="post-toc-text">(4) 特殊操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E7%A9%BA%E5%8D%95%E5%85%83%E6%A0%BC"><span class="post-toc-text">表格中的空单元格</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#%E5%90%88%E5%B9%B6%E5%8D%95%E5%85%83%E6%A0%BC"><span class="post-toc-text">合并单元格</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%85%AC%E5%BC%8F"><span class="post-toc-text">9. 公式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%85%AC%E5%BC%8F%E4%BB%A3%E7%A0%81"><span class="post-toc-text">公式代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%B8%8A%E4%B8%8B%E6%A0%87"><span class="post-toc-text">上下标</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%85%AC%E5%BC%8F%E7%AC%A6%E5%8F%B7"><span class="post-toc-text">公式符号</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#html-%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E5%AD%97%E4%BD%93%E6%A0%BC%E5%BC%8F%E5%AF%B9%E9%BD%90%E6%A0%BC%E5%BC%8F"><span class="post-toc-text">10. HTML: 插入图片、字体格式、对齐格式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E4%B8%8E%E5%A4%A7%E5%B0%8F"><span class="post-toc-text">字体颜色与大小</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F"><span class="post-toc-text">对齐方式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%9B%BE%E5%83%8F"><span class="post-toc-text">图像</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87"><span class="post-toc-text">(1) 插入图片</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%9B%B4%E6%94%B9%E5%9B%BE%E7%89%87%E5%A4%A7%E5%B0%8F%E7%BC%A9%E6%94%BE%E5%9B%BE%E7%89%87"><span class="post-toc-text">(2) 更改图片大小、缩放图片</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%85%B6%E4%BB%96%E7%94%A8%E6%B3%95"><span class="post-toc-text">其他用法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#emoji"><span class="post-toc-text">1. emoji</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%8F%92%E5%85%A5%E7%9B%AE%E5%BD%95"><span class="post-toc-text">2. 插入目录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#references"><span class="post-toc-text">References</span></a></li></ol></li></ol></li></ol>
-
-              <h1 id="快速检索">快速检索</h1>
+        <h1 id="快速检索">快速检索</h1>
 <ol type="1">
 <li><p><a target="_blank" rel="noopener" href="https://katex.org/docs/supported.html">KaTeX Functions</a></p></li>
 <li><p><a target="_blank" rel="noopener" href="https://katex.org/docs/support_table.html">KaTeX Tables</a></p>
@@ -285,7 +284,7 @@
 <p>　　由于目前还没有一个权威机构对 Markdown 的语法进行规范，各应用厂商制作时遵循的 Markdown 语法也是不尽相同的。其中比较受到认可的是 <a target="_blank" rel="noopener" href="https://github.github.com/gfm/">GFM 标准</a>，它是由著名代码托管网站 <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> 所制定的。Typora 主要使用的也是 GFM 标准。同时，你还可以在 <code>文件 - 偏好设置 - Markdown 语法偏好 - 严格模式</code> 中将标准设置为「更严格地遵循 GFM 标准」。具体内容你可以在官方的 <a target="_blank" rel="noopener" href="http://support.typora.io/Strict-Mode/">这篇文档</a> 中查看[^ 2 ]。</p>
 <h2 id="什么是typora">什么是Typora</h2>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630153003845.png" srcset="/img/loading.gif" alt="image-20200630153003845" /><figcaption aria-hidden="true">image-20200630153003845</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630153003845.png" alt="image-20200630153003845" /><figcaption aria-hidden="true">image-20200630153003845</figcaption>
 </figure>
 <p>　　Typora 是一款<strong>支持实时预览的 Markdown 文本编辑器</strong>。它有 OS X、Windows、Linux 三个平台的版本，并且由于仍在测试中，是<strong>完全免费</strong>的。</p>
 <p>　　是一个 Markdown 文本编辑器，它支持且仅支持 Markdown 语法的文本编辑。在 <a target="_blank" rel="noopener" href="https://typora.io/">Typora 官网</a> 上他们将 Typora 描述为 「A truly <strong>minimal</strong> markdown editor. 」[^ 2 ]。</p>
@@ -299,7 +298,7 @@
 <h2 id="常用代码指令与快捷键">常用代码指令与快捷键</h2>
 <h3 id="标题">1. 标题</h3>
 <p>使用 <code>#</code> 可以表示标题，一级标题对应一个 <code>#</code> ，二级标题对应两个 <code>#</code> 号，最多至六级标题。在Typora中，<code>#</code> 后要紧接着一个空格才能表示标题，否则就是普通字符。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="section"># 一级标题 H1</span></span><br><span class="line"><span class="section">## 二级标题 H2</span></span><br><span class="line"><span class="section">### 三级标题 H3</span></span><br><span class="line"><span class="section">#### 四级标题 H4</span></span><br><span class="line"><span class="section">##### 五级标题 H5</span></span><br><span class="line"><span class="section">###### 六级标题 H6</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题 H1</span></span><br><span class="line"><span class="section">## 二级标题 H2</span></span><br><span class="line"><span class="section">### 三级标题 H3</span></span><br><span class="line"><span class="section">#### 四级标题 H4</span></span><br><span class="line"><span class="section">##### 五级标题 H5</span></span><br><span class="line"><span class="section">###### 六级标题 H6</span></span><br></pre></td></tr></table></figure>
 <p>在Typora中，也可以使用快捷键Ctrl+1（2，3，4，5，6）表示相对应的标题。Ctrl+0表示段落。标题快捷键信息可在菜单栏中的段落选项下查看。</p>
 <h3 id="首行缩进">2. 首行缩进</h3>
 <p>Typora的首行缩进方式相对自由，有很多种方法。</p>
@@ -358,16 +357,16 @@
 <li>无序列表</li>
 </ul>
 <p>可以使用<code>*</code>，<code>+</code>或<code>-</code>标记符号来表示无序列表项，记住要在标记符号后<strong>添加一个空格</strong>，语法显示如下：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="bullet">*</span> 第一项</span><br><span class="line"><span class="bullet">*</span> 第二项</span><br><span class="line"><span class="bullet">+</span> 第一项</span><br><span class="line"><span class="bullet">+</span> 第二项</span><br><span class="line"><span class="bullet">-</span> 第一项</span><br><span class="line"><span class="bullet">-</span> 第二项</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">*</span> 第一项</span><br><span class="line"><span class="bullet">*</span> 第二项</span><br><span class="line"><span class="bullet">+</span> 第一项</span><br><span class="line"><span class="bullet">+</span> 第二项</span><br><span class="line"><span class="bullet">-</span> 第一项</span><br><span class="line"><span class="bullet">-</span> 第二项</span><br></pre></td></tr></table></figure>
 <ul>
 <li>有序列表</li>
 </ul>
 <p>有序列表的数字并不重要</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="bullet">1.</span> 第一项</span><br><span class="line"><span class="bullet">3.</span> 第二项</span><br><span class="line"><span class="bullet">10.</span> 第三项</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 第一项</span><br><span class="line"><span class="bullet">3.</span> 第二项</span><br><span class="line"><span class="bullet">10.</span> 第三项</span><br></pre></td></tr></table></figure>
 <ul>
 <li>嵌套列表</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">+ 无序 1</span><br><span class="line">	+ 无序 1.1</span><br><span class="line">		1. 无序 1.1.1</span><br><span class="line">			1. 有序 1</span><br><span class="line">			2. 有序 2</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+ 无序 1</span><br><span class="line">	+ 无序 1.1</span><br><span class="line">		1. 无序 1.1.1</span><br><span class="line">			1. 有序 1</span><br><span class="line">			2. 有序 2</span><br></pre></td></tr></table></figure>
 <p>效果：</p>
 <ul>
 <li>无序 1
@@ -407,28 +406,28 @@
 <ul>
 <li>可以在代码块的右下角选择编程语言。</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">​<span class="code">```Python</span></span><br><span class="line"><span class="code">print(&#x27;hello world&#x27;)</span></span><br><span class="line"><span class="code">print(&#x27;!&#x27;)</span></span><br><span class="line"><span class="code">​```</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">​<span class="code">```Python</span></span><br><span class="line"><span class="code">print(&#x27;hello world&#x27;)</span></span><br><span class="line"><span class="code">print(&#x27;!&#x27;)</span></span><br><span class="line"><span class="code">​```</span></span><br></pre></td></tr></table></figure>
 <p>效果:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line">print(<span class="string">&#x27;!&#x27;</span>)</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line">print(<span class="string">&#x27;!&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="链接">7. 链接</h3>
 <h4 id="访问网页或文件">访问网页或文件</h4>
 <p>链接的使用方式有两种语法，如下：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">[<span class="string">链接文字</span>](<span class="link">链接地址</span>)</span><br><span class="line">或</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">链接地址</span>&gt;</span></span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">链接文字</span>](<span class="link">链接地址</span>)</span><br><span class="line">或</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">链接地址</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>举例：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">[<span class="string">鹘横海</span>](<span class="link">https://zhenyumi.github.io/</span>)</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">https:</span>//<span class="attr">zhenyumi.github.io</span>/&gt;</span></span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">鹘横海</span>](<span class="link">https://zhenyumi.github.io/</span>)</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">https:</span>//<span class="attr">zhenyumi.github.io</span>/&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>效果：</p>
 <p><a href="https://zhenyumi.github.io/">鹘横海</a> <a href="https://zhenyumi.github.io/" class="uri">https://zhenyumi.github.io/</a></p>
 <p>当鼠标移到相应的链接文字时，按住<strong>Ctrl+鼠标左键</strong>点击访问。</p>
 <p>链接除了可以打开相应的网页外，还可以<strong>打开本地文件</strong>，使用方式类似，不过链接地址需要使用本地文件的地址，相对地址、绝对地址均可：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">[<span class="string">打开LinkTest.md文档</span>](<span class="link">./LinkTest.md</span>)</span><br><span class="line">[<span class="string">打开LinkTest.png照片</span>](<span class="link">./img/LinkTest.png</span>)</span><br><span class="line">[<span class="string">打开某个网络图片</span>](<span class="link">url</span>)</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">打开LinkTest.md文档</span>](<span class="link">./LinkTest.md</span>)</span><br><span class="line">[<span class="string">打开LinkTest.png照片</span>](<span class="link">./img/LinkTest.png</span>)</span><br><span class="line">[<span class="string">打开某个网络图片</span>](<span class="link">url</span>)</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>一个小圆点<code>.</code>表示当前目录，故<code>./LinkTest.md</code>表示当前目录下的LinkTest.md文件，<code>./img/LinkTest.png</code>表示当前目录下的 img 文件下的LinkTest.png文件。</p>
 <p>两个小圆点 <code>..</code> 表示上一级目录。</p>
 </blockquote>
 <h4 id="页内跳转">页内跳转</h4>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">[<span class="string">链接文字</span>](<span class="link">#标题文字</span>)</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">链接文字</span>](<span class="link">#标题文字</span>)</span><br></pre></td></tr></table></figure>
 <p>举例：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">[<span class="string">什么是Typora</span>](<span class="link">#### 什么是Typora</span>)</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">什么是Typora</span>](<span class="link">#### 什么是Typora</span>)</span><br></pre></td></tr></table></figure>
 <p><a href="####%20什么是Typora">什么是Typora</a></p>
 <h4 id="图片">图片</h4>
 <p>可以在Markdown文档中插入图片，语法如下：</p>
@@ -437,12 +436,12 @@
 <li>然后中括号里面写属性文本</li>
 <li>小括号里面写图片地址，后可接标题</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line"></span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line"></span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
 <p>举例：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">![<span class="string">本地png图片PictureTest.png</span>](<span class="link">./img/PictureTest.png</span>)</span><br><span class="line"></span><br><span class="line">![<span class="string">本地jpg图片</span>](<span class="link">./img/PictureTest.jpg</span>)</span><br><span class="line"></span><br><span class="line">![<span class="string">网络图片</span>](<span class="link">url</span>)</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">本地png图片PictureTest.png</span>](<span class="link">./img/PictureTest.png</span>)</span><br><span class="line"></span><br><span class="line">![<span class="string">本地jpg图片</span>](<span class="link">./img/PictureTest.jpg</span>)</span><br><span class="line"></span><br><span class="line">![<span class="string">网络图片</span>](<span class="link">url</span>)</span><br></pre></td></tr></table></figure>
 <p>在Typora中，也可以直接使用<code>Ctrl+C</code>，<code>Ctrl+V</code>来直接进行复制粘贴图片，但是，由于Markdown是需要图片的地址的，所以需要简单设置一下Typora。</p>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630160629783.png" srcset="/img/loading.gif" alt="image-20200630160629783" /><figcaption aria-hidden="true">image-20200630160629783</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630160629783.png" alt="image-20200630160629783" /><figcaption aria-hidden="true">image-20200630160629783</figcaption>
 </figure>
 <ul>
 <li>表示复制到与该md文件同目录的pics文件夹中</li>
@@ -454,10 +453,10 @@
 <li>也可以使用Ctrl+T快捷键创建表格</li>
 </ul>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630160811535.png" srcset="/img/loading.gif" alt="image-20200630160811535" /><figcaption aria-hidden="true">image-20200630160811535</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Typora%E4%BD%BF%E7%94%A8/image-20200630160811535.png" alt="image-20200630160811535" /><figcaption aria-hidden="true">image-20200630160811535</figcaption>
 </figure>
 <p>举例：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">|表头|表头|表头|</span><br><span class="line">|---|---|----|</span><br><span class="line">|单元格|单元格|单元格|</span><br><span class="line">|单元格|单元格|单元格|</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|表头|表头|表头|</span><br><span class="line">|---|---|----|</span><br><span class="line">|单元格|单元格|单元格|</span><br><span class="line">|单元格|单元格|单元格|</span><br></pre></td></tr></table></figure>
 <p>效果</p>
 <table>
 <thead>
@@ -487,7 +486,7 @@
 <li><code>:-:</code>表示中间对齐</li>
 </ul>
 <p>举例：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">|左对齐|右对齐|中间对齐|</span><br><span class="line">|:---|---:|:----:|</span><br><span class="line">|单元格|单元格|单元格|</span><br><span class="line">|单元格|单元格|单元格|</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|左对齐|右对齐|中间对齐|</span><br><span class="line">|:---|---:|:----:|</span><br><span class="line">|单元格|单元格|单元格|</span><br><span class="line">|单元格|单元格|单元格|</span><br></pre></td></tr></table></figure>
 <p>效果：</p>
 <table>
 <thead>
@@ -565,11 +564,11 @@
 </tr>
 </tbody>
 </table>
-<p><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/table-thead-tbody-tfoot.png" srcset="/img/loading.gif" alt="runoob example" style="zoom:120%;" /></p>
+<p><img data-src="https://www.runoob.com/wp-content/uploads/2014/08/table-thead-tbody-tfoot.png" alt="runoob example" style="zoom:120%;" /></p>
 <h5 id="基本语法">(1) 基本语法</h5>
 <p>表格由 <code>&lt;table&gt;</code> 标签来定义。每个表格均有若干行（由 <code>&lt;tr&gt;</code>标签定义），每行被分割为若干单元格（由 <code>&lt;td&gt;</code> 标签定义）。字母 td 指表格数据（table data），即数据单元格的内容。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。</p>
 <p>例：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 1, cell 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 1, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 2, cell 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 2, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 1, cell 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 1, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 2, cell 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 2, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <table border="1">
 <tr>
 <td>
@@ -589,16 +588,16 @@ row 2, cell 2
 </tr>
 </table>
 <p><code>&lt;table&gt;</code> 常用属性：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">border&#x3D;&quot;1&quot;   表格边框的宽度</span><br><span class="line">bordercolor&#x3D;&quot;#fff&quot;   表格边框的颜色</span><br><span class="line">cellspacing&#x3D;&quot;5&quot;   单元格之间的间距</span><br><span class="line">width&#x3D;&quot;500&quot;   表格的总宽度</span><br><span class="line">height&#x3D;&quot;100&quot;   表格的总高度</span><br><span class="line">align&#x3D;&quot;right&quot;   表格整体对齐方式    (参数有  left、center、right)</span><br><span class="line">bgcolor&#x3D;&quot;#fff&quot;   表格整体的背景色</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">border&#x3D;&quot;1&quot;   表格边框的宽度</span><br><span class="line">bordercolor&#x3D;&quot;#fff&quot;   表格边框的颜色</span><br><span class="line">cellspacing&#x3D;&quot;5&quot;   单元格之间的间距</span><br><span class="line">width&#x3D;&quot;500&quot;   表格的总宽度</span><br><span class="line">height&#x3D;&quot;100&quot;   表格的总高度</span><br><span class="line">align&#x3D;&quot;right&quot;   表格整体对齐方式    (参数有  left、center、right)</span><br><span class="line">bgcolor&#x3D;&quot;#fff&quot;   表格整体的背景色</span><br></pre></td></tr></table></figure>
 <p><code>&lt;tr&gt;</code> 常用属性：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">bgcolor&#x3D;&quot;#fff&quot;    行的颜色</span><br><span class="line">align&#x3D;&quot;right&quot;    行内文字的水平对齐方式    (参数有left、center、right)</span><br><span class="line">valign&#x3D;&quot;top&quot;     行内文字的垂直对齐方式    (参数有top、middle、bottom)</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bgcolor&#x3D;&quot;#fff&quot;    行的颜色</span><br><span class="line">align&#x3D;&quot;right&quot;    行内文字的水平对齐方式    (参数有left、center、right)</span><br><span class="line">valign&#x3D;&quot;top&quot;     行内文字的垂直对齐方式    (参数有top、middle、bottom)</span><br></pre></td></tr></table></figure>
 <p><code>&lt;td&gt;</code>、<code>&lt;th&gt;</code> 标签的常用属性:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">width&#x3D;&quot;500&quot;    单元格的宽度，设置后对当前一列的单元格都有影响</span><br><span class="line">height&#x3D;&quot;100&quot;   单元格的高度，设置后对当前一行的单元格都有影响</span><br><span class="line">bgcolor&#x3D;&quot;fff&quot;  单元格的背景色</span><br><span class="line">align&#x3D;&quot;right&quot;  单元格文字的水平对齐方式    (参数left、center、right)</span><br><span class="line">rowspan&#x3D;&quot;3&quot;    合并垂直水平方向的单元格</span><br><span class="line">colspan&#x3D;&quot;3&quot;    合并水平方向单元格</span><br><span class="line">valign&#x3D;&quot;top&quot;   单元格文字的垂直对齐方式    (参数middle、bottom、top) </span><br></pre></div></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">width&#x3D;&quot;500&quot;    单元格的宽度，设置后对当前一列的单元格都有影响</span><br><span class="line">height&#x3D;&quot;100&quot;   单元格的高度，设置后对当前一行的单元格都有影响</span><br><span class="line">bgcolor&#x3D;&quot;fff&quot;  单元格的背景色</span><br><span class="line">align&#x3D;&quot;right&quot;  单元格文字的水平对齐方式    (参数left、center、right)</span><br><span class="line">rowspan&#x3D;&quot;3&quot;    合并垂直水平方向的单元格</span><br><span class="line">colspan&#x3D;&quot;3&quot;    合并水平方向单元格</span><br><span class="line">valign&#x3D;&quot;top&quot;   单元格文字的垂直对齐方式    (参数middle、bottom、top) </span><br></pre></td></tr></table></figure>
 <p>例：HTML 表格和边框属性：</p>
 <p>如果不定义边框属性，表格将不显示边框。有时这很有用，但是大多数时候，我们希望显示边框。</p>
 <p>在 <code>table</code> 的开始时候可以使用 <code>border</code> 来规定边框的大小</p>
 <p>例：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Row 1, cell 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Row 1, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Row 1, cell 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Row 1, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <table border="1">
 <tr>
 <td>
@@ -609,7 +608,7 @@ Row 1, cell 2
 </td>
 </tr>
 </table>
-<figure class="highlight html"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;5&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Row 1, cell 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Row 1, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;5&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Row 1, cell 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Row 1, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <table border="5">
 <tr>
 <td>
@@ -623,7 +622,7 @@ Row 1, cell 2
 <h5 id="html-表格表头">(2) HTML 表格表头</h5>
 <p>表格的表头使用<code>&lt;th&gt;</code>标签进行定义。大多数浏览器会把表头显示为粗体居中的文本：</p>
 <p>例：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Header 1<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Header 2<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 1, cell 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 1, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 2, cell 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 2, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Header 1<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Header 2<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 1, cell 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 1, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 2, cell 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 2, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <table border="1">
 <tr>
 <th>
@@ -652,7 +651,7 @@ row 2, cell 2
 </table>
 <h5 id="表格的标题">(3) 表格的标题</h5>
 <p>例：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">caption</span>&gt;</span>Monthly savings<span class="tag">&lt;/<span class="name">caption</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>Month<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>Savings<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>January<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>$100<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>February<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>$50<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">caption</span>&gt;</span>Monthly savings<span class="tag">&lt;/<span class="name">caption</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>Month<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>Savings<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>January<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>$100<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>February<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>$50<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <table border="1">
 <caption>
 Monthly savings
@@ -685,7 +684,7 @@ $50
 <h5 id="特殊操作">(4) 特殊操作</h5>
 <h6 id="表格中的空单元格">表格中的空单元格</h6>
 <p>在一些浏览器中，没有内容的表格单元显示得不太好。如果某个单元格是空的（没有内容），浏览器可能无法显示出这个单元格的边框。为了避免这种情况，在空单元格中添加一个空格占位符 <code>%nbsp;</code> ，就可以将边框显示出来。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 1, cell 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 1, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 2, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 1, cell 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 1, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>row 2, cell 2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <table border="1">
 <tr>
 <td>
@@ -707,7 +706,7 @@ row 2, cell 2
 <h6 id="合并单元格">合并单元格</h6>
 <p>合并单元格的时候需要使用到<code>&lt;td&gt;</code>、<code>&lt;th&gt;</code> 标签的 <code>rowspan</code> 和 <code>colspan</code> 属性</p>
 <p>例：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">th</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">th</span> <span class="attr">colspan</span>=<span class="string">&quot;2&quot;</span>&gt;</span>电话<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span>Bill Gates<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span>555 77 854<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span>555 77 855<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">th</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">th</span> <span class="attr">colspan</span>=<span class="string">&quot;2&quot;</span>&gt;</span>电话<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span>Bill Gates<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span>555 77 854<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span>555 77 855<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <table border="1">
 <tr>
 <th>
@@ -729,7 +728,7 @@ Bill Gates
 </td>
 </tr>
 </table>
-<figure class="highlight html"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Bill Gates<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span> <span class="attr">rowspan</span>=<span class="string">&quot;2&quot;</span>&gt;</span>电话<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>555 77 854<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>555 77 855<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Bill Gates<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span> <span class="attr">rowspan</span>=<span class="string">&quot;2&quot;</span>&gt;</span>电话<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>555 77 854<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>555 77 855<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <table border="1">
 <tr>
 <th>
@@ -764,7 +763,7 @@ Bill Gates
 </ul></li>
 </ol>
 <p>举例：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">$\alpha + \beta = 1$</span><br><span class="line"></span><br><span class="line">$$</span><br><span class="line">\alpha + \beta = 1 \\</span><br><span class="line">\gamma + \varepsilon = 2</span><br><span class="line">$$</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$\alpha + \beta = 1$</span><br><span class="line"></span><br><span class="line">$$</span><br><span class="line">\alpha + \beta = 1 \\</span><br><span class="line">\gamma + \varepsilon = 2</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
 <p>效果：</p>
 <p><span class="math inline">\(\alpha + \beta = 1\)</span></p>
 <p><span class="math display">\[
@@ -776,7 +775,7 @@ Bill Gates
 <p>同样，我们也可以用一对<code>^</code>将上标括起来，如：<code>X^2^</code> 表示X<sup>2</sup></p>
 <p>上下标可在偏好设置 --&gt; Markdown扩展语法中设置。</p>
 <p>使用<code>html</code>也可以进行上下标的编辑：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">Html上标：ABC<span class="tag">&lt;<span class="name">sup</span>&gt;</span>上浮内容<span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br><span class="line">Html下标：ABC<span class="tag">&lt;<span class="name">sub</span>&gt;</span>下浮内容<span class="tag">&lt;/<span class="name">sub</span>&gt;</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Html上标：ABC<span class="tag">&lt;<span class="name">sup</span>&gt;</span>上浮内容<span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br><span class="line">Html下标：ABC<span class="tag">&lt;<span class="name">sub</span>&gt;</span>下浮内容<span class="tag">&lt;/<span class="name">sub</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>效果：</p>
 <p>ABC<sup>上浮内容</sup></p>
 <p>ABC<sub>下浮内容</sub></p>
@@ -792,19 +791,19 @@ Bill Gates
 <ul>
 <li>Color 支持 RGB</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span>=<span class="string">3</span> <span class="attr">color</span>=<span class="string">&quot;red&quot;</span>&gt;</span></span>字体颜色为红色，大小为3<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span>=<span class="string">4</span> <span class="attr">color</span>=<span class="string">&quot;blue&quot;</span>&gt;</span></span>字体颜色为蓝色，大小为4<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span>=<span class="string">6</span> <span class="attr">color</span>=<span class="string">&quot;violet&quot;</span>&gt;</span></span>字体颜色为紫罗兰，大小为6<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span>=<span class="string">3</span> <span class="attr">color</span>=<span class="string">&quot;red&quot;</span>&gt;</span></span>字体颜色为红色，大小为3<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span>=<span class="string">4</span> <span class="attr">color</span>=<span class="string">&quot;blue&quot;</span>&gt;</span></span>字体颜色为蓝色，大小为4<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span>=<span class="string">6</span> <span class="attr">color</span>=<span class="string">&quot;violet&quot;</span>&gt;</span></span>字体颜色为紫罗兰，大小为6<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>效果：</p>
 <p><font size=3 color="red">字体颜色为红色，大小为3</font></p>
 <p><font size=4 color="blue">字体颜色为蓝色，大小为4</font></p>
 <p><font size=6 color="violet">字体颜色为紫罗兰，大小为6</font></p>
 <p>当然也可以单独修改标签：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span> = <span class="string">6</span>&gt;</span></span>字体大小为6<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span> = <span class="string">&quot;66CCFF&quot;</span>&gt;</span></span>字体颜色为天依蓝<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span> = <span class="string">6</span>&gt;</span></span>字体大小为6<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span> = <span class="string">&quot;66CCFF&quot;</span>&gt;</span></span>字体颜色为天依蓝<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>效果：</p>
 <p><font size = 6>字体大小为6</font></p>
 <p><font color = "66CCFF">字体颜色为天依蓝</font></p>
 <h4 id="对齐方式">对齐方式</h4>
 <p>我们可以改变字体的对齐方式，用标签<code>&lt;p&gt; &lt;/p&gt;</code>加上属性<code>align</code>，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&lt;p align&#x3D;&quot;left&quot;&gt;左对齐&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p align&#x3D;&quot;center&quot;&gt;中间对齐&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p align&#x3D;&quot;right&quot;&gt;右对齐&lt;&#x2F;p&gt;</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p align&#x3D;&quot;left&quot;&gt;左对齐&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p align&#x3D;&quot;center&quot;&gt;中间对齐&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p align&#x3D;&quot;right&quot;&gt;右对齐&lt;&#x2F;p&gt;</span><br></pre></td></tr></table></figure>
 <p>效果：</p>
 <p align="left">
 左对齐
@@ -816,7 +815,7 @@ Bill Gates
 右对齐
 </p>
 <p>或者是：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">center</span>&gt;</span></span> 中间对齐<span class="xml"><span class="tag">&lt;/<span class="name">center</span>&gt;</span></span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">center</span>&gt;</span></span> 中间对齐<span class="xml"><span class="tag">&lt;/<span class="name">center</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>效果：</p>
 <center>
 中间对齐
@@ -824,33 +823,33 @@ Bill Gates
 <h4 id="图像">图像</h4>
 <h5 id="插入图片">(1) 插入图片</h5>
 <p>可以通过标签 <code>&lt;img src=url /&gt;</code> 来插入图片</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;url&quot;</span> /&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;本地相对或绝对路径&quot;</span> /&gt;</span></span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;url&quot;</span> /&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;本地相对或绝对路径&quot;</span> /&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>举例：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;url&quot;</span>&gt;</span></span></span><br></pre></div></td></tr></table></figure>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg" srcset="/img/loading.gif"></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;url&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg"></p>
 <h5 id="更改图片大小缩放图片">(2) 更改图片大小、缩放图片</h5>
 <p>可以改变<code>&lt;img&gt;</code>标签的属性，来改变图片的大小</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;url&quot;</span> <span class="attr">width</span>=<span class="string">300</span> <span class="attr">height</span>=<span class="string">200</span>&gt;</span></span></span><br></pre></div></td></tr></table></figure>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg" srcset="/img/loading.gif" width=300 height=300></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;url&quot;</span> <span class="attr">width</span>=<span class="string">300</span> <span class="attr">height</span>=<span class="string">200</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg" width=300 height=300></p>
 <p>缩放图片的时候可以更改代码，也可以通过鼠标右键点击图片，进行设置：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;url&quot;</span> <span class="attr">style</span>=<span class="string">&quot;zoom: 50%;&quot;</span>&gt;</span></span></span><br></pre></div></td></tr></table></figure>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg" srcset="/img/loading.gif" style="zoom:50%;" /></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;url&quot;</span> <span class="attr">style</span>=<span class="string">&quot;zoom: 50%;&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg" style="zoom:50%;" /></p>
 <p>在Typora当中，图片一般是默认居中显示的，不同的主题图片默认排版可能不同。（因为这个网站使用的是Hexo的Fluid主题，图片是默认靠左显示。）</p>
 <p>可以通过HTML标签改变图片的位置，如：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">图片在左边</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;url&quot;</span> <span class="attr">width</span>=<span class="string">300</span> <span class="attr">height</span>=<span class="string">300</span> <span class="attr">style</span>=<span class="string">&quot;float:left&quot;</span>/&gt;</span></span></span><br><span class="line"></span><br><span class="line">图片在右边</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;url&quot;</span> <span class="attr">width</span>=<span class="string">300</span> <span class="attr">height</span>=<span class="string">300</span> <span class="attr">style</span>=<span class="string">&quot;float:right&quot;</span>/&gt;</span></span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">图片在左边</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;url&quot;</span> <span class="attr">width</span>=<span class="string">300</span> <span class="attr">height</span>=<span class="string">300</span> <span class="attr">style</span>=<span class="string">&quot;float:left&quot;</span>/&gt;</span></span></span><br><span class="line"></span><br><span class="line">图片在右边</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;url&quot;</span> <span class="attr">width</span>=<span class="string">300</span> <span class="attr">height</span>=<span class="string">300</span> <span class="attr">style</span>=<span class="string">&quot;float:right&quot;</span>/&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>效果：</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg" srcset="/img/loading.gif" width=100 height=100 style="float:left"/></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg" srcset="/img/loading.gif" width=100 height=100 style="float:right"/></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg" width=100 height=100 style="float:left"/></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/Sad%20and%20Cry.jpg" width=100 height=100 style="float:right"/></p>
 <p><br/></p>
 <hr />
 <h2 id="其他用法">其他用法</h2>
 <h3 id="emoji">1. emoji</h3>
 <p>在 Typora 中我们可以使用<code>:emoji:</code>的语法来插入表情，比如（网页中可能不会显示）：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">:happy:</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:happy:</span><br></pre></td></tr></table></figure>
 <p>:happy:</p>
 <h3 id="插入目录">2. 插入目录</h3>
 <p>在 Typora 中插入目录的时候，可以通过输入<code>[toc]</code> 或 <code>[TOC]</code> 实现</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">[toc] 或 [TOC]</span><br></pre></div></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[toc] 或 [TOC]</span><br></pre></td></tr></table></figure>
 <h3 id="references">References</h3>
 <p>[^ 1 ]: https://baike.baidu.com/item/markdown [^ 2 ]: https://sspai.com/post/54912</p>
 <ol type="1">
@@ -858,414 +857,372 @@ Bill Gates
 <li>https://sspai.com/post/54912</li>
 </ol>
 
-            </article>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a>
-                    
-                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/">Typora</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/Typora/">Typora</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
-              
-              
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/06/30/%E8%8E%B7%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%AD%8C%E6%9B%B2%E6%92%AD%E6%94%BE%E4%BB%A5%E5%8F%8Acover%E7%9A%84url/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">获取网易云音乐歌曲播放以及cover的url</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </div>
-                  <div class="post-next col-6">
-                    
-                    
-                      <a href="/2020/06/30/Hexo-Fluid%E4%BD%BF%E7%94%A8utterances%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%EF%BC%8C%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
-                        <span class="hidden-mobile">Hexo Fluid使用utterances评论系统，以及相关异常处理</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </div>
-                </div>
-              
-            </div>
+    </div>
 
-            
-              <!-- Valine Comments 国内版-->
-              
-              <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                requiredFields: ['nick'],
-                })
-                </script>
+    
+    
+    
+        
 
-              <!-- Valine Comments 国内版-->
-              
-              <!-- <div id="vcomments"></div>
-              <script>
-              new Valine({
-                el: '#vcomments',
-                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
-                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
-                placeholder: '说点什么',
-                avatar: 'retro',
-                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
-                requiredFields: ['nick'],
-                })
-                </script> -->
-
-              <!-- Utterances Comments -->
-              <!--<div class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
-          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    createObserver(loadValine, 'vcomments');
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>向海
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://zhenyumi.github.io/2020/06/30/Markdown%20&%20Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" title="Markdown &amp; Typora的使用与速查手册">https://zhenyumi.github.io/2020/06/30/Markdown & Typora的使用与速查手册/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
 
-                <script src="https://utteranc.es/client.js"
-                        repo="zhenyumi/comment_hexo"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-              </div>
-            -->
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Typora/" rel="tag"># Typora</a>
           </div>
-        </div>
-      </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/30/Hexo-Fluid%E4%BD%BF%E7%94%A8utterances%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%EF%BC%8C%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="prev" title="Hexo Fluid使用utterances评论系统，以及相关异常处理">
+      <i class="fa fa-chevron-left"></i> Hexo Fluid使用utterances评论系统，以及相关异常处理
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/30/%E8%8E%B7%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%AD%8C%E6%9B%B2%E6%92%AD%E6%94%BE%E4%BB%A5%E5%8F%8Acover%E7%9A%84url/" rel="next" title="获取网易云音乐歌曲播放以及cover的url">
+      获取网易云音乐歌曲播放以及cover的url <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-  <div class="col-lg-7 mx-auto nopadding-md">
-    <div class="container custom post-content mx-auto">
-      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
-    </div>
-  </div>
-
-
-    
-  </main>
-
+  </article>
   
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
+  
   
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
-  
 
-  
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
 
-   <!-- Live2D Settings -->
- <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
- <!-- <script src="/live2d-widget/autoload.js"></script> -->
-  <!--
-
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
-    </div>
-  </div>
-
-<script src="/live2d-widget/waifu-tips.js"></script>
-<script src="/live2d-widget/live2d.js"></script>
-
-<script type="text/javascript">
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 87;
-  initModel("/live2d-widget/waifu-tips.json")
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
--->
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <span>向海 2020 - </span>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
-      <span> - </span>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid </span></a>
-      <i class="iconfont icon-briefcase"></i>
-      <span> Hope tomorrow is still wonderful.</span>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%A3%80%E7%B4%A2"><span class="nav-number">1.</span> <span class="nav-text">快速检索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80markdown%E4%B8%8Etypora%E7%AE%80%E4%BB%8B"><span class="nav-number">3.</span> <span class="nav-text">一、Markdown与Typora简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFmarkdown"><span class="nav-number">3.1.</span> <span class="nav-text">什么是Markdown</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFtypora"><span class="nav-number">3.2.</span> <span class="nav-text">什么是Typora</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Ctypora-%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E4%B8%8E%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">4.</span> <span class="nav-text">二、Typora 常用指令与常用快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%8C%87%E4%BB%A4%E4%B8%8E%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">4.1.</span> <span class="nav-text">常用代码指令与快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E7%94%A8%E6%B3%95"><span class="nav-number">4.2.</span> <span class="nav-text">其他用法</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">一个普通人</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">204</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-    
-  <div class="statistics">
-    
-    
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            Count Mode 
-            <span id="busuanzi_value_site_uv"></span>
-             
-          </span>
-      
-    
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2.1m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">31:04</span>
+</div><br /> <!-- 换行 -->
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
   </div>
 
-
-    
-
-    
-  </div>
   
-</footer>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
+<script src="/js/utils.js"></script>
 
-<!-- Plugins -->
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
 
 
   
-    <script  src="/js/lazyload.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
   
 
+  
+      
 
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
-
-
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 1,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
       }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "Markdown & Typora的使用与速查手册&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 50,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "left",
-      visible: "hover",
-      
-      icon: "§"
-      
     };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
-
-
-
-
+    
 
   
 
-  
-    <!-- KaTeX -->
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
-  
 
-
-
-
-
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
-
-
-
-
-
-
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : true,
+      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
-
-
 </html>
