@@ -1,320 +1,271 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
+
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个普通人">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L7 Small molecule transport across the membrane - 鹘横海</title>
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="一、Principles of membrane transport Protein-free lipid are impermeable to ions. Two main classes of membrane transport proteins: channels and transporters. Active transport is mediated by transporte">
-<meta property="og:type" content="article">
-<meta property="og:title" content="L7 Small molecule transport across the membrane">
-<meta property="og:url" content="https://zhenyumi.github.io/2020/07/02/L7%20Small%20molecule%20transport%20across%20the%20membrane/index.html">
-<meta property="og:site_name" content="鹘横海">
-<meta property="og:description" content="一、Principles of membrane transport Protein-free lipid are impermeable to ions. Two main classes of membrane transport proteins: channels and transporters. Active transport is mediated by transporte">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304184933214.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304184603571.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304184615676.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185149168.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185248990.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185349031.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185532667.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185711739.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185817539.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304190314076.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304190442786.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304190458556.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304190627302.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191402206.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191429205.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191517495.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191617874.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191923146.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304192011465.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304195940309.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304200403650.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304200518092.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304200541788.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304201301392.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305183844163.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304203654520.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304204658607.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304204735668.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304204833535.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304204901687.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205033009.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205046862.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205147600.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205310830.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205336488.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205356996.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205414727.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205458052.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205510942.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205531610.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205548520.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205620175.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205714655.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205902982.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210101210.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210122874.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210244786.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210615958.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210647607.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210719026.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210821910.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210931614.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210944942.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210955093.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304211031455.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304211053477.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304211105997.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304211217145.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144152423.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144206097.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144420204.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144438700.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144454186.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144906197.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144932264.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144939192.png">
-<meta property="article:published_time" content="2020-07-02T11:30:00.000Z">
-<meta property="article:modified_time" content="2020-07-02T11:30:00.000Z">
-<meta property="article:author" content="向海">
-<meta property="article:tag" content="Cell Biology">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304184933214.png">
-
-<link rel="canonical" href="https://zhenyumi.github.io/2020/07/02/L7%20Small%20molecule%20transport%20across%20the%20membrane/">
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
-  <title>L7 Small molecule transport across the membrane | 鹘横海</title>
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
   
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+<link  rel="stylesheet" href="/css/main.css" />
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<!-- 自定义样式保持在最底部 -->
 
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+ 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">鹘横海</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
 </nav>
 
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Cell_Biology/Cell_Biology_02.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
 
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
             
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-02 19:30">
+      2020年7月2日 晚上
+    </time>
+  </div>
 
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      31
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
     
   
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/02/L7%20Small%20molecule%20transport%20across%20the%20membrane/">
+</div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
-      <meta itemprop="name" content="向海">
-      <meta itemprop="description" content="一个普通人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="鹘横海">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          L7 Small molecule transport across the membrane
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-02 19:30:00" itemprop="dateCreated datePublished" datetime="2020-07-02T19:30:00+08:00">2020-07-02</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Academic-Notebook/Cell-Biology/" itemprop="url" rel="index"><span itemprop="name">Cell Biology</span></a>
-                </span>
-            </span>
+            
+          </div>
 
           
-            <span id="/2020/07/02/L7%20Small%20molecule%20transport%20across%20the%20membrane/" class="post-meta-item leancloud_visitors" data-flag-title="L7 Small molecule transport across the membrane" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/02/L7%20Small%20molecule%20transport%20across%20the%20membrane/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/02/L7%20Small%20molecule%20transport%20across%20the%20membrane/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>34k</span>
-            </span>
-
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <!-- 鼠标烟花特效 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/fireworks.js"></script>
+
+    <!--浏览器搞笑标题-->
+    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+
+    <!--动态线条背景-->
+    <!--<script type="text/javascript"
+    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>-->
+
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-        <h1 id="一principles-of-membrane-transport">一、Principles of membrane transport</h1>
+<head>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+</head>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：5 个月前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80principles-of-membrane-transport"><span class="post-toc-text">一、Principles of membrane transport</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#diffusion"><span class="post-toc-text">Diffusion</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#rates-of-diffusion"><span class="post-toc-text">1. Rates of diffusion</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#selectively-permeability-and-permeability-coefficient"><span class="post-toc-text">Selectively Permeability and Permeability Coefficient</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#factors-influence-diffusion"><span class="post-toc-text">2. Factors Influence Diffusion</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#electrochemical-gradient"><span class="post-toc-text">electrochemical gradient</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#molecules-that-cannot-diffuse-across-lipid-bilayer"><span class="post-toc-text">3. Molecules That Cannot Diffuse Across Lipid Bilayer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ions"><span class="post-toc-text">Ions</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#proteins-facilitate-transport-channels-and-transporters"><span class="post-toc-text">proteins facilitate transport: channels and transporters</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#active-vs.-passive-transport"><span class="post-toc-text">Active vs. Passive transport</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8Ctransporters"><span class="post-toc-text">二、Transporters</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#definition"><span class="post-toc-text">Definition</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#features"><span class="post-toc-text">Features</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#from-structure-to-function"><span class="post-toc-text">From Structure to Function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#features-1"><span class="post-toc-text">1. Features</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#categories"><span class="post-toc-text">Categories</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#passive"><span class="post-toc-text">1. Passive</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#uniporter"><span class="post-toc-text">2. Uniporter</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#example-glut1"><span class="post-toc-text">Example: GLUT1</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#glucose-transporter-glut1"><span class="post-toc-text">(1) Glucose transporter GLUT1</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#from-structure-to-function-1"><span class="post-toc-text">(2) From Structure to Function</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#active"><span class="post-toc-text">3. Active</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#coupled-transporters"><span class="post-toc-text">Coupled transporters</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#symporter"><span class="post-toc-text">(1) Symporter</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#features-2"><span class="post-toc-text">Features</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#glucosena-symporter-sglt1"><span class="post-toc-text">Glucose–Na+ Symporter (SGLT1)</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#lactose-permease-in-e.-coli"><span class="post-toc-text">Lactose permease in E. coli</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#antiporter"><span class="post-toc-text">(2) Antiporter</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#atp-pumps-molecular-machines"><span class="post-toc-text">ATP-pumps: molecular machines</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#examples-of-atp-pumps"><span class="post-toc-text">(1) Examples of ATP-pumps</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#the-p-type-atp-pumps"><span class="post-toc-text">(2) The P-type ATP-pumps</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#calcium-pumps-ca2-atpase"><span class="post-toc-text">Calcium pumps &#x2F; Ca2+ ATPase</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#the-pumping-cycle-of-the-ca2-pump-atp-driven-antiport-of-ca2h"><span class="post-toc-text">The pumping cycle of the Ca2+ pump: ATP-driven antiport of Ca2+&#x2F;H+</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#the-na-k-pump-na-k-atpase-on-the-plasma-membrane"><span class="post-toc-text">The Na+-K+ pump (Na+-K+ ATPase) on the Plasma Membrane</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#the-pumping-cycle-of-the-na-k-pump"><span class="post-toc-text">The pumping cycle of the Na+-K+ pump</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#drugs-targeting-the-na-k-atpase-the-cardio-glycosides-ouabain%E5%BF%83%E8%84%8F%E8%8B%B7%E5%93%87%E5%B7%B4%E5%9B%A0-and-digoxin-%E5%9C%B0%E9%AB%98%E8%BE%9B%E5%BC%82%E7%BE%9F%E5%9F%BA%E6%B4%8B%E5%9C%B0%E9%BB%84%E6%AF%92%E8%8B%B7%E5%8E%9F"><span class="post-toc-text">Drugs targeting the Na+-K+ ATPase: the cardio glycosides ouabain（心脏苷哇巴因） and digoxin （地高辛；异羟基洋地黄毒苷原）</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#the-v-type-atpases-vacuolar-v-atpases"><span class="post-toc-text">(3) The V-type ATPases (vacuolar) V-ATPases</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#the-f-type-atp-pumps-atp-synthases"><span class="post-toc-text">(4) The F-type ATP-pumps: ATP synthases</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#reverse-running-h-pump"><span class="post-toc-text">Reverse-Running H+ Pump</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#the-abc-transporters"><span class="post-toc-text">(5) The ABC transporters</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#the-transport-cycle-of-a-typical-abc-transporter"><span class="post-toc-text">The transport cycle of a typical ABC transporter</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#the-function-of-abc-transporter-in-prokaryotes-e.g.-e.-coli"><span class="post-toc-text">The function of ABC transporter in prokaryotes , e.g. E. coli</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#eukaryotic-abc-transporter-multidrug-resistance-mdr"><span class="post-toc-text">Eukaryotic ABC transporter: multidrug resistance (MDR)</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#cystic-fibrosis-transmembrane-conductance-regulator-cftr."><span class="post-toc-text">Cystic fibrosis transmembrane conductance regulator (CFTR).</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#comparisons"><span class="post-toc-text">(6) Comparisons</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#p-type-pumps-vs.-abc-transporters"><span class="post-toc-text">P-type pumps vs. ABC transporters</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#v-type-pumps-vs-f-type-pumps"><span class="post-toc-text">V-type pumps vs F-type pumps</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#some-examples-of-transporters"><span class="post-toc-text">(7) Some examples of transporters</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#summary-transporters"><span class="post-toc-text">(8) Summary: Transporters</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%89channels"><span class="post-toc-text">三、Channels</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#overview"><span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ion-channels"><span class="post-toc-text">Ion Channels</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#overview-1"><span class="post-toc-text">1. overview</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#selectivity"><span class="post-toc-text">2. selectivity</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#how-ion-channels-can-be-highly-selective"><span class="post-toc-text">How ion channels can be highly selective?</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#specificity-for-k-is-due-to-the-selectivity-filter"><span class="post-toc-text">(1) Specificity for K+ is due to the selectivity filter</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#regulation"><span class="post-toc-text">3. Regulation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#gated-channels"><span class="post-toc-text">“Gated” channels</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#model-for-gating-of-a-bacterial-k-channel"><span class="post-toc-text">Model for gating of a bacterial K+ channel</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#stress-gates"><span class="post-toc-text">Stress gates</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#example-mimosa-plant"><span class="post-toc-text">(1) Example: Mimosa plant</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#mechanically-gated-channels-in-the-hair-cell-of-the-ear"><span class="post-toc-text">(2) Mechanically-gated channels in the hair cell of the ear</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#studying-ion-channels-patch-clamp-recording"><span class="post-toc-text">4. Studying ion channels: patch-clamp recording</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#patch-clamp"><span class="post-toc-text">Patch-clamp</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#summary-ion-channels"><span class="post-toc-text">5. Summary: Ion channels</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#summary-comparison"><span class="post-toc-text">6. Summary: comparison</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9B%9Bosmotic-balance"><span class="post-toc-text">四、Osmotic balance</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#definition-of-osmotic-balance"><span class="post-toc-text">Definition of Osmotic balance</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#the-role-of-aquaporins-in-fluid-secretion"><span class="post-toc-text">The role of aquaporins in fluid secretion</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#aquaporins-increase-water-permeability-of-cell-membranes"><span class="post-toc-text">1. Aquaporins increase water permeability of cell membranes</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#how-does-aquaporin-transport-water"><span class="post-toc-text">2. How does aquaporin transport water?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#how-does-aquaporin-prevent-h-from-passing"><span class="post-toc-text">3. How does aquaporin prevent H+ from passing?</span></a></li></ol></li></ol></li></ol>
+
+              <h1 id="一principles-of-membrane-transport">一、Principles of membrane transport</h1>
 <p>Protein-free lipid are impermeable to ions.</p>
 <p>Two main classes of membrane transport proteins: channels and transporters.</p>
 <p>Active transport is mediated by transporters couple to an energy source</p>
@@ -331,7 +282,7 @@
 <h3 id="rates-of-diffusion">1. Rates of diffusion</h3>
 <p>Question: Which can diffuse across the membrane bilayer more rapidly, diethyl urea or urea?</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304184933214.png" alt="image-20200304184933214" /><figcaption aria-hidden="true">image-20200304184933214</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304184933214.png" srcset="/img/loading.gif" alt="image-20200304184933214" /><figcaption aria-hidden="true">image-20200304184933214</figcaption>
 </figure>
 <p><strong>Partition coefficient (K)</strong>: the ratio of concentration of a substance between oil and water</p>
 <ul>
@@ -358,16 +309,16 @@
 <p>Permeability differs greatly for different substances!</p>
 <p>The Permeability coefficient（渗透系数）:</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304184603571.png" alt="image-20200304184603571" /><figcaption aria-hidden="true">image-20200304184603571</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304184603571.png" srcset="/img/loading.gif" alt="image-20200304184603571" /><figcaption aria-hidden="true">image-20200304184603571</figcaption>
 </figure>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304184615676.png" alt="image-20200304184615676" /><figcaption aria-hidden="true">image-20200304184615676</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304184615676.png" srcset="/img/loading.gif" alt="image-20200304184615676" /><figcaption aria-hidden="true">image-20200304184615676</figcaption>
 </figure>
 <p>ions are blocked because of the charge</p>
 <h3 id="factors-influence-diffusion">2. Factors Influence Diffusion</h3>
 <h4 id="electrochemical-gradient">electrochemical gradient</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185149168.png" alt="image-20200304185149168" /><figcaption aria-hidden="true">image-20200304185149168</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185149168.png" srcset="/img/loading.gif" alt="image-20200304185149168" /><figcaption aria-hidden="true">image-20200304185149168</figcaption>
 </figure>
 <p>Chemical + charging gradients = electrochemical gradient</p>
 <ul>
@@ -376,10 +327,10 @@
 <h3 id="molecules-that-cannot-diffuse-across-lipid-bilayer">3. Molecules That Cannot Diffuse Across Lipid Bilayer</h3>
 <h4 id="ions">Ions</h4>
 <p>Ions CANNOT pass the lipid bilayer!</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185248990.png" alt="image-20200304185248990" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185248990.png" srcset="/img/loading.gif" alt="image-20200304185248990" style="zoom:67%;" /></p>
 <p>There is a total of about 20 mM Mg2+ and 1-2 mM Ca2+ in cells, but both are mostly bound to proteins and other substances and, for <u>Ca2+, stored within various organelles.</u></p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185349031.png" alt="image-20200304185349031" /><figcaption aria-hidden="true">image-20200304185349031</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185349031.png" srcset="/img/loading.gif" alt="image-20200304185349031" /><figcaption aria-hidden="true">image-20200304185349031</figcaption>
 </figure>
 <ul>
 <li>Free [Ion] <span class="math inline">\(\neq\)</span> Total [Ion]</li>
@@ -387,7 +338,7 @@
 <p>Inside the cells, higher [K+]<sub>free</sub>, but lower [Na+]<sub>free</sub>, [Cl-]<sub>free</sub>, and [Ca2+]<sub>free</sub>compared to those outside of a cell!</p>
 <h2 id="proteins-facilitate-transport-channels-and-transporters">proteins facilitate transport: channels and transporters</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185532667.png" alt="image-20200304185532667" /><figcaption aria-hidden="true">image-20200304185532667</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185532667.png" srcset="/img/loading.gif" alt="image-20200304185532667" /><figcaption aria-hidden="true">image-20200304185532667</figcaption>
 </figure>
 <ul>
 <li>Channels are water-filled pores!</li>
@@ -405,7 +356,7 @@
 <h2 id="active-vs.-passive-transport">Active vs. Passive transport</h2>
 <p>Active: <u>energy spent</u>, <u>against</u> concentration gradient—pumps</p>
 <p>Passive (facilitated diffusion): energy does not spent, along the concentration gradient</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185711739.png" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185711739.png" srcset="/img/loading.gif" /></p>
 <p>channel 只能是被动运输，transporters可以进行主动运输</p>
 <blockquote>
 <p>All channels and many transporters allow solutes to cross the membrane only passively (“downhill”), a process called <strong>passive transport</strong></p>
@@ -435,7 +386,7 @@
 <h2 id="definition">Definition</h2>
 <p>Transporters: great helpers undergoing conformational changes</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185817539.png" alt="image-20200304185817539" /><figcaption aria-hidden="true">image-20200304185817539</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304185817539.png" srcset="/img/loading.gif" alt="image-20200304185817539" /><figcaption aria-hidden="true">image-20200304185817539</figcaption>
 </figure>
 <h2 id="features">Features</h2>
 <ol type="1">
@@ -458,7 +409,7 @@
 <li>Transporters can work in the reverse direction</li>
 <li>Transporters are built from <strong>inverted repeats</strong> (structural <strong>pseudosymmetry</strong>).</li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304190314076.png" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304190314076.png" srcset="/img/loading.gif" /></p>
 <blockquote>
 <p>Transporters are therefore said to be <strong>pseudosymmetric</strong>, and the passageways that open and close on either side of the membrane have closely similar geometries</p>
 </blockquote>
@@ -477,13 +428,13 @@
 <p><span class="math inline">\(V_{max}\)</span> measures the rate at which the carrier can flip between its conformational states. In addition, each transporter has a characteristic affinity for its solute, reflected in the Km of the reaction</p>
 </blockquote>
 <h3 id="passive">1. Passive</h3>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304190442786.png" alt="image-20200304190442786" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304190442786.png" srcset="/img/loading.gif" alt="image-20200304190442786" style="zoom: 67%;" /></p>
 <p>Conformational changes in transporters mediates the passive movement</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304190458556.png" alt="image-20200304190458556" /><figcaption aria-hidden="true">image-20200304190458556</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304190458556.png" srcset="/img/loading.gif" alt="image-20200304190458556" /><figcaption aria-hidden="true">image-20200304190458556</figcaption>
 </figure>
 <p>Binding and transporting-mediated diffusion resembles enzyme kinetics</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304190627302.png" alt="image-20200304190627302" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304190627302.png" srcset="/img/loading.gif" alt="image-20200304190627302" style="zoom:67%;" /></p>
 <ul>
 <li><p>Diffusion is proportional to the solute concentration.</p></li>
 <li><p>Transporter-mediated diffusion resembles enzyme-substrate reaction.</p></li>
@@ -497,7 +448,7 @@
 <h3 id="uniporter">2. Uniporter</h3>
 <p>Uniport: transport a <u>single type</u> of molecule “<u>down</u>” its gradient.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191402206.png" alt="image-20200304191402206" /><figcaption aria-hidden="true">image-20200304191402206</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191402206.png" srcset="/img/loading.gif" alt="image-20200304191402206" /><figcaption aria-hidden="true">image-20200304191402206</figcaption>
 </figure>
 <h4 id="example-glut1">Example: GLUT1</h4>
 <p>E. g. glucose transporter 1 (GLUT1).</p>
@@ -508,7 +459,7 @@
 <li>Chemical + charging gradients = electrochemical gradient</li>
 </ul>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191429205.png" alt="image-20200304191429205" /><figcaption aria-hidden="true">image-20200304191429205</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191429205.png" srcset="/img/loading.gif" alt="image-20200304191429205" /><figcaption aria-hidden="true">image-20200304191429205</figcaption>
 </figure>
 <p>GLUT1 transports glucose from the extracellular space into the cytosol (e.g. transports glucose across the blood-brain barrier).</p>
 <p>Transport requires conformational change:</p>
@@ -521,7 +472,7 @@
 </ol>
 <h5 id="glucose-transporter-glut1">(1) Glucose transporter GLUT1</h5>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191517495.png" alt="image-20200304191517495" /><figcaption aria-hidden="true">image-20200304191517495</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191517495.png" srcset="/img/loading.gif" alt="image-20200304191517495" /><figcaption aria-hidden="true">image-20200304191517495</figcaption>
 </figure>
 <p>The human genome encodes 14 homologs, differential tissue expression</p>
 <p>Abundant in <strong>erythrocytes</strong>（红细胞）</p>
@@ -532,7 +483,7 @@
 </ul>
 <h5 id="from-structure-to-function-1">(2) From Structure to Function</h5>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191617874.png" alt="image-20200304191617874" /><figcaption aria-hidden="true">image-20200304191617874</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191617874.png" srcset="/img/loading.gif" alt="image-20200304191617874" /><figcaption aria-hidden="true">image-20200304191617874</figcaption>
 </figure>
 <p>Features</p>
 <ol type="1">
@@ -544,7 +495,7 @@
 <ul>
 <li>Active transport always requires some sort of energy.</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191923146.png" alt="image-20200304191923146" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304191923146.png" srcset="/img/loading.gif" alt="image-20200304191923146" style="zoom:67%;" /></p>
 <blockquote>
 <p>Cells carry out such active transport in three main ways</p>
 <ol type="1">
@@ -564,7 +515,7 @@
 <h4 id="coupled-transporters">Coupled transporters</h4>
 <p>Two main types: symporter and antiporter</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304192011465.png" alt="image-20200304192011465" /><figcaption aria-hidden="true">image-20200304192011465</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304192011465.png" srcset="/img/loading.gif" alt="image-20200304192011465" /><figcaption aria-hidden="true">image-20200304192011465</figcaption>
 </figure>
 <ul>
 <li><strong>Uniport</strong>: transport a single type of molecule “down” its gradient. E.g. glucose transporter 1 (GLUT1).</li>
@@ -591,7 +542,7 @@
 <h6 id="glucosena-symporter-sglt1">Glucose–Na+ Symporter (SGLT1)</h6>
 <p>SGLT1 is a symporter: Glucose transport is driven by a [Na+] gradient.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304195940309.png" alt="image-20200304195940309" /><figcaption aria-hidden="true">image-20200304195940309</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304195940309.png" srcset="/img/loading.gif" alt="image-20200304195940309" /><figcaption aria-hidden="true">image-20200304195940309</figcaption>
 </figure>
 <p>It uses <u>electrochemical gradient of Na+ to transport glucose into cell</u>.</p>
 <ul>
@@ -602,7 +553,7 @@
 <p><strong>Transcellular transport of glucose occurs via distinct glucose transporters</strong></p>
 <p>SGLT1 mediated transport from gut（肠子）to intestinal epithelium cell (肠上皮细胞)</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304200403650.png" alt="image-20200304200403650" /><figcaption aria-hidden="true">image-20200304200403650</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304200403650.png" srcset="/img/loading.gif" alt="image-20200304200403650" /><figcaption aria-hidden="true">image-20200304200403650</figcaption>
 </figure>
 <p>Transcellular transport of glucose: glucose is transferred through a cell.</p>
 <p><strong>Principle</strong>: “<u>functionally distinct</u>” transporters are differentially distributed in the plasma membrane</p>
@@ -614,11 +565,11 @@
 <h6 id="lactose-permease-in-e.-coli">Lactose permease in <em>E. coli</em></h6>
 <p>Lactose transport in <em>E. coli</em> is driven by H+ symport.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304200518092.png" alt="image-20200304200518092" /><figcaption aria-hidden="true">image-20200304200518092</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304200518092.png" srcset="/img/loading.gif" alt="image-20200304200518092" /><figcaption aria-hidden="true">image-20200304200518092</figcaption>
 </figure>
 <p>Lactose permease transport- at the molecular level</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304200541788.png" alt="image-20200304200541788" /><figcaption aria-hidden="true">image-20200304200541788</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304200541788.png" srcset="/img/loading.gif" alt="image-20200304200541788" /><figcaption aria-hidden="true">image-20200304200541788</figcaption>
 </figure>
 <p>Arginine (R) 144 forms bond with glutamic acid (E) 126, leaving glutamic acid (E)269 free to accept a proton (H+) and together with lactose binding a conformational exchange occurs that triggers transport.</p>
 <p>After the change, R144 forms now a bond with E269 which destroys the binding site for lactose, triggering release, and after the proton is also released, the molecule flips back to the starting position, exposing the bind-in sites (R144 forms the bond with E126).....</p>
@@ -699,7 +650,7 @@ HCO3^- + H^+ → H_2O + CO_2
 </ul>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304201301392.png" alt="image-20200304201301392" /><figcaption aria-hidden="true">image-20200304201301392</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304201301392.png" srcset="/img/loading.gif" alt="image-20200304201301392" /><figcaption aria-hidden="true">image-20200304201301392</figcaption>
 </figure>
 <p>Features</p>
 <ol type="1">
@@ -720,7 +671,7 @@ HCO3^- + H^+ → H_2O + CO_2
 </ul>
 <h5 id="the-p-type-atp-pumps">(2) The P-type ATP-pumps</h5>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305183844163.png" alt="image-20200305183844163" /><figcaption aria-hidden="true">image-20200305183844163</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305183844163.png" srcset="/img/loading.gif" alt="image-20200305183844163" /><figcaption aria-hidden="true">image-20200305183844163</figcaption>
 </figure>
 <p>Features:</p>
 <ol type="1">
@@ -745,7 +696,7 @@ HCO3^- + H^+ → H_2O + CO_2
 <p>Ca2+ is an important messenger in signal transduction.</p>
 <p>The goal is to keep calcium concentration low</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304203654520.png" alt="image-20200304203654520" /><figcaption aria-hidden="true">image-20200304203654520</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304203654520.png" srcset="/img/loading.gif" alt="image-20200304203654520" /><figcaption aria-hidden="true">image-20200304203654520</figcaption>
 </figure>
 <blockquote>
 <p>They all have similar structures, containing 10 transmembrane α helices connected to three cytosolic domains (Figure 11–13)</p>
@@ -758,11 +709,11 @@ HCO3^- + H^+ → H_2O + CO_2
 </ol>
 <p>“pumping” is due to conformational changes and movement of <span class="math inline">\(\alpha\)</span>-helices</p>
 <p>What is the cytosolic concentration of Ca2+? What about extracellular levels?</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304204658607.png" alt="image-20200304204658607" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304204658607.png" srcset="/img/loading.gif" alt="image-20200304204658607" style="zoom: 67%;" /></p>
 <p>The goal is to keep calcium concentration low.</p>
 <h6 id="the-pumping-cycle-of-the-ca2-pump-atp-driven-antiport-of-ca2h">The pumping cycle of the Ca2+ pump: ATP-driven antiport of Ca2+/H+</h6>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304204735668.png" alt="image-20200304204735668" /><figcaption aria-hidden="true">image-20200304204735668</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304204735668.png" srcset="/img/loading.gif" alt="image-20200304204735668" /><figcaption aria-hidden="true">image-20200304204735668</figcaption>
 </figure>
 <p><u>Transient “self-phosphorylation”</u> is characteristic for all P-type pumps!</p>
 <h6 id="the-na-k-pump-na-k-atpase-on-the-plasma-membrane">The Na+-K+ pump (Na+-K+ ATPase) on the Plasma Membrane</h6>
@@ -774,12 +725,12 @@ HCO3^- + H^+ → H_2O + CO_2
 </blockquote>
 <p>The Na+-K+ ATPase is a major regulator of osmolarity（同渗容摩） and it is an electrogenic pump: export of 3 Na+ <em>vs</em> import of 2 K+.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304204833535.png" alt="image-20200304204833535" /><figcaption aria-hidden="true">image-20200304204833535</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304204833535.png" srcset="/img/loading.gif" alt="image-20200304204833535" /><figcaption aria-hidden="true">image-20200304204833535</figcaption>
 </figure>
 <p>Generation of an electrical current across the membrane and builds electric potential: negative inside, positive outside.</p>
 <h6 id="the-pumping-cycle-of-the-na-k-pump">The pumping cycle of the Na+-K+ pump</h6>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304204901687.png" alt="image-20200304204901687" /><figcaption aria-hidden="true">image-20200304204901687</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304204901687.png" srcset="/img/loading.gif" alt="image-20200304204901687" /><figcaption aria-hidden="true">image-20200304204901687</figcaption>
 </figure>
 <p>Steps:</p>
 <ol type="1">
@@ -797,11 +748,11 @@ HCO3^- + H^+ → H_2O + CO_2
 </ul>
 <p><strong>Digoxin</strong>（地高辛；异羟基洋地黄毒苷原） (from Digitalis lanata):</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205033009.png" alt="image-20200304205033009" /><figcaption aria-hidden="true">image-20200304205033009</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205033009.png" srcset="/img/loading.gif" alt="image-20200304205033009" /><figcaption aria-hidden="true">image-20200304205033009</figcaption>
 </figure>
 <p>Binding to the exoplasmic domain, both are specific inhibitors of ATPase activity.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205046862.png" alt="image-20200304205046862" /><figcaption aria-hidden="true">image-20200304205046862</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205046862.png" srcset="/img/loading.gif" alt="image-20200304205046862" /><figcaption aria-hidden="true">image-20200304205046862</figcaption>
 </figure>
 <h5 id="the-v-type-atpases-vacuolar-v-atpases">(3) The V-type ATPases (vacuolar) V-ATPases</h5>
 <p>Features</p>
@@ -812,9 +763,9 @@ HCO3^- + H^+ → H_2O + CO_2
 <li>Structurally similar to F-type transporters.</li>
 <li>They are <u>NOT controlled by auto-phosphorylation</u></li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205147600.png" alt="image-20200304205147600" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205147600.png" srcset="/img/loading.gif" alt="image-20200304205147600" style="zoom:67%;" /></p>
 <h5 id="the-f-type-atp-pumps-atp-synthases">(4) The F-type ATP-pumps: ATP synthases</h5>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205310830.png" alt="image-20200304205310830" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205310830.png" srcset="/img/loading.gif" alt="image-20200304205310830" style="zoom:67%;" /></p>
 <p>Features</p>
 <ol type="1">
 <li>Turbine-like（涡轮状） proteins, consist of <u>multiple</u> different subunits.</li>
@@ -824,11 +775,11 @@ HCO3^- + H^+ → H_2O + CO_2
 <li>They are <u>NOT controlled by auto-phosphorylation</u>.</li>
 </ol>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205336488.png" alt="image-20200304205336488" /><figcaption aria-hidden="true">image-20200304205336488</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205336488.png" srcset="/img/loading.gif" alt="image-20200304205336488" /><figcaption aria-hidden="true">image-20200304205336488</figcaption>
 </figure>
 <h6 id="reverse-running-h-pump">Reverse-Running H+ Pump</h6>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205356996.png" alt="image-20200304205356996" /><figcaption aria-hidden="true">image-20200304205356996</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205356996.png" srcset="/img/loading.gif" alt="image-20200304205356996" /><figcaption aria-hidden="true">image-20200304205356996</figcaption>
 </figure>
 <h5 id="the-abc-transporters">(5) The ABC transporters</h5>
 <blockquote>
@@ -836,7 +787,7 @@ HCO3^- + H^+ → H_2O + CO_2
 <p>Although each transporter is thought to be specific for a particular molecule or class of molecules, the variety of substrates transported by this superfamily is great and includes <strong>inorganic ions</strong>, <strong>amino acids</strong>, <strong>mono- and polysaccharides</strong>, <strong>peptides</strong>, <strong>lipids</strong>, <strong>drugs</strong>, and, in some cases, even <strong>proteins</strong> that can be larger than the transporter itself.</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205414727.png" alt="image-20200304205414727" /><figcaption aria-hidden="true">image-20200304205414727</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205414727.png" srcset="/img/loading.gif" alt="image-20200304205414727" /><figcaption aria-hidden="true">image-20200304205414727</figcaption>
 </figure>
 <p>Features</p>
 <ol type="1">
@@ -853,18 +804,18 @@ HCO3^- + H^+ → H_2O + CO_2
 </ol>
 <h6 id="the-transport-cycle-of-a-typical-abc-transporter">The transport cycle of a typical ABC transporter</h6>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205458052.png" alt="image-20200304205458052" /><figcaption aria-hidden="true">image-20200304205458052</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205458052.png" srcset="/img/loading.gif" alt="image-20200304205458052" /><figcaption aria-hidden="true">image-20200304205458052</figcaption>
 </figure>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205510942.png" alt="image-20200304205510942" /><figcaption aria-hidden="true">image-20200304205510942</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205510942.png" srcset="/img/loading.gif" alt="image-20200304205510942" /><figcaption aria-hidden="true">image-20200304205510942</figcaption>
 </figure>
 <h6 id="the-function-of-abc-transporter-in-prokaryotes-e.g.-e.-coli">The function of ABC transporter in prokaryotes , e.g. <em>E. coli</em></h6>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205531610.png" alt="image-20200304205531610" /><figcaption aria-hidden="true">image-20200304205531610</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205531610.png" srcset="/img/loading.gif" alt="image-20200304205531610" /><figcaption aria-hidden="true">image-20200304205531610</figcaption>
 </figure>
 <p>Gram (-) bacteria : inward transport / uptake</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205548520.png" alt="image-20200304205548520" /><figcaption aria-hidden="true">image-20200304205548520</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205548520.png" srcset="/img/loading.gif" alt="image-20200304205548520" /><figcaption aria-hidden="true">image-20200304205548520</figcaption>
 </figure>
 <h6 id="eukaryotic-abc-transporter-multidrug-resistance-mdr">Eukaryotic ABC transporter: multidrug resistance (MDR)</h6>
 <blockquote>
@@ -873,7 +824,7 @@ HCO3^- + H^+ → H_2O + CO_2
 </blockquote>
 <p>Example 1: The multidrug resistance (MDR) protein overexpressed in many drug resistant cancer cells.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205620175.png" alt="image-20200304205620175" /><figcaption aria-hidden="true">image-20200304205620175</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205620175.png" srcset="/img/loading.gif" alt="image-20200304205620175" /><figcaption aria-hidden="true">image-20200304205620175</figcaption>
 </figure>
 <p>MDR:</p>
 <ol type="1">
@@ -894,7 +845,7 @@ HCO3^- + H^+ → H_2O + CO_2
 <p>Thus, <u>some ABC proteins can function as transporters and others as gated channels.</u></p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205714655.png" alt="image-20200304205714655" /><figcaption aria-hidden="true">image-20200304205714655</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205714655.png" srcset="/img/loading.gif" alt="image-20200304205714655" /><figcaption aria-hidden="true">image-20200304205714655</figcaption>
 </figure>
 <p>CFTR:</p>
 <ol type="1">
@@ -912,14 +863,14 @@ HCO3^- + H^+ → H_2O + CO_2
 <h6 id="p-type-pumps-vs.-abc-transporters">P-type pumps <em>vs</em>. ABC transporters</h6>
 <p>Self-phosphorylation</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205902982.png" alt="image-20200304205902982" /><figcaption aria-hidden="true">image-20200304205902982</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304205902982.png" srcset="/img/loading.gif" alt="image-20200304205902982" /><figcaption aria-hidden="true">image-20200304205902982</figcaption>
 </figure>
 <h6 id="v-type-pumps-vs-f-type-pumps">V-type pumps <em>vs</em> F-type pumps</h6>
 <p>Different purpose: acidification <em>vs</em> ATP synthesis</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210101210.png" alt="image-20200304210101210" style="zoom:80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210101210.png" srcset="/img/loading.gif" alt="image-20200304210101210" style="zoom:80%;" /></p>
 <h5 id="some-examples-of-transporters">(7) Some examples of transporters</h5>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210122874.png" alt="image-20200304210122874" /><figcaption aria-hidden="true">image-20200304210122874</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210122874.png" srcset="/img/loading.gif" alt="image-20200304210122874" /><figcaption aria-hidden="true">image-20200304210122874</figcaption>
 </figure>
 <h5 id="summary-transporters">(8) Summary: Transporters</h5>
 <p>Features: Each transporter has individual biochemical properties:</p>
@@ -936,7 +887,7 @@ HCO3^- + H^+ → H_2O + CO_2
 <h1 id="三channels">三、Channels</h1>
 <h2 id="overview">Overview</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210244786.png" alt="image-20200304210244786" /><figcaption aria-hidden="true">image-20200304210244786</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210244786.png" srcset="/img/loading.gif" alt="image-20200304210244786" /><figcaption aria-hidden="true">image-20200304210244786</figcaption>
 </figure>
 <p>Features:</p>
 <ol type="1">
@@ -970,7 +921,7 @@ HCO3^- + H^+ → H_2O + CO_2
 </ol>
 <h3 id="selectivity">2. selectivity</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210615958.png" alt="image-20200304210615958" /><figcaption aria-hidden="true">image-20200304210615958</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210615958.png" srcset="/img/loading.gif" alt="image-20200304210615958" /><figcaption aria-hidden="true">image-20200304210615958</figcaption>
 </figure>
 <p>Select ions on the basis of <u>size and charge</u></p>
 <p>Ion filers facilitate the selectivity of ions</p>
@@ -981,18 +932,18 @@ HCO3^- + H^+ → H_2O + CO_2
 <p>The permeating ions have to shed most or all of their associated water molecules to pass, often in single file, through the narrowest part of the channel, which is called the <strong>selectivity filter</strong>; this limits their rate of passage</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210647607.png" alt="image-20200304210647607" /><figcaption aria-hidden="true">image-20200304210647607</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210647607.png" srcset="/img/loading.gif" alt="image-20200304210647607" /><figcaption aria-hidden="true">image-20200304210647607</figcaption>
 </figure>
 <p>Selectivity: Carbonyl oxygen lines the wall of the <strong>selectivity filter</strong> and form binding sites for dehydrated K+ ions</p>
 <p>Only TWO out of the FOUR subunits with two TMD (Trans-membrane domain)s are shown.</p>
 <p>They possess negatively charged amino acids at entrance. That <u>attracts cations and repels anions</u> (selective for cations)</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210719026.png" alt="image-20200304210719026" /><figcaption aria-hidden="true">image-20200304210719026</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210719026.png" srcset="/img/loading.gif" alt="image-20200304210719026" /><figcaption aria-hidden="true">image-20200304210719026</figcaption>
 </figure>
 <p>The K+ channel conducts K+ 10,000 fold better than Na+; Na+ is smaller than K+, how can one be too small to sneak through the pore?</p>
 <h5 id="specificity-for-k-is-due-to-the-selectivity-filter">(1) Specificity for K+ is due to the selectivity filter</h5>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210821910.png" alt="image-20200304210821910" /><figcaption aria-hidden="true">image-20200304210821910</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210821910.png" srcset="/img/loading.gif" alt="image-20200304210821910" /><figcaption aria-hidden="true">image-20200304210821910</figcaption>
 </figure>
 <p>Sodium ion is too small to interact with all four oxygens (cannot maintain the balance)</p>
 <h3 id="regulation">3. Regulation</h3>
@@ -1002,14 +953,14 @@ HCO3^- + H^+ → H_2O + CO_2
 <li>Gated channels: “open” and “close” in response to signals</li>
 </ul>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210931614.png" alt="image-20200304210931614" /><figcaption aria-hidden="true">image-20200304210931614</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210931614.png" srcset="/img/loading.gif" alt="image-20200304210931614" /><figcaption aria-hidden="true">image-20200304210931614</figcaption>
 </figure>
 <h4 id="gated-channels">“Gated” channels</h4>
 <blockquote>
 <p>In most cases, the gate opens in response to a specific stimulus</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210944942.png" alt="image-20200304210944942" /><figcaption aria-hidden="true">image-20200304210944942</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210944942.png" srcset="/img/loading.gif" alt="image-20200304210944942" /><figcaption aria-hidden="true">image-20200304210944942</figcaption>
 </figure>
 <blockquote>
 <p>As shown in Figure 11–22, the main types of stimuli that are known to cause ion channels to open are a change in the voltage across the membrane (<strong>voltage-gated channels</strong>), a mechanical stress (<strong>mechanically gated channels</strong>), or the binding of a ligand (<strong>ligand-gated channels</strong>).</p>
@@ -1020,7 +971,7 @@ HCO3^- + H^+ → H_2O + CO_2
 </blockquote>
 <h4 id="model-for-gating-of-a-bacterial-k-channel">Model for gating of a bacterial K+ channel</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210955093.png" alt="image-20200304210955093" /><figcaption aria-hidden="true">image-20200304210955093</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304210955093.png" srcset="/img/loading.gif" alt="image-20200304210955093" /><figcaption aria-hidden="true">image-20200304210955093</figcaption>
 </figure>
 <p>Closing/opening occurs by tilting of the four inner helices.</p>
 <blockquote>
@@ -1040,15 +991,15 @@ HCO3^- + H^+ → H_2O + CO_2
 <p>Present in inner ear of mammals (go back to the lateral line of fishes)</p>
 <h5 id="example-mimosa-plant">(1) Example: Mimosa plant</h5>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304211031455.png" alt="image-20200304211031455" /><figcaption aria-hidden="true">image-20200304211031455</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304211031455.png" srcset="/img/loading.gif" alt="image-20200304211031455" /><figcaption aria-hidden="true">image-20200304211031455</figcaption>
 </figure>
 <h5 id="mechanically-gated-channels-in-the-hair-cell-of-the-ear">(2) Mechanically-gated channels in the hair cell of the ear</h5>
 <p>Organ of Corti, the auditory portion of the inner ear</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304211053477.png" alt="image-20200304211053477" /><figcaption aria-hidden="true">image-20200304211053477</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304211053477.png" srcset="/img/loading.gif" alt="image-20200304211053477" /><figcaption aria-hidden="true">image-20200304211053477</figcaption>
 </figure>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304211105997.png" alt="image-20200304211105997" /><figcaption aria-hidden="true">image-20200304211105997</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304211105997.png" srcset="/img/loading.gif" alt="image-20200304211105997" /><figcaption aria-hidden="true">image-20200304211105997</figcaption>
 </figure>
 <blockquote>
 <p>Numerous proteins are known to be capable of responding to such mechanical forces, and a large subset of those proteins has been identified as possible <strong>mechanosensitive channels</strong></p>
@@ -1068,7 +1019,7 @@ HCO3^- + H^+ → H_2O + CO_2
 </ol>
 <h4 id="patch-clamp">Patch-clamp</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304211217145.png" alt="image-20200304211217145" /><figcaption aria-hidden="true">image-20200304211217145</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200304211217145.png" srcset="/img/loading.gif" alt="image-20200304211217145" /><figcaption aria-hidden="true">image-20200304211217145</figcaption>
 </figure>
 <h3 id="summary-ion-channels">5. Summary: Ion channels</h3>
 <p>Features:</p>
@@ -1105,7 +1056,7 @@ HCO3^- + H^+ → H_2O + CO_2
 <h1 id="四osmotic-balance">四、Osmotic balance</h1>
 <p>Transport across the membranes is important!</p>
 <p>Cells must maintain appropriate solute concentration to avoid osmotic swelling.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144152423.png" alt="image-20200305144152423" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144152423.png" srcset="/img/loading.gif" alt="image-20200305144152423" style="zoom:50%;" /></p>
 <p>Cells have different ways to prevent osmotic swelling</p>
 <ol type="1">
 <li>export ions</li>
@@ -1113,7 +1064,7 @@ HCO3^- + H^+ → H_2O + CO_2
 <li>export of water</li>
 </ol>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144206097.png" alt="image-20200305144206097" /><figcaption aria-hidden="true">image-20200305144206097</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144206097.png" srcset="/img/loading.gif" alt="image-20200305144206097" /><figcaption aria-hidden="true">image-20200305144206097</figcaption>
 </figure>
 <h2 id="definition-of-osmotic-balance">Definition of Osmotic balance</h2>
 <p>Osmosis is the default diffusion of ions in a water across semi-permeable membrane</p>
@@ -1121,7 +1072,7 @@ HCO3^- + H^+ → H_2O + CO_2
 <p>Cell walls and contractile vacuoles are used to maintain osmotic pressure, but in animals there is only a <u>sodium-potassium pump (and some other pumps)</u></p>
 <h2 id="the-role-of-aquaporins-in-fluid-secretion">The role of aquaporins in fluid secretion</h2>
 <p>Abundant in cells that transport water quickly, e.g. kidney epithelial cells and exocrine（(腺)外分泌的） glands.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144420204.png" alt="image-20200305144420204" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144420204.png" srcset="/img/loading.gif" alt="image-20200305144420204" style="zoom:67%;" /></p>
 <h3 id="aquaporins-increase-water-permeability-of-cell-membranes">1. Aquaporins increase water permeability of cell membranes</h3>
 <blockquote>
 <p>Cells also contain a high concentration of solutes, including numerous negatively charged organic molecules that are confined inside the cell (the so-called <strong>fixed anions</strong>) and their accompanying cations that are required for charge balance</p>
@@ -1130,12 +1081,12 @@ HCO3^- + H^+ → H_2O + CO_2
 <p><strong>water channels</strong>, or <strong>aquaporins</strong>, embedded in their plasma membrane to allow water to move more rapidly. Aquaporins are <u>particularly abundant in animal cells</u> that must transport water at high rates, such as the <u>epithelial cells of the kidney</u> or <u>exocrine cells</u> that must transport or secrete large volumes of fluids, respectively</p>
 </blockquote>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144438700.png" alt="image-20200305144438700" /><figcaption aria-hidden="true">image-20200305144438700</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144438700.png" srcset="/img/loading.gif" alt="image-20200305144438700" /><figcaption aria-hidden="true">image-20200305144438700</figcaption>
 </figure>
 <h3 id="how-does-aquaporin-transport-water">2. How does aquaporin transport water?</h3>
 <p>A view by cutting the monomer in two halves</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144454186.png" alt="image-20200305144454186" /><figcaption aria-hidden="true">image-20200305144454186</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144454186.png" srcset="/img/loading.gif" alt="image-20200305144454186" /><figcaption aria-hidden="true">image-20200305144454186</figcaption>
 </figure>
 <p>The pore is lined with hydrophilic amino acids that provide transient hydrogen bonds to water molecules. These bonds help to line-up water molecules in a single row and orient them as they traverse the membrane.</p>
 <p>Inside If water passes through the channel, how is it possible to prevent the flux of H+?</p>
@@ -1149,383 +1100,425 @@ HCO3^- + H^+ → H_2O + CO_2
 <h3 id="how-does-aquaporin-prevent-h-from-passing">3. How does aquaporin prevent H+ from passing?</h3>
 <p>In water protons diffuse rapidly by being relayed from one molecule to the next.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144906197.png" alt="image-20200305144906197" /><figcaption aria-hidden="true">image-20200305144906197</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144906197.png" srcset="/img/loading.gif" alt="image-20200305144906197" /><figcaption aria-hidden="true">image-20200305144906197</figcaption>
 </figure>
 <p>In the center of the pore, one water molecule is tethered by two Asparagines.</p>
 <p>Tethering occupies both valences（化合价） on it’s oxygen, thus preventing the proton relay!</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144932264.png" alt="image-20200305144932264" /><figcaption aria-hidden="true">image-20200305144932264</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144932264.png" srcset="/img/loading.gif" alt="image-20200305144932264" /><figcaption aria-hidden="true">image-20200305144932264</figcaption>
 </figure>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144939192.png" alt="image-20200305144939192" /><figcaption aria-hidden="true">image-20200305144939192</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Cell%20Biology/image-20200305144939192.png" srcset="/img/loading.gif" alt="image-20200305144939192" /><figcaption aria-hidden="true">image-20200305144939192</figcaption>
 </figure>
 
-    </div>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/Cell-Biology/">Cell Biology</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Cell-Biology/">Cell Biology</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/02/L8%20Ion%20gradients%20across%20the%20membrane/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L8 Ion gradients across the membrane</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/02/L6%20Cell%20membrane%20proteins%20add%20functionality%20to%20cell%20%20membrane/">
+                        <span class="hidden-mobile">L6 Cell membrane proteins add functionality to cell  membrane</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
 
-    
-    
-    
-        
+            
+              <!-- Valine Comments 国内版-->
+              
+              <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                requiredFields: ['nick'],
+                })
+                </script>
 
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>向海
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://zhenyumi.github.io/2020/07/02/L7%20Small%20molecule%20transport%20across%20the%20membrane/" title="L7 Small molecule transport across the membrane">https://zhenyumi.github.io/2020/07/02/L7 Small molecule transport across the membrane/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
+              <!-- Valine Comments 国内版-->
+              
+              <!-- <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
+                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
+                requiredFields: ['nick'],
+                })
+                </script> -->
 
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Cell-Biology/" rel="tag"># Cell Biology</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/07/02/L6%20Cell%20membrane%20proteins%20add%20functionality%20to%20cell%20%20membrane/" rel="prev" title="L6 Cell membrane proteins add functionality to cell  membrane">
-      <i class="fa fa-chevron-left"></i> L6 Cell membrane proteins add functionality to cell  membrane
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/07/02/L8%20Ion%20gradients%20across%20the%20membrane/" rel="next" title="L8 Ion gradients across the membrane">
-      L8 Ion gradients across the membrane <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-    <div class="comments" id="valine-comments"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+              <!-- Utterances Comments -->
+              <!--<div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
+          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
 
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            -->
+          </div>
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80principles-of-membrane-transport"><span class="nav-number">1.</span> <span class="nav-text">一、Principles of membrane transport</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#diffusion"><span class="nav-number">1.1.</span> <span class="nav-text">Diffusion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#proteins-facilitate-transport-channels-and-transporters"><span class="nav-number">1.2.</span> <span class="nav-text">proteins facilitate transport: channels and transporters</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#active-vs.-passive-transport"><span class="nav-number">1.3.</span> <span class="nav-text">Active vs. Passive transport</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Ctransporters"><span class="nav-number">2.</span> <span class="nav-text">二、Transporters</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#definition"><span class="nav-number">2.1.</span> <span class="nav-text">Definition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#features"><span class="nav-number">2.2.</span> <span class="nav-text">Features</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#from-structure-to-function"><span class="nav-number">2.3.</span> <span class="nav-text">From Structure to Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#categories"><span class="nav-number">2.4.</span> <span class="nav-text">Categories</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89channels"><span class="nav-number">3.</span> <span class="nav-text">三、Channels</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#overview"><span class="nav-number">3.1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ion-channels"><span class="nav-number">3.2.</span> <span class="nav-text">Ion Channels</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9Bosmotic-balance"><span class="nav-number">4.</span> <span class="nav-text">四、Osmotic balance</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#definition-of-osmotic-balance"><span class="nav-number">4.1.</span> <span class="nav-text">Definition of Osmotic balance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-role-of-aquaporins-in-fluid-secretion"><span class="nav-number">4.2.</span> <span class="nav-text">The role of aquaporins in fluid secretion</span></a></li></ol></li></ol></div>
       </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="向海"
-      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
-  <p class="site-author-name" itemprop="name">向海</p>
-  <div class="site-description" itemprop="description">一个普通人</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">204</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">20</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">19</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">向海</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">2.1m</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">31:04</span>
-</div><br /> <!-- 换行 -->
-<!-- 网站运行时间的设置 -->
-<span id="timeDate">载入天数...</span>
-<span id="times">载入时分秒...</span>
-<script>
-    var now = new Date();
-    function createtime() {
-        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
-        now.setTime(now.getTime()+250);
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
-    }
-setInterval("createtime()",250);
-</script>
-
-        
-
-
-
-
-
-
-
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
 
       </div>
-    </footer>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
   </div>
 
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-  <script defer src="/lib/three/three.min.js"></script>
-    <script defer src="/lib/three/three-waves.min.js"></script>
-
+    
+  </main>
 
   
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
 
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
 
+  
 
+  
 
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
 
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
 
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
 
-
-
-
-
-<script>
-document.querySelectorAll('.pdfobject-container').forEach(element => {
-  let url = element.dataset.target;
-  let pdfOpenParams = {
-    navpanes : 0,
-    toolbar  : 0,
-    statusbar: 0,
-    pagemode : 'thumbs',
-    view     : 'FitH'
-  };
-  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
-  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
-
-  if (NexT.utils.supportsPDFs()) {
-    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
-  } else {
-    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
-  }
-});
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
 </script>
 
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
 
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
+    
       
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             
+          </span>
+      
+    
+  </div>
 
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
 
     
 
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
   
 
 
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
     });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : true,
-      notify     : true,
-      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
-      placeholder: "Leave Something?",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : true,
-      lang       : 'zh-ch' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L7 Small molecule transport across the membrane&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
     });
-  }, window.Valine);
-});
-</script>
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
 
 </body>
+
+
 </html>

@@ -1,286 +1,277 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
+
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个普通人">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>07. R &lt;- ggplot2语法概述及基本图片操作 - 鹘横海</title>
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="ggplot2包的基本语法及相关参数">
-<meta property="og:type" content="article">
-<meta property="og:title" content="07. R &lt;- ggplot2语法概述及基本图片操作">
-<meta property="og:url" content="https://zhenyumi.github.io/2020/08/09/07-R-ggplot2/index.html">
-<meta property="og:site_name" content="鹘横海">
-<meta property="og:description" content="ggplot2包的基本语法及相关参数">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809183055924.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809184749532.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809190706605.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809191119409.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809191951950.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809192859742.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809193252739.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809194744777.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809195048205.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810155620813.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809195727203.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809213743609.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214120500.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214351844.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214910619.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810152825990.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810162036196.png">
-<meta property="article:published_time" content="2020-08-09T09:47:20.000Z">
-<meta property="article:modified_time" content="2020-08-10T08:46:20.000Z">
-<meta property="article:author" content="向海">
-<meta property="article:tag" content="R">
-<meta property="article:tag" content="Statistics">
-<meta property="article:tag" content="速查">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809183055924.png">
-
-<link rel="canonical" href="https://zhenyumi.github.io/2020/08/09/07-R-ggplot2/">
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
-  <title>07. R <- ggplot2语法概述及基本图片操作 | 鹘横海</title>
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
   
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+<link  rel="stylesheet" href="/css/main.css" />
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<!-- 自定义样式保持在最底部 -->
 
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+ 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">鹘横海</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
 </nav>
 
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/20200810-photo_2020-07-09_20-05-25.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
 
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
             
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-08-09 17:47">
+      2020年8月9日 下午
+    </time>
+  </div>
 
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      24
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
     
   
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/09/07-R-ggplot2/">
+</div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
-      <meta itemprop="name" content="向海">
-      <meta itemprop="description" content="一个普通人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="鹘横海">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          07. R <- ggplot2语法概述及基本图片操作
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-09 17:47:20" itemprop="dateCreated datePublished" datetime="2020-08-09T17:47:20+08:00">2020-08-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-10 16:46:20" itemprop="dateModified" datetime="2020-08-10T16:46:20+08:00">2020-08-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">软件使用总结</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/" itemprop="url" rel="index"><span itemprop="name">R</span></a>
-                </span>
-            </span>
+            
+          </div>
 
           
-            <span id="/2020/08/09/07-R-ggplot2/" class="post-meta-item leancloud_visitors" data-flag-title="07. R <- ggplot2语法概述及基本图片操作" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/08/09/07-R-ggplot2/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/09/07-R-ggplot2/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>21k</span>
-            </span>
-
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <!-- 鼠标烟花特效 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/fireworks.js"></script>
+
+    <!--浏览器搞笑标题-->
+    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+
+    <!--动态线条背景-->
+    <!--<script type="text/javascript"
+    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>-->
+
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-        <p><code>ggplot2</code>包基于一种全面的图形“语法”，提供了一种全新的图形创建方法。</p>
+<head>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+</head>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：4 个月前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80ggplot2%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D"><span class="post-toc-text">一、ggplot2语法介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%94%A8%E5%87%A0%E4%BD%95%E5%87%BD%E6%95%B0%E6%8C%87%E5%AE%9A%E5%9B%BE%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="post-toc-text">用几何函数指定图的类型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E7%BB%84"><span class="post-toc-text">数据分组</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%88%BB%E9%9D%A2"><span class="post-toc-text">刻面</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%89%E6%BB%91%E6%9B%B2%E7%BA%BF"><span class="post-toc-text">添加光滑曲线</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8C%E5%AF%B9%E4%BA%8E%E5%9B%BE%E7%89%87%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="post-toc-text">二、对于图片的操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%A0%87%E7%AD%BE"><span class="post-toc-text">标签</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%88%BB%E5%BA%A6%E7%BA%BF%E5%8F%8A%E5%88%BB%E5%BA%A6%E7%BA%BF%E6%A0%87%E7%AD%BE"><span class="post-toc-text">刻度线及刻度线标签</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%BE%E4%BE%8B"><span class="post-toc-text">图例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%A0%87%E5%B0%BA"><span class="post-toc-text">标尺</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%A0%87%E5%B0%BA%E6%B7%BB%E5%8A%A0"><span class="post-toc-text">1. 标尺添加</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B0%86%E6%A0%87%E5%B0%BA%E4%B8%8E%E6%9B%B4%E5%A4%9A%E5%9B%A0%E7%B4%A0%E5%85%B3%E8%81%94"><span class="post-toc-text">2. 将标尺与更多因素关联</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#theme"><span class="post-toc-text">theme()</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0"><span class="post-toc-text">1. 相关参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="post-toc-text">2. 相关函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#margin"><span class="post-toc-text">margin()</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#element_"><span class="post-toc-text">element_</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#gridarrow"><span class="post-toc-text">grid::arrow()</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%BC%94%E7%A4%BA%E5%AE%9E%E4%BE%8B"><span class="post-toc-text">3. 演示实例</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9B%BE%E5%83%8F%E7%9A%84%E7%BB%84%E5%90%88%E5%A4%9A%E9%87%8D%E5%9B%BE"><span class="post-toc-text">图像的组合：多重图</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BF%9D%E5%AD%98%E5%9B%BE%E5%83%8F"><span class="post-toc-text">保存图像</span></a></li></ol></li></ol>
+
+              <p><code>ggplot2</code>包基于一种全面的图形“语法”，提供了一种全新的图形创建方法。</p>
 <p><code>ggplot2</code>包实现了一个在R中基于全面一致的语法创建图形时的系统。这提供了在R中画图时经常缺乏的图形创造的一致性并允许我们创建具有创新性和新颖性的图表类型。</p>
 <h1 id="一ggplot2语法介绍">一、ggplot2语法介绍</h1>
 <p>在<code>ggplot2</code>中，图是采用（<code>+</code>号）串联起来并创建的。每个函数修改属于自己的部分。</p>
 <p>例：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data=mtcars, aes(x=wt, y=mpg)) + </span><br><span class="line">	geom_point() + </span><br><span class="line">	labs(title=<span class="string">&quot;Automobile Data&quot;</span>, x=<span class="string">&quot;Weight&quot;</span>, y=<span class="string">&quot;Miles Per Gallon&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809183055924.png" alt="image-20200809183055924" style="zoom:67%;" /></p>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">ggplot(data=mtcars, aes(x=wt, y=mpg)) + </span><br><span class="line">	geom_point() + </span><br><span class="line">	labs(title=<span class="string">&quot;Automobile Data&quot;</span>, x=<span class="string">&quot;Weight&quot;</span>, y=<span class="string">&quot;Miles Per Gallon&quot;</span>)</span><br></pre></div></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809183055924.png" srcset="/img/loading.gif" alt="image-20200809183055924" style="zoom:67%;" /></p>
 <p>在这个例子当中：</p>
 <ul>
 <li><code>ggplot()</code>初始化图形并且指顶要用到的数据来源（<code>mtcars</code>）和变量（<code>wt</code>、<code>mpg</code>）</li>
@@ -426,9 +417,9 @@
 </tbody>
 </table>
 <p>例，以<code>car</code>包中的<code>Salaries</code>数据集作为示例数据集：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 展示数据集Salaries</span></span><br><span class="line">&gt; library(car)</span><br><span class="line">载入需要的程辑包：carData</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, y=salary)) + </span><br><span class="line">     geom_boxplot(fill=<span class="string">&quot;cornflowerblue&quot;</span>, </span><br><span class="line">                  color=<span class="string">&quot;black&quot;</span>, notch=<span class="literal">TRUE</span>) + </span><br><span class="line">     geom_point(position=<span class="string">&quot;jitter&quot;</span>, color=<span class="string">&quot;blue&quot;</span>, alpha=<span class="number">.5</span>) + </span><br><span class="line">     geom_rug(side=<span class="string">&quot;l&quot;</span>, color=<span class="string">&quot;black&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="comment"># 展示数据集Salaries</span></span><br><span class="line">&gt; library(car)</span><br><span class="line">载入需要的程辑包：carData</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, y=salary)) + </span><br><span class="line">     geom_boxplot(fill=<span class="string">&quot;cornflowerblue&quot;</span>, </span><br><span class="line">                  color=<span class="string">&quot;black&quot;</span>, notch=<span class="literal">TRUE</span>) + </span><br><span class="line">     geom_point(position=<span class="string">&quot;jitter&quot;</span>, color=<span class="string">&quot;blue&quot;</span>, alpha=<span class="number">.5</span>) + </span><br><span class="line">     geom_rug(side=<span class="string">&quot;l&quot;</span>, color=<span class="string">&quot;black&quot;</span>)</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809184749532.png" alt="image-20200809184749532" /><figcaption aria-hidden="true">image-20200809184749532</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809184749532.png" srcset="/img/loading.gif" alt="image-20200809184749532" /><figcaption aria-hidden="true">image-20200809184749532</figcaption>
 </figure>
 <h2 id="数据分组">数据分组</h2>
 <p>为了理解数据，在一个图中画出两个或更多组的观察值通常是很有帮助的。在R中，组通常用分类变量的水平（因子）来定义。</p>
@@ -436,28 +427,28 @@
 <p>根据不同的图像类型，分组的方式不尽相同，分组的方式可能并不会非常明显地定义出来。</p>
 <p>这部分仍然使用<code>car</code>包中的<code>Salaries</code>来进行演示。</p>
 <p>例1，根据<code>Salaries$Rank</code>进行分组：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br><span class="line">&gt; ggplot(data=Salaries, aes(x=salary, fill=rank)) + </span><br><span class="line">	geom_density(alpha=<span class="number">.3</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br><span class="line">&gt; ggplot(data=Salaries, aes(x=salary, fill=rank)) + </span><br><span class="line">	geom_density(alpha=<span class="number">.3</span>)</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809190706605.png" alt="image-20200809190706605" /><figcaption aria-hidden="true">image-20200809190706605</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809190706605.png" srcset="/img/loading.gif" alt="image-20200809190706605" /><figcaption aria-hidden="true">image-20200809190706605</figcaption>
 </figure>
 <p>这其中的分组并不是非常明显地定义出来，而是以填充颜色的方式（<code>fill=rank</code>）进行表示的。即按照<code>Salaries$rank</code>的类型进行颜色填充，因为原数据集中<code>rank</code>有三种类型（AsstProf，AssoProf，Prof），因此需要填充三种颜色，从而<code>ggplot</code>自然地将数据分为了三组，因为要填充三种颜色。</p>
 <p>例2，散点图：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br><span class="line">&gt; ggplot(Salaries, aes(x=yrs.since.phd, y=salary, </span><br><span class="line">                       color=rank, shape=sex)) + </span><br><span class="line">		geom_point()</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br><span class="line">&gt; ggplot(Salaries, aes(x=yrs.since.phd, y=salary, </span><br><span class="line">                       color=rank, shape=sex)) + </span><br><span class="line">		geom_point()</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809191119409.png" alt="image-20200809191119409" /><figcaption aria-hidden="true">image-20200809191119409</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809191119409.png" srcset="/img/loading.gif" alt="image-20200809191119409" /><figcaption aria-hidden="true">image-20200809191119409</figcaption>
 </figure>
 <p>这个例子当中按照color和shape对原数据分了两次组：原数据集中<code>rank</code>有三种类型（AsstProf，AssoProf，Prof），<code>sex</code>有两种类型（Female, Male），因此自动划分了各组的color和shape。</p>
 <p>例3，条形图：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, fill=sex)) + </span><br><span class="line">	geom_bar(position=<span class="string">&quot;stack&quot;</span>) + labs(title=<span class="string">&#x27;position=&quot;stack&quot;&#x27;</span>) </span><br><span class="line"></span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, fill=sex)) + </span><br><span class="line">	geom_bar(position=<span class="string">&quot;dodge&quot;</span>) + labs(title=<span class="string">&#x27;position=&quot;dodge&quot;&#x27;</span>) </span><br><span class="line"></span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, fill=sex)) + </span><br><span class="line">	geom_bar(position=<span class="string">&quot;fill&quot;</span>) + labs(title=<span class="string">&#x27;position=&quot;fill&quot;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, fill=sex)) + </span><br><span class="line">	geom_bar(position=<span class="string">&quot;stack&quot;</span>) + labs(title=<span class="string">&#x27;position=&quot;stack&quot;&#x27;</span>) </span><br><span class="line"></span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, fill=sex)) + </span><br><span class="line">	geom_bar(position=<span class="string">&quot;dodge&quot;</span>) + labs(title=<span class="string">&#x27;position=&quot;dodge&quot;&#x27;</span>) </span><br><span class="line"></span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, fill=sex)) + </span><br><span class="line">	geom_bar(position=<span class="string">&quot;fill&quot;</span>) + labs(title=<span class="string">&#x27;position=&quot;fill&quot;&#x27;</span>)</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809191951950.png" alt="image-20200809191951950" /><figcaption aria-hidden="true">image-20200809191951950</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809191951950.png" srcset="/img/loading.gif" alt="image-20200809191951950" /><figcaption aria-hidden="true">image-20200809191951950</figcaption>
 </figure>
 <center>
 <font color="708090" size="2">直接用了课本上的图....</font>
 </center>
 <h2 id="刻面">刻面</h2>
 <p>如果组在图中并排出现而不是重叠为单一的图形，关系就是清晰的。我们可以使用<code>facet_wrap()</code>函数和<code>facet_grid()</code>函数创建网格图形（在<code>ggplot2</code>中也称刻面图）。</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用格式</span></span><br><span class="line">facet_wrap(</span><br><span class="line">  facets,</span><br><span class="line">  nrow = <span class="literal">NULL</span>,</span><br><span class="line">  ncol = <span class="literal">NULL</span>,</span><br><span class="line">  scales = <span class="string">&quot;fixed&quot;</span>,</span><br><span class="line">  shrink = <span class="literal">TRUE</span>,</span><br><span class="line">  labeller = <span class="string">&quot;label_value&quot;</span>,</span><br><span class="line">  as.table = <span class="literal">TRUE</span>,</span><br><span class="line">  <span class="built_in">switch</span> = <span class="literal">NULL</span>,</span><br><span class="line">  drop = <span class="literal">TRUE</span>,</span><br><span class="line">  dir = <span class="string">&quot;h&quot;</span>,</span><br><span class="line">  strip.position = <span class="string">&quot;top&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">facet_grid(</span><br><span class="line">  rows = <span class="literal">NULL</span>,</span><br><span class="line">  cols = <span class="literal">NULL</span>,</span><br><span class="line">  scales = <span class="string">&quot;fixed&quot;</span>,</span><br><span class="line">  space = <span class="string">&quot;fixed&quot;</span>,</span><br><span class="line">  shrink = <span class="literal">TRUE</span>,</span><br><span class="line">  labeller = <span class="string">&quot;label_value&quot;</span>,</span><br><span class="line">  as.table = <span class="literal">TRUE</span>,</span><br><span class="line">  <span class="built_in">switch</span> = <span class="literal">NULL</span>,</span><br><span class="line">  drop = <span class="literal">TRUE</span>,</span><br><span class="line">  margins = <span class="literal">FALSE</span>,</span><br><span class="line">  facets = <span class="literal">NULL</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="comment"># 使用格式</span></span><br><span class="line">facet_wrap(</span><br><span class="line">  facets,</span><br><span class="line">  nrow = <span class="literal">NULL</span>,</span><br><span class="line">  ncol = <span class="literal">NULL</span>,</span><br><span class="line">  scales = <span class="string">&quot;fixed&quot;</span>,</span><br><span class="line">  shrink = <span class="literal">TRUE</span>,</span><br><span class="line">  labeller = <span class="string">&quot;label_value&quot;</span>,</span><br><span class="line">  as.table = <span class="literal">TRUE</span>,</span><br><span class="line">  <span class="built_in">switch</span> = <span class="literal">NULL</span>,</span><br><span class="line">  drop = <span class="literal">TRUE</span>,</span><br><span class="line">  dir = <span class="string">&quot;h&quot;</span>,</span><br><span class="line">  strip.position = <span class="string">&quot;top&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">facet_grid(</span><br><span class="line">  rows = <span class="literal">NULL</span>,</span><br><span class="line">  cols = <span class="literal">NULL</span>,</span><br><span class="line">  scales = <span class="string">&quot;fixed&quot;</span>,</span><br><span class="line">  space = <span class="string">&quot;fixed&quot;</span>,</span><br><span class="line">  shrink = <span class="literal">TRUE</span>,</span><br><span class="line">  labeller = <span class="string">&quot;label_value&quot;</span>,</span><br><span class="line">  as.table = <span class="literal">TRUE</span>,</span><br><span class="line">  <span class="built_in">switch</span> = <span class="literal">NULL</span>,</span><br><span class="line">  drop = <span class="literal">TRUE</span>,</span><br><span class="line">  margins = <span class="literal">FALSE</span>,</span><br><span class="line">  facets = <span class="literal">NULL</span></span><br><span class="line">)</span><br></pre></div></td></tr></table></figure>
 <table>
 <thead>
 <tr class="header">
@@ -489,17 +480,17 @@
 </tbody>
 </table>
 <p>这部分的演示使用<code>lattice</code>包中的<code>singer</code>数据集和<code>car</code>包中的<code>Salaries</code>来进行：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(lattice)</span><br><span class="line">&gt; head(singer)</span><br><span class="line">  height voice.part</span><br><span class="line">1     <span class="number">64</span>  Soprano <span class="number">1</span></span><br><span class="line">2     <span class="number">62</span>  Soprano <span class="number">1</span></span><br><span class="line">3     <span class="number">66</span>  Soprano <span class="number">1</span></span><br><span class="line">4     <span class="number">65</span>  Soprano <span class="number">1</span></span><br><span class="line">5     <span class="number">60</span>  Soprano <span class="number">1</span></span><br><span class="line">6     <span class="number">61</span>  Soprano <span class="number">1</span></span><br><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; library(lattice)</span><br><span class="line">&gt; head(singer)</span><br><span class="line">  height voice.part</span><br><span class="line">1     <span class="number">64</span>  Soprano <span class="number">1</span></span><br><span class="line">2     <span class="number">62</span>  Soprano <span class="number">1</span></span><br><span class="line">3     <span class="number">66</span>  Soprano <span class="number">1</span></span><br><span class="line">4     <span class="number">65</span>  Soprano <span class="number">1</span></span><br><span class="line">5     <span class="number">60</span>  Soprano <span class="number">1</span></span><br><span class="line">6     <span class="number">61</span>  Soprano <span class="number">1</span></span><br><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></div></td></tr></table></figure>
 <p>例1，按照不同类型进行刻面：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; ggplot(data=singer, aes(x=height)) + </span><br><span class="line">     geom_histogram() + </span><br><span class="line">     facet_wrap(~voice.part, nrow=<span class="number">4</span>)</span><br><span class="line"><span class="comment"># `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; ggplot(data=singer, aes(x=height)) + </span><br><span class="line">     geom_histogram() + </span><br><span class="line">     facet_wrap(~voice.part, nrow=<span class="number">4</span>)</span><br><span class="line"><span class="comment"># `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</span></span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809192859742.png" alt="image-20200809192859742" /><figcaption aria-hidden="true">image-20200809192859742</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809192859742.png" srcset="/img/loading.gif" alt="image-20200809192859742" /><figcaption aria-hidden="true">image-20200809192859742</figcaption>
 </figure>
 <p>得到的图展示了各声部歌手身高的分布。<u>把八个分布分为并排的小图可以方便比较</u>。</p>
 <p>例2，刻面+分组：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; ggplot(Salaries, aes(x=yrs.since.phd, y=salary, color=rank, </span><br><span class="line">                      shape=rank)) + geom_point() + </span><br><span class="line">		facet_grid(.~sex)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; ggplot(Salaries, aes(x=yrs.since.phd, y=salary, color=rank, </span><br><span class="line">                      shape=rank)) + geom_point() + </span><br><span class="line">		facet_grid(.~sex)</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809193252739.png" alt="image-20200809193252739" /><figcaption aria-hidden="true">image-20200809193252739</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809193252739.png" srcset="/img/loading.gif" alt="image-20200809193252739" /><figcaption aria-hidden="true">image-20200809193252739</figcaption>
 </figure>
 <h2 id="添加光滑曲线">添加光滑曲线</h2>
 <p><code>ggplot2</code>包包含了一系列计算统计的函数来加到图形中。这些包括分级数据和计算密度、轮廓和分位数功能等。</p>
@@ -539,16 +530,16 @@
 </tbody>
 </table>
 <p>这部分的演示使用<code>car</code>包中的<code>Salaries</code>来进行演示。</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></div></td></tr></table></figure>
 <p>例1，使用带有95%置信区间的非参数光滑曲线（loess）。</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary)) + </span><br><span class="line">		geom_smooth() + </span><br><span class="line">		geom_point()</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary)) + </span><br><span class="line">		geom_smooth() + </span><br><span class="line">		geom_point()</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809194744777.png" alt="image-20200809194744777" /><figcaption aria-hidden="true">image-20200809194744777</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809194744777.png" srcset="/img/loading.gif" alt="image-20200809194744777" /><figcaption aria-hidden="true">image-20200809194744777</figcaption>
 </figure>
 <p>例2，二次多项式回归：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary, </span><br><span class="line">                           linetype=sex, shape=sex, color=sex)) + </span><br><span class="line">		geom_smooth(method=lm, formula=y~poly(x,<span class="number">2</span>), </span><br><span class="line">                    se=<span class="literal">FALSE</span>, size=<span class="number">1</span>) + </span><br><span class="line">		geom_point(size=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary, </span><br><span class="line">                           linetype=sex, shape=sex, color=sex)) + </span><br><span class="line">		geom_smooth(method=lm, formula=y~poly(x,<span class="number">2</span>), </span><br><span class="line">                    se=<span class="literal">FALSE</span>, size=<span class="number">1</span>) + </span><br><span class="line">		geom_point(size=<span class="number">2</span>)</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809195048205.png" alt="image-20200809195048205" /><figcaption aria-hidden="true">image-20200809195048205</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809195048205.png" srcset="/img/loading.gif" alt="image-20200809195048205" /><figcaption aria-hidden="true">image-20200809195048205</figcaption>
 </figure>
 <h1 id="二对于图片的操作">二、对于图片的操作</h1>
 <p>这部分主要涉及修改图片的外观</p>
@@ -557,7 +548,7 @@
 <p>标签指的是对图像上一些地方进行标注，例如添加坐标轴的标题、添加图例的标题、添加图片的标题等等。</p>
 <p>对于标签的添加需要使用到<code>lab()</code>函数，这个函数负责的工作是将目标添加上去，对目标格式的修改，如修改颜色、字体等需要使用到<code>theme()</code>函数。</p>
 <p>Usage:</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">labs(</span><br><span class="line">  ...,</span><br><span class="line">  title = waiver(),</span><br><span class="line">  subtitle = waiver(),</span><br><span class="line">  caption = waiver(),</span><br><span class="line">  tag = waiver()</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">xlab(label)</span><br><span class="line"></span><br><span class="line">ylab(label)</span><br><span class="line"></span><br><span class="line">ggtitle(label, subtitle = waiver())</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">labs(</span><br><span class="line">  ...,</span><br><span class="line">  title = waiver(),</span><br><span class="line">  subtitle = waiver(),</span><br><span class="line">  caption = waiver(),</span><br><span class="line">  tag = waiver()</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">xlab(label)</span><br><span class="line"></span><br><span class="line">ylab(label)</span><br><span class="line"></span><br><span class="line">ggtitle(label, subtitle = waiver())</span><br></pre></div></td></tr></table></figure>
 <table>
 <colgroup>
 <col style="width: 14%" />
@@ -601,9 +592,9 @@
 </tbody>
 </table>
 <p>例：为某个图片添加各种标题：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; ggplot(Salaries, aes(x=rank, y=salary, fill=sex))+</span><br><span class="line">		geom_boxplot()+</span><br><span class="line">		labs(title = <span class="string">&quot;The Main title&quot;</span>, </span><br><span class="line">             subtitle = <span class="string">&quot;The Subtitle&quot;</span>,</span><br><span class="line">             caption = <span class="string">&quot;The Caption&quot;</span>,</span><br><span class="line">             tag = <span class="string">&quot;The tag&quot;</span>,</span><br><span class="line">             x=<span class="string">&quot;X axis&quot;</span>,</span><br><span class="line">             y=<span class="string">&quot;Y axis&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; ggplot(Salaries, aes(x=rank, y=salary, fill=sex))+</span><br><span class="line">		geom_boxplot()+</span><br><span class="line">		labs(title = <span class="string">&quot;The Main title&quot;</span>, </span><br><span class="line">             subtitle = <span class="string">&quot;The Subtitle&quot;</span>,</span><br><span class="line">             caption = <span class="string">&quot;The Caption&quot;</span>,</span><br><span class="line">             tag = <span class="string">&quot;The tag&quot;</span>,</span><br><span class="line">             x=<span class="string">&quot;X axis&quot;</span>,</span><br><span class="line">             y=<span class="string">&quot;Y axis&quot;</span>)</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810155620813.png" alt="image-20200810155620813" /><figcaption aria-hidden="true">image-20200810155620813</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810155620813.png" srcset="/img/loading.gif" alt="image-20200810155620813" /><figcaption aria-hidden="true">image-20200810155620813</figcaption>
 </figure>
 <h2 id="刻度线及刻度线标签">刻度线及刻度线标签</h2>
 <p><code>ggplot2</code>包会在创建图时自动创建刻度线、刻度标记标签和坐标轴标签。它们往往看起来不错，但是有时我们需要在更大程度上控制它们的外观。</p>
@@ -635,10 +626,10 @@
 </tbody>
 </table>
 <p>使用<code>car</code>包中的<code>Salaries</code>来进行演示:</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; ggplot(data=Salaries, aes(x=rank, y=salary, fill=sex)) + </span><br><span class="line">		geom_boxplot() + </span><br><span class="line">		scale_x_discrete(breaks=<span class="built_in">c</span>(<span class="string">&quot;AsstProf&quot;</span>, <span class="string">&quot;AssocProf&quot;</span>, <span class="string">&quot;Prof&quot;</span>), </span><br><span class="line">                         labels=<span class="built_in">c</span>(<span class="string">&quot;Assistant\nProfessor&quot;</span>, </span><br><span class="line">                                  <span class="string">&quot;Associate\nProfessor&quot;</span>, </span><br><span class="line">                                  <span class="string">&quot;Full\nProfessor&quot;</span>)) + </span><br><span class="line">		scale_y_continuous(breaks=<span class="built_in">c</span>(<span class="number">50000</span>, <span class="number">100000</span>, <span class="number">150000</span>, <span class="number">200000</span>), </span><br><span class="line">                        labels=<span class="built_in">c</span>(<span class="string">&quot;$50K&quot;</span>, <span class="string">&quot;$100K&quot;</span>, <span class="string">&quot;$150K&quot;</span>, <span class="string">&quot;$200K&quot;</span>)) + </span><br><span class="line">		labs(title=<span class="string">&quot;Faculty Salary by Rank and Sex&quot;</span>, x=<span class="string">&quot;&quot;</span>, y=<span class="string">&quot;&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; ggplot(data=Salaries, aes(x=rank, y=salary, fill=sex)) + </span><br><span class="line">		geom_boxplot() + </span><br><span class="line">		scale_x_discrete(breaks=<span class="built_in">c</span>(<span class="string">&quot;AsstProf&quot;</span>, <span class="string">&quot;AssocProf&quot;</span>, <span class="string">&quot;Prof&quot;</span>), </span><br><span class="line">                         labels=<span class="built_in">c</span>(<span class="string">&quot;Assistant\nProfessor&quot;</span>, </span><br><span class="line">                                  <span class="string">&quot;Associate\nProfessor&quot;</span>, </span><br><span class="line">                                  <span class="string">&quot;Full\nProfessor&quot;</span>)) + </span><br><span class="line">		scale_y_continuous(breaks=<span class="built_in">c</span>(<span class="number">50000</span>, <span class="number">100000</span>, <span class="number">150000</span>, <span class="number">200000</span>), </span><br><span class="line">                        labels=<span class="built_in">c</span>(<span class="string">&quot;$50K&quot;</span>, <span class="string">&quot;$100K&quot;</span>, <span class="string">&quot;$150K&quot;</span>, <span class="string">&quot;$200K&quot;</span>)) + </span><br><span class="line">		labs(title=<span class="string">&quot;Faculty Salary by Rank and Sex&quot;</span>, x=<span class="string">&quot;&quot;</span>, y=<span class="string">&quot;&quot;</span>)</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809195727203.png" alt="image-20200809195727203" /><figcaption aria-hidden="true">image-20200809195727203</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809195727203.png" srcset="/img/loading.gif" alt="image-20200809195727203" /><figcaption aria-hidden="true">image-20200809195727203</figcaption>
 </figure>
 <h2 id="图例">图例</h2>
 <p>图例是指出如何用颜色、形状、尺寸等视觉特性表示数据特征的指南。<code>ggplot2</code>包能自动生成图例，而且在很多时候能够满足我们的需求；但是在其他时候，我们可能要对其进行自定义。图例的<strong>标题</strong>和<strong>位置</strong>是最常用的定制特征。</p>
@@ -650,40 +641,40 @@
 </ul></li>
 </ul>
 <p>这部分使用<code>car</code>包的<code>Salaries</code>数据集进行演示：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(car)</span><br><span class="line">载入需要的程辑包：carData</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(ggplot2)</span><br><span class="line">&gt; ggplot(data=Salaries, aes(x=rank, y=salary, fill=sex)) + </span><br><span class="line">		geom_boxplot() + </span><br><span class="line">		scale_x_discrete(breaks=<span class="built_in">c</span>(<span class="string">&quot;AsstProf&quot;</span>, <span class="string">&quot;AssocProf&quot;</span>, <span class="string">&quot;Prof&quot;</span>),</span><br><span class="line">                         labels=<span class="built_in">c</span>(<span class="string">&quot;Assistant\nProfessor&quot;</span>,<span class="string">&quot;Associate\nProfessor&quot;</span>, </span><br><span class="line">                                  <span class="string">&quot;Full\nProfessor&quot;</span>)) + </span><br><span class="line">		scale_y_continuous(breaks=<span class="built_in">c</span>(<span class="number">50000</span>, <span class="number">100000</span>, <span class="number">150000</span>, <span class="number">200000</span>), </span><br><span class="line">                           labels=<span class="built_in">c</span>(<span class="string">&quot;$50K&quot;</span>, <span class="string">&quot;$100K&quot;</span>, <span class="string">&quot;$150K&quot;</span>, <span class="string">&quot;$200K&quot;</span>)) + </span><br><span class="line">		labs(title=<span class="string">&quot;Faculty Salary by Rank and Gender&quot;</span>, </span><br><span class="line">             x=<span class="string">&quot;&quot;</span>, y=<span class="string">&quot;&quot;</span>, fill=<span class="string">&quot;Gender&quot;</span>) + </span><br><span class="line">		<span class="comment"># 图例的左上角是距离左侧边缘10%和底部边缘80%的部分</span></span><br><span class="line">		theme(legend.position=<span class="built_in">c</span>(<span class="number">.1</span>,<span class="number">.8</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; library(car)</span><br><span class="line">载入需要的程辑包：carData</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; library(ggplot2)</span><br><span class="line">&gt; ggplot(data=Salaries, aes(x=rank, y=salary, fill=sex)) + </span><br><span class="line">		geom_boxplot() + </span><br><span class="line">		scale_x_discrete(breaks=<span class="built_in">c</span>(<span class="string">&quot;AsstProf&quot;</span>, <span class="string">&quot;AssocProf&quot;</span>, <span class="string">&quot;Prof&quot;</span>),</span><br><span class="line">                         labels=<span class="built_in">c</span>(<span class="string">&quot;Assistant\nProfessor&quot;</span>,<span class="string">&quot;Associate\nProfessor&quot;</span>, </span><br><span class="line">                                  <span class="string">&quot;Full\nProfessor&quot;</span>)) + </span><br><span class="line">		scale_y_continuous(breaks=<span class="built_in">c</span>(<span class="number">50000</span>, <span class="number">100000</span>, <span class="number">150000</span>, <span class="number">200000</span>), </span><br><span class="line">                           labels=<span class="built_in">c</span>(<span class="string">&quot;$50K&quot;</span>, <span class="string">&quot;$100K&quot;</span>, <span class="string">&quot;$150K&quot;</span>, <span class="string">&quot;$200K&quot;</span>)) + </span><br><span class="line">		labs(title=<span class="string">&quot;Faculty Salary by Rank and Gender&quot;</span>, </span><br><span class="line">             x=<span class="string">&quot;&quot;</span>, y=<span class="string">&quot;&quot;</span>, fill=<span class="string">&quot;Gender&quot;</span>) + </span><br><span class="line">		<span class="comment"># 图例的左上角是距离左侧边缘10%和底部边缘80%的部分</span></span><br><span class="line">		theme(legend.position=<span class="built_in">c</span>(<span class="number">.1</span>,<span class="number">.8</span>))</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809213743609.png" alt="image-20200809213743609" /><figcaption aria-hidden="true">image-20200809213743609</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809213743609.png" srcset="/img/loading.gif" alt="image-20200809213743609" /><figcaption aria-hidden="true">image-20200809213743609</figcaption>
 </figure>
 <h2 id="标尺">标尺</h2>
 <h3 id="标尺添加">1. 标尺添加</h3>
 <p><code>ggplot2</code>包使用标尺把数据空间的观察值映射到可视化的空间中。标尺既可以应用到连续的变量，也可以应用到离散的变量</p>
 <p>例1，使用内置的<code>mtcars</code>数据集进行演示：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; head(mtcars)</span><br><span class="line">                   mpg cyl disp  hp drat    wt  qsec vs am gear carb</span><br><span class="line">Mazda RX4         <span class="number">21.0</span>   <span class="number">6</span>  <span class="number">160</span> <span class="number">110</span> <span class="number">3.90</span> <span class="number">2.620</span> <span class="number">16.46</span>  <span class="number">0</span>  <span class="number">1</span>    <span class="number">4</span>    <span class="number">4</span></span><br><span class="line">Mazda RX4 Wag     <span class="number">21.0</span>   <span class="number">6</span>  <span class="number">160</span> <span class="number">110</span> <span class="number">3.90</span> <span class="number">2.875</span> <span class="number">17.02</span>  <span class="number">0</span>  <span class="number">1</span>    <span class="number">4</span>    <span class="number">4</span></span><br><span class="line">Datsun <span class="number">710</span>        <span class="number">22.8</span>   <span class="number">4</span>  <span class="number">108</span>  <span class="number">93</span> <span class="number">3.85</span> <span class="number">2.320</span> <span class="number">18.61</span>  <span class="number">1</span>  <span class="number">1</span>    <span class="number">4</span>    <span class="number">1</span></span><br><span class="line">Hornet <span class="number">4</span> Drive    <span class="number">21.4</span>   <span class="number">6</span>  <span class="number">258</span> <span class="number">110</span> <span class="number">3.08</span> <span class="number">3.215</span> <span class="number">19.44</span>  <span class="number">1</span>  <span class="number">0</span>    <span class="number">3</span>    <span class="number">1</span></span><br><span class="line">Hornet Sportabout <span class="number">18.7</span>   <span class="number">8</span>  <span class="number">360</span> <span class="number">175</span> <span class="number">3.15</span> <span class="number">3.440</span> <span class="number">17.02</span>  <span class="number">0</span>  <span class="number">0</span>    <span class="number">3</span>    <span class="number">2</span></span><br><span class="line">Valiant           <span class="number">18.1</span>   <span class="number">6</span>  <span class="number">225</span> <span class="number">105</span> <span class="number">2.76</span> <span class="number">3.460</span> <span class="number">20.22</span>  <span class="number">1</span>  <span class="number">0</span>    <span class="number">3</span>    <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; ggplot(mtcars, aes(x=wt, y=mpg, size=disp)) + </span><br><span class="line">		geom_point(shape=<span class="number">21</span>, color=<span class="string">&quot;black&quot;</span>, fill=<span class="string">&quot;cornsilk&quot;</span>) + </span><br><span class="line">		labs(x=<span class="string">&quot;Weight&quot;</span>, y=<span class="string">&quot;Miles Per Gallon&quot;</span>, </span><br><span class="line">             title=<span class="string">&quot;Bubble Chart&quot;</span>, size=<span class="string">&quot;Engine\nDisplacement&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; head(mtcars)</span><br><span class="line">                   mpg cyl disp  hp drat    wt  qsec vs am gear carb</span><br><span class="line">Mazda RX4         <span class="number">21.0</span>   <span class="number">6</span>  <span class="number">160</span> <span class="number">110</span> <span class="number">3.90</span> <span class="number">2.620</span> <span class="number">16.46</span>  <span class="number">0</span>  <span class="number">1</span>    <span class="number">4</span>    <span class="number">4</span></span><br><span class="line">Mazda RX4 Wag     <span class="number">21.0</span>   <span class="number">6</span>  <span class="number">160</span> <span class="number">110</span> <span class="number">3.90</span> <span class="number">2.875</span> <span class="number">17.02</span>  <span class="number">0</span>  <span class="number">1</span>    <span class="number">4</span>    <span class="number">4</span></span><br><span class="line">Datsun <span class="number">710</span>        <span class="number">22.8</span>   <span class="number">4</span>  <span class="number">108</span>  <span class="number">93</span> <span class="number">3.85</span> <span class="number">2.320</span> <span class="number">18.61</span>  <span class="number">1</span>  <span class="number">1</span>    <span class="number">4</span>    <span class="number">1</span></span><br><span class="line">Hornet <span class="number">4</span> Drive    <span class="number">21.4</span>   <span class="number">6</span>  <span class="number">258</span> <span class="number">110</span> <span class="number">3.08</span> <span class="number">3.215</span> <span class="number">19.44</span>  <span class="number">1</span>  <span class="number">0</span>    <span class="number">3</span>    <span class="number">1</span></span><br><span class="line">Hornet Sportabout <span class="number">18.7</span>   <span class="number">8</span>  <span class="number">360</span> <span class="number">175</span> <span class="number">3.15</span> <span class="number">3.440</span> <span class="number">17.02</span>  <span class="number">0</span>  <span class="number">0</span>    <span class="number">3</span>    <span class="number">2</span></span><br><span class="line">Valiant           <span class="number">18.1</span>   <span class="number">6</span>  <span class="number">225</span> <span class="number">105</span> <span class="number">2.76</span> <span class="number">3.460</span> <span class="number">20.22</span>  <span class="number">1</span>  <span class="number">0</span>    <span class="number">3</span>    <span class="number">1</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; ggplot(mtcars, aes(x=wt, y=mpg, size=disp)) + </span><br><span class="line">		geom_point(shape=<span class="number">21</span>, color=<span class="string">&quot;black&quot;</span>, fill=<span class="string">&quot;cornsilk&quot;</span>) + </span><br><span class="line">		labs(x=<span class="string">&quot;Weight&quot;</span>, y=<span class="string">&quot;Miles Per Gallon&quot;</span>, </span><br><span class="line">             title=<span class="string">&quot;Bubble Chart&quot;</span>, size=<span class="string">&quot;Engine\nDisplacement&quot;</span>)</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214120500.png" alt="image-20200809214120500" /><figcaption aria-hidden="true">image-20200809214120500</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214120500.png" srcset="/img/loading.gif" alt="image-20200809214120500" /><figcaption aria-hidden="true">image-20200809214120500</figcaption>
 </figure>
 <ul>
 <li><code>aes()</code>函数的参数<code>size=disp</code>生成连续型变量<code>disp</code>（发动机排量）的标尺，并使用它来控制点的尺寸</li>
 </ul>
 <h3 id="将标尺与更多因素关联">2. 将标尺与更多因素关联</h3>
 <p>例2，使用标尺将带有因子水平的视觉线索（如颜色、形状、线条类型、尺寸和透明度）关联起来，使用<code>car</code>包的<code>Salaries</code>数据集进行演示：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(car)</span><br><span class="line">载入需要的程辑包：carData</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary, color=rank)) + </span><br><span class="line">		scale_color_manual(values=<span class="built_in">c</span>(<span class="string">&quot;orange&quot;</span>, <span class="string">&quot;olivedrab&quot;</span>, <span class="string">&quot;navy&quot;</span>)) + </span><br><span class="line">		geom_point(size=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; library(car)</span><br><span class="line">载入需要的程辑包：carData</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary, color=rank)) + </span><br><span class="line">		scale_color_manual(values=<span class="built_in">c</span>(<span class="string">&quot;orange&quot;</span>, <span class="string">&quot;olivedrab&quot;</span>, <span class="string">&quot;navy&quot;</span>)) + </span><br><span class="line">		geom_point(size=<span class="number">2</span>)</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214351844.png" alt="image-20200809214351844" /><figcaption aria-hidden="true">image-20200809214351844</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214351844.png" srcset="/img/loading.gif" alt="image-20200809214351844" /><figcaption aria-hidden="true">image-20200809214351844</figcaption>
 </figure>
 <p>有一些预设好的颜色集，通用与各种场合：</p>
 <p>可以通过<code>scale_color_brewer()</code>和<code>scale_fill_brewer()</code>函数来预先指定分得清的颜色集。</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary, color=rank)) + </span><br><span class="line">		scale_color_brewer(palette=<span class="string">&quot;Set1&quot;</span>) + geom_point(size=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary, color=rank)) + </span><br><span class="line">		scale_color_brewer(palette=<span class="string">&quot;Set1&quot;</span>) + geom_point(size=<span class="number">2</span>)</span><br></pre></div></td></tr></table></figure>
 <p>其它的颜色集可以通过<code>RColorBrewer</code>包进行可视化选择：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(RColorBrewer) </span><br><span class="line">&gt; display.brewer.all()</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; library(RColorBrewer) </span><br><span class="line">&gt; display.brewer.all()</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214910619.png" alt="image-20200809214910619" /><figcaption aria-hidden="true">image-20200809214910619</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214910619.png" srcset="/img/loading.gif" alt="image-20200809214910619" /><figcaption aria-hidden="true">image-20200809214910619</figcaption>
 </figure>
 <p>关于颜色相关的函数使用方法如下，通过指定<code>palette</code>来选取预设颜色集：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">scale_colour_brewer(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = <span class="number">1</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;colour&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_fill_brewer(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = <span class="number">1</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;fill&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_colour_distiller(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = -<span class="number">1</span>,</span><br><span class="line">  values = <span class="literal">NULL</span>,</span><br><span class="line">  space = <span class="string">&quot;Lab&quot;</span>,</span><br><span class="line">  na.value = <span class="string">&quot;grey50&quot;</span>,</span><br><span class="line">  guide = <span class="string">&quot;colourbar&quot;</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;colour&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_fill_distiller(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = -<span class="number">1</span>,</span><br><span class="line">  values = <span class="literal">NULL</span>,</span><br><span class="line">  space = <span class="string">&quot;Lab&quot;</span>,</span><br><span class="line">  na.value = <span class="string">&quot;grey50&quot;</span>,</span><br><span class="line">  guide = <span class="string">&quot;colourbar&quot;</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;fill&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_colour_fermenter(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = -<span class="number">1</span>,</span><br><span class="line">  na.value = <span class="string">&quot;grey50&quot;</span>,</span><br><span class="line">  guide = <span class="string">&quot;coloursteps&quot;</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;colour&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_fill_fermenter(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = -<span class="number">1</span>,</span><br><span class="line">  na.value = <span class="string">&quot;grey50&quot;</span>,</span><br><span class="line">  guide = <span class="string">&quot;coloursteps&quot;</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;fill&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">scale_colour_brewer(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = <span class="number">1</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;colour&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_fill_brewer(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = <span class="number">1</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;fill&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_colour_distiller(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = -<span class="number">1</span>,</span><br><span class="line">  values = <span class="literal">NULL</span>,</span><br><span class="line">  space = <span class="string">&quot;Lab&quot;</span>,</span><br><span class="line">  na.value = <span class="string">&quot;grey50&quot;</span>,</span><br><span class="line">  guide = <span class="string">&quot;colourbar&quot;</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;colour&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_fill_distiller(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = -<span class="number">1</span>,</span><br><span class="line">  values = <span class="literal">NULL</span>,</span><br><span class="line">  space = <span class="string">&quot;Lab&quot;</span>,</span><br><span class="line">  na.value = <span class="string">&quot;grey50&quot;</span>,</span><br><span class="line">  guide = <span class="string">&quot;colourbar&quot;</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;fill&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_colour_fermenter(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = -<span class="number">1</span>,</span><br><span class="line">  na.value = <span class="string">&quot;grey50&quot;</span>,</span><br><span class="line">  guide = <span class="string">&quot;coloursteps&quot;</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;colour&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_fill_fermenter(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = -<span class="number">1</span>,</span><br><span class="line">  na.value = <span class="string">&quot;grey50&quot;</span>,</span><br><span class="line">  guide = <span class="string">&quot;coloursteps&quot;</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;fill&quot;</span></span><br><span class="line">)</span><br></pre></div></td></tr></table></figure>
 <h2 id="theme">theme()</h2>
 <p><code>theme()</code>函数中的选项可以让我们调整字体、背景、颜色和网格线等。主题可以使用一次，也可以保存起来应用到多个图中。</p>
 <p><code>theme()</code>函数并不负责将某些元素添加到图像当中，例如它并不为图像添加标题。<code>theme()</code>函数制定了某些元素，例如坐标轴标题，字体，背景等元素该如何添加到图像当中去，即<u>规定这些元素的格式（属性）</u>。</p>
@@ -953,7 +944,7 @@
 <h3 id="相关函数">2. 相关函数</h3>
 <h4 id="margin">margin()</h4>
 <p>Usage:</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin(t = <span class="number">0</span>, r = <span class="number">0</span>, b = <span class="number">0</span>, l = <span class="number">0</span>, unit = <span class="string">&quot;pt&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">margin(t = <span class="number">0</span>, r = <span class="number">0</span>, b = <span class="number">0</span>, l = <span class="number">0</span>, unit = <span class="string">&quot;pt&quot;</span>)</span><br></pre></div></td></tr></table></figure>
 <h4 id="element_">element_</h4>
 <p>与<code>theme()</code>函数相关的函数有：<code>element_line</code>，<code>element_rect</code>，<code>element_text</code>和<code>element_blank</code></p>
 <p>对各个函数的说明：</p>
@@ -966,7 +957,7 @@
 <li><code>element_text</code>: text.</li>
 </ol>
 </blockquote>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">margin(t = <span class="number">0</span>, r = <span class="number">0</span>, b = <span class="number">0</span>, l = <span class="number">0</span>, unit = <span class="string">&quot;pt&quot;</span>)</span><br><span class="line"></span><br><span class="line">element_blank()</span><br><span class="line"></span><br><span class="line">element_rect(</span><br><span class="line">  fill = <span class="literal">NULL</span>,</span><br><span class="line">  colour = <span class="literal">NULL</span>,</span><br><span class="line">  size = <span class="literal">NULL</span>,</span><br><span class="line">  linetype = <span class="literal">NULL</span>,</span><br><span class="line">  color = <span class="literal">NULL</span>,</span><br><span class="line">  inherit.blank = <span class="literal">FALSE</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">element_line(</span><br><span class="line">  colour = <span class="literal">NULL</span>,</span><br><span class="line">  size = <span class="literal">NULL</span>,</span><br><span class="line">  linetype = <span class="literal">NULL</span>,</span><br><span class="line">  lineend = <span class="literal">NULL</span>,</span><br><span class="line">  color = <span class="literal">NULL</span>,</span><br><span class="line">  arrow = <span class="literal">NULL</span>,</span><br><span class="line">  inherit.blank = <span class="literal">FALSE</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">element_text(</span><br><span class="line">  family = <span class="literal">NULL</span>,</span><br><span class="line">  face = <span class="literal">NULL</span>,</span><br><span class="line">  colour = <span class="literal">NULL</span>,</span><br><span class="line">  size = <span class="literal">NULL</span>,</span><br><span class="line">  hjust = <span class="literal">NULL</span>,</span><br><span class="line">  vjust = <span class="literal">NULL</span>,</span><br><span class="line">  angle = <span class="literal">NULL</span>,</span><br><span class="line">  lineheight = <span class="literal">NULL</span>,</span><br><span class="line">  color = <span class="literal">NULL</span>,</span><br><span class="line">  margin = <span class="literal">NULL</span>,</span><br><span class="line">  debug = <span class="literal">NULL</span>,</span><br><span class="line">  inherit.blank = <span class="literal">FALSE</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">rel(x)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">margin(t = <span class="number">0</span>, r = <span class="number">0</span>, b = <span class="number">0</span>, l = <span class="number">0</span>, unit = <span class="string">&quot;pt&quot;</span>)</span><br><span class="line"></span><br><span class="line">element_blank()</span><br><span class="line"></span><br><span class="line">element_rect(</span><br><span class="line">  fill = <span class="literal">NULL</span>,</span><br><span class="line">  colour = <span class="literal">NULL</span>,</span><br><span class="line">  size = <span class="literal">NULL</span>,</span><br><span class="line">  linetype = <span class="literal">NULL</span>,</span><br><span class="line">  color = <span class="literal">NULL</span>,</span><br><span class="line">  inherit.blank = <span class="literal">FALSE</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">element_line(</span><br><span class="line">  colour = <span class="literal">NULL</span>,</span><br><span class="line">  size = <span class="literal">NULL</span>,</span><br><span class="line">  linetype = <span class="literal">NULL</span>,</span><br><span class="line">  lineend = <span class="literal">NULL</span>,</span><br><span class="line">  color = <span class="literal">NULL</span>,</span><br><span class="line">  arrow = <span class="literal">NULL</span>,</span><br><span class="line">  inherit.blank = <span class="literal">FALSE</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">element_text(</span><br><span class="line">  family = <span class="literal">NULL</span>,</span><br><span class="line">  face = <span class="literal">NULL</span>,</span><br><span class="line">  colour = <span class="literal">NULL</span>,</span><br><span class="line">  size = <span class="literal">NULL</span>,</span><br><span class="line">  hjust = <span class="literal">NULL</span>,</span><br><span class="line">  vjust = <span class="literal">NULL</span>,</span><br><span class="line">  angle = <span class="literal">NULL</span>,</span><br><span class="line">  lineheight = <span class="literal">NULL</span>,</span><br><span class="line">  color = <span class="literal">NULL</span>,</span><br><span class="line">  margin = <span class="literal">NULL</span>,</span><br><span class="line">  debug = <span class="literal">NULL</span>,</span><br><span class="line">  inherit.blank = <span class="literal">FALSE</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">rel(x)</span><br></pre></div></td></tr></table></figure>
 <p>相关参数：</p>
 <table>
 <colgroup>
@@ -1049,7 +1040,7 @@
 <h4 id="gridarrow">grid::arrow()</h4>
 <p>Produces a description of what arrows to add to a line. The result can be passed to a function that draws a line, e.g., <code>grid.lines</code>.</p>
 <p>Usage:</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arrow(angle = <span class="number">30</span>, <span class="built_in">length</span> = unit(<span class="number">0.25</span>, <span class="string">&quot;inches&quot;</span>),</span><br><span class="line">      ends = <span class="string">&quot;last&quot;</span>, type = <span class="string">&quot;open&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">arrow(angle = <span class="number">30</span>, <span class="built_in">length</span> = unit(<span class="number">0.25</span>, <span class="string">&quot;inches&quot;</span>),</span><br><span class="line">      ends = <span class="string">&quot;last&quot;</span>, type = <span class="string">&quot;open&quot;</span>)</span><br></pre></div></td></tr></table></figure>
 <table>
 <colgroup>
 <col style="width: 11%" />
@@ -1082,27 +1073,27 @@
 </table>
 <h3 id="演示实例">3. 演示实例</h3>
 <p>具体的函数使用方法如下，基本上来说就是<code>ggplot(...) + theme(...)</code>的方式：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">plot &lt;- ggplot(mpg, aes(displ, hwy)) + geom_point()</span><br><span class="line"></span><br><span class="line">plot + theme(</span><br><span class="line">  panel.background = element_blank(),</span><br><span class="line">  axis.text = element_blank()</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">plot + theme(</span><br><span class="line">  axis.text = element_text(colour = <span class="string">&quot;red&quot;</span>, size = rel(<span class="number">1.5</span>))</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">plot + theme(</span><br><span class="line">  axis.line = element_line(arrow = arrow())</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">plot + theme(</span><br><span class="line">  panel.background = element_rect(fill = <span class="string">&quot;white&quot;</span>),</span><br><span class="line">  plot.margin = margin(<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="string">&quot;cm&quot;</span>),</span><br><span class="line">  plot.background = element_rect(</span><br><span class="line">    fill = <span class="string">&quot;grey90&quot;</span>,</span><br><span class="line">    colour = <span class="string">&quot;black&quot;</span>,</span><br><span class="line">    size = <span class="number">1</span></span><br><span class="line">  )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">plot &lt;- ggplot(mpg, aes(displ, hwy)) + geom_point()</span><br><span class="line"></span><br><span class="line">plot + theme(</span><br><span class="line">  panel.background = element_blank(),</span><br><span class="line">  axis.text = element_blank()</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">plot + theme(</span><br><span class="line">  axis.text = element_text(colour = <span class="string">&quot;red&quot;</span>, size = rel(<span class="number">1.5</span>))</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">plot + theme(</span><br><span class="line">  axis.line = element_line(arrow = arrow())</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">plot + theme(</span><br><span class="line">  panel.background = element_rect(fill = <span class="string">&quot;white&quot;</span>),</span><br><span class="line">  plot.margin = margin(<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="string">&quot;cm&quot;</span>),</span><br><span class="line">  plot.background = element_rect(</span><br><span class="line">    fill = <span class="string">&quot;grey90&quot;</span>,</span><br><span class="line">    colour = <span class="string">&quot;black&quot;</span>,</span><br><span class="line">    size = <span class="number">1</span></span><br><span class="line">  )</span><br><span class="line">)</span><br></pre></div></td></tr></table></figure>
 <p>这部分的演示使用<code>car</code>包的<code>Salaries</code>数据集来进行：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(car)</span><br><span class="line">载入需要的程辑包：carData</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; mytheme &lt;- theme(plot.title=element_text(face=<span class="string">&quot;bold.italic&quot;</span>, </span><br><span class="line">                                          size=<span class="string">&quot;14&quot;</span>, color=<span class="string">&quot;brown&quot;</span>), </span><br><span class="line">                  axis.title=element_text(face=<span class="string">&quot;bold.italic&quot;</span>, </span><br><span class="line">                                          size=<span class="number">10</span>, color=<span class="string">&quot;brown&quot;</span>), </span><br><span class="line">                  axis.text=element_text(face=<span class="string">&quot;bold&quot;</span>, size=<span class="number">9</span>, </span><br><span class="line">                                         color=<span class="string">&quot;darkblue&quot;</span>), </span><br><span class="line">                  panel.background=element_rect(fill=<span class="string">&quot;white&quot;</span>, </span><br><span class="line">                                                color=<span class="string">&quot;darkblue&quot;</span>), </span><br><span class="line">                  panel.grid.major.y=element_line(color=<span class="string">&quot;grey&quot;</span>, </span><br><span class="line">                                                  linetype=<span class="number">1</span>), </span><br><span class="line">                  panel.grid.minor.y=element_line(color=<span class="string">&quot;grey&quot;</span>, </span><br><span class="line">                                                  linetype=<span class="number">2</span>), </span><br><span class="line">                  panel.grid.minor.x=element_blank(), </span><br><span class="line">                  legend.position=<span class="string">&quot;top&quot;</span>) </span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, y=salary, fill=sex)) + </span><br><span class="line">		geom_boxplot() + </span><br><span class="line">		labs(title=<span class="string">&quot;Salary by Rank and Sex&quot;</span>, x=<span class="string">&quot;Rank&quot;</span>, y=<span class="string">&quot;Salary&quot;</span>) + </span><br><span class="line">		mytheme</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; library(car)</span><br><span class="line">载入需要的程辑包：carData</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; mytheme &lt;- theme(plot.title=element_text(face=<span class="string">&quot;bold.italic&quot;</span>, </span><br><span class="line">                                          size=<span class="string">&quot;14&quot;</span>, color=<span class="string">&quot;brown&quot;</span>), </span><br><span class="line">                  axis.title=element_text(face=<span class="string">&quot;bold.italic&quot;</span>, </span><br><span class="line">                                          size=<span class="number">10</span>, color=<span class="string">&quot;brown&quot;</span>), </span><br><span class="line">                  axis.text=element_text(face=<span class="string">&quot;bold&quot;</span>, size=<span class="number">9</span>, </span><br><span class="line">                                         color=<span class="string">&quot;darkblue&quot;</span>), </span><br><span class="line">                  panel.background=element_rect(fill=<span class="string">&quot;white&quot;</span>, </span><br><span class="line">                                                color=<span class="string">&quot;darkblue&quot;</span>), </span><br><span class="line">                  panel.grid.major.y=element_line(color=<span class="string">&quot;grey&quot;</span>, </span><br><span class="line">                                                  linetype=<span class="number">1</span>), </span><br><span class="line">                  panel.grid.minor.y=element_line(color=<span class="string">&quot;grey&quot;</span>, </span><br><span class="line">                                                  linetype=<span class="number">2</span>), </span><br><span class="line">                  panel.grid.minor.x=element_blank(), </span><br><span class="line">                  legend.position=<span class="string">&quot;top&quot;</span>) </span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, y=salary, fill=sex)) + </span><br><span class="line">		geom_boxplot() + </span><br><span class="line">		labs(title=<span class="string">&quot;Salary by Rank and Sex&quot;</span>, x=<span class="string">&quot;Rank&quot;</span>, y=<span class="string">&quot;Salary&quot;</span>) + </span><br><span class="line">		mytheme</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810152825990.png" alt="image-20200810152825990" /><figcaption aria-hidden="true">image-20200810152825990</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810152825990.png" srcset="/img/loading.gif" alt="image-20200810152825990" /><figcaption aria-hidden="true">image-20200810152825990</figcaption>
 </figure>
 <h2 id="图像的组合多重图">图像的组合：多重图</h2>
 <p>我们使用图形参数<code>mfrow</code>和基本函数<code>layout()</code>把两个或更多的基本图放到单个图形中。同样，这种方法在<code>ggplot2</code>包中不适用。将多个<code>ggplot2</code>包的图形放到单个图形中最简单的方式是使用<code>gridExtra</code>包中的<code>grid.arrange()</code>函数。</p>
 <p>Usage：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">arrangeGrob(..., grobs = <span class="built_in">list</span>(...), </span><br><span class="line">            layout_matrix, vp = <span class="literal">NULL</span>,</span><br><span class="line">            name = <span class="string">&quot;arrange&quot;</span>, as.table = <span class="literal">TRUE</span>, </span><br><span class="line">            respect = <span class="literal">FALSE</span>, clip = <span class="string">&quot;off&quot;</span>,</span><br><span class="line">            nrow = <span class="literal">NULL</span>, ncol = <span class="literal">NULL</span>, widths = <span class="literal">NULL</span>, </span><br><span class="line">            heights = <span class="literal">NULL</span>, top = <span class="literal">NULL</span>,</span><br><span class="line">            bottom = <span class="literal">NULL</span>, left = <span class="literal">NULL</span>, </span><br><span class="line">            right = <span class="literal">NULL</span>, padding = unit(<span class="number">0.5</span>, <span class="string">&quot;line&quot;</span>))</span><br><span class="line"></span><br><span class="line">grid.arrange(..., newpage = <span class="literal">TRUE</span>)</span><br><span class="line"></span><br><span class="line">marrangeGrob(grobs, ..., ncol, nrow, </span><br><span class="line">             layout_matrix = matrix(<span class="built_in">seq_len</span>(nrow * ncol), </span><br><span class="line">             nrow = nrow, ncol = ncol), </span><br><span class="line">             top = <span class="built_in">quote</span>(paste(<span class="string">&quot;page&quot;</span>, g, <span class="string">&quot;of&quot;</span>, npages)))</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">arrangeGrob(..., grobs = <span class="built_in">list</span>(...), </span><br><span class="line">            layout_matrix, vp = <span class="literal">NULL</span>,</span><br><span class="line">            name = <span class="string">&quot;arrange&quot;</span>, as.table = <span class="literal">TRUE</span>, </span><br><span class="line">            respect = <span class="literal">FALSE</span>, clip = <span class="string">&quot;off&quot;</span>,</span><br><span class="line">            nrow = <span class="literal">NULL</span>, ncol = <span class="literal">NULL</span>, widths = <span class="literal">NULL</span>, </span><br><span class="line">            heights = <span class="literal">NULL</span>, top = <span class="literal">NULL</span>,</span><br><span class="line">            bottom = <span class="literal">NULL</span>, left = <span class="literal">NULL</span>, </span><br><span class="line">            right = <span class="literal">NULL</span>, padding = unit(<span class="number">0.5</span>, <span class="string">&quot;line&quot;</span>))</span><br><span class="line"></span><br><span class="line">grid.arrange(..., newpage = <span class="literal">TRUE</span>)</span><br><span class="line"></span><br><span class="line">marrangeGrob(grobs, ..., ncol, nrow, </span><br><span class="line">             layout_matrix = matrix(<span class="built_in">seq_len</span>(nrow * ncol), </span><br><span class="line">             nrow = nrow, ncol = ncol), </span><br><span class="line">             top = <span class="built_in">quote</span>(paste(<span class="string">&quot;page&quot;</span>, g, <span class="string">&quot;of&quot;</span>, npages)))</span><br></pre></div></td></tr></table></figure>
 <p>这部分的演示使用<code>car</code>包中的<code>Salaries</code>数据集：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 绘制三幅图像，并保存</span></span><br><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; p1 &lt;- ggplot(data=Salaries, aes(x=rank)) + geom_bar() </span><br><span class="line">&gt; p2 &lt;- ggplot(data=Salaries, aes(x=sex)) + geom_bar() </span><br><span class="line">&gt; p3 &lt;- ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary)) + geom_point() </span><br><span class="line"></span><br><span class="line"><span class="comment"># 将三幅图像合并</span></span><br><span class="line">&gt; library(gridExtra) </span><br><span class="line">&gt; grid.arrange(p1, p2, p3, ncol=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></div></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="comment"># 绘制三幅图像，并保存</span></span><br><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; p1 &lt;- ggplot(data=Salaries, aes(x=rank)) + geom_bar() </span><br><span class="line">&gt; p2 &lt;- ggplot(data=Salaries, aes(x=sex)) + geom_bar() </span><br><span class="line">&gt; p3 &lt;- ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary)) + geom_point() </span><br><span class="line"></span><br><span class="line"><span class="comment"># 将三幅图像合并</span></span><br><span class="line">&gt; library(gridExtra) </span><br><span class="line">&gt; grid.arrange(p1, p2, p3, ncol=<span class="number">3</span>)</span><br></pre></div></td></tr></table></figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810162036196.png" alt="image-20200810162036196" /><figcaption aria-hidden="true">image-20200810162036196</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810162036196.png" srcset="/img/loading.gif" alt="image-20200810162036196" /><figcaption aria-hidden="true">image-20200810162036196</figcaption>
 </figure>
 <h2 id="保存图像">保存图像</h2>
 <p>可以使用R内置的保存方式对图像就进行保存，对于<code>ggplot2</code>创建的图形，可以使用<code>ggsave</code>实现更好地保存。</p>
 <p>Usage：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ggsave(</span><br><span class="line">  filename,</span><br><span class="line">  plot = last_plot(),</span><br><span class="line">  device = <span class="literal">NULL</span>,</span><br><span class="line">  path = <span class="literal">NULL</span>,</span><br><span class="line">  scale = <span class="number">1</span>,</span><br><span class="line">  width = <span class="literal">NA</span>,</span><br><span class="line">  height = <span class="literal">NA</span>,</span><br><span class="line">  units = <span class="built_in">c</span>(<span class="string">&quot;in&quot;</span>, <span class="string">&quot;cm&quot;</span>, <span class="string">&quot;mm&quot;</span>),</span><br><span class="line">  dpi = <span class="number">300</span>,</span><br><span class="line">  limitsize = <span class="literal">TRUE</span>,</span><br><span class="line">  ...</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">ggsave(</span><br><span class="line">  filename,</span><br><span class="line">  plot = last_plot(),</span><br><span class="line">  device = <span class="literal">NULL</span>,</span><br><span class="line">  path = <span class="literal">NULL</span>,</span><br><span class="line">  scale = <span class="number">1</span>,</span><br><span class="line">  width = <span class="literal">NA</span>,</span><br><span class="line">  height = <span class="literal">NA</span>,</span><br><span class="line">  units = <span class="built_in">c</span>(<span class="string">&quot;in&quot;</span>, <span class="string">&quot;cm&quot;</span>, <span class="string">&quot;mm&quot;</span>),</span><br><span class="line">  dpi = <span class="number">300</span>,</span><br><span class="line">  limitsize = <span class="literal">TRUE</span>,</span><br><span class="line">  ...</span><br><span class="line">)</span><br></pre></div></td></tr></table></figure>
 <table>
 <colgroup>
 <col style="width: 25%" />
@@ -1150,381 +1141,425 @@
 </tbody>
 </table>
 <p>例：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">myplot &lt;- ggplot(data=mtcars, aes(x=mpg)) + geom_histogram() </span><br><span class="line">ggsave(file=<span class="string">&quot;mygraph.png&quot;</span>, plot=myplot, width=<span class="number">5</span>, height=<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">myplot &lt;- ggplot(data=mtcars, aes(x=mpg)) + geom_histogram() </span><br><span class="line">ggsave(file=<span class="string">&quot;mygraph.png&quot;</span>, plot=myplot, width=<span class="number">5</span>, height=<span class="number">4</span>)</span><br></pre></div></td></tr></table></figure>
 <p>在当前路径下将myplot保存为名为mygraph.png的5英寸×4英寸（12.7厘米×10.2厘米）PNG格式的图片。我们可以通过设定文件扩展名为ps、tex、jpeg、pdf、tiff、png、bmp、svg或wmf来保存为不同的格式。wmf文件仅限在装有Windows系统的计算机中保存。</p>
 <p>如果忽略plot=选项，最近创建的图形会被保存。如：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data=mtcars, aes(x=mpg)) + geom_histogram() </span><br><span class="line">ggsave(file=<span class="string">&quot;mygraph.pdf&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">ggplot(data=mtcars, aes(x=mpg)) + geom_histogram() </span><br><span class="line">ggsave(file=<span class="string">&quot;mygraph.pdf&quot;</span>)</span><br></pre></div></td></tr></table></figure>
 <p>其他示例：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Not run: </span></span><br><span class="line">ggplot(mtcars, aes(mpg, wt)) + geom_point()</span><br><span class="line"></span><br><span class="line">ggsave(<span class="string">&quot;mtcars.pdf&quot;</span>)</span><br><span class="line">ggsave(<span class="string">&quot;mtcars.png&quot;</span>)</span><br><span class="line"></span><br><span class="line">ggsave(<span class="string">&quot;mtcars.pdf&quot;</span>, width = <span class="number">4</span>, height = <span class="number">4</span>)</span><br><span class="line">ggsave(<span class="string">&quot;mtcars.pdf&quot;</span>, width = <span class="number">20</span>, height = <span class="number">20</span>, units = <span class="string">&quot;cm&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># delete files with base::unlink()</span></span><br><span class="line">unlink(<span class="string">&quot;mtcars.pdf&quot;</span>)</span><br><span class="line">unlink(<span class="string">&quot;mtcars.png&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># specify device when saving to a file with unknown extension</span></span><br><span class="line"><span class="comment"># (for example a server supplied temporary file)</span></span><br><span class="line">file &lt;- tempfile()</span><br><span class="line">ggsave(file, device = <span class="string">&quot;pdf&quot;</span>)</span><br><span class="line">unlink(file)</span><br><span class="line"></span><br><span class="line"><span class="comment"># save plot to file without using ggsave</span></span><br><span class="line">p &lt;- ggplot(mtcars, aes(mpg, wt)) + geom_point()</span><br><span class="line">png(<span class="string">&quot;mtcars.png&quot;</span>)</span><br><span class="line">print(p)</span><br><span class="line">dev.off()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## End(Not run)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="comment">## Not run: </span></span><br><span class="line">ggplot(mtcars, aes(mpg, wt)) + geom_point()</span><br><span class="line"></span><br><span class="line">ggsave(<span class="string">&quot;mtcars.pdf&quot;</span>)</span><br><span class="line">ggsave(<span class="string">&quot;mtcars.png&quot;</span>)</span><br><span class="line"></span><br><span class="line">ggsave(<span class="string">&quot;mtcars.pdf&quot;</span>, width = <span class="number">4</span>, height = <span class="number">4</span>)</span><br><span class="line">ggsave(<span class="string">&quot;mtcars.pdf&quot;</span>, width = <span class="number">20</span>, height = <span class="number">20</span>, units = <span class="string">&quot;cm&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># delete files with base::unlink()</span></span><br><span class="line">unlink(<span class="string">&quot;mtcars.pdf&quot;</span>)</span><br><span class="line">unlink(<span class="string">&quot;mtcars.png&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># specify device when saving to a file with unknown extension</span></span><br><span class="line"><span class="comment"># (for example a server supplied temporary file)</span></span><br><span class="line">file &lt;- tempfile()</span><br><span class="line">ggsave(file, device = <span class="string">&quot;pdf&quot;</span>)</span><br><span class="line">unlink(file)</span><br><span class="line"></span><br><span class="line"><span class="comment"># save plot to file without using ggsave</span></span><br><span class="line">p &lt;- ggplot(mtcars, aes(mpg, wt)) + geom_point()</span><br><span class="line">png(<span class="string">&quot;mtcars.png&quot;</span>)</span><br><span class="line">print(p)</span><br><span class="line">dev.off()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## End(Not run)</span></span><br></pre></div></td></tr></table></figure>
 
-    </div>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">软件使用总结</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/">R</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/R/">R</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Statistics/">Statistics</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%80%9F%E6%9F%A5/">速查</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/08/10/08-R-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E4%B8%8E%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">08. R <- 输入、读取、标注数据与创建报告</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/08/09/%E5%91%8A%E4%B8%80%E6%AE%B5%E8%90%BD/">
+                        <span class="hidden-mobile">告一段落</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
 
-    
-    
-    
-        
+            
+              <!-- Valine Comments 国内版-->
+              
+              <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                requiredFields: ['nick'],
+                })
+                </script>
 
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>向海
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://zhenyumi.github.io/2020/08/09/07-R-ggplot2/" title="07. R &lt;- ggplot2语法概述及基本图片操作">https://zhenyumi.github.io/2020/08/09/07-R-ggplot2/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
+              <!-- Valine Comments 国内版-->
+              
+              <!-- <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
+                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
+                requiredFields: ['nick'],
+                })
+                </script> -->
 
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/R/" rel="tag"># R</a>
-              <a href="/tags/Statistics/" rel="tag"># Statistics</a>
-              <a href="/tags/%E9%80%9F%E6%9F%A5/" rel="tag"># 速查</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/08/09/%E5%91%8A%E4%B8%80%E6%AE%B5%E8%90%BD/" rel="prev" title="告一段落">
-      <i class="fa fa-chevron-left"></i> 告一段落
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/08/10/08-R-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E4%B8%8E%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A/" rel="next" title="08. R <- 输入、读取、标注数据与创建报告">
-      08. R <- 输入、读取、标注数据与创建报告 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-    <div class="comments" id="valine-comments"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+              <!-- Utterances Comments -->
+              <!--<div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
+          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
 
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            -->
+          </div>
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80ggplot2%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">一、ggplot2语法介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E5%87%A0%E4%BD%95%E5%87%BD%E6%95%B0%E6%8C%87%E5%AE%9A%E5%9B%BE%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">用几何函数指定图的类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E7%BB%84"><span class="nav-number">1.2.</span> <span class="nav-text">数据分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%BB%E9%9D%A2"><span class="nav-number">1.3.</span> <span class="nav-text">刻面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%89%E6%BB%91%E6%9B%B2%E7%BA%BF"><span class="nav-number">1.4.</span> <span class="nav-text">添加光滑曲线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E5%AF%B9%E4%BA%8E%E5%9B%BE%E7%89%87%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">二、对于图片的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE"><span class="nav-number">2.1.</span> <span class="nav-text">标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%BB%E5%BA%A6%E7%BA%BF%E5%8F%8A%E5%88%BB%E5%BA%A6%E7%BA%BF%E6%A0%87%E7%AD%BE"><span class="nav-number">2.2.</span> <span class="nav-text">刻度线及刻度线标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E4%BE%8B"><span class="nav-number">2.3.</span> <span class="nav-text">图例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%B0%BA"><span class="nav-number">2.4.</span> <span class="nav-text">标尺</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#theme"><span class="nav-number">2.5.</span> <span class="nav-text">theme()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E7%9A%84%E7%BB%84%E5%90%88%E5%A4%9A%E9%87%8D%E5%9B%BE"><span class="nav-number">2.6.</span> <span class="nav-text">图像的组合：多重图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E5%9B%BE%E5%83%8F"><span class="nav-number">2.7.</span> <span class="nav-text">保存图像</span></a></li></ol></li></ol></div>
       </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="向海"
-      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
-  <p class="site-author-name" itemprop="name">向海</p>
-  <div class="site-description" itemprop="description">一个普通人</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">204</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">20</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">19</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">向海</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">2.1m</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">31:04</span>
-</div><br /> <!-- 换行 -->
-<!-- 网站运行时间的设置 -->
-<span id="timeDate">载入天数...</span>
-<span id="times">载入时分秒...</span>
-<script>
-    var now = new Date();
-    function createtime() {
-        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
-        now.setTime(now.getTime()+250);
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
-    }
-setInterval("createtime()",250);
-</script>
-
-        
-
-
-
-
-
-
-
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
 
       </div>
-    </footer>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
   </div>
 
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-  <script defer src="/lib/three/three.min.js"></script>
-    <script defer src="/lib/three/three-waves.min.js"></script>
-
+    
+  </main>
 
   
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
 
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
 
+  
 
+  
 
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
 
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
 
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
 
-
-
-
-
-<script>
-document.querySelectorAll('.pdfobject-container').forEach(element => {
-  let url = element.dataset.target;
-  let pdfOpenParams = {
-    navpanes : 0,
-    toolbar  : 0,
-    statusbar: 0,
-    pagemode : 'thumbs',
-    view     : 'FitH'
-  };
-  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
-  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
-
-  if (NexT.utils.supportsPDFs()) {
-    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
-  } else {
-    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
-  }
-});
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
 </script>
 
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
 
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
+    
       
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             
+          </span>
+      
+    
+  </div>
 
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
 
     
 
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
   
 
 
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
     });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : true,
-      notify     : true,
-      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
-      placeholder: "Leave Something?",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : true,
-      lang       : 'zh-ch' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "07. R <- ggplot2语法概述及基本图片操作&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
     });
-  }, window.Valine);
-});
-</script>
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
 
 </body>
+
+
 </html>

@@ -1,265 +1,271 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
+
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个普通人">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L08 protein quaternary structure and Protein-Protein interactions - 鹘横海</title>
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (GMT+08:00)">
-<meta property="og:type" content="article">
-<meta property="og:title" content="L08 protein quaternary structure and Protein-Protein interactions">
-<meta property="og:url" content="https://zhenyumi.github.io/2020/07/25/L08%20protein%20quaternary%20structure%20and%20Protein-Protein%20interactions/index.html">
-<meta property="og:site_name" content="鹘横海">
-<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (GMT+08:00)">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026153636381.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026153745589.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026154617682.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026160259593.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026162033516.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026162205585.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026162338689.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026195958173.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026202246124.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026203416188.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026204134751.png">
-<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
-<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
-<meta property="article:author" content="向海">
-<meta property="article:tag" content="Biochemistry I (Macromolecules)">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026153636381.png">
-
-<link rel="canonical" href="https://zhenyumi.github.io/2020/07/25/L08%20protein%20quaternary%20structure%20and%20Protein-Protein%20interactions/">
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
-  <title>L08 protein quaternary structure and Protein-Protein interactions | 鹘横海</title>
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
   
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+<link  rel="stylesheet" href="/css/main.css" />
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<!-- 自定义样式保持在最底部 -->
 
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+ 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">鹘横海</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
 </nav>
 
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Biochemistry%20I%20%28Macromolecules%29/20200725_photo_2020-07-10_21-07-00.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
 
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
             
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-25 23:45">
+      2020年7月25日 晚上
+    </time>
+  </div>
 
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      11
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
     
   
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/25/L08%20protein%20quaternary%20structure%20and%20Protein-Protein%20interactions/">
+</div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
-      <meta itemprop="name" content="向海">
-      <meta itemprop="description" content="一个普通人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="鹘横海">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          L08 protein quaternary structure and Protein-Protein interactions
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-25 23:45:00" itemprop="dateCreated datePublished" datetime="2020-07-25T23:45:00+08:00">2020-07-25</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/" itemprop="url" rel="index"><span itemprop="name">Biochemistry I (Macromolecules)</span></a>
-                </span>
-            </span>
+            
+          </div>
 
           
-            <span id="/2020/07/25/L08%20protein%20quaternary%20structure%20and%20Protein-Protein%20interactions/" class="post-meta-item leancloud_visitors" data-flag-title="L08 protein quaternary structure and Protein-Protein interactions" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/25/L08%20protein%20quaternary%20structure%20and%20Protein-Protein%20interactions/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/25/L08%20protein%20quaternary%20structure%20and%20Protein-Protein%20interactions/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>8.5k</span>
-            </span>
-
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <!-- 鼠标烟花特效 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/fireworks.js"></script>
+
+    <!--浏览器搞笑标题-->
+    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+
+    <!--动态线条背景-->
+    <!--<script type="text/javascript"
+    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>-->
+
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-        <h1 id="quaternary-structure">Quaternary Structure</h1>
+<head>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+</head>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：5 个月前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#quaternary-structure"><span class="post-toc-text">Quaternary Structure</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#introduction"><span class="post-toc-text">Introduction</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#two-types-of-quaternary-organization"><span class="post-toc-text">1. Two types of quaternary organization</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#interactions-involved-in-proteinprotein-interactions"><span class="post-toc-text">2. Interactions involved in protein‐protein interactions</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#numbers-of-subunits"><span class="post-toc-text">3. Numbers of subunits</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#monomer"><span class="post-toc-text">Monomer</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#oligomer"><span class="post-toc-text">Oligomer</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#large-molecular-machines"><span class="post-toc-text">Large Molecular Machines</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#multisubunit-proteins"><span class="post-toc-text">Multisubunit Proteins</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#homotypic-protein-protein-interaction"><span class="post-toc-text">Homotypic protein-protein interaction</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#helical-symmetry"><span class="post-toc-text">Helical Symmetry</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#point-group-symmetry-%E7%82%B9%E7%BE%A4%E5%AF%B9%E7%A7%B0"><span class="post-toc-text">Point-group Symmetry 点群对称</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#point-group-%E7%82%B9%E7%BE%A4"><span class="post-toc-text">1. Point-group 点群</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#schoenflies-notation-%E7%86%8A%E5%A4%AB%E5%88%A9%E8%AE%B0%E5%8F%B7"><span class="post-toc-text">2. Schoenflies notation 熊夫利记号</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#dyad-axis"><span class="post-toc-text">3. Dyad axis</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#protein-dimers"><span class="post-toc-text">Protein Dimers</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#homodimer"><span class="post-toc-text">1. Homodimer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#asymmetric-homodimer"><span class="post-toc-text">Asymmetric Homodimer</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#heterodimer"><span class="post-toc-text">2. Heterodimer</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#prediction-of-quaternary-structure"><span class="post-toc-text">Prediction of quaternary structure</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#experimental-methods"><span class="post-toc-text">Experimental methods</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#computational-methods"><span class="post-toc-text">Computational methods</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#methods-to-investigate-proteinprotein-interactions"><span class="post-toc-text">Methods to investigate protein‐protein interactions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#high-throughput-%E9%AB%98%E9%80%9A%E9%87%8F"><span class="post-toc-text">High throughput 高通量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#yeast-twohybrid-%E9%85%B5%E6%AF%8D%E8%8F%8C%E5%8F%8C%E6%9D%82%E5%90%88%E7%B3%BB%E7%BB%9F"><span class="post-toc-text">1. Yeast two‐hybrid 酵母菌双杂合系统</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#reporter-gene"><span class="post-toc-text">Reporter gene</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#uas"><span class="post-toc-text">UAS</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%8E%A2%E7%A9%B6%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8%E5%8E%9F%E7%90%86"><span class="post-toc-text">探究蛋白质相互作用原理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#strengths-and-weakness"><span class="post-toc-text">Strengths and weakness</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#strengths"><span class="post-toc-text">(1) Strengths</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#weakness"><span class="post-toc-text">(2) Weakness</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#phage-display-%E5%99%AC%E8%8F%8C%E4%BD%93%E5%B1%95%E7%A4%BA%E6%8A%80%E6%9C%AF"><span class="post-toc-text">2. Phage display 噬菌体展示技术</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#tandem-affinity-purification-%E4%B8%B2%E8%81%94%E4%BA%B2%E5%92%8C%E7%BA%AF%E5%8C%96tap"><span class="post-toc-text">3. Tandem affinity purification 串联亲和纯化，TAP</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#low-throughputaffinitybased"><span class="post-toc-text">Low throughput—Affinity‐based</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#coimmunoprecipitation-%E5%85%8D%E7%96%AB%E5%85%B1%E6%B2%89%E6%B7%80"><span class="post-toc-text">1. Co‐immunoprecipitation 免疫共沉淀</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#pulldown-assays-%E6%8B%89%E4%B8%8B%E5%AE%9E%E9%AA%8C"><span class="post-toc-text">2. Pull‐down assays 拉下实验</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#low-throughputlightbased"><span class="post-toc-text">Low throughput——Light‐based</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#light-scattering-%E5%85%89%E6%95%A3%E5%B0%84-sizeshape"><span class="post-toc-text">1. Light scattering 光散射 – size&#x2F;shape</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#surface-plasmon-resonance-%E8%A1%A8%E9%9D%A2%E7%AD%89%E7%A6%BB%E5%AD%90%E5%85%B1%E6%8C%AF-kd"><span class="post-toc-text">2. Surface plasmon resonance 表面等离子共振‐ Kd</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#low-throughputheatbased"><span class="post-toc-text">Low throughput——Heat‐based</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#isothermal-titration-calorimetry-%E7%AD%89%E6%B8%A9%E6%BB%B4%E5%AE%9A%E7%83%AD%E6%B3%95-kd"><span class="post-toc-text">1. Isothermal titration calorimetry 等温滴定热法‐ Kd</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#microscale-thermophoresis-%E5%BE%AE%E9%87%8F%E7%83%AD%E6%B3%B3"><span class="post-toc-text">2. Microscale thermophoresis 微量热泳</span></a></li></ol></li></ol></li></ol>
+
+              <h1 id="quaternary-structure">Quaternary Structure</h1>
 <h2 id="introduction">Introduction</h2>
 <p>Functional protein often organized with multiple folded polypeptide chains (<strong>subunits</strong>)</p>
 <ol type="1">
@@ -325,9 +331,9 @@
 <h1 id="multisubunit-proteins">Multisubunit Proteins</h1>
 <h2 id="homotypic-protein-protein-interaction">Homotypic protein-protein interaction</h2>
 <p>If the two <u>interacting groups</u> lie in <u>entirely different regions of the subunit,</u>we would call this interaction <strong>heterologous（异源的）</strong>.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026153636381.png" alt="image-20191026153636381" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026153636381.png" srcset="/img/loading.gif" alt="image-20191026153636381" style="zoom:50%;" /></p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026153745589.png" alt="image-20191026153745589" /><figcaption aria-hidden="true">image-20191026153745589</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026153745589.png" srcset="/img/loading.gif" alt="image-20191026153745589" /><figcaption aria-hidden="true">image-20191026153745589</figcaption>
 </figure>
 <h2 id="helical-symmetry">Helical Symmetry</h2>
 <p>Heterologous interactions must be specially oriented to give a truly linear complex. More often, the interaction is such that each unit is twisted through some angle with respect to the preceding one. <u>This twisting gives rise to a helical structure.</u>（ Figure 6.38(a) ）</p>
@@ -340,7 +346,7 @@
 </ul></li>
 <li>Tobacco Mosaic Virus</li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026154617682.png" alt="image-20191026154617682" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026154617682.png" srcset="/img/loading.gif" alt="image-20191026154617682" style="zoom:33%;" /></p>
 <p>Both linear and helical arrays are potentially capable of indefinite growth by addition of <strong>more</strong> subunits. Actin filaments can be thousands of units in length.</p>
 <h2 id="point-group-symmetry-点群对称">Point-group Symmetry 点群对称</h2>
 <p>The classes of point-group symmetry involve a defined number of subunits arranged about one or more <strong>axes of symmetry.</strong></p>
@@ -420,21 +426,21 @@
 </tbody>
 </table>
 <h3 id="dyad-axis">3. Dyad axis</h3>
-<p>A special situation of great importance arises when two subunits are related to one another by a 2-fold axis (also called a <strong>dyad axis</strong>) to give C<sub>2</sub> symmetry. That is, each subunit is rotated by 180° about this axis with respect to the other: <img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026160259593.png" alt="image-20191026160259593" style="zoom:33%;" /></p>
+<p>A special situation of great importance arises when two subunits are related to one another by a 2-fold axis (also called a <strong>dyad axis</strong>) to give C<sub>2</sub> symmetry. That is, each subunit is rotated by 180° about this axis with respect to the other: <img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026160259593.png" srcset="/img/loading.gif" alt="image-20191026160259593" style="zoom:33%;" /></p>
 <p>Note that in this case the 2-fold symmetry means that two identical interactions occur, symmetrically placed about the dyad axis. Such a symmetric interaction is called <strong>isologous（同构异素的）</strong>, as opposed to the asymmetric heterologous interaction.</p>
 <h2 id="protein-dimers">Protein Dimers</h2>
 <p>A protein homodimer is formed by two identical proteins.</p>
 <p>A protein heterodimer is formed by two different proteins.</p>
 <h3 id="homodimer">1. Homodimer</h3>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026162033516.png" alt="image-20191026162033516" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026162033516.png" srcset="/img/loading.gif" alt="image-20191026162033516" style="zoom:33%;" /></p>
 <p>Dimers are <strong>the most common</strong> quaternary structures</p>
 <p>The two monomers are usually related by the 2‐fold symmetry</p>
 <h4 id="asymmetric-homodimer">Asymmetric Homodimer</h4>
 <p>Two subunits can associate in an way without symmetries</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026162205585.png" alt="image-20191026162205585" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026162205585.png" srcset="/img/loading.gif" alt="image-20191026162205585" style="zoom:33%;" /></p>
 <h3 id="heterodimer">2. Heterodimer</h3>
 <p>Dimers are formed between two different monomers</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026162338689.png" alt="image-20191026162338689" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026162338689.png" srcset="/img/loading.gif" alt="image-20191026162338689" style="zoom:33%;" /></p>
 <h1 id="prediction-of-quaternary-structure">Prediction of quaternary structure</h1>
 <h2 id="experimental-methods">Experimental methods</h2>
 <p>(low resolution)</p>
@@ -475,7 +481,7 @@
 <p>这两个结构域即使分开时仍各具功能，互不影响。但一个完整的某个特定基因的转录激活因子必须同时含有这两个结构域，否则无法完成激活功能。只有将这两部分通过适当的途径在空间上接近才能恢复其激活转录的能力。</p>
 <h4 id="探究蛋白质相互作用原理">探究蛋白质相互作用原理</h4>
 <p>在酵母双杂交系统中，“诱饵”蛋白X克隆至DNA-BD载体中，表达DNA-BD/X融合蛋白；待测试蛋白Y克隆至AD载体中，表达AD/Y融合蛋白。一旦X与Y蛋白间有相互作用，则DNA-BD和AD也随之被牵拉靠近，恢复行使功能。使得下游的reporter gene表达，检测到reporter gene的表达产物，则说明prey蛋白与bait蛋白有interactions.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026195958173.png" alt="image-20191026195958173" style="zoom: 40%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026195958173.png" srcset="/img/loading.gif" alt="image-20191026195958173" style="zoom: 40%;" /></p>
 <h4 id="strengths-and-weakness">Strengths and weakness</h4>
 <h5 id="strengths">(1) Strengths</h5>
 <ol type="1">
@@ -492,15 +498,15 @@
 <p>In this technique, <u>a gene</u> encoding a <u>protein of interest</u> is inserted into a phage <strong>coat protein gene</strong>, causing the phage to <strong>"display" the protein on its outside</strong> while containing the gene for the protein on its inside, resulting in a connection between genotype and phenotype.</p>
 <p>These displaying phages can then be <strong>screened（筛）</strong> against other proteins, peptides or DNA sequences, <u>in order to detect interaction between the displayed protein and those other molecules.</u></p>
 <p>In this way, large libraries of proteins can be screened and amplified in a process called in vitro selection, which is analogous to natural selection.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026202246124.png" alt="image-20191026202246124" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026202246124.png" srcset="/img/loading.gif" alt="image-20191026202246124" style="zoom:33%;" /></p>
 <p>噬菌体展示技术是将多肽或蛋白质的编码基因或目的基因片段克隆入噬菌体外壳蛋白结构基因的适当位置，在阅读框正确且不影响其他外壳蛋白正常功能的情况下，使外源多肽或蛋白与外壳蛋白融合表达，融合蛋白随子代噬菌体的重新组装而展示在噬菌体表面。被展示的多肽或蛋白可以保持相对独立的空间结构和生物活性，以利于靶分子的识别和结合。</p>
 <p>肽库与固相上的靶蛋白分子经过一定时间孵育后，洗去未结合的游离噬菌体，然后以竞争受体或酸洗脱下与靶分子结合吸附的噬菌体，洗脱的噬菌体感染宿主细胞后经繁殖扩增，进行下一轮洗脱，经过3轮～5轮的“吸附-洗脱-扩增”后，与靶分子特异结合的噬菌体得到高度富集。所得的噬菌体制剂可用来做进一步富集有期望结合特性的目标噬菌体。</p>
 <h3 id="tandem-affinity-purification-串联亲和纯化tap">3. Tandem affinity purification 串联亲和纯化，TAP</h3>
 <p>串联亲和纯化<em>（TAP/MS）</em>是免疫共沉淀<em>（Co-IP/MS）</em>的“近亲”，两者在寻找诱饵蛋白的互作蛋白以及纯化互作蛋白的原理方面非常相似。但是TAP/MS经过2步亲和纯化，而Co-IP/MS只有1步亲和纯化，故而TAP/MS可以有效减少非特异蛋白的结合</p>
 <p>The goal is to extract from a cell only the protein of interest, in complex with any other proteins it interacted with. TAP uses two types of <strong>agarose（琼脂糖） beads</strong> that <u>bind to the protein of interest</u> and that can be separated from the cell lysate by centrifugation, <u>without disturbing, denaturing or contaminating the involved complexes.</u></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026203416188.png" alt="image-20191026203416188" style="zoom:40%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026203416188.png" srcset="/img/loading.gif" alt="image-20191026203416188" style="zoom:40%;" /></p>
 <p>The original TAP method involves the fusion of the TAP tag to the C-terminus of the protein under study. The TAP tag consists of <strong>calmodulin binding peptide</strong> (CBP，钙调蛋白结合肽) from the N-terminal, followed by a TEV protease cleavage site and two Protein A domains, which bind tightly to <strong>IgG（Immunoglobulin G，免疫球蛋白G）</strong> (making a TAP tag a type of epitope tag).</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026204134751.png" alt="image-20191026204134751" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191026204134751.png" srcset="/img/loading.gif" alt="image-20191026204134751" style="zoom:50%;" /></p>
 <h2 id="low-throughputaffinitybased">Low throughput—Affinity‐based</h2>
 <h3 id="coimmunoprecipitation-免疫共沉淀">1. Co‐immunoprecipitation 免疫共沉淀</h3>
 <p>免疫共沉淀（Co-Immunoprecipitation）是以抗体和抗原之间的专一性作用为基础的用于研究蛋白质相互作用的经典方法。是确定两种蛋白质在完整细胞内生理性相互作用的有效方法。</p>
@@ -520,372 +526,414 @@
 <p>微量热泳动仪使用红外激光进行局部加热导致分子定向移动，继而通过荧光分析温度梯度场中的分子分布比。MST技术能够检测到由于结合而引起的生物分子的大小、电荷和水化层的变化。相互作用的过程可以在天然条件下，无需固定、任何生物溶液中完成测量。</p>
 <p>未结合的适配子的热泳动运动与已同目标蛋白结合的适配子的热泳动不同。</p>
 
-    </div>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/Biochemistry-I-Macromolecules/">Biochemistry I (Macromolecules)</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Biochemistry-I-Macromolecules/">Biochemistry I (Macromolecules)</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/25/L08%20Genetics%20of%20Bacteria%20and%20Bacteriophages/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L08 Genetics of Bacteria and Bacteriophages</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/25/L09%20protein%20function/">
+                        <span class="hidden-mobile">L09 protein function</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
 
-    
-    
-    
-        
+            
+              <!-- Valine Comments 国内版-->
+              
+              <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                requiredFields: ['nick'],
+                })
+                </script>
 
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>向海
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://zhenyumi.github.io/2020/07/25/L08%20protein%20quaternary%20structure%20and%20Protein-Protein%20interactions/" title="L08 protein quaternary structure and Protein-Protein interactions">https://zhenyumi.github.io/2020/07/25/L08 protein quaternary structure and Protein-Protein interactions/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
+              <!-- Valine Comments 国内版-->
+              
+              <!-- <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
+                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
+                requiredFields: ['nick'],
+                })
+                </script> -->
 
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Biochemistry-I-Macromolecules/" rel="tag"># Biochemistry I (Macromolecules)</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/07/25/L09%20protein%20function/" rel="prev" title="L09 protein function">
-      <i class="fa fa-chevron-left"></i> L09 protein function
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/07/25/L08%20Genetics%20of%20Bacteria%20and%20Bacteriophages/" rel="next" title="L08 Genetics of Bacteria and Bacteriophages">
-      L08 Genetics of Bacteria and Bacteriophages <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-    <div class="comments" id="valine-comments"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+              <!-- Utterances Comments -->
+              <!--<div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
+          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
 
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            -->
+          </div>
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#quaternary-structure"><span class="nav-number">1.</span> <span class="nav-text">Quaternary Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-number">1.1.</span> <span class="nav-text">Introduction</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#multisubunit-proteins"><span class="nav-number">2.</span> <span class="nav-text">Multisubunit Proteins</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#homotypic-protein-protein-interaction"><span class="nav-number">2.1.</span> <span class="nav-text">Homotypic protein-protein interaction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#helical-symmetry"><span class="nav-number">2.2.</span> <span class="nav-text">Helical Symmetry</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#point-group-symmetry-%E7%82%B9%E7%BE%A4%E5%AF%B9%E7%A7%B0"><span class="nav-number">2.3.</span> <span class="nav-text">Point-group Symmetry 点群对称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#protein-dimers"><span class="nav-number">2.4.</span> <span class="nav-text">Protein Dimers</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#prediction-of-quaternary-structure"><span class="nav-number">3.</span> <span class="nav-text">Prediction of quaternary structure</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#experimental-methods"><span class="nav-number">3.1.</span> <span class="nav-text">Experimental methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#computational-methods"><span class="nav-number">3.2.</span> <span class="nav-text">Computational methods</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#methods-to-investigate-proteinprotein-interactions"><span class="nav-number">4.</span> <span class="nav-text">Methods to investigate protein‐protein interactions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#high-throughput-%E9%AB%98%E9%80%9A%E9%87%8F"><span class="nav-number">4.1.</span> <span class="nav-text">High throughput 高通量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#low-throughputaffinitybased"><span class="nav-number">4.2.</span> <span class="nav-text">Low throughput—Affinity‐based</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#low-throughputlightbased"><span class="nav-number">4.3.</span> <span class="nav-text">Low throughput——Light‐based</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#low-throughputheatbased"><span class="nav-number">4.4.</span> <span class="nav-text">Low throughput——Heat‐based</span></a></li></ol></li></ol></div>
       </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="向海"
-      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
-  <p class="site-author-name" itemprop="name">向海</p>
-  <div class="site-description" itemprop="description">一个普通人</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">204</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">20</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">19</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">向海</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">2.1m</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">31:04</span>
-</div><br /> <!-- 换行 -->
-<!-- 网站运行时间的设置 -->
-<span id="timeDate">载入天数...</span>
-<span id="times">载入时分秒...</span>
-<script>
-    var now = new Date();
-    function createtime() {
-        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
-        now.setTime(now.getTime()+250);
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
-    }
-setInterval("createtime()",250);
-</script>
-
-        
-
-
-
-
-
-
-
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
 
       </div>
-    </footer>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
   </div>
 
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-  <script defer src="/lib/three/three.min.js"></script>
-    <script defer src="/lib/three/three-waves.min.js"></script>
-
+    
+  </main>
 
   
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
 
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
 
+  
 
+  
 
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
 
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
 
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
 
-
-
-
-
-<script>
-document.querySelectorAll('.pdfobject-container').forEach(element => {
-  let url = element.dataset.target;
-  let pdfOpenParams = {
-    navpanes : 0,
-    toolbar  : 0,
-    statusbar: 0,
-    pagemode : 'thumbs',
-    view     : 'FitH'
-  };
-  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
-  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
-
-  if (NexT.utils.supportsPDFs()) {
-    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
-  } else {
-    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
-  }
-});
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
 </script>
 
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
 
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
+    
       
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             
+          </span>
+      
+    
+  </div>
 
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
 
     
 
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
   
 
 
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
     });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : true,
-      notify     : true,
-      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
-      placeholder: "Leave Something?",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : true,
-      lang       : 'zh-ch' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L08 protein quaternary structure and Protein-Protein interactions&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
     });
-  }, window.Valine);
-});
-</script>
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
 
 </body>
+
+
 </html>

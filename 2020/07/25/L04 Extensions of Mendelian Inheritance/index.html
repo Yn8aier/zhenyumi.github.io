@@ -1,289 +1,277 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
+
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个普通人">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L04 Extensions of Mendelian Inheritance - 鹘横海</title>
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (GMT+08:00)">
-<meta property="og:type" content="article">
-<meta property="og:title" content="L04 Extensions of Mendelian Inheritance">
-<meta property="og:url" content="https://zhenyumi.github.io/2020/07/25/L04%20Extensions%20of%20Mendelian%20Inheritance/index.html">
-<meta property="og:site_name" content="鹘横海">
-<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (GMT+08:00)">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116193418165.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569326688336.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569326984701.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569327149059.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569327294107.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569327547364.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569328319395.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569328428267.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569328540031.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569496554777.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569496711841.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569496859433.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497101791.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497212703.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497262251.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497560460.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116200050134.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116200525795.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116200702275.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569500728780.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569500753969.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201421401.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201654435.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201731192.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201904993.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201945041.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116202136619.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116202209875.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116202540235.png">
-<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
-<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
-<meta property="article:author" content="向海">
-<meta property="article:tag" content="Genetics">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116193418165.png">
-
-<link rel="canonical" href="https://zhenyumi.github.io/2020/07/25/L04%20Extensions%20of%20Mendelian%20Inheritance/">
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
-  <title>L04 Extensions of Mendelian Inheritance | 鹘横海</title>
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
   
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+<link  rel="stylesheet" href="/css/main.css" />
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<!-- 自定义样式保持在最底部 -->
 
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+ 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">鹘横海</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
 </nav>
 
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetics/20200725_photo_2020-07-10_19-16-57.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
 
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
             
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-25 23:45">
+      2020年7月25日 晚上
+    </time>
+  </div>
 
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      9
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
     
   
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/25/L04%20Extensions%20of%20Mendelian%20Inheritance/">
+</div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
-      <meta itemprop="name" content="向海">
-      <meta itemprop="description" content="一个普通人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="鹘横海">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          L04 Extensions of Mendelian Inheritance
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-25 23:45:00" itemprop="dateCreated datePublished" datetime="2020-07-25T23:45:00+08:00">2020-07-25</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Academic-Notebook/Genetics/" itemprop="url" rel="index"><span itemprop="name">Genetics</span></a>
-                </span>
-            </span>
+            
+          </div>
 
           
-            <span id="/2020/07/25/L04%20Extensions%20of%20Mendelian%20Inheritance/" class="post-meta-item leancloud_visitors" data-flag-title="L04 Extensions of Mendelian Inheritance" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/25/L04%20Extensions%20of%20Mendelian%20Inheritance/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/25/L04%20Extensions%20of%20Mendelian%20Inheritance/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>9.2k</span>
-            </span>
-
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <!-- 鼠标烟花特效 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/fireworks.js"></script>
+
+    <!--浏览器搞笑标题-->
+    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+
+    <!--动态线条背景-->
+    <!--<script type="text/javascript"
+    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>-->
+
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-        <h1 id="一inheritance-patterns-of-single-genes">一、Inheritance patterns of single genes</h1>
+<head>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+</head>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：5 个月前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80inheritance-patterns-of-single-genes"><span class="post-toc-text">一、Inheritance patterns of single genes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#wildtype-alleles-vs.-mutant-alleles"><span class="post-toc-text">Wild‐type alleles vs. Mutant alleles</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#wildtype-alleles"><span class="post-toc-text">（1）wildtype alleles</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mutant-alleles"><span class="post-toc-text">（2）mutant alleles</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#dominant-mutant"><span class="post-toc-text">Dominant Mutant</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#simple-dominance"><span class="post-toc-text">Simple Dominance</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#possible-explanations"><span class="post-toc-text">（1）possible explanations</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#incomplete-dominance-%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%98%BE%E6%80%A7"><span class="post-toc-text">Incomplete Dominance 不完全显性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#incomplete-penetrance%E5%A4%96%E6%98%BE%E7%8E%87"><span class="post-toc-text">Incomplete Penetrance（外显率）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#polydactyly-%E5%A4%9A%E8%B6%BE"><span class="post-toc-text">（1）Polydactyly (多趾)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#penetrance%E5%A4%96%E6%98%BE%E7%8E%87"><span class="post-toc-text">（2）penetrance（外显率）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#expressivity%E5%A4%96%E6%98%BE%E5%BA%A6"><span class="post-toc-text">（3）Expressivity（外显度）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#variable-expressivity"><span class="post-toc-text">（4）Variable Expressivity</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#environment-%E7%8E%AF%E5%A2%83%E5%9B%A0%E7%B4%A0%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="post-toc-text">Environment 环境因素的影响</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#overdominance-%E8%B6%85%E6%98%BE%E6%80%A7"><span class="post-toc-text">Overdominance 超显性</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#disease-resistance"><span class="post-toc-text">（1）Disease resistance</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#homodimer%E5%90%8C%E5%9E%8B%E4%BA%8C%E8%81%9A%E4%BD%93-formation"><span class="post-toc-text">（2）Homodimer（同型二聚体） formation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#variation-in-functional-activity"><span class="post-toc-text">（3）Variation in functional activity</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#codominance%E5%85%B1%E6%98%BE%E6%80%A7"><span class="post-toc-text">Codominance（共显性）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#multiple-alleles%E5%A4%8D%E7%AD%89%E4%BD%8D%E5%9F%BA%E5%9B%A0"><span class="post-toc-text">Multiple Alleles（复等位基因）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#example-human-abo-blood-group"><span class="post-toc-text">Example: Human ABO Blood Group</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#abo%E8%A1%80%E5%9E%8B%E6%8A%97%E5%8E%9F%E7%9A%84%E5%BD%A2%E6%88%90"><span class="post-toc-text">ABO血型抗原的形成</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#example-coat-colors-in-rabbits"><span class="post-toc-text">Example: Coat Colors in Rabbits</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#x-linked-genes"><span class="post-toc-text">X-linked Genes</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sexinfluenced-traits"><span class="post-toc-text">Sex‐influenced Traits</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sexlimited-traits"><span class="post-toc-text">Sex‐limited Traits</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#lethal-alleles-%E8%87%B4%E6%AD%BB%E7%AD%89%E4%BD%8D%E5%9F%BA%E5%9B%A0"><span class="post-toc-text">Lethal alleles （致死等位基因）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#essential-gene-and-nonessential-gene"><span class="post-toc-text">1. Essential Gene and Nonessential Gene</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#lethal-genes"><span class="post-toc-text">2. Lethal Genes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#conditional-lethal-alleles"><span class="post-toc-text">Conditional lethal alleles</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#recessive-lethal-mutation"><span class="post-toc-text">3. Recessive Lethal Mutation</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8Cinheritance-patterns-of-multiple-genes"><span class="post-toc-text">二、Inheritance patterns of multiple genes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#epistasis-%E4%B8%8A%E4%BD%8D%E6%80%A7%E5%BC%82%E4%BD%8D%E6%98%BE%E6%80%A7"><span class="post-toc-text">Epistasis 上位性；异位显性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#complementation-%E4%BA%92%E8%A1%A5"><span class="post-toc-text">Complementation 互补</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#complementation-test-cis-trans-test"><span class="post-toc-text">1. Complementation Test&#x2F; Cis-trans test</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#gene-redundancy-%E5%9F%BA%E5%9B%A0%E4%B8%B0%E4%BD%99"><span class="post-toc-text">Gene Redundancy 基因丰余</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#intergenic-suppressors-%E5%9F%BA%E5%9B%A0%E9%97%B4%E6%8A%91%E5%88%B6"><span class="post-toc-text">Intergenic suppressors 基因间抑制</span></a></li></ol></li></ol>
+
+              <h1 id="一inheritance-patterns-of-single-genes">一、Inheritance patterns of single genes</h1>
 <p>There are many ways in which two alleles of a single gene may govern the outcome of a trait</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116193418165.png" alt="image-20191116193418165" /><figcaption aria-hidden="true">image-20191116193418165</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116193418165.png" srcset="/img/loading.gif" alt="image-20191116193418165" /><figcaption aria-hidden="true">image-20191116193418165</figcaption>
 </figure>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569326688336.png" alt="1569326688336" /><figcaption aria-hidden="true">1569326688336</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569326688336.png" srcset="/img/loading.gif" alt="1569326688336" /><figcaption aria-hidden="true">1569326688336</figcaption>
 </figure>
 <p>These patterns are examined with two goals in mind</p>
 <ol type="1">
@@ -330,16 +318,16 @@
 <ol type="1">
 <li>一半剂量的蛋白足以实现显性性状：</li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569326984701.png" alt="1569326984701" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569326984701.png" srcset="/img/loading.gif" alt="1569326984701" style="zoom:50%;" /></p>
 <ol start="2" type="1">
 <li>显性基因表达量提高：</li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569327149059.png" alt="1569327149059" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569327149059.png" srcset="/img/loading.gif" alt="1569327149059" style="zoom:33%;" /></p>
 <p>The normal gene is <strong>“up‐regulated”</strong> to compensate for the lack of function of the defective allele</p>
 <h2 id="incomplete-dominance-不完全显性">Incomplete Dominance 不完全显性</h2>
 <p>In incomplete dominance the heterozygote <strong>exhibits a phenotype that is</strong> <strong>intermediate between the corresponding homozygotes</strong></p>
 <p>The allele for red color(R) is <u>incompletely, or partially</u>, dominant over the allele for white color(r).</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569327294107.png" alt="1569327294107" style="zoom:55%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569327294107.png" srcset="/img/loading.gif" alt="1569327294107" style="zoom:55%;" /></p>
 <p>Differences among the phenotypes could be due to differences in the amount of the product specified by the R allele. (i.e. R allele is <u>semidominant</u>.)</p>
 <p><font color="990000">Whether a trait is <strong>dominant or incompletely dominant</strong> may depend on how closely the trait is examined</font></p>
 <p>Take, for example, the characteristic of pea shape</p>
@@ -351,7 +339,7 @@
 </ul></li>
 <li>a microscopic examination of round peas reveals that not all round peas are “created equal”</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569327547364.png" alt="1569327547364" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569327547364.png" srcset="/img/loading.gif" alt="1569327547364" style="zoom:67%;" /></p>
 <h2 id="incomplete-penetrance外显率">Incomplete Penetrance（外显率）</h2>
 <p>The term indicates that a dominant allele does <u>not always <strong>“penetrate”</strong></u> into the phenotype of the individual</p>
 <p>The measure of penetrance is described at the population level</p>
@@ -383,13 +371,13 @@
 </ol>
 <h3 id="variable-expressivity">（4）Variable Expressivity</h3>
 <p>Variable expressivity: A trait is not manifested uniformly among the individuals.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569328319395.png" alt="1569328319395" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569328319395.png" srcset="/img/loading.gif" alt="1569328319395" style="zoom:33%;" /></p>
 <h2 id="environment-环境因素的影响">Environment 环境因素的影响</h2>
 <p>环境因素对于表现型具有重要的影响作用（Environmental conditions may have a great impact on the phenotype of the individual）</p>
 <ol type="1">
 <li>Some animals like the arctic fox change coat color: white in winter, grayish brown in summer</li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569328428267.png" alt="1569328428267" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569328428267.png" srcset="/img/loading.gif" alt="1569328428267" style="zoom:67%;" /></p>
 <ol start="2" type="1">
 <li>Humans affected by phenylketonuria (PKU) are unable to metabolize phenylalanine</li>
 </ol>
@@ -402,7 +390,7 @@
 <li>This allows them to see the <strong>norm of reaction</strong> of the environmental influence on phenotypic range</li>
 <li>The norm of reaction for eye facet number in <u>genetically identical</u> flies decreased at increasing temperature</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569328540031.png" alt="1569328540031" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569328540031.png" srcset="/img/loading.gif" alt="1569328540031" style="zoom: 50%;" /></p>
 <h2 id="overdominance-超显性">Overdominance 超显性</h2>
 <p><strong>Overdominance</strong>, or called <strong>heterozygote advantage（杂合子优势）</strong> is the phenomenon in which a heterozygote is more vigorous than both of the corresponding homozygotes</p>
 <ul>
@@ -416,7 +404,7 @@
 <h3 id="disease-resistance">（1）Disease resistance</h3>
 <p>Example: <strong>Sickle‐cell anemia</strong></p>
 <p>Heterozygous Hb<sup>A</sup>Hb<sup>S</sup> more resistant to malaria（疟疾）</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569496554777.png" alt="1569496554777" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569496554777.png" srcset="/img/loading.gif" alt="1569496554777" style="zoom: 33%;" /></p>
 <h3 id="homodimer同型二聚体-formation">（2）Homodimer（同型二聚体） formation</h3>
 <p>Some proteins function as homodimers: <u>It is composed of two different subunits, which is encoded by two alleles of the same gene</u></p>
 <ul>
@@ -424,18 +412,18 @@
 <li>A2A2 homozygotes – Make only A2A2 homodimers</li>
 <li>A1A2 heterozygotes – Make A1A1 and A2A2 homodimers and A1A2 homodimers</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569496711841.png" alt="1569496711841" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569496711841.png" srcset="/img/loading.gif" alt="1569496711841" style="zoom: 50%;" /></p>
 <p>– For some proteins, <strong>the A1A2 homodimer may have better functional activity</strong> (– Giving the heterozygote superior characteristics)</p>
 <h3 id="variation-in-functional-activity">（3）Variation in functional activity</h3>
 <p>A gene, E, encodes a metabolic enzyme</p>
 <p>Allele E1 encodes an enzyme that functions better at lower temperatures</p>
 <p>Allele E2 encodes an enzyme that functions better at higher temperatures</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569496859433.png" alt="1569496859433" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569496859433.png" srcset="/img/loading.gif" alt="1569496859433" style="zoom:50%;" /></p>
 <p>E1E2 heterozygotes produce both enzymes they have an advantage in which they function over a wider temperature range than either E1E1 or E2E2 homozygotes</p>
 <h2 id="codominance共显性">Codominance（共显性）</h2>
 <p>Neither allele is dominant.</p>
 <p>Two alleles appear to contribute independently to the phenotype of the heterozygotes</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497101791.png" alt="1569497101791" style="zoom:60%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497101791.png" srcset="/img/loading.gif" alt="1569497101791" style="zoom:60%;" /></p>
 <h2 id="multiple-alleles复等位基因">Multiple Alleles（复等位基因）</h2>
 <p>Many genes have multiple alleles</p>
 <ul>
@@ -445,23 +433,23 @@
 <h4 id="example-human-abo-blood-group">Example: Human ABO Blood Group</h4>
 <p>It is determined by the type of antigen present on the surface of red blood cells</p>
 <p>Antigens are substances that are recognized by antibodies produced by the immune system</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497212703.png" alt="1569497212703" style="zoom:50%;" /></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497262251.png" alt="1569497262251" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497212703.png" srcset="/img/loading.gif" alt="1569497212703" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497262251.png" srcset="/img/loading.gif" alt="1569497262251" style="zoom:33%;" /></p>
 <h4 id="abo血型抗原的形成">ABO血型抗原的形成</h4>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497560460.png" alt="1569497560460" /><figcaption aria-hidden="true">1569497560460</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569497560460.png" srcset="/img/loading.gif" alt="1569497560460" /><figcaption aria-hidden="true">1569497560460</figcaption>
 </figure>
 <h4 id="example-coat-colors-in-rabbits">Example: Coat Colors in Rabbits</h4>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116200050134.png" alt="image-20191116200050134" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116200050134.png" srcset="/img/loading.gif" alt="image-20191116200050134" style="zoom:50%;" /></p>
 <p>The different phenotypes are caused by four different alleles of the c gene.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116200525795.png" alt="image-20191116200525795" style="zoom: 50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116200525795.png" srcset="/img/loading.gif" alt="image-20191116200525795" style="zoom: 50%;" /></p>
 <h2 id="x-linked-genes">X-linked Genes</h2>
 <p>Many species have males and females that differ in their sex chromosome composition</p>
 <ul>
 <li><p>Certain traits are g<u>overned by genes on the sex chromosomes</u></p></li>
 <li><p>A pedigree (家谱;系谱) for an X‐linked disease shows that it is mostly males that are affected with their mothers as carriers</p></li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116200702275.png" alt="image-20191116200702275" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116200702275.png" srcset="/img/loading.gif" alt="image-20191116200702275" style="zoom:50%;" /></p>
 <ul>
 <li><p>An affected male and unaffected female have no affected offspring, but females are carriers</p></li>
 <li><p>An affected female and unaffected male have all male offspring affected and females all carriers</p></li>
@@ -479,13 +467,13 @@
 <li>Allele B is dominant in males, but recessive in females</li>
 </ul>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569500728780.png" alt="1569500728780" /><figcaption aria-hidden="true">1569500728780</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569500728780.png" srcset="/img/loading.gif" alt="1569500728780" /><figcaption aria-hidden="true">1569500728780</figcaption>
 </figure>
 <p>Pattern baldness appears to be related to the production of the male sex hormone testosterone （睾酮）</p>
 <ul>
 <li>Pattern baldness results from overexpression of a gene that converts testosterone to 5‐<span class="math inline">\(\alpha\)</span>‐dihydrotestosterone (DHT) which binds to cellular receptors and alters expression of many genes</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569500753969.png" alt="1569500753969" style="zoom: 70%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1569500753969.png" srcset="/img/loading.gif" alt="1569500753969" style="zoom: 70%;" /></p>
 <h2 id="sexlimited-traits">Sex‐limited Traits</h2>
 <p>Traits that occur in only one of the two sexes</p>
 <ul>
@@ -516,29 +504,29 @@
 </ul>
 <h4 id="conditional-lethal-alleles">Conditional lethal alleles</h4>
 <p>Conditional lethal alleles may kill an organism only when certain environmental conditions prevail</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201421401.png" alt="image-20191116201421401" style="zoom: 33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201421401.png" srcset="/img/loading.gif" alt="image-20191116201421401" style="zoom: 33%;" /></p>
 <h3 id="recessive-lethal-mutation">3. Recessive Lethal Mutation</h3>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201654435.png" alt="image-20191116201654435" /><figcaption aria-hidden="true">image-20191116201654435</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201654435.png" srcset="/img/loading.gif" alt="image-20191116201654435" /><figcaption aria-hidden="true">image-20191116201654435</figcaption>
 </figure>
 <h1 id="二inheritance-patterns-of-multiple-genes">二、Inheritance patterns of multiple genes</h1>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201731192.png" alt="haha" /><figcaption aria-hidden="true">haha</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201731192.png" srcset="/img/loading.gif" alt="haha" /><figcaption aria-hidden="true">haha</figcaption>
 </figure>
 <h2 id="epistasis-上位性异位显性">Epistasis 上位性；异位显性</h2>
 <p>An allele of one gene overrides the effect of other genes on the phenotype.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201904993.png" alt="image-20191116201904993" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201904993.png" srcset="/img/loading.gif" alt="image-20191116201904993" style="zoom:67%;" /></p>
 <h2 id="complementation-互补">Complementation 互补</h2>
 <p>A phenomenon in which two different parents that express the same or similar recessive phenotypes produce offspring with a wild‐type phenotype</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201945041.png" alt="image-20191116201945041" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116201945041.png" srcset="/img/loading.gif" alt="image-20191116201945041" style="zoom:67%;" /></p>
 <h3 id="complementation-test-cis-trans-test">1. Complementation Test/ Cis-trans test</h3>
 <p>A phenomenon in which two different parents that express the same or similar recessive phenotypes produce offspring with a wild‐type phenotype</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116202136619.png" alt="image-20191116202136619" /><figcaption aria-hidden="true">image-20191116202136619</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116202136619.png" srcset="/img/loading.gif" alt="image-20191116202136619" /><figcaption aria-hidden="true">image-20191116202136619</figcaption>
 </figure>
 <h2 id="gene-redundancy-基因丰余">Gene Redundancy 基因丰余</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116202209875.png" alt="image-20191116202209875" /><figcaption aria-hidden="true">image-20191116202209875</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116202209875.png" srcset="/img/loading.gif" alt="image-20191116202209875" /><figcaption aria-hidden="true">image-20191116202209875</figcaption>
 </figure>
 <p>Gene redundancy is the existence of multiple genes in the genome of an organism that perform the same function. This is the case for many sets of paralogous genes. When an individual gene in such a set is disrupted by mutation or targeted knockout, there can be little effect on phenotype as a result of gene redundancy, whereas the effect is large for the knockout of a gene with only one copy.</p>
 <p>因所编码的RNA或蛋白质用量很大，故基因的份数很多，只有在隐性基因或隐性突变达到一定数目之后，才会影响到性状</p>
@@ -546,374 +534,416 @@
 <p>A <strong>suppressor mutation</strong> is a mutation that nullify (使无效) the effect of an earlier mutation there by reversing it's effect.</p>
 <p>An <strong>intragenic suppressor</strong> is a mutation which is a suppressor mutation that occurs in the same gene where the first mutation had occurred.</p>
 <p>In <strong>intergenic suppressor</strong> mutations, the suppressor mutation happens in a location somewhere else in the DNA, which is not in the same gene where the original mutation had happened.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116202540235.png" alt="image-20191116202540235" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191116202540235.png" srcset="/img/loading.gif" alt="image-20191116202540235" style="zoom: 67%;" /></p>
 
-    </div>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/Genetics/">Genetics</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Genetics/">Genetics</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/25/L02%20Cellular%20Reproduction/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L02 Cellular Reproduction</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/25/L04%20Nucleic%20Acid/">
+                        <span class="hidden-mobile">L04 Nucleic Acid</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
 
-    
-    
-    
-        
+            
+              <!-- Valine Comments 国内版-->
+              
+              <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                requiredFields: ['nick'],
+                })
+                </script>
 
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>向海
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://zhenyumi.github.io/2020/07/25/L04%20Extensions%20of%20Mendelian%20Inheritance/" title="L04 Extensions of Mendelian Inheritance">https://zhenyumi.github.io/2020/07/25/L04 Extensions of Mendelian Inheritance/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
+              <!-- Valine Comments 国内版-->
+              
+              <!-- <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
+                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
+                requiredFields: ['nick'],
+                })
+                </script> -->
 
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Genetics/" rel="tag"># Genetics</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/07/25/L04%20Nucleic%20Acid/" rel="prev" title="L04 Nucleic Acid">
-      <i class="fa fa-chevron-left"></i> L04 Nucleic Acid
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/07/25/L02%20Cellular%20Reproduction/" rel="next" title="L02 Cellular Reproduction">
-      L02 Cellular Reproduction <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-    <div class="comments" id="valine-comments"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+              <!-- Utterances Comments -->
+              <!--<div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
+          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
 
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            -->
+          </div>
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80inheritance-patterns-of-single-genes"><span class="nav-number">1.</span> <span class="nav-text">一、Inheritance patterns of single genes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#wildtype-alleles-vs.-mutant-alleles"><span class="nav-number">1.1.</span> <span class="nav-text">Wild‐type alleles vs. Mutant alleles</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#simple-dominance"><span class="nav-number">1.2.</span> <span class="nav-text">Simple Dominance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#incomplete-dominance-%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%98%BE%E6%80%A7"><span class="nav-number">1.3.</span> <span class="nav-text">Incomplete Dominance 不完全显性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#incomplete-penetrance%E5%A4%96%E6%98%BE%E7%8E%87"><span class="nav-number">1.4.</span> <span class="nav-text">Incomplete Penetrance（外显率）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#environment-%E7%8E%AF%E5%A2%83%E5%9B%A0%E7%B4%A0%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">1.5.</span> <span class="nav-text">Environment 环境因素的影响</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overdominance-%E8%B6%85%E6%98%BE%E6%80%A7"><span class="nav-number">1.6.</span> <span class="nav-text">Overdominance 超显性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#codominance%E5%85%B1%E6%98%BE%E6%80%A7"><span class="nav-number">1.7.</span> <span class="nav-text">Codominance（共显性）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#multiple-alleles%E5%A4%8D%E7%AD%89%E4%BD%8D%E5%9F%BA%E5%9B%A0"><span class="nav-number">1.8.</span> <span class="nav-text">Multiple Alleles（复等位基因）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#x-linked-genes"><span class="nav-number">1.9.</span> <span class="nav-text">X-linked Genes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sexinfluenced-traits"><span class="nav-number">1.10.</span> <span class="nav-text">Sex‐influenced Traits</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sexlimited-traits"><span class="nav-number">1.11.</span> <span class="nav-text">Sex‐limited Traits</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lethal-alleles-%E8%87%B4%E6%AD%BB%E7%AD%89%E4%BD%8D%E5%9F%BA%E5%9B%A0"><span class="nav-number">1.12.</span> <span class="nav-text">Lethal alleles （致死等位基因）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Cinheritance-patterns-of-multiple-genes"><span class="nav-number">2.</span> <span class="nav-text">二、Inheritance patterns of multiple genes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#epistasis-%E4%B8%8A%E4%BD%8D%E6%80%A7%E5%BC%82%E4%BD%8D%E6%98%BE%E6%80%A7"><span class="nav-number">2.1.</span> <span class="nav-text">Epistasis 上位性；异位显性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#complementation-%E4%BA%92%E8%A1%A5"><span class="nav-number">2.2.</span> <span class="nav-text">Complementation 互补</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gene-redundancy-%E5%9F%BA%E5%9B%A0%E4%B8%B0%E4%BD%99"><span class="nav-number">2.3.</span> <span class="nav-text">Gene Redundancy 基因丰余</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#intergenic-suppressors-%E5%9F%BA%E5%9B%A0%E9%97%B4%E6%8A%91%E5%88%B6"><span class="nav-number">2.4.</span> <span class="nav-text">Intergenic suppressors 基因间抑制</span></a></li></ol></li></ol></div>
       </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="向海"
-      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
-  <p class="site-author-name" itemprop="name">向海</p>
-  <div class="site-description" itemprop="description">一个普通人</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">204</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">20</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">19</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">向海</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">2.1m</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">31:04</span>
-</div><br /> <!-- 换行 -->
-<!-- 网站运行时间的设置 -->
-<span id="timeDate">载入天数...</span>
-<span id="times">载入时分秒...</span>
-<script>
-    var now = new Date();
-    function createtime() {
-        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
-        now.setTime(now.getTime()+250);
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
-    }
-setInterval("createtime()",250);
-</script>
-
-        
-
-
-
-
-
-
-
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
 
       </div>
-    </footer>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
   </div>
 
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-  <script defer src="/lib/three/three.min.js"></script>
-    <script defer src="/lib/three/three-waves.min.js"></script>
-
+    
+  </main>
 
   
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
 
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
 
+  
 
+  
 
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
 
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
 
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
 
-
-
-
-
-<script>
-document.querySelectorAll('.pdfobject-container').forEach(element => {
-  let url = element.dataset.target;
-  let pdfOpenParams = {
-    navpanes : 0,
-    toolbar  : 0,
-    statusbar: 0,
-    pagemode : 'thumbs',
-    view     : 'FitH'
-  };
-  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
-  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
-
-  if (NexT.utils.supportsPDFs()) {
-    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
-  } else {
-    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
-  }
-});
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
 </script>
 
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
 
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
+    
       
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             
+          </span>
+      
+    
+  </div>
 
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
 
     
 
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
   
 
 
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
     });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : true,
-      notify     : true,
-      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
-      placeholder: "Leave Something?",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : true,
-      lang       : 'zh-ch' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L04 Extensions of Mendelian Inheritance&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
     });
-  }, window.Valine);
-});
-</script>
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
 
 </body>
+
+
 </html>

@@ -1,279 +1,274 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
+
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个普通人">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L11 DNA repair and recombination - 鹘横海</title>
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="No such things">
-<meta property="og:type" content="article">
-<meta property="og:title" content="L11 DNA repair and recombination">
-<meta property="og:url" content="https://zhenyumi.github.io/2020/07/24/L11%20DNA%20repair%20and%20recombination/index.html">
-<meta property="og:site_name" content="鹘横海">
-<meta property="og:description" content="No such things">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228101107448.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228101246411.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228101717687.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228103802147.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228102424334.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228103506170.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228103542120.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228104422609.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228104546920.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228104826524.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228105422017.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228110039388.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228110544125.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228110730443.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228110950722.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111055870.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111155261.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111410516.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111515333.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111838168.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111941887.png">
-<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228112109169.png">
-<meta property="article:published_time" content="2020-07-24T09:20:09.000Z">
-<meta property="article:modified_time" content="2020-07-24T09:20:09.000Z">
-<meta property="article:author" content="向海">
-<meta property="article:tag" content="Molecular Biology">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228101107448.png">
-
-<link rel="canonical" href="https://zhenyumi.github.io/2020/07/24/L11%20DNA%20repair%20and%20recombination/">
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
-  <title>L11 DNA repair and recombination | 鹘横海</title>
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
   
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+<link  rel="stylesheet" href="/css/main.css" />
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<!-- 自定义样式保持在最底部 -->
 
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+ 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">鹘横海</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
 </nav>
 
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Molecular%20Biology/20200724_Sunlight%281%29.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
 
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
             
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-24 17:20">
+      2020年7月24日 下午
+    </time>
+  </div>
 
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      6
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
     
   
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/24/L11%20DNA%20repair%20and%20recombination/">
+</div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
-      <meta itemprop="name" content="向海">
-      <meta itemprop="description" content="一个普通人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="鹘横海">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          L11 DNA repair and recombination
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-24 17:20:09" itemprop="dateCreated datePublished" datetime="2020-07-24T17:20:09+08:00">2020-07-24</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Academic-Notebook/Molecular-Biology/" itemprop="url" rel="index"><span itemprop="name">Molecular Biology</span></a>
-                </span>
-            </span>
+            
+          </div>
 
           
-            <span id="/2020/07/24/L11%20DNA%20repair%20and%20recombination/" class="post-meta-item leancloud_visitors" data-flag-title="L11 DNA repair and recombination" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/24/L11%20DNA%20repair%20and%20recombination/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/24/L11%20DNA%20repair%20and%20recombination/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>7.1k</span>
-            </span>
-
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <!-- 鼠标烟花特效 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/fireworks.js"></script>
+
+    <!--浏览器搞笑标题-->
+    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+
+    <!--动态线条背景-->
+    <!--<script type="text/javascript"
+    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>-->
+
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-        <h1 id="一homologous-recombination">一、Homologous Recombination</h1>
+<head>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+</head>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：5 个月前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80homologous-recombination"><span class="post-toc-text">一、Homologous Recombination</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#types-of-recombination"><span class="post-toc-text">Types of Recombination</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#occurance-location"><span class="post-toc-text">Occurance Location</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#recombining-chromosomes-are-connected-by-the-synaptonemal-complex"><span class="post-toc-text">1. Recombining Chromosomes Are Connected by The Synaptonemal Complex</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#recombination-initiation"><span class="post-toc-text">Recombination Initiation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#holliday-junctions-must-be-resolved"><span class="post-toc-text">Holliday Junctions Must Be Resolved</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#topoisomerases"><span class="post-toc-text">Topoisomerases</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#type-i"><span class="post-toc-text">1. Type I</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#type-ii"><span class="post-toc-text">2. Type II</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#gyrase-and-reverse-gyrase"><span class="post-toc-text">3. Gyrase And Reverse Gyrase</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#site-specific-recombination-resembles-toposomerase-activity"><span class="post-toc-text">4. Site-Specific Recombination Resembles Toposomerase Activity</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8Cmutations"><span class="post-toc-text">二、Mutations</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#definitions"><span class="post-toc-text">Definitions</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#point-mutations-can-be-permanently-incorporated-via-dna-replication"><span class="post-toc-text">Point Mutations Can Be Permanently Incorporated Via DNA Replication</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#reversion-of-mutations"><span class="post-toc-text">Reversion of Mutations</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#nucleotide-substitutions"><span class="post-toc-text">Nucleotide Substitutions</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#types-of-dna-damage"><span class="post-toc-text">Types of DNA Damage</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%89dna-repair"><span class="post-toc-text">三、DNA Repair</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#translation-dna-repair"><span class="post-toc-text">Translation DNA Repair</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dna-repair-by-photoreactivation"><span class="post-toc-text">DNA Repair by Photoreactivation</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dna-repair-by-methyl-group-removal"><span class="post-toc-text">DNA Repair by Methyl Group Removal</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#base-excision-repair"><span class="post-toc-text">Base Excision Repair</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mismatch-repair"><span class="post-toc-text">Mismatch Repair</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#recombination-repair"><span class="post-toc-text">Recombination Repair</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#honologous-recombination"><span class="post-toc-text">1. Honologous Recombination</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#non-honologous-end-joining"><span class="post-toc-text">2. Non-Honologous End-Joining</span></a></li></ol></li></ol></li></ol>
+
+              <h1 id="一homologous-recombination">一、Homologous Recombination</h1>
 <p>Essential in meiosis for generating diversity and for chromosome segregation, and in mitosis to repair DNA damage and stalled replication forks.</p>
 <p>Homologous recombination can occur at any point along the lengths of two homologous DNAs.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228101107448.png" alt="image-20191228101107448" style="zoom:58%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228101107448.png" srcset="/img/loading.gif" alt="image-20191228101107448" style="zoom:58%;" /></p>
 <h2 id="types-of-recombination">Types of Recombination</h2>
 <ol type="1">
 <li><strong>Site-specific recombination</strong> involves specific DNA sequences.
@@ -282,12 +277,12 @@
 </ul></li>
 <li><strong>Somatic recombination –</strong> Recombination that occurs in nongerm cells (i.e., it does not occur during meiosis); commonly in the immune system, may occur in plant vegetative tissues.</li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228101246411.png" alt="image-20191228101246411" style="zoom:80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228101246411.png" srcset="/img/loading.gif" alt="image-20191228101246411" style="zoom:80%;" /></p>
 <h2 id="occurance-location">Occurance Location</h2>
 <p>Homologous recombination occues between synapsed chromosomes in <strong>meiosis（减数分裂）</strong></p>
 <p>Chromosomes must <strong>synapse (pair)</strong> in order for <strong>chiasmata（染色体交叉）</strong> to form where <strong>crossing over</strong> occurs</p>
 <p>Stages of meiosis are correlated with the molecular events that occur to DNA.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228101717687.png" alt="image-20191228101717687" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228101717687.png" srcset="/img/loading.gif" alt="image-20191228101717687" style="zoom:67%;" /></p>
 <p>Recombination involves pairing between complementary strands of the two parental DNAs.</p>
 <ol type="1">
 <li><p><strong>sister chromatid –</strong> Each of two identical copies of a replicated chromosome; this term is used as long as the two copies remain linked at the centromere.</p>
@@ -301,20 +296,20 @@
 <h3 id="recombining-chromosomes-are-connected-by-the-synaptonemal-complex">1. Recombining Chromosomes Are Connected by The Synaptonemal Complex</h3>
 <p>During the early part of meiosis, homologous chromosomes are paired in the synaptonemal complex.</p>
 <p>The mass of chromatin of each homolog is separated from the other by a proteinaceous complex.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228103802147.png" alt="image-20191228103802147" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228103802147.png" srcset="/img/loading.gif" alt="image-20191228103802147" style="zoom:67%;" /></p>
 <p>Each pair of sister chromatids has an axis made of cohesins.</p>
 <h2 id="recombination-initiation">Recombination Initiation</h2>
 <p>Doublr-Strand breaks initiate recombination</p>
 <p>The <strong>double-strand break</strong> repair (DSBR) model of recombination is initiated by making a double-strand break in one (recipient) DNA duplex.</p>
 <p>In <strong>5' end resection (5'末端切除)</strong>, exonuclease action generates 3′ single-stranded ends that invade the other (donor) duplex.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228102424334.png" alt="image-20191228102424334" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228102424334.png" srcset="/img/loading.gif" alt="image-20191228102424334" style="zoom: 67%;" /></p>
 <p>When a single strand from one duplex displaces its counterpart in the other duplex (<strong>single strand invasion</strong>), it creates a <strong>D-loop</strong></p>
 <p>The exchange generates a stretch of <strong>heteroduplex DNA (异源双链DNA)</strong> consisting of one strand from each parent</p>
 <p>Double-strand break repair model of homologous recombination.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228103506170.png" alt="image-20191228103506170" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228103506170.png" srcset="/img/loading.gif" alt="image-20191228103506170" style="zoom:67%;" /></p>
 <p>New DNA synthesis replaces any material that has been degraded</p>
 <p>This generates a recombinant joint molecule in which the two DNA duplexes are connected by heteroduplex DNA and two <strong>Holliday junctions (霍利迪路口)</strong>.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228103542120.png" alt="image-20191228103542120" style="zoom:50%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228103542120.png" srcset="/img/loading.gif" alt="image-20191228103542120" style="zoom:50%;" /></p>
 <p><strong>Branch migration –</strong> The ability of a DNA strand partially paired with its complement in a duplex to extend its pairing by displacing the resident strand with which it is homologous.</p>
 <p>Branch migration can occur in either direction when an unpaired single strand displaces a paired strand.</p>
 <p>Whether recombinants are formed depends on whether the strands involved in the original exchange or the other pair of strands are nicked during <strong>resolution</strong>.</p>
@@ -322,16 +317,16 @@
 <p>The Ruv complex acts on recombinant junctions.</p>
 <p>RuvA recognizes the structure of the junction and RuvBis a helicase that catalyzes branch migration.</p>
 <p>RuvC cleaves junctions to generate recombination intermediates.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228104422609.png" alt="image-20191228104422609" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228104422609.png" srcset="/img/loading.gif" alt="image-20191228104422609" style="zoom:67%;" /></p>
 <p>RuvAB is an asymmetric complex that promotes branch migration of a Holliday junction.</p>
 <h2 id="topoisomerases">Topoisomerases</h2>
 <p>Topoisomerases relax or introduce supercoils in DNA</p>
 <h3 id="type-i">1. Type I</h3>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228104546920.png" alt="image-20191228104546920" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228104546920.png" srcset="/img/loading.gif" alt="image-20191228104546920" style="zoom: 67%;" /></p>
 <p><strong>Type I topoisomerases</strong> function by forming a covalent bond to one of the broken ends, moving one strand around the other and then transferring the bound end to the other broken end. Bonds are conserved; as a result, no input of energy is required.</p>
 <p>Type I topoisomerases recognize partially unwound segments of DNA and pass one strand through a break made in the other</p>
 <h3 id="type-ii">2. Type II</h3>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228104826524.png" alt="image-20191228104826524" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228104826524.png" srcset="/img/loading.gif" alt="image-20191228104826524" style="zoom:67%;" /></p>
 <p><strong>Type II topoisomerases</strong> also form covalent bonds to the broken ends, and pass a duplex DNA region through the double-strand break. ATP is required to complete the reaction and reseal the break.</p>
 <p>Type II topoisomerases can pass a duplex DNA through a double-strand break in another duplex.</p>
 <h3 id="gyrase-and-reverse-gyrase">3. Gyrase And Reverse Gyrase</h3>
@@ -341,20 +336,20 @@
 <p>Site-specific recombination involves a reaction between specific sites that are not necessarily homologous.</p>
 <p><strong>recombinase –</strong> Enzyme that catalyzes site-specific recombination.</p>
 <p>Phage lambda <strong>integrates</strong> into the bacterial chromosome by recombination between a site on the phage and the <strong>attachment (att) site</strong> on the <em>E. coli</em> chromosome.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228105422017.png" alt="image-20191228105422017" style="zoom: 67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228105422017.png" srcset="/img/loading.gif" alt="image-20191228105422017" style="zoom: 67%;" /></p>
 <p>Circular phage DNA is converted to an integrated prophage by a reciprocal recombination between attP and attB.</p>
 <h1 id="二mutations">二、Mutations</h1>
 <h2 id="definitions">Definitions</h2>
 <p>Mutation = heritable change in sequence of DNA, particulariy a substitution, addition or deletion of one or more bases.</p>
 <p>Mutagen = a physical or chemical agent that causes mutations or increases their occurrence.</p>
 <h2 id="point-mutations-can-be-permanently-incorporated-via-dna-replication">Point Mutations Can Be Permanently Incorporated Via DNA Replication</h2>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228110039388.png" alt="image-20191228110039388" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228110039388.png" srcset="/img/loading.gif" alt="image-20191228110039388" style="zoom:67%;" /></p>
 <p><strong>Uncorrected mutations will be retained.</strong></p>
 <h2 id="reversion-of-mutations">Reversion of Mutations</h2>
 <p>Back mutations or “reversions” are the reverse process of mutation. This can occur by a change at the same site as the original mutation, or by a change at a different site.</p>
 <p>Changes at different sites that ‘correct’ the mutation are called “second-site” or “suppressor” mutations, and can occur within the same gene or even in an entirely different gene.</p>
 <p>An example might be a reversion of a frameshift mutation:</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228110544125.png" alt="image-20191228110544125" style="zoom: 80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228110544125.png" srcset="/img/loading.gif" alt="image-20191228110544125" style="zoom: 80%;" /></p>
 <p>Note that this requires that the frameshift reversion must be nearby so few amino acids are changed, and the changes that do occur must not alter the function of the protein</p>
 <h2 id="nucleotide-substitutions">Nucleotide Substitutions</h2>
 <p>Point mutations change one nucleotide for another.</p>
@@ -362,10 +357,10 @@
 <li><p>“<strong>transition</strong>” - purine replaces a purine (A ↔︎ G) or a pyrimidine replaces a pyrimidine, (C ↔︎ T). Caused by nitrous acid, base mis-pairing, or mutagenic base analogs such as 5-bromo-2-deoxyuridine (BrdU).</p></li>
 <li><p>“<strong>transversion</strong>” a purine replaces a pyrimidine or a pyrimidine replaces a purine (C/T ↔︎ A/G).</p></li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228110730443.png" alt="image-20191228110730443" style="zoom:80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228110730443.png" srcset="/img/loading.gif" alt="image-20191228110730443" style="zoom:80%;" /></p>
 <h2 id="types-of-dna-damage">Types of DNA Damage</h2>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228110950722.png" alt="image-20191228110950722" /><figcaption aria-hidden="true">image-20191228110950722</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228110950722.png" srcset="/img/loading.gif" alt="image-20191228110950722" /><figcaption aria-hidden="true">image-20191228110950722</figcaption>
 </figure>
 <h1 id="三dna-repair">三、DNA Repair</h1>
 <h2 id="translation-dna-repair">Translation DNA Repair</h2>
@@ -373,22 +368,22 @@
 <ol type="1">
 <li>Replication machinery pauses at a thymine dimer, and polymerases are temporarily substituted.</li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111055870.png" alt="image-20191228111055870" style="zoom: 40%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111055870.png" srcset="/img/loading.gif" alt="image-20191228111055870" style="zoom: 40%;" /></p>
 <h2 id="dna-repair-by-photoreactivation">DNA Repair by Photoreactivation</h2>
 <p>A direct repair mechanism is the enzyme-mediated reversal of pyrimidine dimers that are formed by UV light. This is accomplished by DNA photolyase, an enzyme that utilizes visible light to cleave the dimer.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111155261.png" alt="image-20191228111155261" /><figcaption aria-hidden="true">image-20191228111155261</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111155261.png" srcset="/img/loading.gif" alt="image-20191228111155261" /><figcaption aria-hidden="true">image-20191228111155261</figcaption>
 </figure>
 <h2 id="dna-repair-by-methyl-group-removal">DNA Repair by Methyl Group Removal</h2>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111410516.png" alt="image-20191228111410516" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111410516.png" srcset="/img/loading.gif" alt="image-20191228111410516" style="zoom:67%;" /></p>
 <p>Direct repair of O-6 methylguanasine by permanent transfer to methyltransferase enzyme. This is “costly” to repair because the enzyme is permanently disabled by this modification.</p>
 <h2 id="base-excision-repair">Base Excision Repair</h2>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111515333.png" alt="image-20191228111515333" style="zoom:80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111515333.png" srcset="/img/loading.gif" alt="image-20191228111515333" style="zoom:80%;" /></p>
 <p>Damaged, single bases can be “swapped out”.</p>
 <p>Newly replicated DNA strand is unmethylated, and indicates parent versus daughter strands. Repairs are made to the (new) daughter strand.</p>
 <p>Repairs take place by excision of the mismatched base (DNA glycosylase), removal of its baseless deoxyribose phosphate (AP endonuclease), filling-in by DNA polymerase, and sealing of the nick by DNA ligase.</p>
 <h2 id="mismatch-repair">Mismatch Repair</h2>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111838168.png" alt="image-20191228111838168" style="zoom:80%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111838168.png" srcset="/img/loading.gif" alt="image-20191228111838168" style="zoom:80%;" /></p>
 <p>Mismatch repair enzymes are highly conserved through evolution.</p>
 <p>Mismatch is recognized and large region of DNA is removed.</p>
 <p>This is then filled in and sealed.</p>
@@ -397,378 +392,420 @@
 <p>dsDNA break induced by radiation. MRN complex recruited to break.</p>
 <p>Exonuclease activity generates 3’ ssDNA tails that invade homologous undamaged sequences. Missing sequences restored by DNA synthesis. Holliday junctions resolved and repair is completed.</p>
 <figure>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111941887.png" alt="image-20191228111941887" /><figcaption aria-hidden="true">image-20191228111941887</figcaption>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228111941887.png" srcset="/img/loading.gif" alt="image-20191228111941887" /><figcaption aria-hidden="true">image-20191228111941887</figcaption>
 </figure>
 <h3 id="non-honologous-end-joining">2. Non-Honologous End-Joining</h3>
 <p>Broken ends are recognized by Ku70/80. An endonuclease (Artemis) trims the ends or damaged nucleotides. DNA polymerase fills it in and ligase complex brings the ends together and completes it.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228112109169.png" alt="image-20191228112109169" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191228112109169.png" srcset="/img/loading.gif" alt="image-20191228112109169" style="zoom:67%;" /></p>
 
-    </div>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/Molecular-Biology/">Molecular Biology</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Molecular-Biology/">Molecular Biology</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/24/L10%20Forward%20And%20Reverse%20Genetics/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L10 Forward And Reverse Genetics</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/24/L12%20Plant%20transformation/">
+                        <span class="hidden-mobile">L12 Plant Transformation</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
 
-    
-    
-    
-        
+            
+              <!-- Valine Comments 国内版-->
+              
+              <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                requiredFields: ['nick'],
+                })
+                </script>
 
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>向海
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://zhenyumi.github.io/2020/07/24/L11%20DNA%20repair%20and%20recombination/" title="L11 DNA repair and recombination">https://zhenyumi.github.io/2020/07/24/L11 DNA repair and recombination/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
+              <!-- Valine Comments 国内版-->
+              
+              <!-- <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
+                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
+                requiredFields: ['nick'],
+                })
+                </script> -->
 
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Molecular-Biology/" rel="tag"># Molecular Biology</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/07/24/L12%20Plant%20transformation/" rel="prev" title="L12 Plant Transformation">
-      <i class="fa fa-chevron-left"></i> L12 Plant Transformation
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/07/24/L10%20Forward%20And%20Reverse%20Genetics/" rel="next" title="L10 Forward And Reverse Genetics">
-      L10 Forward And Reverse Genetics <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-    <div class="comments" id="valine-comments"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+              <!-- Utterances Comments -->
+              <!--<div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
+          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
 
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            -->
+          </div>
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80homologous-recombination"><span class="nav-number">1.</span> <span class="nav-text">一、Homologous Recombination</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#types-of-recombination"><span class="nav-number">1.1.</span> <span class="nav-text">Types of Recombination</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#occurance-location"><span class="nav-number">1.2.</span> <span class="nav-text">Occurance Location</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#recombination-initiation"><span class="nav-number">1.3.</span> <span class="nav-text">Recombination Initiation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#topoisomerases"><span class="nav-number">1.4.</span> <span class="nav-text">Topoisomerases</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Cmutations"><span class="nav-number">2.</span> <span class="nav-text">二、Mutations</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#definitions"><span class="nav-number">2.1.</span> <span class="nav-text">Definitions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#point-mutations-can-be-permanently-incorporated-via-dna-replication"><span class="nav-number">2.2.</span> <span class="nav-text">Point Mutations Can Be Permanently Incorporated Via DNA Replication</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reversion-of-mutations"><span class="nav-number">2.3.</span> <span class="nav-text">Reversion of Mutations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nucleotide-substitutions"><span class="nav-number">2.4.</span> <span class="nav-text">Nucleotide Substitutions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#types-of-dna-damage"><span class="nav-number">2.5.</span> <span class="nav-text">Types of DNA Damage</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89dna-repair"><span class="nav-number">3.</span> <span class="nav-text">三、DNA Repair</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#translation-dna-repair"><span class="nav-number">3.1.</span> <span class="nav-text">Translation DNA Repair</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dna-repair-by-photoreactivation"><span class="nav-number">3.2.</span> <span class="nav-text">DNA Repair by Photoreactivation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dna-repair-by-methyl-group-removal"><span class="nav-number">3.3.</span> <span class="nav-text">DNA Repair by Methyl Group Removal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#base-excision-repair"><span class="nav-number">3.4.</span> <span class="nav-text">Base Excision Repair</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mismatch-repair"><span class="nav-number">3.5.</span> <span class="nav-text">Mismatch Repair</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#recombination-repair"><span class="nav-number">3.6.</span> <span class="nav-text">Recombination Repair</span></a></li></ol></li></ol></div>
       </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="向海"
-      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
-  <p class="site-author-name" itemprop="name">向海</p>
-  <div class="site-description" itemprop="description">一个普通人</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">204</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">20</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">19</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">向海</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">2.1m</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">31:04</span>
-</div><br /> <!-- 换行 -->
-<!-- 网站运行时间的设置 -->
-<span id="timeDate">载入天数...</span>
-<span id="times">载入时分秒...</span>
-<script>
-    var now = new Date();
-    function createtime() {
-        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
-        now.setTime(now.getTime()+250);
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
-    }
-setInterval("createtime()",250);
-</script>
-
-        
-
-
-
-
-
-
-
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
 
       </div>
-    </footer>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
   </div>
 
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-  <script defer src="/lib/three/three.min.js"></script>
-    <script defer src="/lib/three/three-waves.min.js"></script>
-
+    
+  </main>
 
   
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
 
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
 
+  
 
+  
 
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
 
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
 
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
 
-
-
-
-
-<script>
-document.querySelectorAll('.pdfobject-container').forEach(element => {
-  let url = element.dataset.target;
-  let pdfOpenParams = {
-    navpanes : 0,
-    toolbar  : 0,
-    statusbar: 0,
-    pagemode : 'thumbs',
-    view     : 'FitH'
-  };
-  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
-  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
-
-  if (NexT.utils.supportsPDFs()) {
-    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
-  } else {
-    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
-  }
-});
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
 </script>
 
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
 
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
+    
       
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             
+          </span>
+      
+    
+  </div>
 
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
 
     
 
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
   
 
 
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
     });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : true,
-      notify     : true,
-      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
-      placeholder: "Leave Something?",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : true,
-      lang       : 'zh-ch' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L11 DNA repair and recombination&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
     });
-  }, window.Valine);
-});
-</script>
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
 
 </body>
+
+
 </html>

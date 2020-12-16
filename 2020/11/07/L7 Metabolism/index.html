@@ -1,301 +1,271 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
+
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
-  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <link rel="icon" type="image/png" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/website%20icon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="一个普通人">
+  <meta name="author" content="向海">
+  <meta name="keywords" content="">
+  <title>L7 Metabolism - 鹘横海</title>
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="Tue Nov 10 2020 11:49:10 GMT+0800 (GMT+08:00)">
-<meta property="og:type" content="article">
-<meta property="og:title" content="L7 Metabolism">
-<meta property="og:url" content="https://zhenyumi.github.io/2020/11/07/L7%20Metabolism/index.html">
-<meta property="og:site_name" content="鹘横海">
-<meta property="og:description" content="Tue Nov 10 2020 11:49:10 GMT+0800 (GMT+08:00)">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104103142039.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104104336592.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104104745082.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104105424496.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104105705096.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110004124.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110117534.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110129798.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110151951.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110201761.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110730370.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110733904.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110816236.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104111421356.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104111554498.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104112215633.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104112509564.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104112846716.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113128112.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113419359.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113721086.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113826541.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113840224.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113907496.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113934063.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104114029463.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104114038628.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104114050823.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104114236675.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104121621527.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107101454755.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107103731409.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107103751802.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107103917396.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107105226459.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107105423860.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107105438405.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107110606877.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107112350992.png">
-<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107112400086.png">
-<meta property="article:published_time" content="2020-11-07T07:22:00.000Z">
-<meta property="article:modified_time" content="2020-11-10T03:49:12.000Z">
-<meta property="article:author" content="向海">
-<meta property="article:tag" content="Animal Physiology">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104103142039.png">
-
-<link rel="canonical" href="https://zhenyumi.github.io/2020/11/07/L7%20Metabolism/">
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
-  <title>L7 Metabolism | 鹘横海</title>
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/atom-one-dark-reasonable.min.css" />
+  
+
   
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+<link  rel="stylesheet" href="/css/main.css" />
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<!-- 自定义样式保持在最底部 -->
 
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<head>
+  <!-- Live2D Settings -->
+  <!--<link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>-->
+  <!--
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="/live2d-widget/autoload.js"></script>
+  
+  -->
+ 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鹘横海</strong>&nbsp;</a>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                链接
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">鹘横海</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
 </nav>
 
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/Fluid/post/post2.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
 
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
             
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-11-07 15:22">
+      2020年11月7日 下午
+    </time>
+  </div>
 
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      23
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
     
   
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/11/07/L7%20Metabolism/">
+</div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
-      <meta itemprop="name" content="向海">
-      <meta itemprop="description" content="一个普通人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="鹘横海">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          L7 Metabolism
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-11-07 15:22:00" itemprop="dateCreated datePublished" datetime="2020-11-07T15:22:00+08:00">2020-11-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-10 11:49:12" itemprop="dateModified" datetime="2020-11-10T11:49:12+08:00">2020-11-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Academic-Notebook/Animal-Physiology/" itemprop="url" rel="index"><span itemprop="name">Animal Physiology</span></a>
-                </span>
-            </span>
+            
+          </div>
 
           
-            <span id="/2020/11/07/L7%20Metabolism/" class="post-meta-item leancloud_visitors" data-flag-title="L7 Metabolism" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/11/07/L7%20Metabolism/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/07/L7%20Metabolism/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>22k</span>
-            </span>
-
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <!-- 鼠标烟花特效 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/fireworks.js"></script>
+
+    <!--浏览器搞笑标题-->
+    <!-- <script type="text/javascript" src="/js/FunnyTitle.js"></script> -->
+
+    <!--动态线条背景-->
+    <!--<script type="text/javascript"
+    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>-->
+
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-        <h1 id="一why-do-animals-need-energy">一、Why do animals need energy?</h1>
+<head>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+</head>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：1 个月前
+                
+              </p>
+            
+            <article class="markdown-body">
+              <!-- Post toc 目录 -->
+              <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%80why-do-animals-need-energy"><span class="post-toc-text">一、Why do animals need energy?</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#four-forms-of-energy"><span class="post-toc-text">Four forms of energy</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#the-forms-of-energy-vary-in-their-capacity-for-physiological-work"><span class="post-toc-text">1. The forms of energy vary in their capacity for physiological work</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#animals-use-energy-to-perform-three-major-functions"><span class="post-toc-text">2. Animals use energy to perform three major functions</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BA%8Cmetabolic-rate-meaning-and-measurement"><span class="post-toc-text">二、Metabolic rate: meaning and measurement</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#units-of-measure-for-energy-and-metabolic-rates"><span class="post-toc-text">Units of Measure for Energy and Metabolic Rates</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#units"><span class="post-toc-text">1. Units</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#metabolic-rates"><span class="post-toc-text">2. Metabolic Rates</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#how-to-measure-energy-used"><span class="post-toc-text">How to measure energy used</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#calculate-metabolic-rate"><span class="post-toc-text">Calculate metabolic rate</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#respiratory-exchange-ratio-respiratory-quotient-rq"><span class="post-toc-text">(1) Respiratory exchange ratio [Respiratory quotient (RQ)]</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#respirometry---%E5%91%BC%E5%90%B8%E6%B5%8B%E9%87%8F%E6%B3%95"><span class="post-toc-text">(2) Respirometry - 呼吸测量法</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#summary"><span class="post-toc-text">3. Summary</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%89factors-affecting-metabolic-rates"><span class="post-toc-text">三、Factors affecting metabolic rates</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ingestion-of-food-causes-metabolic-rate-to-rise"><span class="post-toc-text">Ingestion of food causes metabolic rate to rise</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#basal-metabolic-rate-and-standard-metabolic-rate"><span class="post-toc-text">Basal metabolic rate and standard metabolic rate</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#metabolic-scaling"><span class="post-toc-text">Metabolic scaling</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#bmr-as-a-function-of-body-weight-in-various-species-of-placental-mammals"><span class="post-toc-text">1. BMR as a function of body weight in various species of placental mammals</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#equation"><span class="post-toc-text">2. Equation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#weight-specific-metabolic-rate"><span class="post-toc-text">3. weight-specific metabolic rate</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#summary-1"><span class="post-toc-text">Summary</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9B%9Bfood-energy-and-temperature-at-work"><span class="post-toc-text">四、Food, Energy and temperature at work</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#heat-production-by-thermoregulation-ch-10-p256"><span class="post-toc-text">Heat production by thermoregulation (Ch 10, p256)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#brown-adipose-tissue-in-a-human-infant"><span class="post-toc-text">1. Brown adipose tissue in a human infant</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#questions"><span class="post-toc-text">Questions</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BD%93%E6%B8%A9%E5%8F%8A%E5%85%B6%E8%B0%83%E8%8A%82%E7%BB%BC%E8%BF%B0"><span class="post-toc-text">体温及其调节综述</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8A%A8%E7%89%A9%E7%9A%84%E4%BD%93%E6%B8%A9%E5%8F%8A%E5%85%B6%E6%AD%A3%E5%B8%B8%E5%8F%98%E5%8A%A8"><span class="post-toc-text">1. 动物的体温及其正常变动</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BD%93%E6%B8%A9"><span class="post-toc-text">体温</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8A%A8%E7%89%A9%E4%BD%93%E6%B8%A9%E7%9A%84%E7%94%9F%E7%90%86%E6%B3%A2%E5%8A%A8"><span class="post-toc-text">动物体温的生理波动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9C%BA%E4%BD%93%E4%BA%A7%E7%83%AD%E7%9A%84%E5%85%B6%E5%AE%83%E5%BD%A2%E5%BC%8F"><span class="post-toc-text">机体产热的其它形式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%B8%BB%E8%A6%81%E6%95%A3%E7%83%AD%E9%80%94%E5%BE%84"><span class="post-toc-text">主要散热途径</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BD%93%E6%B8%A9%E6%81%92%E5%AE%9A%E7%9A%84%E8%B0%83%E8%8A%82"><span class="post-toc-text">2. 体温恒定的调节</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%B8%A9%E5%BA%A6%E6%84%9F%E5%8F%97%E5%99%A8"><span class="post-toc-text">温度感受器</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BD%93%E6%B8%A9%E8%B0%83%E8%8A%82%E4%B8%AD%E6%9E%A2"><span class="post-toc-text">体温调节中枢</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BF%A1%E5%8F%B7%E4%BC%A0%E5%87%BA%E9%80%94%E5%BE%84%E4%B8%8E%E6%95%88%E5%BA%94%E5%99%A8"><span class="post-toc-text">信号传出途径与效应器</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#questions-1"><span class="post-toc-text">Questions</span></a></li></ol></li></ol>
+
+              <h1 id="一why-do-animals-need-energy">一、Why do animals need energy?</h1>
 <p>The second law of thermodynamics states that the entropy ( 熵 热 力 学 ) of an isolated system never decreases, because isolated systems always evolve toward thermodynamic equilibrium, a state with maximum entropy.</p>
 <ul>
 <li>Entropy = disorder</li>
@@ -304,7 +274,7 @@
 <p>热力学第二定律（英文：the second law of thermodynamics）是热力学的四条基本定律之一，表述热力学过程的不可逆性——孤立系统自发地朝着热力学平衡方向──最大熵状态──演化，同样地，第二类永动机永不可能实现。</p>
 <p><strong>Entropy</strong>, the measure of a system's thermal energy per unit temperature that is unavailable for doing useful work. Because work is obtained from ordered molecular motion, the amount of entropy is also a measure of the molecular disorder, or randomness, of a system.</p>
 </blockquote>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104103142039.png" alt="image-20201104103142039" style="zoom:67%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104103142039.png" srcset="/img/loading.gif" alt="image-20201104103142039" style="zoom:67%;" /></p>
 <ul>
 <li>The energy of directional motion of the water molecules is gradually transformed into energy of random motion.</li>
 <li>Over time, the rate of flow of water around the loop of pipe decreases as the energy of directional motion is lost.</li>
@@ -344,7 +314,7 @@
 <ul>
 <li>Efficiency of energy transformation is always inefficient and some energy is degraded into heat</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104104336592.png" alt="image-20201104104336592" style="zoom:80%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104104336592.png" srcset="/img/loading.gif" alt="image-20201104104336592" style="zoom:80%;" /></p>
 <ul>
 <li>For example, the efficiency is typically less than 1.</li>
 <li>When cell converts all chemical bond energy of glucose into chemical bond of ATP, Only 70% of the energy is incorporated into bonds of ATP, the other 30% of high grade energy is transformed to low grade energy (heat).</li>
@@ -363,7 +333,7 @@
 <li>Generation of external work</li>
 </ol>
 <p>All living animals produce heat: frogs, fish are cool to the touch, does not mean they do not produce heat. Because they produce little heat and poor insulation to keep the heat.</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104104745082.png" alt="image-20201104104745082" style="zoom:50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104104745082.png" srcset="/img/loading.gif" alt="image-20201104104745082" style="zoom:50%;" /></p>
 <h1 id="二metabolic-rate-meaning-and-measurement">二、Metabolic rate: meaning and measurement</h1>
 <p>Physiologist defines consumed energy as energy spent: heat and external work</p>
 <p><u>The rate at which an animal consumes energy</u> is its metabolic rate, that is Animal converts chemical energy to <strong>heat and external work</strong>. (generally, metabolic rate meant rate of heat production.)</p>
@@ -383,7 +353,7 @@
 <ul>
 <li>1 kilocalories (kcal) is 1000 cal.</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104105424496.png" alt="image-20201104105424496" style="zoom:50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104105424496.png" srcset="/img/loading.gif" alt="image-20201104105424496" style="zoom:50%;" /></p>
 <h3 id="metabolic-rates">2. Metabolic Rates</h3>
 <p><strong>Metabolic rates</strong> are expressed in calories per unit of time or watts (W).</p>
 <ul>
@@ -405,7 +375,7 @@
 <li>Based on material balance (measuring the chemical energy content of the organic matter that enters and leaves the body. Organic materials.)</li>
 </ol>
 <p><strong>Lavoisier’s direct calorimeter 拉瓦锡直接量热仪 - Direct calorimetry</strong></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104105705096.png" alt="image-20201104105705096" style="zoom:50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104105705096.png" srcset="/img/loading.gif" alt="image-20201104105705096" style="zoom:50%;" /></p>
 <p><strong>Indirect Measurement - Gas exchange:</strong></p>
 <p>1 mol of Glucose (C6H12O6) is burned completely, 6 mol of O2 will be used (based on chemical stoichiometry). This will release heat known as heat of combustion.</p>
 <p>The heat combustion will produce 2820 kilojoules per mole (kJ/mol) or 673000 cal/mol</p>
@@ -414,24 +384,24 @@
 <li>A fixed proportional relation exists between heat production and CO2 production</li>
 <li><strong>Therefore</strong> oxidize unknown amount of glucose (in a test tube), you only measure the amount of O2 used or the amount of CO2 produced, you can calculate the amount of heat produced.</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110004124.png" alt="image-20201104110004124" style="zoom:50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110004124.png" srcset="/img/loading.gif" alt="image-20201104110004124" style="zoom:50%;" /></p>
 <h4 id="calculate-metabolic-rate">Calculate metabolic rate</h4>
 <p>An animal consumes O2 at a rate of 10 mL/min, If animal cells only oxidize glucose, The metabolic rate would be 10 mL O2/min X 21.1 J/ml O2 = 211 J/min</p>
 <h5 id="respiratory-exchange-ratio-respiratory-quotient-rq">(1) Respiratory exchange ratio [Respiratory quotient (RQ)]</h5>
 <p>From Table 7.1 it is obvious that the numbers are not simple and fixed numbers.</p>
 <p>Animals often oxidize a variety of foodstuffs which yield different quantities of heat per Unit of volume of O2 consumed or CO2 produced.</p>
 <p>So indices are needed: <strong>Respiratory exchange ratio R</strong>, or <strong>respiratory quotient (RQ)</strong></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110117534.png" alt="image-20201104110117534" style="zoom:50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110117534.png" srcset="/img/loading.gif" alt="image-20201104110117534" style="zoom:50%;" /></p>
 <ul>
 <li>The value of R (respiratory organ) and RQ (at cell level) is a metabolic signature that reveals the particular sorts of foodstuffs being oxidized by an animal’s cells.</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110129798.png" alt="image-20201104110129798" style="zoom: 50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110129798.png" srcset="/img/loading.gif" alt="image-20201104110129798" style="zoom: 50%;" /></p>
 <h5 id="respirometry---呼吸测量法">(2) Respirometry - 呼吸测量法</h5>
 <p><strong>Respirometry</strong> is the process of measuring an animal’s gas exchange with its environment. The devices used are called respirometers. For studies of metabolic rate, the most common type of respirometer is the measurement of an animal’s rate of O2 consumption.</p>
 <p>In Box Extension 7.4, we offer illustrations and explanations of the two basic types of respirometry configurations that are used to measure O2 consumption: (1) closed configurations, in which an animal is housed in a fully sealed chamber with a relative fixed volume of nonmoving air and (2) open configurations, in which air flows through the animal chamber during measurement.</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110151951.png" alt="image-20201104110151951" style="zoom: 33%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110151951.png" srcset="/img/loading.gif" alt="image-20201104110151951" style="zoom: 33%;" /></p>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110201761.png" alt="image-20201104110201761" /><figcaption aria-hidden="true">image-20201104110201761</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110201761.png" srcset="/img/loading.gif" alt="image-20201104110201761" /><figcaption aria-hidden="true">image-20201104110201761</figcaption>
 </figure>
 <h3 id="summary">3. Summary</h3>
 <p>Metabolic Rate<strong>: </strong>Meaning and Measurement</p>
@@ -456,10 +426,10 @@
 <li>Ingestion of food, age, gender, time of day, body size, reproductive condition, hormonal state, psychological stress, the salinity of the ambient water</li>
 </ul>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110730370.png" alt="image-20201104110730370" /><figcaption aria-hidden="true">image-20201104110730370</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110730370.png" srcset="/img/loading.gif" alt="image-20201104110730370" /><figcaption aria-hidden="true">image-20201104110730370</figcaption>
 </figure>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110733904.png" alt="image-20201104110733904" /><figcaption aria-hidden="true">image-20201104110733904</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110733904.png" srcset="/img/loading.gif" alt="image-20201104110733904" /><figcaption aria-hidden="true">image-20201104110733904</figcaption>
 </figure>
 <h2 id="ingestion-of-food-causes-metabolic-rate-to-rise">Ingestion of food causes metabolic rate to rise</h2>
 <p><strong>SDA of the ingested food</strong></p>
@@ -472,7 +442,7 @@
 </ol></li>
 </ul>
 <p>Specific dynamic action (SDA):</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110816236.png" alt="image-20201104110816236" style="zoom:50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104110816236.png" srcset="/img/loading.gif" alt="image-20201104110816236" style="zoom:50%;" /></p>
 <ul>
 <li>If a resting animal that has not eaten for a while consumes a meal but then remains at rest. its metabolic rate rises afterward-the SDA</li>
 <li>The rate of O2 consumption followed the red line after a 1.4 KJ meal was eaten, but it followed the green line after a fourfold larger meal(5.6 KJ). This result demonstrated that the magnitude of the SDA is roughly proportional to the amount of food eaten</li>
@@ -510,9 +480,9 @@
 <ul>
 <li>The energy needs Of the species are Not proportional To their respective Body sizes</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104111421356.png" alt="image-20201104111421356" style="zoom: 50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104111421356.png" srcset="/img/loading.gif" alt="image-20201104111421356" style="zoom: 50%;" /></p>
 <h3 id="bmr-as-a-function-of-body-weight-in-various-species-of-placental-mammals">1. BMR as a function of body weight in various species of placental mammals</h3>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104111554498.png" alt="image-20201104111554498" style="zoom: 33%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104111554498.png" srcset="/img/loading.gif" alt="image-20201104111554498" style="zoom: 33%;" /></p>
 <ul>
 <li>In theory
 <ul>
@@ -556,7 +526,7 @@ M = aW^{b}
 <ul>
 <li><strong>weight-specific metabolic rate (Weight specific BMR)</strong></li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104112215633.png" alt="image-20201104112215633" style="zoom: 50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104112215633.png" srcset="/img/loading.gif" alt="image-20201104112215633" style="zoom: 50%;" /></p>
 <ul>
 <li>70 kg – human produces 10% as much heat per gram as the mouse 4000 kg elephant produces 5% as much</li>
 </ul>
@@ -572,7 +542,7 @@ M/W = aW^{(b-1)}
 <li>(<span class="math inline">\(b\)</span> is about 0.7, so the exponent here is <code>-0.3</code> ; the sign <code>–</code> indicates weight specific resting metabolic rate decreases with increasing body weight</li>
 <li>(a high <span class="math inline">\(a\)</span> value means high metabolic intensity)</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104112509564.png" alt="image-20201104112509564" style="zoom:50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104112509564.png" srcset="/img/loading.gif" alt="image-20201104112509564" style="zoom:50%;" /></p>
 <ul>
 <li>Note similarity of the exponents but differences in a, signifying Different metabolic intensities In four types of animals.</li>
 <li>Allometric relationship between Metabolic rate and body weight!</li>
@@ -581,7 +551,7 @@ M/W = aW^{(b-1)}
 <ul>
 <li>The metabolism-size relation has important physiological and ecological implications</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104112846716.png" alt="image-20201104112846716" style="zoom:50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104112846716.png" srcset="/img/loading.gif" alt="image-20201104112846716" style="zoom:50%;" /></p>
 <p>The metabolism-size relation has important physiological and ecological implications</p>
 <ul>
 <li>Why smaller animals have far higher heart rates than do the larger ones?
@@ -595,7 +565,7 @@ M/W = aW^{(b-1)}
 <li>The weight-specific BMR of mouse is 8 times of that of a deer, so 440 mice is equivalent to that of a deer.</li>
 </ul></li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113128112.png" alt="image-20201104113128112" style="zoom:50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113128112.png" srcset="/img/loading.gif" alt="image-20201104113128112" style="zoom:50%;" /></p>
 <p>The explanation of allometric metabolism-size relations remain unknown</p>
 <ul>
 <li>The allometric exponent b = 0.7 in diverse groups of animals is intriguing!</li>
@@ -616,7 +586,7 @@ M/W = aW^{(b-1)}
 </ul>
 <p>As the circulatory system is scaled up and down in size and extent, constraints predicated on fractal geometry may help give rise to allometric metabolic scaling</p>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113419359.png" alt="image-20201104113419359" /><figcaption aria-hidden="true">image-20201104113419359</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113419359.png" srcset="/img/loading.gif" alt="image-20201104113419359" /><figcaption aria-hidden="true">image-20201104113419359</figcaption>
 </figure>
 <p>Recent research shows that exponent b generally tends to be similar in many animal groups, but it is not identical!</p>
 <ul>
@@ -632,13 +602,13 @@ M/W = aW^{(b-1)}
 <li>Physiologists are not agreed on the explanation for the allometric relations between metabolic rate and body weight Rubner's surface" law based on heat loss from homeothermic animals, does not provide a satisfactory explanation. Many of the newest hypotheses recognize that the allometric exponent varies in systematic ways and seek to explain that variation, as by examining evolutionary constraints in resource distribution systems such as the circulatory system</li>
 </ul>
 <p>An animal exchanges heat with its environment by conduction, convection (对流), evaporation, and thermal radiation</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113721086.png" alt="image-20201104113721086" style="zoom:50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113721086.png" srcset="/img/loading.gif" alt="image-20201104113721086" style="zoom:50%;" /></p>
 <h1 id="四food-energy-and-temperature-at-work">四、Food, Energy and temperature at work</h1>
 <p>Resting metabolic rate as a function of air temperature down to –50°C in adult reindeer</p>
 <p>Adult reindeer in winter pelage (毛发）in still air never have to increase their metabolic rate by much above basal!</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113826541.png" alt="image-20201104113826541" style="zoom: 33%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113826541.png" srcset="/img/loading.gif" alt="image-20201104113826541" style="zoom: 33%;" /></p>
 <p>Fur thickness of adult reindeer in winter and summer</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113840224.png" alt="image-20201104113840224" style="zoom:50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113840224.png" srcset="/img/loading.gif" alt="image-20201104113840224" style="zoom:50%;" /></p>
 <ul>
 <li><strong>One reason for the low energy costs of adult reindeer is</strong>
 <ol type="1">
@@ -648,9 +618,9 @@ M/W = aW^{(b-1)}
 </ol></li>
 </ul>
 <p><strong>Regional heterothermy in Alaskan mammals: </strong></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113907496.png" alt="image-20201104113907496" style="zoom:33%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113907496.png" srcset="/img/loading.gif" alt="image-20201104113907496" style="zoom:33%;" /></p>
 <p><strong>Fatty acid composition of bone marrow lipids in the legs of reindeer: </strong></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113934063.png" alt="image-20201104113934063" style="zoom:67%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104113934063.png" srcset="/img/loading.gif" alt="image-20201104113934063" style="zoom:67%;" /></p>
 <ul>
 <li>Oleic acid contains one double bond and therefore is a monounsaturated fatty acid
 <ul>
@@ -663,11 +633,11 @@ M/W = aW^{(b-1)}
 </ul>
 <p>Seasonal changes in diet: the protein and mineral content of the foods eaten by Finnish reindeer</p>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104114029463.png" alt="image-20201104114029463" /><figcaption aria-hidden="true">image-20201104114029463</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104114029463.png" srcset="/img/loading.gif" alt="image-20201104114029463" /><figcaption aria-hidden="true">image-20201104114029463</figcaption>
 </figure>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104114038628.png" alt="image-20201104114038628" style="zoom:50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104114038628.png" srcset="/img/loading.gif" alt="image-20201104114038628" style="zoom:50%;" /></p>
 <p>Resting metabolic rate as a function of air temperature in newborn and growing reindeer</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104114050823.png" alt="image-20201104114050823" style="zoom:50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104114050823.png" srcset="/img/loading.gif" alt="image-20201104114050823" style="zoom:50%;" /></p>
 <ul>
 <li>New born body temperature Is at 39-40, when the air is -20 °C</li>
 </ul>
@@ -689,9 +659,9 @@ M/W = aW^{(b-1)}
 <li>newborns 新生儿</li>
 </ol>
 <p>Sympathetic nervous system releases norepinephrine in BAT and the BAT responds by greatly increasing its rate of oxidation of its stored lipids, resulting in a high rate of heat production</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104114236675.png" alt="image-20201104114236675" style="zoom:67%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104114236675.png" srcset="/img/loading.gif" alt="image-20201104114236675" style="zoom:67%;" /></p>
 <p>A test for brown-fat thermogenesis in newborn and growing reindeer：</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104121621527.png" alt="image-20201104121621527" style="zoom: 50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201104121621527.png" srcset="/img/loading.gif" alt="image-20201104121621527" style="zoom: 50%;" /></p>
 <ul>
 <li>norepinephrine 去甲肾上腺素</li>
 </ul>
@@ -709,7 +679,7 @@ M/W = aW^{(b-1)}
 <li>Appendages (legs, tails, eye pinnae, etc) have low circulatory delivery and consist of mainly bones, cartilage, skin, which have low metabolic rate</li>
 </ul>
 <p>Heat loss across appendages (<strong>耳廓</strong>) is sometimes modulated in ways that aid thermoregulation</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107101454755.png" alt="image-20201107101454755" style="zoom: 50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107101454755.png" srcset="/img/loading.gif" alt="image-20201107101454755" style="zoom: 50%;" /></p>
 <ul>
 <li>Increased heat delivery to a jackrabbit's huge ear pinnae during and following exercise raises the temperature of the pinnae, thereby accelerating heat loss from them</li>
 </ul>
@@ -718,7 +688,7 @@ M/W = aW^{(b-1)}
 <li><strong>Countercurrent heat exchange:</strong> heat exchange depends on the transfer of heat between two closely juxtaposed fluid streams flowing in opposite directions</li>
 </ul>
 <p>Blood flow with and without countercurrent heat exchange</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107103731409.png" alt="image-20201107103731409" style="zoom: 50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107103731409.png" srcset="/img/loading.gif" alt="image-20201107103731409" style="zoom: 50%;" /></p>
 <ul>
 <li>With this arrangement of blood vessels blood loses heat steadily to the environment as it flows in and out of the limb, and the temperature of the blood steadily declines</li>
 <li>When the arteries and veins are close together allowing countercurrent heat exchange to occur, some of the heat lost from the arterial blood enters the venous blood. The temperature of the venous blood thus rises as the blood travels toward the body</li>
@@ -727,7 +697,7 @@ M/W = aW^{(b-1)}
 <ul>
 <li>short-circuits</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107103751802.png" alt="image-20201107103751802" style="zoom:33%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107103751802.png" srcset="/img/loading.gif" alt="image-20201107103751802" style="zoom:33%;" /></p>
 <p>Mammals and bird in <strong>hot</strong> environments: Their first line of defense are not evaporative cooling</p>
 <p>Evaporative cooling may help for temperature regulation, but it may create problems of water regulation, a potential lethal price to pay</p>
 <p>So the first line of defense is nonevaporative defense</p>
@@ -742,7 +712,7 @@ M/W = aW^{(b-1)}
 </ul></li>
 </ul>
 <p>Structures hypothesized to be responsible for cooling the brain in sheep and other artiodactyla（偶蹄目）</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107103917396.png" alt="image-20201107103917396" style="zoom: 43%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107103917396.png" srcset="/img/loading.gif" alt="image-20201107103917396" style="zoom: 43%;" /></p>
 <p>Active evaporative cooling is the ultimate line of defense against overheating</p>
 <ul>
 <li>Sweating – contains Na+ and Cl(lower than the blood plasma), prolonged sweating will deplete body pool of Na+ and Cl-</li>
@@ -772,7 +742,7 @@ M/W = aW^{(b-1)}
 <h4 id="体温">体温</h4>
 <p>正常新陈代谢要求在一定的温度条件下进行。哺乳动物的体温超过42℃或低于25℃，将引起代谢严重障碍甚至死亡</p>
 <p>所以，正常的体温对于生命活动具有重要意义，也是机体健康状况的重要指标。</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107105226459.png" alt="image-20201107105226459" style="zoom:67%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107105226459.png" srcset="/img/loading.gif" alt="image-20201107105226459" style="zoom:67%;" /></p>
 <h4 id="动物体温的生理波动">动物体温的生理波动</h4>
 <p>家禽的体温比家畜高</p>
 <p>幼畜的体温比成年家畜略高</p>
@@ -792,10 +762,10 @@ M/W = aW^{(b-1)}
 <li>又称<strong>代谢产热</strong>，指体内发生广泛的代谢产热增加。以褐色脂肪组织的产热量最大，约占非战栗产热总量的70％。</li>
 </ul></li>
 </ol>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107105423860.png" alt="image-20201107105423860" style="zoom:67%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107105423860.png" srcset="/img/loading.gif" alt="image-20201107105423860" style="zoom:67%;" /></p>
 <h4 id="主要散热途径">主要散热途径</h4>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107105438405.png" alt="image-20201107105438405" /><figcaption aria-hidden="true">image-20201107105438405</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107105438405.png" srcset="/img/loading.gif" alt="image-20201107105438405" /><figcaption aria-hidden="true">image-20201107105438405</figcaption>
 </figure>
 <p>动物的主要散热部位是<strong>皮肤；</strong>（75～85%）</p>
 <p>其他的散热途径还有<strong>呼吸器官、消化器官</strong>和<strong>排尿</strong>等</p>
@@ -826,7 +796,7 @@ M/W = aW^{(b-1)}
 <li>冷敏神经元（cold-sensitiveneuron）</li>
 </ul>
 <h4 id="体温调节中枢">体温调节中枢</h4>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107110606877.png" alt="image-20201107110606877" style="zoom: 50%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107110606877.png" srcset="/img/loading.gif" alt="image-20201107110606877" style="zoom: 50%;" /></p>
 <p>体温调节的基本中枢位于下丘脑</p>
 <p>视前区-下丘脑前部（preoptic-anterior hypothalamus area，PO/AH）是体温调节中枢的关键部位</p>
 <ul>
@@ -849,10 +819,10 @@ M/W = aW^{(b-1)}
 </ol>
 <p><strong>The autonomic nervous system (ANS),</strong> formerly <strong>the vegetative nervous</strong> <strong>system</strong>, is a division of the peripheral nervous system that supplies smoothmuscle and glands, and thus influences the function of internal organs.</p>
 <p><strong>The somatic nervous system</strong> (SNS or voluntary nervous system) is the part of the peripheral nervous system associated with the voluntary control of body movements via skeletal muscles.</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107112350992.png" alt="image-20201107112350992" style="zoom:67%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107112350992.png" srcset="/img/loading.gif" alt="image-20201107112350992" style="zoom:67%;" /></p>
 <p><strong>体温调定点学说</strong>：</p>
 <figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107112400086.png" alt="image-20201107112400086" /><figcaption aria-hidden="true">image-20201107112400086</figcaption>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Animal%20Physiology/image-20201107112400086.png" srcset="/img/loading.gif" alt="image-20201107112400086" /><figcaption aria-hidden="true">image-20201107112400086</figcaption>
 </figure>
 <ul>
 <li>在PO/AH区中有一个控制体温的调定点，而PO/AH区的温度敏感神经元可能起调定点的结构基础。hypothalamic</li>
@@ -864,372 +834,414 @@ M/W = aW^{(b-1)}
 <li>What are the implications for global warming on animals?</li>
 </ol>
 
-    </div>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/">Academic Notebook</a>
+                    
+                      <a class="hover-with-bg" href="/categories/Academic-Notebook/Animal-Physiology/">Animal Physiology</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Animal-Physiology/">Animal Physiology</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处。<br/ >  如果对你有帮助的话，请留下一些评论吧0v0。<br/ > If anything wrong, please leave a comment or contact me.</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/11/07/L6%20Digestion/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">L6 Digestion</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/07/Latex%E9%A1%B5%E9%9D%A2%E8%AE%BE%E7%BD%AE/">
+                        <span class="hidden-mobile">Latex页面设置</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
 
-    
-    
-    
-        
+            
+              <!-- Valine Comments 国内版-->
+              
+              <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
+                appKey: 'CIdoG4GkDjlSNTkDhQNOomml',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                requiredFields: ['nick'],
+                })
+                </script>
 
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>向海
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://zhenyumi.github.io/2020/11/07/L7%20Metabolism/" title="L7 Metabolism">https://zhenyumi.github.io/2020/11/07/L7 Metabolism/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
+              <!-- Valine Comments 国内版-->
+              
+              <!-- <div id="vcomments"></div>
+              <script>
+              new Valine({
+                el: '#vcomments',
+                appId: 'KWSkt0VN8AmQXTJcwLkrR1Gf-gzGzoHsz',
+                appKey: 'f8Y1U4Jnywm3hcDTW7fVCvYa',
+                placeholder: '说点什么',
+                avatar: 'retro',
+                serverURLs: 'https://kwskt0vn.lc-cn-n1-shared.com',
+                requiredFields: ['nick'],
+                })
+                </script> -->
 
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Animal-Physiology/" rel="tag"># Animal Physiology</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/11/07/Latex%E9%A1%B5%E9%9D%A2%E8%AE%BE%E7%BD%AE/" rel="prev" title="Latex页面设置">
-      <i class="fa fa-chevron-left"></i> Latex页面设置
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/11/07/L6%20Digestion/" rel="next" title="L6 Digestion">
-      L6 Digestion <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-    <div class="comments" id="valine-comments"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+              <!-- Utterances Comments -->
+              <!--<div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "16P93AHiYatTkzICc8MxvfWF-MdYXbMMI",
+          app_key: "CIdoG4GkDjlSNTkDhQNOomml",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
 
+
+                <script src="https://utteranc.es/client.js"
+                        repo="zhenyumi/comment_hexo"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+              </div>
+            -->
+          </div>
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80why-do-animals-need-energy"><span class="nav-number">1.</span> <span class="nav-text">一、Why do animals need energy?</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#four-forms-of-energy"><span class="nav-number">1.1.</span> <span class="nav-text">Four forms of energy</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Cmetabolic-rate-meaning-and-measurement"><span class="nav-number">2.</span> <span class="nav-text">二、Metabolic rate: meaning and measurement</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#units-of-measure-for-energy-and-metabolic-rates"><span class="nav-number">2.1.</span> <span class="nav-text">Units of Measure for Energy and Metabolic Rates</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89factors-affecting-metabolic-rates"><span class="nav-number">3.</span> <span class="nav-text">三、Factors affecting metabolic rates</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ingestion-of-food-causes-metabolic-rate-to-rise"><span class="nav-number">3.1.</span> <span class="nav-text">Ingestion of food causes metabolic rate to rise</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#basal-metabolic-rate-and-standard-metabolic-rate"><span class="nav-number">3.2.</span> <span class="nav-text">Basal metabolic rate and standard metabolic rate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#metabolic-scaling"><span class="nav-number">3.3.</span> <span class="nav-text">Metabolic scaling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#summary-1"><span class="nav-number">3.4.</span> <span class="nav-text">Summary</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9Bfood-energy-and-temperature-at-work"><span class="nav-number">4.</span> <span class="nav-text">四、Food, Energy and temperature at work</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#heat-production-by-thermoregulation-ch-10-p256"><span class="nav-number">4.1.</span> <span class="nav-text">Heat production by thermoregulation (Ch 10, p256)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#questions"><span class="nav-number">4.2.</span> <span class="nav-text">Questions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%93%E6%B8%A9%E5%8F%8A%E5%85%B6%E8%B0%83%E8%8A%82%E7%BB%BC%E8%BF%B0"><span class="nav-number">4.3.</span> <span class="nav-text">体温及其调节综述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#questions-1"><span class="nav-number">4.4.</span> <span class="nav-text">Questions</span></a></li></ol></li></ol></div>
       </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="向海"
-      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/picrew-one%20side%20view%20%281%29.png">
-  <p class="site-author-name" itemprop="name">向海</p>
-  <div class="site-description" itemprop="description">一个普通人</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">204</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">20</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">19</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">向海</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">2.1m</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">31:04</span>
-</div><br /> <!-- 换行 -->
-<!-- 网站运行时间的设置 -->
-<span id="timeDate">载入天数...</span>
-<span id="times">载入时分秒...</span>
-<script>
-    var now = new Date();
-    function createtime() {
-        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
-        now.setTime(now.getTime()+250);
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
-    }
-setInterval("createtime()",250);
-</script>
-
-        
-
-
-
-
-
-
-
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
 
       </div>
-    </footer>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      世界如此未知，人类如此愚昧，我们还有什么物事必须难以释怀？
+    </div>
   </div>
 
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-  <script defer src="/lib/three/three.min.js"></script>
-    <script defer src="/lib/three/three-waves.min.js"></script>
-
+    
+  </main>
 
   
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
 
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
 
+  
 
+  
 
+   <!-- Live2D Settings -->
+ <script src="https://zhenyumi.github.io/live2d/autoload.js"></script>
+ <!-- <script src="/live2d-widget/autoload.js"></script> -->
+  <!--
 
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
 
+<script src="/live2d-widget/waifu-tips.js"></script>
+<script src="/live2d-widget/live2d.js"></script>
 
-
-
-
-
-<script>
-document.querySelectorAll('.pdfobject-container').forEach(element => {
-  let url = element.dataset.target;
-  let pdfOpenParams = {
-    navpanes : 0,
-    toolbar  : 0,
-    statusbar: 0,
-    pagemode : 'thumbs',
-    view     : 'FitH'
-  };
-  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
-  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
-
-  if (NexT.utils.supportsPDFs()) {
-    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
-  } else {
-    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
-  }
-});
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+  initModel("/live2d-widget/waifu-tips.json")
 </script>
 
+-->
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <span>向海 2020 - </span>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Constructed by Hexo</span></a>
+      <span> - </span>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid </span></a>
+      <i class="iconfont icon-briefcase"></i>
+      <span> Hope tomorrow is still wonderful.</span>
+    </div>
+    
+  <div class="statistics">
+    
+    
 
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
+    
       
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            Count Mode 
+            <span id="busuanzi_value_site_uv"></span>
+             
+          </span>
+      
+    
+  </div>
 
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
 
     
 
+    
+  </div>
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
   
 
 
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 1,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
     });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : true,
-      notify     : true,
-      appId      : '16P93AHiYatTkzICc8MxvfWF-MdYXbMMI',
-      appKey     : 'CIdoG4GkDjlSNTkDhQNOomml',
-      placeholder: "Leave Something?",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : true,
-      lang       : 'zh-ch' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "L7 Metabolism&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 50,
+      loop: false,
     });
-  }, window.Valine);
-});
-</script>
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "left",
+      visible: "hover",
+      
+      icon: "§"
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
 
 </body>
+
+
 </html>
