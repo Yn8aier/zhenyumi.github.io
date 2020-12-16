@@ -271,224 +271,207 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1>一、Michaelis-Menten kinetics</h1>
+        <h1 id="一michaelis-menten-kinetics">一、Michaelis-Menten kinetics</h1>
 <p>Michaelis-Menten kinetics is about <u>Reaction Rate for a Simple Enzyme-Catalyzed Reaction</u></p>
-<h2 id="The-relationship-of-k’s">The relationship of k’s</h2>
+<h2 id="the-relationship-of-ks">The relationship of k’s</h2>
 <p>An expression for a simple reaction involving a single substrate and product was shown as:</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125100002866.png" alt="image-20191125100002866"></p>
-<ol>
-<li>$k_{1} \text{ and } k_{-1} &gt;&gt; k_{2}$: Binding process is reversible</li>
-<li>$k_{2} &gt;&gt; k_{-2}$: Conversion ES to EP <u>lie far to the right</u></li>
-<li>$K_{3} &gt;&gt; k_{-2}$: Rapid release of product</li>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125100002866.png" alt="image-20191125100002866" /><figcaption aria-hidden="true">image-20191125100002866</figcaption>
+</figure>
+<ol type="1">
+<li><span class="math inline">\(k_{1} \text{ and } k_{-1} &gt;&gt; k_{2}\)</span>: Binding process is reversible</li>
+<li><span class="math inline">\(k_{2} &gt;&gt; k_{-2}\)</span>: Conversion ES to EP <u>lie far to the right</u></li>
+<li><span class="math inline">\(K_{3} &gt;&gt; k_{-2}\)</span>: Rapid release of product</li>
 </ol>
-<p>If we analyze the <strong>initial rate</strong> of an enzyme-catalyzed reaction (i.e., before a significant concentration of P appears) and <u>we <strong>assume</strong> that $k_{1} , k_{-1} \text{ and } k_{3} &gt;&gt; k_{2}$,</u> and Equation 11.12 simplifies to the following:</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125100019986.png" alt="image-20191125100019986"></p>
+<p>If we analyze the <strong>initial rate</strong> of an enzyme-catalyzed reaction (i.e., before a significant concentration of P appears) and <u>we <strong>assume</strong> that <span class="math inline">\(k_{1} , k_{-1} \text{ and } k_{3} &gt;&gt; k_{2}\)</span>,</u> and Equation 11.12 simplifies to the following:</p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125100019986.png" alt="image-20191125100019986" /><figcaption aria-hidden="true">image-20191125100019986</figcaption>
+</figure>
 <p>The catalytic formation of the product, with enzyme regeneration, will then be a <strong>simple first-order reaction</strong>, and its rate will be determined solely by the concentration of ES and the value of $ k_{cat}$</p>
 <blockquote>
-<ol start="11">
+<ol start="11" type="1">
 <li>12 公式简化为11.13 公式的形式是在特定假设下的</li>
 </ol>
 </blockquote>
 <ul>
-<li>
-<p>$k_{cat }$ is the apparent rate constant for the rate-determining conversion of substrate to product</p>
-</li>
-<li>
-<p>$k_{cat} $ is an aggregate rate constant = $k_{2} k_{3}/(k_{2} + k_{3})$. In the limiting case where $k_{3} &gt;&gt; k_{2}$, $k_{cat} \approx k_{2}$</p>
-</li>
-<li>
-<p>Initial reaction conditions are such that the reverse reaction between E and P is negligible.</p>
-</li>
+<li><p><span class="math inline">\(k_{cat }\)</span> is the apparent rate constant for the rate-determining conversion of substrate to product</p></li>
+<li><p>$k_{cat} $ is an aggregate rate constant = <span class="math inline">\(k_{2} k_{3}/(k_{2} + k_{3})\)</span>. In the limiting case where <span class="math inline">\(k_{3} &gt;&gt; k_{2}\)</span>, <span class="math inline">\(k_{cat} \approx k_{2}\)</span></p></li>
+<li><p>Initial reaction conditions are such that the reverse reaction between E and P is negligible.</p></li>
 </ul>
-<p>Therefore, the reaction rate, or velocity, defined as the observed rate of formation of products, can be expressed as <u>equation 11.14</u>:<br>
-$$<br>
-v = k_{cat} [ES]<br>
-$$<br>
-[ES] is difficult to measure in kinetics experiments. The easily measured parameters are substrate (or product) concentration and the total concentration of enzyme, which must be the sum of free enzyme and enzyme bound to substrate: <u>equation 11.15</u><br>
-$$<br>
-[E]<em>{t} = [E] + [ES]<br>
-\<br>
-\text{Total Enzyme = Free Enzyme + Enzyme in ES complex}<br>
-$$<br>
-The way we have written Equation 11.13 suggests that E and S should be in equilibrium with ES, with an equilibrium dissociation constant $K</em>{s}$: <u>Equation 11.16</u><br>
-$$<br>
-K_{s} = \frac{k_{-1}}{k_{1}} = \frac{[E][S]}{[ES]}<br>
-$$<br>
-<font color="DD0000">这个对于$K_{s}$的方程式在特定条件下才成立的（This is usually an incorrect assumption, but under certain circumstances ）：</font>  It doesn’t apply in general because E, S, and ES are <u>not truly in equilibrium</u></p>
-<ol>
-<li>$k_{cat} &lt;&lt; k_{-1}$ this approximation is valid.</li>
+<p>Therefore, the reaction rate, or velocity, defined as the observed rate of formation of products, can be expressed as <u>equation 11.14</u>: <span class="math display">\[
+v = k_{cat} [ES]
+\]</span> [ES] is difficult to measure in kinetics experiments. The easily measured parameters are substrate (or product) concentration and the total concentration of enzyme, which must be the sum of free enzyme and enzyme bound to substrate: <u>equation 11.15</u> <span class="math display">\[
+[E]_{t} = [E] + [ES]
+\\
+\text{Total Enzyme = Free Enzyme + Enzyme in ES complex}
+\]</span> The way we have written Equation 11.13 suggests that E and S should be in equilibrium with ES, with an equilibrium dissociation constant <span class="math inline">\(K_{s}\)</span>: <u>Equation 11.16</u> <span class="math display">\[
+K_{s} = \frac{k_{-1}}{k_{1}} = \frac{[E][S]}{[ES]}
+\]</span> <font color="DD0000">这个对于<span class="math inline">\(K_{s}\)</span>的方程式在特定条件下才成立的（This is usually an incorrect assumption, but under certain circumstances ）：</font> It doesn’t apply in general because E, S, and ES are <u>not truly in equilibrium</u></p>
+<ol type="1">
+<li><span class="math inline">\(k_{cat} &lt;&lt; k_{-1}\)</span> this approximation is valid.</li>
 </ol>
-<h2 id="Steady-State">Steady State</h2>
+<h2 id="steady-state">Steady State</h2>
 <p>when the reaction is started by mixing enzymes and substrates, the ES concentration builds up at first, but quickly reaches a <strong>steady state</strong>, in which it remains almost constant. This steady state will persist until almost all of the substrate has been consumed</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125105245133.png" alt="image-20191125105245133" style="zoom:50%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125105245133.png" alt="image-20191125105245133" style="zoom:50%;" /></p>
 <blockquote>
 <p><strong>The steady state in enzyme kinetics</strong>. The figure shows how the concentrations of <u>substrate [S], free enzyme [E], enzyme–substrate complex [ES], and product [P]</u> vary with time for a simple enzyme-catalyzed reaction</p>
 </blockquote>
 <blockquote>
-<p>Described by $E + S \rightleftharpoons ES \rarr E + P$ After a very brief initial period, [ES] reaches a steady state in which ES is consumed approximately as rapidly as it is formed, so $d[ES]/dt \approx 0$. The amounts of E and ES are greatly exaggerated for clarity. Note that $[E] + [ES] = [E]_{t}$, or total enzyme concentration, and that [ES] actually falls very slowly as substrate is consumed, while [E] accordingly rises.</p>
+<p>Described by <span class="math inline">\(E + S \rightleftharpoons ES \rarr E + P\)</span> After a very brief initial period, [ES] reaches a steady state in which ES is consumed approximately as rapidly as it is formed, so <span class="math inline">\(d[ES]/dt \approx 0\)</span>. The amounts of E and ES are greatly exaggerated for clarity. Note that <span class="math inline">\([E] + [ES] = [E]_{t}\)</span>, or total enzyme concentration, and that [ES] actually falls very slowly as substrate is consumed, while [E] accordingly rises.</p>
 </blockquote>
-<p>In the steady state, the rates of formation and breakdown of ES are equal. Therefore gives <u>equation 11.17</u><br>
-$$<br>
-k_{1} [E][S] = k_{-1} [ES] + k_{cat}[ES] \<br>
-\text{Formation of ES complex = Disociation of ES complex + Breakdown to E + P}<br>
-$$<br>
-which can be rearranged to give <u>Equation 11.18</u><br>
-$$<br>
-[ES] = (\frac{k_{1}}{k_{-1} + k_{cat}}) [E][S]<br>
-$$<br>
-Combining the ratio of rate constants in Equation 11.17 gives a single constant, $K_{M}$ <u>equation 11.19</u><br>
-$$<br>
-K_{M} = \frac{k_{-1} + k_{cat}}{k_{1}}<br>
-$$<br>
-<u>Equation 11.18</u> can now be rewritten as <u>equation 11.20</u><br>
-$$<br>
-K_{M} [ES] = [E][S]<br>
-$$<br>
-At this point, [ES] is expressed in terms of [E] and [S]. To get $[E]<em>{t}$ into the equation, rather than [E], recall from Equation 11.15 that $[E]</em>{t} = [E] + [ES]$ Putting this into Equation 11.20 yields<br>
-$$<br>
-K_{M} [ES] = [E]<em>{t}[S]-[ES][S]<br>
-$$<br>
-This rearranges to <u>equation 11.22</u><br>
-$$<br>
-[ES] = \frac{[E]</em>{t} [S]}{K_{M} + [S]}<br>
-$$<br>
-Finally, inserting this result into <u>Equation 11.14</u> gives an expression for <em>v</em> in terms of $[E]<em>{t} $ and [S]: <u>equation 11.23</u><br>
-$$<br>
-v = \frac{k</em>{cat} [E]<em>{t} [S]}{K</em>{M} + [S]}<br>
-$$</p>
-<h2 id="Michaelis–Menten-equation">Michaelis–Menten equation</h2>
-<p><u>Equation 11.23</u> is called the <strong>Michaelis–Menten equation</strong>, and $K_{M}$ is the <strong>Michaelis constant</strong>,</p>
-<ol>
-<li>$K_{M}$ is a ratio of the rate constants for a specific reaction (see <u>Equation 11.19</u>), it is a characteristic of that reaction.</li>
-<li>$K_{M}$ has units of concentration.</li>
+<p>In the steady state, the rates of formation and breakdown of ES are equal. Therefore gives <u>equation 11.17</u> <span class="math display">\[
+k_{1} [E][S] = k_{-1} [ES] + k_{cat}[ES] \\ 
+\text{Formation of ES complex = Disociation of ES complex + Breakdown to E + P}
+\]</span> which can be rearranged to give <u>Equation 11.18</u> <span class="math display">\[
+[ES] = (\frac{k_{1}}{k_{-1} + k_{cat}}) [E][S]
+\]</span> Combining the ratio of rate constants in Equation 11.17 gives a single constant, <span class="math inline">\(K_{M}\)</span> <u>equation 11.19</u> <span class="math display">\[
+K_{M} = \frac{k_{-1} + k_{cat}}{k_{1}}
+\]</span> <u>Equation 11.18</u> can now be rewritten as <u>equation 11.20</u> <span class="math display">\[
+K_{M} [ES] = [E][S]
+\]</span> At this point, [ES] is expressed in terms of [E] and [S]. To get <span class="math inline">\([E]_{t}\)</span> into the equation, rather than [E], recall from Equation 11.15 that <span class="math inline">\([E]_{t} = [E] + [ES]\)</span> Putting this into Equation 11.20 yields <span class="math display">\[
+K_{M} [ES] = [E]_{t}[S]-[ES][S]
+\]</span> This rearranges to <u>equation 11.22</u> <span class="math display">\[
+[ES] = \frac{[E]_{t} [S]}{K_{M} + [S]}
+\]</span> Finally, inserting this result into <u>Equation 11.14</u> gives an expression for <em>v</em> in terms of $[E]_{t} $ and [S]: <u>equation 11.23</u> <span class="math display">\[
+v = \frac{k_{cat} [E]_{t} [S]}{K_{M} + [S]}
+\]</span></p>
+<h2 id="michaelismenten-equation">Michaelis–Menten equation</h2>
+<p><u>Equation 11.23</u> is called the <strong>Michaelis–Menten equation</strong>, and <span class="math inline">\(K_{M}\)</span> is the <strong>Michaelis constant</strong>,</p>
+<ol type="1">
+<li><span class="math inline">\(K_{M}\)</span> is a ratio of the rate constants for a specific reaction (see <u>Equation 11.19</u>), it is a characteristic of that reaction.</li>
+<li><span class="math inline">\(K_{M}\)</span> has units of concentration.</li>
 </ol>
-<h2 id="Velocity">Velocity</h2>
+<h2 id="velocity">Velocity</h2>
 <p>Consider the graph of <em>v</em> versus [S] shown in Figure 11.23.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125112502048.png" alt="image-20191125112502048" style="zoom: 50%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125112502048.png" alt="image-20191125112502048" style="zoom: 50%;" /></p>
 <p>This graph shows the variation of reaction velocity with substrate concentration according to the Michaelis–Menten model of enzyme kinetics.</p>
 <p>The values of <em>v</em> plotted here are determined from <strong>the initial rates</strong> of the reaction.</p>
-<p><u>At the point where [S] = $K_{M }$ the reaction has exactly half its maximum velocity.</u></p>
-<p>Note that $V_{max}$ is approached asymptotically (渐进的）.</p>
-<p>At high substrate concentrations, where [S] is much greater than $K_{M}$, the reaction approaches a <strong>maximum velocity</strong> $V_{max}$.</p>
-<p>When $[S] &gt;&gt; K_{M}, K_{M} + [S] \approx [S]$, so <u>equation 11.23</u> can be simplified to <u>equation 11.24</u> :<br>
-$$<br>
-V_{max} = k_{cat} [E]<em>{t}<br>
-$$<br>
-The Michaelis–Menten rate equation is <u>equation 11.25</u>:<br>
-$$<br>
-v = \frac{V</em>{max} [S]}{K_{M} + [S]}<br>
-$$<br>
-This is the most familiar form of the Michaelis–Menten equation.</p>
+<p><u>At the point where [S] = <span class="math inline">\(K_{M }\)</span> the reaction has exactly half its maximum velocity.</u></p>
+<p>Note that <span class="math inline">\(V_{max}\)</span> is approached asymptotically (渐进的）.</p>
+<p>At high substrate concentrations, where [S] is much greater than <span class="math inline">\(K_{M}\)</span>, the reaction approaches a <strong>maximum velocity</strong> <span class="math inline">\(V_{max}\)</span>.</p>
+<p>When <span class="math inline">\([S] &gt;&gt; K_{M}, K_{M} + [S] \approx [S]\)</span>, so <u>equation 11.23</u> can be simplified to <u>equation 11.24</u> : <span class="math display">\[
+V_{max} = k_{cat} [E]_{t}
+\]</span> The Michaelis–Menten rate equation is <u>equation 11.25</u>: <span class="math display">\[
+v = \frac{V_{max} [S]}{K_{M} + [S]}
+\]</span> This is the most familiar form of the Michaelis–Menten equation.</p>
 <p>Reaction velocity as a function of substrate concentration. This graph, a plot of Equation 11.25, shows the variation of reaction velocity with substrate concentration according to the Michaelis–Menten model of enzyme kinetics. The values of v plotted here are determined from the initial rates of the reaction (see Figure 11.24). At the point where the reaction has exactly half its maximum velocity. Note that is approached asymptotically.</p>
-<h2 id="Significance-of-K-M-k-cat-V-max">Significance of $K_{M}$, $k_{cat}$, $V_{max}$</h2>
+<h2 id="significance-of-k_m-k_cat-v_max">Significance of <span class="math inline">\(K_{M}\)</span>, <span class="math inline">\(k_{cat}\)</span>, <span class="math inline">\(V_{max}\)</span></h2>
 <p>$K_{M} $ is often associated with the <u>affinity of enzyme</u> for substrate.</p>
-<p><u><strong>However, this relationship is only true in the limiting case: a two-step reaction in which $k_{cat} &lt;&lt; k_{1}$</strong></u></p>
-<p>So <u>equation 11.19</u> then yields<br>
-$$<br>
-K_{M} \approx [k_{-1}][k_{1}] = K_{S}<br>
-$$<br>
-the equilibrium constant defined in <u>Equation 11.16</u></p>
-<h3 id="1-Michaelis-constant-K-M">1. Michaelis constant $K_{M}$</h3>
-<p>Thus, <u>$K_{M}$ is a measure of the substrate concentration required for effective catalysis to occur.</u></p>
-<p>$K_{M}$ is a equilibrium constant.</p>
-<p><em>An enzyme with a high</em> $K_{M}$ <em>requires a higher substrate concentration to achieve a given reaction velocity than</em> <em>an enzyme with a low</em> $K_{M}$ but the same $k_{cat}$</p>
+<p><u><strong>However, this relationship is only true in the limiting case: a two-step reaction in which <span class="math inline">\(k_{cat} &lt;&lt; k_{1}\)</span></strong></u></p>
+<p>So <u>equation 11.19</u> then yields <span class="math display">\[
+K_{M} \approx [k_{-1}][k_{1}] = K_{S}
+\]</span> the equilibrium constant defined in <u>Equation 11.16</u></p>
+<h3 id="michaelis-constant-k_m">1. Michaelis constant <span class="math inline">\(K_{M}\)</span></h3>
+<p>Thus, <u><span class="math inline">\(K_{M}\)</span> is a measure of the substrate concentration required for effective catalysis to occur.</u></p>
+<p><span class="math inline">\(K_{M}\)</span> is a equilibrium constant.</p>
+<p><em>An enzyme with a high</em> <span class="math inline">\(K_{M}\)</span> <em>requires a higher substrate concentration to achieve a given reaction velocity than</em> <em>an enzyme with a low</em> <span class="math inline">\(K_{M}\)</span> but the same <span class="math inline">\(k_{cat}\)</span></p>
 <p><u>Table 11.4</u> lists values for a number of important enzymes.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125114423690.png" alt="image-20191125114423690"></p>
-<p>Higher $K_{M}$, the lower ability to bind substrate.</p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125114423690.png" alt="image-20191125114423690" /><figcaption aria-hidden="true">image-20191125114423690</figcaption>
+</figure>
+<p>Higher <span class="math inline">\(K_{M}\)</span>, the lower ability to bind substrate.</p>
 <p>The steady-state assumption proposes that the concentration of enzyme–substrate complex remains nearly constant through much of the reaction.</p>
-<p>The <strong>Michaelis constant</strong>, $K_{M}$ , indicates the substrate concentration at which the reaction rate is ½ <em>V</em>max.</p>
-<h3 id="2-The-Turnover-Number-k-cat">2. The Turnover Number $k_{cat}$</h3>
+<p>The <strong>Michaelis constant</strong>, <span class="math inline">\(K_{M}\)</span> , indicates the substrate concentration at which the reaction rate is ½ <em>V</em>max.</p>
+<h3 id="the-turnover-number-k_cat">2. The Turnover Number <span class="math inline">\(k_{cat}\)</span></h3>
 <p>The <strong>turnover number</strong>, $k_{cat} $ , measures <u>the rate of the catalytic process.</u> Some typical turnover numbers are listed in <u>Table 11.4.</u></p>
-<p>$k_{cat}$ is a rate constant.</p>
-<p>$k_{cat}$ gives a direct measure of the <u>rate of product formation under optimum conditions (saturated enzyme).</u></p>
-<p>The unit of $k_{cat}$ is always $s^{-1}$</p>
-<h3 id="3-The-Ratio-k-cat-K-M">3. The Ratio $k_{cat}/K_{M}$</h3>
-<p>The ratio $k_{cat}/K_{M}$ is a convenient measure of <strong>enzyme efficiency.</strong></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125161047106.png" alt="image-20191125161047106"></p>
-<p>Note that either a large value of $k_{cat}$ (i.e., rapid turnover) or a small value of $K_{M}$ (i.e., $1/2 \ V_{max}$ occurs at relatively low [S]) will make $k_{cat}/K_{M}$ large.</p>
-<p>We can gain another insight into the meaning of $k_{cat}/K_{M}$ by considering the situation <u>at very low substrate concentrations.</u></p>
-<p>In this case, $[s] &lt;&lt; K_{M}$, so most of the enzyme is free, so $[E]<em>{t} \approx [E]$. Then the <u>equation 11.23</u> becomes <u>equation 11.26</u>:<br>
-$$<br>
-v = \frac{k</em>{cat}}{K_{M}} [E][S]<br>
-$$<br>
-Therefore, under these circumstances, the ratio $k_{cat}/K_{M}$ behaves as a <u>second-order rate constant for the reaction between substrate and free enzyme</u>, and it <u>provides a direct measure of enzyme <strong>efficiency and specificity.</strong></u></p>
+<p><span class="math inline">\(k_{cat}\)</span> is a rate constant.</p>
+<p><span class="math inline">\(k_{cat}\)</span> gives a direct measure of the <u>rate of product formation under optimum conditions (saturated enzyme).</u></p>
+<p>The unit of <span class="math inline">\(k_{cat}\)</span> is always <span class="math inline">\(s^{-1}\)</span></p>
+<h3 id="the-ratio-k_catk_m">3. The Ratio <span class="math inline">\(k_{cat}/K_{M}\)</span></h3>
+<p>The ratio <span class="math inline">\(k_{cat}/K_{M}\)</span> is a convenient measure of <strong>enzyme efficiency.</strong></p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125161047106.png" alt="image-20191125161047106" /><figcaption aria-hidden="true">image-20191125161047106</figcaption>
+</figure>
+<p>Note that either a large value of <span class="math inline">\(k_{cat}\)</span> (i.e., rapid turnover) or a small value of <span class="math inline">\(K_{M}\)</span> (i.e., <span class="math inline">\(1/2 \ V_{max}\)</span> occurs at relatively low [S]) will make <span class="math inline">\(k_{cat}/K_{M}\)</span> large.</p>
+<p>We can gain another insight into the meaning of <span class="math inline">\(k_{cat}/K_{M}\)</span> by considering the situation <u>at very low substrate concentrations.</u></p>
+<p>In this case, <span class="math inline">\([s] &lt;&lt; K_{M}\)</span>, so most of the enzyme is free, so <span class="math inline">\([E]_{t} \approx [E]\)</span>. Then the <u>equation 11.23</u> becomes <u>equation 11.26</u>: <span class="math display">\[
+v = \frac{k_{cat}}{K_{M}} [E][S]
+\]</span> Therefore, under these circumstances, the ratio <span class="math inline">\(k_{cat}/K_{M}\)</span> behaves as a <u>second-order rate constant for the reaction between substrate and free enzyme</u>, and it <u>provides a direct measure of enzyme <strong>efficiency and specificity.</strong></u></p>
 <p>Suppose an enzyme has a choice of two substrates, A or B, present at equal concentrations. Then under conditions in which both substrates are dilute and are competing for the enzyme</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125162751774.png" alt="image-20191125162751774"></p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125162922809.png" alt="image-20191125162922809" style="zoom:50%;" />
-<p>We have just seen that the ratio $k_{cat}/K_{M}$ corresponds to the second-order rate constant for enzyme–substrate combination under circumstances of <u>low substrate concentration.</u></p>
-<h1>二、Analysis of Kinetic Data: Testing the Michaelis–Menten Equation</h1>
-<p>The measurement of reaction velocity as a function of substrate concentration is <u>used to determine whether an enzyme-catalyzed reaction follows the Michaelis–Menten model</u>  <u>(equation 11.25)</u><br>
-$$<br>
-v = \frac{V_{max} [S]}{K_{M} + [S]}<br>
-$$<br>
-and, if so, to determine the constants $K_{M} \text{ and } k_{cat}$</p>
-<h2 id="Analysis-of-initial-rates">Analysis of initial rates</h2>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125164047431.png" alt="image-20191125164047431" style="zoom: 80%;" />
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125162751774.png" alt="image-20191125162751774" /><figcaption aria-hidden="true">image-20191125162751774</figcaption>
+</figure>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125162922809.png" alt="image-20191125162922809" style="zoom:50%;" /></p>
+<p>We have just seen that the ratio <span class="math inline">\(k_{cat}/K_{M}\)</span> corresponds to the second-order rate constant for enzyme–substrate combination under circumstances of <u>low substrate concentration.</u></p>
+<h1 id="二analysis-of-kinetic-data-testing-the-michaelismenten-equation">二、Analysis of Kinetic Data: Testing the Michaelis–Menten Equation</h1>
+<p>The measurement of reaction velocity as a function of substrate concentration is <u>used to determine whether an enzyme-catalyzed reaction follows the Michaelis–Menten model</u> <u>(equation 11.25)</u> <span class="math display">\[
+v = \frac{V_{max} [S]}{K_{M} + [S]}
+\]</span> and, if so, to determine the constants <span class="math inline">\(K_{M} \text{ and } k_{cat}\)</span></p>
+<h2 id="analysis-of-initial-rates">Analysis of initial rates</h2>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125164047431.png" alt="image-20191125164047431" style="zoom: 80%;" /></p>
 <p>Several reactions are performed with <strong>varying concentrations</strong> of substrate and the values of the initial rates are determined from the slopes of the curves in the early phase for each reaction.</p>
 <p>Initial rate data, determined as described in panel A, are plotted as a function of the substrate concentration.</p>
 <p>The enzyme appears to obey the Michaelis–Menten kinetic model.</p>
-<h2 id="Lineweaver–Burk-plot-莱恩威弗-伯克作图">Lineweaver–Burk plot 莱恩威弗-伯克作图</h2>
-<h3 id="1-Deduction">1. Deduction</h3>
-<p><strong>Lineweaver–Burk plot</strong> is also called  <strong>double reciprocal plot</strong> (双倒数图)</p>
-<p>A Lineweaver–Burk plot provides a quick test for adherence to Michaelis–Menten kinetics and allows easy evaluation of the critical constants.<br>
-$$<br>
-\because v = \frac{V_{max} [S]}{K_{M} + [S]}<br>
-$$</p>
-<p>$$<br>
-\text{两边取倒数得：}\frac{1}{v} = \frac{K_{M} + [S]}{V_{max} [S]}<br>
-$$</p>
-<p>$$<br>
-\therefore \frac{K_{M} + [S]}{V_{max} [S]} = \frac{K_{M}}{V_{max} [S]} + \frac{1}{V_{max}}<br>
-$$</p>
-<p>$$<br>
-\therefore \frac{1}{v} = (\frac{K_{M}}{V_{max}}) \frac{1}{[S]} + \frac{1}{V_{max}}<br>
-$$</p>
+<h2 id="lineweaverburk-plot-莱恩威弗-伯克作图">Lineweaver–Burk plot 莱恩威弗-伯克作图</h2>
+<h3 id="deduction">1. Deduction</h3>
+<p><strong>Lineweaver–Burk plot</strong> is also called <strong>double reciprocal plot</strong> (双倒数图)</p>
+<p>A Lineweaver–Burk plot provides a quick test for adherence to Michaelis–Menten kinetics and allows easy evaluation of the critical constants. <span class="math display">\[
+\because v = \frac{V_{max} [S]}{K_{M} + [S]}
+\]</span></p>
+<p><span class="math display">\[
+\text{两边取倒数得：}\frac{1}{v} = \frac{K_{M} + [S]}{V_{max} [S]}
+\]</span></p>
+<p><span class="math display">\[
+\therefore \frac{K_{M} + [S]}{V_{max} [S]} = \frac{K_{M}}{V_{max} [S]} + \frac{1}{V_{max}}
+\]</span></p>
+<p><span class="math display">\[
+\therefore \frac{1}{v} = (\frac{K_{M}}{V_{max}}) \frac{1}{[S]} + \frac{1}{V_{max}}
+\]</span></p>
 <p>Figure 11.25:</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125164337402.png" alt="image-20191125164337402" style="zoom: 50%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125164337402.png" alt="image-20191125164337402" style="zoom: 50%;" /></p>
 <p>At 1/[S] = 0, [S] is infinitely large and the reaction velocity is at its maximum.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125165627357.png" alt="image-20191125165627357"></p>
-<p>where denotes the value of $[S]_{0}$ at We then obtain from Equation 11.29:</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125165701750.png" alt="image-20191125165701750"></p>
-<h3 id="2-Disadvantages">2. Disadvantages</h3>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125165627357.png" alt="image-20191125165627357" /><figcaption aria-hidden="true">image-20191125165627357</figcaption>
+</figure>
+<p>where denotes the value of <span class="math inline">\([S]_{0}\)</span> at We then obtain from Equation 11.29:</p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125165701750.png" alt="image-20191125165701750" /><figcaption aria-hidden="true">image-20191125165701750</figcaption>
+</figure>
+<h3 id="disadvantages">2. Disadvantages</h3>
 <p>A disadvantage of a Lineweaver–Burk plot is that a long extrapolation（外推） is often required to determine $K_{M} $, which <u>introduces corresponding uncertainty in the result.</u></p>
-<h2 id="Eadie–Hofstee-plot">Eadie–Hofstee plot</h2>
-<h3 id="1-Deduction-2">1. Deduction</h3>
-<p>$$<br>
-\text{Get from equation 11.25: }v = \frac{V_{max} [S]}{K_{M} + [S]}<br>
-$$</p>
-<p>$$<br>
-\text{将右端算式的分母左乘：} v K_{M} + v [S] = V_{max} [S]<br>
-$$</p>
-<p>$$<br>
-\text{左右同除[S]: } \frac{v K_{M}}{[S]} + v = V_{max}<br>
-$$</p>
-<p>$$<br>
-\therefore v = V_{max} - \frac{v K_{M}}{[S]}<br>
-$$</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125170645357.png" alt="image-20191125170645357" style="zoom:50%;" />
+<h2 id="eadiehofstee-plot">Eadie–Hofstee plot</h2>
+<h3 id="deduction-1">1. Deduction</h3>
+<p><span class="math display">\[
+\text{Get from equation 11.25: }v = \frac{V_{max} [S]}{K_{M} + [S]}
+\]</span></p>
+<p><span class="math display">\[
+\text{将右端算式的分母左乘：} v K_{M} + v [S] = V_{max} [S]
+\]</span></p>
+<p><span class="math display">\[
+\text{左右同除[S]: } \frac{v K_{M}}{[S]} + v = V_{max}
+\]</span></p>
+<p><span class="math display">\[
+\therefore v = V_{max} - \frac{v K_{M}}{[S]}
+\]</span></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125170645357.png" alt="image-20191125170645357" style="zoom:50%;" /></p>
 <p>These linear plots provide useful methods for recognizing modes of inhibition; however, they suffer from unequal weighting of the data.</p>
 <p>Performing nonlinear curve fitting to the raw data with readily available software is now preferred.</p>
-<p>The observed effects of an amino acid mutation in an enzyme active site on $K_{M}$ and $k_{cat}$ can be used to identify the role of the amino acid in substrate binding ($K_{M}$ effects) and transition-state stabilization ($k_{cat}$ effects).</p>
-<h1>三、Multisubstrate Reactions</h1>
+<p>The observed effects of an amino acid mutation in an enzyme active site on <span class="math inline">\(K_{M}\)</span> and <span class="math inline">\(k_{cat}\)</span> can be used to identify the role of the amino acid in substrate binding (<span class="math inline">\(K_{M}\)</span> effects) and transition-state stabilization (<span class="math inline">\(k_{cat}\)</span> effects).</p>
+<h1 id="三multisubstrate-reactions">三、Multisubstrate Reactions</h1>
 <p>An example we have already discussed is proteolysis, which involves two substrates (the polypeptide and water) and two products (the two fragments of the cleaved polypeptide chain). Phosphorylation of glucose, as catalyzed by hexokinase, is another such case: The two substrates are glucose and ATP, and the products are glucose-6-phosphate and ADP.</p>
 <p><u>When an enzyme binds two or more substrates and releases multiple products, the order of the steps becomes an important feature of the enzyme mechanism.</u></p>
 <p>We shall illustrate them with examples using two substrates, S1 and S2, and two products, P1 and P2.</p>
-<h2 id="Random-Substrate-Binding">Random Substrate Binding</h2>
+<h2 id="random-substrate-binding">Random Substrate Binding</h2>
 <p>In random substrate binding, either substrate can be bound first, <u>although in many cases one substrate will be favored for initial binding, and its binding may promote the binding of the other.</u></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125171732828.png" alt="image-20191125171732828"></p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125171732828.png" alt="image-20191125171732828" /><figcaption aria-hidden="true">image-20191125171732828</figcaption>
+</figure>
 <p>Example：</p>
 <p>The <u>phosphorylation</u> of glucose by ATP, with <u>hexokinase</u> as the enzyme, appears to follow such a mechanism, although there is some tendency for glucose to bind first.</p>
-<h2 id="Ordered-Substrate-Binding">Ordered Substrate Binding</h2>
+<h2 id="ordered-substrate-binding">Ordered Substrate Binding</h2>
 <p>In some cases, one substrate <em>must</em> bind before a second substrate can bind significantly:</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125172058212.png" alt="image-20191125172058212"></p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125172058212.png" alt="image-20191125172058212" /><figcaption aria-hidden="true">image-20191125172058212</figcaption>
+</figure>
 <p>Example：</p>
-<p>This mechanism is often observed in oxidations of substrates by the cofactor $NAD^{+}$ which is related to the cofactor $NADP^{+}$ discussed above in the dihydrofolate reductase mechanism.</p>
-<h2 id="The-Ping-Pong-Mechanism">The Ping-Pong Mechanism</h2>
+<p>This mechanism is often observed in oxidations of substrates by the cofactor <span class="math inline">\(NAD^{+}\)</span> which is related to the cofactor <span class="math inline">\(NADP^{+}\)</span> discussed above in the dihydrofolate reductase mechanism.</p>
+<h2 id="the-ping-pong-mechanism">The Ping-Pong Mechanism</h2>
 <p>Sometimes the sequence of events in catalysis goes like this: One substrate is bound, one product is released, a second substrate comes in, and a second product is released. This is called a “ping-pong” reaction:</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125172321913.png" alt="image-20191125172321913" style="zoom:55%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125172321913.png" alt="image-20191125172321913" style="zoom:55%;" /></p>
 <p>Here E* is a modified form of the enzyme, often carrying a fragment of S1.</p>
-<p>A good  example is the cleavage of a polypeptide chain by a serine protease such as trypsin or chymotrypsin.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125172415681.png" alt="image-20191125172415681" style="zoom:50%;" />
+<p>A good example is the cleavage of a polypeptide chain by a serine protease such as trypsin or chymotrypsin.</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191125172415681.png" alt="image-20191125172415681" style="zoom:50%;" /></p>
+
     </div>
 
     
@@ -589,7 +572,7 @@ $$</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">一、Michaelis-Menten kinetics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-relationship-of-k%E2%80%99s"><span class="nav-number">1.1.</span> <span class="nav-text">The relationship of k’s</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Steady-State"><span class="nav-number">1.2.</span> <span class="nav-text">Steady State</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Michaelis%E2%80%93Menten-equation"><span class="nav-number">1.3.</span> <span class="nav-text">Michaelis–Menten equation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Velocity"><span class="nav-number">1.4.</span> <span class="nav-text">Velocity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Significance-of-K-M-k-cat-V-max"><span class="nav-number">1.5.</span> <span class="nav-text">Significance of $K_{M}$, $k_{cat}$, $V_{max}$</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">二、Analysis of Kinetic Data: Testing the Michaelis–Menten Equation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Analysis-of-initial-rates"><span class="nav-number">2.1.</span> <span class="nav-text">Analysis of initial rates</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lineweaver%E2%80%93Burk-plot-%E8%8E%B1%E6%81%A9%E5%A8%81%E5%BC%97-%E4%BC%AF%E5%85%8B%E4%BD%9C%E5%9B%BE"><span class="nav-number">2.2.</span> <span class="nav-text">Lineweaver–Burk plot 莱恩威弗-伯克作图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Eadie%E2%80%93Hofstee-plot"><span class="nav-number">2.3.</span> <span class="nav-text">Eadie–Hofstee plot</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">三、Multisubstrate Reactions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Random-Substrate-Binding"><span class="nav-number">3.1.</span> <span class="nav-text">Random Substrate Binding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ordered-Substrate-Binding"><span class="nav-number">3.2.</span> <span class="nav-text">Ordered Substrate Binding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Ping-Pong-Mechanism"><span class="nav-number">3.3.</span> <span class="nav-text">The Ping-Pong Mechanism</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80michaelis-menten-kinetics"><span class="nav-number">1.</span> <span class="nav-text">一、Michaelis-Menten kinetics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#the-relationship-of-ks"><span class="nav-number">1.1.</span> <span class="nav-text">The relationship of k’s</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#steady-state"><span class="nav-number">1.2.</span> <span class="nav-text">Steady State</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#michaelismenten-equation"><span class="nav-number">1.3.</span> <span class="nav-text">Michaelis–Menten equation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#velocity"><span class="nav-number">1.4.</span> <span class="nav-text">Velocity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#significance-of-k_m-k_cat-v_max"><span class="nav-number">1.5.</span> <span class="nav-text">Significance of \(K_{M}\), \(k_{cat}\), \(V_{max}\)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Canalysis-of-kinetic-data-testing-the-michaelismenten-equation"><span class="nav-number">2.</span> <span class="nav-text">二、Analysis of Kinetic Data: Testing the Michaelis–Menten Equation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#analysis-of-initial-rates"><span class="nav-number">2.1.</span> <span class="nav-text">Analysis of initial rates</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lineweaverburk-plot-%E8%8E%B1%E6%81%A9%E5%A8%81%E5%BC%97-%E4%BC%AF%E5%85%8B%E4%BD%9C%E5%9B%BE"><span class="nav-number">2.2.</span> <span class="nav-text">Lineweaver–Burk plot 莱恩威弗-伯克作图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eadiehofstee-plot"><span class="nav-number">2.3.</span> <span class="nav-text">Eadie–Hofstee plot</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89multisubstrate-reactions"><span class="nav-number">3.</span> <span class="nav-text">三、Multisubstrate Reactions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#random-substrate-binding"><span class="nav-number">3.1.</span> <span class="nav-text">Random Substrate Binding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ordered-substrate-binding"><span class="nav-number">3.2.</span> <span class="nav-text">Ordered Substrate Binding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-ping-pong-mechanism"><span class="nav-number">3.3.</span> <span class="nav-text">The Ping-Pong Mechanism</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -654,12 +637,12 @@ $$</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">2m</span>
+    <span title="站点总字数">2.1m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">30:34</span>
+    <span title="站点阅读时长">31:04</span>
 </div><br /> <!-- 换行 -->
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>

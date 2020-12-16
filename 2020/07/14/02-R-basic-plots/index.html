@@ -281,23 +281,23 @@
 
       
         <p>这篇文章摘录了绘制一些基本图表的方法</p>
-<h1>一、条形图 (Bar Chart)</h1>
+<h1 id="一条形图-bar-chart">一、条形图 (Bar Chart)</h1>
 <p>在条形图的例子当中使用了随<code>vcd</code>包分发的<code>Arthritis</code>数据框：<code>library(vcd)</code>，可以通过<code>vcd</code>来创建棘状图（spinogram）。</p>
 <h2 id="基本条形图">基本条形图</h2>
 <p>使用函数<code>barplot()</code>来创建基本条形图，大多数主要参数与其它图像是通用的，其中需要注意的主要参数有：</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>height</td>
 <td>height是一个向量或一个矩阵，它是绘图过程中每个bar的值（高度）</td>
 </tr>
-<tr>
+<tr class="even">
 <td>horiz</td>
 <td>默认为FALSE，若<code>horiz=TRUE</code>则会生成水平条形图</td>
 </tr>
@@ -308,38 +308,46 @@
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#构建数据</span></span><br><span class="line">&gt; counts &lt;- table(Arthritis$Improved)</span><br><span class="line">&gt; counts</span><br><span class="line"></span><br><span class="line">  None   Some Marked </span><br><span class="line">    <span class="number">42</span>     <span class="number">14</span>     <span class="number">28</span></span><br></pre></td></tr></table></figure>
 <p>绘图代码：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#构建数据</span></span><br><span class="line">counts &lt;- table(Arthritis$Improved)</span><br><span class="line"><span class="comment">#为了方便展示，将两幅图放在同一个绘图区域</span></span><br><span class="line">opar &lt;- par()</span><br><span class="line">par(mfrow=<span class="built_in">c</span>(<span class="number">1</span>,<span class="number">2</span>))</span><br><span class="line"><span class="comment">#绘图</span></span><br><span class="line"><span class="comment">##生成垂直条形图</span></span><br><span class="line">barplot(counts, </span><br><span class="line">        main=<span class="string">&quot;Simple Bar Plot&quot;</span>, </span><br><span class="line">        xlab=<span class="string">&quot;Improvement&quot;</span>, </span><br><span class="line">        ylab=<span class="string">&quot;Frequency&quot;</span>)</span><br><span class="line"><span class="comment">##生成水平条形图</span></span><br><span class="line">barplot(counts, </span><br><span class="line">        main=<span class="string">&quot;Horizontal Bar Plot&quot;</span>, </span><br><span class="line">        xlab=<span class="string">&quot;Frequency&quot;</span>, </span><br><span class="line">        ylab=<span class="string">&quot;Improvement&quot;</span>,</span><br><span class="line">        horiz=<span class="literal">TRUE</span>) </span><br><span class="line"><span class="comment">#恢复全局设置</span></span><br><span class="line">par(opar)</span><br></pre></td></tr></table></figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200714203508524.png" alt="image-20200714203508524" style="zoom:67%;" />
-<h3 id="1-条形图的微调">1. 条形图的微调</h3>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200714203508524.png" alt="image-20200714203508524" style="zoom:67%;" /></p>
+<h3 id="条形图的微调">1. 条形图的微调</h3>
 <p>可以使用参数<code>cex.names</code>来减小字号。将其指定为小于1的值可以缩小标签的大小。可选的参数<code>names.arg</code>允许你指定一个字符向量作为条形的标签名。你同样可以使用图形参数辅助调整文本间隔。</p>
 <table>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 93%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:center">参数</th>
-<th style="text-align:left">描述</th>
+<tr class="header">
+<th style="text-align: center;">参数</th>
+<th style="text-align: left;">描述</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center">las</td>
-<td style="text-align:left">numeric in {0,1,2,3}; the style of axis labels.<br/>0:<br/>always parallel to the axis [default],<br/>1:<br/>always horizontal,<br/>2:<br/>always perpendicular to the axis,<br/>3:<br/>always vertical.<br/>Also supported by mtext. Note that string/character rotation via argument srt to par does not affect the axis labels.</td>
+<tr class="odd">
+<td style="text-align: center;">las</td>
+<td style="text-align: left;">numeric in {0,1,2,3}; the style of axis labels.<br/>0:<br/>always parallel to the axis [default],<br/>1:<br/>always horizontal,<br/>2:<br/>always perpendicular to the axis,<br/>3:<br/>always vertical.<br/>Also supported by mtext. Note that string/character rotation via argument srt to par does not affect the axis labels.</td>
 </tr>
 </tbody>
 </table>
 <p>例：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 调整参数</span></span><br><span class="line">opar &lt;- par()</span><br><span class="line">par(mar=<span class="built_in">c</span>(<span class="number">5</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">2</span>)) <span class="comment"># 增加y边界的大小</span></span><br><span class="line">par(las=<span class="number">2</span>) <span class="comment"># 旋转条形的标签</span></span><br><span class="line">counts &lt;- table(Arthritis$Improved) </span><br><span class="line">barplot(counts, </span><br><span class="line">        main=<span class="string">&quot;Treatment Outcome&quot;</span>, </span><br><span class="line">        horiz=<span class="literal">TRUE</span>, </span><br><span class="line">        cex.names=<span class="number">0.8</span>, <span class="comment"># 缩小字体大小，让标签更合适</span></span><br><span class="line">        names.arg=<span class="built_in">c</span>(<span class="string">&quot;No Improvement&quot;</span>, </span><br><span class="line">                    <span class="string">&quot;Some Improvement&quot;</span>, <span class="string">&quot;Marked Improvement&quot;</span>)) <span class="comment"># 修改标签文本</span></span><br><span class="line"><span class="comment">#恢复全局设置</span></span><br><span class="line">par(opar)</span><br></pre></td></tr></table></figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720153243518.png" alt="image-20200720153243518" style="zoom:67%;" />
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720153243518.png" alt="image-20200720153243518" style="zoom:67%;" /></p>
 <h2 id="堆砌条形图与分组条形图">堆砌条形图与分组条形图</h2>
 <p>如果<code>height</code>是一个矩阵而不是一个向量，则绘图结果将是一幅堆砌条形图或分组条形图。</p>
 <p>堆砌条形图与分组条形图中的重要参数为：</p>
 <table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 90%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>beside</td>
 <td>若beside=FALSE（默认值），则矩阵中的每一列都将生成图中的一个条形，各列中的值将给出 堆砌的“子条”的高度。<br />若beside=TRUE，则矩阵中的每一列都表示一个分组，各列中的值将并列而不是堆砌。</td>
 </tr>
@@ -350,14 +358,14 @@
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; counts &lt;- table(Arthritis$Improved, Arthritis$Treatment)</span><br><span class="line">&gt; counts</span><br><span class="line">        </span><br><span class="line">         Placebo Treated</span><br><span class="line">  None        <span class="number">29</span>      <span class="number">13</span></span><br><span class="line">  Some         <span class="number">7</span>       <span class="number">7</span></span><br><span class="line">  Marked       <span class="number">7</span>      <span class="number">21</span></span><br></pre></td></tr></table></figure>
 <p>绘图代码：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#构建数据</span></span><br><span class="line">counts &lt;- table(Arthritis$Improved, Arthritis$Treatment)</span><br><span class="line"><span class="comment">#为了方便展示，将两幅图放在同一个绘图区域</span></span><br><span class="line">opar &lt;- par()</span><br><span class="line">par(mfrow=<span class="built_in">c</span>(<span class="number">1</span>,<span class="number">2</span>))</span><br><span class="line"><span class="comment">#绘图</span></span><br><span class="line"><span class="comment">##堆砌条形图</span></span><br><span class="line">barplot(counts, </span><br><span class="line">        main=<span class="string">&quot;Stacked Bar Plot&quot;</span>, </span><br><span class="line">        xlab=<span class="string">&quot;Treatment&quot;</span>, </span><br><span class="line">        ylab=<span class="string">&quot;Frequency&quot;</span>, </span><br><span class="line">        col=<span class="built_in">c</span>(<span class="string">&quot;red&quot;</span>, <span class="string">&quot;yellow&quot;</span>,<span class="string">&quot;green&quot;</span>), </span><br><span class="line">        legend=rownames(counts)) </span><br><span class="line"><span class="comment">##组合条形图</span></span><br><span class="line">barplot(counts, </span><br><span class="line">        main=<span class="string">&quot;Grouped Bar Plot&quot;</span>, </span><br><span class="line">        xlab=<span class="string">&quot;Treatment&quot;</span>, </span><br><span class="line">        ylab=<span class="string">&quot;Frequency&quot;</span>, </span><br><span class="line">        col=<span class="built_in">c</span>(<span class="string">&quot;red&quot;</span>, <span class="string">&quot;yellow&quot;</span>, <span class="string">&quot;green&quot;</span>), </span><br><span class="line">        legend=rownames(counts), </span><br><span class="line">        beside=<span class="literal">TRUE</span>)</span><br><span class="line"><span class="comment">#恢复全局设置</span></span><br><span class="line">par(opar)</span><br></pre></td></tr></table></figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200714204252633.png" alt="image-20200714204252633" style="zoom: 67%;" />
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200714204252633.png" alt="image-20200714204252633" style="zoom: 67%;" /></p>
 <h2 id="均值条形图">均值条形图</h2>
 <p>条形图并不一定要基于计数数据或频率数据。可以使用数据整合函数并将结果传递给<code>barplot()</code>函数，来创建表示均值、中位数、标准差等的条形图。</p>
 <p>本例中使用的数据：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt; frame &lt;- data.frame(Arthritis$Treatment,Arthritis$Age)</span><br><span class="line">&gt; means &lt;- aggregate(frame$Arthritis.Age, </span><br><span class="line">                     by = <span class="built_in">list</span>(frame$Arthritis.Treatment),</span><br><span class="line">                     FUN = mean)</span><br><span class="line">&gt; means</span><br><span class="line">  Group.1        x</span><br><span class="line">1 Placebo <span class="number">52.18605</span></span><br><span class="line">2 Treated <span class="number">54.58537</span></span><br><span class="line">&gt; means &lt;- means[order(means$x),] <span class="comment"># 将均值从小到大排序</span></span><br><span class="line">&gt; means</span><br><span class="line">  Group.1        x</span><br><span class="line">1 Placebo <span class="number">52.18605</span></span><br><span class="line">2 Treated <span class="number">54.58537</span></span><br></pre></td></tr></table></figure>
 <p>绘图代码：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建数据</span></span><br><span class="line">frame &lt;- data.frame(Arthritis$Treatment,Arthritis$Age)</span><br><span class="line">means &lt;- aggregate(frame$Arthritis.Age, </span><br><span class="line">                     by = <span class="built_in">list</span>(frame$Arthritis.Treatment),</span><br><span class="line">                     FUN = mean)</span><br><span class="line">means &lt;- means[order(means$x),] <span class="comment"># 将均值从小到大排序</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line">barplot(means$x, names.arg=means$Group.1)</span><br></pre></td></tr></table></figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720152848007.png" alt="image-20200720152848007" style="zoom:50%;" />
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720152848007.png" alt="image-20200720152848007" style="zoom:50%;" /></p>
 <h2 id="棘状图">棘状图</h2>
 <p>棘状图对堆砌条形图进行了重缩放，这样每个条形的高度均为1，每一段的高度即表示比例。棘状图可由vcd包中的函数<code>spine()</code>绘制。</p>
 <p>例：</p>
@@ -365,23 +373,23 @@
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(vcd)</span><br><span class="line">&gt; attach(Arthritis)</span><br><span class="line">&gt; counts &lt;- table(Treatment, Improved)</span><br><span class="line">         Improved</span><br><span class="line">Treatment None Some Marked</span><br><span class="line">  Placebo   <span class="number">29</span>    <span class="number">7</span>      <span class="number">7</span></span><br><span class="line">  Treated   <span class="number">13</span>    <span class="number">7</span>     <span class="number">21</span></span><br><span class="line">&gt; detach(Arthritis)</span><br></pre></td></tr></table></figure>
 <p>绘图代码：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">library(vcd) </span><br><span class="line">attach(Arthritis) </span><br><span class="line">counts &lt;- table(Treatment, Improved) </span><br><span class="line">spine(counts, main=<span class="string">&quot;Spinogram Example&quot;</span>) </span><br><span class="line">detach(Arthritis)</span><br></pre></td></tr></table></figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720153857731.png" alt="image-20200720153857731" style="zoom:67%;" />
-<h1>二、饼图 （Pie Chart）</h1>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720153857731.png" alt="image-20200720153857731" style="zoom:67%;" /></p>
+<h1 id="二饼图-pie-chart">二、饼图 （Pie Chart）</h1>
 <h2 id="经典饼图">经典饼图</h2>
 <p>饼图的绘图函数是 <code>pie(x, labels)</code>，当绘制3D饼图的时候，需要使用 <code>plotrix</code> 包中的 <code>pie3D()</code> 函数</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td><em>x</em></td>
 <td>一个非负数值向量，表示每个扇形的面积</td>
 </tr>
-<tr>
+<tr class="even">
 <td><em>labels</em></td>
 <td>表示各扇形标签的字符型向量。</td>
 </tr>
@@ -392,60 +400,64 @@
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; slices &lt;- <span class="built_in">c</span>(<span class="number">10</span>, <span class="number">12</span>,<span class="number">4</span>, <span class="number">16</span>, <span class="number">8</span>) </span><br><span class="line">&gt; lbls &lt;- <span class="built_in">c</span>(<span class="string">&quot;US&quot;</span>, <span class="string">&quot;UK&quot;</span>, <span class="string">&quot;Australia&quot;</span>, <span class="string">&quot;Germany&quot;</span>, <span class="string">&quot;France&quot;</span>)</span><br><span class="line"></span><br><span class="line">&gt; mytable &lt;- table(Arthritis$Treatment)</span><br><span class="line">&gt; mytable</span><br><span class="line">Placebo Treated </span><br><span class="line">     <span class="number">43</span>      <span class="number">41</span> </span><br></pre></td></tr></table></figure>
 <p>绘图参数：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">opar &lt;- par()</span><br><span class="line">par(mfrow=<span class="built_in">c</span>(<span class="number">2</span>, <span class="number">2</span>)) <span class="comment"># 绘制2X2图像，方便展示</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建数据</span></span><br><span class="line">slices &lt;- <span class="built_in">c</span>(<span class="number">10</span>, <span class="number">12</span>,<span class="number">4</span>, <span class="number">16</span>, <span class="number">8</span>) </span><br><span class="line">lbls &lt;- <span class="built_in">c</span>(<span class="string">&quot;US&quot;</span>, <span class="string">&quot;UK&quot;</span>, <span class="string">&quot;Australia&quot;</span>, <span class="string">&quot;Germany&quot;</span>, <span class="string">&quot;France&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line"><span class="comment">## 简单条形图</span></span><br><span class="line">pie(slices, </span><br><span class="line">    labels = lbls, </span><br><span class="line">    main=<span class="string">&quot;Simple Pie Chart&quot;</span>)</span><br><span class="line"><span class="comment">## 添加比例数值，通过修改label参数完成</span></span><br><span class="line">pct &lt;- round(slices/<span class="built_in">sum</span>(slices)*<span class="number">100</span>) </span><br><span class="line">lbls2 &lt;- paste(lbls, <span class="string">&quot; &quot;</span>, pct, <span class="string">&quot;%&quot;</span>, sep=<span class="string">&quot;&quot;</span>) </span><br><span class="line">pie(slices, labels=lbls2, col=rainbow(<span class="built_in">length</span>(lbls2)),</span><br><span class="line">    main=<span class="string">&quot;Pie Chart with Percentages&quot;</span>)</span><br><span class="line"><span class="comment">## 3D饼图</span></span><br><span class="line">library(plotrix)</span><br><span class="line">pie3D(slices, labels=lbls,explode=<span class="number">0.1</span>, </span><br><span class="line">      main=<span class="string">&quot;3D Pie Chart &quot;</span>)</span><br><span class="line"><span class="comment">## 从表格创建饼图</span></span><br><span class="line">mytable &lt;- table(Arthritis$Treatment)</span><br><span class="line">lbls3 &lt;- paste(<span class="built_in">names</span>(mytable), <span class="string">&quot;\n&quot;</span>, mytable, sep=<span class="string">&quot;&quot;</span>) </span><br><span class="line">pie(mytable, labels = lbls3, </span><br><span class="line">    main=<span class="string">&quot;Pie Chart from a Table\n (with sample sizes)&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 恢复全局参数</span></span><br><span class="line">par(opar)</span><br></pre></td></tr></table></figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720155126672.png" alt="image-20200720155126672" style="zoom: 67%;" />
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720155126672.png" alt="image-20200720155126672" style="zoom: 67%;" /></p>
 <h2 id="扇形图">扇形图</h2>
 <p>扇形图（fan plot）是饼图的变种。扇形图提供了一种同时展示相对数量和相互差异的方法。在R中，扇形图是通过<code>plotrix</code>包中的<code>fan.plot()</code>函数实现的。</p>
 <p>例：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">library(plotrix) </span><br><span class="line">slices &lt;- <span class="built_in">c</span>(<span class="number">10</span>, <span class="number">12</span>,<span class="number">4</span>, <span class="number">16</span>, <span class="number">8</span>) </span><br><span class="line">lbls &lt;- <span class="built_in">c</span>(<span class="string">&quot;US&quot;</span>, <span class="string">&quot;UK&quot;</span>, <span class="string">&quot;Australia&quot;</span>, <span class="string">&quot;Germany&quot;</span>, <span class="string">&quot;France&quot;</span>) </span><br><span class="line">fan.plot(slices, labels = lbls, main=<span class="string">&quot;Fan Plot&quot;</span>)</span><br></pre></td></tr></table></figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720155316328.png" alt="image-20200720155316328" style="zoom:67%;" />
-<h1>三、直方图 (Histogram)</h1>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720155316328.png" alt="image-20200720155316328" style="zoom:67%;" /></p>
+<h1 id="三直方图-histogram">三、直方图 (Histogram)</h1>
 <p>直方图通过在<em>x</em>轴上将值域分割为一定数量的组，在<em>y</em>轴上显示相应值的频数，展示了连续型变量的分布。可以使用如下函数创建直方图：<code>hist(x)</code></p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>x</td>
 <td>一个由数据值组成的数值向量</td>
 </tr>
-<tr>
+<tr class="even">
 <td>freq</td>
 <td>freq=FALSE表示根据概率密度而不是频数绘制图形</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>breaks</td>
 <td>控制组的数量。在定义直方图中的单元时，默认将生成等距切分。</td>
 </tr>
 </tbody>
 </table>
 <h2 id="部分常用函数解释">部分常用函数解释</h2>
-<h3 id="1-轴须图相关">1. 轴须图相关</h3>
+<h3 id="轴须图相关">1. 轴须图相关</h3>
 <p>函数 <code>jitter</code>: ‘Jitter’ (Add Noise) to Numbers</p>
 <ul>
 <li>Add a small amount of noise to a numeric vector.</li>
 <li>Usage: <code>jitter(x, factor = 1, amount = NULL)</code></li>
 </ul>
 <table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 90%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>x</td>
 <td>numeric vector to which jitter should be added.</td>
 </tr>
-<tr>
+<tr class="even">
 <td>factor</td>
 <td>numeric value.</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>amount</td>
 <td>numeric; if positive, used as amount (see below), otherwise, if = 0 the default is factor * z/50. <br />Default (NULL): factor * d/5 where d is about the smallest difference between x values.</td>
 </tr>
@@ -454,42 +466,46 @@
 <p>函数 <code>rug</code>: Add a Rug to a Plot</p>
 <ul>
 <li>Adds a rug representation (1-d plot) of the data to the plot.</li>
-<li>Usage: <code>rug(x, ticksize = 0.03, side = 1, lwd = 0.5, col = par(&quot;fg&quot;), quiet = getOption(&quot;warn&quot;) &lt; 0, ...)</code></li>
+<li>Usage: <code>rug(x, ticksize = 0.03, side = 1, lwd = 0.5, col = par("fg"), quiet = getOption("warn") &lt; 0, ...)</code></li>
 </ul>
 <table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 88%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>x</td>
 <td>A numeric vector</td>
 </tr>
-<tr>
+<tr class="even">
 <td>ticksize</td>
 <td>The length of the ticks making up the ‘rug’. Positive lengths give inwards ticks.</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>side</td>
 <td>On which side of the plot box the rug will be plotted. Normally 1 (bottom) or 3 (top).</td>
 </tr>
-<tr>
+<tr class="even">
 <td>lwd</td>
 <td>The line width of the ticks. Some devices will round the default width up to 1.</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>col</td>
 <td>The colour the ticks are plotted in.</td>
 </tr>
-<tr>
+<tr class="even">
 <td>quiet</td>
 <td>logical indicating if there should be a warning about clipped values.</td>
 </tr>
-<tr>
-<td>…</td>
+<tr class="odd">
+<td>...</td>
 <td>further arguments, passed to axis, such as line or pos for specifying the location of the rug.</td>
 </tr>
 </tbody>
@@ -499,30 +515,29 @@
 <li>A generic function taking coordinates given in various ways and joining the corresponding points with line segments.
 <ul>
 <li><code>lines(x,y)</code>是在给定<code>x, y</code>两个向量之后，将<code>x,y</code>中的每一个元素对应为一些点，然后把这些点用平滑的曲线连接。</li>
-</ul>
-</li>
+</ul></li>
 <li>Usage: <code>lines(x, ...)</code></li>
 </ul>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>x, y</td>
 <td>coordinate vectors of points to join.</td>
 </tr>
-<tr>
-<td>…</td>
+<tr class="even">
+<td>...</td>
 <td>Arguments the same as <code>par</code></td>
 </tr>
 </tbody>
 </table>
-<h3 id="2-正态曲线相关">2. 正态曲线相关</h3>
-<p>函数 <code>dnorm, pnorm, qnorm, rnorm</code>:  The Normal Distribution</p>
+<h3 id="正态曲线相关">2. 正态曲线相关</h3>
+<p>函数 <code>dnorm, pnorm, qnorm, rnorm</code>: The Normal Distribution</p>
 <ul>
 <li><strong>D</strong>ensity, <strong>d</strong>istribution function, <strong>q</strong>uantile function and <strong>r</strong>andom generation for the normal distribution with mean equal to mean and standard deviation equal to sd.</li>
 <li>Usage：
@@ -531,52 +546,55 @@
 <li><code>pnorm(q, mean = 0, sd = 1, lower.tail = TRUE, log.p = FALSE)</code></li>
 <li><code>qnorm(p, mean = 0, sd = 1, lower.tail = TRUE, log.p = FALSE)</code></li>
 <li><code>rnorm(n, mean = 0, sd = 1)</code></li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 85%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>x, q</td>
 <td>vector of quantiles.</td>
 </tr>
-<tr>
+<tr class="even">
 <td>p</td>
 <td>vector of probabilities.</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>n</td>
 <td>number of observations. If length(n) &gt; 1, the length is taken to be the number required.</td>
 </tr>
-<tr>
+<tr class="even">
 <td>mean</td>
 <td>vector of means.</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>sd</td>
 <td>vector of standard deviations.</td>
 </tr>
-<tr>
+<tr class="even">
 <td>log, log.p</td>
-<td>logical; if TRUE, probabilities p are given as log§.</td>
+<td>logical; if TRUE, probabilities p are given as log(p).</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>lower.tail</td>
 <td>logical; if TRUE (default), probabilities are P[X ≤ x] otherwise, P[X &gt; x].</td>
 </tr>
 </tbody>
 </table>
-<h3 id="3-直方图-（轴须图，正态密度曲线）">3. 直方图 + （轴须图，正态密度曲线）</h3>
+<h3 id="直方图-轴须图正态密度曲线">3. 直方图 + （轴须图，正态密度曲线）</h3>
 <p>例:</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">opar &lt;- par()</span><br><span class="line"></span><br><span class="line">par(mfrow=<span class="built_in">c</span>(<span class="number">2</span>,<span class="number">2</span>)) <span class="comment"># 绘制2X2的图像，方便展示</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line"><span class="comment">## 简单直方图</span></span><br><span class="line">hist(mtcars$mpg)</span><br><span class="line"><span class="comment">## 指定组数和颜色</span></span><br><span class="line">hist(mtcars$mpg, </span><br><span class="line">     breaks=<span class="number">12</span>, </span><br><span class="line">     col=<span class="string">&quot;red&quot;</span>, </span><br><span class="line">     xlab=<span class="string">&quot;Miles Per Gallon&quot;</span>, </span><br><span class="line">     main=<span class="string">&quot;Colored histogram with 12 bins&quot;</span>)</span><br><span class="line"><span class="comment">## 添加轴须图</span></span><br><span class="line">hist(mtcars$mpg, </span><br><span class="line">     freq=<span class="literal">FALSE</span>, </span><br><span class="line">     breaks=<span class="number">12</span>, </span><br><span class="line">     col=<span class="string">&quot;red&quot;</span>, </span><br><span class="line">     xlab=<span class="string">&quot;Miles Per Gallon&quot;</span>, </span><br><span class="line">     main=<span class="string">&quot;Histogram, rug plot, density curve&quot;</span>)</span><br><span class="line">rug(jitter(mtcars$mpg)) </span><br><span class="line">lines(density(mtcars$mpg), col=<span class="string">&quot;blue&quot;</span>, lwd=<span class="number">2</span>)</span><br><span class="line"><span class="comment">## 添加正态密度曲线和外框</span></span><br><span class="line">x &lt;- mtcars$mpg </span><br><span class="line">h &lt;- hist(x, </span><br><span class="line">        breaks=<span class="number">12</span>, </span><br><span class="line">        col=<span class="string">&quot;red&quot;</span>, </span><br><span class="line">        xlab=<span class="string">&quot;Miles Per Gallon&quot;</span>, </span><br><span class="line">        main=<span class="string">&quot;Histogram with normal curve and box&quot;</span>) </span><br><span class="line">xfit&lt;-seq(min(x), <span class="built_in">max</span>(x), <span class="built_in">length</span>=<span class="number">40</span>) <span class="comment"># 构建正态曲线的x坐标</span></span><br><span class="line">yfit&lt;-dnorm(xfit, mean=mean(x), sd=sd(x)) <span class="comment"># 构建正态曲线的y坐标</span></span><br><span class="line">yfit &lt;- yfit*diff(h$mids[<span class="number">1</span>:<span class="number">2</span>])*<span class="built_in">length</span>(x) <span class="comment"># 对每一个点乘频数和原来直方图中的间距，以得到好的拟合的效果。</span></span><br><span class="line">lines(xfit, yfit, col=<span class="string">&quot;blue&quot;</span>, lwd=<span class="number">2</span>) </span><br><span class="line">box()</span><br><span class="line"></span><br><span class="line">par(opar)</span><br></pre></td></tr></table></figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720161143177.png" alt="image-20200720161143177" style="zoom:80%;" />
-<h1>四、核密度图</h1>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720161143177.png" alt="image-20200720161143177" style="zoom:80%;" /></p>
+<h1 id="四核密度图">四、核密度图</h1>
 <p>这部分不涉及使用 <code>ggplot2</code> 的情况</p>
 <h2 id="绘制核密度图">绘制核密度图</h2>
 <p>核密度曲线类似于概率密度曲线，其曲线下的面积是1，因此其y轴上的单位通常是小于1的核密度分布值。对这个核密度曲线求积分的结果为1，也就是其曲线下的面积为1。</p>
@@ -586,7 +604,7 @@
 </ul>
 <p>例：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">opar &lt;- par()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建数据与参数调整</span></span><br><span class="line">par(mfrow=<span class="built_in">c</span>(<span class="number">2</span>,<span class="number">1</span>)) </span><br><span class="line">d &lt;- density(mtcars$mpg)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line"><span class="comment">## 默认配置绘制</span></span><br><span class="line">plot(d)</span><br><span class="line"><span class="comment">## 修改其它参数后绘制</span></span><br><span class="line">d &lt;- density(mtcars$mpg)</span><br><span class="line">plot(d, main=<span class="string">&quot;Kernel Density of Miles Per Gallon&quot;</span>)</span><br><span class="line">polygon(d, col=<span class="string">&quot;red&quot;</span>, border=<span class="string">&quot;blue&quot;</span>) <span class="comment"># 曲线修改为蓝色，使用实心的红色填充曲线下方区域</span></span><br><span class="line">rug(mtcars$mpg, col=<span class="string">&quot;brown&quot;</span>)<span class="comment"># 添加棕色的轴须图</span></span><br><span class="line"></span><br><span class="line">par(opar)</span><br></pre></td></tr></table></figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720164323785.png" alt="image-20200720164323785" style="zoom:67%;" />
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720164323785.png" alt="image-20200720164323785" style="zoom:67%;" /></p>
 <ul>
 <li><code>polygon()</code>函数根据顶点的<em>x</em>和<em>y</em>坐标（本例中由<code>density()</code>函数提供）绘制了多边形。</li>
 </ul>
@@ -595,25 +613,25 @@
 <p>核密度图可用于比较组间差异。可能是由于普遍缺乏方便好用的软件，这种方法其实完全没有被充分利用。幸运的是，<code>sm</code>包漂亮地填补了这一缺口。</p>
 <p>使用<code>sm</code>包中的<code>sm.density.compare()</code>函数可向图形叠加两组或更多的核密度图。使用格式为：</p>
 <ul>
-<li><code>sm.density.compare(x, factor) </code></li>
+<li><code>sm.density.compare(x, factor)</code></li>
 </ul>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>x</td>
 <td>一个数值型向量</td>
 </tr>
-<tr>
+<tr class="even">
 <td>factor</td>
 <td>是一个分组变量</td>
 </tr>
-<tr>
+<tr class="odd">
 <td></td>
 <td></td>
 </tr>
@@ -624,11 +642,13 @@
 <ul>
 <li>对图例部分的说明：首先创建的是一个颜色向量，这里的<code>colfill</code>值为c(2, 3, 4)。然后通过<code>legend()</code>函数向图形上添加一个图例。第一个参数值<code>locator(1)</code>表示用鼠标点击想让图例出现的位置来交互式地放置这个图例。第二个参数值则是由标签组成的字符向量。第三个参数值使用向量<code>colfill</code>为<code>cyl.f</code>的每一个水平指定了一种颜色。</li>
 </ul>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720172619012.png" alt="image-20200720172619012" style="zoom: 67%;" />
-<h1>五、箱线图 (Box Plot)</h1>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720172619012.png" alt="image-20200720172619012" style="zoom: 67%;" /></p>
+<h1 id="五箱线图-box-plot">五、箱线图 (Box Plot)</h1>
 <h2 id="箱线图的标注">箱线图的标注</h2>
-<p>箱线图（又称盒须图）通过绘制连续型变量的五数总括，即最小值、下四分位数（第25百分位数）、中位数（第50百分位数）、上四分位数（第75百分位数）以及最大值，描述了连续型变量的分布。箱线图能够显示出可能为离群点（范围 ±1.5*IQR 以外的值，IQR表示四分位距，即上四分位数与下四分位数的差值）的观测。例如：<code>boxplot(mtcars$mpg, main=&quot;Box plot&quot;, ylab=&quot;Miles per Gallon&quot;) </code></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720165954929.png" alt="image-20200720165954929"></p>
+<p>箱线图（又称盒须图）通过绘制连续型变量的五数总括，即最小值、下四分位数（第25百分位数）、中位数（第50百分位数）、上四分位数（第75百分位数）以及最大值，描述了连续型变量的分布。箱线图能够显示出可能为离群点（范围 ±1.5*IQR 以外的值，IQR表示四分位距，即上四分位数与下四分位数的差值）的观测。例如：<code>boxplot(mtcars$mpg, main="Box plot", ylab="Miles per Gallon")</code></p>
+<figure>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720165954929.png" alt="image-20200720165954929" /><figcaption aria-hidden="true">image-20200720165954929</figcaption>
+</figure>
 <ul>
 <li>默认情况下，两条须的延伸极限不会超过盒型各端加1.5倍四分位距的范围。此范围以外的值将以点 (outlier) 来表示</li>
 </ul>
@@ -638,62 +658,66 @@
 <li><code>boxplot(formula, data=dataframe)</code></li>
 </ul>
 <table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 85%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>x</td>
 <td>向量，列表或数据框。</td>
 </tr>
-<tr>
+<tr class="even">
 <td>formula</td>
 <td>公式，形如y~grp,其中y为向量，grp是数据的分组，通常为因子。<br />具体的介绍看此表之后</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>range</td>
 <td>数值，默认为1.5，表示触须的范围，即range × (Q3 - Q1)</td>
 </tr>
-<tr>
+<tr class="even">
 <td>width</td>
 <td>箱体的相对宽度，当有多个箱体时，有效。</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>data</td>
 <td>提供数据的数据框（或列表）, 用于提供公式中的数据。</td>
 </tr>
-<tr>
+<tr class="even">
 <td>varwidth</td>
 <td>逻辑值，控制箱体的宽度， 只有图中有多个箱体时才发挥作用，默认为FALSE， 所有箱体的宽度相同，当其值为TRUE时，代表每个箱体的样本量作为其相对宽度<br />varwidth=TRUE将使箱线图的宽度与其样本大小的平方根成正比</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>notch</td>
 <td>逻辑值，如果该参数设置为TRUE，则在箱体两侧会出现凹口。默认为FALSE。</td>
 </tr>
-<tr>
+<tr class="even">
 <td>outline</td>
 <td>逻辑值，如果该参数设置为FALSE，则箱线图中不会绘制离群值。默认为TRUE</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>names</td>
 <td>绘制在每个箱线图下方的分组标签</td>
 </tr>
-<tr>
+<tr class="even">
 <td>plot</td>
 <td>逻辑值，是否绘制箱线图，如设置为FALSE，则不绘制箱线图，而给出绘制箱线图的相关信息，如5个点的信息等。</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>border</td>
 <td>箱线图的边框颜色</td>
 </tr>
-<tr>
+<tr class="even">
 <td>col</td>
 <td>箱线图的填充色。</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>horizontal</td>
 <td>逻辑值，指定箱线图是否水平绘制，默认为FALSE。<br />horizontal=TRUE可以反转坐标轴的方向</td>
 </tr>
@@ -706,41 +730,47 @@
 </ul>
 <p>例：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x &lt;- Arthritis$Sex</span><br><span class="line">x &lt;- factor(x)</span><br><span class="line">f &lt;- Arthritis$Age</span><br><span class="line">boxplot(f~x)</span><br></pre></td></tr></table></figure>
-<h3 id="1-单组箱线图">1. 单组箱线图</h3>
+<h3 id="单组箱线图">1. 单组箱线图</h3>
 <p>直接使用 <code>boxplot(x)</code> 实现：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x &lt;- <span class="built_in">c</span>(<span class="number">144</span>,<span class="number">166</span>,<span class="number">163</span>,<span class="number">143</span>,<span class="number">152</span>,<span class="number">169</span>,<span class="number">130</span>,<span class="number">159</span>,<span class="number">160</span>,<span class="number">175</span>,<span class="number">161</span>,<span class="number">170</span>, <span class="number">146</span>,<span class="number">159</span>,<span class="number">150</span>,<span class="number">183</span>,<span class="number">165</span>,<span class="number">146</span>,<span class="number">169</span>)</span><br><span class="line">boxplot(x)</span><br></pre></td></tr></table></figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720171215247.png" alt="image-20200720171215247" style="zoom:50%;" />
-<h3 id="2-多组箱线图">2. 多组箱线图</h3>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720171215247.png" alt="image-20200720171215247" style="zoom:50%;" /></p>
+<h3 id="多组箱线图">2. 多组箱线图</h3>
 <h4 id="单交叉因子和凹槽">单交叉因子和凹槽</h4>
 <p>需要设置 <code>boxplot</code> 中的 <code>formula</code>, <code>data</code> 等参数：</p>
 <p>当 <code>notch = TRUE</code> 的时候，箱线图含凹槽</p>
 <p>绘图代码：使用了预设数据集 <code>mtcars</code> 中的 <code>mpg</code> , <code>cyl</code></p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 经典箱线图</span></span><br><span class="line">boxplot(mpg ~ cyl, data=mtcars, </span><br><span class="line">        main=<span class="string">&quot;Car Mileage Data&quot;</span>, </span><br><span class="line">        xlab=<span class="string">&quot;Number of Cylinders&quot;</span>, </span><br><span class="line">        ylab=<span class="string">&quot;Miles Per Gallon&quot;</span>)</span><br><span class="line"><span class="comment"># 含凹槽的箱线图</span></span><br><span class="line">boxplot(mpg ~ cyl, data=mtcars, </span><br><span class="line">        notch=<span class="literal">TRUE</span>, </span><br><span class="line">        varwidth=<span class="literal">TRUE</span>, </span><br><span class="line">        col=<span class="string">&quot;red&quot;</span>, </span><br><span class="line">        main=<span class="string">&quot;Car Mileage Data&quot;</span>, </span><br><span class="line">        xlab=<span class="string">&quot;Number of Cylinders&quot;</span>, </span><br><span class="line">        ylab=<span class="string">&quot;Miles Per Gallon&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720173458422.png" alt="image-20200720173458422"></p>
+<figure>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720173458422.png" alt="image-20200720173458422" /><figcaption aria-hidden="true">image-20200720173458422</figcaption>
+</figure>
 <h4 id="多交叉因子">多交叉因子</h4>
 <p>绘图代码：使用了预设数据集 <code>mtcars</code> 中的 <code>mpg</code> , <code>cyl</code> 和 <code>am</code></p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建汽缸数量的因子</span></span><br><span class="line">mtcars$cyl.f &lt;- factor(mtcars$cyl, </span><br><span class="line">                       levels=<span class="built_in">c</span>(<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>), </span><br><span class="line">                       labels=<span class="built_in">c</span>(<span class="string">&quot;4&quot;</span>,<span class="string">&quot;6&quot;</span>,<span class="string">&quot;8&quot;</span>)) </span><br><span class="line"><span class="comment"># 创建变速箱类型的因子</span></span><br><span class="line">mtcars$am.f &lt;- factor(mtcars$am, </span><br><span class="line">                      levels=<span class="built_in">c</span>(<span class="number">0</span>,<span class="number">1</span>), </span><br><span class="line">                      labels=<span class="built_in">c</span>(<span class="string">&quot;auto&quot;</span>, <span class="string">&quot;standard&quot;</span>))</span><br><span class="line"><span class="comment"># 生成箱线图</span></span><br><span class="line">boxplot(mpg ~ am.f *cyl.f, </span><br><span class="line">        data=mtcars, </span><br><span class="line">        varwidth=<span class="literal">TRUE</span>, </span><br><span class="line">        col=<span class="built_in">c</span>(<span class="string">&quot;gold&quot;</span>,<span class="string">&quot;darkgreen&quot;</span>), </span><br><span class="line">        main=<span class="string">&quot;MPG Distribution by Auto Type&quot;</span>, </span><br><span class="line">        xlab=<span class="string">&quot;Auto Type&quot;</span>, ylab=<span class="string">&quot;Miles Per Gallon&quot;</span>)</span><br></pre></td></tr></table></figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720173736995.png" alt="image-20200720173736995" style="zoom:80%;" />
-<h1>六、点图 (Point Plot, Dot Chart)</h1>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720173736995.png" alt="image-20200720173736995" style="zoom:80%;" /></p>
+<h1 id="六点图-point-plot-dot-chart">六、点图 (Point Plot, Dot Chart)</h1>
 <h2 id="绘制经典点图">绘制经典点图</h2>
 <p>点图提供了一种在简单水平刻度上绘制大量有标签值的方法。你可以使用<code>dotchart()</code>函数创建点图，格式为：<code>dotchart(x, labels=)</code></p>
 <table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 90%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>x</td>
 <td>是一个数值向量</td>
 </tr>
-<tr>
+<tr class="even">
 <td>labels</td>
 <td>由每个点的标签组成的向量</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>groups</td>
 <td>可以通过添加参数groups来选定一个因子，用以指定<em>x</em>中元素的分组方式。如果这样做，则参数gcolor可以控制不同组标签的颜色，cex可以控制标签的大小。</td>
 </tr>
@@ -748,14 +778,18 @@
 </table>
 <p>例：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dotchart(mtcars$mpg, labels=row.names(mtcars), cex=<span class="number">.7</span>, </span><br><span class="line">         main=<span class="string">&quot;Gas Mileage for Car Models&quot;</span>, </span><br><span class="line">         xlab=<span class="string">&quot;Miles Per Gallon&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720175338024.png" alt="image-20200720175338024"></p>
-<h2 id="分组、排序、着色后的点图">分组、排序、着色后的点图</h2>
+<figure>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720175338024.png" alt="image-20200720175338024" /><figcaption aria-hidden="true">image-20200720175338024</figcaption>
+</figure>
+<h2 id="分组排序着色后的点图">分组、排序、着色后的点图</h2>
 <p>例：</p>
 <p>涉及的数据：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; x &lt;- mtcars[order(mtcars$mpg),]</span><br><span class="line">&gt; x</span><br></pre></td></tr></table></figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720175808166.png" alt="image-20200720175808166" style="zoom:67%;" />
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720175808166.png" alt="image-20200720175808166" style="zoom:67%;" /></p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 根据每加仑汽油行驶英里数（从最低到最高）对数据框mtcars进行排序，结果保存为数据框x</span></span><br><span class="line">x &lt;- mtcars[order(mtcars$mpg),] </span><br><span class="line"><span class="comment"># 将x中的数值向量cyl转换为一个因子</span></span><br><span class="line">x$cyl &lt;- factor(x$cyl)</span><br><span class="line"><span class="comment"># 添加一个字符型向量（color）到数据框x中，根据cyl的值，它所含的值为&quot;red&quot;、&quot;blue&quot;或&quot;darkgreen&quot;</span></span><br><span class="line">x$color[x$cyl==<span class="number">4</span>] &lt;- <span class="string">&quot;red&quot;</span> </span><br><span class="line">x$color[x$cyl==<span class="number">6</span>] &lt;- <span class="string">&quot;blue&quot;</span> </span><br><span class="line">x$color[x$cyl==<span class="number">8</span>] &lt;- <span class="string">&quot;darkgreen&quot;</span> </span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line">dotchart(x$mpg, </span><br><span class="line">         labels = row.names(x), <span class="comment"># 各数据点的标签取自数据框的行名（车辆型号）</span></span><br><span class="line">         cex=<span class="number">.7</span>, </span><br><span class="line">         groups = x$cyl,  <span class="comment"># 数据点根据汽缸数量分组</span></span><br><span class="line">         gcolor = <span class="string">&quot;black&quot;</span>,  <span class="comment"># 数字4、6和8以黑色显示</span></span><br><span class="line">         color = x$color, <span class="comment"># 点和标签的颜色来自向量color</span></span><br><span class="line">         pch=<span class="number">19</span>, </span><br><span class="line">         main = <span class="string">&quot;Gas Mileage for Car Models\ngrouped by cylinder&quot;</span>, </span><br><span class="line">         xlab = <span class="string">&quot;Miles Per Gallon&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720180038375.png" alt="image-20200720180038375"></p>
+<figure>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/Basic_Plots/image-20200720180038375.png" alt="image-20200720180038375" /><figcaption aria-hidden="true">image-20200720180038375</figcaption>
+</figure>
 
     </div>
 
@@ -859,7 +893,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">一、条形图 (Bar Chart)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%9D%A1%E5%BD%A2%E5%9B%BE"><span class="nav-number">1.1.</span> <span class="nav-text">基本条形图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A0%86%E7%A0%8C%E6%9D%A1%E5%BD%A2%E5%9B%BE%E4%B8%8E%E5%88%86%E7%BB%84%E6%9D%A1%E5%BD%A2%E5%9B%BE"><span class="nav-number">1.2.</span> <span class="nav-text">堆砌条形图与分组条形图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9D%87%E5%80%BC%E6%9D%A1%E5%BD%A2%E5%9B%BE"><span class="nav-number">1.3.</span> <span class="nav-text">均值条形图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A3%98%E7%8A%B6%E5%9B%BE"><span class="nav-number">1.4.</span> <span class="nav-text">棘状图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">二、饼图 （Pie Chart）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E9%A5%BC%E5%9B%BE"><span class="nav-number">2.1.</span> <span class="nav-text">经典饼图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%87%E5%BD%A2%E5%9B%BE"><span class="nav-number">2.2.</span> <span class="nav-text">扇形图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">三、直方图 (Histogram)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E5%88%86%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E8%A7%A3%E9%87%8A"><span class="nav-number">3.1.</span> <span class="nav-text">部分常用函数解释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">四、核密度图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E6%A0%B8%E5%AF%86%E5%BA%A6%E5%9B%BE"><span class="nav-number">4.1.</span> <span class="nav-text">绘制核密度图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E6%A0%B8%E5%AF%86%E5%BA%A6%E5%9B%BE"><span class="nav-number">4.2.</span> <span class="nav-text">比较核密度图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">五、箱线图 (Box Plot)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%B1%E7%BA%BF%E5%9B%BE%E7%9A%84%E6%A0%87%E6%B3%A8"><span class="nav-number">5.1.</span> <span class="nav-text">箱线图的标注</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E7%AE%B1%E7%BA%BF%E5%9B%BE"><span class="nav-number">5.2.</span> <span class="nav-text">绘制箱线图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">六、点图 (Point Plot, Dot Chart)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E7%BB%8F%E5%85%B8%E7%82%B9%E5%9B%BE"><span class="nav-number">6.1.</span> <span class="nav-text">绘制经典点图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E3%80%81%E6%8E%92%E5%BA%8F%E3%80%81%E7%9D%80%E8%89%B2%E5%90%8E%E7%9A%84%E7%82%B9%E5%9B%BE"><span class="nav-number">6.2.</span> <span class="nav-text">分组、排序、着色后的点图</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E6%9D%A1%E5%BD%A2%E5%9B%BE-bar-chart"><span class="nav-number">1.</span> <span class="nav-text">一、条形图 (Bar Chart)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%9D%A1%E5%BD%A2%E5%9B%BE"><span class="nav-number">1.1.</span> <span class="nav-text">基本条形图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A0%86%E7%A0%8C%E6%9D%A1%E5%BD%A2%E5%9B%BE%E4%B8%8E%E5%88%86%E7%BB%84%E6%9D%A1%E5%BD%A2%E5%9B%BE"><span class="nav-number">1.2.</span> <span class="nav-text">堆砌条形图与分组条形图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9D%87%E5%80%BC%E6%9D%A1%E5%BD%A2%E5%9B%BE"><span class="nav-number">1.3.</span> <span class="nav-text">均值条形图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A3%98%E7%8A%B6%E5%9B%BE"><span class="nav-number">1.4.</span> <span class="nav-text">棘状图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E9%A5%BC%E5%9B%BE-pie-chart"><span class="nav-number">2.</span> <span class="nav-text">二、饼图 （Pie Chart）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E9%A5%BC%E5%9B%BE"><span class="nav-number">2.1.</span> <span class="nav-text">经典饼图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%87%E5%BD%A2%E5%9B%BE"><span class="nav-number">2.2.</span> <span class="nav-text">扇形图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E7%9B%B4%E6%96%B9%E5%9B%BE-histogram"><span class="nav-number">3.</span> <span class="nav-text">三、直方图 (Histogram)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E5%88%86%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E8%A7%A3%E9%87%8A"><span class="nav-number">3.1.</span> <span class="nav-text">部分常用函数解释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E6%A0%B8%E5%AF%86%E5%BA%A6%E5%9B%BE"><span class="nav-number">4.</span> <span class="nav-text">四、核密度图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E6%A0%B8%E5%AF%86%E5%BA%A6%E5%9B%BE"><span class="nav-number">4.1.</span> <span class="nav-text">绘制核密度图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E6%A0%B8%E5%AF%86%E5%BA%A6%E5%9B%BE"><span class="nav-number">4.2.</span> <span class="nav-text">比较核密度图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E7%AE%B1%E7%BA%BF%E5%9B%BE-box-plot"><span class="nav-number">5.</span> <span class="nav-text">五、箱线图 (Box Plot)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%B1%E7%BA%BF%E5%9B%BE%E7%9A%84%E6%A0%87%E6%B3%A8"><span class="nav-number">5.1.</span> <span class="nav-text">箱线图的标注</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E7%AE%B1%E7%BA%BF%E5%9B%BE"><span class="nav-number">5.2.</span> <span class="nav-text">绘制箱线图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E7%82%B9%E5%9B%BE-point-plot-dot-chart"><span class="nav-number">6.</span> <span class="nav-text">六、点图 (Point Plot, Dot Chart)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E7%BB%8F%E5%85%B8%E7%82%B9%E5%9B%BE"><span class="nav-number">6.1.</span> <span class="nav-text">绘制经典点图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E6%8E%92%E5%BA%8F%E7%9D%80%E8%89%B2%E5%90%8E%E7%9A%84%E7%82%B9%E5%9B%BE"><span class="nav-number">6.2.</span> <span class="nav-text">分组、排序、着色后的点图</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -924,12 +958,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">2m</span>
+    <span title="站点总字数">2.1m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">30:34</span>
+    <span title="站点阅读时长">31:04</span>
 </div><br /> <!-- 换行 -->
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>

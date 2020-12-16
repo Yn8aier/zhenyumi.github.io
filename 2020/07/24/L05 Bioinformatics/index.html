@@ -273,189 +273,152 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1>一、Bioinformatics</h1>
+        <h1 id="一bioinformatics">一、Bioinformatics</h1>
 <p>Analysis of DNA or protein sequences using computational tools.</p>
-<h2 id="Sequencing-Techniques">Sequencing Techniques</h2>
-<ol>
+<h2 id="sequencing-techniques">Sequencing Techniques</h2>
+<ol type="1">
 <li>454 sequencing technology</li>
 <li>SBS (Sequencing-by-synthesis)</li>
 <li>Illumina sequencing</li>
 </ol>
-<h2 id="Definition-of-Annotation">Definition of Annotation</h2>
+<h2 id="definition-of-annotation">Definition of Annotation</h2>
 <ul>
 <li><u>Interpreting</u> raw sequence data into useful biological information.</li>
 <li><u>Addition</u> of information to describe a sequence.</li>
 <li><u>Information</u> attached to genomic coordinates with start and end point.</li>
 <li><strong>Identification</strong>, structural description, characterization of putative protein products and other features in primary genomic sequence.</li>
 </ul>
-<h3 id="1-Structural-Annotation">1. Structural Annotation</h3>
-<p>Finding genes and other biologically <strong>relevant sites</strong> <u>thus building up a model of genome as objects with specific locations</u></p>
-<h3 id="2-Functional-Annotation">2. Functional Annotation</h3>
-<p>Objects are used in database searches (and experiments); the aim is to attribute biologically relevant information <u>to whole sequence and individual objects</u></p>
+<h3 id="structural-annotation">1. Structural Annotation</h3>
+<p>Finding genes and other biologically <strong>relevant sites</strong> <u>thus building up a model of genome as objects with specific locations</u> ### 2. Functional Annotation Objects are used in database searches (and experiments); the aim is to attribute biologically relevant information <u>to whole sequence and individual objects</u></p>
 <p>Searching Databases is a kind of functional annotation of sequences</p>
-<h2 id="Features-that-can-be-annotated-in-DNA">Features that can be annotated in DNA</h2>
-<ol>
-<li>
-<p>Genes:</p>
-<ol>
-<li>
-<p>Protein Binding Sites</p>
-</li>
-<li>
-<p>Alternative Poly-A sites</p>
-</li>
-<li>
-<p>Alternative Splice sites</p>
-</li>
-<li>
-<p>Poly-A site</p>
-</li>
-<li>
-<p><strong>Enhancers:</strong> DNA上一小段可与蛋白质（反式作用因子；trans-acting factor）结合的区域，与蛋白质结合之后，基因的转录作用将会加强。增强子可能位于基因上游，也可能位于下游。且不一定接近所要作用的基因，甚至不一定与基因位于同一染色体。这是因为染色质的缠绕结构，使序列上相隔很远的位置也有机会相互接触。</p>
-</li>
-<li>
-<p><strong>Promoters</strong>: 启动子（promoter）是指一段能使特定基因进行转录的脱氧核糖核酸（DNA）序列。启动子可以被RNA聚合酶辨认，并开始转录合成RNA。在核糖核酸（RNA）合成中，启动子可以和调控基因转录的转录因子产生相互作用，控制基因表达（转录）的起始时间和表达的程度，包含核心启动子区域和调控区域，就像“开关”，决定基因的活动，继而控制细胞开始生产哪一种蛋白质。<br>
-启动子位于控制基因表达的调控序列中、基因转录起始位点的上游（DNA反义链的5′方向），长约100~1000个碱基对。启动子本身并无编译功能，但它拥有对基因翻译氨基酸的指挥作用，就像一面旗帜，其核心部分是非编码区上游的RNA聚合酶结合位点，指挥聚合酶的合成，这种酶指导RNA的复制合成。因此该段位的启动子发生突变（变异），将对基因的表达有着毁灭性作用。<br>
-完全的启动子称为规范序列。</p>
-</li>
-<li>
-<p><strong>3’UTR</strong>: 3’非翻译区（英语：three prime untranslated region）简称3’-UTR，<u>是信使核糖核酸（mRNA）中，紧接在编码区之后的序列。</u>mRNA上除了可以翻译成蛋白质的序列外，还有一些不被翻译的序列，如5端（5’）的5′端帽与5′非翻译区（5’-UTR），以及3端（3’）的3′非翻译区（3’-UTR）与多聚腺苷酸尾。3’-UTR上含有AAUAAA的序列，可被特定蛋白识别，以启动多腺苷酸化，即切割mRNA，并于切割位点的3端加上约250个单磷酸腺苷，即多聚腺苷酸尾</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Mature_mRNA.png" alt="img" style="zoom: 33%;" />
-</li>
-<li>
-<p>Exon and Intron</p>
-</li>
-</ol>
-</li>
-<li>
-<p>Non-genic Encoded RNA</p>
-<ol>
+<h2 id="features-that-can-be-annotated-in-dna">Features that can be annotated in DNA</h2>
+<ol type="1">
+<li><p>Genes:</p>
+<ol type="1">
+<li><p>Protein Binding Sites</p></li>
+<li><p>Alternative Poly-A sites</p></li>
+<li><p>Alternative Splice sites</p></li>
+<li><p>Poly-A site</p></li>
+<li><p><strong>Enhancers:</strong> DNA上一小段可与蛋白质（反式作用因子；trans-acting factor）结合的区域，与蛋白质结合之后，基因的转录作用将会加强。增强子可能位于基因上游，也可能位于下游。且不一定接近所要作用的基因，甚至不一定与基因位于同一染色体。这是因为染色质的缠绕结构，使序列上相隔很远的位置也有机会相互接触。</p></li>
+<li><p><strong>Promoters</strong>: 启动子（promoter）是指一段能使特定基因进行转录的脱氧核糖核酸（DNA）序列。启动子可以被RNA聚合酶辨认，并开始转录合成RNA。在核糖核酸（RNA）合成中，启动子可以和调控基因转录的转录因子产生相互作用，控制基因表达（转录）的起始时间和表达的程度，包含核心启动子区域和调控区域，就像“开关”，决定基因的活动，继而控制细胞开始生产哪一种蛋白质。 启动子位于控制基因表达的调控序列中、基因转录起始位点的上游（DNA反义链的5′方向），长约100~1000个碱基对。启动子本身并无编译功能，但它拥有对基因翻译氨基酸的指挥作用，就像一面旗帜，其核心部分是非编码区上游的RNA聚合酶结合位点，指挥聚合酶的合成，这种酶指导RNA的复制合成。因此该段位的启动子发生突变（变异），将对基因的表达有着毁灭性作用。 完全的启动子称为规范序列。</p></li>
+<li><p><strong>3'UTR</strong>: 3'非翻译区（英语：three prime untranslated region）简称3'-UTR，<u>是信使核糖核酸（mRNA）中，紧接在编码区之后的序列。</u>mRNA上除了可以翻译成蛋白质的序列外，还有一些不被翻译的序列，如5端（5'）的5′端帽与5′非翻译区（5'-UTR），以及3端（3'）的3′非翻译区（3'-UTR）与多聚腺苷酸尾。3'-UTR上含有AAUAAA的序列，可被特定蛋白识别，以启动多腺苷酸化，即切割mRNA，并于切割位点的3端加上约250个单磷酸腺苷，即多聚腺苷酸尾</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/Mature_mRNA.png" alt="img" style="zoom: 33%;" /></p></li>
+<li><p>Exon and Intron</p></li>
+</ol></li>
+<li><p>Non-genic Encoded RNA</p>
+<ol type="1">
 <li>ncRNA（非编码核糖核酸）</li>
-<li>**MicroRNA: ** miRNA通过与目标信使核糖核酸（mRNA）结合，进而抑制转录后的基因表达，在调控基因表达、细胞周期、生物体发育时序等方面起重要作用。</li>
-<li>**Anti-sense RNA: **In genetics, a sense strand, or coding strand, is the segment within double-stranded DNA that runs from 5’ to 3’, and which is complementary to the antisense strand of DNA, or template strand, which runs from 3’ to 5’. <u>The sense strand is the strand of DNA that has the same sequence as the mRNA,</u> which takes the antisense strand as its template during transcription, and eventually undergoes (typically, not always) translation into a protein.</li>
+<li><strong>MicroRNA: </strong> miRNA通过与目标信使核糖核酸（mRNA）结合，进而抑制转录后的基因表达，在调控基因表达、细胞周期、生物体发育时序等方面起重要作用。</li>
+<li><strong>Anti-sense RNA: </strong>In genetics, a sense strand, or coding strand, is the segment within double-stranded DNA that runs from 5' to 3', and which is complementary to the antisense strand of DNA, or template strand, which runs from 3' to 5'. <u>The sense strand is the strand of DNA that has the same sequence as the mRNA,</u> which takes the antisense strand as its template during transcription, and eventually undergoes (typically, not always) translation into a protein.</li>
 <li>rRNA</li>
 <li>tRNA</li>
-</ol>
-</li>
-<li>
-<p>Large Genomic Regions</p>
-<ol>
+</ol></li>
+<li><p>Large Genomic Regions</p>
+<ol type="1">
 <li><strong>Microsatellites:</strong> A microsatellite is a tract of repetitive DNA in which certain DNA motifs (ranging in length from one to six or more base pairs) are repeated, typically 5–50 times.（串联重复）</li>
-<li>**Transposons: **A transposable element (TE, transposon, or jumping gene) is a DNA sequence that can change its position within a genome, sometimes creating or reversing mutations and altering the cell’s genetic identity and genome size</li>
-<li><strong>LTRs: (long terminal repeat，长端重复序列)</strong><br>
-Long terminal repeats (LTRs) are identical sequences of DNA that repeat hundreds or thousands of times found <u>at either end of retrotransposons or proviral DNA</u> formed by reverse transcription of retroviral RNA. <u>They are used by viruses to insert their genetic material into the host genomes.</u></li>
+<li><strong>Transposons: </strong>A transposable element (TE, transposon, or jumping gene) is a DNA sequence that can change its position within a genome, sometimes creating or reversing mutations and altering the cell's genetic identity and genome size</li>
+<li><strong>LTRs: (long terminal repeat，长端重复序列)</strong> Long terminal repeats (LTRs) are identical sequences of DNA that repeat hundreds or thousands of times found <u>at either end of retrotransposons or proviral DNA</u> formed by reverse transcription of retroviral RNA. <u>They are used by viruses to insert their genetic material into the host genomes.</u></li>
 <li>heterochromatic knob repeats</li>
-</ol>
-</li>
-<li>
-<p>Chromosomal Features</p>
-<ol>
-<li>**Telomeres: **端粒（英语：Telomere）是真核生物染色体末端的DNA重复序列，作用是保持染色体的完整性和控制细胞分裂周期。 由于DNA复制的机制，每次染色体复制后，延迟股上的染色体末端必无法被复制。</li>
+</ol></li>
+<li><p>Chromosomal Features</p>
+<ol type="1">
+<li><strong>Telomeres: </strong>端粒（英语：Telomere）是真核生物染色体末端的DNA重复序列，作用是保持染色体的完整性和控制细胞分裂周期。 由于DNA复制的机制，每次染色体复制后，延迟股上的染色体末端必无法被复制。</li>
 <li>Centromere</li>
 <li>Matrix Attachment Regions</li>
-</ol>
-</li>
-<li>
-<p>Comparative Aspects</p>
-<ol>
+</ol></li>
+<li><p>Comparative Aspects</p>
+<ol type="1">
 <li>Indels</li>
 <li>SNPs</li>
 <li>Rearrangements</li>
 <li>Duplications</li>
 <li>Synonymous VS. Non-synonymous Substitutions</li>
+</ol></li>
 </ol>
-</li>
-</ol>
-<h2 id="Gene-finding-Programs">Gene-finding Programs</h2>
-<p>GRAIL, MZEF, FGENES, glimmer, GENSCAN, GeneMark, HMMgene…</p>
-<h3 id="1-Types-of-Methods">1. Types of Methods:</h3>
-<ol>
-<li>
-<p>Content-based</p>
+<h2 id="gene-finding-programs">Gene-finding Programs</h2>
+<p>GRAIL, MZEF, FGENES, glimmer, GENSCAN, GeneMark, HMMgene....</p>
+<h3 id="types-of-methods">1. Types of Methods:</h3>
+<ol type="1">
+<li><p>Content-based</p>
 <ul>
 <li>codon usage</li>
 <li>substitutions</li>
 <li>composition</li>
 <li>repeats</li>
-</ul>
-</li>
-<li>
-<p>Site-based</p>
+</ul></li>
+<li><p>Site-based</p>
 <ul>
 <li>presence/absence of motif – splice sites</li>
 <li>TF binding sites</li>
 <li>start/stop codons.</li>
-</ul>
-</li>
-<li>
-<p>Comparative</p>
+</ul></li>
+<li><p>Comparative</p>
 <ul>
 <li>make determinations based on sequence homology</li>
-</ul>
-</li>
+</ul></li>
 </ol>
-<h3 id="2-ORF">2. ORF</h3>
+<h3 id="orf">2. ORF</h3>
 <p>In molecular genetics, an <strong>open reading frame</strong> (ORF) is the part of a reading frame that has the ability to be translated.</p>
 <p>An ORF is a continuous stretch of codons that begins with a start codon (usually AUG) and ends at a stop codon (usually UAA, UAG or UGA).</p>
 <p>In molecular genetics, an open reading frame (ORF) is the part of a reading frame that has the potential to code for a protein or peptide. An ORF is a continuous stretch of codons that do not contain a stop codon (usually UAA, UAG or UGA).</p>
-<h4 id="ORF-in-cDNA">ORF in cDNA</h4>
-<p>A cDNA molecule should have only one ORF, meaning that the protein is encoded  between one ATG and one stop codon. Other ATGs may be found, including some in the 3’ UTR , but there will be very few ORFs (only one?) per mRNA/cDNA.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192109954.png" alt="image-20191104192109954" style="zoom: 33%;" />
-<h3 id="3-Steps-to-Find-Gene">3. Steps to Find Gene</h3>
-<p>The first step in gene finding is to <u>identify all of the ORFs</u> (open reading frames).  These start with ATG, ends with in-frame TAA, TGA, or TAG.</p>
+<h4 id="orf-in-cdna">ORF in cDNA</h4>
+<p>A cDNA molecule should have only one ORF, meaning that the protein is encoded between one ATG and one stop codon. Other ATGs may be found, including some in the 3’ UTR , but there will be very few ORFs (only one?) per mRNA/cDNA.</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192109954.png" alt="image-20191104192109954" style="zoom: 33%;" /></p>
+<h3 id="steps-to-find-gene">3. Steps to Find Gene</h3>
+<p>The first step in gene finding is to <u>identify all of the ORFs</u> (open reading frames). These start with ATG, ends with in-frame TAA, TGA, or TAG.</p>
 <p>Only a fraction of these will include the entire gene, but many will be exons.</p>
-<p>As a general rule, for a given gene, there is only one ATG that is used as a  translational start. However, there may be internal ATGs that are just normal  methionine codons.</p>
-<h2 id="Searching-Databases">Searching Databases</h2>
+<p>As a general rule, for a given gene, there is only one ATG that is used as a translational start. However, there may be internal ATGs that are just normal methionine codons.</p>
+<h2 id="searching-databases">Searching Databases</h2>
 <p>Functional annotation of sequences: Searching Databases</p>
 <p>实验室内的实验很花时间，因此想要得到某些信息的时候，搜索database很方便快捷，同时也很cheap</p>
-<ol>
+<ol type="1">
 <li>Databases can <u>indicate known function</u> of related sequences (<u>predict function</u> based on similarities in structure)</li>
 <li>Database homology searches can <u>annotate large numbers of unknown sequences</u> (e.g. whole genomes or sets of ESTs).</li>
 </ol>
-<h3 id="1-BLAST-–-The-king-of-search-tools">1. BLAST – The king of search tools</h3>
-<p><strong>Basic Local Alignment Search Tool – most commonly used</strong>  <strong>program due to large size of databases.</strong></p>
-<p>Heuristic algorithm to accelerate searches; aligns small bits of DNA  and looks for the best overall match between the “query” sequence  and an entry in the database.</p>
+<h3 id="blast-the-king-of-search-tools">1. BLAST – The king of search tools</h3>
+<p><strong>Basic Local Alignment Search Tool – most commonly used</strong> <strong>program due to large size of databases.</strong></p>
+<p>Heuristic algorithm to accelerate searches; aligns small bits of DNA and looks for the best overall match between the “query” sequence and an entry in the database.</p>
 <p>The BLAST programs are very <strong>fast</strong> because they only calculate optimal alignment scores for most closely related sequences.</p>
-<p><strong>BLAST compares short segments (words) of the query and</strong>  <strong>database to find alignments that exceed a particular score.</strong></p>
-<h3 id="2-Different-Favors-of-BLAST">2. Different Favors of BLAST</h3>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192601363.png" alt="image-20191104192601363" style="zoom: 33%;" />
+<p><strong>BLAST compares short segments (words) of the query and</strong> <strong>database to find alignments that exceed a particular score.</strong></p>
+<h3 id="different-favors-of-blast">2. Different Favors of BLAST</h3>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192601363.png" alt="image-20191104192601363" style="zoom: 33%;" /></p>
 <p><strong>All comparisons except BLASTN are carried out as protein/protein comparisons.</strong></p>
-<h3 id="3-How-to-USE-–-Searching-Genbank-At-NCBI">3. How to USE – Searching Genbank At NCBI</h3>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192727667.png" alt="image-20191104192727667" style="zoom: 33%;" />
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225214547484.png" alt="image-20191225214547484"></p>
-<h3 id="4-Schematic-of-BLASTN-results">4. Schematic of BLASTN results</h3>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192918887.png" alt="image-20191104192918887" style="zoom:33%;" />
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192943494.png" alt="image-20191104192943494" style="zoom: 50%;" />
-<h3 id="5-How-to-read-the-BLAST-Result">5. How to read the BLAST Result</h3>
-<ol>
-<li>
-<p><strong>Bit score</strong> – normalized from the raw score, and comparable  between alignments. The raw score “S” of an alignment is  usually calculated by summing the scores for each letter-to-letter and letter-to-null position in the alignment.</p>
-</li>
-<li>
-<p><strong>P-value</strong>: The number of random local alignment scores equal or  greater than S is described by the Poisson distribution. This P  value is associated with the score S.</p>
+<h3 id="how-to-use----searching-genbank-at-ncbi">3. How to USE -- Searching Genbank At NCBI</h3>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192727667.png" alt="image-20191104192727667" style="zoom: 33%;" /></p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225214547484.png" alt="image-20191225214547484" /><figcaption aria-hidden="true">image-20191225214547484</figcaption>
+</figure>
+<h3 id="schematic-of-blastn-results">4. Schematic of BLASTN results</h3>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192918887.png" alt="image-20191104192918887" style="zoom:33%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104192943494.png" alt="image-20191104192943494" style="zoom: 50%;" /></p>
+<h3 id="how-to-read-the-blast-result">5. How to read the BLAST Result</h3>
+<ol type="1">
+<li><p><strong>Bit score</strong> – normalized from the raw score, and comparable between alignments. The raw score "S" of an alignment is usually calculated by summing the scores for each letter-to-letter and letter-to-null position in the alignment.</p></li>
+<li><p><strong>P-value</strong>: The number of random local alignment scores equal or greater than S is described by the Poisson distribution. This P value is associated with the score S.</p>
 <p>Highly significant scores have P values close to zero.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104193502556.png" alt="image-20191104193502556" style="zoom: 25%;" />
-</li>
-<li>
-<p><strong>The Expect value (E)</strong> is a parameter describing the number of hits  “expected” by chance when searching a database of a particular  size. Decreases exponentially with the score. The E value  describes the random background noise that exists for matches  between sequences.</p>
-</li>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104193502556.png" alt="image-20191104193502556" style="zoom: 25%;" /></p></li>
+<li><p><strong>The Expect value (E)</strong> is a parameter describing the number of hits "expected" by chance when searching a database of a particular size. Decreases exponentially with the score. The E value describes the random background noise that exists for matches between sequences.</p></li>
 </ol>
-<h2 id="Sequence-Alignment-序列比对">Sequence Alignment 序列比对</h2>
+<h2 id="sequence-alignment-序列比对">Sequence Alignment 序列比对</h2>
 <p>DNA and Protein sequence homology can be used to infer <u>evolutionary</u> relations.</p>
-<h1>二、The characteristic used for bioinformatic</h1>
-<h2 id="Motifs">Motifs</h2>
+<h1 id="二the-characteristic-used-for-bioinformatic">二、The characteristic used for bioinformatic</h1>
+<h2 id="motifs">Motifs</h2>
 <p>Protein motifs are <u>short conserved</u> segments that <u>have a particular function</u>.</p>
 <p>The presence of certain motifs can be used to predict basic characteristics of a protein that otherwise you may know nothing about.</p>
 <p>Similarities in protein sequence motifs indicate related functions</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1570720727362.png" alt="1570720727362"></p>
-<h2 id="Homologous">Homologous</h2>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/1570720727362.png" alt="1570720727362" /><figcaption aria-hidden="true">1570720727362</figcaption>
+</figure>
+<h2 id="homologous">Homologous</h2>
 <p>DNA and protein homology can be used to infer evolutionary relationships</p>
 <p><u>Coding sequences are more highly conserved than non-coding sequences</u></p>
 <p>Natural selection acts on the protein because that is where the function is., but the result of the selection is stored in the DNA. If a protein is advantageous, it is the gene that is conserved.</p>
 <blockquote>
 <p>As shown below, there is little conservation in introns, because there are no or few known functions in introns that selection can act on.</p>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225214937183.png" alt="image-20191225214937183"></p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225214937183.png" alt="image-20191225214937183" /><figcaption aria-hidden="true">image-20191225214937183</figcaption>
+</figure>
 <p>Homologous proteins resulted from gene duplication, not convergence. Related organisms show sequence homology at the level of DNA and Protein</p>
 <blockquote>
 <p>Mutations occur randomly and at a very low frequency along the gene due to mistakes in replication of DNA during cell division</p>
@@ -464,166 +427,147 @@ Long terminal repeats (LTRs) are identical sequences of DNA that repeat hundreds
 <ul>
 <li>True biological function needs to be determined experimentally!</li>
 </ul>
-<h1>三、Tools For Analyzing Gene Expression</h1>
-<h2 id="Transient-Stable-expression-arrays">Transient/Stable expression arrays</h2>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225215205049.png" alt="image-20191225215205049"></p>
-<h2 id="Reporter-gene-报告基因">Reporter gene 报告基因</h2>
+<h1 id="三tools-for-analyzing-gene-expression">三、Tools For Analyzing Gene Expression</h1>
+<h2 id="transientstable-expression-arrays">Transient/Stable expression arrays</h2>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225215205049.png" alt="image-20191225215205049" /><figcaption aria-hidden="true">image-20191225215205049</figcaption>
+</figure>
+<h2 id="reporter-gene-报告基因">Reporter gene 报告基因</h2>
 <p>Reporter genes encode proteins or enzymatic functions not typically found in a cell.</p>
 <p>报告基因（英语：reporter gene，又称报导基因）是一个分子生物学概念，它是指一类在细胞、组织/器官或个体<u>处于特定情况下会表达并使得他们产生易于检测、且实验材料原本不会产生的性状的基因</u>。较常用的报告基因有绿色萤光蛋白基因（GFP，<strong>Green Fluorescent Protein</strong>）、β-半乳糖苷酶基因（LacZ等）等。</p>
 <p>Example：</p>
-<ol>
-<li>B-galactosidase (color) Luciferase from fireflies Chloramphenicol  acetyltransferase (CAT)
+<ol type="1">
+<li>B-galactosidase (color) Luciferase from fireflies Chloramphenicol acetyltransferase (CAT)
 <ul>
-<li><u>CAT activity can be measured  by acetylation of  chloramphenicol and  separation by thin layer  chromatography.</u></li>
-</ul>
-</li>
+<li><u>CAT activity can be measured by acetylation of chloramphenicol and separation by thin layer chromatography.</u></li>
+</ul></li>
 <li>GFP</li>
 <li>β-glucuronidase (GUS) gene
 <ul>
 <li>Leaf vascular patterning in Arabidopsis shown via expression of the β-glucuronidase (GUS) gene in Arabidopsis leaves</li>
-<li>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225220133449.png" alt="image-20191225220133449" style="zoom: 80%;" />
-</li>
-</ul>
-</li>
+<li><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225220133449.png" alt="image-20191225220133449" style="zoom: 80%;" /></li>
+</ul></li>
 </ol>
-<h3 id="1-GFP-and-GFP-like">1. GFP and GFP-like</h3>
+<h3 id="gfp-and-gfp-like">1. GFP and GFP-like</h3>
 <p>GFP is one of the most commonly used reporter genes.</p>
-<p>GFP contains a fluorescent compound  (fluorophore). Different mutations result in  altered spectra of fluorescence. <u>Excitation takes  place at one wavelength and fluorescence at  another.</u></p>
+<p>GFP contains a fluorescent compound (fluorophore). Different mutations result in altered spectra of fluorescence. <u>Excitation takes place at one wavelength and fluorescence at another.</u></p>
 <p>GFP can be used for GFP expression plasmid or GFP expression protein.</p>
 <p>Some GFP-like proteins can attach to specific RNA, then make the RNA molecular emit light.</p>
-<h3 id="2-Fluorescence-Dye-In-Situ-Hybridization">2. Fluorescence Dye (In Situ Hybridization)</h3>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104195237836.png" alt="image-20191104195237836" style="zoom:33%;" />
+<h3 id="fluorescence-dye-in-situ-hybridization">2. Fluorescence Dye (In Situ Hybridization)</h3>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104195237836.png" alt="image-20191104195237836" style="zoom:33%;" /></p>
 <p>The fluorescence dye can be used to DNA and RNA</p>
-<h2 id="Co-translation-Assay">Co-translation Assay</h2>
-<p>Tests for the ability of a DNA-binding protein to activate a reporter gene regulated by the  control region of interest.</p>
-<h2 id="Hybridization-probe-杂交探针">Hybridization probe 杂交探针</h2>
-<p>杂交探针（英语：Hybridization probe）是一小段单链DNA片段（十几到几百个碱基），用于检测与其互补的核酸序列。双链DNA加热变性成为单链，随后用放射性同位素（通常用32P）、荧光染料或者酶（如辣根过氧化物酶）标记成为探针。32P通常被掺入组成DNA的四种核苷酸之一的磷酸基团中，而萤光染料和酶与核酸序列以共价键相连。<br>
-当将探针与样品杂交时，探针和与其互补的核酸（DNA或RNA）序列通过氢键紧密相连，随后，未被杂交的多余探针被洗去。最后，根据探针的种类，可进行放射自显影、荧光显微镜、酶联放大等方法来判断样品中是否含有，或者何位置含有被测序列（即与探针互补的序列）。</p>
-<h2 id="Purification-and-Detect-Protein-Tags">Purification and Detect Protein Tags</h2>
-<h2 id="Microscopy">Microscopy</h2>
-<h2 id="Protein-Gel-Electrophoresis">Protein Gel Electrophoresis</h2>
-<h2 id="Polyclonal-Antibody">Polyclonal Antibody</h2>
-<h2 id="Analyze-at-RNA-Level">Analyze at RNA Level</h2>
-<ol>
+<h2 id="co-translation-assay">Co-translation Assay</h2>
+<p>Tests for the ability of a DNA-binding protein to activate a reporter gene regulated by the control region of interest.</p>
+<h2 id="hybridization-probe-杂交探针">Hybridization probe 杂交探针</h2>
+<p>杂交探针（英语：Hybridization probe）是一小段单链DNA片段（十几到几百个碱基），用于检测与其互补的核酸序列。双链DNA加热变性成为单链，随后用放射性同位素（通常用32P）、荧光染料或者酶（如辣根过氧化物酶）标记成为探针。32P通常被掺入组成DNA的四种核苷酸之一的磷酸基团中，而萤光染料和酶与核酸序列以共价键相连。 当将探针与样品杂交时，探针和与其互补的核酸（DNA或RNA）序列通过氢键紧密相连，随后，未被杂交的多余探针被洗去。最后，根据探针的种类，可进行放射自显影、荧光显微镜、酶联放大等方法来判断样品中是否含有，或者何位置含有被测序列（即与探针互补的序列）。</p>
+<h2 id="purification-and-detect-protein-tags">Purification and Detect Protein Tags</h2>
+<h2 id="microscopy">Microscopy</h2>
+<h2 id="protein-gel-electrophoresis">Protein Gel Electrophoresis</h2>
+<h2 id="polyclonal-antibody">Polyclonal Antibody</h2>
+<h2 id="analyze-at-rna-level">Analyze at RNA Level</h2>
+<ol type="1">
 <li><strong>Northern blots</strong> for size and abundance.</li>
 <li><strong>In situ hybridizations</strong> for cellular localization.</li>
 <li><strong>RNase protection assay</strong> – an RNA probe is hybridized to total RNA, protecting the target from digestion by RNase.</li>
 <li><strong>RT-PCR</strong> for rapid abundance data.</li>
 </ol>
-<h1>四、Methods to Analyze Protein Expression</h1>
-<ol>
-<li><strong>Western blots</strong>  (immunoblotting) for  size and specificity.</li>
-<li><strong>In situ hybridization</strong> for  localization using  secondary, labeled  antibodies.</li>
-<li><strong>Enzyme-linked immunosorbent assay  (ELISA, 酶联免疫吸附试验)</strong> – a  colorimetric assay for  protein levels.</li>
+<h1 id="四methods-to-analyze-protein-expression">四、Methods to Analyze Protein Expression</h1>
+<ol type="1">
+<li><strong>Western blots</strong> (immunoblotting) for size and specificity.</li>
+<li><strong>In situ hybridization</strong> for localization using secondary, labeled antibodies.<br />
+</li>
+<li><strong>Enzyme-linked immunosorbent assay (ELISA, 酶联免疫吸附试验)</strong> – a colorimetric assay for protein levels.</li>
 </ol>
-<h1>五、Inhabitance or Interference to Gene Expression</h1>
-<h2 id="Antisense-oligo-反义寡核苷酸-Mediated-Inhibition-of-Gene-Expression">Antisense-oligo(反义寡核苷酸) Mediated Inhibition of Gene Expression</h2>
-<p>Antisense oligos complementary  to mRNAs can <u>target mRNA  for degradation or block  translation</u>.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104202059902.png" alt="image-20191104202059902" style="zoom:50%;" />
-<h2 id="RNA-Interference">RNA Interference</h2>
-<p><u>Processing of dsRNA  from viral or exogenous（外源的） sources.</u></p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104202221377.png" alt="image-20191104202221377" style="zoom: 60%;" />
+<h1 id="五inhabitance-or-interference-to-gene-expression">五、Inhabitance or Interference to Gene Expression</h1>
+<h2 id="antisense-oligo反义寡核苷酸-mediated-inhibition-of-gene-expression">Antisense-oligo(反义寡核苷酸) Mediated Inhibition of Gene Expression</h2>
+<p>Antisense oligos complementary to mRNAs can <u>target mRNA for degradation or block translation</u>.</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104202059902.png" alt="image-20191104202059902" style="zoom:50%;" /></p>
+<h2 id="rna-interference">RNA Interference</h2>
+<p><u>Processing of dsRNA from viral or exogenous（外源的） sources.</u></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191104202221377.png" alt="image-20191104202221377" style="zoom: 60%;" /></p>
 <p>Artificial microRNA can be used to down-regulate Genes or virus</p>
-<h1>六、Methods for analyzing DNA-Protein Interactions</h1>
-<ol>
-<li>Electrophoretic mobility shift assay. DNA is labelled with 32P. If bound by protein, it causes shift in size.</li>
+<h1 id="六methods-for-analyzing-dna-protein-interactions">六、Methods for analyzing DNA-Protein Interactions</h1>
+<ol type="1">
+<li>Electrophoretic mobility shift assay. DNA is labelled with 32P. If bound by protein, it causes shift in size.<br />
+</li>
 <li>DNase footprinting. Protein binding “protects” DNA from digestion by Dnase.</li>
 </ol>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225224846784.png" alt="image-20191225224846784"></p>
-<h1>七、Methods for analyzing Protein-Protein Interactions</h1>
-<ol>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225224846784.png" alt="image-20191225224846784" /><figcaption aria-hidden="true">image-20191225224846784</figcaption>
+</figure>
+<h1 id="七methods-for-analyzing-protein-protein-interactions">七、Methods for analyzing Protein-Protein Interactions</h1>
+<ol type="1">
 <li>GST pull-down assay to see which proteins interact with a GST-tagged protein of interest.</li>
 <li>Yeast two-hybrid. Interaction of two proteins activates expression of reporter.</li>
 <li>Co-IP to see if one protein can precipitate another through a direct interaction.</li>
 <li>Fluorescence resonance energy transfer. Energy is only transferred when two tagged proteins are within 10 nm.</li>
 </ol>
-<h1>八、Structural Analyze for Protein X-ray crystallography</h1>
-<ol>
+<h1 id="八structural-analyze-for-protein-x-ray-crystallography">八、Structural Analyze for Protein X-ray crystallography</h1>
+<ol type="1">
 <li><strong>X-ray crystallography</strong> uses diffraction to determine crystal structures</li>
 <li><strong>AFM</strong> determines the properties of the surface of a material.</li>
 </ol>
-<h1>九、Analysis of Gene Expression In Plants</h1>
-<h2 id="Assessing-Transcript-Abundance-From-Extracted-RNA（评估提取的RNA的转录丰度）">Assessing Transcript Abundance From Extracted RNA（评估提取的RNA的转录丰度）</h2>
+<h1 id="九analysis-of-gene-expression-in-plants">九、Analysis of Gene Expression In Plants</h1>
+<h2 id="assessing-transcript-abundance-from-extracted-rna评估提取的rna的转录丰度">Assessing Transcript Abundance From Extracted RNA（评估提取的RNA的转录丰度）</h2>
 <p>Poly(A)+RNA can be separated from other RNAs by FRactionation on An Oligo(dT) Column</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225225552479.png" alt="image-20191225225552479" style="zoom:72%;" />
-<h2 id="Northern-Blots">Northern Blots</h2>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225225552479.png" alt="image-20191225225552479" style="zoom:72%;" /></p>
+<h2 id="northern-blots">Northern Blots</h2>
 <p>北方墨点法（英语：Northern blot）是分子生物学、生物化学中常用的实验方法，通过探测样品中的RNA（或隔离的mRNA）来研究基因表现。</p>
 <p>利用探针侦测由凝胶电泳分离出来的RNA片段，寻找含有特定串行的RNA片段。与南方墨点法相似，RNA样品经过凝胶电泳后会按照大小分离，然后将样品从凝胶转印到膜上，并用与目标串行互补的标记的探针来探测。实验结果可以根据所用探针的不同以多种方式来观察，但大多数都显示的是样品中被探测的RNA条带的相对位置，也就是分子大小；而条带的强度则与样品中目标RNA的含量相关。这一方法可以测量目标RNA在不同样品中的情况，因此已经被普遍用于研究特定基因在生物体中表现的时刻和表现量，也是这类研究中最基本的手段。</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225225659889.png" alt="image-20191225225659889"></p>
-<h2 id="Real-Time-PCR">Real-Time PCR</h2>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225225659889.png" alt="image-20191225225659889" /><figcaption aria-hidden="true">image-20191225225659889</figcaption>
+</figure>
+<h2 id="real-time-pcr">Real-Time PCR</h2>
 <p>PCR used to measure amplification curve of individual genes</p>
 <p>Amplification performed with dye-labeled primers to enable comparisons within a tube</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225225832810.png" alt="image-20191225225832810" style="zoom:67%;" />
-<h2 id="Microarrays">Microarrays</h2>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191225225832810.png" alt="image-20191225225832810" style="zoom:67%;" /></p>
+<h2 id="microarrays">Microarrays</h2>
 <p>A microarray is a multiplex lab-on-a-chip. It is a 2D array on a solid substrate (usually a glass slide or silicon thin-film cell) that assays large amounts of biological material using high-throughput screening miniaturized, multiplexed and parallel processing and detection methods.</p>
 <p>Types:</p>
-<ol>
+<ol type="1">
 <li>cDNA microarray</li>
 <li>High-density oligonucleotide microarrays</li>
 </ol>
-<h2 id="Sequencing-Methods">Sequencing Methods</h2>
-<h3 id="1-ESTs">1. ESTs</h3>
+<h2 id="sequencing-methods">Sequencing Methods</h2>
+<h3 id="ests">1. ESTs</h3>
 <p>Sequencing of mRNAs, converted to cDNA</p>
 <p>“Digital” measurements because counting frequency of transcripts instead of “analog” measurements of hybridization intensity</p>
 <p>EST sequences were used as <u>starting material for microarray design</u></p>
 <p>Cloned cDNAs used for EST sequencing were spotted on arrays</p>
-<h3 id="2-SAGE">2. SAGE</h3>
+<h3 id="sage">2. SAGE</h3>
 <p>The first “digital” transcriptome sequencing method to use specifically captured short “tags” of cDNAs.</p>
 <p>Allowed sequencing of many tags per Sanger sequencing read.</p>
 <p>Tags mapped back to longer ESTs or genomic sequences to measure abundances</p>
-<h3 id="3-DGE-Digital-Gene-Expression">3. DGE (Digital Gene Expression)</h3>
+<h3 id="dge-digital-gene-expression">3. DGE (Digital Gene Expression)</h3>
 <p>Like SAGE, “digital gene expression” methods capture short tags from specific locations at the 3’ end of end of the transcript.</p>
 <p>Longer tags than most SAGE, and optimal for Illumina sequencing</p>
 <p>These tags are useful for quantification by counting, or for measuring specific types of transcripts.</p>
-<h3 id="4-RNA-SEQ">4. RNA-SEQ</h3>
+<h3 id="rna-seq">4. RNA-SEQ</h3>
 <p>The most popular off all methods at the present time 一 fragmented mRNA/cDNA, deeply sequenced by next-gen methods.</p>
-<h3 id="5-PARE">5. PARE</h3>
+<h3 id="pare">5. PARE</h3>
 <p>Data analysis of sequencing data is more “tricky” than microarray data due to the requirement to match reads back to the gene or genome, then add them up and normalize them.</p>
-<h2 id="Experimental-Design">Experimental Design</h2>
+<h2 id="experimental-design">Experimental Design</h2>
 <p>An important aspect of both array and sequencing experiments</p>
 <p>Considerations:</p>
 <p>Scientific</p>
 <ul>
-<li>
-<p>Aim of the experiment.</p>
-</li>
-<li>
-<p>Specific questions to be answered and how they are prioritized.</p>
-</li>
-<li>
-<p>How will the experiments answer the posed questions?</p>
-</li>
+<li><p>Aim of the experiment.</p></li>
+<li><p>Specific questions to be answered and how they are prioritized.</p></li>
+<li><p>How will the experiments answer the posed questions?</p></li>
 </ul>
 <p>Practical (logistic)</p>
 <ul>
-<li>
-<p>Types of mRNA samples: reference, control, treatment 1 (T1), and so on.</p>
-</li>
-<li>
-<p>Amount of material available: count the amount of mRNA involved in one</p>
-</li>
-<li>
-<p>channel of one hybridization as one unit.</p>
-</li>
-<li>
-<p>Number of slides available for the experiment.</p>
-</li>
+<li><p>Types of mRNA samples: reference, control, treatment 1 (T1), and so on.</p></li>
+<li><p>Amount of material available: count the amount of mRNA involved in one</p></li>
+<li><p>channel of one hybridization as one unit.</p></li>
+<li><p>Number of slides available for the experiment.</p></li>
 </ul>
 <p>Other factors</p>
 <ul>
-<li>
-<p>The experimental process before hybridization: sample isolation, mRNA</p>
-</li>
-<li>
-<p>extraction, amplification and labelling.</p>
-</li>
-<li>
-<p>Controls planned: positive, negative, ratio, and so on.</p>
-</li>
-<li>
-<p>Verification method: northern blot, reverse transcriptase (RT)-PCR, in situ hybridization, and so on.</p>
-</li>
+<li><p>The experimental process before hybridization: sample isolation, mRNA</p></li>
+<li><p>extraction, amplification and labelling.</p></li>
+<li><p>Controls planned: positive, negative, ratio, and so on.</p></li>
+<li><p>Verification method: northern blot, reverse transcriptase (RT)-PCR, in situ hybridization, and so on.</p></li>
 </ul>
 
     </div>
@@ -726,7 +670,7 @@ Long terminal repeats (LTRs) are identical sequences of DNA that repeat hundreds
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">一、Bioinformatics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sequencing-Techniques"><span class="nav-number">1.1.</span> <span class="nav-text">Sequencing Techniques</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-of-Annotation"><span class="nav-number">1.2.</span> <span class="nav-text">Definition of Annotation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Features-that-can-be-annotated-in-DNA"><span class="nav-number">1.3.</span> <span class="nav-text">Features that can be annotated in DNA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gene-finding-Programs"><span class="nav-number">1.4.</span> <span class="nav-text">Gene-finding Programs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Searching-Databases"><span class="nav-number">1.5.</span> <span class="nav-text">Searching Databases</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sequence-Alignment-%E5%BA%8F%E5%88%97%E6%AF%94%E5%AF%B9"><span class="nav-number">1.6.</span> <span class="nav-text">Sequence Alignment 序列比对</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">二、The characteristic used for bioinformatic</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Motifs"><span class="nav-number">2.1.</span> <span class="nav-text">Motifs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Homologous"><span class="nav-number">2.2.</span> <span class="nav-text">Homologous</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">三、Tools For Analyzing Gene Expression</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Transient-Stable-expression-arrays"><span class="nav-number">3.1.</span> <span class="nav-text">Transient&#x2F;Stable expression arrays</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reporter-gene-%E6%8A%A5%E5%91%8A%E5%9F%BA%E5%9B%A0"><span class="nav-number">3.2.</span> <span class="nav-text">Reporter gene 报告基因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Co-translation-Assay"><span class="nav-number">3.3.</span> <span class="nav-text">Co-translation Assay</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hybridization-probe-%E6%9D%82%E4%BA%A4%E6%8E%A2%E9%92%88"><span class="nav-number">3.4.</span> <span class="nav-text">Hybridization probe 杂交探针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Purification-and-Detect-Protein-Tags"><span class="nav-number">3.5.</span> <span class="nav-text">Purification and Detect Protein Tags</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Microscopy"><span class="nav-number">3.6.</span> <span class="nav-text">Microscopy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Protein-Gel-Electrophoresis"><span class="nav-number">3.7.</span> <span class="nav-text">Protein Gel Electrophoresis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polyclonal-Antibody"><span class="nav-number">3.8.</span> <span class="nav-text">Polyclonal Antibody</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Analyze-at-RNA-Level"><span class="nav-number">3.9.</span> <span class="nav-text">Analyze at RNA Level</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">四、Methods to Analyze Protein Expression</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">五、Inhabitance or Interference to Gene Expression</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Antisense-oligo-%E5%8F%8D%E4%B9%89%E5%AF%A1%E6%A0%B8%E8%8B%B7%E9%85%B8-Mediated-Inhibition-of-Gene-Expression"><span class="nav-number">5.1.</span> <span class="nav-text">Antisense-oligo(反义寡核苷酸) Mediated Inhibition of Gene Expression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RNA-Interference"><span class="nav-number">5.2.</span> <span class="nav-text">RNA Interference</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">六、Methods for analyzing DNA-Protein Interactions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">七、Methods for analyzing Protein-Protein Interactions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">八、Structural Analyze for Protein X-ray crystallography</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text">九、Analysis of Gene Expression In Plants</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Assessing-Transcript-Abundance-From-Extracted-RNA%EF%BC%88%E8%AF%84%E4%BC%B0%E6%8F%90%E5%8F%96%E7%9A%84RNA%E7%9A%84%E8%BD%AC%E5%BD%95%E4%B8%B0%E5%BA%A6%EF%BC%89"><span class="nav-number">9.1.</span> <span class="nav-text">Assessing Transcript Abundance From Extracted RNA（评估提取的RNA的转录丰度）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Northern-Blots"><span class="nav-number">9.2.</span> <span class="nav-text">Northern Blots</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Real-Time-PCR"><span class="nav-number">9.3.</span> <span class="nav-text">Real-Time PCR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Microarrays"><span class="nav-number">9.4.</span> <span class="nav-text">Microarrays</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sequencing-Methods"><span class="nav-number">9.5.</span> <span class="nav-text">Sequencing Methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experimental-Design"><span class="nav-number">9.6.</span> <span class="nav-text">Experimental Design</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80bioinformatics"><span class="nav-number">1.</span> <span class="nav-text">一、Bioinformatics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#sequencing-techniques"><span class="nav-number">1.1.</span> <span class="nav-text">Sequencing Techniques</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#definition-of-annotation"><span class="nav-number">1.2.</span> <span class="nav-text">Definition of Annotation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#features-that-can-be-annotated-in-dna"><span class="nav-number">1.3.</span> <span class="nav-text">Features that can be annotated in DNA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gene-finding-programs"><span class="nav-number">1.4.</span> <span class="nav-text">Gene-finding Programs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#searching-databases"><span class="nav-number">1.5.</span> <span class="nav-text">Searching Databases</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sequence-alignment-%E5%BA%8F%E5%88%97%E6%AF%94%E5%AF%B9"><span class="nav-number">1.6.</span> <span class="nav-text">Sequence Alignment 序列比对</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Cthe-characteristic-used-for-bioinformatic"><span class="nav-number">2.</span> <span class="nav-text">二、The characteristic used for bioinformatic</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#motifs"><span class="nav-number">2.1.</span> <span class="nav-text">Motifs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#homologous"><span class="nav-number">2.2.</span> <span class="nav-text">Homologous</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89tools-for-analyzing-gene-expression"><span class="nav-number">3.</span> <span class="nav-text">三、Tools For Analyzing Gene Expression</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#transientstable-expression-arrays"><span class="nav-number">3.1.</span> <span class="nav-text">Transient&#x2F;Stable expression arrays</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reporter-gene-%E6%8A%A5%E5%91%8A%E5%9F%BA%E5%9B%A0"><span class="nav-number">3.2.</span> <span class="nav-text">Reporter gene 报告基因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#co-translation-assay"><span class="nav-number">3.3.</span> <span class="nav-text">Co-translation Assay</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hybridization-probe-%E6%9D%82%E4%BA%A4%E6%8E%A2%E9%92%88"><span class="nav-number">3.4.</span> <span class="nav-text">Hybridization probe 杂交探针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#purification-and-detect-protein-tags"><span class="nav-number">3.5.</span> <span class="nav-text">Purification and Detect Protein Tags</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#microscopy"><span class="nav-number">3.6.</span> <span class="nav-text">Microscopy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#protein-gel-electrophoresis"><span class="nav-number">3.7.</span> <span class="nav-text">Protein Gel Electrophoresis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#polyclonal-antibody"><span class="nav-number">3.8.</span> <span class="nav-text">Polyclonal Antibody</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#analyze-at-rna-level"><span class="nav-number">3.9.</span> <span class="nav-text">Analyze at RNA Level</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9Bmethods-to-analyze-protein-expression"><span class="nav-number">4.</span> <span class="nav-text">四、Methods to Analyze Protein Expression</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94inhabitance-or-interference-to-gene-expression"><span class="nav-number">5.</span> <span class="nav-text">五、Inhabitance or Interference to Gene Expression</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#antisense-oligo%E5%8F%8D%E4%B9%89%E5%AF%A1%E6%A0%B8%E8%8B%B7%E9%85%B8-mediated-inhibition-of-gene-expression"><span class="nav-number">5.1.</span> <span class="nav-text">Antisense-oligo(反义寡核苷酸) Mediated Inhibition of Gene Expression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rna-interference"><span class="nav-number">5.2.</span> <span class="nav-text">RNA Interference</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%ADmethods-for-analyzing-dna-protein-interactions"><span class="nav-number">6.</span> <span class="nav-text">六、Methods for analyzing DNA-Protein Interactions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83methods-for-analyzing-protein-protein-interactions"><span class="nav-number">7.</span> <span class="nav-text">七、Methods for analyzing Protein-Protein Interactions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%ABstructural-analyze-for-protein-x-ray-crystallography"><span class="nav-number">8.</span> <span class="nav-text">八、Structural Analyze for Protein X-ray crystallography</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%9Danalysis-of-gene-expression-in-plants"><span class="nav-number">9.</span> <span class="nav-text">九、Analysis of Gene Expression In Plants</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#assessing-transcript-abundance-from-extracted-rna%E8%AF%84%E4%BC%B0%E6%8F%90%E5%8F%96%E7%9A%84rna%E7%9A%84%E8%BD%AC%E5%BD%95%E4%B8%B0%E5%BA%A6"><span class="nav-number">9.1.</span> <span class="nav-text">Assessing Transcript Abundance From Extracted RNA（评估提取的RNA的转录丰度）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#northern-blots"><span class="nav-number">9.2.</span> <span class="nav-text">Northern Blots</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#real-time-pcr"><span class="nav-number">9.3.</span> <span class="nav-text">Real-Time PCR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#microarrays"><span class="nav-number">9.4.</span> <span class="nav-text">Microarrays</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sequencing-methods"><span class="nav-number">9.5.</span> <span class="nav-text">Sequencing Methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#experimental-design"><span class="nav-number">9.6.</span> <span class="nav-text">Experimental Design</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -791,12 +735,12 @@ Long terminal repeats (LTRs) are identical sequences of DNA that repeat hundreds
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">2m</span>
+    <span title="站点总字数">2.1m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">30:34</span>
+    <span title="站点阅读时长">31:04</span>
 </div><br /> <!-- 换行 -->
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>

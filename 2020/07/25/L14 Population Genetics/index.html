@@ -264,7 +264,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>8.6k</span>
+              <span>8.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -282,110 +282,108 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1>一、The Introduction to Population Genetics</h1>
+        <h1 id="一the-introduction-to-population-genetics">一、The Introduction to Population Genetics</h1>
 <p><u>Population genetics studies genes in groups of individual.</u></p>
 <p>Populations in Genetic Equilibrium (allele frequencies no longer change)</p>
-<h2 id="Allele-Frequencies-And-Genotype-Frequencies">Allele Frequencies And Genotype Frequencies</h2>
-<h3 id="1-Introduction-to-Allele-Frequencies">1. Introduction to Allele Frequencies</h3>
+<h2 id="allele-frequencies-and-genotype-frequencies">Allele Frequencies And Genotype Frequencies</h2>
+<h3 id="introduction-to-allele-frequencies">1. Introduction to Allele Frequencies</h3>
 <p>It is the number of copies of a particular allele divided by the number of copies of all alleles at the genetic place (locus) in a population</p>
-<h3 id="2-Estimation-of-Allele-Frequencies">2. Estimation of Allele Frequencies</h3>
-<p>$$<br>
-\text{Frequencies of an allele = } \frac{\text{Numbers of copies of a particular allele}}{\text{Numbers of copies of ALL alleles}}<br>
-$$</p>
-<p>Suppose <em><strong>p</strong></em> is the allele frequency of one allele, and <em><strong>q</strong></em> is the allele frequency of the other allele</p>
-<p>Then<br>
-$$<br>
-p + q = 1<br>
-$$</p>
-<h3 id="3-Introduction-to-Genotype-Frequencies">3. Introduction to Genotype Frequencies</h3>
+<h3 id="estimation-of-allele-frequencies">2. Estimation of Allele Frequencies</h3>
+<p><span class="math display">\[
+\text{Frequencies of an allele = } \frac{\text{Numbers of copies of a particular allele}}{\text{Numbers of copies of ALL alleles}}
+\]</span></p>
+<p>Suppose <strong><em>p</em></strong> is the allele frequency of one allele, and <strong><em>q</em></strong> is the allele frequency of the other allele</p>
+<p>Then <span class="math display">\[
+p + q = 1
+\]</span></p>
+<h3 id="introduction-to-genotype-frequencies">3. Introduction to Genotype Frequencies</h3>
 <p>Is the number of individuals with a given genotype divided by the total number of individuals in population.</p>
-<h1>二、The Hardy-Weinberg principle</h1>
-<h2 id="Introduction-of-The-Principle">Introduction of The Principle</h2>
+<h1 id="二the-hardy-weinberg-principle">二、The Hardy-Weinberg principle</h1>
+<h2 id="introduction-of-the-principle">Introduction of The Principle</h2>
 <p>Describes a mathematical <u>relationship between allele frequencies and genotype frequencies.</u></p>
-<p>Allows the prediction of a population’s genotype frequencies from its allele frequencies.</p>
-<p>Assume that in a population, a particular gene segregates two alleles, <u><em><strong>A</strong></em> and <em><strong>a</strong></em>, with frequencies of <em><strong>p</strong></em> and <em><strong>q</strong></em>, respectively.</u></p>
+<p>Allows the prediction of a population's genotype frequencies from its allele frequencies.</p>
+<p>Assume that in a population, a particular gene segregates two alleles, <u><strong><em>A</em></strong> and <strong><em>a</em></strong>, with frequencies of <strong><em>p</em></strong> and <strong><em>q</em></strong>, respectively.</u></p>
 <p>If members of the population <u>mate randomly,</u></p>
 <ul>
 <li>The diploid genotypes of the next generation will be formed by the <u>random union of haploid eggs and haploid sperm.</u></li>
 </ul>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211212149140.png" alt="image-20191211212149140" style="zoom: 33%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211212149140.png" alt="image-20191211212149140" style="zoom: 33%;" /></p>
 <ul>
-<li>The probability of producing an <em><strong>AA</strong></em> homozygote is $p \cdot p = p^{2}$.</li>
-<li>The probability of producing an <em><strong>aa</strong></em> homozygote is $q \cdot q = q^{2}$</li>
+<li>The probability of producing an <strong><em>AA</em></strong> homozygote is <span class="math inline">\(p \cdot p = p^{2}\)</span>.</li>
+<li>The probability of producing an <strong><em>aa</em></strong> homozygote is <span class="math inline">\(q \cdot q = q^{2}\)</span></li>
 <li>A heterozygote may be produced by
 <ul>
-<li>an <em><strong>A</strong></em> sperm uniting with an <em><strong>a</strong></em> egg and</li>
-<li>an <em><strong>a</strong></em> sperm uniting with an <em><strong>A</strong></em> egg</li>
-<li>Each of these events occurs with probability $ p \cdot q$, so the total probability of forming an <em><strong>Aa</strong></em> zygote is $2pq$.</li>
+<li>an <strong><em>A</em></strong> sperm uniting with an <strong><em>a</em></strong> egg and</li>
+<li>an <strong><em>a</em></strong> sperm uniting with an <strong><em>A</em></strong> egg</li>
+<li>Each of these events occurs with probability $ p q$, so the total probability of forming an <strong><em>Aa</em></strong> zygote is <span class="math inline">\(2pq\)</span>.</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<p>These predicted frequencies can be obtained by expanding the <strong>binomial expression</strong><br>
-$$<br>
-(p + q)^{2} = p^{2} + 2pq + 2q^{2}<br>
-$$</p>
-<h2 id="Hardy-Weinberg-Equilibrium">Hardy-Weinberg Equilibrium</h2>
-<h3 id="1-Introduction">1. Introduction</h3>
+<p>These predicted frequencies can be obtained by expanding the <strong>binomial expression</strong> <span class="math display">\[
+(p + q)^{2} = p^{2} + 2pq + 2q^{2}
+\]</span></p>
+<h2 id="hardy-weinberg-equilibrium">Hardy-Weinberg Equilibrium</h2>
+<h3 id="introduction">1. Introduction</h3>
 <p>The <u>key assumption</u> underlying the Hardy-Weinberg principle is <u>random mating</u>.</p>
 <p>If no differential survival or reproduction exists among members of the population,</p>
 <ul>
 <li>the Hardy-Weinberg genotype frequencies persist generation after generation.</li>
-<li>the genotype is expected to produce $p^{2} + 2pq + q^{2}$</li>
+<li>the genotype is expected to produce <span class="math inline">\(p^{2} + 2pq + q^{2}\)</span></li>
 <li>the population is at equilibrium.</li>
 </ul>
 <p>This condition is Hardy-Weinberg equilibrium.</p>
 <p><u><strong>Mutation、migration、natural selection、random genetic drift</strong></u> can influence this equilibrium（causes changes in the frequencies）</p>
-<h3 id="2-Prediction">2. Prediction</h3>
+<h3 id="prediction">2. Prediction</h3>
 <p>In the equilibrium, we can predict allele frequencies from the genotype frequencies and can also predict genotype frequencies from the allele frequencies.</p>
-<h2 id="The-Hardy-Weinberg-Principle-for-X-Linked-Genes">The Hardy-Weinberg Principle for X-Linked Genes</h2>
+<h2 id="the-hardy-weinberg-principle-for-x-linked-genes">The Hardy-Weinberg Principle for X-Linked Genes</h2>
 <p>For X-linked genes, allele frequencies are <u>estimated from the frequencies of the genotypes in <strong>males</strong>.</u></p>
 <p>Example: Color Vision</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211213648844.png" alt="image-20191211213648844" style="zoom: 33%;" />
-<h2 id="For-Multiple-Alleles">For Multiple Alleles</h2>
-<p>Genotypes can be calculated by expanding trinomial<br>
-$$<br>
-(p + q + r)^{2} = p^{2} + q^{2} + r^{2} + 2pq + 2qr + 2pr<br>
-$$<br>
-Example: Blood type</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211214149840.png" alt="image-20191211214149840" style="zoom:33%;" />
-<h1>三、Exceptions to the Hardy-Weinberg Principle</h1>
-<p>The cases that will <u>disrupt Hardy-Weinberg equilibrium</u> (…the genotype or allele frequencies will not persist generation after generation)</p>
-<h2 id="Non-random-Mating">Non-random Mating</h2>
-<p>Nonrandom mating includes</p>
-<ul>
-<li><strong>Consanguineous mating</strong> (mating between <u>genetically related individuals</u>，近亲结婚)</li>
-<li><strong>Assortative mating</strong> (mating between individuals with <u>similar phenotypes</u>，选型交配)</li>
-</ul>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211213648844.png" alt="image-20191211213648844" style="zoom: 33%;" /></p>
+<h2 id="for-multiple-alleles">For Multiple Alleles</h2>
+<p>Genotypes can be calculated by expanding trinomial <span class="math display">\[
+(p + q + r)^{2} = p^{2} + q^{2} + r^{2} + 2pq + 2qr + 2pr
+\]</span> Example: Blood type</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211214149840.png" alt="image-20191211214149840" style="zoom:33%;" /></p>
+<h1 id="三exceptions-to-the-hardy-weinberg-principle">三、Exceptions to the Hardy-Weinberg Principle</h1>
+<p>The cases that will <u>disrupt Hardy-Weinberg equilibrium</u> (...the genotype or allele frequencies will not persist generation after generation)</p>
+<h2 id="non-random-mating">Non-random Mating</h2>
+<p>Nonrandom mating includes - <strong>Consanguineous mating</strong> (mating between <u>genetically related individuals</u>，近亲结婚) - <strong>Assortative mating</strong> (mating between individuals with <u>similar phenotypes</u>，选型交配)</p>
 <p>Both consanguineous mating and assortative mating reduce the frequency of heterozygotes and increase the frequency of homozygotes.</p>
-<p>The effects of consanguineous mating can be quantified using the <u><strong>inbreeding coefficient (近交系数)</strong></u>, <em><strong>F</strong></em>.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211214625841.png" alt="image-20191211214625841"></p>
-<p>F = 0 ~ 1<br>
-F = 1时：For a population that is <u>completely inbreeding or Self-fertilization</u></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211214717298.png" alt="image-20191211214717298"></p>
-<h2 id="Unequal-Survival">Unequal Survival</h2>
+<p>The effects of consanguineous mating can be quantified using the <u><strong>inbreeding coefficient (近交系数)</strong></u>, <strong><em>F</em></strong>.</p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211214625841.png" alt="image-20191211214625841" /><figcaption aria-hidden="true">image-20191211214625841</figcaption>
+</figure>
+<p>F = 0 ~ 1 F = 1时：For a population that is <u>completely inbreeding or Self-fertilization</u></p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191211214717298.png" alt="image-20191211214717298" /><figcaption aria-hidden="true">image-20191211214717298</figcaption>
+</figure>
+<h2 id="unequal-survival">Unequal Survival</h2>
 <p>If zygotes <u>produced by random mating</u> have <u>different survival rates</u></p>
 <p><strong>Heterozygotes ≠ Homozygotes</strong></p>
 <p>A sample of 200 adults yielded the following data:</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191212100215155.png" alt="image-20191212100215155" style="zoom: 50%;" />
-<h2 id="Population-Subdivision-种群分化-种群破碎化">Population Subdivision 种群分化/种群破碎化</h2>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191212100215155.png" alt="image-20191212100215155" style="zoom: 50%;" /></p>
+<h2 id="population-subdivision-种群分化种群破碎化">Population Subdivision 种群分化/种群破碎化</h2>
 <p>In nature, populations may be subdivided due to <u>geographical or ecological barriers (地理或生态障碍)</u> that may be correlated with genetic differences.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191212100834858.png" alt="image-20191212100834858"></p>
-<h2 id="Migration">Migration</h2>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191212100834858.png" alt="image-20191212100834858" /><figcaption aria-hidden="true">image-20191212100834858</figcaption>
+</figure>
+<h2 id="migration">Migration</h2>
 <p>The introduction of genes by recent migrations can alter allele and genotype frequencies within a population and</p>
 <p>disrupt Hardy-Weinberg equilibrium</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191212101925972.png" alt="image-20191212101925972"></p>
-<h1>四、Natural Selection – (systematic changes-differential survival and reproduction)</h1>
-<p>According to Charles Darwin: “<u>the Origin of Species by Means of Natural Selection</u>”, published in 1859</p>
-<ol>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191212101925972.png" alt="image-20191212101925972" /><figcaption aria-hidden="true">image-20191212101925972</figcaption>
+</figure>
+<h1 id="四natural-selection----systematic-changes-differential-survival-and-reproduction">四、Natural Selection -- (systematic changes-differential survival and reproduction)</h1>
+<p>According to Charles Darwin: "<u>the Origin of Species by Means of Natural Selection</u>", published in 1859</p>
+<ol type="1">
 <li>Organisms produce more offspring than the environment can support</li>
 <li>Only some of them can survive and reproduce</li>
 <li>After many generations of such competition, traits associated with strong competitive ability become prevalent in the population</li>
 </ol>
 <p><u>Selection for survival and reproduction in the face of competition</u> is therefore the mechanism that changes the physical and behavioral characteristics of a species. This process was called <strong>natural selection.</strong></p>
-<h2 id="The-Concept-of-Fitness">The Concept of Fitness</h2>
+<h2 id="the-concept-of-fitness">The Concept of Fitness</h2>
 <p>Fitness is the ability to survive and reproduce is a phenotype and that it is determined, at least partly, by genes.</p>
 <p>Geneticists refer to this ability to survive and reproduce as <strong>Fitness</strong>.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213101721332.png" alt="image-20191213101721332" style="zoom: 67%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213101721332.png" alt="image-20191213101721332" style="zoom: 67%;" /></p>
 <p>Each member of a population has its own fitness value</p>
 <ul>
 <li>w = 0 if it dies or fails to reproduce,</li>
@@ -393,69 +391,60 @@ F = 1时：For a population that is <u>completely inbreeding or Self-fertilizati
 <li>w = 2 if it survives and (on average) produces 2 offspring,</li>
 <li>and so forth.</li>
 </ul>
-<h2 id="Natural-Selection-at-the-Level-of-the-Gene">Natural Selection at the Level of the Gene</h2>
+<h2 id="natural-selection-at-the-level-of-the-gene">Natural Selection at the Level of the Gene</h2>
 <p>Example: Color of moss</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213102345752.png" alt="image-20191213102345752"></p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213102345752.png" alt="image-20191213102345752" /><figcaption aria-hidden="true">image-20191213102345752</figcaption>
+</figure>
 <ul>
-<li>
-<p>assume that fitness is determined by a single gene , in a particular species of insect.</p>
-</li>
-<li>
-<p>alleles, A for dark in color and a for light in color. A is dominant</p>
-</li>
-<li>
-<p>Coefficient can be separated to <strong>relative fitness</strong> and <strong>selection coefficient</strong></p>
-</li>
+<li><p>assume that fitness is determined by a single gene , in a particular species of insect.</p></li>
+<li><p>alleles, A for dark in color and a for light in color. A is dominant</p></li>
+<li><p>Coefficient can be separated to <strong>relative fitness</strong> and <strong>selection coefficient</strong></p></li>
 </ul>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213102355100.png" alt="image-20191213102355100" style="zoom: 50%;" />
-<h2 id="Natural-Selection-at-the-Level-of-the-Gene-2">Natural Selection at the Level of the Gene</h2>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213102355100.png" alt="image-20191213102355100" style="zoom: 50%;" /></p>
+<h2 id="natural-selection-at-the-level-of-the-gene-1">Natural Selection at the Level of the Gene</h2>
 <p>The initial genetic composition of the population:</p>
 <ul>
 <li>Suppose A with p = 0.5, and a with q = 0.5, and that s2 = 0.1.</li>
 </ul>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213103613729.png" alt="image-20191213103613729" style="zoom: 67%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213103613729.png" alt="image-20191213103613729" style="zoom: 67%;" /></p>
 <p>In forming the next generation, each genotype will contribute gametes in proportion to its frequency and relative fitness.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213103716959.png" alt="image-20191213103716959" style="zoom: 33%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213103716959.png" alt="image-20191213103716959" style="zoom: 33%;" /></p>
 <p>q (G2) = 0.270 + 0.487/2 = 0.513 &gt; q (G1) = 0.5</p>
 <p>Every generation afterward, the freauency of a will rise, and eventually it will equal 1, at which point we can say that the allele has been fixed in the population.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213104509481.png" alt="image-20191213104509481" style="zoom:67%;" />
-<p>Selection for a recessive allele—and therefore against a harmful dominant allele—is more effective than selection<br>
-against a recessive allele.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213105305903.png" alt="image-20191213105305903"></p>
-<h1>五、Random Genetic Drift</h1>
-<h2 id="Introduction">Introduction</h2>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213104509481.png" alt="image-20191213104509481" style="zoom:67%;" /></p>
+<p>Selection for a recessive allele—and therefore against a harmful dominant allele—is more effective than selection against a recessive allele.</p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213105305903.png" alt="image-20191213105305903" /><figcaption aria-hidden="true">image-20191213105305903</figcaption>
+</figure>
+<h1 id="五random-genetic-drift">五、Random Genetic Drift</h1>
+<h2 id="introduction-1">Introduction</h2>
 <p>Natural selection as a systematic force in evolution. However, evolution is affected by random processes.</p>
 <p>Allele frequencies change unpredictably in populations because of uncertainties during reproduction.</p>
 <ul>
 <li>Mutation is a random process that profoundly affects evolution</li>
 <li>Genetic drift, the random change of allele frequencies in populations, due to uncertainties in Mendelian segregation.</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213110537738.png" alt="image-20191213110537738"></p>
-<p>Genetic drift, the random change of allele frequencies in populations, due to uncertainties in Mendelian<br>
-segregation.</p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213110537738.png" alt="image-20191213110537738" /><figcaption aria-hidden="true">image-20191213110537738</figcaption>
+</figure>
+<p>Genetic drift, the random change of allele frequencies in populations, due to uncertainties in Mendelian segregation.</p>
 <p>Thus, the genetic composition of the population can change even without the force of natural selection.</p>
-<h2 id="The-Effects-of-Population-Size">The Effects of Population Size</h2>
-<p>In large populations, the effect of genetic drift is minimal.<br>
-$$<br>
-\text{HWE: }(p + q)^{2} = p^{2} + 2pq + q^{2}<br>
-$$</p>
+<h2 id="the-effects-of-population-size">The Effects of Population Size</h2>
+<p>In large populations, the effect of genetic drift is minimal. <span class="math display">\[
+\text{HWE: }(p + q)^{2} = p^{2} + 2pq + q^{2}
+\]</span></p>
 <p>In small populations, genetic drift may be the primary evolutionary force.</p>
 <p>The effect of population size is determined by monitoring the frequency of heterozygotes, or the heterozygosity of a population over time. Represented with H</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213113816429.png" alt="image-20191213113816429" style="zoom:50%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213113816429.png" alt="image-20191213113816429" style="zoom:50%;" /></p>
 <p>In large populations, the effect of genetic drift is minimal.</p>
 <p>In small populations, genetic drift may be the primary evolutionary force.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213114206592.png" alt="image-20191213114206592" style="zoom:50%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191213114206592.png" alt="image-20191213114206592" style="zoom:50%;" /></p>
 <p>Hardy-Weinberg equilibrium:</p>
 <ul>
-<li>
-<p>In a <strong>randomly mating</strong> population</p>
-</li>
-<li>
-<p><u>without natural selection or genetic drift</u> to change allele frequencies,</p>
-</li>
-<li>
-<p>and <u>without migration or mutation</u> to introduce new alleles</p>
-</li>
+<li><p>In a <strong>randomly mating</strong> population</p></li>
+<li><p><u>without natural selection or genetic drift</u> to change allele frequencies,</p></li>
+<li><p>and <u>without migration or mutation</u> to introduce new alleles</p></li>
 </ul>
 <p>The real population:</p>
 <ul>
@@ -463,87 +452,89 @@ $$</p>
 </ul>
 <p>Dynamic equilibrium can be caused by:</p>
 <ul>
-<li>Balancing Selection</li>
-<li>Mutation-selection Balance</li>
+<li><p>Balancing Selection</p></li>
+<li><p>Mutation-selection Balance</p></li>
+<li><p>Mutation-drift Balance</p></li>
 </ul>
-<ul>
-<li>Mutation-drift Balance</li>
-</ul>
-<h3 id="1-Balancing-Selection-平衡选择">1. Balancing Selection 平衡选择</h3>
+<h3 id="balancing-selection-平衡选择">1. Balancing Selection 平衡选择</h3>
 <p>Balancing selection also called <strong>heterozygote advantage（杂合优势）</strong></p>
 <p>The selection <u>favors the heterozygotes</u> at the expense of each type of homozygote in the population.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214184856039.png" alt="image-20191214184856039"></p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214184856039.png" alt="image-20191214184856039" /><figcaption aria-hidden="true">image-20191214184856039</figcaption>
+</figure>
 <p>At the balance point, the frequency of A is <u>p = t / (s + t)</u>, and the frequency of a is <u>q = s / (s + t)</u></p>
-<h4 id="Deduction-of-Equilibrium-Circumstances">Deduction of Equilibrium Circumstances</h4>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214184948518.png" alt="image-20191214184948518"><br>
-$$<br>
-\text{The Average Fitness: } \overline{w} = (1 - s) \times p^{2}  + 1 \times (2pq) + (1 - t) \times q^{2} \<br>
-\because p + q  = (p + q)^{2} = 1 \<br>
-\therefore \overline{w} = 1 - sp^{2} -tq^{2}<br>
-$$</p>
-<p>$$<br>
-\text{Frequency of A in the next generation after selection：} p’ =  \frac{p^{2}(1-s) + \frac{1}{2} \cdot 2pq}{ \overline{w} }  \<br>
-\because p + q = 1 \<br>
-\therefore p’ =  \frac{p(p+q)-sp^{2}}{\overline{w}} =\frac{p(1 - sp)}{\overline{w}}<br>
-$$</p>
-<p>$$<br>
-\text{Change in frequency of A due to selection：}\Delta p =  p’ - p = p (\frac{1-sp}{1} -1) =p \cdot \frac{1-sp^{2}-tq^{2}}{\overline{w}} = p \cdot 1 = p \<br>
-\because \overline{w} = 1 - sp^{2} -tq^{2} \<br>
-\therefore \Delta p = p \cdot \frac{1-sp^{2}-tq^{2}}{\overline{w}} = p \cdot 1 = p<br>
-$$</p>
-<p>$$<br>
-\text{At equilibrium: } \Delta p = 0 \<br>
-\therefore \frac{1 - sp}{\overline{w} } = 1 \<br>
-\therefore sp = sp^{2} + tq^{2} \<br>
-\therefore<br>
-p = \frac{t}{s + t},\   q = \frac{s}{s + t}<br>
-$$</p>
-<h4 id="Example-malaria-parasite">Example: malaria parasite</h4>
+<h4 id="deduction-of-equilibrium-circumstances">Deduction of Equilibrium Circumstances</h4>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214184948518.png" alt="image-20191214184948518" /> <span class="math display">\[
+\text{The Average Fitness: } \overline{w} = (1 - s) \times p^{2}  + 1 \times (2pq) + (1 - t) \times q^{2} \\ 
+\because p + q  = (p + q)^{2} = 1 \\ 
+\therefore \overline{w} = 1 - sp^{2} -tq^{2}
+\]</span></p>
+<p><span class="math display">\[
+\text{Frequency of A in the next generation after selection：} p&#39; =  \frac{p^{2}(1-s) + \frac{1}{2} \cdot 2pq}{ \overline{w} }  \\ 
+\because p + q = 1 \\ 
+\therefore p&#39; =  \frac{p(p+q)-sp^{2}}{\overline{w}} =\frac{p(1 - sp)}{\overline{w}}
+\]</span></p>
+<p><span class="math display">\[
+\text{Change in frequency of A due to selection：}\Delta p =  p&#39; - p = p (\frac{1-sp}{1} -1) =p \cdot \frac{1-sp^{2}-tq^{2}}{\overline{w}} = p \cdot 1 = p \\ 
+\because \overline{w} = 1 - sp^{2} -tq^{2} \\ 
+\therefore \Delta p = p \cdot \frac{1-sp^{2}-tq^{2}}{\overline{w}} = p \cdot 1 = p
+\]</span></p>
+<p><span class="math display">\[
+\text{At equilibrium: } \Delta p = 0 \\ 
+\therefore \frac{1 - sp}{\overline{w} } = 1 \\
+\therefore sp = sp^{2} + tq^{2} \\ 
+\therefore 
+p = \frac{t}{s + t},\   q = \frac{s}{s + t}
+\]</span></p>
+<h4 id="example-malaria-parasite">Example: malaria parasite</h4>
 <p>The malaria parasite <em>Plasmodium falciparum</em> (yellow) emerging from red blood cells that it had infected.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214195803482.png" alt="image-20191214195803482" style="zoom:67%;" />
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214195813009.png" alt="image-20191214195813009"><br>
-$$<br>
-\text{Suppose s = 1, p = 0.1} \ p = \frac{t}{s+ t}  \ \therefore t = (0.1)/(0.9) = 0.11<br>
-$$</p>
-<h3 id="2-Mutation-Selection-Balance-突变-选择平衡">2. Mutation-Selection Balance 突变-选择平衡</h3>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214195803482.png" alt="image-20191214195803482" style="zoom:67%;" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214195813009.png" alt="image-20191214195813009" /> <span class="math display">\[
+\text{Suppose s = 1, p = 0.1} \\ p = \frac{t}{s+ t}  \\ \therefore t = (0.1)/(0.9) = 0.11
+\]</span></p>
+<h3 id="mutation-selection-balance-突变-选择平衡">2. Mutation-Selection Balance 突变-选择平衡</h3>
 <p>Mutation-selection balance:</p>
 <ul>
 <li>the rate at which <strong>deleterious recessive alleles</strong> are created by <strong>mutation</strong></li>
 <li>equals <u>the rate at which deleterious alleles are eliminated</u> by selection.</li>
 </ul>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214200529996.png" alt="image-20191214200529996" style="zoom: 80%;" /><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214200529996.png" alt="image-20191214200529996"></p>
-<h4 id="At-Equilibrium">At Equilibrium</h4>
-<p>$$<br>
-\Delta q_{s} = - \frac{sq^{2} p}{1 - sq^{2}}<br>
-$$</p>
-<p>$$<br>
-\Delta q_{mu} = \mu p<br>
-$$</p>
-<p>$$<br>
-\text{At equilibrium: } \Delta q_{s} + \Delta q_{mu} = 0 \<br>
-\therefore \mu p = \frac{sq^{2} p}{1 - sq} \<br>
-\text{assuming: }1 - sq^{2} \rarr 1 \<br>
-q^{2}<em>{eq} \approx \frac{\mu}{s} \<br>
-\therefore q</em>{eq} = \sqrt{\frac{\mu}{s}}<br>
-$$</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214202715993.png" alt="image-20191214202715993"></p>
-<p>A typical value for $\mu$ is 3 x 10^6^ mutations per generation.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214200529996.png" alt="image-20191214200529996"></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214200529996.png" alt="image-20191214200529996" style="zoom: 80%;" /><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214200529996.png" alt="image-20191214200529996" /></p>
+<h4 id="at-equilibrium">At Equilibrium</h4>
+<p><span class="math display">\[
+\Delta q_{s} = - \frac{sq^{2} p}{1 - sq^{2}}
+\]</span></p>
+<p><span class="math display">\[
+\Delta q_{mu} = \mu p
+\]</span></p>
+<p><span class="math display">\[
+\text{At equilibrium: } \Delta q_{s} + \Delta q_{mu} = 0 \\
+\therefore \mu p = \frac{sq^{2} p}{1 - sq} \\ 
+\text{assuming: }1 - sq^{2} \rarr 1 \\
+q^{2}_{eq} \approx \frac{\mu}{s} \\ 
+\therefore q_{eq} = \sqrt{\frac{\mu}{s}}
+\]</span></p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214202715993.png" alt="image-20191214202715993" /><figcaption aria-hidden="true">image-20191214202715993</figcaption>
+</figure>
+<p>A typical value for <span class="math inline">\(\mu\)</span> is 3 x 10<sup>6</sup> mutations per generation.</p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214200529996.png" alt="image-20191214200529996" /><figcaption aria-hidden="true">image-20191214200529996</figcaption>
+</figure>
 <ul>
-<li>
-<p>For s = 1, q = 0.0017</p>
-</li>
-<li>
-<p>For s = 0.1, q = 0.0055,</p>
-</li>
+<li><p>For s = 1, q = 0.0017</p></li>
+<li><p>For s = 0.1, q = 0.0055,</p></li>
 </ul>
 <p>Studies with natural populations of Drosophila have indicated that lethal alleles are less frequent than the preceding calculations predict.</p>
 <p>Which has been attributed to <u>partial dominance of the lethal alleles.</u></p>
-<h3 id="3-Mutation-Drift-Balance">3. Mutation-Drift Balance</h3>
+<h3 id="mutation-drift-balance">3. Mutation-Drift Balance</h3>
 <p><strong>Random genetic drift</strong> eliminates variability from a population</p>
 <p><strong>Mutation</strong> replenishes（补充） the variability that is lost by drift</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214203935603.png" alt="image-20191214203935603"></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214203948438.png" alt="image-20191214203948438"></p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214203935603.png" alt="image-20191214203935603" /><figcaption aria-hidden="true">image-20191214203935603</figcaption>
+</figure>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191214203948438.png" alt="image-20191214203948438" /><figcaption aria-hidden="true">image-20191214203948438</figcaption>
+</figure>
 
     </div>
 
@@ -645,7 +636,7 @@ $$</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">一、The Introduction to Population Genetics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Allele-Frequencies-And-Genotype-Frequencies"><span class="nav-number">1.1.</span> <span class="nav-text">Allele Frequencies And Genotype Frequencies</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">二、The Hardy-Weinberg principle</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction-of-The-Principle"><span class="nav-number">2.1.</span> <span class="nav-text">Introduction of The Principle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hardy-Weinberg-Equilibrium"><span class="nav-number">2.2.</span> <span class="nav-text">Hardy-Weinberg Equilibrium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Hardy-Weinberg-Principle-for-X-Linked-Genes"><span class="nav-number">2.3.</span> <span class="nav-text">The Hardy-Weinberg Principle for X-Linked Genes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#For-Multiple-Alleles"><span class="nav-number">2.4.</span> <span class="nav-text">For Multiple Alleles</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">三、Exceptions to the Hardy-Weinberg Principle</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Non-random-Mating"><span class="nav-number">3.1.</span> <span class="nav-text">Non-random Mating</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unequal-Survival"><span class="nav-number">3.2.</span> <span class="nav-text">Unequal Survival</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Population-Subdivision-%E7%A7%8D%E7%BE%A4%E5%88%86%E5%8C%96-%E7%A7%8D%E7%BE%A4%E7%A0%B4%E7%A2%8E%E5%8C%96"><span class="nav-number">3.3.</span> <span class="nav-text">Population Subdivision 种群分化&#x2F;种群破碎化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Migration"><span class="nav-number">3.4.</span> <span class="nav-text">Migration</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">四、Natural Selection – (systematic changes-differential survival and reproduction)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Concept-of-Fitness"><span class="nav-number">4.1.</span> <span class="nav-text">The Concept of Fitness</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Natural-Selection-at-the-Level-of-the-Gene"><span class="nav-number">4.2.</span> <span class="nav-text">Natural Selection at the Level of the Gene</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Natural-Selection-at-the-Level-of-the-Gene-2"><span class="nav-number">4.3.</span> <span class="nav-text">Natural Selection at the Level of the Gene</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">五、Random Genetic Drift</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">5.1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Effects-of-Population-Size"><span class="nav-number">5.2.</span> <span class="nav-text">The Effects of Population Size</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80the-introduction-to-population-genetics"><span class="nav-number">1.</span> <span class="nav-text">一、The Introduction to Population Genetics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#allele-frequencies-and-genotype-frequencies"><span class="nav-number">1.1.</span> <span class="nav-text">Allele Frequencies And Genotype Frequencies</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Cthe-hardy-weinberg-principle"><span class="nav-number">2.</span> <span class="nav-text">二、The Hardy-Weinberg principle</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction-of-the-principle"><span class="nav-number">2.1.</span> <span class="nav-text">Introduction of The Principle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hardy-weinberg-equilibrium"><span class="nav-number">2.2.</span> <span class="nav-text">Hardy-Weinberg Equilibrium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-hardy-weinberg-principle-for-x-linked-genes"><span class="nav-number">2.3.</span> <span class="nav-text">The Hardy-Weinberg Principle for X-Linked Genes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for-multiple-alleles"><span class="nav-number">2.4.</span> <span class="nav-text">For Multiple Alleles</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89exceptions-to-the-hardy-weinberg-principle"><span class="nav-number">3.</span> <span class="nav-text">三、Exceptions to the Hardy-Weinberg Principle</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#non-random-mating"><span class="nav-number">3.1.</span> <span class="nav-text">Non-random Mating</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unequal-survival"><span class="nav-number">3.2.</span> <span class="nav-text">Unequal Survival</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#population-subdivision-%E7%A7%8D%E7%BE%A4%E5%88%86%E5%8C%96%E7%A7%8D%E7%BE%A4%E7%A0%B4%E7%A2%8E%E5%8C%96"><span class="nav-number">3.3.</span> <span class="nav-text">Population Subdivision 种群分化&#x2F;种群破碎化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#migration"><span class="nav-number">3.4.</span> <span class="nav-text">Migration</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9Bnatural-selection----systematic-changes-differential-survival-and-reproduction"><span class="nav-number">4.</span> <span class="nav-text">四、Natural Selection -- (systematic changes-differential survival and reproduction)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#the-concept-of-fitness"><span class="nav-number">4.1.</span> <span class="nav-text">The Concept of Fitness</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#natural-selection-at-the-level-of-the-gene"><span class="nav-number">4.2.</span> <span class="nav-text">Natural Selection at the Level of the Gene</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#natural-selection-at-the-level-of-the-gene-1"><span class="nav-number">4.3.</span> <span class="nav-text">Natural Selection at the Level of the Gene</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94random-genetic-drift"><span class="nav-number">5.</span> <span class="nav-text">五、Random Genetic Drift</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction-1"><span class="nav-number">5.1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-effects-of-population-size"><span class="nav-number">5.2.</span> <span class="nav-text">The Effects of Population Size</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -710,12 +701,12 @@ $$</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">2m</span>
+    <span title="站点总字数">2.1m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">30:34</span>
+    <span title="站点阅读时长">31:04</span>
 </div><br /> <!-- 换行 -->
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>

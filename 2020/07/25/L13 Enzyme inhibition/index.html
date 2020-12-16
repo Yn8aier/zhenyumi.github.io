@@ -266,7 +266,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>14k</span>
+              <span>15k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -284,202 +284,198 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1>一、Enzyme Inhibition</h1>
+        <h1 id="一enzyme-inhibition">一、Enzyme Inhibition</h1>
 <p>Why we needs enzyme inhibition:</p>
 <p>One reaction cannot be constantly precessed.</p>
 <p>Inhibition of enzymes can be either <strong>reversible inhibitors</strong> and <strong>irreversible inhibitors</strong>.</p>
-<h2 id="Reversible-Inhibition">Reversible Inhibition</h2>
+<h2 id="reversible-inhibition">Reversible Inhibition</h2>
 <p>Reversible inhibition involves <u>noncovalent binding</u> of the inhibitor and can always be reversed, at least in principle, by removal of the inhibitor.</p>
 <p>They differ in the mechanisms by which they decrease the enzyme’s activity and in how they affect the kinetics of the reaction.</p>
-<h3 id="1-Competitive-Inhibition">1. Competitive Inhibition</h3>
-<h4 id="Introduction">Introduction</h4>
-<p>A <strong>competitive inhibitor</strong> competes with substrate for the enzyme active site.  It <u>increases</u> the $K_{M}$</p>
+<h3 id="competitive-inhibition">1. Competitive Inhibition</h3>
+<h4 id="introduction">Introduction</h4>
+<p>A <strong>competitive inhibitor</strong> competes with substrate for the enzyme active site. It <u>increases</u> the <span class="math inline">\(K_{M}\)</span></p>
 <blockquote>
 <p>It competes with the substrate for binding to the same site on the enzyme.</p>
 </blockquote>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130641324.png" alt="image-20191127130641324" style="zoom: 50%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130641324.png" alt="image-20191127130641324" style="zoom: 50%;" /></p>
 <p>Both substrate and inhibitor can fit the active site. Substrate can be processed by the enzyme, but inhibitor cannot.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130835870.png" alt="image-20191127130835870" style="zoom:50%;" />
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130905714.png" alt="image-20191127130905714"></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130835870.png" alt="image-20191127130835870" style="zoom:50%;" /></p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130905714.png" alt="image-20191127130905714" /><figcaption aria-hidden="true">image-20191127130905714</figcaption>
+</figure>
 <p>Upon analysis of this case, the expression for <em>v</em> is found to be <u>equation 11.35a</u></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130956464.png" alt="image-20191127130956464"></p>
-<h4 id="v-equation-Deduction">v equation Deduction</h4>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130835870.png" alt="image-20191127130835870" style="zoom:50%;" />
-<p>Define: $[I]$ is the concentration of inhibitor and $K_{I}$<br>
-$$<br>
-K_{I} = [E] [I] / [EI]<br>
-$$</p>
-<p>$$<br>
-\because [E]<em>{t} = [E] + [ES] + [EI] \ K</em>{M} = \frac{[E] [S]}{[ES]} \ K_{I} = \frac{[E] [I]}{[EI]}<br>
-$$</p>
-<p>$$<br>
-\therefore [E]<em>{t} = [E] + [ES] + \frac{[E] [I]}{K</em>{I}}<br>
-$$</p>
-<p>$$<br>
-\therefore [E]<em>{t} - [ES] = [E] (1 + \frac{[I]}{K</em>{I}})<br>
-$$</p>
-<p>$$<br>
-\because K_{M} [ES]  = [E][S] = \frac{[E]<em>{t} - [ES]}{1 + \frac{[I]}{K</em>{I}}} \cdot [S]<br>
-$$</p>
-<p>$$<br>
-\therefore K_{M} [ES] (1 + \frac{[I]}{K_{I}}) = [E]_{t} [S] - [ES] [S]<br>
-$$</p>
-<p>$$<br>
-\therefore v = k_{cat} [ES] = \frac{k_{cat} [E]<em>{t} [S]} {(1 + \frac{[I]}{K</em>{I}}) K_{M} + [S]} = \frac{V_{max} [S]}{\alpha K_{M} + [S]} = \frac{V_{max} [S]}{K_{M}^{app} + [S]}<br>
-$$</p>
-<p>Then we get <u>equation 11.36</u><br>
-$$<br>
-K_{M}^{app} = \alpha K_{M} = (1 + \frac{[I]}{K_{I}}) K_{M} = K_{M} + \frac{K_{M}}{K_{I}} [I]<br>
-$$</p>
-<h4 id="Effects-of-competitive-inhibition-on-enzyme-kinetics">Effects of competitive inhibition on enzyme kinetics</h4>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130956464.png" alt="image-20191127130956464" /><figcaption aria-hidden="true">image-20191127130956464</figcaption>
+</figure>
+<h4 id="v-equation-deduction">v equation Deduction</h4>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127130835870.png" alt="image-20191127130835870" style="zoom:50%;" /></p>
+<p>Define: <span class="math inline">\([I]\)</span> is the concentration of inhibitor and <span class="math inline">\(K_{I}\)</span> <span class="math display">\[
+K_{I} = [E] [I] / [EI]
+\]</span></p>
+<p><span class="math display">\[
+\because [E]_{t} = [E] + [ES] + [EI] \\ K_{M} = \frac{[E] [S]}{[ES]} \\ K_{I} = \frac{[E] [I]}{[EI]}
+\]</span></p>
+<p><span class="math display">\[
+\therefore [E]_{t} = [E] + [ES] + \frac{[E] [I]}{K_{I}}
+\]</span></p>
+<p><span class="math display">\[
+\therefore [E]_{t} - [ES] = [E] (1 + \frac{[I]}{K_{I}})
+\]</span></p>
+<p><span class="math display">\[
+\because K_{M} [ES]  = [E][S] = \frac{[E]_{t} - [ES]}{1 + \frac{[I]}{K_{I}}} \cdot [S]
+\]</span></p>
+<p><span class="math display">\[
+\therefore K_{M} [ES] (1 + \frac{[I]}{K_{I}}) = [E]_{t} [S] - [ES] [S]
+\]</span></p>
+<p><span class="math display">\[
+\therefore v = k_{cat} [ES] = \frac{k_{cat} [E]_{t} [S]} {(1 + \frac{[I]}{K_{I}}) K_{M} + [S]} = \frac{V_{max} [S]}{\alpha K_{M} + [S]} = \frac{V_{max} [S]}{K_{M}^{app} + [S]}
+\]</span></p>
+<p>Then we get <u>equation 11.36</u> <span class="math display">\[
+K_{M}^{app} = \alpha K_{M} = (1 + \frac{[I]}{K_{I}}) K_{M} = K_{M} + \frac{K_{M}}{K_{I}} [I]
+\]</span></p>
+<h4 id="effects-of-competitive-inhibition-on-enzyme-kinetics">Effects of competitive inhibition on enzyme kinetics</h4>
 <p><strong>(a)</strong> The effect of a competitive inhibitor (I) on reaction velocity at different substrate concentrations. Two sets of substrate-velocity experiments were carried out, one with (red line) and one without (blue line) inhibitor present.</p>
-<p>Addition of the inhibitor decreases the velocity but not the $V_{max}$.  For competitive inhibition the maximum velocity is unchanged because as [S] becomes very large, <em>v</em> approaches $V_{max}$ <u>(just as in the absence of inhibition</u>),</p>
-<p>and $V_{max} = k_{cat} [E]_{t}$</p>
+<p>Addition of the inhibitor decreases the velocity but not the <span class="math inline">\(V_{max}\)</span>. For competitive inhibition the maximum velocity is unchanged because as [S] becomes very large, <em>v</em> approaches <span class="math inline">\(V_{max}\)</span> <u>(just as in the absence of inhibition</u>),</p>
+<p>and <span class="math inline">\(V_{max} = k_{cat} [E]_{t}\)</span></p>
 <p>The apparent $K_{M} $ is higher in the presence of inhibitor.</p>
-<p>As predicted, increasing [I] causes an increase $K_{M}$ in the apparent</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127132421965.png" alt="image-20191127132421965" style="zoom:50%;" />
+<p>As predicted, increasing [I] causes an increase <span class="math inline">\(K_{M}\)</span> in the apparent</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127132421965.png" alt="image-20191127132421965" style="zoom:50%;" /></p>
 <p><strong>(b)</strong> Figure(b) is the Lineweaver–Burk plots of the reactions shown in (a).</p>
-<p><u>The lines cross the 1/<em>v</em> axis at the same $V_{max}$, showing that I is a competitive inhibitor.</u></p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127132531469.png" alt="image-20191127132531469" style="zoom: 50%;" />
-<p><strong>©</strong> Determination of KM and KI . If the measurement of is repeated at different concentrations of I, KI can be determined from the slope of the line, and the true KM from the line’s intercept where <u>(see Equation 11.36).</u></p>
-<p>通常使用线性拟合来确定最终的slope，提升accuracy，缩小$K_{M}$的fit domain</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127184258077.png" alt="image-20191127184258077" style="zoom: 67%;" />
-<h4 id="Example">Example</h4>
+<p><u>The lines cross the 1/<em>v</em> axis at the same <span class="math inline">\(V_{max}\)</span>, showing that I is a competitive inhibitor.</u></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127132531469.png" alt="image-20191127132531469" style="zoom: 50%;" /></p>
+<p><strong>(c)</strong> Determination of KM and KI . If the measurement of is repeated at different concentrations of I, KI can be determined from the slope of the line, and the true KM from the line’s intercept where <u>(see Equation 11.36).</u></p>
+<p>通常使用线性拟合来确定最终的slope，提升accuracy，缩小<span class="math inline">\(K_{M}\)</span>的fit domain</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127184258077.png" alt="image-20191127184258077" style="zoom: 67%;" /></p>
+<h4 id="example">Example</h4>
 <p>A clear example of a competitive inhibitor is shown in <u>Figure 11.31</u>.</p>
 <p>The dinucleotide <strong>UpA</strong> is an excellent substrate for the enzyme <strong>ribonuclease（核糖核酸酶）,</strong> which catalyzes hydrolysis of the phosphodiester bond between the two nucleotides.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127184809462.png" alt="image-20191127184809462" style="zoom:67%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127184809462.png" alt="image-20191127184809462" style="zoom:67%;" /></p>
 <p>The substrate <strong>UpA</strong> and the structurally similar molecule <strong>UpcA</strong> are competitors for the enzyme ribonuclease, which <u>catalyzes hydrolysis of the phosphodiester bond between the two nucleotides.</u></p>
-<p>But if the <u>oxygen atom</u> at the cleavage site in UpA is replaced by a <u>$CH_{2}$ group</u>, the molecule becomes the <em>phosphonate</em> analog <strong>UpcA</strong>, a strong competitive inhibitor.</p>
+<p>But if the <u>oxygen atom</u> at the cleavage site in UpA is replaced by a <u><span class="math inline">\(CH_{2}\)</span> group</u>, the molecule becomes the <em>phosphonate</em> analog <strong>UpcA</strong>, a strong competitive inhibitor.</p>
 <p>The single difference between the substrate and the inhibitor is shown in magenta（品红）.</p>
-<h3 id="2-Uncompetitive-inhibition">2. Uncompetitive inhibition</h3>
-<h4 id="Introduction-2">Introduction</h4>
+<h3 id="uncompetitive-inhibition">2. Uncompetitive inhibition</h3>
+<h4 id="introduction-1">Introduction</h4>
 <p>An <strong>uncompetitive inhibitor</strong> does not compete for the active site but affects the catalytic event. （改变了反应路径）</p>
-<p>This form of inhibition occurs when a molecule or an ion can bind to a <em>second</em> site on an enzyme surface (not the active site) in such a way that it modifies $k_{cat}$</p>
+<p>This form of inhibition occurs when a molecule or an ion can bind to a <em>second</em> site on an enzyme surface (not the active site) in such a way that it modifies <span class="math inline">\(k_{cat}\)</span></p>
 <p>The simplest case to consider is one in which <u>the inhibitor molecule binds only to the ES complex</u> and <u>does not interfere in any way with substrate binding, but completely prevents the catalytic step</u></p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127195710241.png" alt="image-20191127195710241" style="zoom: 50%;" />
-<p>Here we <u>distinguish the equilibrium constant for inhibitor binding to free enzyme</u>, $K_{I} \text{ and } K’<em>{I}$, the equilibrium constant for inhibitor binding to the ES complex.<br>
-$$<br>
-K’</em>{I} = \frac{[ES] [I]}{[EIS]}<br>
-$$<br>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127201747282.png" alt="image-20191127201747282" style="zoom:50%;" /></p>
-<h4 id="Deduction">Deduction</h4>
-<p>$$<br>
-\because [E]<em>{t} = [E] + [ES] + [ESI] \<br>
-k</em>{1} [E] [S] = k_{-1} [ES] + k_{cat} [ES] \<br>
-K’_{I} = \frac{[ES] [I]}{[EIS]}<br>
-$$</p>
-<p>$$<br>
-\therefore [E]<em>{t} = [E] + [ES] + \frac{[ES][I]}{K’</em>{I}}<br>
-$$</p>
-<p>$$<br>
-\therefore [E]<em>{t} - [ES] (1 + \frac{[I]}{K’</em>{I}}) = [E]<br>
-$$</p>
-<p>$$<br>
-\therefore [E][S] = K_{M} [ES] = [E]<em>{t} [S] - [ES] [S] (1 + \frac{[I]}{K’</em>{I}})<br>
-$$</p>
-<p>$$<br>
-\therefore [ES] (K_{M} + (1 + \frac{[I]}{[K’<em>{I}]}) [S] ) = [E]</em>{t} [S]<br>
-$$</p>
-<p>$$<br>
-\therefore v = k_{cat} [ES] = \frac{k_{cat} [E]<em>{t} [S]}{K</em>{M} + (1 + \frac{[I]}{[K’<em>{I}]}) [S] } = \frac{V</em>{max} [S]}{K_{M} + \alpha ’ [S]} = \frac{V_{max}^{app} [S]}{K_{M}^{app} + [S]}<br>
-$$</p>
-<p>Where<br>
-$$<br>
-\alpha ’ = 1 + \frac{[I]}{[K’_{I}]}<br>
-$$</p>
-<p>$$<br>
-V_{M}^{app} = \frac{V_{max}}{\alpha '}<br>
-$$</p>
-<p>$$<br>
-K_{M} = \frac{K_{M}}{\alpha '}<br>
-$$</p>
-<h4 id="Effects-of-uncompetitive-inhibition-on-enzyme-kinetics">Effects of uncompetitive inhibition on enzyme kinetics</h4>
-<p>In the presence of an uncompetitive inhibitor both $V_{max}^{app}$ and $K_{M}^{app}$ appear to be <em>reduced</em> by a factor of $1/\alpha '$（<u>More complex, less free enzyme</u>）</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127195710241.png" alt="image-20191127195710241" style="zoom: 50%;" /></p>
+<p>Here we <u>distinguish the equilibrium constant for inhibitor binding to free enzyme</u>, <span class="math inline">\(K_{I} \text{ and } K&#39;_{I}\)</span>, the equilibrium constant for inhibitor binding to the ES complex. <span class="math display">\[
+K&#39;_{I} = \frac{[ES] [I]}{[EIS]}
+\]</span> <img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127201747282.png" alt="image-20191127201747282" style="zoom:50%;" /></p>
+<h4 id="deduction">Deduction</h4>
+<p><span class="math display">\[
+\because [E]_{t} = [E] + [ES] + [ESI] \\ 
+k_{1} [E] [S] = k_{-1} [ES] + k_{cat} [ES] \\
+K&#39;_{I} = \frac{[ES] [I]}{[EIS]}
+\]</span></p>
+<p><span class="math display">\[
+\therefore [E]_{t} = [E] + [ES] + \frac{[ES][I]}{K&#39;_{I}}
+\]</span></p>
+<p><span class="math display">\[
+\therefore [E]_{t} - [ES] (1 + \frac{[I]}{K&#39;_{I}}) = [E]
+\]</span></p>
+<p><span class="math display">\[
+\therefore [E][S] = K_{M} [ES] = [E]_{t} [S] - [ES] [S] (1 + \frac{[I]}{K&#39;_{I}})
+\]</span></p>
+<p><span class="math display">\[
+\therefore [ES] (K_{M} + (1 + \frac{[I]}{[K&#39;_{I}]}) [S] ) = [E]_{t} [S]
+\]</span></p>
+<p><span class="math display">\[
+\therefore v = k_{cat} [ES] = \frac{k_{cat} [E]_{t} [S]}{K_{M} + (1 + \frac{[I]}{[K&#39;_{I}]}) [S] } = \frac{V_{max} [S]}{K_{M} + \alpha &#39; [S]} = \frac{V_{max}^{app} [S]}{K_{M}^{app} + [S]}
+\]</span></p>
+<p>Where <span class="math display">\[
+\alpha &#39; = 1 + \frac{[I]}{[K&#39;_{I}]}
+\]</span></p>
+<p><span class="math display">\[
+V_{M}^{app} = \frac{V_{max}}{\alpha &#39;}
+\]</span></p>
+<p><span class="math display">\[
+K_{M} = \frac{K_{M}}{\alpha &#39;}
+\]</span></p>
+<h4 id="effects-of-uncompetitive-inhibition-on-enzyme-kinetics">Effects of uncompetitive inhibition on enzyme kinetics</h4>
+<p>In the presence of an uncompetitive inhibitor both <span class="math inline">\(V_{max}^{app}\)</span> and <span class="math inline">\(K_{M}^{app}\)</span> appear to be <em>reduced</em> by a factor of <span class="math inline">\(1/\alpha &#39;\)</span>（<u>More complex, less free enzyme</u>）</p>
 <p><u>Figure 11.33 (a)</u></p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127202617201.png" alt="image-20191127202617201" style="zoom:67%;" />
-<p>At $[S] &lt; K_{M}$ the effect of the inhibitor is minimal because as [S] decreases, <em>v</em> approaches $V_{max}[S]/K_{M}$.</p>
-<p>在最开始的时候，$\alpha ’ [S] + K_{M} \approx K_{M}$，因此两条曲线overlap</p>
-<p>At $[S] &gt; K_{M}$, the effect of the inhibitor on reducing $V_{max}$ is apparent because as [S] increases, <em>v</em> approaches $V_{max} / \alpha '$. (<u>These effects cannot be reversed by increasing [S].</u>)</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127202617201.png" alt="image-20191127202617201" style="zoom:67%;" /></p>
+<p>At <span class="math inline">\([S] &lt; K_{M}\)</span> the effect of the inhibitor is minimal because as [S] decreases, <em>v</em> approaches <span class="math inline">\(V_{max}[S]/K_{M}\)</span>.</p>
+<p>在最开始的时候，<span class="math inline">\(\alpha &#39; [S] + K_{M} \approx K_{M}\)</span>，因此两条曲线overlap</p>
+<p>At <span class="math inline">\([S] &gt; K_{M}\)</span>, the effect of the inhibitor on reducing <span class="math inline">\(V_{max}\)</span> is apparent because as [S] increases, <em>v</em> approaches <span class="math inline">\(V_{max} / \alpha &#39;\)</span>. (<u>These effects cannot be reversed by increasing [S].</u>)</p>
 <p>Thus, as shown in <u>Figure 11.33a</u>, the <em>v</em> vs. [S] plots overlap at low [S] but diverge at higher [S].</p>
 <p>Uncompetitive inhibition is distinguished from competitive inhibition by two observations:</p>
-<ol>
-<li>
-<p>uncompetitive inhibition cannot be reversed by increasing [S]</p>
-</li>
-<li>
-<p>as shown in <u>Figure 11.33b</u>, the Lineweaver–Burk plot yields parallel rather than intersecting lines (because the factor drops out of the ratio to give a slope  = $K_{M}/V_{max}$ for all values of $\alpha '$).</p>
-</li>
+<ol type="1">
+<li><p>uncompetitive inhibition cannot be reversed by increasing [S]</p></li>
+<li><p>as shown in <u>Figure 11.33b</u>, the Lineweaver–Burk plot yields parallel rather than intersecting lines (because the factor drops out of the ratio to give a slope = <span class="math inline">\(K_{M}/V_{max}\)</span> for all values of <span class="math inline">\(\alpha &#39;\)</span>).</p></li>
 </ol>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127202632249.png" alt="image-20191127202632249" style="zoom: 50%;" />
-<h4 id="Example-2">Example</h4>
-<p>This Uncompetitive inhibition behavior is found in the inhibition of acetylcholinesterase (see Chapter 23) by tertiary amines（书胺） $R_{3} N$</p>
-<h3 id="3-Mixed-Inhibition">3. Mixed Inhibition</h3>
-<h4 id="Introduction-3">Introduction</h4>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127202632249.png" alt="image-20191127202632249" style="zoom: 50%;" /></p>
+<h4 id="example-1">Example</h4>
+<p>This Uncompetitive inhibition behavior is found in the inhibition of acetylcholinesterase (see Chapter 23) by tertiary amines（书胺） <span class="math inline">\(R_{3} N\)</span></p>
+<h3 id="mixed-inhibition">3. Mixed Inhibition</h3>
+<h4 id="introduction-2">Introduction</h4>
 <ul>
-<li>The inhibitor binds at a site on the enzyme surface different from that of the substrate.</li>
-<li>In this simplified example, the inhibitor binds to both free enzyme and the ES complex.</li>
-<li>EI has reduced substrate binding affinity compared to free enzyme.</li>
+<li>The inhibitor binds at a site on the enzyme surface different from that of the substrate.<br />
+</li>
+<li>In this simplified example, the inhibitor binds to both free enzyme and the ES complex.<br />
+</li>
+<li>EI has reduced substrate binding affinity compared to free enzyme.<br />
+</li>
 <li>The EIS complex cannot carry out the catalytic event.</li>
 </ul>
 <p>This form of inhibition occurs when a molecule or an ion can bind to both the free enzyme and the ES complex (see <u>Figure 11.34</u>):</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127203116514.png" alt="image-20191127203116514" style="zoom: 67%;" />
-<p>Again, we distinguish the equilibrium constants $K_{I}$ and $K’_{I}$ respectively, for inhibitor binding to E and ES.</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127203116514.png" alt="image-20191127203116514" style="zoom: 67%;" /></p>
+<p>Again, we distinguish the equilibrium constants <span class="math inline">\(K_{I}\)</span> and <span class="math inline">\(K&#39;_{I}\)</span> respectively, for inhibitor binding to E and ES.</p>
 <p>Substrate binding to the EI complex (green arrows in the scheme above) is typically significantly reduced compared to that for binding to free enzyme.</p>
-<p>Thus, the process $EI + S \leftrightarrows EIS$ <u>will not be considered here</u>, although it is part of a complete thermodynamic analysis; in doing so, the derivation of the Michaelis–Menten equation for mixed inhibition is greatly simplified without significantly altering the conclusions of the analysis.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127215329974.png" alt="image-20191127215329974" style="zoom: 50%;" />
+<p>Thus, the process <span class="math inline">\(EI + S \leftrightarrows EIS\)</span> <u>will not be considered here</u>, although it is part of a complete thermodynamic analysis; in doing so, the derivation of the Michaelis–Menten equation for mixed inhibition is greatly simplified without significantly altering the conclusions of the analysis.</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127215329974.png" alt="image-20191127215329974" style="zoom: 50%;" /></p>
 <p>For this simplified case:</p>
-<p><u>equation 11.38</u><br>
-$$<br>
-v = \frac{V_{max}^{app } [S]}{K_{M}^{app} + [S]} = \frac{V_{max}[S]}{\alpha K_{M} + \alpha ’ [S]}<br>
-$$<br>
-此时<br>
-$$<br>
-V_{max}^{app} = \frac{V_{max}}{\alpha’} \<br>
-V_{max}^{app} \text{ decreased }<br>
-$$</p>
-<p>$$<br>
-K_{M}^{app} = \frac{\alpha K_{M}}{\alpha’} = \frac{1 + \frac{[I]}{K_{I}}}{1 + \frac{I}{K’<em>{I}}}K</em>{M} \<br>
-K_{M}^{app} \text{ change depends on }K_{I} \text{ and } K’_{I}<br>
-$$</p>
-<p>In most cases, the inhibitor has a greater affinity for the free enzyme than for the ES complex; thus, $\alpha $ is typically greater than $\alpha’$</p>
+<p><u>equation 11.38</u> <span class="math display">\[
+v = \frac{V_{max}^{app } [S]}{K_{M}^{app} + [S]} = \frac{V_{max}[S]}{\alpha K_{M} + \alpha &#39; [S]}
+\]</span> 此时 <span class="math display">\[
+V_{max}^{app} = \frac{V_{max}}{\alpha&#39;} \\ 
+V_{max}^{app} \text{ decreased }
+\]</span></p>
+<p><span class="math display">\[
+K_{M}^{app} = \frac{\alpha K_{M}}{\alpha&#39;} = \frac{1 + \frac{[I]}{K_{I}}}{1 + \frac{I}{K&#39;_{I}}}K_{M} \\ 
+K_{M}^{app} \text{ change depends on }K_{I} \text{ and } K&#39;_{I}
+\]</span></p>
+<p>In most cases, the inhibitor has a greater affinity for the free enzyme than for the ES complex; thus, $$ is typically greater than <span class="math inline">\(\alpha&#39;\)</span></p>
 <p><u>Figure 11.35</u></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127214803787.png" alt="image-20191127214803787"></p>
-<p><u>Figure 11.35</u> shows that the Lineweaver–Burk plot for mixed inhibition reflects this decreased $V_{max}$ and increased  $K_{M}$ and is distinct from similar plots for competitive and uncompetitive modes of inhibition.</p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127214803787.png" alt="image-20191127214803787" /><figcaption aria-hidden="true">image-20191127214803787</figcaption>
+</figure>
+<p><u>Figure 11.35</u> shows that the Lineweaver–Burk plot for mixed inhibition reflects this decreased <span class="math inline">\(V_{max}\)</span> and increased <span class="math inline">\(K_{M}\)</span> and is distinct from similar plots for competitive and uncompetitive modes of inhibition.</p>
 <p>Finally, mixed inhibitors effectively reduce <em>v</em> at low and high values of [S].</p>
 <ul>
-<li>At $[S] &lt; K_{M}$, <em>v</em> approaches $V_{max} [S] / \alpha K_{M}$</li>
-<li>At $[S] &gt; K_{M}$, <em>v</em> approaches $V_{max} / \alpha’  $</li>
+<li>At <span class="math inline">\([S] &lt; K_{M}\)</span>, <em>v</em> approaches <span class="math inline">\(V_{max} [S] / \alpha K_{M}\)</span></li>
+<li>At <span class="math inline">\([S] &gt; K_{M}\)</span>, <em>v</em> approaches $V_{max} / ' $</li>
 </ul>
-<p>Thus, $V_{max}^{app}$ will be less than $V_{max }$ for all values of [S].</p>
+<p>Thus, <span class="math inline">\(V_{max}^{app}\)</span> will be less than <span class="math inline">\(V_{max }\)</span> for all values of [S].</p>
 <h4 id="noncompetitive-inhibition">noncompetitive inhibition</h4>
-<p>If $\alpha = \alpha’$, then it is a <u>noncompetitive inhibition</u></p>
+<p>If <span class="math inline">\(\alpha = \alpha&#39;\)</span>, then it is a <u>noncompetitive inhibition</u></p>
 <p>Substrate binding doesn’t affect inhibitor binding.</p>
-<p>此时<br>
-$$<br>
-K_{M}^{app} = K_{M}<br>
-$$</p>
-<p>$$<br>
-V_{max}^{app} &lt; V_{max}<br>
-$$</p>
-<h2 id="Irreversible-Inhibition">Irreversible Inhibition</h2>
+<p>此时 <span class="math display">\[
+K_{M}^{app} = K_{M}
+\]</span></p>
+<p><span class="math display">\[
+V_{max}^{app} &lt; V_{max}
+\]</span></p>
+<h2 id="irreversible-inhibition">Irreversible Inhibition</h2>
 <p>Some substances combine <strong>covalently</strong> with enzymes to inactivate them irreversibly.</p>
 <blockquote>
 <p>Because the covalent binding is too strong, so this kind of inhibition is irreversible</p>
 </blockquote>
 <p>In most cases, such substances react with some functional group in the active site to leave it catalytically inactive or to block substrate binding.</p>
-<h3 id="1-Example">1. Example</h3>
-<h4 id="DFP">DFP</h4>
+<h3 id="example-2">1. Example</h3>
+<h4 id="dfp">DFP</h4>
 <p><strong>Irreversible inhibition by adduct formation:</strong></p>
-<p><u>Diisopropyl fluorophosphate (DFP)</u> reacts with a serine group on a protein to form a covalent adduct.  (<u>Figure 11.36</u>)</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127221014962.png" alt="image-20191127221014962" style="zoom: 33%;" />
+<p><u>Diisopropyl fluorophosphate (DFP)</u> reacts with a serine group on a protein to form a covalent adduct. (<u>Figure 11.36</u>)</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191127221014962.png" alt="image-20191127221014962" style="zoom: 33%;" /></p>
 <p>The covalent bond renders the catalytically important serine ineffective in catalysis.</p>
 <p>The adduct also may block substrate binding to the active site.</p>
 <p>For such irreversible inhibitors to react selectively with a critical residue, they must bind strongly to the active site. Many do so because they are <u>transition state analogs</u>.</p>
-<h4 id="TPCK">TPCK</h4>
-<p><em>N-tosyl-<em>L</em>-phenylalaninechloromethyl ketone</em> (<em>TPCK</em>) (see Table 11.7)</p>
+<h4 id="tpck">TPCK</h4>
+<p><em>N-tosyl-</em>L<em>-phenylalaninechloromethyl ketone</em> (<em>TPCK</em>) (see Table 11.7)</p>
 <p>TPCK is an excellent inhibitor for chymotrypsin <u>because the phenyl group fits nicely</u> into the active site pocket, positioning the chlorine for nucleophilic displacement by a nitrogen of the imidazole ring of His 57.</p>
-<h5 id="1-Use-of-TPCK">(1) Use of TPCK</h5>
-<ol>
+<h5 id="use-of-tpck">(1) Use of TPCK</h5>
+<ol type="1">
 <li>A biochemist who is using chymotrypsin to hydrolyze a protein can stop the reaction instantly at any point by simply adding TPCK</li>
 <li>Another use for such substances is to <u>label active site residues of an enzyme</u> specifically to aid in their identification. When irreversible inhibitors are used in this way, they are often called <strong>affinity labels</strong>.</li>
 </ol>
@@ -489,109 +485,102 @@ $$</p>
 <p>In biochemistry, suicide inhibition, also known as suicide inactivation or mechanism-based inhibition, is an irreversible form of enzyme inhibition that occurs when an enzyme binds a substrate analog and forms an irreversible complex with it through a covalent bond during the normal catalysis reaction. The inhibitor binds to the active site where it is modified by the enzyme to produce a reactive group that reacts irreversibly to form a stable inhibitor-enzyme complex.</p>
 </blockquote>
 <p>Example: Penicillin</p>
-<h4 id="Natural-Toxins">Natural Toxins</h4>
+<h4 id="natural-toxins">Natural Toxins</h4>
 <p>Many natural toxins are irreversible enzyme inhibitors.</p>
-<p>The alkaloid <em><strong>physostigmine</strong></em> (see Table 11.7), which is contained in calabar beans, is toxic because it is a potent inhibitor of acetylcholinesterase (乙酰胆碱酯酶).</p>
-<p>The <em><strong>penicillin</strong></em> antibiotics also act as irreversible inhibitors of serine-containing enzymes used in bacterial cell wall synthesis</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128131737263.png" alt="image-20191128131737263"></p>
-<h1>二、Cofactors, Vitamins, and Essential Metals</h1>
+<p>The alkaloid <strong><em>physostigmine</em></strong> (see Table 11.7), which is contained in calabar beans, is toxic because it is a potent inhibitor of acetylcholinesterase (乙酰胆碱酯酶).</p>
+<p>The <strong><em>penicillin</em></strong> antibiotics also act as irreversible inhibitors of serine-containing enzymes used in bacterial cell wall synthesis</p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128131737263.png" alt="image-20191128131737263" /><figcaption aria-hidden="true">image-20191128131737263</figcaption>
+</figure>
+<h1 id="二cofactors-vitamins-and-essential-metals">二、Cofactors, Vitamins, and Essential Metals</h1>
 <p>For some kinds of biological processes, the chemical potential of amino acid side chains alone is not sufficient.</p>
 <p>A protein may require the help of some other small molecule or ion to carry out the reaction. The ions or molecules that are bound to enzymes for this purpose are called <strong>cofactors</strong> or <strong>coenzymes</strong>.</p>
 <p>Like enzymes, cofactors are not irreversibly changed during catalysis; they are either unmodified or regenerated, as discussed above in the case of <strong>dihydrofolate reductase</strong>, which uses the <strong>NADPH cofactor</strong>.</p>
 <p>Cofactors and coenzymes can be</p>
-<ol>
-<li><strong>Essential ions</strong> (mostly metal ions)</li>
+<ol type="1">
+<li><strong>Essential ions</strong> (mostly metal ions)<br />
+</li>
 <li><strong>Small molecules</strong> (organic compounds)</li>
 </ol>
-<p>$$<br>
-\text{Apoenzyme(protein only, inactive) + Cofactor = Holoenzyme(active)}<br>
-$$</p>
-<h2 id="Vitamins">Vitamins</h2>
-<h3 id="1-Functions">1. Functions</h3>
+<p><span class="math display">\[
+\text{Apoenzyme(protein only, inactive) + Cofactor = Holoenzyme(active)}
+\]</span></p>
+<h2 id="vitamins">Vitamins</h2>
+<h3 id="functions">1. Functions</h3>
 <p>Cofactors often have complex organic structures that cannot be synthesized by some organisms—mammals in particular. The water-soluble vitamins, those usually referred to as the <strong>vitamin-B</strong> complex, are <u>metabolic precursors （前体） of several cofactors.</u></p>
 <p>This is why such vitamins are so important in metabolism.</p>
 <blockquote>
 <p><u>Table 11.8</u> lists a number of important enzyme cofactors, together with their related vitamins, the kinds of reactions they are associated with, and where in this textbook you will find detailed descriptions and discussion.</p>
 </blockquote>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128133726035.png" alt="image-20191128133726035"></p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128134506167.png" alt="image-20191128134506167"></p>
-<h3 id="2-Example-niacin-and-nicotinamide-adenine-dinucleotide-NAD">2. Example:  niacin and nicotinamide adenine dinucleotide (NAD+)</h3>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128134518448.png" alt="image-20191128134518448" style="zoom: 50%;" />
-<p>The <strong>nicotinamide（烟碱）</strong> portion is the metabolically relevant part of $NAD^{+}$, because it is capable of being reduced and thus can serve as an <em>oxidizing</em> agent to which two electrons and a proton are added to the nicotinamide ring：<br>
-$$<br>
-NAD^{+} + 2e^{-} + H^{+} \rightarrow NADH<br>
-$$<br>
-The reaction is reversible (i.e., NADH acts as a <em>reducing</em> agent in several reactions) and is formally a <strong>hydride ion</strong> transfer:<br>
-$$<br>
-NAD^{+} + H^{-} \rightleftarrows NADH<br>
-$$<br>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128134533490.png" alt="image-20191128134533490" style="zoom:67%;" /></p>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128133726035.png" alt="image-20191128133726035" /><figcaption aria-hidden="true">image-20191128133726035</figcaption>
+</figure>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128134506167.png" alt="image-20191128134506167" /><figcaption aria-hidden="true">image-20191128134506167</figcaption>
+</figure>
+<h3 id="example-niacin-and-nicotinamide-adenine-dinucleotide-nad">2. Example: niacin and nicotinamide adenine dinucleotide (NAD+)</h3>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128134518448.png" alt="image-20191128134518448" style="zoom: 50%;" /></p>
+<p>The <strong>nicotinamide（烟碱）</strong> portion is the metabolically relevant part of <span class="math inline">\(NAD^{+}\)</span>, because it is capable of being reduced and thus can serve as an <em>oxidizing</em> agent to which two electrons and a proton are added to the nicotinamide ring： <span class="math display">\[
+NAD^{+} + 2e^{-} + H^{+} \rightarrow NADH
+\]</span> The reaction is reversible (i.e., NADH acts as a <em>reducing</em> agent in several reactions) and is formally a <strong>hydride ion</strong> transfer: <span class="math display">\[
+NAD^{+} + H^{-} \rightleftarrows NADH
+\]</span> <img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128134533490.png" alt="image-20191128134533490" style="zoom:67%;" /></p>
 <blockquote>
 <p>Here, R stands for the remainder of the molecule.</p>
 </blockquote>
-<p>A typical reaction in which $NAD^{+}$ acts as an oxidizing agent is the conversion of alcohols to aldehydes（乙醛） or ketones （酮类）(for example, by the <em>alcohol dehydrogenase</em> of liver):</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128134923574.png" alt="image-20191128134923574" style="zoom: 50%;" />
-<h3 id="3-Stereospecific-立体化学特异性">3. Stereospecific 立体化学特异性</h3>
-<h4 id="Introduction-4">Introduction</h4>
+<p>A typical reaction in which <span class="math inline">\(NAD^{+}\)</span> acts as an oxidizing agent is the conversion of alcohols to aldehydes（乙醛） or ketones （酮类）(for example, by the <em>alcohol dehydrogenase</em> of liver):</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128134923574.png" alt="image-20191128134923574" style="zoom: 50%;" /></p>
+<h3 id="stereospecific-立体化学特异性">3. Stereospecific 立体化学特异性</h3>
+<h4 id="introduction-3">Introduction</h4>
 <p>Simple catalyst催化形成的产物可能是多种立体异构体，但是酶催化的反应产物大多具有特定的立体结构</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128135651962.png" alt="image-20191128135651962" style="zoom:80%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128135651962.png" alt="image-20191128135651962" style="zoom:80%;" /></p>
 <p>This figure shows how the asymmetric surface of an enzyme can confer stereospecificity in the reaction of a symmetric substrate.</p>
 <ul>
-<li>
-<p>The asymmetric surface of an enzyme can confer stereospecificity in the  reaction of a symmetric substrate.</p>
-</li>
-<li>
-<p>If the substrate molecule $X_{2} CYZ$ makes at least make three contacts with unique  complementary groups on the enzyme, its two X atoms are no longer equivalent.</p>
-</li>
+<li><p>The asymmetric surface of an enzyme can confer stereospecificity in the reaction of a symmetric substrate.</p></li>
+<li><p>If the substrate molecule <span class="math inline">\(X_{2} CYZ\)</span> makes at least make three contacts with unique complementary groups on the enzyme, its two X atoms are no longer equivalent.</p></li>
 </ul>
 <p>Only a specific one of the two X atoms can contact the surface properly.</p>
-<h4 id="Example-UDP-galactose-4-epimerase">Example: UDP-galactose 4-epimerase</h4>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128142343785.png" alt="image-20191128142343785" style="zoom: 50%;" />
+<h4 id="example-udp-galactose-4-epimerase">Example: UDP-galactose 4-epimerase</h4>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128142343785.png" alt="image-20191128142343785" style="zoom: 50%;" /></p>
 <p><strong>Proposed mechanism for UDP-galactose epimerase:</strong></p>
-<ol>
-<li>UDP-galactose is bound to the enzyme, which carries the coenzyme NAD+ .</li>
+<ol type="1">
+<li>UDP-galactose is bound to the enzyme, which carries the coenzyme NAD+ .<br />
+</li>
 <li>Hydride is transferred to NAD+ from C4 of the galactose ring to produce the carbonyl intermediate.</li>
-<li>Hydride is then transferred back to C4 to give the opposite stereochemistry.</li>
+<li>Hydride is then transferred back to C4 to give the opposite stereochemistry.<br />
+</li>
 <li>The product, UDP-glucose, is released.</li>
 </ol>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128142551231.png" alt="image-20191128142551231" style="zoom: 80%;" />
-<h2 id="Metal-Ions-in-Enzymes">Metal Ions in Enzymes</h2>
-<h3 id="1-Introduction">1. Introduction</h3>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128142551231.png" alt="image-20191128142551231" style="zoom: 80%;" /></p>
+<h2 id="metal-ions-in-enzymes">Metal Ions in Enzymes</h2>
+<h3 id="introduction-4">1. Introduction</h3>
 <p>Many enzymes contain one or more metal ions, usually held by coordinate covalent bonds from amino acid side chains, but sometimes bound by a prosthetic group like <u>heme</u>.</p>
 <p>Such enzymes are called <strong>metalloenzymes（金属酶）</strong></p>
 <p>The bound ion acts in much the same way as a coenzyme, conferring on the metalloenzyme a property it would not possess in its absence.</p>
 <p>As Table 11.9 shows, the roles these ions play are diverse.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128160729219.png" alt="image-20191128160729219" style="zoom:67%;" />
-<h3 id="2-Example-carboxypeptidease-A">2. Example: carboxypeptidease A.</h3>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128160729219.png" alt="image-20191128160729219" style="zoom:67%;" /></p>
+<h3 id="example-carboxypeptidease-a.">2. Example: carboxypeptidease A.</h3>
 <p>The zinc ion in <em>carboxypeptidase A</em> <u>binds the water molecule</u> that attacks the carbonyl of the scissile bond and also acts as an <u>electrostatic catalyst</u> (Figure 11.39)</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128161157369.png" alt="image-20191128161157369" style="zoom: 67%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128161157369.png" alt="image-20191128161157369" style="zoom: 67%;" /></p>
 <p>The zinc ion stabilizes the tetrahedral oxyanion in the transition state and the intermediate state, in much the same way as the oxyanion hole serves this function in chymotrypsin (see Figure 11.19 for comparison).</p>
 <p><strong>Carboxypeptidase A</strong> usually refers to the <u>pancreatic exopeptidase</u>（胰外肽酶） which hydrolyzes</p>
 <p>peptide bonds of C-terminal residues with <u>aromatic or aliphatic（ 脂肪族的）</u> side chains.</p>
-<h3 id="3-Example-Catalase">3. Example: Catalase</h3>
+<h3 id="example-catalase">3. Example: Catalase</h3>
 <p>In other cases, the metal in a metalloenzyme serves as a redox reagent. We have mentioned the example of the heme-iron–containing enzyme <em>catalase</em>, which catalyzes the breakdown of hydrogen peroxide, a potentially destructive agent in cells.</p>
-<p>Because the reaction involves both reduction and oxidation of $H_{2} O_{2}$, the $Fe^{2+}$ is reversibly oxidized and reduced, acting as an <strong>electron exchanger</strong>.</p>
-<h1>三、The Diversity of Enzymatic Function</h1>
-<h2 id="Classification-of-Protein-Enzymes">Classification of Protein Enzymes</h2>
+<p>Because the reaction involves both reduction and oxidation of <span class="math inline">\(H_{2} O_{2}\)</span>, the <span class="math inline">\(Fe^{2+}\)</span> is reversibly oxidized and reduced, acting as an <strong>electron exchanger</strong>.</p>
+<h1 id="三the-diversity-of-enzymatic-function">三、The Diversity of Enzymatic Function</h1>
+<h2 id="classification-of-protein-enzymes">Classification of Protein Enzymes</h2>
 <p>A rational naming and numbering system has been devised by the Enzyme Commission of the International Union of Biochemistry and Molecular Biology (IUBMB).</p>
-<p>Enzymes are divided into six major classes as follows:</p>
-<ol>
-<li><strong>Oxidoreductases</strong> catalyze oxidation-reduction reactions.</li>
-<li><strong>Transferases</strong> catalyze transfer of functional groups from one molecule to<br>
-another.</li>
-<li><strong>Hydrolases</strong> catalyze hydrolytic cleavage.</li>
-<li><strong>Lyases</strong> catalyze removal of a group from or addition of a group to a double<br>
-bond, or other cleavages involving electron rearrangement.</li>
-<li><strong>Isomerases</strong> catalyze intramolecular rearrangement.</li>
-<li><strong>Ligases</strong> catalyze reactions in which two molecules are joined.</li>
-</ol>
+<p>Enzymes are divided into six major classes as follows: 1. <strong>Oxidoreductases</strong> catalyze oxidation-reduction reactions. 2. <strong>Transferases</strong> catalyze transfer of functional groups from one molecule to another. 3. <strong>Hydrolases</strong> catalyze hydrolytic cleavage. 4. <strong>Lyases</strong> catalyze removal of a group from or addition of a group to a double bond, or other cleavages involving electron rearrangement. 5. <strong>Isomerases</strong> catalyze intramolecular rearrangement. 6. <strong>Ligases</strong> catalyze reactions in which two molecules are joined.</p>
 <p>The IUBMB Enzyme Commission (EC) has given each enzyme a number with four parts, such as: EC 3.4.21.5. The first three numbers define major class, subclass, and sub-subclass, respectively.</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128162737888.png" alt="image-20191128162737888"></p>
-<h2 id="Nonprotein-Biocatalysts-Catalytic-Nucleic-Acids"><strong>Nonprotein Biocatalysts: Catalytic Nucleic Acids</strong></h2>
+<figure>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128162737888.png" alt="image-20191128162737888" /><figcaption aria-hidden="true">image-20191128162737888</figcaption>
+</figure>
+<h2 id="nonprotein-biocatalysts-catalytic-nucleic-acids"><strong>Nonprotein Biocatalysts: Catalytic Nucleic Acids</strong></h2>
 <p>Some RNA molecules, called <strong>ribozymes</strong>, can act as enzymes.</p>
 <p>The production of tRNA from pre-tRNA is catalyzed by an RNA–protein complex called <strong>ribonuclease P</strong>.</p>
 <p>The RNA portion of ribonuclease P can by itself catalyze the hydrolysis of the specific phosphodiester bond indicated by the red wedge.</p>
-<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128163052939.png" alt="image-20191128163052939" style="zoom:67%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191128163052939.png" alt="image-20191128163052939" style="zoom:67%;" /></p>
 
     </div>
 
@@ -693,7 +682,7 @@ bond, or other cleavages involving electron rearrangement.</li>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">一、Enzyme Inhibition</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Reversible-Inhibition"><span class="nav-number">1.1.</span> <span class="nav-text">Reversible Inhibition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Irreversible-Inhibition"><span class="nav-number">1.2.</span> <span class="nav-text">Irreversible Inhibition</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">二、Cofactors, Vitamins, and Essential Metals</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vitamins"><span class="nav-number">2.1.</span> <span class="nav-text">Vitamins</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Metal-Ions-in-Enzymes"><span class="nav-number">2.2.</span> <span class="nav-text">Metal Ions in Enzymes</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">三、The Diversity of Enzymatic Function</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Classification-of-Protein-Enzymes"><span class="nav-number">3.1.</span> <span class="nav-text">Classification of Protein Enzymes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nonprotein-Biocatalysts-Catalytic-Nucleic-Acids"><span class="nav-number">3.2.</span> <span class="nav-text">Nonprotein Biocatalysts: Catalytic Nucleic Acids</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80enzyme-inhibition"><span class="nav-number">1.</span> <span class="nav-text">一、Enzyme Inhibition</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#reversible-inhibition"><span class="nav-number">1.1.</span> <span class="nav-text">Reversible Inhibition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#irreversible-inhibition"><span class="nav-number">1.2.</span> <span class="nav-text">Irreversible Inhibition</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8Ccofactors-vitamins-and-essential-metals"><span class="nav-number">2.</span> <span class="nav-text">二、Cofactors, Vitamins, and Essential Metals</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vitamins"><span class="nav-number">2.1.</span> <span class="nav-text">Vitamins</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#metal-ions-in-enzymes"><span class="nav-number">2.2.</span> <span class="nav-text">Metal Ions in Enzymes</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89the-diversity-of-enzymatic-function"><span class="nav-number">3.</span> <span class="nav-text">三、The Diversity of Enzymatic Function</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#classification-of-protein-enzymes"><span class="nav-number">3.1.</span> <span class="nav-text">Classification of Protein Enzymes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nonprotein-biocatalysts-catalytic-nucleic-acids"><span class="nav-number">3.2.</span> <span class="nav-text">Nonprotein Biocatalysts: Catalytic Nucleic Acids</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -758,12 +747,12 @@ bond, or other cleavages involving electron rearrangement.</li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">2m</span>
+    <span title="站点总字数">2.1m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">30:34</span>
+    <span title="站点阅读时长">31:04</span>
 </div><br /> <!-- 换行 -->
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>

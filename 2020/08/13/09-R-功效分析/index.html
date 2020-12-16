@@ -231,7 +231,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>702</span>
+              <span>634</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -249,89 +249,93 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1>三、使用<code>pwr</code>包进行功效分析</h1>
+        <h1 id="三使用pwr包进行功效分析">三、使用<code>pwr</code>包进行功效分析</h1>
 <p>Stéphane Champely开发的<code>pwr</code>包可以实现Cohen（1988）描述的功效分析。</p>
 <p>其中包括一些重要的函数：</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>函数</th>
 <th>功效计算的对象</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td><code>pwr.2p.test()</code></td>
 <td>两比例（<code>n</code> 相等）</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>pwr.2p2n.test()</code></td>
 <td>两比例（<code>n</code> 不相等）</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>pwr.anova.test()</code></td>
 <td>平衡的单因素 ANOVA</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>pwr.chisq.test()</code></td>
 <td>卡方检验</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>pwr.f2.test()</code></td>
 <td>广义线性模型</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>pwr.p.test()</code></td>
 <td>比例（单样本）</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>pwr.r.test()</code></td>
 <td>相关系数</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>pwr.t.test()</code></td>
 <td>t 检验（单样本、两样本、配对）</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>pwr.t2n.test()</code></td>
 <td>t 检验（<em>n</em> 不相等的两样本）</td>
 </tr>
 </tbody>
 </table>
-<h3 id="1-t-test-t-检验">1. t-test (t 检验)</h3>
+<h3 id="t-test-t-检验">1. t-test (t 检验)</h3>
 <p>对于t检验，<code>pwr.t.test()</code>函数提供了许多有用的功效分析选项，格式为：</p>
 <p><code>pwr.t.test(n=, d=, sig.level=, power=, type=, alternative=)</code></p>
 <table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 82%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td><code>n</code></td>
 <td>样本大小</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>d</code></td>
-<td>效应值，即标准化的均值之差<br />$d = \frac{\mu_{1} - \mu_{2}}{\sigma}$</td>
+<td>效应值，即标准化的均值之差<br /><span class="math inline">\(d = \frac{\mu_{1} - \mu_{2}}{\sigma}\)</span></td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>sig.level</code></td>
 <td>显著性水平（默认为0.05）</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>power</code></td>
 <td>功效水平</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>type</code></td>
-<td>检验类型<br />双样本t检验（<code>&quot;two.sample&quot;</code>）<br />单样本t检验（<code>&quot;one.sample&quot;</code>）<br />相依样本t检验（<code>&quot;paired&quot;</code>）。默认为双样本t检验。</td>
+<td>检验类型<br />双样本t检验（<code>"two.sample"</code>）<br />单样本t检验（<code>"one.sample"</code>）<br />相依样本t检验（<code>"paired"</code>）。默认为双样本t检验。</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>alternative</code></td>
-<td><code>&quot;alternative&quot;</code>指统计检验是双侧检验（<code>&quot;two.sided&quot;</code>）还是单侧检验（<code>&quot;less&quot;</code>或 <code>&quot;greater&quot;</code>）。<br />默认为双侧检验。</td>
+<td><code>"alternative"</code>指统计检验是双侧检验（<code>"two.sided"</code>）还是单侧检验（<code>"less"</code>或 <code>"greater"</code>）。<br />默认为双侧检验。</td>
 </tr>
 </tbody>
 </table>
@@ -436,7 +440,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">三、使用pwr包进行功效分析</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E4%BD%BF%E7%94%A8pwr%E5%8C%85%E8%BF%9B%E8%A1%8C%E5%8A%9F%E6%95%88%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">三、使用pwr包进行功效分析</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -501,12 +505,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">2m</span>
+    <span title="站点总字数">2.1m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">30:34</span>
+    <span title="站点阅读时长">31:04</span>
 </div><br /> <!-- 换行 -->
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>
