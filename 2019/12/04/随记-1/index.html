@@ -20,7 +20,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
@@ -108,7 +108,6 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -143,38 +142,11 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
   </ul>
 </nav>
 
 
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
 
 </div>
     </header>
@@ -255,20 +227,18 @@
     </a>
   </span>
   
-  <br>
+  
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span></span>
+              <span>505</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>NaN:aN</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -286,7 +256,7 @@
     <label for="hbePass">Hey, password is required here.</label>
     <div class="bottom-line"></div>
   </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="b632e2e430265e98671611462c2b323821575983c28461e6513efe7dd5a3ad2a">0d8bbf2449259e3f60e9633b2344e777b81da274fb8ae374126e1e57f9367eb1c4a2ffa29e481cac0d4c0dd07e16a4d0ea561fa143cb963fdb92f7df54997c4712673be5176964c7a63da055159aa65ec8d6eafab7eb0a5d2ec13ee37a8b559daa80b5c142e8fc7a3fb8a8c081e346bab5dad62f941c748624460506baa46d0444d39dbd4bad2fb21a62b0b646509948d4ce56de9b3be649f0c8c366cca0f978313f03a813d35b50e18d0d3036bfc923aa4967e006f7071d4ea025ccd4b5e903d9c6dd1c530f31d24b3ccbe5860cb68d84c113830cff3d13061ec64ce2054ca1c2253d77c11e43cc649941b2405b8c3d602d36ef75cda2a5606630a93a3b22e62b351cb386757998f0f330c54b9bf3e29ac201dcb02b2abdf37557cf78c2568f1400a60437ec25e10f5a73ee693274753a627156f951bcafd9959bb78c3bf247bb842137b7325e617920db1fca46771baa286c15a2f2279485a7d115543aa844c9eda4a9c68ad861da47425d39e6597f9c4d73c8ebc6045c83fc152e9f4d2513bbe922ae7dda3deb2d20675683cf3a30b16391bc46259a03d8a6cfeb95f6213a1a7c4e74f60712440c2224728d5fce5362499ff9a026d5aa330de8859043dee42c59894a951e06b1c9fe7dbb2500daa86a98595840c1f2e6ad1efc392f99222c3845db1e112fc4676d07faca683fe4eae5113132e821bb675519b64b6856865213ab017256c91b7ac1bef1d96723286a27d03cdc1820e22b25c1a47ecee75ffa5c6682b8dfe4920704d40ee77e3ec4afffea683e57783a1f55a07502dc614feec9f4c10f564503b964aa4c379bb37eb62188f0a210e82a40195e284b0261508a8a8e420368e179144e0b626d615832512e046de3a40682d4850c7ef323859c661e9e0c376105613877d3eb07957b45327f15ee693daa756997a6dc437f895666e96d6882d3d9dc554f91c138ea1d35ec4e29f786cec813232284bcbd02f880a459a973ea166c0c4e6c57152f9a02b79f66497de5d7fa7800e55651bea4161fab0456fad94ddfa0faae3af7f5f890c150466b150ccfec0244302fc234b237646cde379b63ea19bced4d96e0a9112a05eceff15aa8b8f19837c0ba4d0295b1c1c021b2cc39d571f5123bc0589b0cf0b8d6286150f4764927fba5e459fd22f48fe2fa4f98baff9419b4ffb7a7608ba14a8dc8db40910971a5f6febe61c52ac713ec047b147acf4dce95bf40d61062490ef6fa09ff247c462d52366599273b8d2f60e43fbfc91da42e7e6312f85a079a2f59474803e9988eef6b213ae538f905fa97bf5b0ae1194dbcd49c1329893f1b0ea91c79ab1235bd1d2bc6a6dfcc065c26a89b762169295d21fc5926bef6bae553fb8ad5f5f8b5b27b7b35ee46c29c4783b14650a0cc6e5b09b0418286eb0bba5711c7a6a42cbe52915f1a55829ca45afaa86906d68a283d78298ac144db2a26790acd71f2b3af1b695db967023e8f21fbd4053e6870a91ad87953babe0d6640a56e6b6b58a1e44c2483ccfe7076c87088d7343a97ca81d3a578b1fb6c295bd535bf956e486cf5a91b11102de3ee2c44ab03554c723ec07c0fe87cc25386256414d3e011a5645e9cf09131a441fcacce24e970b2656c757627987a4fb41d7e72a7e9f69f8e22cfd4fc15fcbc166abfd81bb09cf00880ba3a2888398476df0b459b86c0d0702f1ef2ebeedccffbcadb694177050e6495a14a772a4d9b8032aaf960c7a168079762cf51c98312dd18a1f0de535e571c742e024af6cf13df01af69b3cb109b30371f484c19426375b75f8e2d7959b03639baac3205637f871bfd5db2c3c363fbd86c2fe749ea0f55eaf56d2851e2c72a10ef3e767f282d22244485d49442a9c85b5cfe9d1f8589f5e30f4c26b641151d9276d6a9a57059924f89a7e4a9189d81eccbf86321df8b4b15417c1f1df9b3d3cea398e5492493af929428ee354ee4c72fa7d050911f416ca85b28e6ee378752b43c1382e526d69f4d9ae93407f5a75cbb3d8beb50094d1da71edf0e33cf6eb8454c50308ce73cd71b0711ce44173ffba587a7163ecca709b97c33ec46f9cb944219c7d289ff41388d3b1e9aa7f91309699b4107fd0eb6dc7d6ca0d801</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="89446d5c93f48fafb9ac0b7d252bc5b2774cafca9a531fa116ce2d6ae3c492d0">0d8bbf2449259e3f60e9633b2344e777b81da274fb8ae374126e1e57f9367eb1c4a2ffa29e481cac0d4c0dd07e16a4d0ea561fa143cb963fdb92f7df54997c4712673be5176964c7a63da055159aa65ec8d6eafab7eb0a5d2ec13ee37a8b559daa80b5c142e8fc7a3fb8a8c081e346bab5dad62f941c748624460506baa46d0444d39dbd4bad2fb21a62b0b646509948d4ce56de9b3be649f0c8c366cca0f978313f03a813d35b50e18d0d3036bfc9239a1b66d8631c085e52ea3a7d502c69c54ac0fc54bab89379f16b6e44699a5474614ee449090ced93ff1e81a4e0d97d5b8c85d075f1679eb381438f347a7acded009249ac18b3490b06d5af5d796f06359862a91a9e316b0d8e4f93e4f32251cf6baccc48a1960b4729f9588dbd9788a47a6b8a428d691208e8394bd42956b0c6f056a6f98e7531d30f91aa43525f420ae74225322da3ad5e12875a4ca0eb3eceedf96078f5858836f8b5dce903a3d7a4989799d7d9cf382322f70144db4fb67714ec5dc9a742f7a9dca69393cc33245a81f9578683c3d3bc252b2b3db3b1c272669ce01759b15a6a0373a10a70c8b5cd33ef7c9ddfe20ec449f73ce5a60a3026344b66f1e63490e2448e0e8624ca934148e5582f3a72cb324630f92ebb7bdc97b37b30a5df1cf945ae155d7d0d3c7b0a0e875521b11453ecdc89497a3bf8f41a6e059c78aac59ad4001ae741b2c3bdddf030341bf3319c8cbe05e14a182e02ae15300b3752ae60812b13824609f698ed813ae3a69888090398b4ad9a357885b6b347b4f2b6ebcb38c3d3a653dd4a6b9c7ec9b1914998ab9cbc90f11713db84272059a89f7f9a07e9f7f8671fec88021ed3d7b11ec0c4afe13d4ee76dfba5a762a59f143d47f568e435aed30b1146fe19930de31dc56b3a1bf123ea2fbfdfcb198bb43058ad2c9fd38e70b3b7cad9975660f6e8963c5597a244fa1d14eaa44628a7e0d6763210b13016f05b7e10837f19246a506f6aaecfd7c0073227b0a1d240e8f4ef30fa2509063d32fb3cfb13ab33e90292249af1d583c3dac7cbd218c494aebfd9984f3a0dfeff5d02fe6507e0166f4ebc7ca40f576f328d0c37084dbebe2510827207e82cbcdd1402ae6f62fb492efb7f1fef420ad75ff175ee7dabbf4f1ac513932fc08547726a7d2e0618731d27b4503545e74f9c1895fdf89519675691b6109eaeb27674e4f3cc5992034c161b2c21393bc18c7cc816484eb1d2977c9614b0315032c0f00ef0a3ecc8d05a84178ee96acd22065175d20fc6d5fdbd834a600b6dcd84c2188346f4dd4fcc6cc7fb746fc52c9bc23307e0925ac4b50a32c58e8d5b6b3ed7d989602c27777502bdfe4b0d69fc176942a82b993c85a21f8a302b61c9238baf8f0e10c7111c8caf99505bac36e99f6158a3a2c3109c8506341f2674f91984f11fc09a067ec874469a7eb3aa1c2158b4d87e176c53bb1ad56b97a94659d19bee2747b6261fa4fb0f945c5b038006063ad1b21af0131f4222809ad0918047096b398e0969d3f893dd89dc555d61c20c099eef2d612a72f4153605b8c08ae2d227f673d6a926cc58d28ce8081f24be1796b01b40d6200b272f8dc5eecd3272b871d27cd05270dc471ce1ca93b966dade483804c76b03eb8a29db39329bba22b71ef37f32fda4d0b53135eb8df6b4ed855ae8926a8d038fe0062fda08415b5fb43bf4f75bb63e7f38cd1414f2e2a02743adf360ff4a693ab27c9ff48633c5b8cbfab1866e4b237aa4707c186de4442059d6a2969ec311bab058e532df2ebfcd93a69a5f87ebf657298fcea04ba0a259c50d9c57d48a35b8bb60a94abd124071074ac2e9a3b92e88b4d4290b2631b0358b3c6bb1ddbb89a1780f169052c2dabf95529d5ea37518774979ee584cbc6fb4af0b454c1d00ce9cbfb7f5418c010e5c8d247dfbf8394f90f751b25ab3b824434da466c908f53cda20877f44b9a7ea25d6febbe63c9bbc15123540986ca1afb939fcfb9aa26697c09e0f9f1a4a3b23fcf2c44b1f48cec923d4c710bcb27e36411b1e7680957c6616b58c2d622e44413afebec29238b215788d9660aa33608d96a46e67be977c55e29e1d58</script>
 </div>
 <script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
     </div>
@@ -453,14 +423,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-      <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">NaNm</span>
+    <span title="站点总字数">2m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">NaN:aN</span>
+    <span title="站点阅读时长">30:27</span>
 </div><br /> <!-- 换行 -->
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>
@@ -522,10 +490,6 @@ setInterval("createtime()",250);
   
 
 
-
-
-  
-<script src="/js/local-search.js"></script>
 
 
 

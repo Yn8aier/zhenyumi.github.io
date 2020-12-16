@@ -20,7 +20,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Wed Nov 11 2020 08:33:54 GMT+0800 (GMT+08:00)">
@@ -143,7 +143,6 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -178,38 +177,11 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
   </ul>
 </nav>
 
 
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
 
 </div>
     </header>
@@ -295,20 +267,18 @@
     </a>
   </span>
   
-  <br>
+  
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span></span>
+              <span>9.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>NaN:aN</span>
+              <span>9 分钟</span>
             </span>
 
         </div>
@@ -337,12 +307,12 @@
 <li>PACBIO sequencing</li>
 <li>Nanopore sequencing</li>
 </ol>
-<h1 id="一-maxam-gilbert-sequencing"><a class="markdownIt-Anchor" href="#一-maxam-gilbert-sequencing"></a> 一、Maxam-Gilbert Sequencing</h1>
+<h1>一、Maxam-Gilbert Sequencing</h1>
 <p>It is a method by which the sequence of a DNA <strong>fragment</strong> is identified by using chemicals, which means cut DNA at specific points.</p>
 <ul>
 <li>Also called <strong>Chemical degradation</strong> method of DNA sequencing</li>
 </ul>
-<h2 id="procedure"><a class="markdownIt-Anchor" href="#procedure"></a> Procedure</h2>
+<h2 id="Procedure">Procedure</h2>
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223125457.png" alt="image-20201021223125457" style="zoom:67%;" />
 <ul>
 <li>E.g it is a fragment of double stranded DNA, and you do not know its sequence</li>
@@ -352,7 +322,7 @@
 <ul>
 <li>At first, the double stranded fragment is separated into two single strands by applying <strong>high Temperature</strong> or <strong>high PH</strong>.</li>
 </ul>
-<hr />
+<hr>
 <p><strong>Step :2 Separate two strand on gel</strong></p>
 <p>Run the single stranded fragments on gel.</p>
 <ul>
@@ -366,12 +336,12 @@
 <ul>
 <li><strong>Fig: Single stranded DNA fragments in Gel Electrophoresis gel.</strong></li>
 </ul>
-<hr />
+<hr>
 <p><strong>Step :3, Radioactive end labeling of ssDNA</strong></p>
 <p>Take one of fragment band from the gel</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223340198.png" alt="image-20201021223340198" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223340198.png" alt="image-20201021223340198"></p>
 <p>Remove the Phosphate at 5′ end and incorporate radioactive 32-PO4 enzymatically.</p>
-<hr />
+<hr>
 <p><strong>Step 4: Chemical Degradation</strong></p>
 <p>Now let’s put isolated and end-labelled ssDNA into four tubes</p>
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223438541.png" alt="image-20201021223438541" style="zoom: 50%;" />
@@ -387,23 +357,23 @@
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021223125457.png" alt="image-20201021223125457" style="zoom:67%;" />
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224116198.png" alt="image-20201021224116198" style="zoom: 33%;" />
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224126346.png" alt="image-20201021224126346" style="zoom:50%;" />
-<hr />
+<hr>
 <p><strong>Step 5: Gel electrophoresis</strong></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224150565.png" alt="image-20201021224150565" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021224150565.png" alt="image-20201021224150565"></p>
 <ul>
 <li>All of the fragments from each four tubes are pour in Gel.</li>
 <li>Four wells will be make on Gel with each tube of the samples running into one well.</li>
 <li>Fragments would separate on Gel according to size.</li>
 <li>After placing X ray film on top of gel, radioactive labelled fragments would emit a band at their position</li>
 </ul>
-<h2 id="advantages"><a class="markdownIt-Anchor" href="#advantages"></a> Advantages</h2>
+<h2 id="Advantages">Advantages</h2>
 <ol>
 <li>Directly read purified DNA.</li>
 <li>Used sequence heterogenous DNA as well as Homopolymeric sequences.</li>
 <li>used to analyze DNA-Protein interaction.</li>
 <li>Used to analyze Epigenetic modification and nucleic acid structure.</li>
 </ol>
-<h2 id="disadvantages"><a class="markdownIt-Anchor" href="#disadvantages"></a> Disadvantages</h2>
+<h2 id="Disadvantages">Disadvantages</h2>
 <ol>
 <li>Use of toxic chemicals and extensive use of radioactive isotopes. highly poisonous and unstable</li>
 <li>Cannot read more than 500bp</li>
@@ -417,8 +387,8 @@
 <li>This method, although based on very simple principles, came with a whole lot of trouble. First, it was time consuming. And that was supposing that everything went well on the first try. <u>A lot of steps in the method could cause problems</u>: the radioactive labeling process, the cleavage reactions, the gel set up, the electrophoresis, and the X-ray film developer. Using this method you could only confirm about 200–300 bases of DNA every few days!</li>
 <li>Maxam-Gilbert sequencing also required working with large amounts of radioactive material and working closely with <u>hydrazine, which is a known neurotoxin</u>. The development of other techniques, and the simplification of Sanger sequencing, caused chemical sequencing to lose its appeal. With the birth of next-generation sequencing, Maxam-Gilbert sequencing is almost extinct and many are claiming the same will happen to Sanger sequencing.</li>
 </ul>
-<h1 id="二-sanger-sequencing"><a class="markdownIt-Anchor" href="#二-sanger-sequencing"></a> 二、Sanger Sequencing</h1>
-<h2 id="principles"><a class="markdownIt-Anchor" href="#principles"></a> Principles</h2>
+<h1>二、Sanger Sequencing</h1>
+<h2 id="Principles">Principles</h2>
 <p>Sanger sequencing: <u>Chain-terminating method</u> of DNA sequencing</p>
 <p><strong>Dideoxy nucleotide</strong> mediated chain-terminating method</p>
 <ul>
@@ -431,7 +401,7 @@
 <li>ddNTPs are the terminator molecules…</li>
 </ul>
 <p>Each ddNTP has label for different color fluorescence</p>
-<h3 id="1-ingredients-for-sanger-sequencing"><a class="markdownIt-Anchor" href="#1-ingredients-for-sanger-sequencing"></a> 1. Ingredients for Sanger Sequencing</h3>
+<h3 id="1-Ingredients-for-Sanger-Sequencing">1. Ingredients for Sanger Sequencing</h3>
 <ol>
 <li>The <u><strong>template</strong></u> DNA to be sequenced</li>
 <li>A <strong><u>DNA polymerase</u></strong> enzyme – A thermo stable form of DNA polymerase, enable doing cycles of reaction in PCR machine.</li>
@@ -449,17 +419,17 @@
 </ul>
 </li>
 </ol>
-<h3 id="2-the-machine-used-in-sanger-sequencing"><a class="markdownIt-Anchor" href="#2-the-machine-used-in-sanger-sequencing"></a> 2. The Machine Used in Sanger Sequencing</h3>
+<h3 id="2-The-Machine-Used-in-Sanger-Sequencing">2. The Machine Used in Sanger Sequencing</h3>
 <p>ABI377:</p>
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225644070.png" alt="image-20201021225644070" style="zoom: 25%;" />
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225653363.png" alt="image-20201021225653363" style="zoom: 50%;" />
 <p><strong>ABI3730, high-throughput Sanger sequencing</strong> :</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225711008.png" alt="image-20201021225711008" /></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225715887.png" alt="image-20201021225715887" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225711008.png" alt="image-20201021225711008"></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225715887.png" alt="image-20201021225715887"></p>
 <p>Many Systems for Sanger Automation:</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225729395.png" alt="image-20201021225729395" /></p>
-<h1 id="一-next-generation-sequencing"><a class="markdownIt-Anchor" href="#一-next-generation-sequencing"></a> 一、Next Generation Sequencing</h1>
-<h2 id="illumina"><a class="markdownIt-Anchor" href="#illumina"></a> Illumina</h2>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225729395.png" alt="image-20201021225729395"></p>
+<h1>一、Next Generation Sequencing</h1>
+<h2 id="Illumina">Illumina</h2>
 <p>Typical Illumina Setup:</p>
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225826446.png" alt="image-20201021225826446" style="zoom: 33%;" />
 <p>Illumina Outline: The key steps</p>
@@ -469,9 +439,9 @@
 <li>Sequence by synthesis (SBS)</li>
 <li>Data analysis</li>
 </ol>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225908181.png" alt="image-20201021225908181" /></p>
-<h2 id="key-steps"><a class="markdownIt-Anchor" href="#key-steps"></a> Key Steps</h2>
-<h3 id="1-making-a-sequencing-library"><a class="markdownIt-Anchor" href="#1-making-a-sequencing-library"></a> 1. Making a Sequencing library</h3>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225908181.png" alt="image-20201021225908181"></p>
+<h2 id="Key-Steps">Key Steps</h2>
+<h3 id="1-Making-a-Sequencing-library">1. Making a Sequencing library</h3>
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225925017.png" alt="image-20201021225925017" style="zoom: 50%;" />
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021225930245.png" alt="image-20201021225930245" style="zoom: 67%;" />
 <p>Making a sequencing Library: The key steps</p>
@@ -480,22 +450,22 @@
 <li>The sequencing adaptor enables PCR amplification of the library.</li>
 <li>The sequencing adaptor enables anchoring of the library to the flow cell and the following cluster generation</li>
 </ol>
-<h3 id="2-cluster-generation"><a class="markdownIt-Anchor" href="#2-cluster-generation"></a> 2. Cluster generation</h3>
+<h3 id="2-Cluster-generation">2. Cluster generation</h3>
 <ol>
 <li>Apply the library to the flowcell.</li>
 <li>Cluster generation by solid phase PCR (bridge amplification)</li>
 <li>Each single molecule of DNA in the original sequencing library form a “cluster” on the surface of the flowcell through amplification. (1 million copy of original copy)</li>
 </ol>
-<h3 id="3-sequence-by-synthesis-sbs"><a class="markdownIt-Anchor" href="#3-sequence-by-synthesis-sbs"></a> 3. Sequence by synthesis (SBS)</h3>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021230120169.png" alt="image-20201021230120169" /></p>
+<h3 id="3-Sequence-by-synthesis-SBS">3. Sequence by synthesis (SBS)</h3>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021230120169.png" alt="image-20201021230120169"></p>
 <ol>
 <li>Fluorescent labeled Reversible terminators are incorporated into the growing DNA chain</li>
 <li>Only a single fluorescent color is used, so each of the four bases must be added in a separate cycle of DNA synthesis and imaging</li>
 <li>Imaging to record the signal</li>
 <li>Next nucleotide is then being added.</li>
 </ol>
-<h3 id="4-data-analysis"><a class="markdownIt-Anchor" href="#4-data-analysis"></a> 4. Data analysis</h3>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021230620472.png" alt="image-20201021230620472" /></p>
+<h3 id="4-Data-analysis">4. Data analysis</h3>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021230620472.png" alt="image-20201021230620472"></p>
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021230627490.png" alt="image-20201021230627490" style="zoom: 25%;" />
 <ul>
 <li>Initial Data QC</li>
@@ -503,7 +473,7 @@
 <li>Mapping to the reference genome</li>
 <li>Downstream analysis</li>
 </ul>
-<h2 id="comparison-to-sanger-sequencing"><a class="markdownIt-Anchor" href="#comparison-to-sanger-sequencing"></a> Comparison to Sanger Sequencing</h2>
+<h2 id="Comparison-to-Sanger-Sequencing">Comparison to Sanger Sequencing</h2>
 <table>
 <thead>
 <tr>
@@ -525,18 +495,18 @@
 </tr>
 </tbody>
 </table>
-<h1 id="四-third-generation-sequencing-long-read-sequencing"><a class="markdownIt-Anchor" href="#四-third-generation-sequencing-long-read-sequencing"></a> 四、Third Generation Sequencing - Long Read Sequencing</h1>
+<h1>四、Third Generation Sequencing - Long Read Sequencing</h1>
 <p>Third generation sequencing- long read sequencing</p>
 <p>Third-generation sequencing (also known as long-read sequencing) is a class of <u>DNA sequencing</u> methods currently under active developments</p>
 <p>Since eukaryotic genomes contain many <u>repetitive regions</u>, a major limitation to sanger or illumina sequencing methods is the length of reads it produces.</p>
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231035921.png" alt="image-20201021231035921" style="zoom: 25%;" />
-<h2 id="pacbio-pacific-bioscience-sequencing"><a class="markdownIt-Anchor" href="#pacbio-pacific-bioscience-sequencing"></a> PACBIO: Pacific Bioscience sequencing</h2>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231103479.png" alt="image-20201021231103479" /></p>
+<h2 id="PACBIO-Pacific-Bioscience-sequencing">PACBIO: Pacific Bioscience sequencing</h2>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231103479.png" alt="image-20201021231103479"></p>
 <ul>
 <li>SMRT(Single-Molecule Real Time Sequencing)</li>
 </ul>
 <p>Zero-mode waveguides:</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231121500.png" alt="image-20201021231121500" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231121500.png" alt="image-20201021231121500"></p>
 <p>SMRT flow cell, there are thousands of tiny pores called zero-mode waveguides (ZMWs)</p>
 <p>Each ZMW represents one reaction chamber and at the bottom of the chamber sits (immobilized) the DNA polymerase machinery.</p>
 <p>The pore size (~70nm in diameter, 100nm in depth) is too small for light to pass through easily, thus creating an observation volume that is small enough to observe only a single nucleotide being incorporated and each base is added</p>
@@ -547,14 +517,14 @@
 <li>80Gbp (20kb/read) = 4x10^6 reads = 4 million reads for the whole flow cell.</li>
 <li>120Gbp (200bp/read) = 120X10^9/ 2x10^2 = 600 Million reads for the whole flow cell</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231238834.png" alt="image-20201021231238834" /></p>
-<h2 id="nanopore-sequencing"><a class="markdownIt-Anchor" href="#nanopore-sequencing"></a> Nanopore Sequencing</h2>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231238834.png" alt="image-20201021231238834"></p>
+<h2 id="Nanopore-Sequencing">Nanopore Sequencing</h2>
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231255177.png" alt="image-20201021231255177" style="zoom:67%;" />
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231309373.png" alt="image-20201021231309373" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231309373.png" alt="image-20201021231309373"></p>
 <ul>
 <li>A protein nanopore is set in an electrically resistant polymer membrane. An ionic current is passed through the nanopore by setting a voltage across this membrane. If an analyte passes through the pore or near its aperture, this event creates a characteristic disruption in current (as shown in the diagram below). Measurement of that current makes it possible to identify the molecule in question</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231325388.png" alt="image-20201021231325388" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231325388.png" alt="image-20201021231325388"></p>
 <p><strong>Nanopore</strong></p>
 <ul>
 <li>A protein nanopore is set in an electrically-resistant polymer membrane</li>
@@ -567,16 +537,16 @@
 <ul>
 <li>Each microscaffold corresponds to its own electrode that is connected to a channel in the sensor array chip. Sensor arrays may be manufactured with any number of channels</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231359331.png" alt="image-20201021231359331" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231359331.png" alt="image-20201021231359331"></p>
 <p>The idea of sample multiplexing:</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231407182.png" alt="image-20201021231407182" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201021231407182.png" alt="image-20201021231407182"></p>
 <p>Multiplex Sequencing Highlights</p>
 <ul>
 <li><strong>Fast High-Throughput</strong> <strong>Strategy:</strong> Large sample numbers can be simultaneously sequenced during a single experiment</li>
 <li><strong>Cost-Effective Method:</strong> Sample pooling improves productivity by reducing time and reagent use</li>
 <li><strong>Simplified Analysis:</strong> Automatic sample identification with “barcodes” using Illumina data analysis softwares</li>
 </ul>
-<h1 id="comparing-different-sequencing-strategies"><a class="markdownIt-Anchor" href="#comparing-different-sequencing-strategies"></a> Comparing different sequencing strategies</h1>
+<h1>Comparing different sequencing strategies</h1>
 <table>
 <thead>
 <tr>
@@ -696,7 +666,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-maxam-gilbert-sequencing"><span class="nav-number">1.</span> <span class="nav-text"> 一、Maxam-Gilbert Sequencing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#procedure"><span class="nav-number">1.1.</span> <span class="nav-text"> Procedure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#advantages"><span class="nav-number">1.2.</span> <span class="nav-text"> Advantages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#disadvantages"><span class="nav-number">1.3.</span> <span class="nav-text"> Disadvantages</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-sanger-sequencing"><span class="nav-number">2.</span> <span class="nav-text"> 二、Sanger Sequencing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#principles"><span class="nav-number">2.1.</span> <span class="nav-text"> Principles</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-next-generation-sequencing"><span class="nav-number">3.</span> <span class="nav-text"> 一、Next Generation Sequencing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#illumina"><span class="nav-number">3.1.</span> <span class="nav-text"> Illumina</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#key-steps"><span class="nav-number">3.2.</span> <span class="nav-text"> Key Steps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#comparison-to-sanger-sequencing"><span class="nav-number">3.3.</span> <span class="nav-text"> Comparison to Sanger Sequencing</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B-third-generation-sequencing-long-read-sequencing"><span class="nav-number">4.</span> <span class="nav-text"> 四、Third Generation Sequencing - Long Read Sequencing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pacbio-pacific-bioscience-sequencing"><span class="nav-number">4.1.</span> <span class="nav-text"> PACBIO: Pacific Bioscience sequencing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nanopore-sequencing"><span class="nav-number">4.2.</span> <span class="nav-text"> Nanopore Sequencing</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#comparing-different-sequencing-strategies"><span class="nav-number">5.</span> <span class="nav-text"> Comparing different sequencing strategies</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">一、Maxam-Gilbert Sequencing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Procedure"><span class="nav-number">1.1.</span> <span class="nav-text">Procedure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Advantages"><span class="nav-number">1.2.</span> <span class="nav-text">Advantages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Disadvantages"><span class="nav-number">1.3.</span> <span class="nav-text">Disadvantages</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">二、Sanger Sequencing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Principles"><span class="nav-number">2.1.</span> <span class="nav-text">Principles</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">一、Next Generation Sequencing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Illumina"><span class="nav-number">3.1.</span> <span class="nav-text">Illumina</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Key-Steps"><span class="nav-number">3.2.</span> <span class="nav-text">Key Steps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Comparison-to-Sanger-Sequencing"><span class="nav-number">3.3.</span> <span class="nav-text">Comparison to Sanger Sequencing</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">四、Third Generation Sequencing - Long Read Sequencing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PACBIO-Pacific-Bioscience-sequencing"><span class="nav-number">4.1.</span> <span class="nav-text">PACBIO: Pacific Bioscience sequencing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nanopore-Sequencing"><span class="nav-number">4.2.</span> <span class="nav-text">Nanopore Sequencing</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">Comparing different sequencing strategies</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -761,14 +731,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-      <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">NaNm</span>
+    <span title="站点总字数">2m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">NaN:aN</span>
+    <span title="站点阅读时长">30:27</span>
 </div><br /> <!-- 换行 -->
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>
@@ -830,10 +798,6 @@ setInterval("createtime()",250);
   
 
 
-
-
-  
-<script src="/js/local-search.js"></script>
 
 
 

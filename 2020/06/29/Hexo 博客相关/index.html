@@ -20,7 +20,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="与这个博客相关的一些东西">
@@ -111,7 +111,6 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -146,38 +145,11 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
   </ul>
 </nav>
 
 
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
 
 </div>
     </header>
@@ -269,20 +241,18 @@
     </a>
   </span>
   
-  <br>
+  
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span></span>
+              <span>1.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>NaN:aN</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -294,13 +264,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="关于这个博客"><a class="markdownIt-Anchor" href="#关于这个博客"></a> 关于这个博客</h2>
+        <h2 id="关于这个博客">关于这个博客</h2>
 <p>这个网站是依赖Hexo搭建起来的，将网页配置文件都加载到了GitHub Pages上，因为GitHub下行速率比较有限，因此同时还使用了腾讯云的对象存储作为图床。</p>
 <p>因为日常使用并没有那么高频，也就没有特意去购买一个专用的云服务器，所以托GitHub总是抽风的福，博客也经常挂掉。</p>
 <p><del>也许以后我有钱之后会购买一个云服务器来建站吧</del></p>
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A42.jpg" alt="常用命令2" style="zoom:33%;" />
-<h2 id="hexo-博客常用内容"><a class="markdownIt-Anchor" href="#hexo-博客常用内容"></a> Hexo 博客常用内容</h2>
-<h3 id="1-git-bash-端操作"><a class="markdownIt-Anchor" href="#1-git-bash-端操作"></a> 1. Git Bash 端操作</h3>
+<h2 id="Hexo-博客常用内容">Hexo 博客常用内容</h2>
+<h3 id="1-Git-Bash-端操作">1. Git Bash 端操作</h3>
 <table>
 <thead>
 <tr>
@@ -335,8 +305,8 @@
 <li>在上传之前，务必先<strong>清除缓存</strong>，以及使用 hexo s 本地调试一下</li>
 </ol>
 <img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A43.jpg" alt="常用命令3" style="zoom: 20%;" />
-<h3 id="2-添加博文"><a class="markdownIt-Anchor" href="#2-添加博文"></a> 2. 添加博文</h3>
-<h4 id="直接添加post"><a class="markdownIt-Anchor" href="#直接添加post"></a> 直接添加Post</h4>
+<h3 id="2-添加博文">2. 添加博文</h3>
+<h4 id="直接添加Post">直接添加Post</h4>
 <p>添加博文（post、page、…）的方式大致有两种：</p>
 <ol>
 <li>
@@ -354,19 +324,19 @@
 <p>Hexo Admin使用的时候需要先清理缓存，之后再次生成缓存文件，之后在本地搭建网页：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 <p>可以在 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 观察生成的静态网页的效果，同时在 <a target="_blank" rel="noopener" href="http://localhost:4000/admin/">http://localhost:4000/admin/</a> 使用Hexo Admin进行可视化管理。</p>
-<hr />
+<hr>
 </li>
 </ol>
 <p>因此推荐使用命令行进行新建，通过Hexo Admin进行管理。</p>
-<h4 id="从草稿draft添加post"><a class="markdownIt-Anchor" href="#从草稿draft添加post"></a> 从草稿（Draft）添加Post</h4>
-<h5 id="1-添加draft"><a class="markdownIt-Anchor" href="#1-添加draft"></a> (1) 添加Draft</h5>
+<h4 id="从草稿（Draft）添加Post">从草稿（Draft）添加Post</h4>
+<h5 id="1-添加Draft">(1) 添加Draft</h5>
 <p>Hexo 的一种特殊布局：<code>draft</code>，这种布局在建立时会被保存到 <code>source/_drafts</code> 文件夹。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new draft &quot;name&quot;</span><br></pre></td></tr></table></figure>
 <p>之后可以在<code>source/_drafts</code>中找到该文件进行编辑</p>
-<h5 id="2-发布publish草稿"><a class="markdownIt-Anchor" href="#2-发布publish草稿"></a> (2) 发布（Publish）草稿</h5>
+<h5 id="2-发布（Publish）草稿">(2) 发布（Publish）草稿</h5>
 <p>可通过 <code>publish</code> 命令将草稿移动到 <code>source/_posts</code> 文件夹，该命令的使用方式与 <code>new</code> 十分类似，也可在命令中指定 <code>layout</code> 来指定布局。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish [layout] &quot;name&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="3-博文的常用参数"><a class="markdownIt-Anchor" href="#3-博文的常用参数"></a> 3. 博文的常用参数</h3>
+<h3 id="3-博文的常用参数">3. 博文的常用参数</h3>
 <table>
 <thead>
 <tr>
@@ -526,7 +496,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2"><span class="nav-number">1.</span> <span class="nav-text"> 关于这个博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text"> Hexo 博客常用内容</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2"><span class="nav-number">1.</span> <span class="nav-text">关于这个博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">Hexo 博客常用内容</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -591,14 +561,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-      <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">NaNm</span>
+    <span title="站点总字数">2m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">NaN:aN</span>
+    <span title="站点阅读时长">30:27</span>
 </div><br /> <!-- 换行 -->
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>
@@ -660,10 +628,6 @@ setInterval("createtime()",250);
   
 
 
-
-
-  
-<script src="/js/local-search.js"></script>
 
 
 

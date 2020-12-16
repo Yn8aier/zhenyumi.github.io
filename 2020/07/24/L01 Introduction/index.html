@@ -20,7 +20,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="No such things">
@@ -114,7 +114,6 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -149,38 +148,11 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
   </ul>
 </nav>
 
 
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
 
 </div>
     </header>
@@ -265,20 +237,18 @@
     </a>
   </span>
   
-  <br>
+  
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span></span>
+              <span>2.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>NaN:aN</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -290,8 +260,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="一-introduction"><a class="markdownIt-Anchor" href="#一-introduction"></a> 一、Introduction</h1>
-<h2 id="a-historical-perspective-on-molecular-biology"><a class="markdownIt-Anchor" href="#a-historical-perspective-on-molecular-biology"></a> A historical perspective on molecular biology</h2>
+        <h1>一、Introduction</h1>
+<h2 id="A-historical-perspective-on-molecular-biology">A historical perspective on molecular biology</h2>
 <p><strong>1941</strong> One gene encodes one protein (Beadle and Tatum).</p>
 <p><strong>1944</strong> DNA is the molecule that mediates heredity (Avery, MacLeod, &amp; McCarty)</p>
 <p><strong>1946</strong> Genetic material can be transferred between bacterial cells (Lederberg &amp; Tatum)</p>
@@ -312,7 +282,7 @@
 <li>the development of biochemical and physical methods for studying specific molecules.</li>
 <li>the widespread application of a set of logical principals for designing experiments and interpreting data.</li>
 </ol>
-<h2 id="the-logic-of-molecular-biology"><a class="markdownIt-Anchor" href="#the-logic-of-molecular-biology"></a> The Logic of Molecular Biology</h2>
+<h2 id="The-Logic-of-Molecular-Biology">The Logic of Molecular Biology</h2>
 <ol>
 <li>Most biological processes work in the most efficient manner (<strong>parsimony(节俭) &amp; simplicity</strong> are intuitively favorable).</li>
 <li>Phylogeny matters – organisms are related and molecular mechanisms are <strong>conserved.</strong></li>
@@ -322,7 +292,7 @@
 <li><strong>Intuition</strong> can be used to infer the best explanation, along with exclusion of all other reasonable possibilities (based on experimental data).</li>
 <li>Optimism that <strong>reductionist approaches</strong> will solve higher-order problems.</li>
 </ol>
-<h2 id="the-idea-of-a-model-system"><a class="markdownIt-Anchor" href="#the-idea-of-a-model-system"></a> The idea of a “model system”</h2>
+<h2 id="The-idea-of-a-“model-system”">The idea of a “model system”</h2>
 <p>Model systems:</p>
 <ul>
 <li>used to study basic biological functions in a known organism.</li>
@@ -331,21 +301,21 @@
 <li>have one or more important features that made them so useful, such as a small genome, small size, fast reproduction time, or can be easily made transgenic using recombinant DNA techniques.</li>
 <li>Have a wealth of available data – such as genome sequence, methodologies, etc.</li>
 </ul>
-<h2 id="what-is-molecular-biology"><a class="markdownIt-Anchor" href="#what-is-molecular-biology"></a> What is molecular biology？</h2>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223112328084.png" alt="image-20191223112328084" /></p>
-<h1 id="一-some-important-discoveries"><a class="markdownIt-Anchor" href="#一-some-important-discoveries"></a> 一、Some Important Discoveries</h1>
-<h2 id="transfer-of-hereditary-material"><a class="markdownIt-Anchor" href="#transfer-of-hereditary-material"></a> Transfer of hereditary material</h2>
+<h2 id="What-is-molecular-biology？">What is molecular biology？</h2>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223112328084.png" alt="image-20191223112328084"></p>
+<h1>一、Some Important Discoveries</h1>
+<h2 id="Transfer-of-hereditary-material">Transfer of hereditary material</h2>
 <p>1928, Frederick Griffith shows that hereditary materials can be transferred from dead cells, using transformation of Streptococcus pneumoniae</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223113844707.png" alt="image-20191223113844707" /></p>
-<h2 id="one-gene-one-enzyme"><a class="markdownIt-Anchor" href="#one-gene-one-enzyme"></a> One gene-one enzyme</h2>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223113844707.png" alt="image-20191223113844707"></p>
+<h2 id="One-gene-one-enzyme">One gene-one enzyme</h2>
 <p>1941, Beadle and Tatum (Beadle was trained as a maize geneticist) demonstrated the link between genes and proteins by showing that a single genetic mutation could block a single step in a metabolic pathway.</p>
 <p>1958 winners of the Nobel Prize in Physiology or Medicine</p>
 <img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223114153321.png" alt="image-20191223114153321" style="zoom:67%;" />
-<h2 id="hershey-chase"><a class="markdownIt-Anchor" href="#hershey-chase"></a> Hershey-Chase</h2>
-<p>1952, the genetic material of a bacteria-infecting virus is DNA, not protein.<br />
+<h2 id="Hershey-Chase">Hershey-Chase</h2>
+<p>1952, the genetic material of a bacteria-infecting virus is DNA, not protein.<br>
 1969 winners of the Nobel Prize in Physiology or Medicine</p>
-<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223114514626.png" alt="image-20191223114514626" /></p>
-<h2 id="watson-crick-dna-has-a-double-helix"><a class="markdownIt-Anchor" href="#watson-crick-dna-has-a-double-helix"></a> Watson &amp; Crick – DNA has a double helix</h2>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223114514626.png" alt="image-20191223114514626"></p>
+<h2 id="Watson-Crick-–-DNA-has-a-double-helix">Watson &amp; Crick – DNA has a double helix</h2>
 <p>1953, proposed double helix structure of DNA, based in part on X-ray diffraction performed by Rosalind Franklin (below)</p>
 <img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191223114544544.png" alt="image-20191223114544544" style="zoom:50%;" />
 
@@ -449,7 +419,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-introduction"><span class="nav-number">1.</span> <span class="nav-text"> 一、Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-historical-perspective-on-molecular-biology"><span class="nav-number">1.1.</span> <span class="nav-text"> A historical perspective on molecular biology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-logic-of-molecular-biology"><span class="nav-number">1.2.</span> <span class="nav-text"> The Logic of Molecular Biology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-idea-of-a-model-system"><span class="nav-number">1.3.</span> <span class="nav-text"> The idea of a “model system”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#what-is-molecular-biology"><span class="nav-number">1.4.</span> <span class="nav-text"> What is molecular biology？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-some-important-discoveries"><span class="nav-number">2.</span> <span class="nav-text"> 一、Some Important Discoveries</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#transfer-of-hereditary-material"><span class="nav-number">2.1.</span> <span class="nav-text"> Transfer of hereditary material</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#one-gene-one-enzyme"><span class="nav-number">2.2.</span> <span class="nav-text"> One gene-one enzyme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hershey-chase"><span class="nav-number">2.3.</span> <span class="nav-text"> Hershey-Chase</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#watson-crick-dna-has-a-double-helix"><span class="nav-number">2.4.</span> <span class="nav-text"> Watson &amp; Crick – DNA has a double helix</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">一、Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-historical-perspective-on-molecular-biology"><span class="nav-number">1.1.</span> <span class="nav-text">A historical perspective on molecular biology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Logic-of-Molecular-Biology"><span class="nav-number">1.2.</span> <span class="nav-text">The Logic of Molecular Biology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-idea-of-a-%E2%80%9Cmodel-system%E2%80%9D"><span class="nav-number">1.3.</span> <span class="nav-text">The idea of a “model system”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-molecular-biology%EF%BC%9F"><span class="nav-number">1.4.</span> <span class="nav-text">What is molecular biology？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">一、Some Important Discoveries</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Transfer-of-hereditary-material"><span class="nav-number">2.1.</span> <span class="nav-text">Transfer of hereditary material</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#One-gene-one-enzyme"><span class="nav-number">2.2.</span> <span class="nav-text">One gene-one enzyme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hershey-Chase"><span class="nav-number">2.3.</span> <span class="nav-text">Hershey-Chase</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Watson-Crick-%E2%80%93-DNA-has-a-double-helix"><span class="nav-number">2.4.</span> <span class="nav-text">Watson &amp; Crick – DNA has a double helix</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -514,14 +484,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-      <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">NaNm</span>
+    <span title="站点总字数">2m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">NaN:aN</span>
+    <span title="站点阅读时长">30:27</span>
 </div><br /> <!-- 换行 -->
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>
@@ -583,10 +551,6 @@ setInterval("createtime()",250);
   
 
 
-
-
-  
-<script src="/js/local-search.js"></script>
 
 
 
