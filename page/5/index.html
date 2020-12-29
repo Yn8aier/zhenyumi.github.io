@@ -199,7 +199,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/10/06/%E7%AC%AC%E4%B8%89%E4%B8%AA%E5%9B%BD%E5%BA%86/">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/05/06-R-%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E2%85%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
@@ -213,7 +213,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/10/06/%E7%AC%AC%E4%B8%89%E4%B8%AA%E5%9B%BD%E5%BA%86/" class="post-title-link" itemprop="url">第三个国庆</a>
+            <a href="/2020/08/05/06-R-%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E2%85%A1/" class="post-title-link" itemprop="url">06. R <- 基本绘图Ⅱ</a>
         </h2>
 
         <div class="post-meta">
@@ -223,20 +223,31 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-10-06 20:33:59" itemprop="dateCreated datePublished" datetime="2020-10-06T20:33:59+08:00">2020-10-06</time>
+              <time title="创建时间：2020-08-05 21:14:43" itemprop="dateCreated datePublished" datetime="2020-08-05T21:14:43+08:00">2020-08-05</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-09 16:43:00" itemprop="dateModified" datetime="2020-08-09T16:43:00+08:00">2020-08-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">云下日记</span></a>
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">软件使用总结</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/" itemprop="url" rel="index"><span itemprop="name">R</span></a>
                 </span>
             </span>
 
           
-            <span id="/2020/10/06/%E7%AC%AC%E4%B8%89%E4%B8%AA%E5%9B%BD%E5%BA%86/" class="post-meta-item leancloud_visitors" data-flag-title="第三个国庆" title="阅读次数">
+            <span id="/2020/08/05/06-R-%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E2%85%A1/" class="post-meta-item leancloud_visitors" data-flag-title="06. R <- 基本绘图Ⅱ" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -251,8 +262,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/10/06/%E7%AC%AC%E4%B8%89%E4%B8%AA%E5%9B%BD%E5%BA%86/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/06/%E7%AC%AC%E4%B8%89%E4%B8%AA%E5%9B%BD%E5%BA%86/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/08/05/06-R-%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E2%85%A1/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/05/06-R-%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E2%85%A1/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -262,7 +273,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>498</span>
+              <span>14k</span>
             </span>
 
         </div>
@@ -274,10 +285,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          Here's something encrypted, password is required to continue reading.
+          散点图、折线图、相关图
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/10/06/%E7%AC%AC%E4%B8%89%E4%B8%AA%E5%9B%BD%E5%BA%86/#more" rel="contents">
+              <a class="btn" href="/2020/08/05/06-R-%E5%9F%BA%E6%9C%AC%E7%BB%98%E5%9B%BE%E2%85%A1/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -301,7 +312,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/09/19/Dizzy/">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/09/L26%20Cancer%20cell%20biology/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
@@ -315,7 +326,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/09/19/Dizzy/" class="post-title-link" itemprop="url">Dizzy</a>
+            <a href="/2020/08/09/L26%20Cancer%20cell%20biology/" class="post-title-link" itemprop="url">L26 Cancer cell biology</a>
         </h2>
 
         <div class="post-meta">
@@ -325,7 +336,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-09-19 11:47:40" itemprop="dateCreated datePublished" datetime="2020-09-19T11:47:40+08:00">2020-09-19</time>
+              <time title="创建时间：2020-08-09 14:46:00" itemprop="dateCreated datePublished" datetime="2020-08-09T14:46:00+08:00">2020-08-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -333,12 +344,16 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">云下日记</span></a>
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/Cell-Biology/" itemprop="url" rel="index"><span itemprop="name">Cell Biology</span></a>
                 </span>
             </span>
 
           
-            <span id="/2020/09/19/Dizzy/" class="post-meta-item leancloud_visitors" data-flag-title="Dizzy" title="阅读次数">
+            <span id="/2020/08/09/L26%20Cancer%20cell%20biology/" class="post-meta-item leancloud_visitors" data-flag-title="L26 Cancer cell biology" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -353,8 +368,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/09/19/Dizzy/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/19/Dizzy/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/08/09/L26%20Cancer%20cell%20biology/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/09/L26%20Cancer%20cell%20biology/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -364,7 +379,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>345</span>
+              <span>23k</span>
             </span>
 
         </div>
@@ -376,10 +391,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          Here's something encrypted, password is required to continue reading.
+          The Final Part of Cell Biology
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/09/19/Dizzy/#more" rel="contents">
+              <a class="btn" href="/2020/08/09/L26%20Cancer%20cell%20biology/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -403,7 +418,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/09/12/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/05/L25%20Cells%20to%20tissues%20cell%20adhesion%20to%20extracellular%20matrix%20%20(ECM)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
@@ -417,7 +432,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/09/12/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/" class="post-title-link" itemprop="url">新的开始</a>
+            <a href="/2020/08/05/L25%20Cells%20to%20tissues%20cell%20adhesion%20to%20extracellular%20matrix%20%20(ECM)/" class="post-title-link" itemprop="url">L25 Cells to tissues cell adhesion to extracellular matrix (ECM)</a>
         </h2>
 
         <div class="post-meta">
@@ -427,7 +442,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-09-12 20:47:29" itemprop="dateCreated datePublished" datetime="2020-09-12T20:47:29+08:00">2020-09-12</time>
+              <time title="创建时间：2020-08-05 21:03:00" itemprop="dateCreated datePublished" datetime="2020-08-05T21:03:00+08:00">2020-08-05</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -435,12 +450,16 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">云下日记</span></a>
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/Cell-Biology/" itemprop="url" rel="index"><span itemprop="name">Cell Biology</span></a>
                 </span>
             </span>
 
           
-            <span id="/2020/09/12/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/" class="post-meta-item leancloud_visitors" data-flag-title="新的开始" title="阅读次数">
+            <span id="/2020/08/05/L25%20Cells%20to%20tissues%20cell%20adhesion%20to%20extracellular%20matrix%20%20(ECM)/" class="post-meta-item leancloud_visitors" data-flag-title="L25 Cells to tissues cell adhesion to extracellular matrix (ECM)" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -455,8 +474,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/09/12/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/12/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/08/05/L25%20Cells%20to%20tissues%20cell%20adhesion%20to%20extracellular%20matrix%20%20(ECM)/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/05/L25%20Cells%20to%20tissues%20cell%20adhesion%20to%20extracellular%20matrix%20%20(ECM)/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -466,7 +485,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>472</span>
+              <span>41k</span>
             </span>
 
         </div>
@@ -478,10 +497,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          Here's something encrypted, password is required to continue reading.
+          难懂啊。。。
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/09/12/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/#more" rel="contents">
+              <a class="btn" href="/2020/08/05/L25%20Cells%20to%20tissues%20cell%20adhesion%20to%20extracellular%20matrix%20%20(ECM)/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -505,7 +524,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/09/05/%E6%AF%8F%E4%B8%AA%E4%BA%BA%E9%83%BD%E5%9C%A8%E5%8A%AA%E5%8A%9B%E7%9D%80/">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
@@ -519,7 +538,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/09/05/%E6%AF%8F%E4%B8%AA%E4%BA%BA%E9%83%BD%E5%9C%A8%E5%8A%AA%E5%8A%9B%E7%9D%80/" class="post-title-link" itemprop="url">每个人都在努力着</a>
+            <a href="/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/" class="post-title-link" itemprop="url">L24 Cells to tissues cell-cell adhesion</a>
         </h2>
 
         <div class="post-meta">
@@ -529,7 +548,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-09-05 22:24:23" itemprop="dateCreated datePublished" datetime="2020-09-05T22:24:23+08:00">2020-09-05</time>
+              <time title="创建时间：2020-08-04 15:39:00" itemprop="dateCreated datePublished" datetime="2020-08-04T15:39:00+08:00">2020-08-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -537,12 +556,16 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">云下日记</span></a>
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/Cell-Biology/" itemprop="url" rel="index"><span itemprop="name">Cell Biology</span></a>
                 </span>
             </span>
 
           
-            <span id="/2020/09/05/%E6%AF%8F%E4%B8%AA%E4%BA%BA%E9%83%BD%E5%9C%A8%E5%8A%AA%E5%8A%9B%E7%9D%80/" class="post-meta-item leancloud_visitors" data-flag-title="每个人都在努力着" title="阅读次数">
+            <span id="/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/" class="post-meta-item leancloud_visitors" data-flag-title="L24 Cells to tissues cell-cell adhesion" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -557,8 +580,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/09/05/%E6%AF%8F%E4%B8%AA%E4%BA%BA%E9%83%BD%E5%9C%A8%E5%8A%AA%E5%8A%9B%E7%9D%80/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/05/%E6%AF%8F%E4%B8%AA%E4%BA%BA%E9%83%BD%E5%9C%A8%E5%8A%AA%E5%8A%9B%E7%9D%80/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -568,7 +591,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
+              <span>28k</span>
             </span>
 
         </div>
@@ -580,10 +603,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          Here's something encrypted, password is required to continue reading.
+          比L23好懂一点...
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/09/05/%E6%AF%8F%E4%B8%AA%E4%BA%BA%E9%83%BD%E5%9C%A8%E5%8A%AA%E5%8A%9B%E7%9D%80/#more" rel="contents">
+              <a class="btn" href="/2020/08/04/L24%20Cells%20to%20tissues%20cell-cell%20adhesion/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -607,7 +630,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/09/01/%E4%BE%8B%E8%A1%8C/">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/03/L23%20Cellular%20motility/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
@@ -621,7 +644,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/09/01/%E4%BE%8B%E8%A1%8C/" class="post-title-link" itemprop="url">例行</a>
+            <a href="/2020/08/03/L23%20Cellular%20motility/" class="post-title-link" itemprop="url">L23 Cellular motility</a>
         </h2>
 
         <div class="post-meta">
@@ -631,7 +654,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-09-01 22:43:48" itemprop="dateCreated datePublished" datetime="2020-09-01T22:43:48+08:00">2020-09-01</time>
+              <time title="创建时间：2020-08-03 19:59:00" itemprop="dateCreated datePublished" datetime="2020-08-03T19:59:00+08:00">2020-08-03</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -639,12 +662,16 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">云下日记</span></a>
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/Cell-Biology/" itemprop="url" rel="index"><span itemprop="name">Cell Biology</span></a>
                 </span>
             </span>
 
           
-            <span id="/2020/09/01/%E4%BE%8B%E8%A1%8C/" class="post-meta-item leancloud_visitors" data-flag-title="例行" title="阅读次数">
+            <span id="/2020/08/03/L23%20Cellular%20motility/" class="post-meta-item leancloud_visitors" data-flag-title="L23 Cellular motility" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -659,8 +686,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/09/01/%E4%BE%8B%E8%A1%8C/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/01/%E4%BE%8B%E8%A1%8C/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/08/03/L23%20Cellular%20motility/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/03/L23%20Cellular%20motility/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -670,7 +697,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>559</span>
+              <span>31k</span>
             </span>
 
         </div>
@@ -682,10 +709,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          Here's something encrypted, password is required to continue reading.
+          后面几章越来越难懂了
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/09/01/%E4%BE%8B%E8%A1%8C/#more" rel="contents">
+              <a class="btn" href="/2020/08/03/L23%20Cellular%20motility/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -709,7 +736,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/27/%E4%B8%80%E7%9E%AC%E9%97%B4%E9%95%BF%E5%A4%A7/">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/14/02-R-basic-plots/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
@@ -723,7 +750,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/27/%E4%B8%80%E7%9E%AC%E9%97%B4%E9%95%BF%E5%A4%A7/" class="post-title-link" itemprop="url">一瞬间长大</a>
+            <a href="/2020/07/14/02-R-basic-plots/" class="post-title-link" itemprop="url">02. R <- 基本绘图Ⅰ</a>
         </h2>
 
         <div class="post-meta">
@@ -733,20 +760,31 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-08-27 23:02:01" itemprop="dateCreated datePublished" datetime="2020-08-27T23:02:01+08:00">2020-08-27</time>
+              <time title="创建时间：2020-07-14 20:13:52" itemprop="dateCreated datePublished" datetime="2020-07-14T20:13:52+08:00">2020-07-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-02 20:22:00" itemprop="dateModified" datetime="2020-08-02T20:22:00+08:00">2020-08-02</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">云下日记</span></a>
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">软件使用总结</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/" itemprop="url" rel="index"><span itemprop="name">R</span></a>
                 </span>
             </span>
 
           
-            <span id="/2020/08/27/%E4%B8%80%E7%9E%AC%E9%97%B4%E9%95%BF%E5%A4%A7/" class="post-meta-item leancloud_visitors" data-flag-title="一瞬间长大" title="阅读次数">
+            <span id="/2020/07/14/02-R-basic-plots/" class="post-meta-item leancloud_visitors" data-flag-title="02. R <- 基本绘图Ⅰ" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -761,8 +799,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/08/27/%E4%B8%80%E7%9E%AC%E9%97%B4%E9%95%BF%E5%A4%A7/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/27/%E4%B8%80%E7%9E%AC%E9%97%B4%E9%95%BF%E5%A4%A7/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/07/14/02-R-basic-plots/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/14/02-R-basic-plots/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -772,7 +810,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>508</span>
+              <span>12k</span>
             </span>
 
         </div>
@@ -784,10 +822,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          Here's something encrypted, password is required to continue reading.
+          包括 Bar chart, Pie chart, Histograms, Box plot, (Two-way) scatter plot, Line graph (Time series data)
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/08/27/%E4%B8%80%E7%9E%AC%E9%97%B4%E9%95%BF%E5%A4%A7/#more" rel="contents">
+              <a class="btn" href="/2020/07/14/02-R-basic-plots/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -811,7 +849,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/25/%E4%B8%80%E5%88%87%E4%B9%8B%E5%90%8E%EF%BC%8C%E6%9C%AA%E6%9D%A5%E4%B9%8B%E5%89%8D/">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/25/03-R-%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
@@ -825,7 +863,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/25/%E4%B8%80%E5%88%87%E4%B9%8B%E5%90%8E%EF%BC%8C%E6%9C%AA%E6%9D%A5%E4%B9%8B%E5%89%8D/" class="post-title-link" itemprop="url">一切之后，未来之前</a>
+            <a href="/2020/07/25/03-R-%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/" class="post-title-link" itemprop="url">03. R <- 基本统计分析Ⅰ - 简要分析、频数表和列联表、基本数学和统计函数</a>
         </h2>
 
         <div class="post-meta">
@@ -835,20 +873,31 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-08-25 18:43:32" itemprop="dateCreated datePublished" datetime="2020-08-25T18:43:32+08:00">2020-08-25</time>
+              <time title="创建时间：2020-07-25 17:50:46" itemprop="dateCreated datePublished" datetime="2020-07-25T17:50:46+08:00">2020-07-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-01 20:57:00" itemprop="dateModified" datetime="2020-08-01T20:57:00+08:00">2020-08-01</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">云下日记</span></a>
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">软件使用总结</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/" itemprop="url" rel="index"><span itemprop="name">R</span></a>
                 </span>
             </span>
 
           
-            <span id="/2020/08/25/%E4%B8%80%E5%88%87%E4%B9%8B%E5%90%8E%EF%BC%8C%E6%9C%AA%E6%9D%A5%E4%B9%8B%E5%89%8D/" class="post-meta-item leancloud_visitors" data-flag-title="一切之后，未来之前" title="阅读次数">
+            <span id="/2020/07/25/03-R-%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/" class="post-meta-item leancloud_visitors" data-flag-title="03. R <- 基本统计分析Ⅰ - 简要分析、频数表和列联表、基本数学和统计函数" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -863,8 +912,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/08/25/%E4%B8%80%E5%88%87%E4%B9%8B%E5%90%8E%EF%BC%8C%E6%9C%AA%E6%9D%A5%E4%B9%8B%E5%89%8D/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/25/%E4%B8%80%E5%88%87%E4%B9%8B%E5%90%8E%EF%BC%8C%E6%9C%AA%E6%9D%A5%E4%B9%8B%E5%89%8D/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/07/25/03-R-%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/25/03-R-%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -874,7 +923,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>578</span>
+              <span>17k</span>
             </span>
 
         </div>
@@ -886,10 +935,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          Here's something encrypted, password is required to continue reading.
+          一键获得常用描述性统计量；频数表（列联表）；基础数学函数和统计函数
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/08/25/%E4%B8%80%E5%88%87%E4%B9%8B%E5%90%8E%EF%BC%8C%E6%9C%AA%E6%9D%A5%E4%B9%8B%E5%89%8D/#more" rel="contents">
+              <a class="btn" href="/2020/07/25/03-R-%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -913,7 +962,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/20/%E6%AD%A3%E8%BD%A8%EF%BC%9F/">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/30/04-R-%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
@@ -927,7 +976,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/20/%E6%AD%A3%E8%BD%A8%EF%BC%9F/" class="post-title-link" itemprop="url">正轨？</a>
+            <a href="/2020/07/30/04-R-%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/" class="post-title-link" itemprop="url">04. R <- 概率分布</a>
         </h2>
 
         <div class="post-meta">
@@ -937,20 +986,31 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-08-20 16:04:33" itemprop="dateCreated datePublished" datetime="2020-08-20T16:04:33+08:00">2020-08-20</time>
+              <time title="创建时间：2020-07-30 21:17:30" itemprop="dateCreated datePublished" datetime="2020-07-30T21:17:30+08:00">2020-07-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-31 14:40:30" itemprop="dateModified" datetime="2020-07-31T14:40:30+08:00">2020-07-31</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">云下日记</span></a>
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">软件使用总结</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/R/" itemprop="url" rel="index"><span itemprop="name">R</span></a>
                 </span>
             </span>
 
           
-            <span id="/2020/08/20/%E6%AD%A3%E8%BD%A8%EF%BC%9F/" class="post-meta-item leancloud_visitors" data-flag-title="正轨？" title="阅读次数">
+            <span id="/2020/07/30/04-R-%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/" class="post-meta-item leancloud_visitors" data-flag-title="04. R <- 概率分布" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -965,8 +1025,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/08/20/%E6%AD%A3%E8%BD%A8%EF%BC%9F/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/20/%E6%AD%A3%E8%BD%A8%EF%BC%9F/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/07/30/04-R-%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/30/04-R-%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -976,7 +1036,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>375</span>
+              <span>5.3k</span>
             </span>
 
         </div>
@@ -988,10 +1048,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          Here's something encrypted, password is required to continue reading.
+          二项、泊松以及正态（高斯）分布；其它概率分布函数
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/08/20/%E6%AD%A3%E8%BD%A8%EF%BC%9F/#more" rel="contents">
+              <a class="btn" href="/2020/07/30/04-R-%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1015,7 +1075,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/18/%E5%AD%A6%E4%B9%A0%E6%96%B0%E6%8A%80%E8%83%BD%E7%9A%84%E8%89%B0%E9%9A%BE/">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/06/30/Markdown%20&%20Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
@@ -1029,7 +1089,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/18/%E5%AD%A6%E4%B9%A0%E6%96%B0%E6%8A%80%E8%83%BD%E7%9A%84%E8%89%B0%E9%9A%BE/" class="post-title-link" itemprop="url">学习新技能的艰难</a>
+            <a href="/2020/06/30/Markdown%20&%20Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" class="post-title-link" itemprop="url">Markdown & Typora的使用与速查手册</a>
         </h2>
 
         <div class="post-meta">
@@ -1039,20 +1099,31 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-08-18 16:06:46" itemprop="dateCreated datePublished" datetime="2020-08-18T16:06:46+08:00">2020-08-18</time>
+              <time title="创建时间：2020-06-30 15:17:31" itemprop="dateCreated datePublished" datetime="2020-06-30T15:17:31+08:00">2020-06-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-29 16:00:00" itemprop="dateModified" datetime="2020-07-29T16:00:00+08:00">2020-07-29</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">云下日记</span></a>
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">软件使用总结</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/Typora/" itemprop="url" rel="index"><span itemprop="name">Typora</span></a>
                 </span>
             </span>
 
           
-            <span id="/2020/08/18/%E5%AD%A6%E4%B9%A0%E6%96%B0%E6%8A%80%E8%83%BD%E7%9A%84%E8%89%B0%E9%9A%BE/" class="post-meta-item leancloud_visitors" data-flag-title="学习新技能的艰难" title="阅读次数">
+            <span id="/2020/06/30/Markdown%20&%20Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" class="post-meta-item leancloud_visitors" data-flag-title="Markdown & Typora的使用与速查手册" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -1067,8 +1138,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/08/18/%E5%AD%A6%E4%B9%A0%E6%96%B0%E6%8A%80%E8%83%BD%E7%9A%84%E8%89%B0%E9%9A%BE/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/18/%E5%AD%A6%E4%B9%A0%E6%96%B0%E6%8A%80%E8%83%BD%E7%9A%84%E8%89%B0%E9%9A%BE/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/06/30/Markdown%20&%20Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/30/Markdown%20&%20Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1078,7 +1149,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.1k</span>
+              <span>10k</span>
             </span>
 
         </div>
@@ -1090,10 +1161,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          Here's something encrypted, password is required to continue reading.
+          如何更加优雅快捷地使用Typora
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/08/18/%E5%AD%A6%E4%B9%A0%E6%96%B0%E6%8A%80%E8%83%BD%E7%9A%84%E8%89%B0%E9%9A%BE/#more" rel="contents">
+              <a class="btn" href="/2020/06/30/Markdown%20&%20Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1117,7 +1188,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/08/16/%E6%80%9D%E4%B9%A1/">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/2020/07/27/L22%20Cell%20Morphology/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
@@ -1131,7 +1202,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/16/%E6%80%9D%E4%B9%A1/" class="post-title-link" itemprop="url">思乡</a>
+            <a href="/2020/07/27/L22%20Cell%20Morphology/" class="post-title-link" itemprop="url">L22 Cell Morphology</a>
         </h2>
 
         <div class="post-meta">
@@ -1141,7 +1212,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-08-16 14:04:29" itemprop="dateCreated datePublished" datetime="2020-08-16T14:04:29+08:00">2020-08-16</time>
+              <time title="创建时间：2020-07-27 18:43:00" itemprop="dateCreated datePublished" datetime="2020-07-27T18:43:00+08:00">2020-07-27</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1149,12 +1220,16 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BA%91%E4%B8%8B%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">云下日记</span></a>
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/Cell-Biology/" itemprop="url" rel="index"><span itemprop="name">Cell Biology</span></a>
                 </span>
             </span>
 
           
-            <span id="/2020/08/16/%E6%80%9D%E4%B9%A1/" class="post-meta-item leancloud_visitors" data-flag-title="思乡" title="阅读次数">
+            <span id="/2020/07/27/L22%20Cell%20Morphology/" class="post-meta-item leancloud_visitors" data-flag-title="L22 Cell Morphology" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -1169,8 +1244,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/08/16/%E6%80%9D%E4%B9%A1/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/16/%E6%80%9D%E4%B9%A1/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/07/27/L22%20Cell%20Morphology/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/27/L22%20Cell%20Morphology/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1180,7 +1255,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
+              <span>49k</span>
             </span>
 
         </div>
@@ -1192,10 +1267,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          Here's something encrypted, password is required to continue reading.
+          这一章读起来很痛苦
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/08/16/%E6%80%9D%E4%B9%A1/#more" rel="contents">
+              <a class="btn" href="/2020/07/27/L22%20Cell%20Morphology/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1218,7 +1293,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1286,7 +1361,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">209</span>
+          <span class="site-state-item-count">146</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1347,13 +1422,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">2.3m</span>
+    <span title="站点总字数">2.2m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">34:08</span>
+    <span title="站点阅读时长">33:30</span>
 </div><br /> <!-- 换行 -->
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>
