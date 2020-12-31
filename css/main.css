@@ -1219,7 +1219,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #83ffff;
+  background: #ff8aff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2791,7 +2791,7 @@ mjx-container + br {
   }
 }
 body {
-  background: url("https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/84016630_p0_%E5%8E%8B%E7%BC%A9%E5%90%8E.png");
+  background: url("https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/83742172_p0.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
