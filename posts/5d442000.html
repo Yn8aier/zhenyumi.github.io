@@ -887,8 +887,8 @@ c28.7-32 52-65.7 70-101 10.7-23.3 16-35.7 16-37 0-.7-7.7-1-23-1h-22C115.7 265.3
 	<b>一言</b>
 </div>
 
-<div id="hitokoto">:D 获取中...</div>
-<i id="hitofrom">:D 获取中...</i>
+<div id="hitokoto">获取中OvO</div>
+<i id="hitofrom">获取中OvO</i>
 
 <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
@@ -901,7 +901,7 @@ c28.7-32 52-65.7 70-101 10.7-23.3 16-35.7 16-37 0-.7-7.7-1-23-1h-22C115.7 265.3
       var hitokoto = document.getElementById('hitokoto');
       hitokoto.innerText = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + data.hitokoto;
       var hitofrom = document.getElementById('hitofrom');
-      //hitofrom.innerText = "——" + data.from + '\xa0'; 
+      hitofrom.innerText = "——" + data.from + '\xa0'; 
     })
     .catch(function (err) {
       console.error(err);
