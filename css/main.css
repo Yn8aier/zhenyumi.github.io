@@ -1244,7 +1244,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff9388;
+  background: #2ae013;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2889,15 +2889,15 @@ body {
 }
 .hitokoto-title {
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
 }
 #hitokoto {
   text-align: left;
   font-family: "Microsoft YaHei";
-  font-size: 11px;
+  font-size: 9px;
 }
 #hitofrom {
   float: right;
   font-family: "Microsoft YaHei";
-  font-size: 10px;
+  font-size: 9px;
 }
