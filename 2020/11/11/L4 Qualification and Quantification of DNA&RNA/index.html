@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
   </script>
 
   <meta name="description" content="Wed Nov 11 2020 08:33:53 GMT+0800 (GMT+08:00)">
@@ -323,38 +323,45 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="一、Handling-and-Quantification-of-DNA-RNA"><a href="#一、Handling-and-Quantification-of-DNA-RNA" class="headerlink" title="一、Handling and Quantification of DNA/RNA"></a>一、Handling and Quantification of DNA/RNA</h1><p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018130700852.png" alt="image-20201018130700852" style="zoom: 33%;" /></p>
+        <h1 id="一-handling-and-quantification-of-dnarna"><a class="markdownIt-Anchor" href="#一-handling-and-quantification-of-dnarna"></a> 一、Handling and Quantification of DNA/RNA</h1>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018130700852.png" alt="image-20201018130700852" style="zoom: 33%;" />
 <ul>
 <li>Pure DNA/RNA only form tiny pellet after precipitation. - semi transparent and easy to be dissolved</li>
 </ul>
 <p>Mainly two types of quantification methods</p>
 <ol>
-<li>Absorbance based methods<ul>
-<li>the principle is simple, the key is the <strong>ratio</strong>. </li>
+<li>Absorbance based methods
+<ul>
+<li>the principle is simple, the key is the <strong>ratio</strong>.</li>
 </ul>
 </li>
 <li>Fluorescence based methods</li>
 </ol>
-<h2 id="The-Absorbance-Based-Methods"><a href="#The-Absorbance-Based-Methods" class="headerlink" title="The Absorbance Based Methods"></a>The Absorbance Based Methods</h2><p>The <strong>Beer‐Lambert Law</strong> — draws a direct correlation between absorbance and concentration. While nucleic acids absorb at many wavelengths, <u>they have a peak absorbance of UV light at 260nm</u>. Thus, the amount of light absorbed in this region can be used to determine the concentration of RNA or DNA in solution </p>
-<script type="math/tex; mode=display">
-A = \varepsilon c l</script><ul>
-<li>A=absorbance, </li>
-<li>ԑ=extinction coefficient </li>
+<h2 id="the-absorbance-based-methods"><a class="markdownIt-Anchor" href="#the-absorbance-based-methods"></a> The Absorbance Based Methods</h2>
+<p>The <strong>Beer‐Lambert Law</strong> — draws a direct correlation between absorbance and concentration. While nucleic acids absorb at many wavelengths, <u>they have a peak absorbance of UV light at 260nm</u>. Thus, the amount of light absorbed in this region can be used to determine the concentration of RNA or DNA in solution</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>=</mo><mi>ε</mi><mi>c</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">A = \varepsilon c l
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">ε</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span></span></span></span></span></p>
+<ul>
+<li>A=absorbance,</li>
+<li>ԑ=extinction coefficient</li>
 <li>c=concentration</li>
 <li>l=path length</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018131057045.png" alt="image-20201018131057045" style="zoom:67%;" /></p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018131057045.png" alt="image-20201018131057045" style="zoom:67%;" />
 <ul>
-<li>The <strong>nucleic acids</strong> (DNA, RNA and oligo) solutions with different concentration has different <u>ability absorbing light.</u><ul>
-<li>1 OD~260~ Unit $\rarr$ 50ug/ml for double stranded DNA</li>
-<li>1 OD~260~ Unit $\rarr$ 40ug/ml for single stranded RNA</li>
-<li>1 OD~260~ Unit $\rarr$ 33ug/ml for single stranded DNA (ssDNA)</li>
+<li>The <strong>nucleic acids</strong> (DNA, RNA and oligo) solutions with different concentration has different <u>ability absorbing light.</u>
+<ul>
+<li>1 OD<sub>260</sub> Unit <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rarr</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> 50ug/ml for double stranded DNA</li>
+<li>1 OD<sub>260</sub> Unit <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rarr</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> 40ug/ml for single stranded RNA</li>
+<li>1 OD<sub>260</sub> Unit <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rarr</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> 33ug/ml for single stranded DNA (ssDNA)</li>
 </ul>
 </li>
 </ul>
-<h3 id="1-The-Ideal-Ratios"><a href="#1-The-Ideal-Ratios" class="headerlink" title="1. The Ideal Ratios"></a>1. The Ideal Ratios</h3><p>What would be the ideal ratios for pure DNA and or RNA in solution?</p>
+<h3 id="1-the-ideal-ratios"><a class="markdownIt-Anchor" href="#1-the-ideal-ratios"></a> 1. The Ideal Ratios</h3>
+<p>What would be the ideal ratios for pure DNA and or RNA in solution?</p>
 <ul>
-<li><p>A260/280 ratio </p>
+<li>
+<p>A260/280 ratio</p>
 <ul>
 <li>A l<strong>ow A260/A280 ratio</strong> often indicate <u>protein</u> contamination, Aromatic amino acid side chains are responsible for 280nm absorbance.</li>
 <li>For DNA: A260/280 is nearly 1.8</li>
@@ -362,7 +369,8 @@ A = \varepsilon c l</script><ul>
 <li><strong>Reason</strong>: RNA will typically have a higher 260/280 ratio due to the higher ratio of <strong>Uracil</strong> compared to that of <strong>Thymine</strong></li>
 </ul>
 </li>
-<li><p><strong>A260/230 ratio</strong>, ideally more than 1.8</p>
+<li>
+<p><strong>A260/230 ratio</strong>, ideally more than 1.8</p>
 <ul>
 <li>The A260/230 ratio indicates the presence of organic contaminants which could <u>interfere with downstream applications</u></li>
 <li><strong>Low A260/A230</strong> often indicate presence of following impurities</li>
@@ -370,31 +378,36 @@ A = \varepsilon c l</script><ul>
 <ol>
 <li><strong>Plant polyphenol</strong> – common contaminants when doing RNA/DNA extraction from plant tissues.</li>
 <li>Phenol</li>
-<li>Chaotropic salts from your lysis buffer </li>
+<li>Chaotropic salts from your lysis buffer</li>
 </ol>
 </li>
 </ul>
-<h3 id="2-Real-World-Examples"><a href="#2-Real-World-Examples" class="headerlink" title="2. Real World Examples"></a>2. Real World Examples</h3><p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018131554115.png" alt="image-20201018131554115" style="zoom: 50%;" /></p>
+<h3 id="2-real-world-examples"><a class="markdownIt-Anchor" href="#2-real-world-examples"></a> 2. Real World Examples</h3>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018131554115.png" alt="image-20201018131554115" style="zoom: 50%;" />
 <ul>
 <li>the A260/230 ratio of 1.29 is significantly lower than 2—indicating some sort of organic contaminants present in the sample</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018131643390.png" alt="image-20201018131643390" style="zoom:50%;" /></p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018131643390.png" alt="image-20201018131643390" style="zoom:50%;" />
 <ul>
 <li>This RNA has low A260/280 and A260/230 ratios. Additionally, the maximum peak is at 270 nm. Most likely due to presence of high concentration of phenol</li>
 <li>Note that the concentration of RNA returned by the spectrophotometer is not at all reliable due to the contamination</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018131826138.png" alt="image-20201018131826138" style="zoom:50%;" /></p>
-<h3 id="3-How-to-Keep-The-Ratio-Constant"><a href="#3-How-to-Keep-The-Ratio-Constant" class="headerlink" title="3. How to Keep The Ratio Constant"></a>3. How to Keep The Ratio Constant</h3><ol>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018131826138.png" alt="image-20201018131826138" style="zoom:50%;" />
+<h3 id="3-how-to-keep-the-ratio-constant"><a class="markdownIt-Anchor" href="#3-how-to-keep-the-ratio-constant"></a> 3. How to Keep The Ratio Constant</h3>
+<ol>
 <li>Constant ionic strength – same buffer as blank and dilution</li>
 <li>Constant pH – pH 8.0 1xTE buffer is recommanded</li>
 </ol>
-<h2 id="Fluorescence-Based-Methods"><a href="#Fluorescence-Based-Methods" class="headerlink" title="Fluorescence Based Methods"></a>Fluorescence Based Methods</h2><h3 id="1-The-shortage-of-absorbance-based-method"><a href="#1-The-shortage-of-absorbance-based-method" class="headerlink" title="1. The shortage of absorbance based method"></a>1. The shortage of absorbance based method</h3><ol>
-<li>Can’t distinguish between DNA/RNA/free nucleotide </li>
-<li>Might not be accurate when concentration of DNA/RNA is low, due to the presence of other impurities. </li>
+<h2 id="fluorescence-based-methods"><a class="markdownIt-Anchor" href="#fluorescence-based-methods"></a> Fluorescence Based Methods</h2>
+<h3 id="1-the-shortage-of-absorbance-based-method"><a class="markdownIt-Anchor" href="#1-the-shortage-of-absorbance-based-method"></a> 1. The shortage of absorbance based method</h3>
+<ol>
+<li>Can’t distinguish between DNA/RNA/free nucleotide</li>
+<li>Might not be accurate when concentration of DNA/RNA is low, due to the presence of other impurities.</li>
 <li>No size information</li>
 <li>Might not be sensitive – below 10ng/ul</li>
 </ol>
-<h3 id="2-Stains"><a href="#2-Stains" class="headerlink" title="2. Stains"></a>2. Stains</h3><p><strong>Fluorescent DNA/RNA Stains</strong>– Bind nucleic acids and emit fluorescence when excited. </p>
+<h3 id="2-stains"><a class="markdownIt-Anchor" href="#2-stains"></a> 2. Stains</h3>
+<p><strong>Fluorescent DNA/RNA Stains</strong>– Bind nucleic acids and emit fluorescence when excited.</p>
 <ul>
 <li>DNA(RNA) Stains are fluorescent dyes that bind nucleic acids and have a wide range of applications, including in flow cytometry, cell-cycle studies, chromosome and nuclei counterstaining, as an indicator of apoptosis, and to quantify DNA</li>
 </ul>
@@ -404,7 +417,8 @@ A = \varepsilon c l</script><ul>
 <li>DNA or RNA specific dye enables accurate quantification</li>
 <li>Capillary electrophoresis + DNA/RNA specific dye</li>
 </ul>
-<h4 id="Gel-Electrophoresis"><a href="#Gel-Electrophoresis" class="headerlink" title="Gel Electrophoresis"></a>Gel Electrophoresis</h4><p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018132558842.png" alt="image-20201018132558842"></p>
+<h4 id="gel-electrophoresis"><a class="markdownIt-Anchor" href="#gel-electrophoresis"></a> Gel Electrophoresis</h4>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018132558842.png" alt="image-20201018132558842" /></p>
 <ul>
 <li>agarose gel electrophoresis (<strong>SAGE</strong>)</li>
 <li>Polyacrylamide-based gel electrophoresis (<strong>PAGE</strong>)</li>
@@ -415,44 +429,47 @@ A = \varepsilon c l</script><ul>
 <li>Buffer of choice – TAE vs TBE buffer</li>
 </ul>
 <p>The migration of DNA fragments through an agarose gel</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018132850268.png" alt="image-20201018132850268"></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018132850268.png" alt="image-20201018132850268" /></p>
 <p>Polyacrylamide Gel Electrophoresis</p>
 <ul>
 <li>在制备的过程中，加入了cross-linker</li>
 <li>因此制造出了more ordered struacture，同时也更难配置</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018133000046.png" alt="image-20201018133000046"></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018133000046.png" alt="image-20201018133000046" /></p>
 <p>Migration of dsDNA in gels with different concentration of acrylamide</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018133017561.png" alt="image-20201018133017561" style="zoom: 33%;" /></p>
-<p><strong>Gel electrophoresis</strong> is a typical fluorescence based methods. </p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018133017561.png" alt="image-20201018133017561" style="zoom: 33%;" />
+<p><strong>Gel electrophoresis</strong> is a typical fluorescence based methods.</p>
 <ul>
 <li>Matrix of choice – Agarose vs Low-melting point agarose, Polyacrylamide</li>
 <li><strong>Agarose gel electrophoresis (SAGE)</strong> – Work well for a wide range of DNA length. <u>Maxima resolution is around 10bp, High Capacity.</u></li>
 <li><strong>Low-melting-point agarose</strong>, you may choose it for various reason. It is a lot more transparent and have more even pore size compared with normal agarose gel, so it is <u>a better matrix for the detection of DNA/RNA in low concentration</u></li>
-<li><strong>Polyacrylamide-based gel electrophoresis (PAGE)</strong> – High resolution, <u>1bp resolution is possible</u>. Low Capacity. Good for separate small RNAs and used in DNA sequencing. <ul>
+<li><strong>Polyacrylamide-based gel electrophoresis (PAGE)</strong> – High resolution, <u>1bp resolution is possible</u>. Low Capacity. Good for separate small RNAs and used in DNA sequencing.
+<ul>
 <li>Denatured and Native</li>
 </ul>
 </li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018144429617.png" alt="image-20201018144429617" style="zoom:67%;" /></p>
-<h4 id="Buffer-of-Choice"><a href="#Buffer-of-Choice" class="headerlink" title="Buffer of Choice"></a>Buffer of Choice</h4><p>Buffer of choice – <strong>TAE</strong> vs <strong>TBE</strong> buffer</p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018144429617.png" alt="image-20201018144429617" style="zoom:67%;" />
+<h4 id="buffer-of-choice"><a class="markdownIt-Anchor" href="#buffer-of-choice"></a> Buffer of Choice</h4>
+<p>Buffer of choice – <strong>TAE</strong> vs <strong>TBE</strong> buffer</p>
 <ul>
 <li><strong>TAE</strong> is advantageous for high resolution of long nucleic acid fragments (qs) on agarose gels.</li>
 <li><strong>TBE</strong> has a greater buffering capacity and will give sharper resolution than TAE, especially when separating small fragments of DNA.</li>
 </ul>
-<h4 id="Stains"><a href="#Stains" class="headerlink" title="Stains"></a>Stains</h4><p><strong>Fluorescent DNA/RNA Stains</strong>– Bind nucleic acids and emit fluorescence when excited</p>
-<p>We often use two types of DNA stains in gel electrophoresis and other applications. </p>
+<h4 id="stains"><a class="markdownIt-Anchor" href="#stains"></a> Stains</h4>
+<p><strong>Fluorescent DNA/RNA Stains</strong>– Bind nucleic acids and emit fluorescence when excited</p>
+<p>We often use two types of DNA stains in gel electrophoresis and other applications.</p>
 <ul>
-<li>UV light excited - Ethidium bromide, <u>Gel Red,</u> </li>
+<li>UV light excited - Ethidium bromide, <u>Gel Red,</u></li>
 <li>Blue light excited - <u>SYBR Green, Gene Green, Gel Green etc</u></li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018145408023.png" alt="image-20201018145408023"></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018145415029.png" alt="image-20201018145415029"></p>
-<p><strong>DNA or RNA specific fluorescent Dye enables accurate quantification of DNA or RNA</strong> </p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018145433430.png" alt="image-20201018145433430" style="zoom: 67%;" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018145408023.png" alt="image-20201018145408023" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018145415029.png" alt="image-20201018145415029" /></p>
+<p><strong>DNA or RNA specific fluorescent Dye enables accurate quantification of DNA or RNA</strong></p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018145433430.png" alt="image-20201018145433430" style="zoom: 67%;" />
 <p>The Qubit 1X dsDNA HS (High-Sensitivity) Assay Kit is designed specifically for use with the Qubit Fluorometer. The assay is highly selective for double-stranded DNA (dsDNA) over RNA and is designed to be accurate for initial sample concentrations from 10 pg/µL to 100 ng/µL.</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018145456455.png" alt="image-20201018145456455" style="zoom:67%;" /></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018145507310.png" alt="image-20201018145507310" style="zoom:67%;" /></p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018145456455.png" alt="image-20201018145456455" style="zoom:67%;" />
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018145507310.png" alt="image-20201018145507310" style="zoom:67%;" />
 <p>Advantages:</p>
 <ol>
 <li>accurate – highly selective</li>
@@ -463,27 +480,33 @@ A = \varepsilon c l</script><ul>
 <li>Good for quantification but not for qualification (length, integrity).</li>
 <li>Concentration rely on external standard</li>
 </ol>
-<h4 id="Capillary-electrophoresis-DNA-RNA-specific-dye"><a href="#Capillary-electrophoresis-DNA-RNA-specific-dye" class="headerlink" title="Capillary electrophoresis + DNA/RNA specific dye"></a>Capillary electrophoresis + DNA/RNA specific dye</h4><p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018150200305.png" alt="image-20201018150200305" style="zoom:67%;" /></p>
-<p>Advantages: You get almost all the information you need ! </p>
+<h4 id="capillary-electrophoresis-dnarna-specific-dye"><a class="markdownIt-Anchor" href="#capillary-electrophoresis-dnarna-specific-dye"></a> Capillary electrophoresis + DNA/RNA specific dye</h4>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018150200305.png" alt="image-20201018150200305" style="zoom:67%;" />
+<p>Advantages: You get almost all the information you need !</p>
 <p>Disadvantages: Operation with the instrument can be complicated, Expensive (both instrument and reagent)</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018150425639.png" alt="image-20201018150425639" style="zoom:67%;" /></p>
-<h1 id="二、Detection-of-Nucleic-acids-through-blotting-techniques-Nucleic-acids-hybridization"><a href="#二、Detection-of-Nucleic-acids-through-blotting-techniques-Nucleic-acids-hybridization" class="headerlink" title="二、Detection of Nucleic acids through blotting techniques (Nucleic acids hybridization)"></a>二、Detection of Nucleic acids through blotting techniques (Nucleic acids hybridization)</h1><p>Nucleic Acid Hybridization: Detection of nucleic acids with known sequence from complex samples !</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151608412.png" alt="image-20201018151608412" style="zoom:50%;" /></p>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>A basic technique in molecular biology. in which single stranded Nucleic acids are allowed to interact so that complexes called <strong>HYBRIDS</strong> are formed by molecules with similar complementary sequences</p>
-<p>The essence of nucleic acids hybridization is the denaturation and renaturation (<strong>annealing</strong>) of DNA (or RNA). </p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018150749025.png" alt="image-20201018150749025" style="zoom:50%;" /></p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018150425639.png" alt="image-20201018150425639" style="zoom:67%;" />
+<h1 id="二-detection-of-nucleic-acids-through-blotting-techniques-nucleic-acids-hybridization"><a class="markdownIt-Anchor" href="#二-detection-of-nucleic-acids-through-blotting-techniques-nucleic-acids-hybridization"></a> 二、Detection of Nucleic acids through blotting techniques (Nucleic acids hybridization)</h1>
+<p>Nucleic Acid Hybridization: Detection of nucleic acids with known sequence from complex samples !</p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151608412.png" alt="image-20201018151608412" style="zoom:50%;" />
+<h2 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h2>
+<p>A basic technique in molecular biology. in which single stranded Nucleic acids are allowed to interact so that complexes called <strong>HYBRIDS</strong> are formed by molecules with similar complementary sequences</p>
+<p>The essence of nucleic acids hybridization is the denaturation and renaturation (<strong>annealing</strong>) of DNA (or RNA).</p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018150749025.png" alt="image-20201018150749025" style="zoom:50%;" />
 <p>The principle of hybridization is the addition of a probe to a complex mixture of target DNA. The mixture is incubated under conditions that promote the formation of hydrogen bonds between complementary strands.</p>
-<h2 id="Different-Blotting"><a href="#Different-Blotting" class="headerlink" title="Different Blotting"></a>Different Blotting</h2><p>Nucleic acid hybridization – A brief history of Southern/Northern/Western blot</p>
+<h2 id="different-blotting"><a class="markdownIt-Anchor" href="#different-blotting"></a> Different Blotting</h2>
+<p>Nucleic acid hybridization – A brief history of Southern/Northern/Western blot</p>
 <ul>
 <li>In 1975 when Ed Southern invented his method of using a radiolabeled <font color="FF0000">DNA probe</font> to <u>detect a specific DNA sequence within a DNA sample</u> (e.g. a fractionated genome) and named it after himself – the <strong>Southern blot</strong></li>
 <li>In 1977, J.C. Alwine, a biologist with a sense of humor, developed <strong>Northern Blot</strong>, a technique analogous to the Southern blot, this time for the <u>identification of a specific RNA within a complex RNA sample</u> using a <font color="FF0000">radio-labelled DNA probe</font>.</li>
-<li>W. Neal Burnette, a post-doc working in the Nowinski group at the Hutchinson Cancer Center in Seattle, developed a technique call western<ul>
+<li>W. Neal Burnette, a post-doc working in the Nowinski group at the Hutchinson Cancer Center in Seattle, developed a technique call western
+<ul>
 <li>Seattle sitting in the west cost of US. If it is in New York, it is another story perhaps.</li>
 <li>Burnette was searching for a way to combine the powers of radio immunoassay and SDS-PAGE electrophoresis so that he could <u>pinpoint specific antigens in a complex protein mixture</u></li>
 </ul>
 </li>
 </ul>
-<h3 id="1-Southern-Blotting"><a href="#1-Southern-Blotting" class="headerlink" title="1. Southern Blotting"></a>1. Southern Blotting</h3><p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151325377.png" alt="image-20201018151325377" style="zoom:50%;" /></p>
+<h3 id="1-southern-blotting"><a class="markdownIt-Anchor" href="#1-southern-blotting"></a> 1. Southern Blotting</h3>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151325377.png" alt="image-20201018151325377" style="zoom:50%;" />
 <ul>
 <li>The first type of blotting to be discovered</li>
 <li>Plays significant role in <strong>Recombinant DNA Technology</strong> as well as <strong>Molecular Biology</strong>.</li>
@@ -499,27 +522,30 @@ A = \varepsilon c l</script><ul>
 <blockquote>
 <p>In molecular biology, restriction fragment length polymorphism (RFLP) is a technique that exploits variations in homologous DNA sequences, known as polymorphisms, in order to distinguish individuals, populations, or species or to pinpoint the locations of genes within a sequence.</p>
 </blockquote>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151500072.png" alt="image-20201018151500072"></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151500072.png" alt="image-20201018151500072" /></p>
 <p>Detection of DNA defect &amp; DNA segment (Gene Defect) (Detection of the sickle cell globin gene)</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151540170.png" alt="image-20201018151540170" style="zoom: 33%;" /></p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151540170.png" alt="image-20201018151540170" style="zoom: 33%;" />
 <ul>
 <li>Using restriction enzymes we can prove that they are different types of genes.</li>
 <li>Normal DNA- 2 segments</li>
 <li>Sickle cell- 1</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151608412.png" alt="image-20201018151608412" style="zoom: 33%;" /></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151617739.png" alt="image-20201018151617739"></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151623310.png" alt="image-20201018151623310"></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151639945.png" alt="image-20201018151639945" style="zoom: 25%;" /></p>
-<h4 id="Denature-of-dsDNA-Alkaline-denaturation"><a href="#Denature-of-dsDNA-Alkaline-denaturation" class="headerlink" title="Denature of dsDNA: Alkaline denaturation"></a>Denature of dsDNA: Alkaline denaturation</h4><p>At <u>high pH</u>, then, the solution is <u>rich in hydroxide ions</u>, and these negatively-charged ions can <u>pull hydrogen ions off</u> of molecules like <u>the base pairs in DNA</u>. This process disrupts the hydrogen bonding that holds the two DNA strands together, causing them to separate.</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151825489.png" alt="image-20201018151825489"></p>
-<p>Unlike RNA, DNA lacks <strong>a hydroxyl group on the 2’ position in each</strong> <strong>sugar group</strong>. This difference makes DNA much more stable in alkaline solution. </p>
-<p><u>In RNA</u>, the hydroxyl group on the 2’ position can <u>give up a hydrogen ion</u> to the solution at high pH, creating <strong>a highly</strong> <strong>reactive</strong> <strong>alkoxide ion</strong> that <u>attacks the phosphate group</u> holding two neighboring nucleotides together. </p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151608412.png" alt="image-20201018151608412" style="zoom: 33%;" />
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151617739.png" alt="image-20201018151617739" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151623310.png" alt="image-20201018151623310" /></p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151639945.png" alt="image-20201018151639945" style="zoom: 25%;" />
+<h4 id="denature-of-dsdna-alkaline-denaturation"><a class="markdownIt-Anchor" href="#denature-of-dsdna-alkaline-denaturation"></a> Denature of dsDNA: Alkaline denaturation</h4>
+<p>At <u>high pH</u>, then, the solution is <u>rich in hydroxide ions</u>, and these negatively-charged ions can <u>pull hydrogen ions off</u> of molecules like <u>the base pairs in DNA</u>. This process disrupts the hydrogen bonding that holds the two DNA strands together, causing them to separate.</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018151825489.png" alt="image-20201018151825489" /></p>
+<p>Unlike RNA, DNA lacks <strong>a hydroxyl group on the 2’ position in each</strong> <strong>sugar group</strong>. This difference makes DNA much more stable in alkaline solution.</p>
+<p><u>In RNA</u>, the hydroxyl group on the 2’ position can <u>give up a hydrogen ion</u> to the solution at high pH, creating <strong>a highly</strong> <strong>reactive</strong> <strong>alkoxide ion</strong> that <u>attacks the phosphate group</u> holding two neighboring nucleotides together.</p>
 <ul>
 <li>DNA does not suffer from this defect and thus enjoys remarkable stability at high pH.</li>
 </ul>
-<h3 id="2-Northern-Blot"><a href="#2-Northern-Blot" class="headerlink" title="2. Northern Blot"></a>2. Northern Blot</h3><p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018152945692.png" alt="image-20201018152945692"></p>
-<h3 id="3-Western-Blot"><a href="#3-Western-Blot" class="headerlink" title="3. Western Blot"></a>3. Western Blot</h3><p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018152953782.png" alt="image-20201018152953782"></p>
+<h3 id="2-northern-blot"><a class="markdownIt-Anchor" href="#2-northern-blot"></a> 2. Northern Blot</h3>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018152945692.png" alt="image-20201018152945692" /></p>
+<h3 id="3-western-blot"><a class="markdownIt-Anchor" href="#3-western-blot"></a> 3. Western Blot</h3>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018152953782.png" alt="image-20201018152953782" /></p>
 <ol>
 <li>Load and separate protein samples on SDS-PAGE</li>
 <li>Electrophoretically transfer fractionated proteins onto PVDF membrane</li>
@@ -528,52 +554,62 @@ A = \varepsilon c l</script><ul>
 <li>Incubate the membrane with Hrp-labeled secondary antibody specific to primary antibody</li>
 <li>Incubate the blot with chemiluminescent HRP substrate and expose to film</li>
 </ol>
-<h3 id="4-Reporter-Enzymes-in-Blotting-HRP-vs-AP"><a href="#4-Reporter-Enzymes-in-Blotting-HRP-vs-AP" class="headerlink" title="4. Reporter Enzymes in Blotting- HRP vs AP"></a>4. Reporter Enzymes in Blotting- HRP vs AP</h3><p>The most common reporter enzymes are <strong>horseradish peroxidase (HRP)</strong> or <strong>alkaline phosphatase (AP)</strong>. Chemiluminescent substrates for <u>both</u> HRP and AP are <u>very sensitive</u> and can allow picogram to femtogram level detection.</p>
+<h3 id="4-reporter-enzymes-in-blotting-hrp-vs-ap"><a class="markdownIt-Anchor" href="#4-reporter-enzymes-in-blotting-hrp-vs-ap"></a> 4. Reporter Enzymes in Blotting- HRP vs AP</h3>
+<p>The most common reporter enzymes are <strong>horseradish peroxidase (HRP)</strong> or <strong>alkaline phosphatase (AP)</strong>. Chemiluminescent substrates for <u>both</u> HRP and AP are <u>very sensitive</u> and can allow picogram to femtogram level detection.</p>
 <ul>
-<li>The maximum signal generated from <u>HRP substrates is very fast, often within 5 minutes</u>. </li>
+<li>The maximum signal generated from <u>HRP substrates is very fast, often within 5 minutes</u>.</li>
 <li>The signal from AP substrates, however, gradually increases over time with a signal plateau around 60 minutes. The signal from AP substrates is very stable and can last up to several days, which can be useful if multiple exposures are needed</li>
 </ul>
 <p>Generally, dilution factors for the AP 2° antibodies can be greater than with HRP antibodies, thus saving reagents. The disadvantages of either <u>HRP or AP system are interferences</u>, such as azides for HRP or phosphate buffers for AP. There is also the possibility that endogenous phosphatases will react with AP substrates.</p>
-<h2 id="Type-of-Filters-in-blotting-techniques"><a href="#Type-of-Filters-in-blotting-techniques" class="headerlink" title="Type of Filters in blotting techniques"></a>Type of Filters in blotting techniques</h2><p><strong>Nitrocellulose</strong> Membrane (NC) - For the detection of nucleic acid and Protein. </p>
+<h2 id="type-of-filters-in-blotting-techniques"><a class="markdownIt-Anchor" href="#type-of-filters-in-blotting-techniques"></a> Type of Filters in blotting techniques</h2>
+<p><strong>Nitrocellulose</strong> Membrane (NC) - For the detection of nucleic acid and Protein.</p>
 <ul>
 <li>DNA/RNA covalently bound to membrane.</li>
 </ul>
 <p><strong>Positively charged <u>Nylon Membrane</u></strong> – For DNA/RNA only</p>
 <p><strong>PVDF Membrane</strong> – For Protein only, a pre-treatment with methanol is required</p>
-<h2 id="Principles-of-molecular-hybridization"><a href="#Principles-of-molecular-hybridization" class="headerlink" title="Principles of molecular hybridization"></a>Principles of molecular hybridization</h2><p>Hybridization involves annealing between two strand of DNA and or RNA with partially or fully complementary sequence. </p>
+<h2 id="principles-of-molecular-hybridization"><a class="markdownIt-Anchor" href="#principles-of-molecular-hybridization"></a> Principles of molecular hybridization</h2>
+<p>Hybridization involves annealing between two strand of DNA and or RNA with partially or fully complementary sequence.</p>
 <ul>
-<li>T~m~ (Melting Curve)<ul>
+<li>T<sub>m</sub> (Melting Curve)
+<ul>
 <li><strong>Tm</strong>, Heating the DNA solution above a characteristic <strong>temperature</strong> can <u>separate the two strands</u> of a double helix. That temperature is called the melting temperature</li>
-<li>T~m50~: 50% DNA become single stranded</li>
-<li>Factors affect Tm would determine the <u>stringency</u> of hybridization<ul>
+<li>T<sub>m50</sub>: 50% DNA become single stranded</li>
+<li>Factors affect Tm would determine the <u>stringency</u> of hybridization
+<ul>
 <li><strong>High stringency</strong> means a condition only allows <u>perfect match</u> between two piece of ssDNA. (高严格度)</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Stringency of hybridization (Influenced by the following reasons)<ul>
-<li>GC content<ul>
+<li>Stringency of hybridization (Influenced by the following reasons)
+<ul>
+<li>GC content
+<ul>
 <li><strong>GC content</strong>, Because a G–C base pair has three hydrogen bonds and an A–T pair only has two, nucleic acid double helices with a <strong>high G+C</strong> content have a <strong>higher Tm</strong> than do those with a greater proportion of A+T.</li>
 </ul>
 </li>
-<li>Salt concentration<ul>
+<li>Salt concentration
+<ul>
 <li>Salt: High Salt concentration reduce stringency, Low salt concentration enhance stringency.</li>
-<li><u>A high concentration of salt</u> (such as NaCl) <u>raises the Tm</u> of a DNA duplex, because the positive Na+ ions shield the <u>negative charges on the phosphodiester backbone from repelling each other</u> </li>
-<li><u>High salt decrease the stringency</u> &amp; Low salt increase the stringency – of hybridization<ul>
+<li><u>A high concentration of salt</u> (such as NaCl) <u>raises the Tm</u> of a DNA duplex, because the positive Na+ ions shield the <u>negative charges on the phosphodiester backbone from repelling each other</u></li>
+<li><u>High salt decrease the stringency</u> &amp; Low salt increase the stringency – of hybridization
+<ul>
 <li>Oppose to the protein-protein interaction</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Solvent<ul>
-<li><strong>Organic Solvent</strong>: DMSO, DMF, Formamide etc, certain organic solvents can cause the negative charges on the phosphates to repel more strongly, thus <u>reducing the Tm.</u> </li>
-<li>Create hydrophobic environment $\rarr$ de-stable hydrogen bonds</li>
+<li>Solvent
+<ul>
+<li><strong>Organic Solvent</strong>: DMSO, DMF, Formamide etc, certain organic solvents can cause the negative charges on the phosphates to repel more strongly, thus <u>reducing the Tm.</u></li>
+<li>Create hydrophobic environment <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rarr</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> de-stable hydrogen bonds</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<hr>
+<hr />
 <p>Blotting techniques have been widely employed for more than 30 years and have provided the foundation of our understanding of molecular biology.</p>
 <ul>
 <li>However, these techniques have been largely—and in some cases completely— usurped by new technologies .especially the next generation sequencing techniques</li>
@@ -584,34 +620,39 @@ A = \varepsilon c l</script><ul>
 <li><strong>Fluorescent <em>in situ</em> hybridization (FISH)</strong> allows detection of specific sequences within a tissue sample with high sensitivity and precise localization</li>
 </ol>
 <p>Northern blots have given way to <strong>reverse-transcription real-time PCR</strong>, again a more sensitive and more user-friendly technique.</p>
-<h1 id="三、Labeling-methods-of-Nucleic-Acid"><a href="#三、Labeling-methods-of-Nucleic-Acid" class="headerlink" title="三、Labeling methods of Nucleic Acid"></a>三、Labeling methods of Nucleic Acid</h1><p>Radioactive and non-radioactive labelling</p>
+<h1 id="三-labeling-methods-of-nucleic-acid"><a class="markdownIt-Anchor" href="#三-labeling-methods-of-nucleic-acid"></a> 三、Labeling methods of Nucleic Acid</h1>
+<p>Radioactive and non-radioactive labelling</p>
 <ul>
-<li>Radioactive labelling: <strong>Unbeatable sensitivity</strong>, Common radioactive isotope used in in molecular biology: ^32^P, ^3^H, ^125^I, ^35^S. ^14^C.</li>
+<li>Radioactive labelling: <strong>Unbeatable sensitivity</strong>, Common radioactive isotope used in in molecular biology: <sup>32</sup>P, <sup>3</sup>H, <sup>125</sup>I, <sup>35</sup>S. <sup>14</sup>C.</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018154101724.png" alt="image-20201018154101724" style="zoom:67%;" /></p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018154101724.png" alt="image-20201018154101724" style="zoom:67%;" />
 <ul>
-<li>Gamma-^32^P ATP used in the End Labelling</li>
-<li>Alpha- ^32^P dNTP can be used in any elongation reaction mediated by polymerase</li>
+<li>Gamma-<sup>32</sup>P ATP used in the End Labelling</li>
+<li>Alpha- <sup>32</sup>P dNTP can be used in any elongation reaction mediated by polymerase</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018154109739.png" alt="image-20201018154109739" style="zoom:50%;" /></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018154116713.png" alt="image-20201018154116713" style="zoom:67%;" /></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018154123396.png" alt="image-20201018154123396"></p>
-<h2 id="Common-labeling-methods-of-Nucleic-Acid"><a href="#Common-labeling-methods-of-Nucleic-Acid" class="headerlink" title="Common labeling methods of Nucleic Acid"></a>Common labeling methods of Nucleic Acid</h2><ul>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018154109739.png" alt="image-20201018154109739" style="zoom:50%;" />
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018154116713.png" alt="image-20201018154116713" style="zoom:67%;" />
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018154123396.png" alt="image-20201018154123396" /></p>
+<h2 id="common-labeling-methods-of-nucleic-acid"><a class="markdownIt-Anchor" href="#common-labeling-methods-of-nucleic-acid"></a> Common labeling methods of Nucleic Acid</h2>
+<ul>
 <li>End labelling 末端标记</li>
 <li>Nick translation 切口平移</li>
 <li>Primer extension 引物延伸</li>
 <li>PCR labeling</li>
 </ul>
-<h3 id="1-5’-End-Labeling"><a href="#1-5’-End-Labeling" class="headerlink" title="1. 5’ End Labeling"></a>1. 5’ End Labeling</h3><p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018154622953.png" alt="image-20201018154622953" /></p>
+<h3 id="1-5-end-labeling"><a class="markdownIt-Anchor" href="#1-5-end-labeling"></a> 1. 5’ End Labeling</h3>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018154622953.png" alt="image-20201018154622953" />
 <ul>
 <li>AP: Alkaline phosphatase 碱性磷酸酶</li>
-<li>PNK: Polynucleotide Kinase 多聚核苷酸激酶<ul>
+<li>PNK: Polynucleotide Kinase 多聚核苷酸激酶
+<ul>
 <li>Highly efficient, accurate</li>
 <li>Specific activity is relatively low (因为只标记了末端，中间部分没有标记)</li>
 </ul>
 </li>
 </ul>
-<h3 id="2-Nick-Translation"><a href="#2-Nick-Translation" class="headerlink" title="2. Nick Translation"></a>2. Nick Translation</h3><p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018154807551.png" alt="image-20201018154807551"></p>
+<h3 id="2-nick-translation"><a class="markdownIt-Anchor" href="#2-nick-translation"></a> 2. Nick Translation</h3>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018154807551.png" alt="image-20201018154807551" /></p>
 <p>Nick: Low concentration of <strong>DNase I</strong> breaks the DNA strand, remove one nucleotide and leaves 5’ P and 3’ OH.</p>
 <ul>
 <li><em>E.coli</em> DNA polymerase I <u>has 5’ to 3’ exonuclease activity Polymerase activity</u></li>
@@ -623,41 +664,48 @@ A = \varepsilon c l</script><ul>
 <li>Accurate – amplification free</li>
 <li>Label both strand 可以实现对两条链都进行标记</li>
 </ul>
-<h3 id="3-Primer-extension"><a href="#3-Primer-extension" class="headerlink" title="3. Primer extension"></a>3. Primer extension</h3><p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018155029409.png" alt="image-20201018155029409"></p>
+<h3 id="3-primer-extension"><a class="markdownIt-Anchor" href="#3-primer-extension"></a> 3. Primer extension</h3>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018155029409.png" alt="image-20201018155029409" /></p>
 <ol>
 <li>DNA is denatured to give single-stranded molecules.</li>
-<li>An oligonucleotide primer is then added to give a short double-stranded region with a free 3-OH group. </li>
-<li>The <strong>Klenow fragment</strong> of DNA polymerase I can then synthesize a copy of the template strand from the primer, incorporating [α-^32^P]DNTP(solid circles)to produce a labelled molecule with a very high specific activity</li>
+<li>An oligonucleotide primer is then added to give a short double-stranded region with a free 3-OH group.</li>
+<li>The <strong>Klenow fragment</strong> of DNA polymerase I can then synthesize a copy of the template strand from the primer, incorporating [α-<sup>32</sup>P]DNTP(solid circles)to produce a labelled molecule with a very high specific activity</li>
 </ol>
 <p>Primer；</p>
 <ul>
-<li>Klenow fragment<ul>
+<li>Klenow fragment
+<ul>
 <li>Strand-specific</li>
-<li>High specific activity </li>
+<li>High specific activity</li>
 </ul>
 </li>
 </ul>
-<h3 id="4-Random-prime-Labeling"><a href="#4-Random-prime-Labeling" class="headerlink" title="4. Random prime Labeling"></a>4. Random prime Labeling</h3><p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018155103826.png" alt="image-20201018155103826"></p>
+<h3 id="4-random-prime-labeling"><a class="markdownIt-Anchor" href="#4-random-prime-labeling"></a> 4. Random prime Labeling</h3>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018155103826.png" alt="image-20201018155103826" /></p>
 <p>在DNA单链条件下，加入随机的（并不局限于特定序列的）引物，进行扩增。最终实现标记。</p>
-<h2 id="Non-radioactive-labeling"><a href="#Non-radioactive-labeling" class="headerlink" title="Non-radioactive labeling"></a>Non-radioactive labeling</h2><ul>
+<h2 id="non-radioactive-labeling"><a class="markdownIt-Anchor" href="#non-radioactive-labeling"></a> Non-radioactive labeling</h2>
+<ul>
 <li><strong>Digoxigenin</strong>-11-dUTP Anti-DIG-AP</li>
 <li><strong>Biotin</strong>-11-dUTP Streptavidin-HRP</li>
 <li><strong>Cy3/Cy5</strong> – UTP Excitation-Emission</li>
 <li>这些方法适用于copy数高，表达量高的基因</li>
 </ul>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018155220833.png" alt="image-20201018155220833" style="zoom:67%;" /></p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018155233565.png" alt="image-20201018155233565" style="zoom:67%;" /></p>
-<h2 id="Detection-of-signal-after-hybridization"><a href="#Detection-of-signal-after-hybridization" class="headerlink" title="Detection of signal after hybridization"></a>Detection of signal after hybridization</h2><p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018155301313.png" alt="image-20201018155301313"></p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018155220833.png" alt="image-20201018155220833" style="zoom:67%;" />
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018155233565.png" alt="image-20201018155233565" style="zoom:67%;" />
+<h2 id="detection-of-signal-after-hybridization"><a class="markdownIt-Anchor" href="#detection-of-signal-after-hybridization"></a> Detection of signal after hybridization</h2>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201018155301313.png" alt="image-20201018155301313" /></p>
 <ul>
-<li>^32^P mainly emit beta particles</li>
-<li>This can be detected by <strong>X-ray film</strong> or The phosphor screen <ul>
+<li><sup>32</sup>P mainly emit beta particles</li>
+<li>This can be detected by <strong>X-ray film</strong> or The phosphor screen
+<ul>
 <li>Phosphor screen can stably absorb energy and then release it upon laser stimulation</li>
 </ul>
 </li>
 <li>Fluorescence is often being detected if nonradioactive labelling method is used</li>
 </ul>
-<hr>
-<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>Handling and Quantification of DNA/RNA</p>
+<hr />
+<h1 id="summary"><a class="markdownIt-Anchor" href="#summary"></a> Summary</h1>
+<p>Handling and Quantification of DNA/RNA</p>
 <ul>
 <li>Absorbance vs Fluorescence based – OD260/280, OD260/230 Electrophoresis (Pros and Cons of different matrix)</li>
 </ul>
@@ -754,7 +802,7 @@ A = \varepsilon c l</script><ul>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81Handling-and-Quantification-of-DNA-RNA"><span class="nav-number">1.</span> <span class="nav-text">一、Handling and Quantification of DNA&#x2F;RNA</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Absorbance-Based-Methods"><span class="nav-number">1.1.</span> <span class="nav-text">The Absorbance Based Methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fluorescence-Based-Methods"><span class="nav-number">1.2.</span> <span class="nav-text">Fluorescence Based Methods</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Detection-of-Nucleic-acids-through-blotting-techniques-Nucleic-acids-hybridization"><span class="nav-number">2.</span> <span class="nav-text">二、Detection of Nucleic acids through blotting techniques (Nucleic acids hybridization)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">2.1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Different-Blotting"><span class="nav-number">2.2.</span> <span class="nav-text">Different Blotting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Type-of-Filters-in-blotting-techniques"><span class="nav-number">2.3.</span> <span class="nav-text">Type of Filters in blotting techniques</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Principles-of-molecular-hybridization"><span class="nav-number">2.4.</span> <span class="nav-text">Principles of molecular hybridization</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81Labeling-methods-of-Nucleic-Acid"><span class="nav-number">3.</span> <span class="nav-text">三、Labeling methods of Nucleic Acid</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Common-labeling-methods-of-Nucleic-Acid"><span class="nav-number">3.1.</span> <span class="nav-text">Common labeling methods of Nucleic Acid</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Non-radioactive-labeling"><span class="nav-number">3.2.</span> <span class="nav-text">Non-radioactive labeling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Detection-of-signal-after-hybridization"><span class="nav-number">3.3.</span> <span class="nav-text">Detection of signal after hybridization</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Summary"><span class="nav-number">4.</span> <span class="nav-text">Summary</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-handling-and-quantification-of-dnarna"><span class="nav-number">1.</span> <span class="nav-text"> 一、Handling and Quantification of DNA&#x2F;RNA</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#the-absorbance-based-methods"><span class="nav-number">1.1.</span> <span class="nav-text"> The Absorbance Based Methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fluorescence-based-methods"><span class="nav-number">1.2.</span> <span class="nav-text"> Fluorescence Based Methods</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-detection-of-nucleic-acids-through-blotting-techniques-nucleic-acids-hybridization"><span class="nav-number">2.</span> <span class="nav-text"> 二、Detection of Nucleic acids through blotting techniques (Nucleic acids hybridization)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-number">2.1.</span> <span class="nav-text"> Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#different-blotting"><span class="nav-number">2.2.</span> <span class="nav-text"> Different Blotting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#type-of-filters-in-blotting-techniques"><span class="nav-number">2.3.</span> <span class="nav-text"> Type of Filters in blotting techniques</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#principles-of-molecular-hybridization"><span class="nav-number">2.4.</span> <span class="nav-text"> Principles of molecular hybridization</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89-labeling-methods-of-nucleic-acid"><span class="nav-number">3.</span> <span class="nav-text"> 三、Labeling methods of Nucleic Acid</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#common-labeling-methods-of-nucleic-acid"><span class="nav-number">3.1.</span> <span class="nav-text"> Common labeling methods of Nucleic Acid</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#non-radioactive-labeling"><span class="nav-number">3.2.</span> <span class="nav-text"> Non-radioactive labeling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#detection-of-signal-after-hybridization"><span class="nav-number">3.3.</span> <span class="nav-text"> Detection of signal after hybridization</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#summary"><span class="nav-number">4.</span> <span class="nav-text"> Summary</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -831,13 +879,13 @@ A = \varepsilon c l</script><ul>
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">2.3m</span>
+    <span title="站点总字数">2.4m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">35:23</span>
+    <span title="站点阅读时长">35:37</span>
 </div><br /> <!-- 换行 -->
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>
@@ -921,7 +969,6 @@ $(document).ready(function() {
   
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/pjax/pjax.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
 
@@ -1053,60 +1100,10 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
   
       
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+  <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css">
 
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
 
