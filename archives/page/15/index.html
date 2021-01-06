@@ -304,6 +304,46 @@
       </div>
 
       <div class="post-title">
+          <a class="post-title-link" href="/posts/21ac4f1d.html" itemprop="url">
+            <span itemprop="name">L03 Citric Acid Cycle and Glyoxylate Cycle</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-07-17T21:57:33+08:00"
+              content="2020-07-17">
+          07-17
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/3069488.html" itemprop="url">
+            <span itemprop="name">L05 Photosynthesis</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-07-17T21:57:33+08:00"
+              content="2020-07-17">
+          07-17
+        </time>
+      </div>
+
+      <div class="post-title">
           <a class="post-title-link" href="/posts/5d10c738.html" itemprop="url">
             <span itemprop="name">L10 Metabolism of Nitrogenous Compounds II Amino Acids, Porphyrins, and Neurotransmitters</span>
           </a>
@@ -344,48 +384,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/posts/4716231a.html" itemprop="url">
-            <span itemprop="name">L09 Metabolism of Nitrogenous Compounds I Principles of Biosynthesis, Utilization, and Turnover</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-07-17T21:57:33+08:00"
-              content="2020-07-17">
-          07-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/f2360b85.html" itemprop="url">
-            <span itemprop="name">L08 Lipid Metabolism II Membrane Lipids, Steroids, Isoprenoids, and Eicosanoids</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-07-17T21:57:33+08:00"
-              content="2020-07-17">
-          07-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/9bdd6c34.html" itemprop="url">
-            <span itemprop="name">L07 Interorgan and Intracellular Coordination of Energy Metabolism in Vertebrates</span>
+          <a class="post-title-link" href="/posts/ad350e1e.html" itemprop="url">
+            <span itemprop="name">L04 Electron Transport, Oxidative Phosphorylation, and Oxygen Metabolism</span>
           </a>
       </div>
 
@@ -520,7 +520,37 @@
   </div>
 
 
+<!-- none-select-br -->
 
+<p></p>
+
+<!-- hitokoto -->
+
+<div class="hitokoto-title">
+	<i class="fa fa-paragraph"></i>
+	<b>一言</b>
+</div>
+
+<div id="hitokoto">:D 获取中...</div>
+<i id="hitofrom">:D 获取中...</i>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + data.hitokoto;
+      var hitofrom = document.getElementById('hitofrom');
+      hitofrom.innerText = "——" + data.from + '\xa0'; 
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
       </div>
 
     </div>

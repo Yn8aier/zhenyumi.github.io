@@ -244,8 +244,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/posts/4b9e76fa.html" itemprop="url">
-            <span itemprop="name">L1 Introduction</span>
+          <a class="post-title-link" href="/posts/3dc5af94.html" itemprop="url">
+            <span itemprop="name">L3 Blood</span>
           </a>
       </div>
 
@@ -304,8 +304,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/posts/8e41c9b2.html" itemprop="url">
-            <span itemprop="name">L5 Audition and Language</span>
+          <a class="post-title-link" href="/posts/2883ba9a.html" itemprop="url">
+            <span itemprop="name">L4 Vision</span>
           </a>
       </div>
 
@@ -324,8 +324,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/posts/2883ba9a.html" itemprop="url">
-            <span itemprop="name">L4 Vision</span>
+          <a class="post-title-link" href="/posts/8e41c9b2.html" itemprop="url">
+            <span itemprop="name">L5 Audition and Language</span>
           </a>
       </div>
 
@@ -520,7 +520,37 @@
   </div>
 
 
+<!-- none-select-br -->
 
+<p></p>
+
+<!-- hitokoto -->
+
+<div class="hitokoto-title">
+	<i class="fa fa-paragraph"></i>
+	<b>一言</b>
+</div>
+
+<div id="hitokoto">:D 获取中...</div>
+<i id="hitofrom">:D 获取中...</i>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + data.hitokoto;
+      var hitofrom = document.getElementById('hitofrom');
+      hitofrom.innerText = "——" + data.from + '\xa0'; 
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
       </div>
 
     </div>
