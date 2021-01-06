@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/website_favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/website_favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/website_favicon.ico">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/website_favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|14px:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
+  </script>
+
+  <meta name="description" content="Sat Jul 25 2020 23:16:09 GMT+0800 (GMT+08:00)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L13 Adaptive Immunity">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/3bdf6320.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:16:09 GMT+0800 (GMT+08:00)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191217183327095.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191217183421024.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191217210143701.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191217210224596.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191217214409784.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191217214745081.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218101402670.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218101749690.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218101817507.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218102255454.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218102455308.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218102549907.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218103834778.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218103920186.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218104627595.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218104727593.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218105410974.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218110225420.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218110246621.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218110715620.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218110735397.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218110831499.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218110853106.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218110940872.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218111533337.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218111617418.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218112001676.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218112201284.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218112952656.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218113217604.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218113251509.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218113420317.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218114130683.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218114149069.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218114341014.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218114350602.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218115726278.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218115929733.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218115954370.png">
+<meta property="article:published_time" content="2020-07-25T15:16:09.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:16:09.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Microbiology">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191217183327095.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/posts/3bdf6320.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>L13 Adaptive Immunity | 鹘横海</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.  Today is another day.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">20</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">20</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">155</span></a>
+
+  </li>
+        <li class="menu-item menu-item-留言板">
+
+    <a href="/%E7%95%99%E8%A8%80%E6%9D%BF/" rel="section"><i class="fas fa-chalkboard-teacher fa-fw"></i>留言板</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/posts/3bdf6320.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="希望能活的久一点">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          L13 Adaptive Immunity
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-25 23:16:09" itemprop="dateCreated datePublished" datetime="2020-07-25T23:16:09+08:00">2020-07-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/Microbiology/" itemprop="url" rel="index"><span itemprop="name">Microbiology</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/3bdf6320.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/3bdf6320.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>12k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="一-overview-of-adaptive-immunity"><a class="markdownIt-Anchor" href="#一-overview-of-adaptive-immunity"></a> 一、Overview of Adaptive Immunity</h1>
+<p>Major functions:</p>
+<ul>
+<li>recognize nonself</li>
+<li>respond to nonself</li>
+<li>remember nonself</li>
+</ul>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191217183327095.png" alt="image-20191217183327095" style="zoom:50%;" />
+<h2 id="acquired-immune-system-development"><a class="markdownIt-Anchor" href="#acquired-immune-system-development"></a> Acquired Immune System Development</h2>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191217183421024.png" alt="image-20191217183421024" style="zoom:67%;" />
+<h2 id="introduction-of-specific-immunity"><a class="markdownIt-Anchor" href="#introduction-of-specific-immunity"></a> Introduction of Specific Immunity</h2>
+<h3 id="1-four-characteristics-of-specific-immunity"><a class="markdownIt-Anchor" href="#1-four-characteristics-of-specific-immunity"></a> 1. Four Characteristics of Specific Immunity</h3>
+<ol>
+<li><strong>Discrimination between self and non-self</strong>: usually responds selectively to non-self</li>
+<li><strong>Diversity</strong>: generates enormous diversity of molecules</li>
+<li><strong>Specificity</strong>: against one specific pathogen or foreign substance</li>
+<li><strong>Memory</strong>: response to a second exposure to a pathogen is more fast</li>
+</ol>
+<h3 id="2-types-of-specific-immunity"><a class="markdownIt-Anchor" href="#2-types-of-specific-immunity"></a> 2. Types of Specific Immunity</h3>
+<ol>
+<li><strong>Humoral immunity</strong></li>
+</ol>
+<ul>
+<li>
+<p>also called antibody-mediated immunity</p>
+</li>
+<li>
+<p>based on antibody activity</p>
+</li>
+</ul>
+<ol start="2">
+<li><strong>Cellular immunity</strong>
+<ul>
+<li>
+<p>also called cell-mediated immunity</p>
+</li>
+<li>
+<p>based on T cell action</p>
+</li>
+</ul>
+</li>
+</ol>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191217210143701.png" alt="image-20191217210143701" style="zoom:40%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191217210224596.png" alt="image-20191217210224596" /></p>
+<ol>
+<li>
+<p><strong>Natural Immunity</strong> 先天免疫</p>
+<p>Is acquired through the normal life experiences of a human and is not induced through medical means.</p>
+</li>
+<li>
+<p>**Artificial immunity **人工免疫</p>
+<p>Is that produced purposefully through medical procedures (also called immunization).</p>
+</li>
+<li>
+<p>**Active immunity **自动（主动）免疫</p>
+</li>
+</ol>
+<p>Is the consequence of a person developing his or her own immune response to a microbe.</p>
+<ol start="2">
+<li>
+<p><strong>Passive immunity</strong> 被动免疫</p>
+<p>Is the consequence of one person receiving preformed immunity made by another person</p>
+</li>
+</ol>
+<h2 id="components-involved-in-adaptive-immunity"><a class="markdownIt-Anchor" href="#components-involved-in-adaptive-immunity"></a> Components Involved In Adaptive Immunity</h2>
+<h3 id="1-antigens"><a class="markdownIt-Anchor" href="#1-antigens"></a> 1. Antigens</h3>
+<p>**Antigenic determinant sites (epitopes) **抗原决定簇位点（表位）</p>
+<ul>
+<li>site on antigen that reacts with antibody or TCR (T cell acceptor)</li>
+</ul>
+<p><strong>Antibody affinity</strong></p>
+<ul>
+<li><u>strength</u> with which antibody binds to its antigen at a given antigen-binding site</li>
+</ul>
+<p><strong>Avidity of antibody</strong></p>
+<ul>
+<li>overall antigen-binding at all antigen binding sites</li>
+</ul>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191217214409784.png" alt="image-20191217214409784" /></p>
+<h3 id="2-haptens-半抗原"><a class="markdownIt-Anchor" href="#2-haptens-半抗原"></a> 2. Haptens 半抗原</h3>
+<blockquote>
+<p>半抗原（hapten）是指本身分子量过小，无法刺激免疫反应，必须和载体（carrier）结合成较大的才能刺激发生免疫反应。半抗原能与对应抗体结合出现抗原-抗体反应，又不能单独激发人或动物体产生抗体的抗原，它只有抗原性，不具免疫原性，又称不完成抗原。大多数多糖和所有类脂都属于半抗原，如果用化学方法把半抗原与某种纯蛋白的分子载体（protein carrier）结合，纯蛋白会获得新的免疫原性，并能刺激动物产生相应的抗体。半抗原一旦与纯蛋白质结合，就构成该蛋白质的一个抗原簇。</p>
+</blockquote>
+<p>Small organic molecules</p>
+<p>Not antigenic but may become antigenic when bound to larger carrier molecule</p>
+<ul>
+<li>e.g., penicillin</li>
+<li>may elicit hapten specific and carrier specific responses</li>
+</ul>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191217214745081.png" alt="image-20191217214745081" style="zoom: 45%;" />
+<h3 id="3-major-histocompatibility-complex-mhc"><a class="markdownIt-Anchor" href="#3-major-histocompatibility-complex-mhc"></a> 3. Major Histocompatibility Complex (MHC)</h3>
+<p><strong>Class I</strong> molecules found on almost all types of nucleated cells (except RBC)</p>
+<ul>
+<li>important for organ transplantation</li>
+</ul>
+<p><strong>Class II</strong> molecules found only on antigen presenting cells</p>
+<ul>
+<li>required for T cell communication to macrophages, dendritic cells, B cells</li>
+</ul>
+<p><strong>Class III</strong> molecules include secreted proteins</p>
+<ul>
+<li>not required for self/nonself recognition</li>
+</ul>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218101402670.png" alt="image-20191218101402670" style="zoom:50%;" />
+<h4 id="mhc-and-antigen-processing"><a class="markdownIt-Anchor" href="#mhc-and-antigen-processing"></a> MHC and Antigen Processing</h4>
+<p><strong>endogenous antigen processing</strong> 内源性抗原处理</p>
+<ul>
+<li>class I binds to antigen peptides that originate in the cytoplasm and present antigen to CD8+ T cells</li>
+</ul>
+<p>**exogenous antigen processing **外源性抗原处理</p>
+<ul>
+<li>class II binds to antigen fragments that come from outside the cell and present to CD4+ T helper cells</li>
+</ul>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218101749690.png" alt="image-20191218101749690" /></p>
+<h3 id="4-cluster-of-differentiation-molecules-cds"><a class="markdownIt-Anchor" href="#4-cluster-of-differentiation-molecules-cds"></a> 4. Cluster of Differentiation Molecules (CDs)</h3>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218101817507.png" alt="image-20191218101817507" /></p>
+<p>Membrane proteins on lymphocytes and other cells</p>
+<ul>
+<li>used to identify and differentiate between leukocyte subpopulations</li>
+</ul>
+<h1 id="二-t-cell-biology"><a class="markdownIt-Anchor" href="#二-t-cell-biology"></a> 二、T-Cell Biology</h1>
+<p>Major players in cell-mediated immune  response</p>
+<p>Originate from CD34+ stem cells in the bone marrow but mature in thymus</p>
+<p>Immunologically specific and function in a variety of regulatory and effector ways</p>
+<h2 id="t-cell-receptors-tcrs"><a class="markdownIt-Anchor" href="#t-cell-receptors-tcrs"></a> T-Cell Receptors (TCRs)</h2>
+<p>Membrane proteins</p>
+<p>Recognize and bind fragments of antigens</p>
+<p>Antigen fragments must be presented by MHC molecules</p>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218102255454.png" alt="image-20191218102255454" style="zoom: 50%;" />
+<h2 id="t-cell-activation"><a class="markdownIt-Anchor" href="#t-cell-activation"></a> T Cell Activation</h2>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218102455308.png" alt="image-20191218102455308" style="zoom:50%;" />
+<h2 id="t-cell-types"><a class="markdownIt-Anchor" href="#t-cell-types"></a> T Cell Types</h2>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218102549907.png" alt="image-20191218102549907" style="zoom:50%;" />
+<p>T-cell Progenitor differentiates into:</p>
+<ol>
+<li>
+<p><strong>Natural T Regulatory (Treg) Cells</strong>: Maintain homeostasis（稳态） by secreting cytokines that downregulate strong immune responses to nonself (e.g., IL-9, IL-10, andTGF-P)</p>
+</li>
+<li>
+<p><strong>Natural Killer T (NKT) Cells</strong>: Not the same as NK cells. Activated by glycolipids, not peptides. Has two types of effector functions for killing; hybrid of TH and Tc; secrete large amounts of IFN-γ or IL-4</p>
+</li>
+<li>
+<p><strong>α/β T Cells</strong>: Majority of CD4+ and CD8+ T cells, exhibit helper and CTL functions, respectively. Memory cells arise after activation.</p>
+</li>
+<li>
+<p><strong>γ/δ T Cells</strong>: Small subset of T cells (&lt;2%), found in gut mucosa; respond to greater diversity of antigens than α/β T cells</p>
+</li>
+</ol>
+<h2 id="t-cell-development"><a class="markdownIt-Anchor" href="#t-cell-development"></a> T Cell Development</h2>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218103834778.png" alt="image-20191218103834778" /></p>
+<h1 id="三-b-cell-biology"><a class="markdownIt-Anchor" href="#三-b-cell-biology"></a> 三、B-Cell Biology</h1>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218103920186.png" alt="image-20191218103920186" style="zoom: 33%;" />
+<h2 id="b-cell-activation"><a class="markdownIt-Anchor" href="#b-cell-activation"></a> B-Cell Activation</h2>
+<p>Two mechanisms for antigen-specific activation</p>
+<ol>
+<li>T dependent</li>
+<li>T independent</li>
+</ol>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218104627595.png" alt="image-20191218104627595" style="zoom:50%;" />
+<h3 id="1-t-dependent-antigen-triggering"><a class="markdownIt-Anchor" href="#1-t-dependent-antigen-triggering"></a> 1. T-Dependent Antigen Triggering</h3>
+<p>Require two signals</p>
+<ol>
+<li>antigen-BCR specific interaction</li>
+<li>T cell signal</li>
+</ol>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218104727593.png" alt="image-20191218104727593" style="zoom: 50%;" />
+<h3 id="2-t-lndependent-antigen-triggering"><a class="markdownIt-Anchor" href="#2-t-lndependent-antigen-triggering"></a> 2. T-lndependent Antigen Triggering</h3>
+<p>T-independent antigens</p>
+<ul>
+<li>polymeric antigens with large number of identical epitopes (e.g., LPS)</li>
+</ul>
+<p>Less effective than T-dependent B cell activation</p>
+<ul>
+<li>antibodies produced have a low affinity for antigen</li>
+<li>no memory B cells formed</li>
+</ul>
+<h2 id="antibody"><a class="markdownIt-Anchor" href="#antibody"></a> Antibody</h2>
+<p>Antibody</p>
+<ul>
+<li>immunoglobulin (Ig)</li>
+<li>glycoprotein made by plasma cells</li>
+<li>serves as antigen receptor (BCR) on B cell surface</li>
+</ul>
+<p>Found in blood serum, tissue fluids, and mucosal surfaces of vertebrate animals</p>
+<h3 id="1-immunoglobulin-structure"><a class="markdownIt-Anchor" href="#1-immunoglobulin-structure"></a> 1. Immunoglobulin Structure</h3>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218105410974.png" alt="image-20191218105410974" style="zoom: 50%;" />
+<p>Four chains are arranged in form of a flexible Y shape</p>
+<ul>
+<li>
+<p>Fab fragments (variable and constant regions)</p>
+</li>
+<li>
+<p>Fc fragment (constant regions only)</p>
+</li>
+</ul>
+<h3 id="2-immunoglobulin-function"><a class="markdownIt-Anchor" href="#2-immunoglobulin-function"></a> 2. Immunoglobulin Function</h3>
+<p><strong>Fab</strong> binds antigen specifically</p>
+<ul>
+<li>activates nonspecific defense mechanisms</li>
+<li>e.g., opsonization for enhanced phagocytosis</li>
+</ul>
+<p><strong>Fc</strong> mediates binding to:</p>
+<ul>
+<li>host tissue</li>
+<li>various cells of immune system</li>
+<li>first component of complement system</li>
+</ul>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218110225420.png" alt="image-20191218110225420" /></p>
+<h3 id="3-immunoglobulin-classes"><a class="markdownIt-Anchor" href="#3-immunoglobulin-classes"></a> 3. Immunoglobulin Classes</h3>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218110246621.png" alt="image-20191218110246621" style="zoom:50%;" />
+<p><strong>igG</strong></p>
+<ul>
+<li>80% of serum immunoglobulin</li>
+<li>opsonization, neutralization, activates complement</li>
+<li>only Ig that can cross the placenta</li>
+</ul>
+<p><strong>igD</strong></p>
+<ul>
+<li>part of the BCR complex</li>
+<li>signals B cells to startantibody production</li>
+</ul>
+<p><strong>igM</strong></p>
+<ul>
+<li>pentamer arranged in pinwheel</li>
+<li>first Ig in all immune responses</li>
+<li>agglutination, activates complement</li>
+</ul>
+<p><strong>IgA</strong></p>
+<ul>
+<li>monomers and dimers</li>
+<li>secreted across mucosal surfaces</li>
+<li>tears, saliva, breast milk, MALT</li>
+<li>immune exclusion</li>
+</ul>
+<p><strong>igE</strong></p>
+<ul>
+<li>
+<p>lowest Ig serum level, elevated in parasitic infection and allergic reactions</p>
+</li>
+<li>
+<p>opsonization</p>
+</li>
+<li>
+<p>mast cells bind Fc portion, activated when Fab portion binds allergens</p>
+</li>
+</ul>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218110715620.png" alt="image-20191218110715620" /></p>
+<h3 id="4-antibody-production-and-kinetics"><a class="markdownIt-Anchor" href="#4-antibody-production-and-kinetics"></a> 4. Antibody Production and Kinetics</h3>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218110735397.png" alt="image-20191218110735397" /></p>
+<h3 id="5-diversity-of-antibodies"><a class="markdownIt-Anchor" href="#5-diversity-of-antibodies"></a> 5. Diversity of Antibodies</h3>
+<p>Major mechanisms contribute to generation of antibody diversity</p>
+<ol>
+<li>rearrangement of antibody gene segments</li>
+<li>somatic mutation 体细胞突变</li>
+</ol>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218110831499.png" alt="image-20191218110831499" style="zoom: 67%;" />
+<h4 id="light-chain"><a class="markdownIt-Anchor" href="#light-chain"></a> Light Chain</h4>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218110853106.png" alt="image-20191218110853106" style="zoom:50%;" />
+<p>Germ line DNA for light chain contains multiple coding sequences, V and J (joining)</p>
+<ul>
+<li>one V is joined with one J region</li>
+<li>many possible combinations formed</li>
+<li>VJ joined with C (constant) exon after transcription</li>
+</ul>
+<h4 id="heavy-chain"><a class="markdownIt-Anchor" href="#heavy-chain"></a> Heavy Chain</h4>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218110940872.png" alt="image-20191218110940872" /></p>
+<h3 id="6-antibody-diversity"><a class="markdownIt-Anchor" href="#6-antibody-diversity"></a> 6. Antibody Diversity</h3>
+<p>Somatic mutation of V regions</p>
+<ul>
+<li>V regions are susceptible to high rate of somatic mutation during an antigen challenge</li>
+<li>produce antibodies with different epitope ( 表位；抗原决定部位,抗原决定基) recognition</li>
+</ul>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218111533337.png" alt="image-20191218111533337" style="zoom:50%;" />
+<h4 id="clonal-selection-theory"><a class="markdownIt-Anchor" href="#clonal-selection-theory"></a> Clonal Selection Theory</h4>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218111617418.png" alt="image-20191218111617418" /></p>
+<p><strong>Antigen-Independent Period</strong></p>
+<ol>
+<li>
+<p>During development of eariy lymphocytes from stem cells, a given stem cell undergoes rapid cell division to form numerous progeny.<br />
+During this period of cell differentiation, random rearrangements of the genes that code for cell surface protein receptors occur. The result is a large array of genetically distinct cells, called clones, each clone bearing a different receptor that is specific to react wfth only a single type of foreign molecule or antigen.</p>
+</li>
+<li>
+<p>At the same time, any lymphocyte clones that have a specificity for self molecules and could be harmful are eliminated from the pool of diversity. This is called immune tolerance.</p>
+</li>
+<li>
+<p>The specificity for a single antigen molecule is programmed into the lymphocyte and is set for the life of a given clone. The end result is an enormous pool of mature but naive lymphocytes that are ready to further differentiate under the influence of certain organs and immune stimuli.</p>
+<p><strong>Antigen-Dependent Period</strong></p>
+</li>
+<li>
+<p>Lymphocytes come to populate the lymphatic organs, where they will finally encounter antigens. These antigens will become the stimulus for the lymphocytes final activation and immune function. Entry of a specific antigen selects only the lymphocyte clone or clones that carry matching surface receptors. This will trigger an immune response, which varies according to the type of lymphocyte Involved.</p>
+</li>
+</ol>
+<h3 id="7-monoclonal-antibody-therapeutics"><a class="markdownIt-Anchor" href="#7-monoclonal-antibody-therapeutics"></a> 7. Monoclonal Antibody Therapeutics</h3>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218112001676.png" alt="image-20191218112001676" style="zoom:50%;" />
+<h3 id="8-action-of-antibodies"><a class="markdownIt-Anchor" href="#8-action-of-antibodies"></a> 8. Action of Antibodies</h3>
+<ol>
+<li>Precipitation</li>
+<li>Neutralization</li>
+<li>Complement fixation</li>
+<li>Opsonization</li>
+<li>Agglutination</li>
+</ol>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218112201284.png" alt="image-20191218112201284" style="zoom: 50%;" />
+<h2 id="acquired-immune-tolerance"><a class="markdownIt-Anchor" href="#acquired-immune-tolerance"></a> Acquired Immune Tolerance</h2>
+<p>How do we ‘know’ to respond to foreign but not self antigens?</p>
+<p>Proposed mechanisms</p>
+<ul>
+<li>Negative selection of autoreactive lymphocytes
+<ul>
+<li><strong>Central tolerance</strong></li>
+</ul>
+</li>
+<li>Induction of anergy (<strong>peripheral tolerance</strong>)
+<ul>
+<li>Partial or incomplete stimulation (no 2nd signal)</li>
+</ul>
+</li>
+<li>Inhibition of anti-self reactivity by <strong>Treg</strong> cell activity and cytokine release</li>
+</ul>
+<h1 id="四-immune-disorders"><a class="markdownIt-Anchor" href="#四-immune-disorders"></a> 四、Immune Disorders</h1>
+<ol>
+<li>
+<p>Hypersensitivities 超敏反应</p>
+</li>
+<li>
+<p>Autoimmune diseases</p>
+</li>
+<li>
+<p>Transplantation (tissue) rejection</p>
+</li>
+<li>
+<p>Immunodeficiencies</p>
+<ul>
+<li>
+<p>congenital (先天的,天生的)</p>
+</li>
+<li>
+<p>acquired</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="hypersensitivities-超敏反应"><a class="markdownIt-Anchor" href="#hypersensitivities-超敏反应"></a> Hypersensitivities 超敏反应</h2>
+<p>Exaggerated immune response upon second or subsequent contact with antigen</p>
+<p>Four different types of hypersensitivity: I,II, III, and IV</p>
+<h3 id="1-type-i-hypersensitivity"><a class="markdownIt-Anchor" href="#1-type-i-hypersensitivity"></a> 1. Type I Hypersensitivity</h3>
+<p>Allergy  (对食物、花粉、虫咬等的)过敏症</p>
+<ul>
+<li>one kind of Type I hypersensitivity</li>
+</ul>
+<p>Occurs immediately following second contact with allergen</p>
+<p>Involves production and action of <strong>IgE</strong> and <strong>mast cells</strong></p>
+<ul>
+<li>basophils or eosinophils may be involved as well</li>
+</ul>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218112952656.png" alt="image-20191218112952656" /></p>
+<h3 id="2-type-ii-hypersensitivity"><a class="markdownIt-Anchor" href="#2-type-ii-hypersensitivity"></a> 2. Type II Hypersensitivity</h3>
+<p>Involves <strong>IgG</strong> and <strong>IgM</strong> antibodies</p>
+<ul>
+<li>stimulate complement pathway and effector cells</li>
+</ul>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218113217604.png" alt="image-20191218113217604" style="zoom:50%;" />
+<h4 id="example-abo-blood-group"><a class="markdownIt-Anchor" href="#example-abo-blood-group"></a> Example: ABO Blood Group</h4>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218113251509.png" alt="image-20191218113251509" style="zoom:67%;" />
+<h5 id="1-rh-incompatibility"><a class="markdownIt-Anchor" href="#1-rh-incompatibility"></a> (1) Rh Incompatibility</h5>
+<p>Erythroblastosis fetalis [医]胎儿成红细胞增多病，新生儿溶血症</p>
+<p>– mother can be passively injected with anti Rh factor antibodies or RhoGam to control this disease</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218113420317.png" alt="image-20191218113420317" /></p>
+<h3 id="3-type-iii-hypersensitivity"><a class="markdownIt-Anchor" href="#3-type-iii-hypersensitivity"></a> 3. Type III Hypersensitivity</h3>
+<p>Involves formation of immune complexes</p>
+<ul>
+<li>
+<p>usually removed by <strong>monocytes</strong> and <strong>macrophages</strong></p>
+</li>
+<li>
+<p>if accumulate, leads to hypersensitivity reaction</p>
+</li>
+</ul>
+<p>e.g., arthritis (关节炎) and systemic lupus erythematosis (系统性红斑狼疮)</p>
+<h3 id="4-type-iv-hypersensitivity"><a class="markdownIt-Anchor" href="#4-type-iv-hypersensitivity"></a> 4. Type IV Hypersensitivity</h3>
+<p>Involves delayed, cell-mediated immune reactions</p>
+<p><strong>T cells, monocytes, and macrophages</strong></p>
+<p>Examples</p>
+<ul>
+<li>transplantation rejection 移植排斥</li>
+<li>some autoimmune diseases 部分自身免疫性疾病</li>
+<li>cancer cell killing</li>
+<li>allergic contact dermatitis 过敏性接触性皮炎</li>
+</ul>
+<h4 id="contact-dermatitis"><a class="markdownIt-Anchor" href="#contact-dermatitis"></a> contact dermatitis</h4>
+<ol>
+<li>Lipid-soluble catechols（邻苯二酚） are absorbed by the skin.</li>
+<li>Dendritic cells close to the epithelium pick up the allergen, process it, and display it on MHC proteins.</li>
+<li>Previously sensitized TH1 (CD4+) cells recognize the presented allergen.</li>
+<li>Sensitized TH1 cells are activated and secrete cytokines (IFN, TNF).</li>
+<li>These cytokines attract macrophages and cytotoxic T cells to the site.</li>
+<li>Macrophages release mediators that stimulate a strong, local inflammatory reaction. Cytotoxic T cells directly kill cells and damage the skin. Fluid-filled blisters result.</li>
+</ol>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218114130683.png" alt="image-20191218114130683" /></p>
+<h3 id="5-summary"><a class="markdownIt-Anchor" href="#5-summary"></a> 5. Summary</h3>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218114149069.png" alt="image-20191218114149069" /></p>
+<h2 id="autoimmune-diseases-自身免疫性疾病"><a class="markdownIt-Anchor" href="#autoimmune-diseases-自身免疫性疾病"></a> Autoimmune Diseases 自身免疫性疾病</h2>
+<p>Autoimmunity</p>
+<ul>
+<li>presence of serum antibodies that react with self antigens (autoantibodies)</li>
+<li>natural consequence of aging</li>
+<li>induced by numerous stimuli (e.g., mutation, infection, drugs)</li>
+</ul>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218114341014.png" alt="image-20191218114341014" style="zoom:50%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218114350602.png" alt="image-20191218114350602" /></p>
+<table>
+<thead>
+<tr>
+<th>Disease</th>
+<th>Autoantigen</th>
+<th>Pathophysiology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Acute rheumatic fever</td>
+<td>Streptococcal cell wall antigens mimic self antigens and induce antibodies that cross-react with antigens on cardiomyocytes and other cells.</td>
+<td>Type II hypersensitivity leads to myocarditis, heart valve scarring, and arthritis.</td>
+</tr>
+<tr>
+<td>Autoimmune hemolytic anemia</td>
+<td>Rh blood group antigen induces antibody to Rh antigen on red blood cells.</td>
+<td>Type II hypersensitivity leads to anemia when red blood cells are destroyed by complement and phagocytosis.</td>
+</tr>
+<tr>
+<td>Goodpasture’ s syndrome</td>
+<td>Damage to kidney basement membrane exposes cryptic collagen protein, inducing anti-collagen antibody.</td>
+<td>Type II hypersensitivity results in glomerulonephritis and pulmonary hemorrhage.</td>
+</tr>
+<tr>
+<td>Graves’ disease</td>
+<td>Antibody to thyroid-stimulating hormone (TSH) receptor mimics TSH.</td>
+<td>Overstimulation ofTSH receptor leads to hyperthyroidism.</td>
+</tr>
+<tr>
+<td>Multiple sclerosis</td>
+<td>Antibody and activated T cells to several nervous system antigens</td>
+<td>Types II and IV hypersensitivities alter nerve communications, leading to numbness, weaknessz spasm, and loss of motor and cognitive function.</td>
+</tr>
+<tr>
+<td>Myasthenia gravis</td>
+<td>Antibody to acetycholine receptor in skeletal muscle</td>
+<td>Antibody blockade of neurotransmitter receptors results in progressive muscular weakness.</td>
+</tr>
+<tr>
+<td>Rheumatoid arthritis</td>
+<td>IgG antibody (to synovial joint cartilage antigen) recognized as foreign</td>
+<td>Type III hypersensitivity from immune complexes of antibodies to antibodies results in joint inflammation and destruction.</td>
+</tr>
+<tr>
+<td>Systemic lupus erythematosus</td>
+<td>Antibodies to various cellular (DNA, nucleoprotein, cardiolipin) and blood clotting components</td>
+<td>Type III hypersensitivity results in immune complex- induced arthritis, glomerulonephritis, vasculitis, and rash.</td>
+</tr>
+<tr>
+<td>Insulin-dependent diabetes mellitus</td>
+<td>Antibody and activated T cells to pancreatic beta cell antigens</td>
+<td>Types II and IV hypersensitivities destroy beta cells, resulting in insulin deficiency.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="transplantation-tissue-rejection-移植组织排斥"><a class="markdownIt-Anchor" href="#transplantation-tissue-rejection-移植组织排斥"></a> Transplantation (Tissue) Rejection 移植（组织）排斥</h2>
+<p>Types of transplants</p>
+<p>**allograft ** (同种)异基因移植物</p>
+<ul>
+<li>transplants between different individuals within a species</li>
+</ul>
+<p><strong>xenograft</strong> 异种移植物</p>
+<ul>
+<li>donor and recipient are different species</li>
+</ul>
+<p>Mechanisms can occur</p>
+<ul>
+<li>MHC molecules (HLA) on transplanted tissue — host Th cells → Tc cells and macrophage</li>
+</ul>
+<h3 id="1-tissue-transplantation"><a class="markdownIt-Anchor" href="#1-tissue-transplantation"></a> 1. Tissue Transplantation</h3>
+<p>To be successful, the ABO blood group and the MHC molecules of the donor and recipient must be as closely matched as possible</p>
+<ul>
+<li>family members are the first choice</li>
+</ul>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218115726278.png" alt="image-20191218115726278" /></p>
+<h3 id="2-graft-versus-host-disease-移植物抗宿主病"><a class="markdownIt-Anchor" href="#2-graft-versus-host-disease-移植物抗宿主病"></a> 2. Graft-Versus-Host Disease 移植物抗宿主病</h3>
+<p>Immune cells in donor tissue reject host<br />
+e.g., in bone marrow transplants</p>
+<ul>
+<li>disease prevented by treating donor with immunosuppressive drugs</li>
+</ul>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218115929733.png" alt="image-20191218115929733" /></p>
+<h3 id="3-immunodeficiency"><a class="markdownIt-Anchor" href="#3-immunodeficiency"></a> 3. Immunodeficiency</h3>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191218115954370.png" alt="image-20191218115954370" /></p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Symptoms</th>
+<th>Cause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chronic granulomatous disease</td>
+<td>Defective monocytes and neutrophils leading to recurrent bacterial and fungal infections</td>
+<td>Failure to produce reactive oxygen intermediates due to defective NADPH oxidase</td>
+</tr>
+<tr>
+<td>X-llnked agammaglobulinemia</td>
+<td>Plasma cell or B-cell deficiency and Inability to produce adequate specific antibodies</td>
+<td>Defective B-cell differentiation due to loss of tyrosine kinase</td>
+</tr>
+<tr>
+<td>DiGeorge syndrome</td>
+<td>T-cell deficiency and very poor cell-mediated immunity</td>
+<td>Lack of thymus or a poorly developed thymus</td>
+</tr>
+<tr>
+<td>Severe combined immunodeficiency disease (SCID)</td>
+<td>Both antibody production and cell-mediated Immunity impaired due to a great reduction of B- and rcell levels</td>
+<td>Various mechanisms (e.g., defective B- and T-cell maturation because of X-linked gene mutation; absence of adenosine deaminase in lymphocytes)</td>
+</tr>
+</tbody>
+</table>
+<p>Failure to recognize and/or respond to foreign Ag</p>
+<p><strong>Primary (congenital)</strong> immunodeficiency</p>
+<ul>
+<li>result from genetic disorder</li>
+</ul>
+<p><strong>Acquired</strong> immunodeficiency</p>
+<ul>
+<li>result from infection (e.g., HIV)</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Microbiology/" rel="tag"><i class="fa fa-tag"></i> Microbiology</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/a9dda519.html" rel="prev" title="L03 Bacterial Cell Structure">
+      <i class="fa fa-chevron-left"></i> L03 Bacterial Cell Structure
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/d2b1bb59.html" rel="next" title="L12 Innate Host Resistance">
+      L12 Innate Host Resistance <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-overview-of-adaptive-immunity"><span class="nav-number">1.</span> <span class="nav-text"> 一、Overview of Adaptive Immunity</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#acquired-immune-system-development"><span class="nav-number">1.1.</span> <span class="nav-text"> Acquired Immune System Development</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction-of-specific-immunity"><span class="nav-number">1.2.</span> <span class="nav-text"> Introduction of Specific Immunity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#components-involved-in-adaptive-immunity"><span class="nav-number">1.3.</span> <span class="nav-text"> Components Involved In Adaptive Immunity</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-t-cell-biology"><span class="nav-number">2.</span> <span class="nav-text"> 二、T-Cell Biology</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#t-cell-receptors-tcrs"><span class="nav-number">2.1.</span> <span class="nav-text"> T-Cell Receptors (TCRs)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#t-cell-activation"><span class="nav-number">2.2.</span> <span class="nav-text"> T Cell Activation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#t-cell-types"><span class="nav-number">2.3.</span> <span class="nav-text"> T Cell Types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#t-cell-development"><span class="nav-number">2.4.</span> <span class="nav-text"> T Cell Development</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89-b-cell-biology"><span class="nav-number">3.</span> <span class="nav-text"> 三、B-Cell Biology</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#b-cell-activation"><span class="nav-number">3.1.</span> <span class="nav-text"> B-Cell Activation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#antibody"><span class="nav-number">3.2.</span> <span class="nav-text"> Antibody</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#acquired-immune-tolerance"><span class="nav-number">3.3.</span> <span class="nav-text"> Acquired Immune Tolerance</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B-immune-disorders"><span class="nav-number">4.</span> <span class="nav-text"> 四、Immune Disorders</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hypersensitivities-%E8%B6%85%E6%95%8F%E5%8F%8D%E5%BA%94"><span class="nav-number">4.1.</span> <span class="nav-text"> Hypersensitivities 超敏反应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#autoimmune-diseases-%E8%87%AA%E8%BA%AB%E5%85%8D%E7%96%AB%E6%80%A7%E7%96%BE%E7%97%85"><span class="nav-number">4.2.</span> <span class="nav-text"> Autoimmune Diseases 自身免疫性疾病</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transplantation-tissue-rejection-%E7%A7%BB%E6%A4%8D%E7%BB%84%E7%BB%87%E6%8E%92%E6%96%A5"><span class="nav-number">4.3.</span> <span class="nav-text"> Transplantation (Tissue) Rejection 移植（组织）排斥</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">希望能活的久一点</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:zhenyumi@foxmail.com" title="E-Mail → mailto:zhenyumi@foxmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2279880515" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2279880515" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/ParaDogs_lazy" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;ParaDogs_lazy" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">2.4m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">35:37</span>
+</div><br /> <!-- 换行 -->
+
+<div class="translate-style">
+繁/简：<a id="translateLink" href="javascript:translatePage();">繁体
+</a>
+</div>
+<script type="text/javascript" src="/js/tw_cn.js"></script>
+<script type="text/javascript">
+var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+var cookieDomain = "https://tding.top/"; //Cookie地址, 一定要设定, 通常为你的网址
+var msgToTraditionalChinese = "繁体"; //此处可以更改为你想要显示的文字
+var msgToSimplifiedChinese = "简体"; //同上，但两处均不建议更改
+var translateButtonId = "translateLink"; //默认互换id
+translateInitilization();
+</script>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
+    }
+setInterval("createtime()",250);
+</script>
+
+<br /> <!-- 换行 -->
+
+<!--busuanzi计数-->
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+  <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css">
+
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://zhenyumi.github.io/posts/3bdf6320.html',]
+      });
+      });
+  </script>
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'ErV27FWAFsY2HDPhLVjeIcfR-MdYXbMMI',
+      appKey     : 'YyUrjqWLM53k8C1tPcKNaQFN',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>

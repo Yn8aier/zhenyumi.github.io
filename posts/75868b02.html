@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/website_favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/website_favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/website_favicon.ico">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/website_favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|14px:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
+  </script>
+
+  <meta name="description" content="Wed Nov 11 2020 08:33:55 GMT+0800 (GMT+08:00)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L6 PCR">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/75868b02.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Wed Nov 11 2020 08:33:55 GMT+0800 (GMT+08:00)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031220037915.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031220110011.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031220145461.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031220834111.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031220845751.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031220856714.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031221058193.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031221328684.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031221345725.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031221429891.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031221440220.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031221455898.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031221537024.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031222054455.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031222136681.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031222204937.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031222333598.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031222400632.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031222428290.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031222604877.png">
+<meta property="article:published_time" content="2020-11-11T00:33:51.000Z">
+<meta property="article:modified_time" content="2020-11-11T00:33:55.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetic Engineering">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031220037915.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/posts/75868b02.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>L6 PCR | 鹘横海</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.  Today is another day.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">20</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">20</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">155</span></a>
+
+  </li>
+        <li class="menu-item menu-item-留言板">
+
+    <a href="/%E7%95%99%E8%A8%80%E6%9D%BF/" rel="section"><i class="fas fa-chalkboard-teacher fa-fw"></i>留言板</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/posts/75868b02.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="希望能活的久一点">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          L6 PCR
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-11-11 08:33:51 / 修改时间：08:33:55" itemprop="dateCreated datePublished" datetime="2020-11-11T08:33:51+08:00">2020-11-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/Genetic-Engineering/" itemprop="url" rel="index"><span itemprop="name">Genetic Engineering</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/75868b02.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/75868b02.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.9k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="一-basics-about-pcr"><a class="markdownIt-Anchor" href="#一-basics-about-pcr"></a> 一、Basics about PCR</h1>
+<h2 id="main-steps-cycling-condition-buffer-composition"><a class="markdownIt-Anchor" href="#main-steps-cycling-condition-buffer-composition"></a> Main steps, Cycling condition, Buffer composition</h2>
+<h3 id="1-main-steps"><a class="markdownIt-Anchor" href="#1-main-steps"></a> 1. Main Steps</h3>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031220037915.png" alt="image-20201031220037915" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031220110011.png" alt="image-20201031220110011" /></p>
+<ol>
+<li>Initial denaturation</li>
+<li>Denaturation</li>
+<li>Anneling</li>
+<li>Extension</li>
+<li>Final Extension</li>
+<li>Hold</li>
+</ol>
+<h4 id="the-components-in-the-pcr-reaction-mix"><a class="markdownIt-Anchor" href="#the-components-in-the-pcr-reaction-mix"></a> the components in the PCR reaction mix</h4>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031220145461.png" alt="image-20201031220145461" /></p>
+<p>The chemicals in the 10X PCR reaction buffer</p>
+<ol>
+<li>Tris-HCL pH 8.0-pH9.0</li>
+<li><strong>KCL</strong> - potassium ion promotes primer annealing</li>
+<li>magnesium ions (Mg2+ from MgCl2) , is a cofactor for Taq polymerase
+<ul>
+<li>magnesium ions also facilitate primers-DNA binding by <u>stabilizing negative charges on phosphate backbones.</u> (stabilize the pairing)</li>
+<li>Often around 1.5mM final concentration</li>
+<li>What would happen if you raise Mg2+ concentration ?
+<ul>
+<li>For difficult templetes, increase the Taq activity</li>
+<li>For 较多杂带，Increase the specificity of PCR</li>
+</ul>
+</li>
+<li>What else can be included into the buffer ?
+<ul>
+<li>DMSO: Help denaturation (For high G-C content)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="fidelity-of-dna-polymerase-in-pcr"><a class="markdownIt-Anchor" href="#fidelity-of-dna-polymerase-in-pcr"></a> Fidelity of DNA polymerase in PCR</h2>
+<h3 id="1-thermo-stable-dna-polymerase"><a class="markdownIt-Anchor" href="#1-thermo-stable-dna-polymerase"></a> 1. Thermo stable DNA polymerase</h3>
+<ol>
+<li>Taq</li>
+<li>ExTaq, LATaq</li>
+<li>Pfu</li>
+<li>KOD</li>
+<li>Q5</li>
+<li>Phusion</li>
+</ol>
+<p>Concerns in choosing different PCR polymerases</p>
+<ul>
+<li>The fidelity of polymerase – Proof reading activity
+<ul>
+<li>How <u>accurate</u> the polymerase in copying the DNA template</li>
+</ul>
+</li>
+<li>The processivity of polymerase
+<ul>
+<li>How <u>fast</u> of the elongation rate</li>
+<li>Whether the polymerase can copy DNA from “difficult” template, long template or template that has secondary structure.</li>
+</ul>
+</li>
+</ul>
+<h4 id="proof-reading-activity"><a class="markdownIt-Anchor" href="#proof-reading-activity"></a> Proof-reading activity</h4>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031220834111.png" alt="image-20201031220834111" style="zoom:67%;" />
+<h4 id="error-prone-pcr-a-example-to-manipulate-fidelity-of-polymerase"><a class="markdownIt-Anchor" href="#error-prone-pcr-a-example-to-manipulate-fidelity-of-polymerase"></a> Error-prone PCR – a example to manipulate fidelity of polymerase</h4>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031220845751.png" alt="image-20201031220845751" /></p>
+<h4 id="comparison-of-fidelity-among-different-dna-polymerase"><a class="markdownIt-Anchor" href="#comparison-of-fidelity-among-different-dna-polymerase"></a> Comparison of fidelity among different DNA polymerase</h4>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031220856714.png" alt="image-20201031220856714" /></p>
+<h3 id="2-different-dna-end-generated-by-different-type-of-dna-polymerase"><a class="markdownIt-Anchor" href="#2-different-dna-end-generated-by-different-type-of-dna-polymerase"></a> 2. Different DNA end generated by different type of DNA polymerase</h3>
+<ul>
+<li>3’ end with A overhang – Taq polymerase and its varieties.</li>
+<li>Blunt end – most of proof reading polymerases</li>
+<li>Sticky end – not by PCR</li>
+</ul>
+<h4 id="pcr-primer-design"><a class="markdownIt-Anchor" href="#pcr-primer-design"></a> PCR Primer Design</h4>
+<ul>
+<li>Primer Length, can be anything more than 15nt, practically between 18-25nt</li>
+<li>Primer Melting Temperature, typically between 50-60 degree</li>
+<li>GC Content: Typically should be 40-60%</li>
+<li>3’ end stability</li>
+<li>Primer Secondary Structures</li>
+<li>Repeats and Runs</li>
+</ul>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031221058193.png" alt="image-20201031221058193" /></p>
+<h4 id="a-few-tips-to-get-your-pcr-to-work"><a class="markdownIt-Anchor" href="#a-few-tips-to-get-your-pcr-to-work"></a> A few tips to get your PCR to work</h4>
+<ul>
+<li>PCR is also short for ” Please Check you Result”</li>
+<li>Repeat, repeat and repeat</li>
+<li>A decent amount of full length template</li>
+<li>Primer optimization</li>
+<li>Gradient PCR /Touch up/Touch Down/ Hot start</li>
+<li>Mg2+ concentration</li>
+</ul>
+<h1 id="二-basics-about-pcr"><a class="markdownIt-Anchor" href="#二-basics-about-pcr"></a> 二、Basics about PCR</h1>
+<h2 id="applications-of-pcr"><a class="markdownIt-Anchor" href="#applications-of-pcr"></a> Applications of PCR</h2>
+<p>Basic Biomedical Research</p>
+<ul>
+<li>Amplifying specific DNA for downstream applications like</li>
+<li>Cloning and expression of recombinant proteins</li>
+<li>Gene expression analysis</li>
+</ul>
+<p>Diseases diagnosis</p>
+<ul>
+<li>Mycobacterium tuberculosis – infection/drug resistance</li>
+<li>HIV – RT-PCR</li>
+<li>Sickle cell anemia (normal, carrier, diseased)</li>
+</ul>
+<p>Forensics</p>
+<ul>
+<li>Crime Scene Investigation</li>
+<li>Paternity testing</li>
+</ul>
+<h2 id="rt-pcr"><a class="markdownIt-Anchor" href="#rt-pcr"></a> RT-PCR</h2>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031221328684.png" alt="image-20201031221328684" /></p>
+<ol>
+<li>Synthesis of first strand cDNA</li>
+<li>PCR components added, the second strand cDNA synthesized</li>
+<li>amplify cDNA</li>
+</ol>
+<h3 id="1-reverse-transcriptase-reaction-priming-strategies"><a class="markdownIt-Anchor" href="#1-reverse-transcriptase-reaction-priming-strategies"></a> 1. Reverse transcriptase reaction – Priming strategies</h3>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031221345725.png" alt="image-20201031221345725" /></p>
+<p>Three strategies:</p>
+<ol>
+<li>Converts all RNA to cDNA</li>
+<li>Converts mRNA to cDNA</li>
+<li>Converts specific RNA to cDNA</li>
+</ol>
+<h2 id="realtime-quantitative-pcr"><a class="markdownIt-Anchor" href="#realtime-quantitative-pcr"></a> Realtime Quantitative PCR</h2>
+<p>How could we monitor the PCR reaction in real-time ?</p>
+<ul>
+<li>dsDNA specific Dye and plate reading enables monitoring of PCR in real-time</li>
+</ul>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031221429891.png" alt="image-20201031221429891" /></p>
+<p>Different chemistry for quantification- SYBR Green 1</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031221440220.png" alt="image-20201031221440220" /></p>
+<ul>
+<li>Unbound SYBRE Green 1 DNA- binding dye in solution exhibits very little fluorescence. During primer extension and polymerization SYBR Green 1 molecules become intercalated within the double stranded DNA product, resulting in an increase in detected fluorescence</li>
+</ul>
+<p>Different chemistry for quantification - TaqMan Probe</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031221455898.png" alt="image-20201031221455898" /></p>
+<ol>
+<li>When the Taqman probe is intact, the reporter and quencher stay close to each other, which prevents the emission of any fluorescence</li>
+<li>The primer and Taqman probe anneal to the complementary DNA strand following denaturation</li>
+<li>After hybridization and during the extension phase, the 5 endonuclease activity of the Taq DNA polymerase cleaves the probe, which separates reporter and quencher dyes and fluorescence is detected</li>
+</ol>
+<p>What are the assumptions behind “quantitative” ?</p>
+<ul>
+<li>The short answer is “exponential amplification”</li>
+</ul>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031221537024.png" alt="image-20201031221537024" /></p>
+<p>Different phase of PCR amplification</p>
+<ol>
+<li>Exponential:
+<ul>
+<li>Exact doubling of product</li>
+<li>Reaction is very precise and specific</li>
+</ul>
+</li>
+<li>Linear:
+<ul>
+<li>The reaction components are becoming limited</li>
+<li>The reaction <u>efficiency is dropping</u></li>
+</ul>
+</li>
+<li>Plateau:
+<ul>
+<li>The reaction has stopped</li>
+<li><u>No more products are being made</u></li>
+</ul>
+</li>
+</ol>
+<p>A exponential curve looks “linear” if you put Y-axis in log scale</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031222054455.png" alt="image-20201031222054455" /></p>
+<p>What are the assumptions behind “quantitative” ?</p>
+<ul>
+<li>PCR gives exponential amplification of target DNA, so the amount of target DNA can be calculated based on cycler number. – Key word: <strong>exponential</strong>.</li>
+</ul>
+<h3 id="1-the-idea-of-ctcq-value-and-threshold"><a class="markdownIt-Anchor" href="#1-the-idea-of-ctcq-value-and-threshold"></a> 1. The idea of Ct(Cq) value and threshold</h3>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031222136681.png" alt="image-20201031222136681" style="zoom:50%;" />
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">\Delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span></span></span></span>Rn</p>
+<ul>
+<li>Fluorescence emission of the product at each time point fluorescence emission of the baseline</li>
+</ul>
+<p>Ct values</p>
+<ul>
+<li>cycle number at which threshold fluorescence is achieved</li>
+</ul>
+<h4 id="relative-quantification-the-principle-of-deltact-method"><a class="markdownIt-Anchor" href="#relative-quantification-the-principle-of-deltact-method"></a> Relative quantification: The principle of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">\Delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span></span></span></span>Ct method</h4>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031222204937.png" alt="image-20201031222204937" /></p>
+<p>Within exponential phase, the difference of Ct value between samples reflect the difference of initial target concentration between samples.</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mo>−</mo><mo stretchy="false">(</mo><mi>C</mi><msub><mi>t</mi><mrow><mi>S</mi><mi>a</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi><mi>A</mi></mrow></msub><mi mathvariant="normal">–</mi><mi>C</mi><msub><mi>t</mi><mrow><mi>s</mi><mi>a</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi><mi>B</mi></mrow></msub><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><mtext>Concentration A/B</mtext></mrow><annotation encoding="application/x-tex">2^{-(Ct_{SampleA} – Ct_{sampleB})} = \text{Concentration A/B}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9379999999999998em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9379999999999998em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mopen mtight">(</span><span class="mord mathdefault mtight" style="margin-right:0.07153em;">C</span><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3487714285714287em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05764em;">S</span><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight">m</span><span class="mord mathdefault mtight">p</span><span class="mord mathdefault mtight" style="margin-right:0.01968em;">l</span><span class="mord mathdefault mtight">e</span><span class="mord mathdefault mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29011428571428566em;"><span></span></span></span></span></span></span><span class="mord mtight" style="margin-right:0.02778em;">–</span><span class="mord mathdefault mtight" style="margin-right:0.07153em;">C</span><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3487714285714287em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight">m</span><span class="mord mathdefault mtight">p</span><span class="mord mathdefault mtight" style="margin-right:0.01968em;">l</span><span class="mord mathdefault mtight">e</span><span class="mord mathdefault mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29011428571428566em;"><span></span></span></span></span></span></span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Concentration A/B</span></span></span></span></span></span></p>
+<h4 id="relative-quantification-the-idea-of-internal-control"><a class="markdownIt-Anchor" href="#relative-quantification-the-idea-of-internal-control"></a> Relative quantification: The idea of internal control</h4>
+<p><strong>Internal Control is needed in order to achieve accurate relative quantification</strong></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031222333598.png" alt="image-20201031222333598" /></p>
+<p>Delta delta Ct method</p>
+<ul>
+<li>The delta-delta Ct method, also known as the 2<sup>–∆∆Ct</sup> method, is a simple formula used in order to <u>calculate the relative fold gene expression of samples</u> when performing real-time PCR.</li>
+</ul>
+<p>That means, to compare the relative fold gene expression, we should calculate the relative expression level compared to the <em>control group</em>, that is, suppose we want to compare gene A and the Wild type:</p>
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;_&#039; at position 50: …ac{\text{Mutant_̲A/Mutant_Contro…'>\frac{\text{A}}{\text{wild}} = \frac{\text{Mutant_A/Mutant_Control}}{\text{WT_A/WT_Control}} = 
+</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mo>−</mo><mo stretchy="false">[</mo><mo stretchy="false">(</mo><mi>C</mi><msub><mi>t</mi><mrow><mi>m</mi><mi>u</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>t</mi><mi mathvariant="normal">_</mi><mi>A</mi></mrow></msub><mo>−</mo><mi>C</mi><msub><mi>t</mi><mrow><mi>m</mi><mi>u</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>t</mi><mi mathvariant="normal">_</mi><mi>C</mi><mi>o</mi><mi>n</mi><mi>t</mi><mi>r</mi><mi>o</mi><mi>l</mi></mrow></msub><mo stretchy="false">)</mo><mo>−</mo><mo stretchy="false">(</mo><mi>C</mi><msub><mi>t</mi><mrow><mi>W</mi><mi>T</mi><mi mathvariant="normal">_</mi><mi>A</mi></mrow></msub><mo>−</mo><mi>C</mi><msub><mi>t</mi><mrow><mi>W</mi><mi>T</mi><mi mathvariant="normal">_</mi><mi>C</mi><mi>o</mi><mi>n</mi><mi>t</mi><mi>r</mi><mi>o</mi><mi>l</mi></mrow></msub><mo stretchy="false">)</mo><mo stretchy="false">]</mo></mrow></msup></mrow><annotation encoding="application/x-tex">2^{-[(Ct_{mutant\_A} - Ct_{mutant\_Control}) - (Ct_{WT\_A} - Ct_{WT\_Control})]}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9379999999999998em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9379999999999998em;"><span style="top:-3.1130000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mopen mtight">[</span><span class="mopen mtight">(</span><span class="mord mathdefault mtight" style="margin-right:0.07153em;">C</span><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.356707142857143em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mord mathdefault mtight">u</span><span class="mord mathdefault mtight">t</span><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight">n</span><span class="mord mathdefault mtight">t</span><span class="mord mtight" style="margin-right:0.02778em;">_</span><span class="mord mathdefault mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3647214285714286em;"><span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mathdefault mtight" style="margin-right:0.07153em;">C</span><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3487714285714287em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mord mathdefault mtight">u</span><span class="mord mathdefault mtight">t</span><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight">n</span><span class="mord mathdefault mtight">t</span><span class="mord mtight" style="margin-right:0.02778em;">_</span><span class="mord mathdefault mtight" style="margin-right:0.07153em;">C</span><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight">n</span><span class="mord mathdefault mtight">t</span><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight" style="margin-right:0.01968em;">l</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3726571428571428em;"><span></span></span></span></span></span></span><span class="mclose mtight">)</span><span class="mbin mtight">−</span><span class="mopen mtight">(</span><span class="mord mathdefault mtight" style="margin-right:0.07153em;">C</span><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.356707142857143em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.13889em;">W</span><span class="mord mathdefault mtight" style="margin-right:0.13889em;">T</span><span class="mord mtight" style="margin-right:0.02778em;">_</span><span class="mord mathdefault mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3647214285714286em;"><span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mathdefault mtight" style="margin-right:0.07153em;">C</span><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3487714285714287em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.13889em;">W</span><span class="mord mathdefault mtight" style="margin-right:0.13889em;">T</span><span class="mord mtight" style="margin-right:0.02778em;">_</span><span class="mord mathdefault mtight" style="margin-right:0.07153em;">C</span><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight">n</span><span class="mord mathdefault mtight">t</span><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight" style="margin-right:0.01968em;">l</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3726571428571428em;"><span></span></span></span></span></span></span><span class="mclose mtight">)</span><span class="mclose mtight">]</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<h4 id="absolute-quantification"><a class="markdownIt-Anchor" href="#absolute-quantification"></a> Absolute quantification</h4>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031222400632.png" alt="image-20201031222400632" /></p>
+<ul>
+<li>Series dilution of target DNA with Known concentration</li>
+<li>Calculate the DNA concentration in your sample based on standard curve</li>
+</ul>
+<h4 id="melting-curve-an-indicator-not-a-diagnosis"><a class="markdownIt-Anchor" href="#melting-curve-an-indicator-not-a-diagnosis"></a> Melting Curve: An indicator, not a diagnosis</h4>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031222428290.png" alt="image-20201031222428290" /></p>
+<ul>
+<li>Melting curve analysis is <u>an assessment of the dissociation characteristics of doublestranded DNA during heating</u>. As the temperature is raised, the double strand begins to dissociate leading to <u>a rise in the absorbance intensity</u>, hyperchromicity. The temperature at which 50% of DNA is denatured is known as the melting temperature.</li>
+</ul>
+<h4 id="what-are-the-assumptions-behind-relative-quantification"><a class="markdownIt-Anchor" href="#what-are-the-assumptions-behind-relative-quantification"></a> What are the assumptions behind “relative quantification”?</h4>
+<ul>
+<li>PCR is exponential – the efficiency of your PCR is two, within a certain range of target DNA concentration.</li>
+<li>The PCR efficiency of both target DNA and internal control are close to 2.</li>
+<li>The Ct between internal control and target are relatively close.</li>
+<li>The PCR efficiency between samples are the same</li>
+<li>The reverse transcription efficiency between samples are the same.</li>
+</ul>
+<h4 id="how-to-make-sure-such-assumptions-are-true-in-your-experiment"><a class="markdownIt-Anchor" href="#how-to-make-sure-such-assumptions-are-true-in-your-experiment"></a> How to make sure such assumptions are true in your experiment?</h4>
+<ol>
+<li>Always check the efficiency of your qPCR</li>
+<li>Try to include serious dilutions of samples – PCR efficiency and good dynamic range</li>
+<li>Always start with same batch of samples and same amount of samples</li>
+<li>A good internal control</li>
+</ol>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Genetic%20Engineering/image-20201031222604877.png" alt="image-20201031222604877" /></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Genetic-Engineering/" rel="tag"><i class="fa fa-tag"></i> Genetic Engineering</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/289dfc91.html" rel="prev" title="L7 Restriction enzyme">
+      <i class="fa fa-chevron-left"></i> L7 Restriction enzyme
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/44c53e21.html" rel="next" title="L3  Isolation of DNA and RNAs">
+      L3  Isolation of DNA and RNAs <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-basics-about-pcr"><span class="nav-number">1.</span> <span class="nav-text"> 一、Basics about PCR</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#main-steps-cycling-condition-buffer-composition"><span class="nav-number">1.1.</span> <span class="nav-text"> Main steps, Cycling condition, Buffer composition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fidelity-of-dna-polymerase-in-pcr"><span class="nav-number">1.2.</span> <span class="nav-text"> Fidelity of DNA polymerase in PCR</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-basics-about-pcr"><span class="nav-number">2.</span> <span class="nav-text"> 二、Basics about PCR</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#applications-of-pcr"><span class="nav-number">2.1.</span> <span class="nav-text"> Applications of PCR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rt-pcr"><span class="nav-number">2.2.</span> <span class="nav-text"> RT-PCR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#realtime-quantitative-pcr"><span class="nav-number">2.3.</span> <span class="nav-text"> Realtime Quantitative PCR</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">希望能活的久一点</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:zhenyumi@foxmail.com" title="E-Mail → mailto:zhenyumi@foxmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2279880515" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2279880515" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/ParaDogs_lazy" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;ParaDogs_lazy" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">2.4m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">35:37</span>
+</div><br /> <!-- 换行 -->
+
+<div class="translate-style">
+繁/简：<a id="translateLink" href="javascript:translatePage();">繁体
+</a>
+</div>
+<script type="text/javascript" src="/js/tw_cn.js"></script>
+<script type="text/javascript">
+var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+var cookieDomain = "https://tding.top/"; //Cookie地址, 一定要设定, 通常为你的网址
+var msgToTraditionalChinese = "繁体"; //此处可以更改为你想要显示的文字
+var msgToSimplifiedChinese = "简体"; //同上，但两处均不建议更改
+var translateButtonId = "translateLink"; //默认互换id
+translateInitilization();
+</script>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
+    }
+setInterval("createtime()",250);
+</script>
+
+<br /> <!-- 换行 -->
+
+<!--busuanzi计数-->
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+  <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css">
+
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://zhenyumi.github.io/posts/75868b02.html',]
+      });
+      });
+  </script>
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'ErV27FWAFsY2HDPhLVjeIcfR-MdYXbMMI',
+      appKey     : 'YyUrjqWLM53k8C1tPcKNaQFN',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>

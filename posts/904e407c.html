@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/website_favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/website_favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/website_favicon.ico">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/website_favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|14px:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
+  </script>
+
+  <meta name="description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (GMT+08:00)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L08 Genetics of Bacteria and Bacteriophages">
+<meta property="og:url" content="https://zhenyumi.github.io/posts/904e407c.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Sat Jul 25 2020 23:45:00 GMT+0800 (GMT+08:00)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113163622894.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113163723322.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113171625932.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113172606835.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113172825296.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113173712074.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113173856860.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113174032743.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113164339493.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113164403101.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113164954402.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113165059100.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113170542323.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113173132804.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114145615892.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114151135168.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114151624909.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114152103518.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114165244411.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114170600184.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114170625575.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114171409150.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114171415635.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114171602843.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114172321203.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114172800865.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114173659959.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114173727949.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114174743048.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114175346412.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114175509480.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115190848183.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115191044804.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192215426.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192341389.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192656032.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192712193.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192721856.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192730247.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192737440.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192750801.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115193103080.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115193316484.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115193617225.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115193625528.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115194026445.png">
+<meta property="og:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115194034921.png">
+<meta property="article:published_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:45:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Genetics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113163622894.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/posts/904e407c.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>L08 Genetics of Bacteria and Bacteriophages | 鹘横海</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.  Today is another day.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">20</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">20</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">155</span></a>
+
+  </li>
+        <li class="menu-item menu-item-留言板">
+
+    <a href="/%E7%95%99%E8%A8%80%E6%9D%BF/" rel="section"><i class="fas fa-chalkboard-teacher fa-fw"></i>留言板</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhenyumi.github.io/posts/904e407c.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
+      <meta itemprop="name" content="向海">
+      <meta itemprop="description" content="希望能活的久一点">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鹘横海">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          L08 Genetics of Bacteria and Bacteriophages
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-25 23:45:00" itemprop="dateCreated datePublished" datetime="2020-07-25T23:45:00+08:00">2020-07-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/" itemprop="url" rel="index"><span itemprop="name">Academic Notebook</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic-Notebook/Genetics/" itemprop="url" rel="index"><span itemprop="name">Genetics</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/904e407c.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/904e407c.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>8.6k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="一-the-bacteria-and-virus"><a class="markdownIt-Anchor" href="#一-the-bacteria-and-virus"></a> 一、The Bacteria And Virus</h1>
+<h2 id="the-similarities-of-bacteria-and-viruses"><a class="markdownIt-Anchor" href="#the-similarities-of-bacteria-and-viruses"></a> The Similarities of Bacteria and Viruses</h2>
+<ol>
+<li>Small size</li>
+<li>Short generation time</li>
+<li>Selective media (e.g. antibiotics)</li>
+<li>Simple structures and physiology</li>
+<li>Usually haploid – what is the advantage?</li>
+<li>Genetic variability</li>
+<li>Complete genome sequences</li>
+</ol>
+<h2 id="virus"><a class="markdownIt-Anchor" href="#virus"></a> Virus</h2>
+<ol>
+<li><strong>Non‐living particles</strong></li>
+<li>Medically important – cause many diseases</li>
+<li>Nucleic acid genomes</li>
+<li>Both prokaryotic and eukaryotic cells are infected</li>
+<li>Rely on living cells to replicate</li>
+<li>Size of genome quite variable</li>
+<li>Circular or linear</li>
+</ol>
+<h3 id="1-bacteriophage-t4-phage-t4"><a class="markdownIt-Anchor" href="#1-bacteriophage-t4-phage-t4"></a> 1. Bacteriophage T4 (Phage T4)</h3>
+<h4 id="structure-and-characristic"><a class="markdownIt-Anchor" href="#structure-and-characristic"></a> Structure And Characristic</h4>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113163622894.png" alt="image-20191113163622894" style="zoom:50%;" />
+<ul>
+<li>Double‐stranded DNA genome</li>
+<li>Virulent phage: Use the metabolic machinery of the host cell to produce progeny virus and kill the host in the process</li>
+<li>Lytic phage</li>
+</ul>
+<h4 id="life-cycle"><a class="markdownIt-Anchor" href="#life-cycle"></a> Life Cycle</h4>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113163723322.png" alt="image-20191113163723322" style="zoom:67%;" />
+<h4 id="genetics-mapping-in-phage-t4"><a class="markdownIt-Anchor" href="#genetics-mapping-in-phage-t4"></a> Genetics Mapping in Phage T4</h4>
+<p>Use a type of genetic mapping known as <strong>intragenic (基因内的)</strong> or <strong>fine structure mapping</strong></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113171625932.png" alt="image-20191113171625932" /></p>
+<p>To test if the mutations causing differences in plaque morphology are <strong>in the same gene or different genes</strong>（检测引起斑块形态差异的突变是否来自同一基因或不同基因）, a <strong>complementation test</strong> can be performed</p>
+<ul>
+<li>Use two mutant strains to infect the same cell
+<ul>
+<li>If no wild‐type plaques are obtained it indicates that the mutations are in the same gene – <strong>noncomplementation</strong></li>
+<li>If wild‐type plaques are obtained it indicates that the mutations from each strain are in different genes –<strong>complementation</strong></li>
+</ul>
+</li>
+</ul>
+<h5 id="1-noncomplementation"><a class="markdownIt-Anchor" href="#1-noncomplementation"></a> (1) Noncomplementation</h5>
+<p>The phage mutations are in the same gene</p>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113172606835.png" alt="image-20191113172606835" style="zoom: 33%;" />
+<p>No complementation occurs, because the <u>coinfected cell is unable to make the normal product of gene A.</u></p>
+<p>The coinfected cell <u>will not produce viral particles</u>, thus no bacterial cell lysis and no plaque formation.</p>
+<h5 id="2-complementation"><a class="markdownIt-Anchor" href="#2-complementation"></a> (2) Complementation</h5>
+<p>The phage mutations are in different gene</p>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113172825296.png" alt="image-20191113172825296" style="zoom:33%;" />
+<p>Complementation occurs, because the coinfected cell is able to make normal products of gene A and gene B. The coinfected bacterial cell will produce viral particles that lyse the cell, resulting in the appearance of clear plaques.</p>
+<h5 id="3-the-recombination-test"><a class="markdownIt-Anchor" href="#3-the-recombination-test"></a> (3) The Recombination Test</h5>
+<p><strong>Seymour Benzer</strong> decided to find out</p>
+<p>Could wild-type virus be formed by recombination between mutations within the same gene? (是否可以通过同一基因内突变之间的重组形成野生型)</p>
+<h6 id="the-recombination"><a class="markdownIt-Anchor" href="#the-recombination"></a> The Recombination</h6>
+<ol>
+<li>the recombination frequency between different genes is low (on the order of 10-2 ).</li>
+<li>One would expect that recombination frequencies between mutations in a single gene would be far lower (10-4 or less).</li>
+</ol>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113173712074.png" alt="image-20191113173712074" style="zoom: 50%;" />
+<p>He conducted a detailed type of genetic mapping known as <strong>intragenic (基因外的) or fine structure mapping</strong></p>
+<ul>
+<li>The difference between intragenic and intergenic mapping is:</li>
+</ul>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113173856860.png" alt="image-20191113173856860" style="zoom:33%;" />
+<h6 id="recombination-test"><a class="markdownIt-Anchor" href="#recombination-test"></a> Recombination Test</h6>
+<p>Recombination Frequency = 2 × number of wild-type plaques (strain K plaques) ÷ total number of plaques (on strain B).</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113174032743.png" alt="image-20191113174032743" /></p>
+<ul>
+<li>Benzer had tested 2,400 different mutations in the rII gene. The recombination frequency between some pairs of these was as low as 0.02%.</li>
+</ul>
+<ol>
+<li>The T4 genome has 160,000 base pairs of DNA extending over ~l,600 centimorgans (cM).</li>
+<li>So 1 cM <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≅</mo></mrow><annotation encoding="application/x-tex">\cong</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.589em;vertical-align:0em;"></span><span class="mrel">≅</span></span></span></span> 100 base pairs</li>
+<li>So 0.02 cM represents a pair of adjacent nucleotides.</li>
+</ol>
+<p>From these data, Benzer concluded that <strong>the smallest unit of mutation and the smallest unit of recombination was a single base pair of DNA.</strong></p>
+<p>In other words,</p>
+<ul>
+<li>
+<p>these mutations represent a change in a single base pair — we call these point mutations.</p>
+</li>
+<li>
+<p>Recombination between two molecules of DNA can occur at any pair of nucleotides.</p>
+</li>
+</ul>
+<h3 id="2-bacteriophage-lambda-phage-lambda"><a class="markdownIt-Anchor" href="#2-bacteriophage-lambda-phage-lambda"></a> 2. Bacteriophage Lambda (Phage <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span></span></span></span>)</h3>
+<h4 id="structure-and-characteristic"><a class="markdownIt-Anchor" href="#structure-and-characteristic"></a> Structure And Characteristic</h4>
+<ul>
+<li>
+<p>Double‐stranded DNA genome</p>
+</li>
+<li>
+<p>Temperate viruses: 2 phases</p>
+<ul>
+<li><strong>Lytic phase</strong>: cause lysis of cells;</li>
+<li><strong>Lysogenic phase</strong>: integrate into host chromosome as prophage (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span></span></span></span> chromosome) . Do not lyse cell. Can leave genome and enter lytic phase.</li>
+</ul>
+</li>
+</ul>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113164339493.png" alt="image-20191113164339493" style="zoom: 67%;" />
+<h4 id="life-cycle-2"><a class="markdownIt-Anchor" href="#life-cycle-2"></a> Life Cycle</h4>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113164403101.png" alt="image-20191113164403101" style="zoom:67%;" />
+<h4 id="lambda-dna-insert-ecoli-bacteria-dna"><a class="markdownIt-Anchor" href="#lambda-dna-insert-ecoli-bacteria-dna"></a> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span></span></span></span> DNA Insert E.coli Bacteria DNA</h4>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113164954402.png" alt="image-20191113164954402" style="zoom:67%;" />
+<h3 id="3-plaque-formation"><a class="markdownIt-Anchor" href="#3-plaque-formation"></a> 3. Plaque Formation</h3>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113165059100.png" alt="image-20191113165059100" style="zoom:67%;" />
+<h3 id="4-phage-t2-genetics-mapping"><a class="markdownIt-Anchor" href="#4-phage-t2-genetics-mapping"></a> 4. Phage T2 Genetics Mapping</h3>
+<h4 id="h-mutant"><a class="markdownIt-Anchor" href="#h-mutant"></a> h Mutant</h4>
+<p>When plated on a lawn containing both <strong><em>E. coli</em> B</strong> and <strong><em>E. coli</em> B/2</strong>, the mutant (<em>h</em>) viruses can <u>lyze both strains of <em>E. coli</em>,</u> producing clear plaques, while</p>
+<p>the wild-type (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>h</mi><mo>+</mo></msup></mrow><annotation encoding="application/x-tex">h^{+}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.771331em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">h</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">+</span></span></span></span></span></span></span></span></span></span></span></span>) viruses can <u>only lyze <em>E. coli</em> B</u> producing turbid (浑浊的) plaques.</p>
+<h4 id="r-mutant"><a class="markdownIt-Anchor" href="#r-mutant"></a> r Mutant</h4>
+<p>The mutation occurs in a gene designated <em>r</em> (for “rapid lysis”). It reveals itself by the extra-large plaques that it forms.</p>
+<p>The wild-type gene, producing a normal time of lysis, is designated <u><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>r</mi><mo>+</mo></msup></mrow><annotation encoding="application/x-tex">r^{+}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.771331em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">+</span></span></span></span></span></span></span></span></span></span></span></span>. It forms normal-size plaques.</u></p>
+<h4 id="mapping"><a class="markdownIt-Anchor" href="#mapping"></a> Mapping</h4>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113170542323.png" alt="image-20191113170542323" style="zoom: 33%;" />
+<h2 id="gene-and-chromosome"><a class="markdownIt-Anchor" href="#gene-and-chromosome"></a> Gene And Chromosome</h2>
+<p>Genes like beads on a chromosome</p>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191113173132804.png" alt="image-20191113173132804" style="zoom:50%;" />
+<h2 id="bacteria"><a class="markdownIt-Anchor" href="#bacteria"></a> Bacteria</h2>
+<h3 id="1-characterics"><a class="markdownIt-Anchor" href="#1-characterics"></a> 1. Characterics</h3>
+<ul>
+<li>Living organisms</li>
+<li>A single main chromosome within a few thousand genes</li>
+<li>Plasmids and episomes (Extrachromosomal element)</li>
+<li>Plasmids: Circular (or infrequently linear) piece of DNA
+<ul>
+<li>F Factor (Fertility Factor)</li>
+<li>R Plasmids (Resistance Plasmids)</li>
+<li>Col Plasmids (synthesize compounds that kill sensitive cells)</li>
+<li>Episomes: Circular piece of DNA that can exist as an extrachromosomal element or can integrate into chromosome of host</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-genetic-transfer-in-bacteria"><a class="markdownIt-Anchor" href="#2-genetic-transfer-in-bacteria"></a> 2. Genetic Transfer in Bacteria</h3>
+<p>Transfer of genetic material from one bacterium to another can occur in three ways:</p>
+<ol>
+<li><strong>Conjugation (接合)</strong>: Involves direct transfer from one cell to another</li>
+<li><strong>Transduction (转导)</strong>: <u>Viruses</u> transfer DNA between bacteria cells
+<ul>
+<li>Transduction mediated by phage.</li>
+</ul>
+</li>
+<li><strong>Transformation (转化)</strong>:
+<ul>
+<li>Involves uptake of DNA from the environment</li>
+<li>Gene transfer in bacteria is unidirectional—from donor cells to recipient cells.</li>
+</ul>
+</li>
+</ol>
+<p>This is kind of <strong>Parasexual processes (类有性生殖)</strong></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114145615892.png" alt="image-20191114145615892" /></p>
+<h4 id="the-differece-between-the-three-kinds-of-parasexual-process"><a class="markdownIt-Anchor" href="#the-differece-between-the-three-kinds-of-parasexual-process"></a> The Differece Between The Three Kinds of Parasexual Process</h4>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114151135168.png" alt="image-20191114151135168" style="zoom: 50%;" />
+<p>Cell Contact means <u>Direct cell contect</u></p>
+<h4 id="recombinations-in-bacteria"><a class="markdownIt-Anchor" href="#recombinations-in-bacteria"></a> Recombinations in bacteria</h4>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114151624909.png" alt="image-20191114151624909" /></p>
+<p>The one crossover is unstable, because originally the bacteria chromosome exists in circular form, but after the one crossover the circular chromosome become linear.</p>
+<h3 id="3-transformation"><a class="markdownIt-Anchor" href="#3-transformation"></a> 3. Transformation</h3>
+<p>Transformation is the process that a bacterium <u>take up of free extracellular DNA.</u></p>
+<ol>
+<li><strong>Natural transformation:</strong> DNA uptake occurs without outside help</li>
+<li><strong>Artificial transformatio</strong>n: DNA uptake occurs with the help of special techniques (热激，电激)</li>
+</ol>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114152103518.png" alt="image-20191114152103518" /></p>
+<h4 id="discovery-of-transformation"><a class="markdownIt-Anchor" href="#discovery-of-transformation"></a> Discovery of Transformation</h4>
+<p>Discovered by Frederick Griffith in 1928 while working with strains of Streptococcus pneumoniae (pneumococcus)</p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114165244411.png" alt="image-20191114165244411" /></p>
+<ul>
+<li>Type S: Encapsulated, virulent, large and smooth colonies in blood agar medium</li>
+<li>Type R: Mutated nonencapsulated, avirulent, small and rough colonies in blood agar medium</li>
+<li>Type II &amp; III: Produce different types of antigens</li>
+</ul>
+<p>Different type = Different polysaccharide in the capsule</p>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114170600184.png" alt="image-20191114170600184" style="zoom:67%;" />
+<h4 id="natural-transformation"><a class="markdownIt-Anchor" href="#natural-transformation"></a> Natural Transformation</h4>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114170625575.png" alt="image-20191114170625575" /></p>
+<ol>
+<li>
+<p>A <u>competent (处于感受态的)</u> bacterium can bind exogenous DNA and transport it into the cell.</p>
+</li>
+<li>
+<p>Exogenous DNA is bound to the receptor complex by the competence proteins ComEA and ComG. As the DNA is pulled through the channel composed of protein ComEC in the membrane by the ComFA DNA translocase, one strand of DNA is degraded by a deoxyribonuclease. The surviving strand of DNA is stabilized by single-strand DNA-binding protein and RecA protein.</p>
+</li>
+<li>
+<p>The single strand of donor DNA is integrated into the chromosome of the recipient cell producing a DNA heteroduplex with different alleles in the two strands.</p>
+</li>
+</ol>
+<h4 id="artificial-transformation"><a class="markdownIt-Anchor" href="#artificial-transformation"></a> Artificial Transformation</h4>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114171409150.png" alt="image-20191114171409150" /></p>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114171415635.png" alt="image-20191114171415635" /></p>
+<h3 id="4-conjugation"><a class="markdownIt-Anchor" href="#4-conjugation"></a> 4. Conjugation</h3>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114171602843.png" alt="image-20191114171602843" style="zoom: 67%;" />
+<p>Genetic transfer in bacteria was discovered in 1946 by Joshua Lederberg and Edward Tatum</p>
+<p>They were studying strains of <em>Escherichia coli</em> that had different nutritional growth requirements</p>
+<ul>
+<li><strong>Auxotrophs</strong> (营养缺陷型) cannot synthesize a needed nutrient</li>
+<li><strong>Prototrophs</strong> (原养型) make all their nutrients from basic components (Carbon resource or the Nitrogen resource)</li>
+</ul>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114172321203.png" alt="image-20191114172321203" style="zoom:50%;" />
+<p>证明两种E.coli之间发生了遗传物质交换</p>
+<p>This conjugation needs direct contact:</p>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114172800865.png" alt="image-20191114172800865" style="zoom: 50%;" />
+<ul>
+<li>Conjugation refers to the transfer of DNA from one bacterium to another following direct cell-to cell contact</li>
+</ul>
+<p>Many, but not all, species of bacteria can conjugate</p>
+<p>Only certain strains of a bacterium can act as donor cells</p>
+<ul>
+<li>Contain a small circular piece of DNA termed the F factor (for Fertility factor)<br />
+•	Strains containing the F factor are designated as F+<br />
+•	Those lacking it are <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>F</mi><mo>−</mo></msup></mrow><annotation encoding="application/x-tex">F^{-}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.771331em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span></span></span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+<h4 id="f-fertility-factor"><a class="markdownIt-Anchor" href="#f-fertility-factor"></a> F (Fertility) Factor</h4>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114173659959.png" alt="image-20191114173659959" style="zoom: 67%;" />
+<h4 id="the-conjugation-process"><a class="markdownIt-Anchor" href="#the-conjugation-process"></a> The Conjugation Process</h4>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114173727949.png" alt="image-20191114173727949" style="zoom:67%;" />
+<h4 id="rolling-circle-replication"><a class="markdownIt-Anchor" href="#rolling-circle-replication"></a> Rolling-Circle Replication</h4>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114174743048.png" alt="image-20191114174743048" style="zoom:67%;" />
+<p>Primer: 在反应中可以添加3’–OH的物质</p>
+<h4 id="integration-of-f-factor-to-form-hfr-cell"><a class="markdownIt-Anchor" href="#integration-of-f-factor-to-form-hfr-cell"></a> Integration of F Factor to form Hfr cell</h4>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114175346412.png" alt="image-20191114175346412" style="zoom: 50%;" />
+<p>The F factor integrated to different site, then form different kinds of hfr cells</p>
+<p>Different integration sites:</p>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191114175509480.png" alt="image-20191114175509480" style="zoom: 50%;" />
+<h4 id="formation-of-f-factor"><a class="markdownIt-Anchor" href="#formation-of-f-factor"></a> Formation of F’ factor</h4>
+<p>In some cases, the integrated F factor is excised in an imprecise fashion</p>
+<ul>
+<li>may carry genes that were once found on the bacterial chromosome</li>
+<li>These types of F factors are called F’ factors</li>
+</ul>
+<p>F‘ factors can be transferred through conjugation</p>
+<p>This may introduce new genes into the recipient cell and thereby alter its genotype</p>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115190848183.png" alt="image-20191115190848183" style="zoom:50%;" />
+<p>Excise part of the original gene – form F’ Factor</p>
+<h4 id="conjugation-between-hfr-cell-and-f-cell"><a class="markdownIt-Anchor" href="#conjugation-between-hfr-cell-and-f-cell"></a> Conjugation between Hfr cell and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>F</mi><mi mathvariant="normal">‐</mi></msup></mrow><annotation encoding="application/x-tex">F^{‐}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.363em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">‐</span></span></span></span></span></span></span></span></span></span></span></span> cell</h4>
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115191044804.png" alt="image-20191115191044804" /></p>
+<p>Transfer 从 F Factor 的 Origin 开始，并且如果时间足够长，有可能将整个Hfr Genome转移过去</p>
+<p>Entire Hfr chromosome can be transferred in about 90 – 120 minutes but most matings do not last that long</p>
+<ul>
+<li>Only a portion of the Hfr chromosome gets into the $ F^{-}$ cell</li>
+<li>Since the nick is internal to the integrated F factor; only part of the F factor is transferred</li>
+</ul>
+<p>The $ F^{-}$ cell receives chromosomal DNA</p>
+<ul>
+<li>This DNA can recombine with the homologous region on the chromosome of the recipient cell</li>
+<li>May provide the recipient cell with new alleles</li>
+</ul>
+<h5 id="1-interrupted-mating-to-map-order-of-genes-along-e-coli-chromosome"><a class="markdownIt-Anchor" href="#1-interrupted-mating-to-map-order-of-genes-along-e-coli-chromosome"></a> (1) Interrupted Mating to Map Order of Genes along E. coli Chromosome</h5>
+<p>Developed by Elie Wollman and Frangois Jacob in the 1950s</p>
+<p>The order of genes along the chromosome can be deduced by determining how long it takes for the genes to be transferred during an Hfr mating</p>
+<ul>
+<li>Interrupting mating at different times would result in recipient cells receiving different lengths of DNA</li>
+</ul>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192215426.png" alt="image-20191115192215426" style="zoom: 50%;" />
+<p>The donor (Hfr) strain had the following genetic composition</p>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192341389.png" alt="image-20191115192341389" style="zoom: 33%;" />
+<p>The recipient ($ F^{-}$) strain had the opposite genotype</p>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192656032.png" alt="image-20191115192656032" style="zoom:33%;" />
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192712193.png" alt="image-20191115192712193" style="zoom:67%;" />
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192721856.png" alt="image-20191115192721856" style="zoom:67%;" />
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192730247.png" alt="image-20191115192730247" style="zoom: 50%;" />
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192737440.png" alt="image-20191115192737440" style="zoom:67%;" />
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115192750801.png" alt="image-20191115192750801" style="zoom:67%;" />
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115193103080.png" alt="image-20191115193103080" style="zoom:50%;" />
+<h3 id="5-transduction"><a class="markdownIt-Anchor" href="#5-transduction"></a> 5. Transduction</h3>
+<p>In transduction, a bacteriophage transfers DNA from a donor cell to a recipient cell.</p>
+<p>In generalized transduction, a random fragment of bacterial DNA is packaged in the phage head in place of the<br />
+phage DNA.</p>
+<p>In Specialized transduction, only particular bacterial genes are transferred to recipient cells</p>
+<ul>
+<li>Viral DNA integrates into the bacterial chromosome a specific site</li>
+<li>When viral DNA is excised, it picks up a piece of chromosomal DNA by accident</li>
+</ul>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115193316484.png" alt="image-20191115193316484" style="zoom:50%;" />
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115193617225.png" alt="image-20191115193617225" style="zoom: 50%;" />
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115193625528.png" alt="image-20191115193625528" style="zoom:50%;" />
+<p>Therefore, some agent was being transferred from LA-2 to LA-22 through the filter</p>
+<p>Norton and Zinder conducted the same experiment with filters of different pore sizes</p>
+<ul>
+<li>They found out that the filterable agent was less then 0.1mm in diameter and insensitive to DNase</li>
+<li>They correctly concluded that the filterable agent was a bacteriophage</li>
+</ul>
+<h5 id="1-generalized-transduction-普遍性转导普通性传导"><a class="markdownIt-Anchor" href="#1-generalized-transduction-普遍性转导普通性传导"></a> (1) Generalized Transduction 普遍性转导；普通性传导</h5>
+<p>Phages that can transfer bacterial DNA include</p>
+<ul>
+<li>P22, which infects Salmonella typhimurium</li>
+<li>Pl, which infects Escherichia coli</li>
+</ul>
+<h5 id="2-specialized-transduction-局限性转导-特异性转导"><a class="markdownIt-Anchor" href="#2-specialized-transduction-局限性转导-特异性转导"></a> (2) Specialized Transduction 局限性转导; 特异性转导</h5>
+<p>Phage λ</p>
+<img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115194026445.png" alt="image-20191115194026445" style="zoom:80%;" />
+<p><img data-src="https://20190531-1259353497.cos.ap-guangzhou.myqcloud.com/image-20191115194034921.png" alt="image-20191115194034921" /></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Genetics/" rel="tag"><i class="fa fa-tag"></i> Genetics</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/26fcd038.html" rel="prev" title="L08 protein quaternary structure and Protein-Protein interactions">
+      <i class="fa fa-chevron-left"></i> L08 protein quaternary structure and Protein-Protein interactions
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/b247f43c.html" rel="next" title="L07 Proteins Tertiary Structure">
+      L07 Proteins Tertiary Structure <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-the-bacteria-and-virus"><span class="nav-number">1.</span> <span class="nav-text"> 一、The Bacteria And Virus</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#the-similarities-of-bacteria-and-viruses"><span class="nav-number">1.1.</span> <span class="nav-text"> The Similarities of Bacteria and Viruses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#virus"><span class="nav-number">1.2.</span> <span class="nav-text"> Virus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gene-and-chromosome"><span class="nav-number">1.3.</span> <span class="nav-text"> Gene And Chromosome</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bacteria"><span class="nav-number">1.4.</span> <span class="nav-text"> Bacteria</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/avatar1-pix.png">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">希望能活的久一点</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:zhenyumi@foxmail.com" title="E-Mail → mailto:zhenyumi@foxmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2279880515" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2279880515" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/ParaDogs_lazy" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;ParaDogs_lazy" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">2.4m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">35:37</span>
+</div><br /> <!-- 换行 -->
+
+<div class="translate-style">
+繁/简：<a id="translateLink" href="javascript:translatePage();">繁体
+</a>
+</div>
+<script type="text/javascript" src="/js/tw_cn.js"></script>
+<script type="text/javascript">
+var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+var cookieDomain = "https://tding.top/"; //Cookie地址, 一定要设定, 通常为你的网址
+var msgToTraditionalChinese = "繁体"; //此处可以更改为你想要显示的文字
+var msgToSimplifiedChinese = "简体"; //同上，但两处均不建议更改
+var translateButtonId = "translateLink"; //默认互换id
+translateInitilization();
+</script>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
+    }
+setInterval("createtime()",250);
+</script>
+
+<br /> <!-- 换行 -->
+
+<!--busuanzi计数-->
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+  <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css">
+
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://zhenyumi.github.io/posts/904e407c.html',]
+      });
+      });
+  </script>
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'ErV27FWAFsY2HDPhLVjeIcfR-MdYXbMMI',
+      appKey     : 'YyUrjqWLM53k8C1tPcKNaQFN',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>
