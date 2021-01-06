@@ -279,7 +279,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>9.7k</span>
+              <span>9.6k</span>
             </span>
 
         </div>
@@ -291,18 +291,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="一输入与读取数据">一、输入与读取数据</h1>
-<p>R可从键盘、文本文件、Microsoft Excel和Access、流行的统计软件、特殊格式的文件、多种关系型数据库管理系统、专业数据库、网站和在线服务中导入数据。</p>
-<h2 id="从键盘输入">从键盘输入</h2>
-<p>从键盘输入数据有两种方式：</p>
-<ol type="1">
+        <h1 id="一、输入与读取数据"><a href="#一、输入与读取数据" class="headerlink" title="一、输入与读取数据"></a>一、输入与读取数据</h1><p>R可从键盘、文本文件、Microsoft Excel和Access、流行的统计软件、特殊格式的文件、多种关系型数据库管理系统、专业数据库、网站和在线服务中导入数据。</p>
+<h2 id="从键盘输入"><a href="#从键盘输入" class="headerlink" title="从键盘输入"></a>从键盘输入</h2><p>从键盘输入数据有两种方式：</p>
+<ol>
 <li>使用R内置的文本编辑器</li>
 <li>从代码中输入</li>
 </ol>
 <p>这部分的演示使用R Studio，它可以极大地方便使用R的过程。</p>
-<h3 id="文本编辑器">1. 文本编辑器</h3>
-<p>R中的函数<code>edit()</code>会自动调用一个允许手动输入数据的文本编辑器。具体步骤如下：</p>
-<ol type="1">
+<h3 id="1-文本编辑器"><a href="#1-文本编辑器" class="headerlink" title="1. 文本编辑器"></a>1. 文本编辑器</h3><p>R中的函数<code>edit()</code>会自动调用一个允许手动输入数据的文本编辑器。具体步骤如下：</p>
+<ol>
 <li>创建一个空数据框（或矩阵），其中变量名和变量的模式需与理想中的最终数据集一致；</li>
 <li>针对这个数据对象调用文本编辑器，输入你的数据，并将结果保存回此数据对象中。</li>
 </ol>
@@ -317,95 +314,91 @@
 <ul>
 <li>函数<code>edit()</code>事实上是在对象的一个副本上进行操作的。如果你不将其赋值到一个目标，你的所有修改将会全部丢失</li>
 </ul>
-<h3 id="从代码输入">2. 从代码输入</h3>
-<p>与首先规定变量名相对的，也可以直接通过代码来输入：</p>
+<h3 id="2-从代码输入"><a href="#2-从代码输入" class="headerlink" title="2. 从代码输入"></a>2. 从代码输入</h3><p>与首先规定变量名相对的，也可以直接通过代码来输入：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mydatatxt &lt;- <span class="string">&quot; </span></span><br><span class="line"><span class="string">age gender weight </span></span><br><span class="line"><span class="string">25 m 166 </span></span><br><span class="line"><span class="string">30 f 115 </span></span><br><span class="line"><span class="string">18 f 120 </span></span><br><span class="line"><span class="string">&quot;</span> </span><br><span class="line">mydata &lt;- read.table(header=<span class="literal">TRUE</span>, text=mydatatxt)</span><br></pre></td></tr></table></figure>
-<h2 id="从带分隔符的文本文件导入数据">从带分隔符的文本文件导入数据</h2>
-<p>可以使用<code>read.table()</code>从带分隔符的文本文件中导入数据。此函数可读入一个表格格式的文件并将其保存为一个数据框。表格的每一行分别出现在文件中每一行。其语法如下：</p>
+<h2 id="从带分隔符的文本文件导入数据"><a href="#从带分隔符的文本文件导入数据" class="headerlink" title="从带分隔符的文本文件导入数据"></a>从带分隔符的文本文件导入数据</h2><p>可以使用<code>read.table()</code>从带分隔符的文本文件中导入数据。此函数可读入一个表格格式的文件并将其保存为一个数据框。表格的每一行分别出现在文件中每一行。其语法如下：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mydataframe &lt;- read.table(file, options)</span><br></pre></td></tr></table></figure>
-<p>其中，<code>file</code>是一个带分隔符的ASCII文本文件，<code>options</code>是控制如何处理数据的选项:</p>
+<p>其中，<code>file</code>是一个带分隔符的ASCII文本文件，<code>options</code>是控制如何处理数据的选项: </p>
+<div class="table-container">
 <table>
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 78%" />
-</colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th>选项</th>
 <th>说明</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>file</td>
-<td>文件名(包在""内，或使用一个字符型变量)，可能需要全路径<br />在R中，路径的分割符号使用 <code>/</code> 而不是 <code>\</code></td>
+<td>文件名(包在””内，或使用一个字符型变量)，可能需要全路径<br />在R中，路径的分割符号使用 <code>/</code> 而不是 <code>\</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td>header</td>
 <td>一个逻辑值(FALSE或TRUE)，用来反映这个文件的第一行是否包含变量名</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>sep</td>
 <td>文件中的字段分离符</td>
 </tr>
-<tr class="even">
+<tr>
 <td>quote</td>
 <td>指定用于包围字符型数据的字符</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>dec</td>
 <td>用来表示小数点的字符</td>
 </tr>
-<tr class="even">
+<tr>
 <td>row.names</td>
 <td>保存着行名的向量，或文件中一个变量的序号或名字，缺省时行号取为1，2，3，……</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>col.names</td>
 <td>指定列名的字符向量</td>
 </tr>
-<tr class="even">
+<tr>
 <td>as.is</td>
 <td>控制是否将字符型变量转化为引子型变量(如果值为FALSE)，或者仍将其保留为字符型(TRUE)。As.is可以说逻辑型，数值型或者字符向量，用来判断变量是否被保留为字符</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>na.strings</td>
 <td>代表确实数据的值(转化为NA)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>colClasses</td>
 <td>指定各列的数据类型的一个字符型向量</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>nrows</td>
 <td>可以读取的最大行数(忽略负值)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>skip</td>
 <td>在读取数据前跳过的行数</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>check.names</td>
 <td>如果为TRUE，则检查变量名是否在R中有效</td>
 </tr>
-<tr class="even">
+<tr>
 <td>fill</td>
 <td>如果为TRUE且非所有的行中变量数目相同，则用空白填补</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>strip.white</td>
 <td>在<code>sep</code>已指定的情况下，如果为TRUE，则删除字符型变量前后多余的空格</td>
 </tr>
-<tr class="even">
+<tr>
 <td>blank.lines.skip</td>
 <td>如果为TRUE，忽略空白行</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>comment.char</td>
 <td>一个字符用来在数据文件中写注释，以这个字符开头的行被忽略</td>
 </tr>
 </tbody>
 </table>
+</div>
 <p>考虑一个名为studentgrades.csv的文本文件，它包含了学生在数学、科学、和社会学习的分数。文件中每一行表示一个学生，第一行包含了变量名，用逗号分隔。每一个单独的行都包含了学生的信息，它们也是用逗号进行分隔的。文件的前几行如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">StudentID,First,Last,Math,Science,Social Studies </span><br><span class="line">011,Bob,Smith,90,80,67 </span><br><span class="line">012,Jane,Weary,75,,80 </span><br><span class="line">010,Dan,&quot;Thornton, III&quot;,65,75,70 </span><br><span class="line">040,Mary,&quot;O&#39;Leary&quot;,90,95,92</span><br></pre></td></tr></table></figure>
 <p>这个文件可以用以下语句来读入成一个数据框：</p>
@@ -417,8 +410,7 @@
 <p>可以用<code>colClasses</code>选项去对每一列都指定一个类（比如说，逻辑型、数值型、字符型或因子型）:</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">grades &lt;- read.table(<span class="string">&quot;studentgrades.csv&quot;</span>, header=<span class="literal">TRUE</span>, </span><br><span class="line">                     row.names=<span class="string">&quot;StudentID&quot;</span>, sep=<span class="string">&quot;,&quot;</span>, </span><br><span class="line">                     colClasses=<span class="built_in">c</span>(<span class="string">&quot;character&quot;</span>, <span class="string">&quot;character&quot;</span>, <span class="string">&quot;character&quot;</span>, </span><br><span class="line">                                  <span class="string">&quot;numeric&quot;</span>, <span class="string">&quot;numeric&quot;</span>, <span class="string">&quot;numeric&quot;</span>))</span><br></pre></td></tr></table></figure>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt; grades</span><br><span class="line">    First          Last Math Science Social.Studies</span><br><span class="line">011   Bob         Smith   <span class="number">90</span>      <span class="number">80</span>             <span class="number">67</span></span><br><span class="line">012  Jane         Weary   <span class="number">75</span>      <span class="literal">NA</span>             <span class="number">80</span></span><br><span class="line">010   Dan Thornton, III   <span class="number">65</span>      <span class="number">75</span>             <span class="number">70</span></span><br><span class="line">040  Mary       O<span class="string">&#x27;Leary   90      95             92</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; str(grades)</span></span><br><span class="line"><span class="string">&#x27;</span>data.frame<span class="string">&#x27;:	4 obs. of  5 variables:</span></span><br><span class="line"><span class="string"> $ First         : chr  &quot;Bob&quot; &quot;Jane&quot; &quot;Dan&quot; &quot;Mary&quot;</span></span><br><span class="line"><span class="string"> $ Last          : chr  &quot;Smith&quot; &quot;Weary&quot; &quot;Thornton, III&quot; &quot;O&#x27;</span>Leary<span class="string">&quot;</span></span><br><span class="line"><span class="string"> $ Math          : num  90 75 65 90</span></span><br><span class="line"><span class="string"> $ Science       : num  80 NA 75 95</span></span><br><span class="line"><span class="string"> $ Social.Studies: num  67 80 70 92</span></span><br></pre></td></tr></table></figure>
-<h2 id="导入-excel-数据">导入 Excel 数据</h2>
-<p>读取一个Excel文件的最好方式，就是在Excel中将其导出为一个逗号分隔文件（csv），并使用前文描述的方式将其导入R中。此外，也可以用<code>xlsx</code>包直接地导入Excel工作表。</p>
+<h2 id="导入-Excel-数据"><a href="#导入-Excel-数据" class="headerlink" title="导入 Excel 数据"></a>导入 Excel 数据</h2><p>读取一个Excel文件的最好方式，就是在Excel中将其导出为一个逗号分隔文件（csv），并使用前文描述的方式将其导入R中。此外，也可以用<code>xlsx</code>包直接地导入Excel工作表。</p>
 <p><code>xlsx</code>包可以用来对Excel 97/2000/XP/2003/2007文件进行读取、写入和格式转换。</p>
 <p>函数<code>read.xlsx()</code>导入一个工作表到一个数据框中。最简单的格式是<code>read.xlsx(file, n)</code>，其中<code>file</code>是Excel工作簿的所在路径，<code>n</code>则为要导入的工作表序号。</p>
 <ul>
@@ -430,203 +422,193 @@
 <p>关于这两个函数的完成用法如下：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">read.xlsx(</span><br><span class="line">  file,</span><br><span class="line">  sheetIndex,</span><br><span class="line">  sheetName = <span class="literal">NULL</span>,</span><br><span class="line">  rowIndex = <span class="literal">NULL</span>,</span><br><span class="line">  startRow = <span class="literal">NULL</span>,</span><br><span class="line">  endRow = <span class="literal">NULL</span>,</span><br><span class="line">  colIndex = <span class="literal">NULL</span>,</span><br><span class="line">  as.data.frame = <span class="literal">TRUE</span>,</span><br><span class="line">  header = <span class="literal">TRUE</span>,</span><br><span class="line">  colClasses = <span class="literal">NA</span>,</span><br><span class="line">  keepFormulas = <span class="literal">FALSE</span>,</span><br><span class="line">  encoding = <span class="string">&quot;unknown&quot;</span>,</span><br><span class="line">  password = <span class="literal">NULL</span>,</span><br><span class="line">  ...</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">read.xlsx2(</span><br><span class="line">  file,</span><br><span class="line">  sheetIndex,</span><br><span class="line">  sheetName = <span class="literal">NULL</span>,</span><br><span class="line">  startRow = <span class="number">1</span>,</span><br><span class="line">  colIndex = <span class="literal">NULL</span>,</span><br><span class="line">  endRow = <span class="literal">NULL</span>,</span><br><span class="line">  as.data.frame = <span class="literal">TRUE</span>,</span><br><span class="line">  header = <span class="literal">TRUE</span>,</span><br><span class="line">  colClasses = <span class="string">&quot;character&quot;</span>,</span><br><span class="line">  password = <span class="literal">NULL</span>,</span><br><span class="line">  ...</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <p>相关参数：</p>
+<div class="table-container">
 <table>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 82%" />
-</colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>file</td>
 <td>the path to the file to read.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>sheetIndex</td>
 <td>a number representing the sheet index in the workbook.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>sheetName</td>
 <td>a character string with the sheet name.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>rowIndex</td>
 <td>a numeric vector indicating the rows you want to extract. If NULL, all rows found will be extracted, unless <code>startRow</code> or <code>endRow</code> are specified.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>startRow</td>
 <td>a number specifying the index of starting row. <br /><u>For <code>read.xlsx</code> this argument is active only if <code>rowIndex</code> is NULL.</u></td>
 </tr>
-<tr class="even">
+<tr>
 <td>endRow</td>
 <td>a number specifying the index of the last row to pull. If NULL, read all the rows in the sheet. <br /><u>For <code>read.xlsx</code> this argument is active only if <code>rowIndex</code> is NULL.</u></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>colIndex</td>
 <td>a numeric vector indicating the cols you want to extract. If NULL, all columns found will be extracted.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>as.data.frame</td>
 <td>a logical value indicating if the result should be coerced into a <code>data.frame</code>. If FALSE, the result is a list with one element for each column.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>header</td>
 <td>a logical value indicating whether the first row corresponding to the first element of the <code>rowIndex</code> vector contains the names of the variables.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>colClasses</td>
 <td>For <code>read.xlsx</code> a character vector that represent the class of each column. Recycled as necessary, or if the character vector is named, unspecified values are taken to be <code>NA</code>. For <code>read.xlsx2</code> see <code>readColumns</code>.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>keepFormulas</td>
 <td>a logical value indicating if Excel formulas should be shown as text in and not evaluated before bringing them in.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>encoding</td>
 <td>encoding to be assumed for input strings. See <code>read.table</code>.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>password</td>
 <td>a String with the password.</td>
 </tr>
 </tbody>
 </table>
+</div>
 <p>以下参数继承自<code>data.frame</code>：</p>
+<div class="table-container">
 <table>
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 78%" />
-</colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>row.names</td>
 <td>NULL or a single integer or character string specifying a column to be used as row names, or a character or integer vector giving the row names for the data frame.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>check.rows</td>
 <td>if TRUE then the rows are checked for consistency of length and names.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>check.names</td>
 <td>logical. If TRUE then the names of the variables in the data frame are checked to ensure that they are syntactically valid variable names and are not duplicated. If necessary they are adjusted (by <code>make.names</code>) so that they are.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>fix.empty.names</td>
-<td>logical indicating if arguments which are “unnamed” (in the sense of not being formally called as <code>someName = arg</code>) get an automatically constructed name or rather name "". Needs to be set to FALSE even when <code>check.names</code> is false if "" names should be kept.</td>
+<td>logical indicating if arguments which are “unnamed” (in the sense of not being formally called as <code>someName = arg</code>) get an automatically constructed name or rather name “”. Needs to be set to FALSE even when <code>check.names</code> is false if “” names should be kept.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>stringsAsFactors</td>
 <td>logical: should character vectors be converted to factors? The ‘factory-fresh’ default has been TRUE previously but has been changed to FALSE for R 4.0.0. Only as short time workaround, you can revert by setting options(<code>stringsAsFactors = TRUE</code>) which now warns about its deprecation.</td>
 </tr>
 </tbody>
 </table>
-<h1 id="二数据集的标注">二、数据集的标注</h1>
-<p>为了使结果更易解读，数据分析人员通常会对数据集进行标注。这种标注包括为变量名添加描述性的标签，以及为类别型变量中的编码添加值标签。例如，对于变量<code>age</code>，你可能想附加一个描述更详细的标签<code>“Age at hospitalization (in years)”</code>（入院年龄）。对于编码为<code>1</code>或<code>2</code>的性别变量<code>gender</code>，你可能想将其关联到标签<code>“male”</code>和<code>“female”</code>上。</p>
-<h2 id="变量标签名称的修改">变量标签（名称）的修改</h2>
-<p>可以将变量标签作为变量名，然后通过位置下标来访问这个变量。</p>
-<h3 id="获得标签名称">1. 获得标签（名称）</h3>
-<h4 id="对象名称">对象名称</h4>
-<p>函数<code>names()</code>可以获得或设定某个对象的名称：</p>
+</div>
+<h1 id="二、数据集的标注"><a href="#二、数据集的标注" class="headerlink" title="二、数据集的标注"></a>二、数据集的标注</h1><p>为了使结果更易解读，数据分析人员通常会对数据集进行标注。这种标注包括为变量名添加描述性的标签，以及为类别型变量中的编码添加值标签。例如，对于变量<code>age</code>，你可能想附加一个描述更详细的标签<code>“Age at hospitalization (in years)”</code>（入院年龄）。对于编码为<code>1</code>或<code>2</code>的性别变量<code>gender</code>，你可能想将其关联到标签<code>“male”</code>和<code>“female”</code>上。</p>
+<h2 id="变量标签（名称）的修改"><a href="#变量标签（名称）的修改" class="headerlink" title="变量标签（名称）的修改"></a>变量标签（名称）的修改</h2><p>可以将变量标签作为变量名，然后通过位置下标来访问这个变量。</p>
+<h3 id="1-获得标签（名称）"><a href="#1-获得标签（名称）" class="headerlink" title="1. 获得标签（名称）"></a>1. 获得标签（名称）</h3><h4 id="对象名称"><a href="#对象名称" class="headerlink" title="对象名称"></a>对象名称</h4><p>函数<code>names()</code>可以获得或设定某个对象的名称：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Usage</span></span><br><span class="line"><span class="built_in">names</span>(x)</span><br><span class="line"><span class="built_in">names</span>(x) &lt;- value</span><br><span class="line"></span><br><span class="line"><span class="comment"># x: an R object.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># value: a character vector of up to the same length as x, or NULL.</span></span><br></pre></td></tr></table></figure>
 <p>例,修改某一行或一列的名称（标签）：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&gt; grades</span><br><span class="line">    First          Last Math Science Social.Studies</span><br><span class="line">011   Bob         Smith   <span class="number">90</span>      <span class="number">80</span>             <span class="number">67</span></span><br><span class="line">012  Jane         Weary   <span class="number">75</span>      <span class="literal">NA</span>             <span class="number">80</span></span><br><span class="line">010   Dan Thornton, III   <span class="number">65</span>      <span class="number">75</span>             <span class="number">70</span></span><br><span class="line">040  Mary       O<span class="string">&#x27;Leary   90      95             92</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; names(grades)[1]</span></span><br><span class="line"><span class="string">[1] &quot;First&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; names(grades)[1] &lt;- &quot;First Name&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; grades</span></span><br><span class="line"><span class="string">    First Name          Last Math Science Social.Studies</span></span><br><span class="line"><span class="string">011        Bob         Smith   90      80             67</span></span><br><span class="line"><span class="string">012       Jane         Weary   75      NA             80</span></span><br><span class="line"><span class="string">010        Dan Thornton, III   65      75             70</span></span><br><span class="line"><span class="string">040       Mary       O&#x27;</span>Leary   <span class="number">90</span>      <span class="number">95</span>             <span class="number">92</span></span><br></pre></td></tr></table></figure>
-<h4 id="行列名称">行、列名称</h4>
-<p>使用函数<code>row.names()</code>与<code>colnames()</code>可以获得某个数据框的行、列名称：</p>
+<h4 id="行、列名称"><a href="#行、列名称" class="headerlink" title="行、列名称"></a>行、列名称</h4><p>使用函数<code>row.names()</code>与<code>colnames()</code>可以获得某个数据框的行、列名称：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt; grades</span><br><span class="line">    First Name          Last Math Science Social.Studies</span><br><span class="line">011        Bob         Smith   <span class="number">90</span>      <span class="number">80</span>             <span class="number">67</span></span><br><span class="line">012       Jane         Weary   <span class="number">75</span>      <span class="literal">NA</span>             <span class="number">80</span></span><br><span class="line">010        Dan Thornton, III   <span class="number">65</span>      <span class="number">75</span>             <span class="number">70</span></span><br><span class="line">040       Mary       O<span class="string">&#x27;Leary   90      95             92</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; colnames(grades)</span></span><br><span class="line"><span class="string">[1] &quot;First Name&quot;     &quot;Last&quot;           &quot;Math&quot;           &quot;Science&quot;        &quot;Social.Studies&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; row.names(grades)</span></span><br><span class="line"><span class="string">[1] &quot;011&quot; &quot;012&quot; &quot;010&quot; &quot;040&quot;</span></span><br></pre></td></tr></table></figure>
 <p>之后可以使用序号的索引对标签进行修改：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; colnames(grades)[<span class="number">2</span>] &lt;- <span class="string">&quot;Last Name&quot;</span></span><br><span class="line">&gt; row.names(grades)[<span class="number">1</span>] &lt;- <span class="string">&quot;Row 1&quot;</span></span><br><span class="line">&gt; row.names(grades)[<span class="number">2</span>:<span class="number">4</span>] &lt;- <span class="built_in">c</span>(<span class="string">&quot;Row 2&quot;</span>, <span class="string">&quot;Row 3&quot;</span>, <span class="string">&quot;Row 4&quot;</span>)</span><br><span class="line"></span><br><span class="line">&gt; grades</span><br><span class="line">      First Name     Last Name Math Science Social.Studies</span><br><span class="line">Row <span class="number">1</span>        Bob         Smith   <span class="number">90</span>      <span class="number">80</span>             <span class="number">67</span></span><br><span class="line">Row <span class="number">2</span>       Jane         Weary   <span class="number">75</span>      <span class="literal">NA</span>             <span class="number">80</span></span><br><span class="line">Row <span class="number">3</span>        Dan Thornton, III   <span class="number">65</span>      <span class="number">75</span>             <span class="number">70</span></span><br><span class="line">Row <span class="number">4</span>       Mary       O<span class="string">&#x27;Leary   90      95             92</span></span><br></pre></td></tr></table></figure>
-<h3 id="值标签的获得与修改">2. 值标签的获得与修改</h3>
-<p>函数<code>factor()</code>可为类别型变量创建值标签。继续上例，假设你有一个名为<code>gender</code>的变量，其中<code>1</code>表示男性，<code>2</code>表示女性。你可以使用以下代码来创建值标签：</p>
+<h3 id="2-值标签的获得与修改"><a href="#2-值标签的获得与修改" class="headerlink" title="2. 值标签的获得与修改"></a>2. 值标签的获得与修改</h3><p>函数<code>factor()</code>可为类别型变量创建值标签。继续上例，假设你有一个名为<code>gender</code>的变量，其中<code>1</code>表示男性，<code>2</code>表示女性。你可以使用以下代码来创建值标签：</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">patientdata$gender &lt;- factor(patientdata$gender, </span><br><span class="line"> levels = <span class="built_in">c</span>(<span class="number">1</span>,<span class="number">2</span>), </span><br><span class="line"> labels = <span class="built_in">c</span>(<span class="string">&quot;male&quot;</span>, <span class="string">&quot;female&quot;</span>))</span><br></pre></td></tr></table></figure>
 <p>这里<code>levels</code>代表变量的实际值，而<code>labels</code>表示包含了理想值标签的字符型向量。</p>
-<h2 id="处理数据对象的常用函数">处理数据对象的常用函数</h2>
+<h2 id="处理数据对象的常用函数"><a href="#处理数据对象的常用函数" class="headerlink" title="处理数据对象的常用函数"></a>处理数据对象的常用函数</h2><div class="table-container">
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>函数</th>
 <th>用途</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>length(object)</td>
 <td>显示对象/元素数量、向量等数据类型长度</td>
 </tr>
-<tr class="even">
+<tr>
 <td>dim(object)</td>
 <td>显示某个对象的维度，其中也包含数据类型的长度</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>str(object)</td>
 <td>显示某个对象的结构</td>
 </tr>
-<tr class="even">
+<tr>
 <td>class(object)</td>
 <td>显示某个对象的类或类型，整体的类型</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>mode(object)</td>
 <td>显示某个对象的模式，个体类型，如每一列</td>
 </tr>
-<tr class="even">
+<tr>
 <td>names(object)</td>
 <td>显示某对象中各成分的名称</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>c(ob1,ob2)</td>
 <td>将对象合并入一个向量</td>
 </tr>
-<tr class="even">
+<tr>
 <td>cbind(ob1,ob2)</td>
 <td>按列合并对象</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>rbind(ob1,ob2)</td>
 <td>按行合并对象</td>
 </tr>
-<tr class="even">
+<tr>
 <td>object</td>
 <td>输出某个对象</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>head(object)</td>
 <td>列出某个对象的开始部分，默认前六行</td>
 </tr>
-<tr class="even">
+<tr>
 <td>tail(object)</td>
 <td>列出某个对象的最后部分，默认后六行</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>ls()</td>
 <td>显示当前的对象列表</td>
 </tr>
-<tr class="even">
+<tr>
 <td>rm()</td>
 <td>删除一个或多个对象</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>edit(object)</td>
 <td>编辑对象</td>
 </tr>
-<tr class="even">
+<tr>
 <td>fix(object)</td>
 <td>直接编辑对象</td>
 </tr>
 </tbody>
 </table>
-<h1 id="三创建报告">三、创建报告</h1>
-<p>这部分需要使用到R Studio。</p>
+</div>
+<h1 id="三、创建报告"><a href="#三、创建报告" class="headerlink" title="三、创建报告"></a>三、创建报告</h1><p>这部分需要使用到R Studio。</p>
 <p>使用模板生成报告：</p>
 <p>从模板生成报告即报告从一个模版文件开始创建。这份模版包括了报告文字、格式化语法和R代码块。</p>
 <p>基本的流程为：读取模版文件，运行R代码，应用格式化指令，生成一个报告。</p>
@@ -634,7 +616,7 @@
 <ul>
 <li>报告文字：所有解释性的语句和文字。</li>
 <li>格式化语法（formatting syntax）：控制报告格式化方式的标签。（具体语法下面有简要的补充。）</li>
-<li>R代码：要运行的R语句。在R Markdown文档中，R代码块被 <code>```&#123;r&#125; 以及</code> <code></code> ``` 所包围。</li>
+<li>R代码：要运行的R语句。在R Markdown文档中，R代码块被 <code>```&#123;r&#125; 以及</code> <code> </code> ``` 所包围。</li>
 </ul>
 <p>最后，模版文件被作为参数传递到 <code>rmarkdown</code> 包的 <code>render()</code> 函数中，然后创建出一个网页文件<code>example.html</code>，此网页包含了报告文字和R结果。</p>
 <p>本章主要学习四种模版：R Markdown模版、ODT模版、DOCX模版和LaTeX模版。</p>
@@ -643,81 +625,71 @@
 <li>ODT和DOCX模版分别用于生成Open Document和Microsoft Word文档。</li>
 <li>LaTeX模版则能生成出版水平的PDF文档，包括报告、 文章和图书。</li>
 </ul>
-<h2 id="用-r-和-markdown-创建动态报告">用 R 和 Markdown 创建动态报告</h2>
-<p>这部分需要进行一些准备工作：</p>
-<ol type="1">
+<h2 id="用-R-和-Markdown-创建动态报告"><a href="#用-R-和-Markdown-创建动态报告" class="headerlink" title="用 R 和 Markdown 创建动态报告"></a>用 R 和 Markdown 创建动态报告</h2><p>这部分需要进行一些准备工作：</p>
+<ol>
 <li>安装 <code>rmarkdown</code> 包（ <code>install.packages(“rmarkdown”)</code>）</li>
 <li>安装 <code>xtable</code>包（ <code>install.packages(“xtable”)</code>）</li>
 <li>安装<code>Pandoc</code></li>
-<li>安装LaTeX编译器（如果想生成PDF文档）。一套LaTeX编译器能够把一个LaTeX文件转换成一个高质量排版的PDF文档。
-<ul>
+<li>安装LaTeX编译器（如果想生成PDF文档）。一套LaTeX编译器能够把一个LaTeX文件转换成一个高质量排版的PDF文档。<ul>
 <li>注意，安装了最新版<code>Rstudio</code>则可跳过第1和4步。</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-<h3 id="创建报告文件">1. 创建报告文件</h3>
-<p>在R studio中，从GUI菜单中选择“File”→“New File”→“R Markdown”，可以可视化地创建Markdown文件。之后就会出现GUI界面，进行选择与设置。</p>
+<h3 id="1-创建报告文件"><a href="#1-创建报告文件" class="headerlink" title="1. 创建报告文件"></a>1. 创建报告文件</h3><p>在R studio中，从GUI菜单中选择“File”→“New File”→“R Markdown”，可以可视化地创建Markdown文件。之后就会出现GUI界面，进行选择与设置。</p>
 <p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184245881.png" alt="image-20200810184245881" style="zoom:67%;" /></p>
 <p>在完成设置之后，就进入到了编辑界面：</p>
-<figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184337931.png" alt="image-20200810184337931" /><figcaption aria-hidden="true">image-20200810184337931</figcaption>
-</figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184337931.png" alt="image-20200810184337931"></p>
 <p>在这里，就可以进行相关代码的编辑了。</p>
-<h3 id="报告文件语法">2. 报告文件语法</h3>
-<p>这部分的语法也就是Markdown的语法，就不多赘述了。</p>
+<h3 id="2-报告文件语法"><a href="#2-报告文件语法" class="headerlink" title="2. 报告文件语法"></a>2. 报告文件语法</h3><p>这部分的语法也就是Markdown的语法，就不多赘述了。</p>
 <p>有一些值得注意的代码块选项是：</p>
+<div class="table-container">
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>选项（参数）</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>echo</td>
 <td>是否在输出中包含R源代码（TRUE或FALSE）</td>
 </tr>
-<tr class="even">
+<tr>
 <td>results</td>
 <td>是否输出原生结果（asis或hide）</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>warning</td>
 <td>是否在输出中包含警告（TRUE或FALSE）</td>
 </tr>
-<tr class="even">
+<tr>
 <td>message</td>
 <td>是否在输出中包含参考的信息（TRUE或FALSE）</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>error</td>
 <td>是否在输出中包含错误信息（TRUE或FALSE）</td>
 </tr>
-<tr class="even">
+<tr>
 <td>fig.width</td>
 <td>图片宽度（英寸）</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>fig.height</td>
 <td>图片高度（英寸）</td>
 </tr>
 </tbody>
 </table>
+</div>
 <p>例如：</p>
-<figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204656466.png" alt="image-20200810204656466" /><figcaption aria-hidden="true">image-20200810204656466</figcaption>
-</figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204656466.png" alt="image-20200810204656466"></p>
 <p>例2：</p>
-<figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204715481.png" alt="image-20200810204715481" /><figcaption aria-hidden="true">image-20200810204715481</figcaption>
-</figure>
-<h3 id="文件输出">3. 文件输出</h3>
-<p>使用R Studio可以很方便地实现文件的编辑和输出。</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204715481.png" alt="image-20200810204715481"></p>
+<h3 id="3-文件输出"><a href="#3-文件输出" class="headerlink" title="3. 文件输出"></a>3. 文件输出</h3><p>使用R Studio可以很方便地实现文件的编辑和输出。</p>
 <p>在GUI中创建完成报告文件之后，就可以在R Studio中的一个Pane中进行代码的编辑。</p>
 <p>而输出的话则需要从<code>Knit</code>下拉菜单当中选取目标输出格式，之后在<code>Viewer</code> Pane中预览，可以在下拉菜单中选择保存的目标路径等。</p>
-<figure>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184758166.png" alt="image-20200810184758166" /><figcaption aria-hidden="true">image-20200810184758166</figcaption>
-</figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184758166.png" alt="image-20200810184758166"></p>
 
     </div>
 
@@ -805,7 +777,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E8%BE%93%E5%85%A5%E4%B8%8E%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="nav-number">1.</span> <span class="nav-text">一、输入与读取数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E9%94%AE%E7%9B%98%E8%BE%93%E5%85%A5"><span class="nav-number">1.1.</span> <span class="nav-text">从键盘输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E5%B8%A6%E5%88%86%E9%9A%94%E7%AC%A6%E7%9A%84%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="nav-number">1.2.</span> <span class="nav-text">从带分隔符的文本文件导入数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5-excel-%E6%95%B0%E6%8D%AE"><span class="nav-number">1.3.</span> <span class="nav-text">导入 Excel 数据</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E6%A0%87%E6%B3%A8"><span class="nav-number">2.</span> <span class="nav-text">二、数据集的标注</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E6%A0%87%E7%AD%BE%E5%90%8D%E7%A7%B0%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="nav-number">2.1.</span> <span class="nav-text">变量标签（名称）的修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="nav-number">2.2.</span> <span class="nav-text">处理数据对象的常用函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A"><span class="nav-number">3.</span> <span class="nav-text">三、创建报告</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8-r-%E5%92%8C-markdown-%E5%88%9B%E5%BB%BA%E5%8A%A8%E6%80%81%E6%8A%A5%E5%91%8A"><span class="nav-number">3.1.</span> <span class="nav-text">用 R 和 Markdown 创建动态报告</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%BE%93%E5%85%A5%E4%B8%8E%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="nav-number">1.</span> <span class="nav-text">一、输入与读取数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E9%94%AE%E7%9B%98%E8%BE%93%E5%85%A5"><span class="nav-number">1.1.</span> <span class="nav-text">从键盘输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E5%B8%A6%E5%88%86%E9%9A%94%E7%AC%A6%E7%9A%84%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="nav-number">1.2.</span> <span class="nav-text">从带分隔符的文本文件导入数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5-Excel-%E6%95%B0%E6%8D%AE"><span class="nav-number">1.3.</span> <span class="nav-text">导入 Excel 数据</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E6%A0%87%E6%B3%A8"><span class="nav-number">2.</span> <span class="nav-text">二、数据集的标注</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E6%A0%87%E7%AD%BE%EF%BC%88%E5%90%8D%E7%A7%B0%EF%BC%89%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="nav-number">2.1.</span> <span class="nav-text">变量标签（名称）的修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="nav-number">2.2.</span> <span class="nav-text">处理数据对象的常用函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A"><span class="nav-number">3.</span> <span class="nav-text">三、创建报告</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8-R-%E5%92%8C-Markdown-%E5%88%9B%E5%BB%BA%E5%8A%A8%E6%80%81%E6%8A%A5%E5%91%8A"><span class="nav-number">3.1.</span> <span class="nav-text">用 R 和 Markdown 创建动态报告</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -882,13 +854,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">2.4m</span>
+    <span title="站点总字数">2.3m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">35:57</span>
+    <span title="站点阅读时长">35:23</span>
 </div><br /> <!-- 换行 -->
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>
