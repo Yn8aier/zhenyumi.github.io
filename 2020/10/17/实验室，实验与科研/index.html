@@ -525,7 +525,7 @@ $(document).ready(function() {
 
   
   <script src="/lib/anime.min.js"></script>
-  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
 
@@ -663,6 +663,16 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
 
   
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://zhenyumi.github.io/2020/10/17/%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%8C%E5%AE%9E%E9%AA%8C%E4%B8%8E%E7%A7%91%E7%A0%94/',]
+      });
+      });
+  </script>
 
 
 <script>

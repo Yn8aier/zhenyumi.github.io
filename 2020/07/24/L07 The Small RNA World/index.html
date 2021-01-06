@@ -546,12 +546,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/07/24/L09%20Transposons%20And%20Retrotransposons/" rel="prev" title="L09 Transposons And Retrotransposons">
-      <i class="fa fa-chevron-left"></i> L09 Transposons And Retrotransposons
+    <a href="/2020/07/24/L08%20Epigenetics/" rel="prev" title="L08 Epigenetics">
+      <i class="fa fa-chevron-left"></i> L08 Epigenetics
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/07/24/L08%20Epigenetics/" rel="next" title="L08 Epigenetics">
-      L08 Epigenetics <i class="fa fa-chevron-right"></i>
+    <a href="/2020/07/24/L06%20DNA%20Replication/" rel="next" title="L06 DNA Replication">
+      L06 DNA Replication <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -778,7 +778,7 @@ $(document).ready(function() {
 
   
   <script src="/lib/anime.min.js"></script>
-  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
 
@@ -916,6 +916,16 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
 
   
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://zhenyumi.github.io/2020/07/24/L07%20The%20Small%20RNA%20World/',]
+      });
+      });
+  </script>
 
 
 <script>

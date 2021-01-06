@@ -831,12 +831,12 @@ It transfers the methyl or ethyl group from the base to a cysteine side chain wi
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/07/25/L11%20Biological%20Catalysts/" rel="prev" title="L11 Biological Catalysts">
-      <i class="fa fa-chevron-left"></i> L11 Biological Catalysts
+    <a href="/2020/07/25/L12%20The%20Kinetics%20of%20Enzymatic%20%20Catalysis/" rel="prev" title="L12 The Kinetics of Enzymatic Catalysis">
+      <i class="fa fa-chevron-left"></i> L12 The Kinetics of Enzymatic Catalysis
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/07/25/L10%20Contractile%20proteins%20and%20molecular%20motors/" rel="next" title="L10 Contractile proteins and molecular motors">
-      L10 Contractile proteins and molecular motors <i class="fa fa-chevron-right"></i>
+    <a href="/2020/07/25/L11%20Biological%20Catalysts/" rel="next" title="L11 Biological Catalysts">
+      L11 Biological Catalysts <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -1063,7 +1063,7 @@ $(document).ready(function() {
 
   
   <script src="/lib/anime.min.js"></script>
-  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
 
@@ -1201,6 +1201,16 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
 
   
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://zhenyumi.github.io/2020/07/25/L11%20Mutation%20and%20DNA%20repair/',]
+      });
+      });
+  </script>
 
 
 <script>
