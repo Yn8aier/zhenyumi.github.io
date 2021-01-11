@@ -8,7 +8,7 @@ var imgMaxNum = 50;
 var windowWidth = window.innerWidth
 || document.documentElement.clientWidth
 || document.body.clientWidth;
-if (windowWidth &lt; 768) {
+if (windowWidth < 768) {
     var imageWidth = 145; // 图片显示宽度(手机)
 } else {
     var imageWidth = 215; // 图片显示宽度
@@ -18,7 +18,7 @@ var imgStyle = '!' + imageWidth + 'x';
 
 
 // 图片卡片（照片页面）
-if (windowPath.indexOf('photos') &gt; 0 ) {
+if (windowPath.indexOf('photos') > 0 ) {
     var LinkDataPath = imgDataPath;
     photo = {
         page: 1,
@@ -32,9 +32,9 @@ if (windowPath.indexOf('photos') &gt; 0 ) {
         render: function (page, data) {
             var begin = (page - 1) * this.offset;
             var end = page * this.offset;
-            if (begin &gt;= data.length) return;
+            if (begin >= data.length) return;
             var html, imgNameWithPattern, imgName, imageSize, imageX, imageY, li = "";
-            for (var i = begin; i &lt; end &amp;&amp; i &lt; data.length; i++) {
+            for (var i = begin; i < end && i < data.length; i++) {
                 imgNameWithPattern = data[i].split(';')[1];  // a.png
                 imgName = imgNameWithPattern.split('.')[0]  // a
                 imageSize = data[i].split(';')[0]; // length.height
@@ -44,10 +44,10 @@ if (windowPath.indexOf('photos') &gt; 0 ) {
 							  cdn_url       = data[i].split(';')[2]; // 原图 cdn url
 							  small_cdn_url = data[i].split(';')[3]; // 缩略图 cdn url
 
-                li += '<div class="card" style="width:' + imageWidth + 'px">' +
+                li += '<div class="card" style="width:' + imageWidth + 'px" >' +
                         '<div class="ImageInCard" style="height:'+ imageWidth * imageY / imageX + 'px">' +
                             '<a data-fancybox="gallery" href="' + cdn_url + '" data-caption="' + imgName + '" title="' +  imgName + '">' +
-                                '<img data-src="' + small_cdn_url + '" data-loaded="true">' +
+                                '<img data-src="' + small_cdn_url + '" data-src="' + small_cdn_url + '" data-loaded="true">' +
                             '</a>' +
                         '</div>' +
                       '</div>'
