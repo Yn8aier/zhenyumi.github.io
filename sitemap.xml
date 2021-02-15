@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zhenyumi.github.io/%E8%92%B8%E6%B1%BD%E6%B3%A2/%E7%94%9F%E6%B4%BB%E5%9B%BE/index.html</loc>
-    
-    <lastmod>2021-02-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://zhenyumi.github.io/%E8%92%B8%E6%B1%BD%E6%B3%A2/%E7%9B%B8%E5%86%8C%E8%83%8C%E6%99%AF%E5%9B%BE%E8%BF%AD%E4%BB%A3/index.html</loc>
     
     <lastmod>2021-02-15</lastmod>
@@ -17,6 +10,13 @@
   
   <url>
     <loc>https://zhenyumi.github.io/%E8%92%B8%E6%B1%BD%E6%B3%A2/index.html</loc>
+    
+    <lastmod>2021-02-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhenyumi.github.io/%E8%92%B8%E6%B1%BD%E6%B3%A2/%E7%94%9F%E6%B4%BB%E5%9B%BE/index.html</loc>
     
     <lastmod>2021-02-15</lastmod>
     
@@ -569,14 +569,14 @@
   </url>
   
   <url>
-    <loc>https://zhenyumi.github.io/posts/d1ae287d.html</loc>
+    <loc>https://zhenyumi.github.io/posts/cac6a20.html</loc>
     
     <lastmod>2020-07-25</lastmod>
     
   </url>
   
   <url>
-    <loc>https://zhenyumi.github.io/posts/cac6a20.html</loc>
+    <loc>https://zhenyumi.github.io/posts/d1ae287d.html</loc>
     
     <lastmod>2020-07-25</lastmod>
     
@@ -1299,14 +1299,14 @@
   </url>
   
   <url>
-    <loc>https://zhenyumi.github.io/tags/Cell-Biology/</loc>
+    <loc>https://zhenyumi.github.io/tags/Biopsychology/</loc>
     <lastmod>2021-02-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://zhenyumi.github.io/tags/Biopsychology/</loc>
+    <loc>https://zhenyumi.github.io/tags/Cell-Biology/</loc>
     <lastmod>2021-02-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1420,7 +1420,7 @@
   </url>
   
   <url>
-    <loc>https://zhenyumi.github.io/categories/Academic-Notebook/Molecular-Biology/</loc>
+    <loc>https://zhenyumi.github.io/categories/Academic-Notebook/Genetics/</loc>
     <lastmod>2021-02-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1434,7 +1434,7 @@
   </url>
   
   <url>
-    <loc>https://zhenyumi.github.io/categories/Academic-Notebook/Genetics/</loc>
+    <loc>https://zhenyumi.github.io/categories/Academic-Notebook/Molecular-Biology/</loc>
     <lastmod>2021-02-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1455,14 +1455,14 @@
   </url>
   
   <url>
-    <loc>https://zhenyumi.github.io/categories/Academic-Notebook/Cell-Biology/</loc>
+    <loc>https://zhenyumi.github.io/categories/Academic-Notebook/Biopsychology/</loc>
     <lastmod>2021-02-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://zhenyumi.github.io/categories/Academic-Notebook/Biopsychology/</loc>
+    <loc>https://zhenyumi.github.io/categories/Academic-Notebook/Cell-Biology/</loc>
     <lastmod>2021-02-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
