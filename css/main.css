@@ -1218,6 +1218,12 @@ pre .javascript .function {
   padding: 2px;
   border-radius: 50%;
 }
+.site-author-image {
+  transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  transform: rotateZ(360deg);
+}
 .site-author-name {
   color: var(--text-color);
   font-weight: 600;
@@ -1244,7 +1250,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fa17c2;
+  background: #52c8ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2798,7 +2804,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/86632186_p0%281%29.jpg");
+  background: url("https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/87257816_p0%281%29.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
