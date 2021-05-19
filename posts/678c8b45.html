@@ -155,7 +155,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">364</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">182</span></a>
 
   </li>
         <li class="menu-item menu-item-留言板">
@@ -314,13 +314,13 @@
 <p>LaTex 已经对一些必要的地方自动设置好了页面风格。如在标题页（包括手工或自动由 <code>\maketitle</code> 生成的 titlepage 环境），会使用 empty 风格禁用所有页眉页脚；而在不单独成页的 <code>\maketitle</code> ，单独成页的 <code>\part</code>，以及 <code>\chapter</code> 命令所在的一页，则使用 plain 风格。</p>
 <h1 id="二-基础操作"><a class="markdownIt-Anchor" href="#二-基础操作"></a> 二、基础操作</h1>
 <h2 id="引入"><a class="markdownIt-Anchor" href="#引入"></a> 引入</h2>
-<p>fancyhdr 宏包提供了新的页面风格 <strong>fancy</strong> ,我们可以通过 <strong>fancy</strong> 风格来设置我们的页眉页脚。页眉页脚的设置一般都放在导言区或文档类模板中。本文的例子中所有的代码都是放置到自定义的文档类模板中，因此使用的包加载命令为 <code>\RequirePackage</code> ，但效果和 <code>\usepackage</code> 是一样的。首先我们先使用 <code>\RequirePackage&#123;fancyhdr&#125;</code>  或 <code>\usepackage&#123;fancyhdr&#125;</code> 命令引入 fancyhdr 宏包。</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107114141219.png" alt="image-20201107114141219" /></p>
-<h2 id="设置具体格式"><a class="markdownIt-Anchor" href="#设置具体格式"></a> 设置具体格式</h2>
+<p>fancyhdr 宏包提供了新的页面风格 <strong>fancy</strong> ,我们可以通过 <strong>fancy</strong> 风格来设置我们的页眉页脚。页眉页脚的设置一般都放在导言区或文档类模板中。本文的例子中所有的代码都是放置到自定义的文档类模板中，因此使用的包加载命令为 <code>\RequirePackage</code> ，但效果和 <code>\usepackage</code> 是一样的。首先我们先使用 <code>\RequirePackage&#123;fancyhdr&#125;</code> 或 <code>\usepackage&#123;fancyhdr&#125;</code> 命令引入 fancyhdr 宏包。</p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107114141219.png" alt="image-20201107114141219" style="zoom:100%;" />
+## 设置具体格式
 <h3 id="1-设置与调用的格式"><a class="markdownIt-Anchor" href="#1-设置与调用的格式"></a> 1. 设置与调用的格式</h3>
 <p>fancyhdr 将页面布局分成如下几个部分：</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/14174754-a700cc72b4a260a8.png" alt="img" /></p>
-<p>页面页脚左中右共6个部分组成，考虑到双面文档的奇数页和偶数页则共有12个部分。另外还有2个装饰性的分割线。</p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/14174754-a700cc72b4a260a8.png" alt="img" style="zoom:100%;" />
+页面页脚左中右共6个部分组成，考虑到双面文档的奇数页和偶数页则共有12个部分。另外还有2个装饰性的分割线。
 <p>我们需要首先自己设置格式<code>fancy style</code>，之后再在页面格式选择时选择<code>fancy style</code>.</p>
 <p>下面是一个常用的使用示例：</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 设置自定义格式，名称为Self Defined</span></span><br><span class="line"><span class="keyword">\fancypagestyle</span>&#123;Self Defined&#125;&#123;</span><br><span class="line">	<span class="keyword">\fancyhf</span>&#123;&#125;<span class="comment">% 清空当前页眉和页脚的设置</span></span><br><span class="line">	<span class="comment">% 设置页眉 </span></span><br><span class="line">	<span class="keyword">\fancyhead</span>[L]&#123;Text&#125;</span><br><span class="line">	<span class="keyword">\fancyhead</span>[C]&#123;&#125;</span><br><span class="line">	<span class="keyword">\fancyhead</span>[R]&#123;&#125;</span><br><span class="line">	<span class="keyword">\renewcommand</span>&#123;<span class="keyword">\headrulewidth</span>&#125;&#123;0.7pt&#125; <span class="comment">% 页眉与正文之间的水平线粗细</span></span><br><span class="line">	<span class="comment">% 设置页脚</span></span><br><span class="line">	<span class="keyword">\fancyfoot</span>[RO,RE]&#123;<span class="keyword">\thepage</span>&#125;<span class="comment">%在每页的右下脚以斜体显示书名</span></span><br><span class="line">	<span class="keyword">\renewcommand</span>&#123;<span class="keyword">\footrulewidth</span>&#125;&#123;0.7pt&#125;<span class="comment">% 页脚与正文之间的水平线粗细</span></span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">% 选用 fancy style</span></span><br><span class="line"><span class="keyword">\pagestyle</span>&#123;Self Defined&#125;</span><br></pre></td></tr></table></figure>
@@ -382,16 +382,15 @@
 </tbody>
 </table>
 <p>对应如图：</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/14174754-a700cc72b4a260a8.png" alt="img" /></p>
-<p>这些参数应用在 <code>\fancyhead&#123;&#125;,\fancyfoot&#123;&#125;</code> 和 <code>\fancyhf&#123;&#125;</code> 命令中。其中第三组参数只应用在 <code>\fancyhf&#123;&#125;</code> 命令中。通常我们只用 <code>\fancyhf&#123;&#125;</code> 命令来清空页眉页脚，而真正的设置都是使用带前两组参数的 <code>\fancyhead&#123;&#125;</code> 和 <code>\fancyfoot&#123;&#125;</code> 来完成</p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/14174754-a700cc72b4a260a8.png" alt="img" style="zoom:100%;" />
+这些参数应用在 `\fancyhead{},\fancyfoot{}` 和 `\fancyhf{}` 命令中。其中第三组参数只应用在 `\fancyhf{}` 命令中。通常我们只用 `\fancyhf{}` 命令来清空页眉页脚，而真正的设置都是使用带前两组参数的 `\fancyhead{}` 和 `\fancyfoot{}` 来完成
 <p>使用例：</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 设置 fancy style 的属性</span></span><br><span class="line"><span class="keyword">\fancypagestyle</span>&#123;Self Defined&#125;&#123;</span><br><span class="line">	<span class="keyword">\fancyhf</span>&#123;&#125;<span class="comment">% 清空当前页眉和页脚的设置</span></span><br><span class="line">	<span class="comment">% 设置页眉 </span></span><br><span class="line">	<span class="keyword">\fancyhead</span>[L]&#123;text&#125; <span class="comment">% 在页眉leftheader区域添加</span></span><br><span class="line">	<span class="keyword">\fancyhead</span>[C]&#123;text&#125; <span class="comment">% 在页眉centeredheader区域添加</span></span><br><span class="line">	<span class="keyword">\fancyhead</span>[R]&#123;text&#125; <span class="comment">% 在页眉rightheader区域添加</span></span><br><span class="line">	<span class="keyword">\renewcommand</span>&#123;<span class="keyword">\headrulewidth</span>&#125;&#123;0.7pt&#125; <span class="comment">% 页眉与正文之间的水平线粗细</span></span><br><span class="line">	<span class="comment">% 设置页脚</span></span><br><span class="line">	<span class="keyword">\fancyfoot</span>[RO,RE]&#123;<span class="keyword">\thepage</span>&#125;<span class="comment">%在每页的右下脚以斜体显示书名</span></span><br><span class="line">	<span class="keyword">\renewcommand</span>&#123;<span class="keyword">\footrulewidth</span>&#125;&#123;0.7pt&#125;<span class="comment">% 页脚与正文之间的水平线粗细</span></span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">% 选用 fancy style</span></span><br><span class="line"><span class="keyword">\pagestyle</span>&#123;Self Defined&#125;</span><br></pre></td></tr></table></figure>
 <p>页眉：</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107115248077.png" alt="image-20201107115248077" /></p>
-<p>页脚：</p>
-<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107115258820.png" alt="image-20201107115258820" /></p>
-<p>通过选择合适的参数进行组合。</p>
-
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107115248077.png" alt="image-20201107115248077" style="zoom:100%;" />
+页脚：
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107115258820.png" alt="image-20201107115258820" style="zoom:100%;" />
+通过选择合适的参数进行组合。
     </div>
 
     
@@ -414,8 +413,8 @@
       <i class="fa fa-chevron-left"></i> L1 Introduction
     </a></div>
       <div class="post-nav-item">
-    <a href="/posts/678c8b45.html" rel="next" title="LaTeX页眉页脚的设置">
-      LaTeX页眉页脚的设置 <i class="fa fa-chevron-right"></i>
+    <a href="/posts/890040b9.html" rel="next" title="Latex页面设置">
+      Latex页面设置 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -476,7 +475,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-latex%E9%A2%84%E5%AE%9A%E4%B9%89%E7%9A%84%E9%A1%B5%E9%9D%A2%E6%A0%BC%E5%BC%8F"><span class="nav-text"> 一、LaTeX预定义的页面格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="nav-text"> 二、基础操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%85%A5"><span class="nav-text"> 引入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%85%B7%E4%BD%93%E6%A0%BC%E5%BC%8F"><span class="nav-text"> 设置具体格式</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-latex%E9%A2%84%E5%AE%9A%E4%B9%89%E7%9A%84%E9%A1%B5%E9%9D%A2%E6%A0%BC%E5%BC%8F"><span class="nav-text"> 一、LaTeX预定义的页面格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="nav-text"> 二、基础操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%85%A5"><span class="nav-text"> 引入</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -492,7 +491,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">364</span>
+          <span class="site-state-item-count">182</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -586,13 +585,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">5.5m</span>
+    <span title="站点总字数">2.7m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">82:55</span>
+    <span title="站点阅读时长">41:36</span>
 </div><br /> <!-- 换行 -->
 
 <div class="translate-style">

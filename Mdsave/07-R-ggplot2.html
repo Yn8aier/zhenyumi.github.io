@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|14px:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#000000","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
+  </script>
+
+  <meta name="description" content="ggplot2包的基本语法及相关参数">
+<meta property="og:type" content="website">
+<meta property="og:title" content="07. R &lt;- ggplot2语法概述及基本图片操作">
+<meta property="og:url" content="https://zhenyumi.github.io/Mdsave/07-R-ggplot2.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="ggplot2包的基本语法及相关参数">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809183055924.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809184749532.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809190706605.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809191119409.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809191951950.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809192859742.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809193252739.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809194744777.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809195048205.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810155620813.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809195727203.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809213743609.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214120500.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214351844.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214910619.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810152825990.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810162036196.png">
+<meta property="article:published_time" content="2020-08-09T09:47:20.000Z">
+<meta property="article:modified_time" content="2020-08-10T08:46:20.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="R">
+<meta property="article:tag" content="Statistics">
+<meta property="article:tag" content="速查">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809183055924.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/Mdsave/07-R-ggplot2.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>07. R <- ggplot2语法概述及基本图片操作 | 鹘横海
+</title>
+  
+
+
+  <script data-pjax>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?aa95e0eb65e5b58f6500e4de221c0f67";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.  Today is another day.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">23</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">23</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">182</span></a>
+
+  </li>
+        <li class="menu-item menu-item-留言板">
+
+    <a href="/%E7%95%99%E8%A8%80%E6%9D%BF/" rel="section"><i class="fas fa-chalkboard-teacher fa-fw"></i>留言板</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">07. R <- ggplot2语法概述及基本图片操作
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <p><code>ggplot2</code>包基于一种全面的图形“语法”，提供了一种全新的图形创建方法。</p>
+<p><code>ggplot2</code>包实现了一个在R中基于全面一致的语法创建图形时的系统。这提供了在R中画图时经常缺乏的图形创造的一致性并允许我们创建具有创新性和新颖性的图表类型。</p>
+<h1 id="一-ggplot2语法介绍"><a class="markdownIt-Anchor" href="#一-ggplot2语法介绍"></a> 一、ggplot2语法介绍</h1>
+<p>在<code>ggplot2</code>中，图是采用（<code>+</code>号）串联起来并创建的。每个函数修改属于自己的部分。</p>
+<p>例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data=mtcars, aes(x=wt, y=mpg)) + </span><br><span class="line">	geom_point() + </span><br><span class="line">	labs(title=<span class="string">&quot;Automobile Data&quot;</span>, x=<span class="string">&quot;Weight&quot;</span>, y=<span class="string">&quot;Miles Per Gallon&quot;</span>)</span><br></pre></td></tr></table></figure>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809183055924.png" alt="image-20200809183055924" style="zoom:67%;" />
+<p>在这个例子当中：</p>
+<ul>
+<li><code>ggplot()</code>初始化图形并且指顶要用到的数据来源（<code>mtcars</code>）和变量（<code>wt</code>、<code>mpg</code>）</li>
+<li><code>aes()</code>函数的功能是指定每个变量扮演的角色（<code>aes</code>代表aesthetics，即如何用视觉形式呈现信息）。在这里，变量<code>wt</code>的值映射到沿<em>x</em>轴的距离，变量<code>mpg</code>的值映射到沿<em>y</em>轴的距离</li>
+<li><code>geom</code>向图形中添加了几何对象</li>
+<li><code>lab()</code>函数是可选的，添加了注释（轴标签和标题）。</li>
+</ul>
+<h2 id="用几何函数指定图的类型"><a class="markdownIt-Anchor" href="#用几何函数指定图的类型"></a> 用几何函数指定图的类型</h2>
+<p><code>ggplot()</code>函数设置图形但没有自己的视觉输出。使用一个或多个几何函数向图中添加了几何对象（简写为<code>geom</code>），包括点、线、条、箱线图和阴影区域:</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>添加</th>
+<th>选项（参数）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>geom_bar()</td>
+<td>条形图</td>
+<td>color、fill、alpha</td>
+</tr>
+<tr>
+<td>geom_boxplot()</td>
+<td>箱线图</td>
+<td>color、fill、alpha、notch、width</td>
+</tr>
+<tr>
+<td>geom_density()</td>
+<td>密度图</td>
+<td>color、fill、alpha、linetype</td>
+</tr>
+<tr>
+<td>geom_histogram()</td>
+<td>直方图</td>
+<td>color、fill、alpha、linetype、binwidth</td>
+</tr>
+<tr>
+<td>geom_hline()</td>
+<td>水平线</td>
+<td>color、alpha、linetype、size</td>
+</tr>
+<tr>
+<td>geom_jitter()</td>
+<td>抖动点</td>
+<td>color、size、alpha、shape</td>
+</tr>
+<tr>
+<td>geom_line()</td>
+<td>线图</td>
+<td>colorvalpha、linetype、size</td>
+</tr>
+<tr>
+<td>geom_point()</td>
+<td>散点图</td>
+<td>color、alpha、shape、size</td>
+</tr>
+<tr>
+<td>geom_rug()</td>
+<td>地毯图</td>
+<td>color、side</td>
+</tr>
+<tr>
+<td>geom_smooth()</td>
+<td>拟合曲线</td>
+<td>method、formula、color、fill、linetype、size</td>
+</tr>
+<tr>
+<td>geom_text()</td>
+<td>文字注解</td>
+<td>很多</td>
+</tr>
+<tr>
+<td>geom_violin()</td>
+<td>小提琴图</td>
+<td>color、fill、alpha、linetype</td>
+</tr>
+<tr>
+<td>geom_vline()</td>
+<td>垂线</td>
+<td>color、alpha、linetype、size</td>
+</tr>
+</tbody>
+</table>
+<p>常见参数：</p>
+<table>
+<thead>
+<tr>
+<th>选项（参数）</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>对点、线和填充区域的边界进行着色</td>
+</tr>
+<tr>
+<td>fill</td>
+<td>对填充区域着色，如条形和密度区域</td>
+</tr>
+<tr>
+<td>alpha</td>
+<td>颜色的透明度，从0（完全透明）到1（不透明）。</td>
+</tr>
+<tr>
+<td>linetype</td>
+<td>图案的线条（1=实线，2=虚线，3=点，4=点破折号，5=长破折号，6=双破折号）</td>
+</tr>
+<tr>
+<td>size</td>
+<td>点的尺寸和线的宽度</td>
+</tr>
+<tr>
+<td>shape</td>
+<td>点的形状（和pch一样，0=开放的方形，1=开放的圆形，2=开放的三角形，等等）</td>
+</tr>
+<tr>
+<td>position</td>
+<td>绘制诸如条形图和点等对象的位置。<br />对条形图来说，<code>&quot;dodge&quot;</code>将分组条形图并排，<code>&quot;stacked&quot;</code>堆叠分组条形图，<code>&quot;fill&quot;</code>垂直地堆叠分组条形图并规范其高度相等。<br />对于点来说，<code>&quot;jitter&quot;</code>减少点重叠</td>
+</tr>
+<tr>
+<td>binwidth</td>
+<td>直方图的宽度</td>
+</tr>
+<tr>
+<td>notch</td>
+<td>表示方块图是否应为缺口（TRUE/FALSE）</td>
+</tr>
+<tr>
+<td>sides</td>
+<td>地毯图的安置（<code>&quot;b&quot;</code>=底部，<code>&quot;l&quot;</code>=左部，<code>&quot;t&quot;</code>=顶部，<code>&quot;r&quot;</code>=右部，<code>&quot;bl&quot;</code>=左下部，等等）</td>
+</tr>
+<tr>
+<td>width</td>
+<td>箱线图的宽度</td>
+</tr>
+</tbody>
+</table>
+<p>例，以<code>car</code>包中的<code>Salaries</code>数据集作为示例数据集：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 展示数据集Salaries</span></span><br><span class="line">&gt; library(car)</span><br><span class="line">载入需要的程辑包：carData</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, y=salary)) + </span><br><span class="line">     geom_boxplot(fill=<span class="string">&quot;cornflowerblue&quot;</span>, </span><br><span class="line">                  color=<span class="string">&quot;black&quot;</span>, notch=<span class="literal">TRUE</span>) + </span><br><span class="line">     geom_point(position=<span class="string">&quot;jitter&quot;</span>, color=<span class="string">&quot;blue&quot;</span>, alpha=<span class="number">.5</span>) + </span><br><span class="line">     geom_rug(side=<span class="string">&quot;l&quot;</span>, color=<span class="string">&quot;black&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809184749532.png" alt="image-20200809184749532" /></p>
+<h2 id="数据分组"><a class="markdownIt-Anchor" href="#数据分组"></a> 数据分组</h2>
+<p>为了理解数据，在一个图中画出两个或更多组的观察值通常是很有帮助的。在R中，组通常用分类变量的水平（因子）来定义。</p>
+<p>分组是通过<code>ggplot2</code>图将一个或多个带有诸如形状、颜色、填充、尺寸和线类型的视觉特征的分组变量来完成的。<code>ggplot()</code>声明中的<code>aes()</code>函数负责分配变量（图形的视觉特征）。</p>
+<p>根据不同的图像类型，分组的方式不尽相同，分组的方式可能并不会非常明显地定义出来。</p>
+<p>这部分仍然使用<code>car</code>包中的<code>Salaries</code>来进行演示。</p>
+<p>例1，根据<code>Salaries$Rank</code>进行分组：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br><span class="line">&gt; ggplot(data=Salaries, aes(x=salary, fill=rank)) + </span><br><span class="line">	geom_density(alpha=<span class="number">.3</span>)</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809190706605.png" alt="image-20200809190706605" /></p>
+<p>这其中的分组并不是非常明显地定义出来，而是以填充颜色的方式（<code>fill=rank</code>）进行表示的。即按照<code>Salaries$rank</code>的类型进行颜色填充，因为原数据集中<code>rank</code>有三种类型（AsstProf，AssoProf，Prof），因此需要填充三种颜色，从而<code>ggplot</code>自然地将数据分为了三组，因为要填充三种颜色。</p>
+<p>例2，散点图：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br><span class="line">&gt; ggplot(Salaries, aes(x=yrs.since.phd, y=salary, </span><br><span class="line">                       color=rank, shape=sex)) + </span><br><span class="line">		geom_point()</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809191119409.png" alt="image-20200809191119409" /></p>
+<p>这个例子当中按照color和shape对原数据分了两次组：原数据集中<code>rank</code>有三种类型（AsstProf，AssoProf，Prof），<code>sex</code>有两种类型（Female, Male），因此自动划分了各组的color和shape。</p>
+<p>例3，条形图：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, fill=sex)) + </span><br><span class="line">	geom_bar(position=<span class="string">&quot;stack&quot;</span>) + labs(title=<span class="string">&#x27;position=&quot;stack&quot;&#x27;</span>) </span><br><span class="line"></span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, fill=sex)) + </span><br><span class="line">	geom_bar(position=<span class="string">&quot;dodge&quot;</span>) + labs(title=<span class="string">&#x27;position=&quot;dodge&quot;&#x27;</span>) </span><br><span class="line"></span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, fill=sex)) + </span><br><span class="line">	geom_bar(position=<span class="string">&quot;fill&quot;</span>) + labs(title=<span class="string">&#x27;position=&quot;fill&quot;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809191951950.png" alt="image-20200809191951950" /></p>
+<center><font color="708090" size="2">直接用了课本上的图....</font></center>
+<h2 id="刻面"><a class="markdownIt-Anchor" href="#刻面"></a> 刻面</h2>
+<p>如果组在图中并排出现而不是重叠为单一的图形，关系就是清晰的。我们可以使用<code>facet_wrap()</code>函数和<code>facet_grid()</code>函数创建网格图形（在<code>ggplot2</code>中也称刻面图）。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用格式</span></span><br><span class="line">facet_wrap(</span><br><span class="line">  facets,</span><br><span class="line">  nrow = <span class="literal">NULL</span>,</span><br><span class="line">  ncol = <span class="literal">NULL</span>,</span><br><span class="line">  scales = <span class="string">&quot;fixed&quot;</span>,</span><br><span class="line">  shrink = <span class="literal">TRUE</span>,</span><br><span class="line">  labeller = <span class="string">&quot;label_value&quot;</span>,</span><br><span class="line">  as.table = <span class="literal">TRUE</span>,</span><br><span class="line">  <span class="built_in">switch</span> = <span class="literal">NULL</span>,</span><br><span class="line">  drop = <span class="literal">TRUE</span>,</span><br><span class="line">  dir = <span class="string">&quot;h&quot;</span>,</span><br><span class="line">  strip.position = <span class="string">&quot;top&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">facet_grid(</span><br><span class="line">  rows = <span class="literal">NULL</span>,</span><br><span class="line">  cols = <span class="literal">NULL</span>,</span><br><span class="line">  scales = <span class="string">&quot;fixed&quot;</span>,</span><br><span class="line">  space = <span class="string">&quot;fixed&quot;</span>,</span><br><span class="line">  shrink = <span class="literal">TRUE</span>,</span><br><span class="line">  labeller = <span class="string">&quot;label_value&quot;</span>,</span><br><span class="line">  as.table = <span class="literal">TRUE</span>,</span><br><span class="line">  <span class="built_in">switch</span> = <span class="literal">NULL</span>,</span><br><span class="line">  drop = <span class="literal">TRUE</span>,</span><br><span class="line">  margins = <span class="literal">FALSE</span>,</span><br><span class="line">  facets = <span class="literal">NULL</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>facet_wrap(~var, ncol=n)</td>
+<td>将每个<code>var</code>水平排列成<em>n</em>列的独立图</td>
+</tr>
+<tr>
+<td>facet_wrap(~var, nrow=n)</td>
+<td>将每个<code>var</code>水平排列成<em>n</em>行的独立图</td>
+</tr>
+<tr>
+<td>facet_grid(rowvar~colvar)</td>
+<td><code>rowvar</code>和<code>colvar</code>组合的独立图，其中<code>rowvar</code>表示行，<code>colvar</code>表示列</td>
+</tr>
+<tr>
+<td>facet_grid(rowvar~.)</td>
+<td>每个<code>rowvar</code>水平的独立图，配置成一个单列</td>
+</tr>
+<tr>
+<td>facet_grid(.~colvar)</td>
+<td>每个<code>colvar</code>水平的独立图，配置成一个单行</td>
+</tr>
+</tbody>
+</table>
+<p>这部分的演示使用<code>lattice</code>包中的<code>singer</code>数据集和<code>car</code>包中的<code>Salaries</code>来进行：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(lattice)</span><br><span class="line">&gt; head(singer)</span><br><span class="line">  height voice.part</span><br><span class="line">1     <span class="number">64</span>  Soprano <span class="number">1</span></span><br><span class="line">2     <span class="number">62</span>  Soprano <span class="number">1</span></span><br><span class="line">3     <span class="number">66</span>  Soprano <span class="number">1</span></span><br><span class="line">4     <span class="number">65</span>  Soprano <span class="number">1</span></span><br><span class="line">5     <span class="number">60</span>  Soprano <span class="number">1</span></span><br><span class="line">6     <span class="number">61</span>  Soprano <span class="number">1</span></span><br><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></td></tr></table></figure>
+<p>例1，按照不同类型进行刻面：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; ggplot(data=singer, aes(x=height)) + </span><br><span class="line">     geom_histogram() + </span><br><span class="line">     facet_wrap(~voice.part, nrow=<span class="number">4</span>)</span><br><span class="line"><span class="comment"># `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809192859742.png" alt="image-20200809192859742" /></p>
+<p>得到的图展示了各声部歌手身高的分布。<u>把八个分布分为并排的小图可以方便比较</u>。</p>
+<p>例2，刻面+分组：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; ggplot(Salaries, aes(x=yrs.since.phd, y=salary, color=rank, </span><br><span class="line">                      shape=rank)) + geom_point() + </span><br><span class="line">		facet_grid(.~sex)</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809193252739.png" alt="image-20200809193252739" /></p>
+<h2 id="添加光滑曲线"><a class="markdownIt-Anchor" href="#添加光滑曲线"></a> 添加光滑曲线</h2>
+<p><code>ggplot2</code>包包含了一系列计算统计的函数来加到图形中。这些包括分级数据和计算密度、轮廓和分位数功能等。</p>
+<p>我们可以使用<code>geom_smooth()</code>函数来添加一系列的平滑曲线和和置信区域。相关参数如下：</p>
+<table>
+<thead>
+<tr>
+<th>选项（参数）</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>method=</td>
+<td>使用的平滑函数。允许的值包括<code>lm</code>、<code>glm</code>、<code>smooth</code>、<code>rlm</code>和<code>gam</code>，分别对应线性、广义线性、loess 健壮线性和广义相加模型。<code>smooth</code>是默认值</td>
+</tr>
+<tr>
+<td>formula=</td>
+<td>在光滑函数中使用的公式。例子包括<code>y~x</code>（默认），<code>y~log(x)</code>, <code>y~poly(x,n)</code>表示n次多项式拟合<code>y~ns(x,n)</code>表示一个具有n个自由度的样条拟合</td>
+</tr>
+<tr>
+<td>se</td>
+<td>绘制置信区间（TRUE/FALSE）。默认为TRUE</td>
+</tr>
+<tr>
+<td>level</td>
+<td>使用的置信区间水平（默认为95%）</td>
+</tr>
+<tr>
+<td>fullrange</td>
+<td>指定拟合应涵盖全图（TRUE）或仅仅是数据（FALSE）。 默认为FALSE</td>
+</tr>
+</tbody>
+</table>
+<p>这部分的演示使用<code>car</code>包中的<code>Salaries</code>来进行演示。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></td></tr></table></figure>
+<p>例1，使用带有95%置信区间的非参数光滑曲线（loess）。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary)) + </span><br><span class="line">		geom_smooth() + </span><br><span class="line">		geom_point()</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809194744777.png" alt="image-20200809194744777" /></p>
+<p>例2，二次多项式回归：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary, </span><br><span class="line">                           linetype=sex, shape=sex, color=sex)) + </span><br><span class="line">		geom_smooth(method=lm, formula=y~poly(x,<span class="number">2</span>), </span><br><span class="line">                    se=<span class="literal">FALSE</span>, size=<span class="number">1</span>) + </span><br><span class="line">		geom_point(size=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809195048205.png" alt="image-20200809195048205" /></p>
+<h1 id="二-对于图片的操作"><a class="markdownIt-Anchor" href="#二-对于图片的操作"></a> 二、对于图片的操作</h1>
+<p>这部分主要涉及修改图片的外观</p>
+<p>在R的<code>base</code>绘图函数当中，可以通过<code>par()</code>来修改外观，对于<code>ggplot2</code>并不通用。</p>
+<h2 id="标签"><a class="markdownIt-Anchor" href="#标签"></a> 标签</h2>
+<p>标签指的是对图像上一些地方进行标注，例如添加坐标轴的标题、添加图例的标题、添加图片的标题等等。</p>
+<p>对于标签的添加需要使用到<code>lab()</code>函数，这个函数负责的工作是将目标添加上去，对目标格式的修改，如修改颜色、字体等需要使用到<code>theme()</code>函数。</p>
+<p>Usage:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">labs(</span><br><span class="line">  ...,</span><br><span class="line">  title = waiver(),</span><br><span class="line">  subtitle = waiver(),</span><br><span class="line">  caption = waiver(),</span><br><span class="line">  tag = waiver()</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">xlab(label)</span><br><span class="line"></span><br><span class="line">ylab(label)</span><br><span class="line"></span><br><span class="line">ggtitle(label, subtitle = waiver())</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>The text for the title.</td>
+</tr>
+<tr>
+<td><code>subtitle</code></td>
+<td>The text for the subtitle for the plot which will be displayed below the title.</td>
+</tr>
+<tr>
+<td><code>caption</code></td>
+<td>The text for the caption which will be displayed in the bottom-right of the plot by default.</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>The title of x axis</td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>The title of y axis</td>
+</tr>
+<tr>
+<td><code>tag</code></td>
+<td>The text for the tag label which will be displayed at the top-left of the plot by default.</td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>The title of the respective axis (for <code>xlab()</code> or <code>ylab()</code>) or of the plot (for <code>ggtitle()</code>).</td>
+</tr>
+</tbody>
+</table>
+<p>例：为某个图片添加各种标题：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; ggplot(Salaries, aes(x=rank, y=salary, fill=sex))+</span><br><span class="line">		geom_boxplot()+</span><br><span class="line">		labs(title = <span class="string">&quot;The Main title&quot;</span>, </span><br><span class="line">             subtitle = <span class="string">&quot;The Subtitle&quot;</span>,</span><br><span class="line">             caption = <span class="string">&quot;The Caption&quot;</span>,</span><br><span class="line">             tag = <span class="string">&quot;The tag&quot;</span>,</span><br><span class="line">             x=<span class="string">&quot;X axis&quot;</span>,</span><br><span class="line">             y=<span class="string">&quot;Y axis&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810155620813.png" alt="image-20200810155620813" /></p>
+<h2 id="刻度线及刻度线标签"><a class="markdownIt-Anchor" href="#刻度线及刻度线标签"></a> 刻度线及刻度线标签</h2>
+<p><code>ggplot2</code>包会在创建图时自动创建刻度线、刻度标记标签和坐标轴标签。它们往往看起来不错，但是有时我们需要在更大程度上控制它们的外观。</p>
+<p>控制坐标轴和刻度线外观的函数:</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>选项（参数）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scale_x_continuous()</code>和<code>scale_y_continuous()</code></td>
+<td>breaks=指定刻度标记，labels=指定刻度标记标签，limits=控制要展示的值的范围</td>
+</tr>
+<tr>
+<td><code>scale_x_discrete()</code>和<code>scale_y_discrete()</code></td>
+<td>breaks=对因子的水平进行放置和排序，labels=指定这些水平的标签，limits=表示哪些水平应该展示</td>
+</tr>
+<tr>
+<td><code>coord_flip()</code></td>
+<td>颠倒<em>x</em>轴和<em>y</em>轴</td>
+</tr>
+</tbody>
+</table>
+<p>使用<code>car</code>包中的<code>Salaries</code>来进行演示:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; ggplot(data=Salaries, aes(x=rank, y=salary, fill=sex)) + </span><br><span class="line">		geom_boxplot() + </span><br><span class="line">		scale_x_discrete(breaks=<span class="built_in">c</span>(<span class="string">&quot;AsstProf&quot;</span>, <span class="string">&quot;AssocProf&quot;</span>, <span class="string">&quot;Prof&quot;</span>), </span><br><span class="line">                         labels=<span class="built_in">c</span>(<span class="string">&quot;Assistant\nProfessor&quot;</span>, </span><br><span class="line">                                  <span class="string">&quot;Associate\nProfessor&quot;</span>, </span><br><span class="line">                                  <span class="string">&quot;Full\nProfessor&quot;</span>)) + </span><br><span class="line">		scale_y_continuous(breaks=<span class="built_in">c</span>(<span class="number">50000</span>, <span class="number">100000</span>, <span class="number">150000</span>, <span class="number">200000</span>), </span><br><span class="line">                        labels=<span class="built_in">c</span>(<span class="string">&quot;$50K&quot;</span>, <span class="string">&quot;$100K&quot;</span>, <span class="string">&quot;$150K&quot;</span>, <span class="string">&quot;$200K&quot;</span>)) + </span><br><span class="line">		labs(title=<span class="string">&quot;Faculty Salary by Rank and Sex&quot;</span>, x=<span class="string">&quot;&quot;</span>, y=<span class="string">&quot;&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809195727203.png" alt="image-20200809195727203" /></p>
+<h2 id="图例"><a class="markdownIt-Anchor" href="#图例"></a> 图例</h2>
+<p>图例是指出如何用颜色、形状、尺寸等视觉特性表示数据特征的指南。<code>ggplot2</code>包能自动生成图例，而且在很多时候能够满足我们的需求；但是在其他时候，我们可能要对其进行自定义。图例的<strong>标题</strong>和<strong>位置</strong>是最常用的定制特征。</p>
+<p>当更改图例的标题时，必须考虑图例是否基于颜色、填充、尺寸、形状或它们的组合。</p>
+<ul>
+<li>图例标题的位置由<code>theme()</code>函数中的<code>legend.position</code>选项控制。可能的值包括<code>&quot;left&quot;</code>、<code>&quot;top&quot;</code>、<code>&quot;right&quot;</code>（默认值）和<code>&quot;bottom&quot;</code>。
+<ul>
+<li>如果想删除图例，可以使用<code>legend.position=&quot;none&quot;</code></li>
+</ul>
+</li>
+</ul>
+<p>这部分使用<code>car</code>包的<code>Salaries</code>数据集进行演示：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(car)</span><br><span class="line">载入需要的程辑包：carData</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(ggplot2)</span><br><span class="line">&gt; ggplot(data=Salaries, aes(x=rank, y=salary, fill=sex)) + </span><br><span class="line">		geom_boxplot() + </span><br><span class="line">		scale_x_discrete(breaks=<span class="built_in">c</span>(<span class="string">&quot;AsstProf&quot;</span>, <span class="string">&quot;AssocProf&quot;</span>, <span class="string">&quot;Prof&quot;</span>),</span><br><span class="line">                         labels=<span class="built_in">c</span>(<span class="string">&quot;Assistant\nProfessor&quot;</span>,<span class="string">&quot;Associate\nProfessor&quot;</span>, </span><br><span class="line">                                  <span class="string">&quot;Full\nProfessor&quot;</span>)) + </span><br><span class="line">		scale_y_continuous(breaks=<span class="built_in">c</span>(<span class="number">50000</span>, <span class="number">100000</span>, <span class="number">150000</span>, <span class="number">200000</span>), </span><br><span class="line">                           labels=<span class="built_in">c</span>(<span class="string">&quot;$50K&quot;</span>, <span class="string">&quot;$100K&quot;</span>, <span class="string">&quot;$150K&quot;</span>, <span class="string">&quot;$200K&quot;</span>)) + </span><br><span class="line">		labs(title=<span class="string">&quot;Faculty Salary by Rank and Gender&quot;</span>, </span><br><span class="line">             x=<span class="string">&quot;&quot;</span>, y=<span class="string">&quot;&quot;</span>, fill=<span class="string">&quot;Gender&quot;</span>) + </span><br><span class="line">		<span class="comment"># 图例的左上角是距离左侧边缘10%和底部边缘80%的部分</span></span><br><span class="line">		theme(legend.position=<span class="built_in">c</span>(<span class="number">.1</span>,<span class="number">.8</span>))</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809213743609.png" alt="image-20200809213743609" /></p>
+<h2 id="标尺"><a class="markdownIt-Anchor" href="#标尺"></a> 标尺</h2>
+<h3 id="1-标尺添加"><a class="markdownIt-Anchor" href="#1-标尺添加"></a> 1. 标尺添加</h3>
+<p><code>ggplot2</code>包使用标尺把数据空间的观察值映射到可视化的空间中。标尺既可以应用到连续的变量，也可以应用到离散的变量</p>
+<p>例1，使用内置的<code>mtcars</code>数据集进行演示：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; head(mtcars)</span><br><span class="line">                   mpg cyl disp  hp drat    wt  qsec vs am gear carb</span><br><span class="line">Mazda RX4         <span class="number">21.0</span>   <span class="number">6</span>  <span class="number">160</span> <span class="number">110</span> <span class="number">3.90</span> <span class="number">2.620</span> <span class="number">16.46</span>  <span class="number">0</span>  <span class="number">1</span>    <span class="number">4</span>    <span class="number">4</span></span><br><span class="line">Mazda RX4 Wag     <span class="number">21.0</span>   <span class="number">6</span>  <span class="number">160</span> <span class="number">110</span> <span class="number">3.90</span> <span class="number">2.875</span> <span class="number">17.02</span>  <span class="number">0</span>  <span class="number">1</span>    <span class="number">4</span>    <span class="number">4</span></span><br><span class="line">Datsun <span class="number">710</span>        <span class="number">22.8</span>   <span class="number">4</span>  <span class="number">108</span>  <span class="number">93</span> <span class="number">3.85</span> <span class="number">2.320</span> <span class="number">18.61</span>  <span class="number">1</span>  <span class="number">1</span>    <span class="number">4</span>    <span class="number">1</span></span><br><span class="line">Hornet <span class="number">4</span> Drive    <span class="number">21.4</span>   <span class="number">6</span>  <span class="number">258</span> <span class="number">110</span> <span class="number">3.08</span> <span class="number">3.215</span> <span class="number">19.44</span>  <span class="number">1</span>  <span class="number">0</span>    <span class="number">3</span>    <span class="number">1</span></span><br><span class="line">Hornet Sportabout <span class="number">18.7</span>   <span class="number">8</span>  <span class="number">360</span> <span class="number">175</span> <span class="number">3.15</span> <span class="number">3.440</span> <span class="number">17.02</span>  <span class="number">0</span>  <span class="number">0</span>    <span class="number">3</span>    <span class="number">2</span></span><br><span class="line">Valiant           <span class="number">18.1</span>   <span class="number">6</span>  <span class="number">225</span> <span class="number">105</span> <span class="number">2.76</span> <span class="number">3.460</span> <span class="number">20.22</span>  <span class="number">1</span>  <span class="number">0</span>    <span class="number">3</span>    <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; ggplot(mtcars, aes(x=wt, y=mpg, size=disp)) + </span><br><span class="line">		geom_point(shape=<span class="number">21</span>, color=<span class="string">&quot;black&quot;</span>, fill=<span class="string">&quot;cornsilk&quot;</span>) + </span><br><span class="line">		labs(x=<span class="string">&quot;Weight&quot;</span>, y=<span class="string">&quot;Miles Per Gallon&quot;</span>, </span><br><span class="line">             title=<span class="string">&quot;Bubble Chart&quot;</span>, size=<span class="string">&quot;Engine\nDisplacement&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214120500.png" alt="image-20200809214120500" /></p>
+<ul>
+<li><code>aes()</code>函数的参数<code>size=disp</code>生成连续型变量<code>disp</code>（发动机排量）的标尺，并使用它来控制点的尺寸</li>
+</ul>
+<h3 id="2-将标尺与更多因素关联"><a class="markdownIt-Anchor" href="#2-将标尺与更多因素关联"></a> 2. 将标尺与更多因素关联</h3>
+<p>例2，使用标尺将带有因子水平的视觉线索（如颜色、形状、线条类型、尺寸和透明度）关联起来，使用<code>car</code>包的<code>Salaries</code>数据集进行演示：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(car)</span><br><span class="line">载入需要的程辑包：carData</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary, color=rank)) + </span><br><span class="line">		scale_color_manual(values=<span class="built_in">c</span>(<span class="string">&quot;orange&quot;</span>, <span class="string">&quot;olivedrab&quot;</span>, <span class="string">&quot;navy&quot;</span>)) + </span><br><span class="line">		geom_point(size=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214351844.png" alt="image-20200809214351844" /></p>
+<p>有一些预设好的颜色集，通用与各种场合：</p>
+<p>可以通过<code>scale_color_brewer()</code>和<code>scale_fill_brewer()</code>函数来预先指定分得清的颜色集。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary, color=rank)) + </span><br><span class="line">		scale_color_brewer(palette=<span class="string">&quot;Set1&quot;</span>) + geom_point(size=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>其它的颜色集可以通过<code>RColorBrewer</code>包进行可视化选择：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(RColorBrewer) </span><br><span class="line">&gt; display.brewer.all()</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200809214910619.png" alt="image-20200809214910619" /></p>
+<p>关于颜色相关的函数使用方法如下，通过指定<code>palette</code>来选取预设颜色集：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">scale_colour_brewer(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = <span class="number">1</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;colour&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_fill_brewer(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = <span class="number">1</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;fill&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_colour_distiller(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = -<span class="number">1</span>,</span><br><span class="line">  values = <span class="literal">NULL</span>,</span><br><span class="line">  space = <span class="string">&quot;Lab&quot;</span>,</span><br><span class="line">  na.value = <span class="string">&quot;grey50&quot;</span>,</span><br><span class="line">  guide = <span class="string">&quot;colourbar&quot;</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;colour&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_fill_distiller(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = -<span class="number">1</span>,</span><br><span class="line">  values = <span class="literal">NULL</span>,</span><br><span class="line">  space = <span class="string">&quot;Lab&quot;</span>,</span><br><span class="line">  na.value = <span class="string">&quot;grey50&quot;</span>,</span><br><span class="line">  guide = <span class="string">&quot;colourbar&quot;</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;fill&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_colour_fermenter(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = -<span class="number">1</span>,</span><br><span class="line">  na.value = <span class="string">&quot;grey50&quot;</span>,</span><br><span class="line">  guide = <span class="string">&quot;coloursteps&quot;</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;colour&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">scale_fill_fermenter(</span><br><span class="line">  ...,</span><br><span class="line">  type = <span class="string">&quot;seq&quot;</span>,</span><br><span class="line">  palette = <span class="number">1</span>,</span><br><span class="line">  direction = -<span class="number">1</span>,</span><br><span class="line">  na.value = <span class="string">&quot;grey50&quot;</span>,</span><br><span class="line">  guide = <span class="string">&quot;coloursteps&quot;</span>,</span><br><span class="line">  aesthetics = <span class="string">&quot;fill&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="theme"><a class="markdownIt-Anchor" href="#theme"></a> theme()</h2>
+<p><code>theme()</code>函数中的选项可以让我们调整字体、背景、颜色和网格线等。主题可以使用一次，也可以保存起来应用到多个图中。</p>
+<p><code>theme()</code>函数并不负责将某些元素添加到图像当中，例如它并不为图像添加标题。<code>theme()</code>函数制定了某些元素，例如坐标轴标题，字体，背景等元素该如何添加到图像当中去，即<u>规定这些元素的格式（属性）</u>。</p>
+<h3 id="1-相关参数"><a class="markdownIt-Anchor" href="#1-相关参数"></a> 1. 相关参数</h3>
+<p><code>theme()</code>函数的相关参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>设置内容</th>
+<th>继承自</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>line</td>
+<td>所有线属性</td>
+<td></td>
+</tr>
+<tr>
+<td>rect</td>
+<td>所有矩形区域属性</td>
+<td></td>
+</tr>
+<tr>
+<td>text</td>
+<td>所有文本相关属性</td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td>所有标题属性</td>
+<td></td>
+</tr>
+<tr>
+<td>axis.title</td>
+<td>坐标轴标题</td>
+<td>text</td>
+</tr>
+<tr>
+<td>axis.title.x</td>
+<td>x轴属性</td>
+<td>axis.title</td>
+</tr>
+<tr>
+<td>axis.title.y</td>
+<td>y轴属性</td>
+<td>axis.title</td>
+</tr>
+<tr>
+<td>axis.text</td>
+<td>坐标轴刻度标签属性</td>
+<td>text</td>
+</tr>
+<tr>
+<td>axis.text.x</td>
+<td>属性和继承和前面类似，不再重复</td>
+<td></td>
+</tr>
+<tr>
+<td>axis.text.y</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axis.ticks</td>
+<td>坐标轴刻度线</td>
+<td>line</td>
+</tr>
+<tr>
+<td>axis.ticks.x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axis.ticks.y</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axis.ticks.length</td>
+<td>刻度线长度</td>
+<td></td>
+</tr>
+<tr>
+<td>axis.ticks.margin</td>
+<td>刻度线和刻度标签之间的间距</td>
+<td></td>
+</tr>
+<tr>
+<td>axis.line</td>
+<td>坐标轴线</td>
+<td>line</td>
+</tr>
+<tr>
+<td>axis.line.x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>axis.line.y</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>legend.background</td>
+<td>图例背景</td>
+<td>rect</td>
+</tr>
+<tr>
+<td>legend.margin</td>
+<td>图例边界</td>
+<td></td>
+</tr>
+<tr>
+<td>legend.key</td>
+<td>图例符号</td>
+<td></td>
+</tr>
+<tr>
+<td>legend.key.size</td>
+<td>图例符号大小</td>
+<td></td>
+</tr>
+<tr>
+<td>legend.key.height</td>
+<td>图例符号高度</td>
+<td></td>
+</tr>
+<tr>
+<td>legend.key.width</td>
+<td>图例符号宽度</td>
+<td></td>
+</tr>
+<tr>
+<td>legend.text</td>
+<td>图例文字标签</td>
+<td></td>
+</tr>
+<tr>
+<td>legend.text.align</td>
+<td>图例文字标签对齐方式</td>
+<td>0为左齐，1为右齐</td>
+</tr>
+<tr>
+<td>legend.title</td>
+<td>图例标题</td>
+<td>text</td>
+</tr>
+<tr>
+<td>legend.title.align</td>
+<td>图例标题对齐方式</td>
+<td></td>
+</tr>
+<tr>
+<td>legend.position</td>
+<td>图例位置</td>
+<td>left, right, bottom, top, 两数字向量</td>
+</tr>
+<tr>
+<td>legend.direction</td>
+<td>图例排列方向</td>
+<td>“horizontal” or “vertical”</td>
+</tr>
+<tr>
+<td>legend.justification</td>
+<td>居中方式</td>
+<td>center或两数字向量</td>
+</tr>
+<tr>
+<td>legend.box</td>
+<td>多图例的排列方式</td>
+<td>“horizontal” or “vertical”</td>
+</tr>
+<tr>
+<td>legend.box.just</td>
+<td>多图例居中方式</td>
+<td></td>
+</tr>
+<tr>
+<td>panel.background</td>
+<td>绘图区背景</td>
+<td>rect</td>
+</tr>
+<tr>
+<td>panel.border</td>
+<td>绘图区边框</td>
+<td>rect</td>
+</tr>
+<tr>
+<td>panel.margin</td>
+<td>分面绘图区之间的边距</td>
+<td></td>
+</tr>
+<tr>
+<td>panel.grid</td>
+<td>绘图区网格线</td>
+<td>line</td>
+</tr>
+<tr>
+<td>panel.grid.major</td>
+<td>主网格线</td>
+<td></td>
+</tr>
+<tr>
+<td>panel.grid.minor</td>
+<td>次网格线</td>
+<td></td>
+</tr>
+<tr>
+<td>panel.grid.major.x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>panel.grid.major.y</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>panel.grid.minor.x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>panel.grid.minor.y</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>plot.background</td>
+<td>整个图形的背景</td>
+<td></td>
+</tr>
+<tr>
+<td>plot.title</td>
+<td>图形标题</td>
+<td></td>
+</tr>
+<tr>
+<td>plot.margin</td>
+<td>图形边距</td>
+<td>top, right, bottom, left</td>
+</tr>
+<tr>
+<td>strip.background</td>
+<td>分面标签背景</td>
+<td>rect</td>
+</tr>
+<tr>
+<td>strip.text</td>
+<td>分面标签文本</td>
+<td>text</td>
+</tr>
+<tr>
+<td>strip.text.x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>strip.text.y</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-相关函数"><a class="markdownIt-Anchor" href="#2-相关函数"></a> 2. 相关函数</h3>
+<h4 id="margin"><a class="markdownIt-Anchor" href="#margin"></a> margin()</h4>
+<p>Usage:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin(t = <span class="number">0</span>, r = <span class="number">0</span>, b = <span class="number">0</span>, l = <span class="number">0</span>, unit = <span class="string">&quot;pt&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="element_"><a class="markdownIt-Anchor" href="#element_"></a> element_</h4>
+<p>与<code>theme()</code>函数相关的函数有：<code>element_line</code>，<code>element_rect</code>，<code>element_text</code>和<code>element_blank</code></p>
+<p>对各个函数的说明：</p>
+<blockquote>
+<p>In conjunction with the theme system, the element_ functions specify the display of how non-data components of the plot are drawn.</p>
+<ol>
+<li><code>element_blank</code>: draws nothing, and assigns no space.</li>
+<li><code>element_rect</code>: borders and backgrounds.</li>
+<li><code>element_line</code>: lines.</li>
+<li><code>element_text</code>: text.</li>
+</ol>
+</blockquote>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">margin(t = <span class="number">0</span>, r = <span class="number">0</span>, b = <span class="number">0</span>, l = <span class="number">0</span>, unit = <span class="string">&quot;pt&quot;</span>)</span><br><span class="line"></span><br><span class="line">element_blank()</span><br><span class="line"></span><br><span class="line">element_rect(</span><br><span class="line">  fill = <span class="literal">NULL</span>,</span><br><span class="line">  colour = <span class="literal">NULL</span>,</span><br><span class="line">  size = <span class="literal">NULL</span>,</span><br><span class="line">  linetype = <span class="literal">NULL</span>,</span><br><span class="line">  color = <span class="literal">NULL</span>,</span><br><span class="line">  inherit.blank = <span class="literal">FALSE</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">element_line(</span><br><span class="line">  colour = <span class="literal">NULL</span>,</span><br><span class="line">  size = <span class="literal">NULL</span>,</span><br><span class="line">  linetype = <span class="literal">NULL</span>,</span><br><span class="line">  lineend = <span class="literal">NULL</span>,</span><br><span class="line">  color = <span class="literal">NULL</span>,</span><br><span class="line">  arrow = <span class="literal">NULL</span>,</span><br><span class="line">  inherit.blank = <span class="literal">FALSE</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">element_text(</span><br><span class="line">  family = <span class="literal">NULL</span>,</span><br><span class="line">  face = <span class="literal">NULL</span>,</span><br><span class="line">  colour = <span class="literal">NULL</span>,</span><br><span class="line">  size = <span class="literal">NULL</span>,</span><br><span class="line">  hjust = <span class="literal">NULL</span>,</span><br><span class="line">  vjust = <span class="literal">NULL</span>,</span><br><span class="line">  angle = <span class="literal">NULL</span>,</span><br><span class="line">  lineheight = <span class="literal">NULL</span>,</span><br><span class="line">  color = <span class="literal">NULL</span>,</span><br><span class="line">  margin = <span class="literal">NULL</span>,</span><br><span class="line">  debug = <span class="literal">NULL</span>,</span><br><span class="line">  inherit.blank = <span class="literal">FALSE</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">rel(x)</span><br></pre></td></tr></table></figure>
+<p>相关参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>t, r, b, l</code></td>
+<td>Dimensions of each margin. (To remember order, think trouble).</td>
+</tr>
+<tr>
+<td><code>unit</code></td>
+<td>Default units of dimensions. Defaults to “pt” so it can be most easily scaled with the text.</td>
+</tr>
+<tr>
+<td><code>fill</code></td>
+<td>Fill colour.</td>
+</tr>
+<tr>
+<td><code>colour, color</code></td>
+<td>Line/border colour. Color is an alias for colour.</td>
+</tr>
+<tr>
+<td><code>linetype</code></td>
+<td>Line type. An integer (0:8), a name (blank, solid, dashed, dotted, dotdash, longdash, twodash), or a string with an even number (up to eight) of hexadecimal digits which give the lengths in consecutive positions in the string.</td>
+</tr>
+<tr>
+<td><code>inherit.blank</code></td>
+<td>Should this element inherit the existence of an <code>element_blank</code> among its parents? If TRUE the existence of a blank element among its parents will cause this element to be blank as well. If FALSE any blank parent element will be ignored when calculating final element state.</td>
+</tr>
+<tr>
+<td><code>lineend</code></td>
+<td>Line end Line end style (round, butt, square)</td>
+</tr>
+<tr>
+<td><code>arrow</code></td>
+<td>Arrow specification, as created by <code>grid::arrow()</code></td>
+</tr>
+<tr>
+<td><code>family</code></td>
+<td>Font family</td>
+</tr>
+<tr>
+<td><code>face</code></td>
+<td>Font face (“plain”, “italic”, “bold”, “bold.italic”)</td>
+</tr>
+<tr>
+<td><code>hjust</code></td>
+<td>Horizontal justification (in [0, 1])</td>
+</tr>
+<tr>
+<td><code>vjust</code></td>
+<td>Vertical justification (in [0, 1])</td>
+</tr>
+<tr>
+<td><code>angle</code></td>
+<td>Angle (in [0, 360])</td>
+</tr>
+<tr>
+<td><code>margin</code></td>
+<td>Margins around the text. See <code>margin()</code> for more details. When creating a theme, the margins should be placed on the side of the text facing towards the center of the plot.</td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>If TRUE, aids visual debugging by drawing a solid rectangle behind the complete text area, and a point where each label is anchored.</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>A single number specifying size relative to parent element.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="gridarrow"><a class="markdownIt-Anchor" href="#gridarrow"></a> grid::arrow()</h4>
+<p>Produces a description of what arrows to add to a line. The result can be passed to a function that draws a line, e.g., <code>grid.lines</code>.</p>
+<p>Usage:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arrow(angle = <span class="number">30</span>, <span class="built_in">length</span> = unit(<span class="number">0.25</span>, <span class="string">&quot;inches&quot;</span>),</span><br><span class="line">      ends = <span class="string">&quot;last&quot;</span>, type = <span class="string">&quot;open&quot;</span>)</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>angle</code></td>
+<td>The angle of the arrow head in degrees (smaller numbers produce narrower, pointier arrows). Essentially describes the width of the arrow head.</td>
+</tr>
+<tr>
+<td><code>length</code></td>
+<td>A unit specifying the length of the arrow head (from tip to base).</td>
+</tr>
+<tr>
+<td><code>ends</code></td>
+<td>One of “last”, “first”, or “both”, indicating which ends of the line to draw arrow heads.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>One of “open” or “closed” indicating whether the arrow head should be a closed triangle.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-演示实例"><a class="markdownIt-Anchor" href="#3-演示实例"></a> 3. 演示实例</h3>
+<p>具体的函数使用方法如下，基本上来说就是<code>ggplot(...) + theme(...)</code>的方式：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">plot &lt;- ggplot(mpg, aes(displ, hwy)) + geom_point()</span><br><span class="line"></span><br><span class="line">plot + theme(</span><br><span class="line">  panel.background = element_blank(),</span><br><span class="line">  axis.text = element_blank()</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">plot + theme(</span><br><span class="line">  axis.text = element_text(colour = <span class="string">&quot;red&quot;</span>, size = rel(<span class="number">1.5</span>))</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">plot + theme(</span><br><span class="line">  axis.line = element_line(arrow = arrow())</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">plot + theme(</span><br><span class="line">  panel.background = element_rect(fill = <span class="string">&quot;white&quot;</span>),</span><br><span class="line">  plot.margin = margin(<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="string">&quot;cm&quot;</span>),</span><br><span class="line">  plot.background = element_rect(</span><br><span class="line">    fill = <span class="string">&quot;grey90&quot;</span>,</span><br><span class="line">    colour = <span class="string">&quot;black&quot;</span>,</span><br><span class="line">    size = <span class="number">1</span></span><br><span class="line">  )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>这部分的演示使用<code>car</code>包的<code>Salaries</code>数据集来进行：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(car)</span><br><span class="line">载入需要的程辑包：carData</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; mytheme &lt;- theme(plot.title=element_text(face=<span class="string">&quot;bold.italic&quot;</span>, </span><br><span class="line">                                          size=<span class="string">&quot;14&quot;</span>, color=<span class="string">&quot;brown&quot;</span>), </span><br><span class="line">                  axis.title=element_text(face=<span class="string">&quot;bold.italic&quot;</span>, </span><br><span class="line">                                          size=<span class="number">10</span>, color=<span class="string">&quot;brown&quot;</span>), </span><br><span class="line">                  axis.text=element_text(face=<span class="string">&quot;bold&quot;</span>, size=<span class="number">9</span>, </span><br><span class="line">                                         color=<span class="string">&quot;darkblue&quot;</span>), </span><br><span class="line">                  panel.background=element_rect(fill=<span class="string">&quot;white&quot;</span>, </span><br><span class="line">                                                color=<span class="string">&quot;darkblue&quot;</span>), </span><br><span class="line">                  panel.grid.major.y=element_line(color=<span class="string">&quot;grey&quot;</span>, </span><br><span class="line">                                                  linetype=<span class="number">1</span>), </span><br><span class="line">                  panel.grid.minor.y=element_line(color=<span class="string">&quot;grey&quot;</span>, </span><br><span class="line">                                                  linetype=<span class="number">2</span>), </span><br><span class="line">                  panel.grid.minor.x=element_blank(), </span><br><span class="line">                  legend.position=<span class="string">&quot;top&quot;</span>) </span><br><span class="line">&gt; ggplot(Salaries, aes(x=rank, y=salary, fill=sex)) + </span><br><span class="line">		geom_boxplot() + </span><br><span class="line">		labs(title=<span class="string">&quot;Salary by Rank and Sex&quot;</span>, x=<span class="string">&quot;Rank&quot;</span>, y=<span class="string">&quot;Salary&quot;</span>) + </span><br><span class="line">		mytheme</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810152825990.png" alt="image-20200810152825990" /></p>
+<h2 id="图像的组合多重图"><a class="markdownIt-Anchor" href="#图像的组合多重图"></a> 图像的组合：多重图</h2>
+<p>我们使用图形参数<code>mfrow</code>和基本函数<code>layout()</code>把两个或更多的基本图放到单个图形中。同样，这种方法在<code>ggplot2</code>包中不适用。将多个<code>ggplot2</code>包的图形放到单个图形中最简单的方式是使用<code>gridExtra</code>包中的<code>grid.arrange()</code>函数。</p>
+<p>Usage：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">arrangeGrob(..., grobs = <span class="built_in">list</span>(...), </span><br><span class="line">            layout_matrix, vp = <span class="literal">NULL</span>,</span><br><span class="line">            name = <span class="string">&quot;arrange&quot;</span>, as.table = <span class="literal">TRUE</span>, </span><br><span class="line">            respect = <span class="literal">FALSE</span>, clip = <span class="string">&quot;off&quot;</span>,</span><br><span class="line">            nrow = <span class="literal">NULL</span>, ncol = <span class="literal">NULL</span>, widths = <span class="literal">NULL</span>, </span><br><span class="line">            heights = <span class="literal">NULL</span>, top = <span class="literal">NULL</span>,</span><br><span class="line">            bottom = <span class="literal">NULL</span>, left = <span class="literal">NULL</span>, </span><br><span class="line">            right = <span class="literal">NULL</span>, padding = unit(<span class="number">0.5</span>, <span class="string">&quot;line&quot;</span>))</span><br><span class="line"></span><br><span class="line">grid.arrange(..., newpage = <span class="literal">TRUE</span>)</span><br><span class="line"></span><br><span class="line">marrangeGrob(grobs, ..., ncol, nrow, </span><br><span class="line">             layout_matrix = matrix(<span class="built_in">seq_len</span>(nrow * ncol), </span><br><span class="line">             nrow = nrow, ncol = ncol), </span><br><span class="line">             top = <span class="built_in">quote</span>(paste(<span class="string">&quot;page&quot;</span>, g, <span class="string">&quot;of&quot;</span>, npages)))</span><br></pre></td></tr></table></figure>
+<p>这部分的演示使用<code>car</code>包中的<code>Salaries</code>数据集：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(car)</span><br><span class="line">&gt; head(Salaries)</span><br><span class="line">       rank discipline yrs.since.phd yrs.service  sex salary</span><br><span class="line">1      Prof          B            <span class="number">19</span>          <span class="number">18</span> Male <span class="number">139750</span></span><br><span class="line">2      Prof          B            <span class="number">20</span>          <span class="number">16</span> Male <span class="number">173200</span></span><br><span class="line">3  AsstProf          B             <span class="number">4</span>           <span class="number">3</span> Male  <span class="number">79750</span></span><br><span class="line">4      Prof          B            <span class="number">45</span>          <span class="number">39</span> Male <span class="number">115000</span></span><br><span class="line">5      Prof          B            <span class="number">40</span>          <span class="number">41</span> Male <span class="number">141500</span></span><br><span class="line">6 AssocProf          B             <span class="number">6</span>           <span class="number">6</span> Male  <span class="number">97000</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 绘制三幅图像，并保存</span></span><br><span class="line">&gt; library(ggplot2) </span><br><span class="line">&gt; p1 &lt;- ggplot(data=Salaries, aes(x=rank)) + geom_bar() </span><br><span class="line">&gt; p2 &lt;- ggplot(data=Salaries, aes(x=sex)) + geom_bar() </span><br><span class="line">&gt; p3 &lt;- ggplot(data=Salaries, aes(x=yrs.since.phd, y=salary)) + geom_point() </span><br><span class="line"></span><br><span class="line"><span class="comment"># 将三幅图像合并</span></span><br><span class="line">&gt; library(gridExtra) </span><br><span class="line">&gt; grid.arrange(p1, p2, p3, ncol=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/ggplot2/image-20200810162036196.png" alt="image-20200810162036196" /></p>
+<h2 id="保存图像"><a class="markdownIt-Anchor" href="#保存图像"></a> 保存图像</h2>
+<p>可以使用R内置的保存方式对图像就进行保存，对于<code>ggplot2</code>创建的图形，可以使用<code>ggsave</code>实现更好地保存。</p>
+<p>Usage：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ggsave(</span><br><span class="line">  filename,</span><br><span class="line">  plot = last_plot(),</span><br><span class="line">  device = <span class="literal">NULL</span>,</span><br><span class="line">  path = <span class="literal">NULL</span>,</span><br><span class="line">  scale = <span class="number">1</span>,</span><br><span class="line">  width = <span class="literal">NA</span>,</span><br><span class="line">  height = <span class="literal">NA</span>,</span><br><span class="line">  units = <span class="built_in">c</span>(<span class="string">&quot;in&quot;</span>, <span class="string">&quot;cm&quot;</span>, <span class="string">&quot;mm&quot;</span>),</span><br><span class="line">  dpi = <span class="number">300</span>,</span><br><span class="line">  limitsize = <span class="literal">TRUE</span>,</span><br><span class="line">  ...</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>File name to create on disk.</td>
+</tr>
+<tr>
+<td>plot</td>
+<td>Plot to save, defaults to last plot displayed.</td>
+</tr>
+<tr>
+<td>device</td>
+<td>Device to use. Can either be a device function (e.g. <code>png()</code>), or one of “eps”, “ps”, “tex” (pictex), “pdf”, “jpeg”, “tiff”, “png”, “bmp”, “svg” or “wmf” (windows only).</td>
+</tr>
+<tr>
+<td>path</td>
+<td>Path of the directory to save plot to: path and filename are combined to create the fully qualified file name. Defaults to the working directory.</td>
+</tr>
+<tr>
+<td>scale</td>
+<td>Multiplicative scaling factor.</td>
+</tr>
+<tr>
+<td>width, height, units</td>
+<td>Plot size in units (“in”, “cm”, or “mm”). If not supplied, uses the size of current graphics device.</td>
+</tr>
+<tr>
+<td>dpi</td>
+<td>Plot resolution. Also accepts a string input: “retina” (320), “print” (300), or “screen” (72). Applies only to raster output types.</td>
+</tr>
+<tr>
+<td>limitsize</td>
+<td>When TRUE (the default), ggsave will not save images larger than 50x50 inches, to prevent the common error of specifying dimensions in pixels.</td>
+</tr>
+</tbody>
+</table>
+<p>例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">myplot &lt;- ggplot(data=mtcars, aes(x=mpg)) + geom_histogram() </span><br><span class="line">ggsave(file=<span class="string">&quot;mygraph.png&quot;</span>, plot=myplot, width=<span class="number">5</span>, height=<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p>在当前路径下将myplot保存为名为mygraph.png的5英寸×4英寸（12.7厘米×10.2厘米）PNG格式的图片。我们可以通过设定文件扩展名为ps、tex、jpeg、pdf、tiff、png、bmp、svg或wmf来保存为不同的格式。wmf文件仅限在装有Windows系统的计算机中保存。</p>
+<p>如果忽略plot=选项，最近创建的图形会被保存。如：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggplot(data=mtcars, aes(x=mpg)) + geom_histogram() </span><br><span class="line">ggsave(file=<span class="string">&quot;mygraph.pdf&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>其他示例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Not run: </span></span><br><span class="line">ggplot(mtcars, aes(mpg, wt)) + geom_point()</span><br><span class="line"></span><br><span class="line">ggsave(<span class="string">&quot;mtcars.pdf&quot;</span>)</span><br><span class="line">ggsave(<span class="string">&quot;mtcars.png&quot;</span>)</span><br><span class="line"></span><br><span class="line">ggsave(<span class="string">&quot;mtcars.pdf&quot;</span>, width = <span class="number">4</span>, height = <span class="number">4</span>)</span><br><span class="line">ggsave(<span class="string">&quot;mtcars.pdf&quot;</span>, width = <span class="number">20</span>, height = <span class="number">20</span>, units = <span class="string">&quot;cm&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># delete files with base::unlink()</span></span><br><span class="line">unlink(<span class="string">&quot;mtcars.pdf&quot;</span>)</span><br><span class="line">unlink(<span class="string">&quot;mtcars.png&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># specify device when saving to a file with unknown extension</span></span><br><span class="line"><span class="comment"># (for example a server supplied temporary file)</span></span><br><span class="line">file &lt;- tempfile()</span><br><span class="line">ggsave(file, device = <span class="string">&quot;pdf&quot;</span>)</span><br><span class="line">unlink(file)</span><br><span class="line"></span><br><span class="line"><span class="comment"># save plot to file without using ggsave</span></span><br><span class="line">p &lt;- ggplot(mtcars, aes(mpg, wt)) + geom_point()</span><br><span class="line">png(<span class="string">&quot;mtcars.png&quot;</span>)</span><br><span class="line">print(p)</span><br><span class="line">dev.off()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## End(Not run)</span></span><br></pre></td></tr></table></figure>
+
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-ggplot2%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D"><span class="nav-text"> 一、ggplot2语法介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E5%87%A0%E4%BD%95%E5%87%BD%E6%95%B0%E6%8C%87%E5%AE%9A%E5%9B%BE%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-text"> 用几何函数指定图的类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E7%BB%84"><span class="nav-text"> 数据分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%BB%E9%9D%A2"><span class="nav-text"> 刻面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%89%E6%BB%91%E6%9B%B2%E7%BA%BF"><span class="nav-text"> 添加光滑曲线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E5%AF%B9%E4%BA%8E%E5%9B%BE%E7%89%87%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-text"> 二、对于图片的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE"><span class="nav-text"> 标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%BB%E5%BA%A6%E7%BA%BF%E5%8F%8A%E5%88%BB%E5%BA%A6%E7%BA%BF%E6%A0%87%E7%AD%BE"><span class="nav-text"> 刻度线及刻度线标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E4%BE%8B"><span class="nav-text"> 图例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%B0%BA"><span class="nav-text"> 标尺</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#theme"><span class="nav-text"> theme()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E7%9A%84%E7%BB%84%E5%90%88%E5%A4%9A%E9%87%8D%E5%9B%BE"><span class="nav-text"> 图像的组合：多重图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E5%9B%BE%E5%83%8F"><span class="nav-text"> 保存图像</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">希望能活的久一点</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">182</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:zhenyumi@foxmail.com" title="E-Mail → mailto:zhenyumi@foxmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2279880515" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2279880515" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/ParaDogs_lazy" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;ParaDogs_lazy" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/Furemu" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;Furemu" rel="noopener" target="_blank"><i class="fab fa-telegram fa-fw"></i>Telegram</a>
+      </span>
+  </div>
+
+
+<!-- none-select-br -->
+
+<p></p>
+
+<!-- hitokoto -->
+
+<div class="hitokoto-title">
+	<i class="fa fa-paragraph"></i>
+	<b>一言</b>
+</div>
+
+<div id="hitokoto">获取中OvO</div>
+<i id="hitofrom">获取中OvO</i>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+  fetch('https://v1.hitokoto.cn/?c=i')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + data.hitokoto;
+      var hitofrom = document.getElementById('hitofrom');
+      hitofrom.innerText = "——" + data.from + '\xa0'; 
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">2.7m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">41:36</span>
+</div><br /> <!-- 换行 -->
+
+<div class="translate-style">
+繁/简：<a id="translateLink" href="javascript:translatePage();">繁体
+</a>
+</div>
+<script type="text/javascript" src="/js/tw_cn.js"></script>
+<script type="text/javascript">
+var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+var cookieDomain = "https://tding.top/"; //Cookie地址, 一定要设定, 通常为你的网址
+var msgToTraditionalChinese = "繁体"; //此处可以更改为你想要显示的文字
+var msgToSimplifiedChinese = "简体"; //同上，但两处均不建议更改
+var translateButtonId = "translateLink"; //默认互换id
+translateInitilization();
+</script>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
+    }
+setInterval("createtime()",250);
+</script>
+
+<br /> <!-- 换行 -->
+
+<!--busuanzi计数-->
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+  <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css">
+
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://zhenyumi.github.io/Mdsave/07-R-ggplot2.html',]
+      });
+      });
+  </script>
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'ErV27FWAFsY2HDPhLVjeIcfR-MdYXbMMI',
+      appKey     : 'YyUrjqWLM53k8C1tPcKNaQFN',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>

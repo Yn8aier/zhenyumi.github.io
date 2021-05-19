@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|14px:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#000000","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
+  </script>
+
+  <meta name="description" content="Neural activity and brain development">
+<meta property="og:type" content="website">
+<meta property="og:title" content="L4 Modification of neural circuits as a result of experience">
+<meta property="og:url" content="https://zhenyumi.github.io/Mdsave/L4-Modification-of-neural-circuits-as-a-result-of-experience.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="Neural activity and brain development">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129123427856.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129134159990.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129134500495.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129134832021.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129160625049.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129160625049.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129160902961.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129161010357.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129161104670.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129161415097.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129161453692.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129161900915.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129162320054.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129163547374.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210305112245649.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129164044157.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129164152315.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210305110510553.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210305111205303.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210305111326422.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129164250626.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129164331688.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129164723898.png">
+<meta property="article:published_time" content="2021-03-05T08:23:06.000Z">
+<meta property="article:modified_time" content="2021-03-05T08:23:06.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="Neurobiology">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129123427856.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/Mdsave/L4-Modification-of-neural-circuits-as-a-result-of-experience.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>L4 Modification of neural circuits as a result of experience | 鹘横海
+</title>
+  
+
+
+  <script data-pjax>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?aa95e0eb65e5b58f6500e4de221c0f67";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.  Today is another day.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">23</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">23</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">182</span></a>
+
+  </li>
+        <li class="menu-item menu-item-留言板">
+
+    <a href="/%E7%95%99%E8%A8%80%E6%9D%BF/" rel="section"><i class="fas fa-chalkboard-teacher fa-fw"></i>留言板</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">L4 Modification of neural circuits as a result of experience
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <p>The rich diversity of personalities, abilities, and behaviors generated by individual human brains derives from both <strong>genetic</strong> and <strong>environmental</strong> influences on developing neural circuits.</p>
+<p>This activity-mediated influence is greatest during temporal windows called <strong>critical periods</strong>.</p>
+<p>As humans (and other mammals) <u>mature</u>, the cellular mechanisms that modify neural connectivity become <u>less effective</u>, and the brain becomes increasingly <u>refractory</u> （难治疗的）to the lessons of experience.</p>
+<h1 id="一-neural-activity-and-brain-development"><a class="markdownIt-Anchor" href="#一-neural-activity-and-brain-development"></a> 一、Neural activity and brain development</h1>
+<p>Role of activity in influencing the ongoing organization of neural circuits:</p>
+<ol>
+<li>Behaviors not initially present in newborns emerge and are shaped by experience throughout early life.</li>
+<li>The brain continues to grow after birth.</li>
+<li>There is a subsequent decline in synapse number during adolescence.</li>
+</ol>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129123427856.png" alt="image-20200129123427856" /></p>
+<ul>
+<li>The reason why in the early age the number of neurons increase greatly is that the young animal receive multiple stimulations.</li>
+</ul>
+<h2 id="innateinstinctualbuilt-inpreprogrammed-behaviors"><a class="markdownIt-Anchor" href="#innateinstinctualbuilt-inpreprogrammed-behaviors"></a> Innate/”instinctual”/”built-in”/”preprogrammed” behaviors</h2>
+<p>For most animals, <u>basic survival behaviors</u> relies on patterns of connectivity established by <u>intrinsic developmental mechanisms:</u></p>
+<ul>
+<li>
+<p>foraging (搜寻粮草；搜寻), fighting, and mating strategies.</p>
+</li>
+<li>
+<p>parental identification, feeding, and responding to predators.</p>
+<ul>
+<li>
+<p><strong>Harry Harlow</strong> did experiments on isolated <u>baby monkeys</u> within a few hours of birth and raised them in the absence of either a natural mother or a human substitute, instead, with one of two <u>maternal surrogates</u>:</p>
+<ul>
+<li>a “mother” constructed of a wooden frame covered with wire mesh that supported a nursing bottle.</li>
+<li>a similarly shaped object covered with soft terrycloth but without any source of nourishment for the young monkey</li>
+</ul>
+</li>
+<li>
+<p>Newborn monkeys have a built-in need for maternal care and have at least some innate idea of what a mother should feel like.</p>
+</li>
+<li>
+<p>A naive monkey’s fear reaction to the presentation of certain objects (e.g., a snake)</p>
+</li>
+<li>
+<p>The “looming” response (fear elicited by the rapid approach of any formidable object)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="critical-period"><a class="markdownIt-Anchor" href="#critical-period"></a> Critical period</h2>
+<p>The nervous systems of animals with increasingly complex repertoires of behaviors, including humans, clearly adapt to and are influenced by the particular circumstances of an individual’s <u>environment</u> beyond <u>innate</u> behavioral capacities.</p>
+<p>These environmental factors are especially influential in early life, during temporal windows called <strong>critical period</strong>.</p>
+<p>Experience and neural activity that reflects that experience have maximal effect on the acquisition or skilled execution of a particular behavior.</p>
+<ul>
+<li><strong>Parental imprinting</strong> in hatchling birds (the event by which the hatchling recognizes its “parent”): expressed only if animals have certain specific experiences during a sharply restricted time (hours or days) in early postnatal (or posthatching) development.
+<ul>
+<li>Konrad Lorenz’s work with geese.</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-konrad-lorenzs-work-with-geese"><a class="markdownIt-Anchor" href="#1-konrad-lorenzs-work-with-geese"></a> 1. Konrad Lorenz’s work with geese</h3>
+<p>Goslings follow the <u>first large, moving object</u> they <u>see and hear</u> during their first day of life</p>
+<ul>
+<li>Goslings will imprint on a <u>wide range</u> of animate and inanimate objects presented during this period, including Lorenz himself.</li>
+<li>The window for imprinting in goslings is <u>less than a day</u>.</li>
+<li>if animals are not exposed to an appropriate stimulus during this time, they will never form the appropriate parental relationship.</li>
+<li>Once imprinting occurs, however, it is <u>irreversible</u>, and geese will continue to follow inappropriate objects (male conspecifics, people, or even inanimate objects).
+<ul>
+<li><strong>Konrad Lorenz</strong>: Austrian zoologist, ethologist, and ornithologist; Nazi party member; Nobel Prize in 1973.</li>
+</ul>
+</li>
+</ul>
+<p>Parental imprinting is an <u>innate</u> behavior. However, the right imprinting requires specific <u>experience</u> during the critical period.</p>
+<h3 id="2-sensorimotor-skills-and-complex-behaviors"><a class="markdownIt-Anchor" href="#2-sensorimotor-skills-and-complex-behaviors"></a> 2. Sensorimotor skills and complex behaviors</h3>
+<p>sensorimotor: 感觉运动</p>
+<p>Critical periods for these <u>last longer</u> and <u>end far less abruptly.</u></p>
+<p>In some cases, such as the acquisition of <strong>language</strong> in human, <u>detailed instructive influences from the environment</u> (ie., exposure to language and opportunities for mimicry and repetition) are required for an extended period to ensure normal development of the behavior.</p>
+<p>These instructive influences are paralleled in some non-human species in which complex communication is important for territorial and reproductive behaviors.</p>
+<p>In some <strong>songbirds</strong>, male birds acquire the capacity to produce species-specific song by mimicking <u>tutor birds</u> during a limited period of <u>postnatal life</u>（出生后的生活）.</p>
+<ul>
+<li>young songbirds are especially impressionable during the first 2 months after hatching and become refractory to further exposure to tutor song as they age.</li>
+<li>In the absence of a tutor, or if raised only in the presence of another species, birds produce highly abnormal “isolate” songs or songs of the foster species.</li>
+<li>When presented with a variety of songs played from tape recordings that include their own and other species’ songs, juvenile birds preferentially copy the song of their own species, even with no external reinforcement. (<strong>innate bias</strong>)</li>
+</ul>
+<h3 id="3-common-properties-for-critical-period"><a class="markdownIt-Anchor" href="#3-common-properties-for-critical-period"></a> 3. Common properties for critical period</h3>
+<p>Each critical period encompasses the <u>time</u> during which a given behavior is especially susceptible to, or requires, specific environmental influences in order to develop normally.</p>
+<p>These <u>influences</u> can be as subtle as the ongoing stimuli of light or sound encountered by an infant, or the precisely articulated instruction in one’s native (or a foreign) language required to achieve fluent speech and accurate comprehension.</p>
+<p>Once a critical period ends, the core features of the behavior are largely <u>unaffected</u> by subsequent experience.</p>
+<p>In most mammals, including humans, critical periods seem to rely particularly upon changes in organization and function of circuits in the <u>cerebral cortex.</u></p>
+<h3 id="4-cellular-and-molecular-correlates-of-activity-dependent-plasticity-during-critical-period"><a class="markdownIt-Anchor" href="#4-cellular-and-molecular-correlates-of-activity-dependent-plasticity-during-critical-period"></a> 4. Cellular and molecular correlates of activity-dependent plasticity during critical period</h3>
+<p>How does <u>experience</u> change <u>neural circuits</u> during critical periods?</p>
+<p>We first need to know how <u>patterns of activity</u> are transduced to modify connections and make those modifications permanent.</p>
+<p>The steps that initiate these processes must rely on <strong>signals</strong> generated by synaptic activity associated with sensory experience, perceptual and cognitive processing, or motor performance.</p>
+<p><strong>Neurotransmitters</strong> and a number of other signaling molecules, including <strong>neurotrophic factors</strong>, are obvious candidates for initiating the changes that occur with correlated or repeated activity, including that driven by experience.</p>
+<p>Mice that lack genes for a number of <u>neurotransmitter-synthesizing</u> or <u>degrading enzymes</u> exhibit <u>changes</u> in experience dependent plasticity of the visual cortex and other cortical regions.</p>
+<hr />
+<h4 id="transduction-of-electrical-activity-into-cellular-change-via-ca2-signaling"><a class="markdownIt-Anchor" href="#transduction-of-electrical-activity-into-cellular-change-via-ca2-signaling"></a> Transduction of electrical activity into cellular change via Ca2+ signaling</h4>
+<h5 id="1-soma"><a class="markdownIt-Anchor" href="#1-soma"></a> (1) Soma</h5>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129134159990.png" alt="image-20200129134159990" /></p>
+<center>Neurotransmitters and other secreted molecules (such as neurotrophins) that influence critical periods are all thought ultimately to modulate levels of intracellular Ca2+, particularly in postsynaptic cells.<br/>This happens in both soma and dendrites.</center>
+Correlated or sustained activity leads to increased Ca2+ conductances and increased intracellular Ca2+ concentration, which results in activation of Ca2+/calmodulin kinase II or IV (**CaMKII/IV**) as well as **ERK**, and their subsequent translocation to the nucleus.
+<p>ERK and CaMKII/IV activate Ca2±regulated transcription factors such as <strong>CREB</strong> (<em>c</em>yclic nucleotide <em>r</em>esponse <em>e</em>lement <em>b</em>inding transcription factor).</p>
+<p>The <u>target genes</u> for activated CREB may include neurotrophic signals such as BDNF, which when secreted by a cell may help stabilize or promote the growth of active synapses on that cell.</p>
+<h5 id="2-distal-dendrite"><a class="markdownIt-Anchor" href="#2-distal-dendrite"></a> (2) Distal dendrite</h5>
+<p>Local increases in Ca2+ signaling in distal dendrites due to correlated or sustained activity may activate kinases such as <strong>CaMKII/IV</strong> operating in the cytoplasm, which lead to local increases in Ca2+ concentration that modify <strong>cytoskeletal elements</strong> (actin- or tubulin-based structures).</p>
+<p>Changes in these cytoskeletal elements lead to <u>local changes</u> in dendritic structure.</p>
+<p>Increased local Ca2+ concentration may influence <u>local translation</u> of transcripts in the endoplasmic reticulum, including transcripts for neurotransmitter receptors and other modulators of postsynaptic responses.</p>
+<p>Increased Ca2+ may also influence the <u>trafficking</u> of these proteins, their <u>insertion</u> into the postsynaptic membrane, and their <u>interaction</u> with local scaffolds for cytoplasmic proteins.</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129134500495.png" alt="image-20200129134500495" /></p>
+<hr />
+<p><u>Local increase</u> of <strong>neurotrophins</strong>, especially if secretion is limited to synapses from “stabilized” inputs, may lead to greater <u>local elaboration of</u> <strong>synaptic endings</strong>, <strong>additional dendritic growth</strong>, and the net increase of <strong>connectivity</strong> between pre- and postsynaptic partners.</p>
+<p>Activity-dependent mechanisms influence the expression and extracellular distribution of <strong>matrix components</strong> (including chondroitin sulfate proteoglycans) and <strong>enzymes</strong> that can <u>modify</u> or <u>cleave</u> these molecules.</p>
+<p>These matrix molecules and modulating enzymes might further influence the <u>location</u> and <u>stability</u> of subsets of synapses.</p>
+<h3 id="5-critical-periods-in-visual-system-development"><a class="markdownIt-Anchor" href="#5-critical-periods-in-visual-system-development"></a> 5. Critical periods in visual system development</h3>
+<p>Fundamental understanding of how changes in connectivity might contribute to critical periods that influence behavioral capacity has come from studies of the developing <strong>visual system</strong> in animals with highly developed visual abilities, particularly cats and monkeys.</p>
+<p><strong>David Hubel</strong> and <strong>Torsten Wiesel</strong>: Nobel Prize in Physiology or Medicine in 1982.</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129134832021.png" alt="image-20200129134832021" /></p>
+<p>Why in <strong>visual system</strong>?</p>
+<ul>
+<li>It is relatively easy to either <u>deprive (剥夺, 夺去, 使丧失)</u> or <u>augment (增加, 提高, 扩大)</u> <strong>visual experience</strong> in an experimental animal; eyes can be <u>sutured shut (缝合关闭)</u>, or animals can be reared in illumination conditions ranging from total darkness to maximal light.</li>
+<li>The organization of the visual pathways provides ideal opportunities to evaluate how experience influences ongoing function and connections.</li>
+</ul>
+<h4 id="transneuronal-labeling-with-radioactive-amino-acids"><a class="markdownIt-Anchor" href="#transneuronal-labeling-with-radioactive-amino-acids"></a> Transneuronal labeling with radioactive amino acids</h4>
+<ul>
+<li>放射性氨基酸的跨神经元标记</li>
+</ul>
+<p><strong>Anterograde tracing</strong> using radioactive amino acids.</p>
+<p>An amino acid commonly found in proteins (usually <strong>proline</strong>) is radioactively tagged and injected into the area of interest. Neurons take up the label from the extracellular space and incorporate it into newly made proteins.</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129160625049.png" alt="image-20200129160625049" /></p>
+<p>Some of these proteins are shipped via <u>anterograde axonal transport (顺行轴突运输)</u> from the cell body to nerve terminals, where they accumulate.</p>
+<p>A fraction is actually released into the <u>extracellular space (细胞外隙)</u>, where the proteins are degraded into amino acids or small peptides that retain their radioactivity. An even smaller fraction of this pool of labeled amino acids is <u>taken up by the postsynaptic neurons (被突触后神经元摄取)</u>, incorporated again into proteins, and transported to synaptic terminals of the second set of neurons. <strong>–transneuronal transport</strong></p>
+<h4 id="visual-system-organization"><a class="markdownIt-Anchor" href="#visual-system-organization"></a> Visual system organization</h4>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129160625049.png" alt="image-20200129160625049" /></p>
+<p><u>Proline</u> injections into one <strong>eye</strong> label appropriate <u>layers</u> of the <strong>lateral</strong> <strong>geniculate nucleus</strong>, and subsequently the <u>terminals</u> in the <strong>visual cortex</strong> of the geniculate neurons receiving inputs from that eye.</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129160902961.png" alt="image-20200129160902961" /></p>
+<h4 id="ocular-dominance-columns-眼优势柱"><a class="markdownIt-Anchor" href="#ocular-dominance-columns-眼优势柱"></a> Ocular dominance columns 眼优势柱</h4>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129161010357.png" alt="image-20200129161010357" style="zoom:80%;" />
+<p><strong>Ocular dominance</strong> is seen in the domains (stripes) in <em>cortical layer 4</em>, in which all neurons are driven exclusively by one eye or the other.</p>
+<h4 id="visual-cortical-plasticity-and-critical-periods"><a class="markdownIt-Anchor" href="#visual-cortical-plasticity-and-critical-periods"></a> Visual cortical plasticity and critical periods</h4>
+<p><strong>Visual cortical neurons</strong> were divided into seven “ocular dominance” groups based on their degree of response to either the contralateral（对侧的） or ipsilateral（同侧的） eye.</p>
+<blockquote>
+<p>Ocular dominance columns are stripes (条纹布) of neurons in the visual cortex of certain mammals (including humans) that respond preferentially to input from one eye or the other. The columns span multiple cortical layers, and are laid out in a striped pattern across the surface of the striate cortex（纹状皮层） (V1). The stripes lie perpendicular to the orientation columns.</p>
+</blockquote>
+<p>Group 1 cells are driven only by stimulation of the contralateral eye.</p>
+<p>Group 7 cells are driven entirely by the ipsilateral eye.</p>
+<p>Most cells were activated to some degree by both eyes (distributed around a mean defined by “group 4” cells), and about a quarter were more activated by either the contralateral or ipsilateral eye.</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129161104670.png" alt="image-20200129161104670" /></p>
+<p>When <u>one eye of a kitten</u> was sutured closed early in life and the animal then matured to adulthood (which takes about 6 months), a remarkable change was observed.</p>
+<p><u>Very few cortical cells</u> could be driven from the deprived (previously sutured) eye.</p>
+<p>The deprived eye had been functionally <u>disconnected</u> from the visual cortex.</p>
+<p>This “<strong>cortical blindness（皮质盲 ）</strong>”, or <strong>amblyopia（弱视）</strong>, is permanent: even if the formerly deprived eye remains open, <u>little or no recovery occurs</u>.</p>
+<blockquote>
+<p>弱视，俗称为懒惰眼，是由于儿童在成长期间，视觉未有正常发展，眼球内部、外部均外无器质性病变。结果在长期失去刺激的情况下，大脑最终会放弃了该部份的视力功能，结果令视力减退，形成弱视。</p>
+</blockquote>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129161415097.png" alt="image-20200129161415097" /></p>
+<p>The same manipulation (<u>closing one eye</u>) performed in adulthood has <u>no effect</u> on the responses of cells in the mature visual cortex.</p>
+<p>Overall cortical activity is diminished.</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129161453692.png" alt="image-20200129161453692" /></p>
+<h4 id="critical-period-for-ocular-dominance-columns"><a class="markdownIt-Anchor" href="#critical-period-for-ocular-dominance-columns"></a> Critical period for ocular dominance columns</h4>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129161900915.png" alt="image-20200129161900915" style="zoom: 67%;" />
+<p>Sometime <u>between when a kitten’s eyes open (about a week after birth) and 1 year of age</u>, visual experience determines how the visual cortex is wired with respect to eye dominance.</p>
+<p><u>3 or 4 days of eye closure</u> profoundly alters the ocular dominance profile of the striate cortex.</p>
+<p>Similar experiments in **monkeys **have shown that the <u>same</u> phenomenon occurs in primates, although the <u>critical period is longer</u> (up to about 6 months of age).</p>
+<h4 id="effect-of-monocular-deprivation-on-the-pattern-of-ocular-dominance-columns"><a class="markdownIt-Anchor" href="#effect-of-monocular-deprivation-on-the-pattern-of-ocular-dominance-columns"></a> Effect of monocular deprivation on the pattern of ocular dominance columns</h4>
+<p><u>Visual deprivation</u> during the critical period must result in cortical connectivity changes that influence the functional response properties of individual neurons.</p>
+<p>In <strong>monkeys</strong>, the stripe-like pattern of geniculocortical (原生皮质) axon terminals in layer 4 that defines ocular dominance columns is already present <u>at birth</u>, and this pattern reflects the functional segregation of inputs from the two eyes.</p>
+<p>Animals <u>deprived</u> from birth of vision in one eye develop <u>abnormal patterns of ocular dominance stripes</u> in the visual cortex, presumably due to the altered patterns of activity caused by deprivation.</p>
+<p>The stripes related to the <u>open</u> eye are substantially <u>wider</u>, and the stripes representing the <u>deprived</u> eye are correspondingly <u>diminished</u>.</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129162320054.png" alt="image-20200129162320054" /></p>
+<h3 id="6-competitive-interaction"><a class="markdownIt-Anchor" href="#6-competitive-interaction"></a> 6. Competitive interaction</h3>
+<p>In normal animals, the <u>equivalent</u> amount of synaptic territory driven by each eye is retained (and sharpened in terms of segregation of ocular dominance stripes in layer 4 of the cortex) if both eyes experience roughly <u>comparable</u> levels of visual stimulation.</p>
+<p>When an <u>imbalance</u> in visual experience is induced by monocular deprivation, the active eye gains a competitive advantage and replaces many of the synaptic inputs from the closed eye.</p>
+<p>These observations in experimental animals have important implications for <u>children</u> with birth defects or ocular injuries that result in an imbalance of inputs from the two eyes.</p>
+<p>Unless the imbalance is <u>corrected</u> during the <u>critical period</u>, the child may ultimately have poor binocular fusion, diminished depth perception, and degraded acuity; in other words, the child’s vision may be significantly and <u>permanently</u> impaired.</p>
+<h3 id="7-critical-periods-and-molecular-regulators-for-some-neural-systems"><a class="markdownIt-Anchor" href="#7-critical-periods-and-molecular-regulators-for-some-neural-systems"></a> 7. Critical periods and molecular regulators for some neural systems</h3>
+<p>Although the neural basis of critical periods has been most thoroughly studied in the mammalian <u>visual system</u>, similar phenomena exist in the <u>auditory, somatic sensory, and olfactory systems</u> as well as in <u>motor pathways</u>.</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129163547374.png" alt="image-20200129163547374" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210305112245649.png" alt="image-20210305112245649" /></p>
+<h3 id="8-development-of-language-a-critical-period-for-a-distinctly-human-behavior"><a class="markdownIt-Anchor" href="#8-development-of-language-a-critical-period-for-a-distinctly-human-behavior"></a> 8. Development of language: a critical period for a distinctly human behavior</h3>
+<p>Can <u>critical periods</u> be documented for even <u>more complex behaviors</u>, including cognitive function and, in humans, <u>language</u>?</p>
+<p>While cellular and physiological evidence is <u>not yet available</u>, a number of <u>behavioral observations</u> have defined a critical period for language acquisition and production.</p>
+<p><u>Exposure to language</u> from birth onward is essential for the development of appropriate capacity to comprehend and produce meaningful communication.</p>
+<p>To be effective, this linguistic experience must occur in <u>early life</u>.</p>
+<p>The requirement for perceiving and practicing language during a critical period is apparent in studies of language acquisition in <u>congenitally deaf (先天性耳聋) children</u>, whose <u>language acquisition</u> (i.e., sign language) <u>relies on seeing and moving the hands and fingers</u> (the equivalent of spoken and heard language) rather than on listening and moving the lips, tongue, and larynx.</p>
+<p><u>Children who have acquired speech but lose their hearing before puberty ( 青春期)</u> also suffer a substantial decline in spoken language, presumably because they are unable to hear themselves or others talk and thus lose the opportunity to refine their speech by auditory feedback during the final stages of the critical period for language.</p>
+<h2 id="learning-language"><a class="markdownIt-Anchor" href="#learning-language"></a> Learning language</h2>
+<p>The ability to perceive, learn, and produce distinct <strong>phonemes</strong> with clarity <u>approximating</u>, if not equaling, those of native speakers, as well as the ability to acquire a sense of the rules of grammar and usage in a language persists for several more years, as evidenced by the fact that children can usually learn to speak a second language without accent and with fluent grammar until about <strong>age 7 or 8</strong>.</p>
+<p>After this age, however, performance gradually <u>declines</u> no matter what the extent of practice or exposure.</p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129164044157.png" alt="image-20200129164044157" style="zoom:50%;" />
+<p>Why can ABC speak English as good as native Americans, while Chinese students who go to US after college can’t?</p>
+<p>Changes in the patterns of activity in language regions of the brain in <u>children</u> <em>versus</em> <u>adults</u> suggest that the relevant neural circuits may undergo functional or structural modifications during the critical period for language.</p>
+<p>Comparisons of patterns of activity in <strong>children ages 7-10</strong> with the patterns of <strong>adults</strong> performing the same specific word -processing tasks suggest that <u>different brain regions</u> are activated for the same task in children <em>versus</em> adults.</p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129164152315.png" alt="image-20200129164152315" style="zoom:50%;" />
+<p>There is nevertheless an indication that brain circuits <u>change</u> to accommodate language function during early life, with very <u>different</u> patterns of activity seen in adulthood.</p>
+<h2 id="cellular-and-molecular-regulation-of-critical-period"><a class="markdownIt-Anchor" href="#cellular-and-molecular-regulation-of-critical-period"></a> Cellular and molecular regulation of critical period</h2>
+<p>Critical periods must ultimately be defined by <u>molecular mechanisms</u> that can transduce activity-mediated synaptic signaling and modify connections</p>
+<p>These molecular events must make activity and experience-dependent modifications <u>permanent</u> within a distinct <u>developmental window</u></p>
+<p>These mechanisms must be regulated so that, the system is <u>refractory</u> to additional substantial changes once the critical period has <u>ended</u>.</p>
+<p>The steps that initiate these processes must rely on <strong>signals</strong> generated by synaptic activity associated with sensory experience, perceptual and cognitive processing, or motor performance</p>
+<p><strong>Neurotransmitters</strong> and a number of other signaling molecules, including <strong>neurotrophic factors</strong>, are obvious candidates for initiating the changes that occur with correlated or repeated activity, including that driven by experience</p>
+<p>Mice that lack genes for a number of <u>neurotransmitter-synthesizing</u> or <u>degrading enzymes</u> exhibit <strong>changes</strong> in experience dependent plasticity of the visual cortex and other cortical regions.</p>
+<h3 id="1-signal-transduction-essential-for-critical-period-synaptic-plasticity"><a class="markdownIt-Anchor" href="#1-signal-transduction-essential-for-critical-period-synaptic-plasticity"></a> 1. Signal transduction essential for critical period synaptic plasticity</h3>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210305110510553.png" alt="image-20210305110510553" style="zoom:100%;" />
+<p>Excitatory <u>activity</u> is proportional to the level of <u>glutamate</u> release from the presynaptic terminal.</p>
+<p>In turn, glutamate binds to the ionotropic receptors NMDA-R and AMPA-R, as well as to the metabotropic glutamate receptor, mGluR.</p>
+<p>The consequence of NMDA-R and AMPA-R activation via glutamate binding is depolarization that favors the influx of Ca2+ via the NMDA-R and the initiation of <u>Ca2+ dependent signaling</u> that can influence <u>local cytoskeletal integrity</u> and <u>receptor distribution and stability</u>.</p>
+<p>This aspect of structural modulation to translate electrical activity to cellular change also includes the modulation of <u>Ca2±dependent cell adhesion</u> to either maintain or disrupt the relationship between pre-and postsynaptic sites.</p>
+<p>Signaling through mGluR activates second-messenger cascades that rely on mTOR activation to modulate <u>mRNA translation into protein</u>.</p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210305111205303.png" alt="image-20210305111205303" style="zoom: 33%;" />
+<p>Correlated or sustained activity leads to increased Ca2+ conductances and increased intracellular Ca2+ concentration, which results in activation of <strong>CaMKII or CaMKIV</strong> as well as <strong>ERK</strong>, and their subsequent translocation to the nucleus</p>
+<ul>
+<li>ERK and CaMKII/IV then activate Ca2±regulated transcription factors such as <strong>CREB</strong> (cyclic nucleotide response element binding transcription factor), as well as other chromatin-binding proteins</li>
+<li>The <u>target genes</u> for activated CREB may include neurotrophic signals such as BDNF, which when secreted by a cell may help stabilize or promote the growth of active synapses on that cell.</li>
+</ul>
+<h3 id="2-signal-transduction-essential-for-critical-period"><a class="markdownIt-Anchor" href="#2-signal-transduction-essential-for-critical-period"></a> 2. Signal transduction essential for critical period</h3>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20210305111326422.png" alt="image-20210305111326422" style="zoom:100%;" />
+<p>Local increases in Ca2+ signaling in distal dendrites due to correlated or sustained activity may lead to local increases in Ca2+ concentration that <u>modify cytoskeletal elements</u> (actinor tubulin-based structures), perhaps through the activity of kinases such as <strong>CaMKII/IV</strong> operating in the <u>cytoplasm</u> rather than the nucleus.</p>
+<ul>
+<li>Changes in these cytoskeletal elements lead to <u>local changes</u> in dendritic structure.</li>
+<li>Increased local Ca2+ concentration may influence <u>local translation</u> of transcripts in the endoplasmic reticulum, including transcripts for <u>neurotransmitter receptors</u> and other modulators of postsynaptic responses.</li>
+<li>Increased Ca2+ may also influence the <u>trafficking</u> of these proteins, their <u>insertion</u> into the postsynaptic membrane, and their <u>interaction</u> with local scaffolds for cytoplasmic proteins</li>
+</ul>
+<h2 id="synapse-addition-and-elimination-in-rhesus-monkey-cortex"><a class="markdownIt-Anchor" href="#synapse-addition-and-elimination-in-rhesus-monkey-cortex"></a> Synapse addition and elimination in rhesus monkey cortex</h2>
+<p>The <u>number of synapses</u> throughout the <strong>cortex</strong> (not just in the visual cortex) <u>increased</u> during prenatal and a limited period of postnatal life, <u>declined</u> during a protracted period that included much of adolescence, and reached a <u>steady</u> state in early adulthood.</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129164250626.png" alt="image-20200129164250626" /></p>
+<p>This pattern of an <u>initial increase</u> followed by a <u>decline</u> in <strong>synapse numbers</strong> indicated that critical periods may be mediated first by <u>local growth</u> of neural elements in an activity-dependent manner, followed by a subsequent <u>elimination</u> of some synapses and <u>the selective growth and stabilization of these synapses</u></p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129164331688.png" alt="image-20200129164331688" style="zoom:50%;" />
+<p>This suggestion received compelling support from a remarkable series of studies in <u>human</u> with <strong>longitudinal MRI</strong> <strong>scans</strong>.</p>
+<p>Although the absolute size of the brain is distinct in the two sexes, the overall trajectory of <strong>gray matter</strong> (the location of cell bodies, axon terminal branches, dendrites, and synapses) volume growth and decline is parallel.</p>
+<p>This process is specific to the <u>gray matter</u>, since <u>white matter (白质)</u> has a continual increase in both sexes during the same time period of postnatal life.</p>
+<h2 id="human-brain-development-activity-dependent-plasticity-and-critical-periods"><a class="markdownIt-Anchor" href="#human-brain-development-activity-dependent-plasticity-and-critical-periods"></a> Human brain development, activity-dependent plasticity, and critical periods</h2>
+<p>The <u>elaboration</u> followed by <u>selective elimination</u> of connections in the cerebral cortex–inferred from the <u>increase</u>, then <u>decrease</u> in gray matter volumes–may indeed underlie the remarkable capacity of the human brain to acquire and refine behavioral capacity from birth through early adulthood.</p>
+<p>This prolonged process of <u>experience-driven construction of cortical circuits</u> seems to be altered in several disorders in which the development of cortical connections is thought to be the primary target for pathological change including <u>autism（自闭症）</u>, <u>schizophrenia（精神分裂症）</u>, and <u>attention deficit hyperactivity disorder (ADHD，注意力不足过动症).</u></p>
+<h2 id="a-behavioral-disorder-accompanied-by-altered-addition-of-gray-matter-volume"><a class="markdownIt-Anchor" href="#a-behavioral-disorder-accompanied-by-altered-addition-of-gray-matter-volume"></a> A behavioral disorder accompanied by altered addition of gray matter volume</h2>
+<p>In children with ADHD, the rate of cortical growth during early postnatal life is delayed and the overall magnitude of growth is diminished compared with that of typically developing children.</p>
+<p>In children with ADHD, gray matter volume declines more dramatically, resulting in smaller cortical gray matter volumes in adulthood.</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/Academic_Notes/Neurobiology/image-20200129164723898.png" alt="image-20200129164723898" /></p>
+<p>These observations of postnatal brain development in living human subjects allow one to <u>infer</u> (but do not prove) that experience- and activity-dependent mechanisms during critical periods are primarily responsible for much of what we recognize as normal behavioral development, social development, and learning.</p>
+<h1 id="二-summary"><a class="markdownIt-Anchor" href="#二-summary"></a> 二、Summary</h1>
+<p>An individual animal’s history of interaction with its environment- its “<strong>experience</strong>” -helps shape its neural circuitry and thus determines subsequent behavior.</p>
+<p>Experience during specific times in early life, referred to as <strong>critical periods</strong>, helps shape behaviors as diverse as maternal bonding and the acquisition of language.</p>
+<p>Correlated patterns of activity are thought to mediate critical periods by <u>stabilizing</u> concurrently active synaptic connections and <u>weakening or eliminating</u> connections whose activity is divergent.</p>
+<p>The cellular and molecular mechanisms implicated in critical periods rely on the activity of several <u>neurotransmitters</u>, <u>receptors</u>, and <u>intracellular signaling cascades</u> that modify gene expression in response to changes in synaptic activity in a target cell.</p>
+<p>Genes for <u>neurotrophins (神经营养因子)</u> such as BDNF, <u>extracellular matrix components,</u> and <u>neurotransmitter receptors</u> are all targets for altered expression in response to synaptic activity during critical periods.</p>
+<p><u>The most accessible and thoroughly studied</u> example of a critical period is that responsible for the establishment of normal <strong>vision</strong>.</p>
+<p>These studies show that experience is translated into patterns of neuronal activity that influence the function and connectivity of neurons in the visual cortex.</p>
+<p>When normal patterns of activity are <u>disturbed</u> during the critical period in early life (experimentally in animals or by pathology in humans), connectivity in the visual cortex is altered, as is visual function.</p>
+<p>If <u>not reversed</u> before the end of the critical period, these structural and functional alterations of brain circuitry are difficult or impossible to change.</p>
+<p>Observations of the addition and elimination of synapses throughout the cerebral cortex in animals, and parallel analysis of the increase and decrease of cortical gray matter volumes in children and adolescents, indicate that a full range of human behaviors-including those compromised in conditions such as autism, schizophrenia, and ADHD–may be shaped by activity and experience-dependent addition and subsequent elimination of synaptic connections during critical periods that begin at birth and end in early adulthood.</p>
+
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-neural-activity-and-brain-development"><span class="nav-text"> 一、Neural activity and brain development</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#innateinstinctualbuilt-inpreprogrammed-behaviors"><span class="nav-text"> Innate&#x2F;”instinctual”&#x2F;”built-in”&#x2F;”preprogrammed” behaviors</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#critical-period"><span class="nav-text"> Critical period</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#learning-language"><span class="nav-text"> Learning language</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cellular-and-molecular-regulation-of-critical-period"><span class="nav-text"> Cellular and molecular regulation of critical period</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synapse-addition-and-elimination-in-rhesus-monkey-cortex"><span class="nav-text"> Synapse addition and elimination in rhesus monkey cortex</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#human-brain-development-activity-dependent-plasticity-and-critical-periods"><span class="nav-text"> Human brain development, activity-dependent plasticity, and critical periods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#a-behavioral-disorder-accompanied-by-altered-addition-of-gray-matter-volume"><span class="nav-text"> A behavioral disorder accompanied by altered addition of gray matter volume</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-summary"><span class="nav-text"> 二、Summary</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">希望能活的久一点</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">182</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:zhenyumi@foxmail.com" title="E-Mail → mailto:zhenyumi@foxmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2279880515" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2279880515" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/ParaDogs_lazy" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;ParaDogs_lazy" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/Furemu" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;Furemu" rel="noopener" target="_blank"><i class="fab fa-telegram fa-fw"></i>Telegram</a>
+      </span>
+  </div>
+
+
+<!-- none-select-br -->
+
+<p></p>
+
+<!-- hitokoto -->
+
+<div class="hitokoto-title">
+	<i class="fa fa-paragraph"></i>
+	<b>一言</b>
+</div>
+
+<div id="hitokoto">获取中OvO</div>
+<i id="hitofrom">获取中OvO</i>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+  fetch('https://v1.hitokoto.cn/?c=i')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + data.hitokoto;
+      var hitofrom = document.getElementById('hitofrom');
+      hitofrom.innerText = "——" + data.from + '\xa0'; 
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">2.7m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">41:36</span>
+</div><br /> <!-- 换行 -->
+
+<div class="translate-style">
+繁/简：<a id="translateLink" href="javascript:translatePage();">繁体
+</a>
+</div>
+<script type="text/javascript" src="/js/tw_cn.js"></script>
+<script type="text/javascript">
+var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+var cookieDomain = "https://tding.top/"; //Cookie地址, 一定要设定, 通常为你的网址
+var msgToTraditionalChinese = "繁体"; //此处可以更改为你想要显示的文字
+var msgToSimplifiedChinese = "简体"; //同上，但两处均不建议更改
+var translateButtonId = "translateLink"; //默认互换id
+translateInitilization();
+</script>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
+    }
+setInterval("createtime()",250);
+</script>
+
+<br /> <!-- 换行 -->
+
+<!--busuanzi计数-->
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+  <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css">
+
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://zhenyumi.github.io/Mdsave/L4-Modification-of-neural-circuits-as-a-result-of-experience.html',]
+      });
+      });
+  </script>
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'ErV27FWAFsY2HDPhLVjeIcfR-MdYXbMMI',
+      appKey     : 'YyUrjqWLM53k8C1tPcKNaQFN',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>
