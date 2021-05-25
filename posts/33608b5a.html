@@ -25,7 +25,7 @@
 
   <meta name="description" content="平常使用LaTeX以及学习过程中的一些操作总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LaTeX基本操作  -  文档格式、基本输入与排版操作">
+<meta property="og:title" content="LaTeX基本操作 - 文档格式、基本输入与排版操作">
 <meta property="og:url" content="https://zhenyumi.github.io/posts/33608b5a.html">
 <meta property="og:site_name" content="鹘横海">
 <meta property="og:description" content="平常使用LaTeX以及学习过程中的一些操作总结">
@@ -52,7 +52,7 @@
   };
 </script>
 
-  <title>LaTeX基本操作  -  文档格式、基本输入与排版操作 | 鹘横海</title>
+  <title>LaTeX基本操作 - 文档格式、基本输入与排版操作 | 鹘横海</title>
   
 
 
@@ -230,7 +230,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          LaTeX基本操作  -  文档格式、基本输入与排版操作
+          LaTeX基本操作 - 文档格式、基本输入与排版操作
         </h1>
 
         <div class="post-meta">
@@ -290,7 +290,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>7.1k</span>
+              <span>7k</span>
             </span>
 
         </div>
@@ -306,12 +306,12 @@
 <p>我服了，LaTeX这个东西真是折磨人。</p>
 <p>因此我在这里记录一下 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.89883em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.68333em;"><span style="top:-2.904999em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord text"><span class="mord textrm sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.46782999999999997em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord text"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span> 常用的代码以及排版手段</p>
 <h1 id="一-文档的设置"><a class="markdownIt-Anchor" href="#一-文档的设置"></a> 一、文档的设置</h1>
-<h2 id="中文支持-ctex宏包的安装和使用"><a class="markdownIt-Anchor" href="#中文支持-ctex宏包的安装和使用"></a> 中文支持  -  ctex宏包的安装和使用</h2>
+<h2 id="中文支持-ctex宏包的安装和使用"><a class="markdownIt-Anchor" href="#中文支持-ctex宏包的安装和使用"></a> 中文支持 - ctex宏包的安装和使用</h2>
 <p>建议使用MiKTeX + TeXStudio的方式联合编辑Tex文档，MiKTeX默认没有安装相关的ctex宏包，但是texlive默认是安装的。</p>
 <p>MiKTeX 和 TeXStudio直接去官网下载就好，安装耗时大概1h。</p>
 <p>关于ctex的安装我就不重复造轮子了，可以参考百度经验：<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/ff411625e229d512e482379c.html">https://jingyan.baidu.com/article/ff411625e229d512e482379c.html</a></p>
 <p>载入ctex宏包的方式，可以选择两种方式：</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>[&lt;参数&gt;]&#123;article&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;ctex&#125;</span><br><span class="line">或者</span><br><span class="line"><span class="keyword">\documentclass</span>[&lt;参数&gt;]&#123;ctexart&#125; <span class="comment">% &lt; - 这是官方文档推荐的方式</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>[&lt;参数&gt;]&#123;article&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;ctex&#125;</span><br><span class="line">或者</span><br><span class="line"><span class="keyword">\documentclass</span>[&lt;参数&gt;]&#123;ctexart&#125; <span class="comment">% &lt;- 这是官方文档推荐的方式</span></span><br></pre></td></tr></table></figure>
 <p>相关的较为细节的ctex使用方式请参考安装目录的pdf文件，下文只摘录常用的一些操作。</p>
 <h2 id="document-classes"><a class="markdownIt-Anchor" href="#document-classes"></a> Document Classes</h2>
 <p>代码格式：</p>
@@ -365,10 +365,10 @@
 <p>默认文档可以插入三级章节</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%插入章节</span></span><br><span class="line"><span class="keyword">\section</span>&#123;这是一级章节&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\subsection</span>&#123;这是二级章节&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\subsubsection</span>&#123;这是三级章节&#125;</span><br></pre></td></tr></table></figure>
 <p>默认文档可以插入二级段落</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\paragraph&#123;这是一个段落&#125; </span><br><span class="line">这是一个段落的内容</span><br><span class="line"></span><br><span class="line">\subparagraph&#123;这是一个次级段落&#125; </span><br><span class="line">这是一个次级段落的内容</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\paragraph&#123;这是一个段落&#125;  </span><br><span class="line">这是一个段落的内容</span><br><span class="line"></span><br><span class="line">\subparagraph&#123;这是一个次级段落&#125; </span><br><span class="line">这是一个次级段落的内容</span><br></pre></td></tr></table></figure>
 <p>效果：</p>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20200705123619058.png" alt="image-20200705123619058" style="zoom:100%;" />
-如果文档的类型是book，则提供了插入章节的方法
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20200705123619058.png" alt="image-20200705123619058" /></p>
+<p>如果文档的类型是book，则提供了插入章节的方法</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\chapter</span>&#123;Chapter 1&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="2-自定义格式调整"><a class="markdownIt-Anchor" href="#2-自定义格式调整"></a> 2. 自定义格式调整</h3>
 <p>要调整章节标题在目录页中的格式，可以用<code>titletoc</code>宏包。该宏包的基本命令参数如下:</p>
@@ -391,10 +391,10 @@
 <li>使用Description类型的时候，适用于生成代码。</li>
 </ul>
 <p>代码例:</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">%无序列表</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;itemize&#125;</span><br><span class="line">	<span class="keyword">\item</span> cell</span><br><span class="line">	<span class="keyword">\item</span> organ</span><br><span class="line">	<span class="keyword">\item</span> body</span><br><span class="line"><span class="keyword">\end</span>&#123;itemize&#125;</span><br><span class="line"><span class="comment">%有序列表</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;enumerate&#125;</span><br><span class="line"> <span class="keyword">\item</span> cell</span><br><span class="line"> <span class="keyword">\item</span> organ</span><br><span class="line"> <span class="keyword">\item</span> body</span><br><span class="line"><span class="keyword">\end</span>&#123;enumerate&#125;</span><br><span class="line"><span class="comment">%描述列表</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;description&#125;</span><br><span class="line"> <span class="keyword">\item</span>[python] print(&#x27;hello world&#x27;)</span><br><span class="line"> <span class="keyword">\item</span>[java] println(&#x27;hello world&#x27;)</span><br><span class="line"> <span class="keyword">\item</span>[r] vector &lt; - c(data.xlsx)</span><br><span class="line"><span class="keyword">\end</span>&#123;description&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">%无序列表</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;itemize&#125;</span><br><span class="line">	<span class="keyword">\item</span> cell</span><br><span class="line">	<span class="keyword">\item</span> organ</span><br><span class="line">	<span class="keyword">\item</span> body</span><br><span class="line"><span class="keyword">\end</span>&#123;itemize&#125;</span><br><span class="line"><span class="comment">%有序列表</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;enumerate&#125;</span><br><span class="line">  <span class="keyword">\item</span> cell</span><br><span class="line">  <span class="keyword">\item</span> organ</span><br><span class="line">  <span class="keyword">\item</span> body</span><br><span class="line"><span class="keyword">\end</span>&#123;enumerate&#125;</span><br><span class="line"><span class="comment">%描述列表</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;description&#125;</span><br><span class="line">  <span class="keyword">\item</span>[python] print(&#x27;hello world&#x27;)</span><br><span class="line">  <span class="keyword">\item</span>[java] println(&#x27;hello world&#x27;)</span><br><span class="line">  <span class="keyword">\item</span>[r] vector &lt;- c(data.xlsx)</span><br><span class="line"><span class="keyword">\end</span>&#123;description&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
 <p>效果：</p>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20200705125424301.png" alt="image-20200705125424301" style="zoom:100%;" />
-## 分割线
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20200705125424301.png" alt="image-20200705125424301" /></p>
+<h2 id="分割线"><a class="markdownIt-Anchor" href="#分割线"></a> 分割线</h2>
 <p>画一条横着的分割线需要用到<code>\rule</code>命令：</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\rule</span>[水平高度]&#123;长度&#125;&#123;粗细&#125;</span><br><span class="line"><span class="comment">%例：</span></span><br><span class="line"><span class="keyword">\rule</span>[-10pt]&#123;14.3cm&#125;&#123;0.05em&#125;</span><br><span class="line"><span class="keyword">\rule</span>&#123;<span class="keyword">\textwidth</span>&#125;&#123;0.35mm&#125; <span class="comment">%\textwidth就是和文本一样长</span></span><br></pre></td></tr></table></figure>
 <h2 id="文本对齐"><a class="markdownIt-Anchor" href="#文本对齐"></a> 文本对齐</h2>
@@ -404,18 +404,67 @@
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;flushleft&#125;...<span class="keyword">\end</span>&#123;flushleft&#125; <span class="comment">%左对齐 </span></span><br><span class="line"><span class="keyword">\begin</span>&#123;center&#125;...<span class="keyword">\end</span>&#123;center&#125; <span class="comment">%居中 </span></span><br><span class="line"><span class="keyword">\begin</span>&#123;flushright&#125;...<span class="keyword">\end</span>&#123;flushright&#125; <span class="comment">%右对齐 </span></span><br></pre></td></tr></table></figure>
 <h2 id="字体-格式及大小"><a class="markdownIt-Anchor" href="#字体-格式及大小"></a> 字体、格式及大小</h2>
 <h3 id="1-文本大小"><a class="markdownIt-Anchor" href="#1-文本大小"></a> 1. 文本大小</h3>
-<p>| Command  | Nominal Point Size | Exact Point Size |<br />
-|  - ----------- - |  - ---------------- - |  - -------------- - |<br />
-| \tiny   | 5     | 5    |<br />
-| \scriptsize | 7     | 7    |<br />
-| \footnotesize | 8     | 8    |<br />
-| \small  | 9     | 9    |<br />
-| \normalsize | 10     | 10    |<br />
-| \large  | 12     | 12    |<br />
-| \Large  | 14     | 14.40   |<br />
-| \LARGE  | 18     | 17.28   |<br />
-| \huge   | 20     | 20.74   |<br />
-| \Huge   | 24     | 24.88   |</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Nominal Point Size</th>
+<th>Exact Point Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\tiny</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>\scriptsize</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr>
+<td>\footnotesize</td>
+<td>8</td>
+<td>8</td>
+</tr>
+<tr>
+<td>\small</td>
+<td>9</td>
+<td>9</td>
+</tr>
+<tr>
+<td>\normalsize</td>
+<td>10</td>
+<td>10</td>
+</tr>
+<tr>
+<td>\large</td>
+<td>12</td>
+<td>12</td>
+</tr>
+<tr>
+<td>\Large</td>
+<td>14</td>
+<td>14.40</td>
+</tr>
+<tr>
+<td>\LARGE</td>
+<td>18</td>
+<td>17.28</td>
+</tr>
+<tr>
+<td>\huge</td>
+<td>20</td>
+<td>20.74</td>
+</tr>
+<tr>
+<td>\Huge</td>
+<td>24</td>
+<td>24.88</td>
+</tr>
+</tbody>
+</table>
 <p>使用举例：</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\Large</span> 文本文本文本 <span class="comment">%选定大小</span></span><br><span class="line"><span class="keyword">\normalsize</span> <span class="comment">%还原默认大小</span></span><br></pre></td></tr></table></figure>
 <h3 id="2-文本格式"><a class="markdownIt-Anchor" href="#2-文本格式"></a> 2. 文本格式</h3>
@@ -426,7 +475,7 @@
 <h4 id="文字格式"><a class="markdownIt-Anchor" href="#文字格式"></a> 文字格式</h4>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%对于英文文本：</span></span><br><span class="line">显示直立文本： <span class="keyword">\textup</span>&#123;文本&#125;</span><br><span class="line">意大利斜体： <span class="keyword">\textit</span>&#123;文本&#125;</span><br><span class="line">slanted斜体： <span class="keyword">\textsl</span>&#123;文本&#125;</span><br><span class="line">显示小体大写文本： 　<span class="keyword">\textsc</span>&#123;文本&#125;</span><br><span class="line">中等权重： <span class="keyword">\textmd</span>&#123;文本&#125;</span><br><span class="line">加粗命令： <span class="keyword">\textbf</span>&#123;文本&#125;</span><br><span class="line">默认值： <span class="keyword">\textnormal</span>&#123;文本&#125;</span><br><span class="line">下划线： <span class="keyword">\underline</span>&#123;文本&#125;</span><br><span class="line">----------------------------</span><br><span class="line"><span class="comment">%对于中文文本，加粗下划线命令可以正常使用，并没有针对中文的斜体字体</span></span><br><span class="line"><span class="comment">%对于中文文本的斜体：</span></span><br><span class="line">（未解决）</span><br></pre></td></tr></table></figure>
 <p>利用宏包<code>ulem</code>可以实现其他的标记：</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>&#123;ulem&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\uline</span>&#123;text&#125; <span class="comment">%下划线</span></span><br><span class="line"><span class="keyword">\uuline</span>&#123;text&#125; <span class="comment">%双下划线</span></span><br><span class="line"><span class="keyword">\uwave</span>&#123;text&#125; <span class="comment">%波浪线</span></span><br><span class="line"><span class="keyword">\sout</span>&#123;text&#125; <span class="comment">%删除线</span></span><br><span class="line"><span class="keyword">\xout</span>&#123;text&#125; <span class="comment">%斜删除线</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>&#123;ulem&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\uline</span>&#123;text&#125;  <span class="comment">%下划线</span></span><br><span class="line"><span class="keyword">\uuline</span>&#123;text&#125;  <span class="comment">%双下划线</span></span><br><span class="line"><span class="keyword">\uwave</span>&#123;text&#125; <span class="comment">%波浪线</span></span><br><span class="line"><span class="keyword">\sout</span>&#123;text&#125; <span class="comment">%删除线</span></span><br><span class="line"><span class="keyword">\xout</span>&#123;text&#125; <span class="comment">%斜删除线</span></span><br></pre></td></tr></table></figure>
 <h2 id="上下标与引用文献"><a class="markdownIt-Anchor" href="#上下标与引用文献"></a> 上下标与引用文献</h2>
 <h3 id="1-正常地引用文献的方法"><a class="markdownIt-Anchor" href="#1-正常地引用文献的方法"></a> 1. 正常地引用文献的方法</h3>
 <p>使用bibtex</p>
@@ -523,7 +572,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-%E6%96%87%E6%A1%A3%E7%9A%84%E8%AE%BE%E7%BD%AE"><span class="nav-text"> 一、文档的设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E6%94%AF%E6%8C%81-ctex%E5%AE%8F%E5%8C%85%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="nav-text"> 中文支持  -  ctex宏包的安装和使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#document-classes"><span class="nav-text"> Document Classes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8F%E5%8C%85%E7%9B%B8%E5%85%B3%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-text"> 宏包相关的设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E7%9A%84%E5%AF%BC%E8%A8%80%E5%8C%BA"><span class="nav-text"> 文章的导言区</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E6%96%87%E6%A1%A3%E7%9A%84%E6%8E%92%E7%89%88%E4%B8%8E%E8%BE%93%E5%85%A5"><span class="nav-text"> 二、文档的排版与输入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-text"> 摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%A0%E8%8A%82-%E6%AE%B5%E8%90%BD%E4%B8%8E%E7%AB%A0"><span class="nav-text"> 章节、段落与章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8D%A2%E8%A1%8C%E4%B8%8E%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B"><span class="nav-text"> 换行与首行缩进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-text"> 列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E5%AF%B9%E9%BD%90"><span class="nav-text"> 文本对齐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93-%E6%A0%BC%E5%BC%8F%E5%8F%8A%E5%A4%A7%E5%B0%8F"><span class="nav-text"> 字体、格式及大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%A0%87%E4%B8%8E%E5%BC%95%E7%94%A8%E6%96%87%E7%8C%AE"><span class="nav-text"> 上下标与引用文献</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-%E6%96%87%E6%A1%A3%E7%9A%84%E8%AE%BE%E7%BD%AE"><span class="nav-text"> 一、文档的设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E6%94%AF%E6%8C%81-ctex%E5%AE%8F%E5%8C%85%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="nav-text"> 中文支持 - ctex宏包的安装和使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#document-classes"><span class="nav-text"> Document Classes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8F%E5%8C%85%E7%9B%B8%E5%85%B3%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-text"> 宏包相关的设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E7%9A%84%E5%AF%BC%E8%A8%80%E5%8C%BA"><span class="nav-text"> 文章的导言区</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E6%96%87%E6%A1%A3%E7%9A%84%E6%8E%92%E7%89%88%E4%B8%8E%E8%BE%93%E5%85%A5"><span class="nav-text"> 二、文档的排版与输入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-text"> 摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%A0%E8%8A%82-%E6%AE%B5%E8%90%BD%E4%B8%8E%E7%AB%A0"><span class="nav-text"> 章节、段落与章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8D%A2%E8%A1%8C%E4%B8%8E%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B"><span class="nav-text"> 换行与首行缩进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-text"> 列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%89%B2%E7%BA%BF"><span class="nav-text"> 分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E5%AF%B9%E9%BD%90"><span class="nav-text"> 文本对齐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93-%E6%A0%BC%E5%BC%8F%E5%8F%8A%E5%A4%A7%E5%B0%8F"><span class="nav-text"> 字体、格式及大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%A0%87%E4%B8%8E%E5%BC%95%E7%94%A8%E6%96%87%E7%8C%AE"><span class="nav-text"> 上下标与引用文献</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -639,7 +688,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">41:36</span>
+    <span title="站点阅读时长">41:19</span>
 </div><br /> <!-- 换行 -->
 
 <div class="translate-style">

@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico">
+  <link rel="mask-icon" href="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/Logo2.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|14px:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-corner-indicator.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhenyumi.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#000000","save":"auto"},"fancybox":{"enable":true,"caption":false},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"valine","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
+  </script>
+
+  <meta name="description" content="从不同来源读取数据，常用数据处理，生成报告">
+<meta property="og:type" content="website">
+<meta property="og:title" content="08. R &lt; - 输入、读取、标注数据与创建报告">
+<meta property="og:url" content="https://zhenyumi.github.io/save_modified/08-R-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E4%B8%8E%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A.html">
+<meta property="og:site_name" content="鹘横海">
+<meta property="og:description" content="从不同来源读取数据，常用数据处理，生成报告">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184245881.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184337931.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204656466.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204715481.png">
+<meta property="og:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184758166.png">
+<meta property="article:published_time" content="2020-08-10T10:14:21.000Z">
+<meta property="article:modified_time" content="2020-08-10T12:34:00.000Z">
+<meta property="article:author" content="向海">
+<meta property="article:tag" content="R">
+<meta property="article:tag" content="Statistics">
+<meta property="article:tag" content="速查">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184245881.png">
+
+<link rel="canonical" href="https://zhenyumi.github.io/save_modified/08-R-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E4%B8%8E%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>08. R < - 输入、读取、标注数据与创建报告 | 鹘横海
+</title>
+  
+
+
+  <script data-pjax>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?aa95e0eb65e5b58f6500e4de221c0f67";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鹘横海</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hope tomorrow is still shining.  Today is another day.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">23</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">23</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">182</span></a>
+
+  </li>
+        <li class="menu-item menu-item-留言板">
+
+    <a href="/%E7%95%99%E8%A8%80%E6%9D%BF/" rel="section"><i class="fas fa-chalkboard-teacher fa-fw"></i>留言板</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">08. R < - 输入、读取、标注数据与创建报告
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <h1 id="一-输入与读取数据"><a class="markdownIt-Anchor" href="#一-输入与读取数据"></a> 一、输入与读取数据</h1>
+<p>R可从键盘、文本文件、Microsoft Excel和Access、流行的统计软件、特殊格式的文件、多种关系型数据库管理系统、专业数据库、网站和在线服务中导入数据。</p>
+<h2 id="从键盘输入"><a class="markdownIt-Anchor" href="#从键盘输入"></a> 从键盘输入</h2>
+<p>从键盘输入数据有两种方式：</p>
+<ol>
+<li>使用R内置的文本编辑器</li>
+<li>从代码中输入</li>
+</ol>
+<p>这部分的演示使用R Studio，它可以极大地方便使用R的过程。</p>
+<h3 id="1-文本编辑器"><a class="markdownIt-Anchor" href="#1-文本编辑器"></a> 1. 文本编辑器</h3>
+<p>R中的函数<code>edit()</code>会自动调用一个允许手动输入数据的文本编辑器。具体步骤如下：</p>
+<ol>
+<li>创建一个空数据框（或矩阵），其中变量名和变量的模式需与理想中的最终数据集一致；</li>
+<li>针对这个数据对象调用文本编辑器，输入你的数据，并将结果保存回此数据对象中。</li>
+</ol>
+<p>在创建一个数据集的开始，可以首先规定一些变量名以及变量类型：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 规定一些变量名以及变量类型</span></span><br><span class="line">mydata &lt; - data.frame(age=numeric(<span class="number">0</span>), </span><br><span class="line">      gender=character(<span class="number">0</span>), </span><br><span class="line">      weight=numeric(<span class="number">0</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 键入数据，保存结果</span></span><br><span class="line">mydata &lt; - edit(mydata)</span><br></pre></td></tr></table></figure>
+<p>如在这个例子当中，创建一个名为<code>mydata</code>的数据框，它含有三个变量：age（数值型）、gender（字符型）和weight（数值型）。然后你将调用文本编辑器，键入数据，最后保存结果。</p>
+<ul>
+<li><code>age=numeric(0)</code>的赋值语句将创建一个指定模式但不含实际数据的变量</li>
+<li>语句<code>mydata &lt; - edit(mydata)</code>的一种简捷的等价写法是<code>fix(mydata)</code></li>
+</ul>
+<p>编辑器关闭后，结果会保存到之前赋值的对象中</p>
+<ul>
+<li>函数<code>edit()</code>事实上是在对象的一个副本上进行操作的。如果你不将其赋值到一个目标，你的所有修改将会全部丢失</li>
+</ul>
+<h3 id="2-从代码输入"><a class="markdownIt-Anchor" href="#2-从代码输入"></a> 2. 从代码输入</h3>
+<p>与首先规定变量名相对的，也可以直接通过代码来输入：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mydatatxt &lt; - <span class="string">&quot; </span></span><br><span class="line"><span class="string">age gender weight </span></span><br><span class="line"><span class="string">25 m 166 </span></span><br><span class="line"><span class="string">30 f 115 </span></span><br><span class="line"><span class="string">18 f 120 </span></span><br><span class="line"><span class="string">&quot;</span> </span><br><span class="line">mydata &lt; - read.table(header=<span class="literal">TRUE</span>, text=mydatatxt)</span><br></pre></td></tr></table></figure>
+<h2 id="从带分隔符的文本文件导入数据"><a class="markdownIt-Anchor" href="#从带分隔符的文本文件导入数据"></a> 从带分隔符的文本文件导入数据</h2>
+<p>可以使用<code>read.table()</code>从带分隔符的文本文件中导入数据。此函数可读入一个表格格式的文件并将其保存为一个数据框。表格的每一行分别出现在文件中每一行。其语法如下：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mydataframe &lt; - read.table(file, options)</span><br></pre></td></tr></table></figure>
+<p>其中，<code>file</code>是一个带分隔符的ASCII文本文件，<code>options</code>是控制如何处理数据的选项:</p>
+<p>| 选项    | 说明               |<br />
+|  - -------------- - |  - ---------------------------------------------------------- - |<br />
+| file    | 文件名(包在&quot;&quot;内，或使用一个字符型变量)，可能需要全路径<br />在R中，路径的分割符号使用 <code>/</code> 而不是 <code>\</code> |<br />
+| header   | 一个逻辑值(FALSE或TRUE)，用来反映这个文件的第一行是否包含变量名 |<br />
+| sep    | 文件中的字段分离符           |<br />
+| quote   | 指定用于包围字符型数据的字符         |<br />
+| dec    | 用来表示小数点的字符           |<br />
+| row.names  | 保存着行名的向量，或文件中一个变量的序号或名字，缺省时行号取为1，2，3，…… |<br />
+| col.names  | 指定列名的字符向量           |<br />
+| <a target="_blank" rel="noopener" href="http://as.is">as.is</a>   | 控制是否将字符型变量转化为引子型变量(如果值为FALSE)，或者仍将其保留为字符型(TRUE)。As.is可以说逻辑型，数值型或者字符向量，用来判断变量是否被保留为字符 |<br />
+| na.strings  | 代表确实数据的值(转化为NA)         |<br />
+| colClasses  | 指定各列的数据类型的一个字符型向量       |<br />
+| nrows   | 可以读取的最大行数(忽略负值)         |<br />
+| skip    | 在读取数据前跳过的行数          |<br />
+| check.names  | 如果为TRUE，则检查变量名是否在R中有效      |<br />
+| fill    | 如果为TRUE且非所有的行中变量数目相同，则用空白填补   |<br />
+| strip.white  | 在<code>sep</code>已指定的情况下，如果为TRUE，则删除字符型变量前后多余的空格 |<br />
+| blank.lines.skip | 如果为TRUE，忽略空白行          |<br />
+| comment.char  | 一个字符用来在数据文件中写注释，以这个字符开头的行被忽略  |</p>
+<p>考虑一个名为studentgrades.csv的文本文件，它包含了学生在数学、科学、和社会学习的分数。文件中每一行表示一个学生，第一行包含了变量名，用逗号分隔。每一个单独的行都包含了学生的信息，它们也是用逗号进行分隔的。文件的前几行如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">StudentID,First,Last,Math,Science,Social Studies </span><br><span class="line">011,Bob,Smith,90,80,67 </span><br><span class="line">012,Jane,Weary,75,,80 </span><br><span class="line">010,Dan,&quot;Thornton, III&quot;,65,75,70 </span><br><span class="line">040,Mary,&quot;O&#39;Leary&quot;,90,95,92</span><br></pre></td></tr></table></figure>
+<p>这个文件可以用以下语句来读入成一个数据框：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grades &lt; - read.table(<span class="string">&quot;studentgrades.csv&quot;</span>, header=<span class="literal">TRUE</span>, </span><br><span class="line">      row.names=<span class="string">&quot;StudentID&quot;</span>, sep=<span class="string">&quot;,&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>结果如下：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt; grades</span><br><span class="line"> First   Last Math Science Social.Studies</span><br><span class="line">11 Bob   Smith <span class="number">90</span>  <span class="number">80</span>    <span class="number">67</span></span><br><span class="line">12 Jane   Weary <span class="number">75</span>  <span class="literal">NA</span>    <span class="number">80</span></span><br><span class="line">10 Dan Thornton, III <span class="number">65</span>  <span class="number">75</span>    <span class="number">70</span></span><br><span class="line">40 Mary  O<span class="string">&#x27;Leary 90  95    92</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; str(grades)</span></span><br><span class="line"><span class="string">&#x27;</span>data.frame<span class="string">&#x27;:	4 obs. of 5 variables:</span></span><br><span class="line"><span class="string"> $ First   : chr &quot;Bob&quot; &quot;Jane&quot; &quot;Dan&quot; &quot;Mary&quot;</span></span><br><span class="line"><span class="string"> $ Last   : chr &quot;Smith&quot; &quot;Weary&quot; &quot;Thornton, III&quot; &quot;O&#x27;</span>Leary<span class="string">&quot;</span></span><br><span class="line"><span class="string"> $ Math   : int 90 75 65 90</span></span><br><span class="line"><span class="string"> $ Science  : int 80 NA 75 95</span></span><br><span class="line"><span class="string"> $ Social.Studies: num 67 80 70 92</span></span><br></pre></td></tr></table></figure>
+<p>默认地，<code>read.table()</code>把字符变量转化为因子，这并不一定都是我们想要的情况。</p>
+<p>加上选项<code>stringsAsFactors=FALSE</code>可以对所有的字符变量都去掉这个行为。</p>
+<p>可以用<code>colClasses</code>选项去对每一列都指定一个类（比如说，逻辑型、数值型、字符型或因子型）:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">grades &lt; - read.table(<span class="string">&quot;studentgrades.csv&quot;</span>, header=<span class="literal">TRUE</span>, </span><br><span class="line">      row.names=<span class="string">&quot;StudentID&quot;</span>, sep=<span class="string">&quot;,&quot;</span>, </span><br><span class="line">      colClasses=<span class="built_in">c</span>(<span class="string">&quot;character&quot;</span>, <span class="string">&quot;character&quot;</span>, <span class="string">&quot;character&quot;</span>, </span><br><span class="line">         <span class="string">&quot;numeric&quot;</span>, <span class="string">&quot;numeric&quot;</span>, <span class="string">&quot;numeric&quot;</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt; grades</span><br><span class="line"> First   Last Math Science Social.Studies</span><br><span class="line">011 Bob   Smith <span class="number">90</span>  <span class="number">80</span>    <span class="number">67</span></span><br><span class="line">012 Jane   Weary <span class="number">75</span>  <span class="literal">NA</span>    <span class="number">80</span></span><br><span class="line">010 Dan Thornton, III <span class="number">65</span>  <span class="number">75</span>    <span class="number">70</span></span><br><span class="line">040 Mary  O<span class="string">&#x27;Leary 90  95    92</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; str(grades)</span></span><br><span class="line"><span class="string">&#x27;</span>data.frame<span class="string">&#x27;:	4 obs. of 5 variables:</span></span><br><span class="line"><span class="string"> $ First   : chr &quot;Bob&quot; &quot;Jane&quot; &quot;Dan&quot; &quot;Mary&quot;</span></span><br><span class="line"><span class="string"> $ Last   : chr &quot;Smith&quot; &quot;Weary&quot; &quot;Thornton, III&quot; &quot;O&#x27;</span>Leary<span class="string">&quot;</span></span><br><span class="line"><span class="string"> $ Math   : num 90 75 65 90</span></span><br><span class="line"><span class="string"> $ Science  : num 80 NA 75 95</span></span><br><span class="line"><span class="string"> $ Social.Studies: num 67 80 70 92</span></span><br></pre></td></tr></table></figure>
+<h2 id="导入-excel-数据"><a class="markdownIt-Anchor" href="#导入-excel-数据"></a> 导入 Excel 数据</h2>
+<p>读取一个Excel文件的最好方式，就是在Excel中将其导出为一个逗号分隔文件（csv），并使用前文描述的方式将其导入R中。此外，也可以用<code>xlsx</code>包直接地导入Excel工作表。</p>
+<p><code>xlsx</code>包可以用来对Excel 97/2000/XP/2003/2007文件进行读取、写入和格式转换。</p>
+<p>函数<code>read.xlsx()</code>导入一个工作表到一个数据框中。最简单的格式是<code>read.xlsx(file, n)</code>，其中<code>file</code>是Excel工作簿的所在路径，<code>n</code>则为要导入的工作表序号。</p>
+<ul>
+<li>在R中，路径的分割符号使用 <code>/</code> 而不是 <code>\</code></li>
+</ul>
+<p>例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; library(xlsx) </span><br><span class="line">&gt; workbook &lt; - <span class="string">&quot;c:/myworkbook.xlsx&quot;</span> </span><br><span class="line">&gt; mydataframe &lt; - read.xlsx(workbook, <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>此外，函数<code>read.xlsx2</code>也可以用来读取xlsx文件。它使用到了Java，有时候可以获得更加优秀的读取结果。</p>
+<p>关于这两个函数的完成用法如下：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">read.xlsx(</span><br><span class="line"> file,</span><br><span class="line"> sheetIndex,</span><br><span class="line"> sheetName = <span class="literal">NULL</span>,</span><br><span class="line"> rowIndex = <span class="literal">NULL</span>,</span><br><span class="line"> startRow = <span class="literal">NULL</span>,</span><br><span class="line"> endRow = <span class="literal">NULL</span>,</span><br><span class="line"> colIndex = <span class="literal">NULL</span>,</span><br><span class="line"> as.data.frame = <span class="literal">TRUE</span>,</span><br><span class="line"> header = <span class="literal">TRUE</span>,</span><br><span class="line"> colClasses = <span class="literal">NA</span>,</span><br><span class="line"> keepFormulas = <span class="literal">FALSE</span>,</span><br><span class="line"> encoding = <span class="string">&quot;unknown&quot;</span>,</span><br><span class="line"> password = <span class="literal">NULL</span>,</span><br><span class="line"> ...</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">read.xlsx2(</span><br><span class="line"> file,</span><br><span class="line"> sheetIndex,</span><br><span class="line"> sheetName = <span class="literal">NULL</span>,</span><br><span class="line"> startRow = <span class="number">1</span>,</span><br><span class="line"> colIndex = <span class="literal">NULL</span>,</span><br><span class="line"> endRow = <span class="literal">NULL</span>,</span><br><span class="line"> as.data.frame = <span class="literal">TRUE</span>,</span><br><span class="line"> header = <span class="literal">TRUE</span>,</span><br><span class="line"> colClasses = <span class="string">&quot;character&quot;</span>,</span><br><span class="line"> password = <span class="literal">NULL</span>,</span><br><span class="line"> ...</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>相关参数：</p>
+<p>| 参数   | 描述               |<br />
+|  - ----------- - |  - ---------------------------------------------------------- - |<br />
+| file   | the path to the file to read.        |<br />
+| sheetIndex | a number representing the sheet index in the workbook.  |<br />
+| sheetName  | a character string with the sheet name.      |<br />
+| rowIndex  | a numeric vector indicating the rows you want to extract. If NULL, all rows found will be extracted, unless <code>startRow</code> or <code>endRow</code> are specified. |<br />
+| startRow  | a number specifying the index of starting row. <br /><u>For <code>read.xlsx</code> this argument is active only if <code>rowIndex</code> is NULL.</u> |<br />
+| endRow  | a number specifying the index of the last row to pull. If NULL, read all the rows in the sheet. <br /><u>For <code>read.xlsx</code> this argument is active only if <code>rowIndex</code> is NULL.</u> |<br />
+| colIndex  | a numeric vector indicating the cols you want to extract. If NULL, all columns found will be extracted. |<br />
+| as.data.frame | a logical value indicating if the result should be coerced into a <code>data.frame</code>. If FALSE, the result is a list with one element for each column. |<br />
+| header  | a logical value indicating whether the first row corresponding to the first element of the <code>rowIndex</code> vector contains the names of the variables. |<br />
+| colClasses | For <code>read.xlsx</code> a character vector that represent the class of each column. Recycled as necessary, or if the character vector is named, unspecified values are taken to be <code>NA</code>. For <code>read.xlsx2</code> see <code>readColumns</code>. |<br />
+| keepFormulas | a logical value indicating if Excel formulas should be shown as text in and not evaluated before bringing them in. |<br />
+| encoding  | encoding to be assumed for input strings. See <code>read.table</code>. |<br />
+| password  | a String with the password.         |</p>
+<p>以下参数继承自<code>data.frame</code>：</p>
+<p>| 参数    | 描述               |<br />
+|  - -------------- - |  - ---------------------------------------------------------- - |<br />
+| row.names  | NULL or a single integer or character string specifying a column to be used as row names, or a character or integer vector giving the row names for the data frame. |<br />
+| check.rows  | if TRUE then the rows are checked for consistency of length and names. |<br />
+| check.names  | logical. If TRUE then the names of the variables in the data frame are checked to ensure that they are syntactically valid variable names and are not duplicated. If necessary they are adjusted (by <code>make.names</code>) so that they are. |<br />
+| fix.empty.names | logical indicating if arguments which are “unnamed” (in the sense of not being formally called as <code>someName = arg</code>) get an automatically constructed name or rather name “”. Needs to be set to FALSE even when <code>check.names</code> is false if “” names should be kept. |<br />
+| stringsAsFactors | logical: should character vectors be converted to factors? The ‘factory-fresh’ default has been TRUE previously but has been changed to FALSE for R 4.0.0. Only as short time workaround, you can revert by setting options(<code>stringsAsFactors = TRUE</code>) which now warns about its deprecation. |</p>
+<h1 id="二-数据集的标注"><a class="markdownIt-Anchor" href="#二-数据集的标注"></a> 二、数据集的标注</h1>
+<p>为了使结果更易解读，数据分析人员通常会对数据集进行标注。这种标注包括为变量名添加描述性的标签，以及为类别型变量中的编码添加值标签。例如，对于变量<code>age</code>，你可能想附加一个描述更详细的标签<code>“Age at hospitalization (in years)”</code>（入院年龄）。对于编码为<code>1</code>或<code>2</code>的性别变量<code>gender</code>，你可能想将其关联到标签<code>“male”</code>和<code>“female”</code>上。</p>
+<h2 id="变量标签名称的修改"><a class="markdownIt-Anchor" href="#变量标签名称的修改"></a> 变量标签（名称）的修改</h2>
+<p>可以将变量标签作为变量名，然后通过位置下标来访问这个变量。</p>
+<h3 id="1-获得标签名称"><a class="markdownIt-Anchor" href="#1-获得标签名称"></a> 1. 获得标签（名称）</h3>
+<h4 id="对象名称"><a class="markdownIt-Anchor" href="#对象名称"></a> 对象名称</h4>
+<p>函数<code>names()</code>可以获得或设定某个对象的名称：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Usage</span></span><br><span class="line"><span class="built_in">names</span>(x)</span><br><span class="line"><span class="built_in">names</span>(x) &lt; - value</span><br><span class="line"></span><br><span class="line"><span class="comment"># x: an R object.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># value: a character vector of up to the same length as x, or NULL.</span></span><br></pre></td></tr></table></figure>
+<p>例,修改某一行或一列的名称（标签）：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&gt; grades</span><br><span class="line"> First   Last Math Science Social.Studies</span><br><span class="line">011 Bob   Smith <span class="number">90</span>  <span class="number">80</span>    <span class="number">67</span></span><br><span class="line">012 Jane   Weary <span class="number">75</span>  <span class="literal">NA</span>    <span class="number">80</span></span><br><span class="line">010 Dan Thornton, III <span class="number">65</span>  <span class="number">75</span>    <span class="number">70</span></span><br><span class="line">040 Mary  O<span class="string">&#x27;Leary 90  95    92</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; names(grades)[1]</span></span><br><span class="line"><span class="string">[1] &quot;First&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; names(grades)[1] &lt; - &quot;First Name&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; grades</span></span><br><span class="line"><span class="string"> First Name   Last Math Science Social.Studies</span></span><br><span class="line"><span class="string">011  Bob   Smith 90  80    67</span></span><br><span class="line"><span class="string">012  Jane   Weary 75  NA    80</span></span><br><span class="line"><span class="string">010  Dan Thornton, III 65  75    70</span></span><br><span class="line"><span class="string">040  Mary  O&#x27;</span>Leary <span class="number">90</span>  <span class="number">95</span>    <span class="number">92</span></span><br></pre></td></tr></table></figure>
+<h4 id="行-列名称"><a class="markdownIt-Anchor" href="#行-列名称"></a> 行、列名称</h4>
+<p>使用函数<code>row.names()</code>与<code>colnames()</code>可以获得某个数据框的行、列名称：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt; grades</span><br><span class="line"> First Name   Last Math Science Social.Studies</span><br><span class="line">011  Bob   Smith <span class="number">90</span>  <span class="number">80</span>    <span class="number">67</span></span><br><span class="line">012  Jane   Weary <span class="number">75</span>  <span class="literal">NA</span>    <span class="number">80</span></span><br><span class="line">010  Dan Thornton, III <span class="number">65</span>  <span class="number">75</span>    <span class="number">70</span></span><br><span class="line">040  Mary  O<span class="string">&#x27;Leary 90  95    92</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; colnames(grades)</span></span><br><span class="line"><span class="string">[1] &quot;First Name&quot;  &quot;Last&quot;   &quot;Math&quot;   &quot;Science&quot;  &quot;Social.Studies&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; row.names(grades)</span></span><br><span class="line"><span class="string">[1] &quot;011&quot; &quot;012&quot; &quot;010&quot; &quot;040&quot;</span></span><br></pre></td></tr></table></figure>
+<p>之后可以使用序号的索引对标签进行修改：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; colnames(grades)[<span class="number">2</span>] &lt; - <span class="string">&quot;Last Name&quot;</span></span><br><span class="line">&gt; row.names(grades)[<span class="number">1</span>] &lt; - <span class="string">&quot;Row 1&quot;</span></span><br><span class="line">&gt; row.names(grades)[<span class="number">2</span>:<span class="number">4</span>] &lt; - <span class="built_in">c</span>(<span class="string">&quot;Row 2&quot;</span>, <span class="string">&quot;Row 3&quot;</span>, <span class="string">&quot;Row 4&quot;</span>)</span><br><span class="line"></span><br><span class="line">&gt; grades</span><br><span class="line">  First Name  Last Name Math Science Social.Studies</span><br><span class="line">Row <span class="number">1</span>  Bob   Smith <span class="number">90</span>  <span class="number">80</span>    <span class="number">67</span></span><br><span class="line">Row <span class="number">2</span>  Jane   Weary <span class="number">75</span>  <span class="literal">NA</span>    <span class="number">80</span></span><br><span class="line">Row <span class="number">3</span>  Dan Thornton, III <span class="number">65</span>  <span class="number">75</span>    <span class="number">70</span></span><br><span class="line">Row <span class="number">4</span>  Mary  O<span class="string">&#x27;Leary 90  95    92</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-值标签的获得与修改"><a class="markdownIt-Anchor" href="#2-值标签的获得与修改"></a> 2. 值标签的获得与修改</h3>
+<p>函数<code>factor()</code>可为类别型变量创建值标签。继续上例，假设你有一个名为<code>gender</code>的变量，其中<code>1</code>表示男性，<code>2</code>表示女性。你可以使用以下代码来创建值标签：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">patientdata$gender &lt; - factor(patientdata$gender, </span><br><span class="line"> levels = <span class="built_in">c</span>(<span class="number">1</span>,<span class="number">2</span>), </span><br><span class="line"> labels = <span class="built_in">c</span>(<span class="string">&quot;male&quot;</span>, <span class="string">&quot;female&quot;</span>))</span><br></pre></td></tr></table></figure>
+<p>这里<code>levels</code>代表变量的实际值，而<code>labels</code>表示包含了理想值标签的字符型向量。</p>
+<h2 id="处理数据对象的常用函数"><a class="markdownIt-Anchor" href="#处理数据对象的常用函数"></a> 处理数据对象的常用函数</h2>
+<p>| 函数   | 用途           |<br />
+|  - ------------ - |  - ------------------------------------------ - |<br />
+| length(object) | 显示对象/元素数量、向量等数据类型长度  |<br />
+| dim(object) | 显示某个对象的维度，其中也包含数据类型的长度 |<br />
+| str(object) | 显示某个对象的结构       |<br />
+| class(object) | 显示某个对象的类或类型，整体的类型   |<br />
+| mode(object) | 显示某个对象的模式，个体类型，如每一列  |<br />
+| names(object) | 显示某对象中各成分的名称      |<br />
+| c(ob1,ob2)  | 将对象合并入一个向量       |<br />
+| cbind(ob1,ob2) | 按列合并对象         |<br />
+| rbind(ob1,ob2) | 按行合并对象         |<br />
+| object   | 输出某个对象         |<br />
+| head(object) | 列出某个对象的开始部分，默认前六行   |<br />
+| tail(object) | 列出某个对象的最后部分，默认后六行   |<br />
+| ls()   | 显示当前的对象列表       |<br />
+| rm()   | 删除一个或多个对象       |<br />
+| edit(object) | 编辑对象          |<br />
+| fix(object) | 直接编辑对象         |</p>
+<h1 id="三-创建报告"><a class="markdownIt-Anchor" href="#三-创建报告"></a> 三、创建报告</h1>
+<p>这部分需要使用到R Studio。</p>
+<p>使用模板生成报告：</p>
+<p>从模板生成报告即报告从一个模版文件开始创建。这份模版包括了报告文字、格式化语法和R代码块。</p>
+<p>基本的流程为：读取模版文件，运行R代码，应用格式化指令，生成一个报告。</p>
+<p>模版文件（<code>xxx.Rmd</code>）是一个纯文本文档这种文本文件使用扩展名.Rmd，包含以下三个部分。</p>
+<ul>
+<li>报告文字：所有解释性的语句和文字。</li>
+<li>格式化语法（formatting syntax）：控制报告格式化方式的标签。（具体语法下面有简要的补充。）</li>
+<li>R代码：要运行的R语句。在R Markdown文档中，R代码块被 <code>```&#123;r&#125; 以及</code> <code></code> ``` 所包围。</li>
+</ul>
+<p>最后，模版文件被作为参数传递到 <code>rmarkdown</code> 包的 <code>render()</code> 函数中，然后创建出一个网页文件<code>example.html</code>，此网页包含了报告文字和R结果。</p>
+<p>本章主要学习四种模版：R Markdown模版、ODT模版、DOCX模版和LaTeX模版。</p>
+<ul>
+<li>R Markdown模版能够用来生成HTML、PDF和Microsoft Word文档。</li>
+<li>ODT和DOCX模版分别用于生成Open Document和Microsoft Word文档。</li>
+<li>LaTeX模版则能生成出版水平的PDF文档，包括报告、 文章和图书。</li>
+</ul>
+<h2 id="用-r-和-markdown-创建动态报告"><a class="markdownIt-Anchor" href="#用-r-和-markdown-创建动态报告"></a> 用 R 和 Markdown 创建动态报告</h2>
+<p>这部分需要进行一些准备工作：</p>
+<ol>
+<li>安装 <code>rmarkdown</code> 包（ <code>install.packages(“rmarkdown”)</code>）</li>
+<li>安装 <code>xtable</code>包（ <code>install.packages(“xtable”)</code>）</li>
+<li>安装<code>Pandoc</code></li>
+<li>安装LaTeX编译器（如果想生成PDF文档）。一套LaTeX编译器能够把一个LaTeX文件转换成一个高质量排版的PDF文档。</li>
+</ol>
+<ul>
+<li>注意，安装了最新版<code>Rstudio</code>则可跳过第1和4步。</li>
+</ul>
+<h3 id="1-创建报告文件"><a class="markdownIt-Anchor" href="#1-创建报告文件"></a> 1. 创建报告文件</h3>
+<p>在R studio中，从GUI菜单中选择“File”→“New File”→“R Markdown”，可以可视化地创建Markdown文件。之后就会出现GUI界面，进行选择与设置。</p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184245881.png" alt="image-20200810184245881" style="zoom:67%;" />
+<p>在完成设置之后，就进入到了编辑界面：</p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184337931.png" alt="image-20200810184337931" style="zoom:100%;" />
+在这里，就可以进行相关代码的编辑了。
+<h3 id="2-报告文件语法"><a class="markdownIt-Anchor" href="#2-报告文件语法"></a> 2. 报告文件语法</h3>
+<p>这部分的语法也就是Markdown的语法，就不多赘述了。</p>
+<p>有一些值得注意的代码块选项是：</p>
+<p>| 选项（参数） | 描述          |<br />
+|  - ---------- - |  - --------------------------------------- - |<br />
+| echo   | 是否在输出中包含R源代码（TRUE或FALSE） |<br />
+| results  | 是否输出原生结果（asis或hide）   |<br />
+| warning  | 是否在输出中包含警告（TRUE或FALSE）  |<br />
+| message  | 是否在输出中包含参考的信息（TRUE或FALSE） |<br />
+| error  | 是否在输出中包含错误信息（TRUE或FALSE） |<br />
+| fig.width | 图片宽度（英寸）       |<br />
+| fig.height | 图片高度（英寸）       |</p>
+<p>例如：</p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204656466.png" alt="image-20200810204656466" style="zoom:100%;" />
+例2：
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810204715481.png" alt="image-20200810204715481" style="zoom:100%;" />
+### 3. 文件输出
+<p>使用R Studio可以很方便地实现文件的编辑和输出。</p>
+<p>在GUI中创建完成报告文件之后，就可以在R Studio中的一个Pane中进行代码的编辑。</p>
+<p>而输出的话则需要从<code>Knit</code>下拉菜单当中选取目标输出格式，之后在<code>Viewer</code> Pane中预览，可以在下拉菜单中选择保存的目标路径等。</p>
+<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/R/%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1/image-20200810184758166.png" alt="image-20200810184758166" style="zoom:100%;" />
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-%E8%BE%93%E5%85%A5%E4%B8%8E%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="nav-text"> 一、输入与读取数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E9%94%AE%E7%9B%98%E8%BE%93%E5%85%A5"><span class="nav-text"> 从键盘输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E5%B8%A6%E5%88%86%E9%9A%94%E7%AC%A6%E7%9A%84%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="nav-text"> 从带分隔符的文本文件导入数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5-excel-%E6%95%B0%E6%8D%AE"><span class="nav-text"> 导入 Excel 数据</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E6%A0%87%E6%B3%A8"><span class="nav-text"> 二、数据集的标注</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E6%A0%87%E7%AD%BE%E5%90%8D%E7%A7%B0%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="nav-text"> 变量标签（名称）的修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="nav-text"> 处理数据对象的常用函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89-%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A"><span class="nav-text"> 三、创建报告</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8-r-%E5%92%8C-markdown-%E5%88%9B%E5%BB%BA%E5%8A%A8%E6%80%81%E6%8A%A5%E5%91%8A"><span class="nav-text"> 用 R 和 Markdown 创建动态报告</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="向海"
+      src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Others/next/pixil-frame-0.png">
+  <p class="site-author-name" itemprop="name">向海</p>
+  <div class="site-description" itemprop="description">希望能活的久一点</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">182</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:zhenyumi@foxmail.com" title="E-Mail → mailto:zhenyumi@foxmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2279880515" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2279880515" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/ParaDogs_lazy" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;ParaDogs_lazy" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/Furemu" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;Furemu" rel="noopener" target="_blank"><i class="fab fa-telegram fa-fw"></i>Telegram</a>
+      </span>
+  </div>
+
+
+<!-- none-select-br -->
+
+<p></p>
+
+<!-- hitokoto -->
+
+<div class="hitokoto-title">
+	<i class="fa fa-paragraph"></i>
+	<b>一言</b>
+</div>
+
+<div id="hitokoto">获取中OvO</div>
+<i id="hitofrom">获取中OvO</i>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+  fetch('https://v1.hitokoto.cn/?c=i')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + data.hitokoto;
+      var hitofrom = document.getElementById('hitofrom');
+      hitofrom.innerText = "——" + data.from + '\xa0'; 
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向海</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">2.7m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">41:19</span>
+</div><br /> <!-- 换行 -->
+
+<div class="translate-style">
+繁/简：<a id="translateLink" href="javascript:translatePage();">繁体
+</a>
+</div>
+<script type="text/javascript" src="/js/tw_cn.js"></script>
+<script type="text/javascript">
+var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+var cookieDomain = "https://tding.top/"; //Cookie地址, 一定要设定, 通常为你的网址
+var msgToTraditionalChinese = "繁体"; //此处可以更改为你想要显示的文字
+var msgToSimplifiedChinese = "简体"; //同上，但两处均不建议更改
+var translateButtonId = "translateLink"; //默认互换id
+translateInitilization();
+</script>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("06/01/2020 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已正常运行 "+dnum+" 天";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 OvO";
+    }
+setInterval("createtime()",250);
+</script>
+
+<br /> <!-- 换行 -->
+
+<!--busuanzi计数-->
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+  <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css">
+
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://zhenyumi.github.io/save_modified/08-R-%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E4%B8%8E%E5%88%9B%E5%BB%BA%E6%8A%A5%E5%91%8A.html',]
+      });
+      });
+  </script>
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'ErV27FWAFsY2HDPhLVjeIcfR-MdYXbMMI',
+      appKey     : 'YyUrjqWLM53k8C1tPcKNaQFN',
+      placeholder: "Leave Something?",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-ch' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>

@@ -320,8 +320,8 @@
 <li>total body : body（文字区域）（可以修改的有：head,foot,marginpar）</li>
 <li>margins : left(inner),right(outer),top和bottom</li>
 </ul>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107121538880.png" alt="image-20201107121538880" style="zoom:100%;" />
-每一个页边距都是从它对应纸张的边上开始测量的。例如，左页边距（内页边距）是指从纸张的最左边到total body的水平距离。
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107121538880.png" alt="image-20201107121538880" /></p>
+<p>每一个页边距都是从它对应纸张的边上开始测量的。例如，左页边距（内页边距）是指从纸张的最左边到total body的水平距离。</p>
 <p>body（文字区域）的大小可以通过命令 <code>\textwidth</code> 和 <code>\textheight</code> 来修改。纸张的尺寸，total body 和 margin 有如下的关系：</p>
 <ul>
 <li>(1): paperwidth = left + width + right</li>
@@ -332,29 +332,32 @@
 <li>(3): width = textwidth(+marginparsep + marginparwidth)</li>
 <li>(4): height = textheight(+headheight + headsep + footskip)</li>
 </ul>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107121538880.png" alt="image-20201107121538880" style="zoom:100%;" />
-当 marginparsep 和 marginparwidth 在 width 的范围之内，也即 includemp 这个参数被指定为true 时，等式 (3) 是系统在水平方向默认的设置。等式 (4) 是系统在垂直方向默认的设置。但是当includehead 这个参数被设置为 true 时，headheight 和 headsep 则被包括在了 height 中。同样，includefoot 这个参数将 footskip 包含在了 height 中。
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107121538880.png" alt="image-20201107121538880" /></p>
+<p>当 marginparsep 和 marginparwidth 在 width 的范围之内，也即 includemp 这个参数被指定为true 时，等式 (3) 是系统在水平方向默认的设置。等式 (4) 是系统在垂直方向默认的设置。但是当includehead 这个参数被设置为 true 时，headheight 和 headsep 则被包括在了 height 中。同样，includefoot 这个参数将 footskip 包含在了 height 中。</p>
 <p>下图表示了这些参数是怎样在垂直的方向起作用的：</p>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107121959794.png" alt="image-20201107121959794" style="zoom:100%;" />
-# 三、参数介绍
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107121959794.png" alt="image-20201107121959794" /></p>
+<h1 id="三-参数介绍"><a class="markdownIt-Anchor" href="#三-参数介绍"></a> 三、参数介绍</h1>
 <h2 id="页面大小"><a class="markdownIt-Anchor" href="#页面大小"></a> 页面大小</h2>
 <p><code>paper | papername</code></p>
 <p>用名字来定义纸张大小：<code>paper=&lt;paper-name&gt;</code>。方便起见，用户可以省去 paper 来定义纸张大小。比如：<code>a4paper</code> 和 <code>paper=a4paper</code> 作用相同</p>
 <p>具体参数：</p>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122235992.png" alt="image-20201107122235992" style="zoom:100%;" />
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122256097.png" alt="image-20201107122256097" style="zoom:100%;" />
-+ 页面的尺寸和页面布局大小相关。注意，页面布局的大小默认和纸张大小一致, 因此用户在绝大部分情况下都不用单独地给页面布局相关的参数赋值。
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122235992.png" alt="image-20201107122235992" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122256097.png" alt="image-20201107122256097" /></p>
+<ul>
+<li>页面的尺寸和页面布局大小相关。注意，页面布局的大小默认和纸张大小一致， 因此用户在绝大部分情况下都不用单独地给页面布局相关的参数赋值。</li>
+</ul>
 <h2 id="body-的尺寸以及其内部文字的参数"><a class="markdownIt-Anchor" href="#body-的尺寸以及其内部文字的参数"></a> body 的尺寸以及其内部文字的参数</h2>
 <p>这节所列出的参数主要用于改变 <em>total body</em> 的尺寸</p>
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122423239.png" alt="image-20201107122423239" style="zoom:100%;" />
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122507380.png" alt="image-20201107122507380" style="zoom:100%;" />
-图5展示了在不同的页面布局模式下的各种页面布局。页眉和页脚可以通过nohead和nofoot模式来控制，这个模式设置了页眉页脚的高度为0pt。另一方面，具有ignore前缀的选项并不改变响应的尺寸。下面几个参数可以利用三个在大括号里用逗号分开的值同时设置body和margins。
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122535666.png" alt="image-20201107122535666" style="zoom:100%;" />
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122613672.png" alt="image-20201107122613672" style="zoom:100%;" />
-## 页边距大小
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122715216.png" alt="image-20201107122715216" style="zoom:100%;" />
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122735108.png" alt="image-20201107122735108" style="zoom:100%;" />
-<img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122750085.png" alt="image-20201107122750085" style="zoom:100%;" />
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122423239.png" alt="image-20201107122423239" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122507380.png" alt="image-20201107122507380" /></p>
+<p>图5展示了在不同的页面布局模式下的各种页面布局。页眉和页脚可以通过nohead和nofoot模式来控制，这个模式设置了页眉页脚的高度为0pt。另一方面，具有ignore前缀的选项并不改变响应的尺寸。下面几个参数可以利用三个在大括号里用逗号分开的值同时设置body和margins。</p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122535666.png" alt="image-20201107122535666" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122613672.png" alt="image-20201107122613672" /></p>
+<h2 id="页边距大小"><a class="markdownIt-Anchor" href="#页边距大小"></a> 页边距大小</h2>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122715216.png" alt="image-20201107122715216" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122735108.png" alt="image-20201107122735108" /></p>
+<p><img data-src="https://hexo20200628-1259353497.cos.ap-guangzhou.myqcloud.com/Articles/%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/LaTeX/image-20201107122750085.png" alt="image-20201107122750085" /></p>
+
     </div>
 
     
@@ -439,7 +442,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-introduction"><span class="nav-text"> 一、Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="nav-text"> 简单使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80"><span class="nav-text"> 二、页面布局</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E5%A4%A7%E5%B0%8F"><span class="nav-text"> 页面大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#body-%E7%9A%84%E5%B0%BA%E5%AF%B8%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%86%85%E9%83%A8%E6%96%87%E5%AD%97%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-text"> body 的尺寸以及其内部文字的参数</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-introduction"><span class="nav-text"> 一、Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="nav-text"> 简单使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80"><span class="nav-text"> 二、页面布局</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89-%E5%8F%82%E6%95%B0%E4%BB%8B%E7%BB%8D"><span class="nav-text"> 三、参数介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E5%A4%A7%E5%B0%8F"><span class="nav-text"> 页面大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#body-%E7%9A%84%E5%B0%BA%E5%AF%B8%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%86%85%E9%83%A8%E6%96%87%E5%AD%97%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-text"> body 的尺寸以及其内部文字的参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B5%E8%BE%B9%E8%B7%9D%E5%A4%A7%E5%B0%8F"><span class="nav-text"> 页边距大小</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -555,7 +558,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">41:36</span>
+    <span title="站点阅读时长">41:19</span>
 </div><br /> <!-- 换行 -->
 
 <div class="translate-style">
